@@ -1,6 +1,7 @@
 # Netflix
+//请注意，导入此规则将自动创建名为[Netflix]的策略组
 USER-AGENT,Argo*,Netflix
-DOMAIN-KEYWORD,nflx
+DOMAIN-KEYWORD,nflx,Netflix
 DOMAIN-SUFFIX,netflix.com,Netflix
 DOMAIN-SUFFIX,netflix.net,Netflix
 DOMAIN-SUFFIX,nflxext.com,Netflix
