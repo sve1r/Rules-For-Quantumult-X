@@ -1,4 +1,4 @@
-#优酷部分
+# 优酷部分
 DOMAIN-SUFFIX,actives.youku.com,REJECT
 DOMAIN-SUFFIX,ad.api.3g.tudou.com,REJECT
 DOMAIN-SUFFIX,ad.api.3g.youku.com,REJECT
