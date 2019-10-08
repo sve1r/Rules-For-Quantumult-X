@@ -16,3 +16,8 @@ DOMAIN-SUFFIX,mzstatic.com,Apple
 DOMAIN-SUFFIX,music.apple.com,Apple
 DOMAIN,www-cdn.icloud.com.akadns.net,Apple
 IP-CIDR,17.0.0.0/8,Apple
+
+#以下内容规则需要通过代理访问
+PROCESS-NAME,News,Proxy
+DOMAIN,hls.itunes.apple.com,Proxy
+DOMAIN-SUFFIX,apps.apple.com,Proxy
