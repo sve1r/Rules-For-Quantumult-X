@@ -1,4 +1,4 @@
-#芒果TV
+# 芒果TV
 DOMAIN-SUFFIX,ads-api.videojj.com,REJECT
 DOMAIN-SUFFIX,cdn.cmop.mgtv.com,REJECT
 DOMAIN-SUFFIX,click.hunantv.com,REJECT
