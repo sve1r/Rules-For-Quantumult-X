@@ -1,0 +1,23 @@
+# 乐视视频
+DOMAIN-SUFFIX,1.letvlive.com,REJECT
+DOMAIN-SUFFIX,2.letvlive.com,REJECT
+DOMAIN-SUFFIX,ads1.lfengmobile.com,REJECT
+DOMAIN-SUFFIX,api.game.letvstore.com,REJECT
+DOMAIN-SUFFIX,api.push.le.com,REJECT
+DOMAIN-SUFFIX,ark.letv.com,REJECT
+DOMAIN-SUFFIX,cdn.zampdsp.com,REJECT
+DOMAIN-SUFFIX,cm.fancyapi.com,REJECT
+DOMAIN-SUFFIX,cn.api.push.le.com,REJECT
+DOMAIN-SUFFIX,dc.letv.com,REJECT
+DOMAIN-SUFFIX,fz.letv.com,REJECT
+DOMAIN-SUFFIX,g3.letv.com,REJECT
+DOMAIN-SUFFIX,minisite.letv.com,REJECT
+DOMAIN-SUFFIX,msg.m.letv.com,REJECT
+DOMAIN-SUFFIX,n.mark.letv.com,REJECT
+DOMAIN-SUFFIX,pro.hoye.letv.com,REJECT
+DOMAIN-SUFFIX,pro.letv.com,REJECT
+DOMAIN-SUFFIX,s.zampdsp.com,REJECT
+DOMAIN-SUFFIX,stat.letv.com,REJECT
+DOMAIN-SUFFIX,static.app.m.letv.com,REJECT
+DOMAIN-SUFFIX,webp2p.letv.com,REJECT
+DOMAIN-SUFFIX,zamplus.com,REJECT
