@@ -8,7 +8,7 @@
 <a href="https://sveir.design"><img src="https://img.shields.io/badge/鬼地方-Sveir Dev-important.svg" alt="导航"></a>
 <a href="https://github.com/sve1r"><img src="https://img.shields.io/badge/Git-Hub-critical.svg" alt="Github"></a>
 
-
+# 请注意！部分规则没有整理完毕！还没有push！请不要随意fork
 
 >  仓库内容来源于网络，仅用于 Quantumult X 中 增添策略组图标以达到*装逼*的效果
 
