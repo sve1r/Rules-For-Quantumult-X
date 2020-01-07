@@ -16,13 +16,8 @@
 
 - 使用公共 DNS 达到快速、准确、稳定及安全的解析
 - 国内直连、海外加速
-- Apple 服务加速
+- Apple 服务(可选择性)加速
 - 海外媒体（部分）服务指定节点
-
-### 专业版
-
-在标准版的基础上加入：
-
 - 拦截运营商劫持
 - 拦截臭名昭著的欺诈网站（如**思杰马克丁**伪造的一系列软件官网、MacKeeper等）
 - 拦截应用广告
@@ -34,26 +29,19 @@
 - 拦截应用广告
   ⚠️ 网页广告请使用 Safari 内容拦截器如 [ADGuard](https://itunes.apple.com/app/apple-store/id1047223162?mt=8) 或集成去广告功能浏览器
 
-
-
-
-
-
 ### DNS 推荐
 
     - 119.29.29.29
     - 182.254.116.116
     - 223.5.5.5
     - 223.6.6.6
-
-
 ------
 
 
 
-### 关于 Surge Ruleset 和 Quantumult X Filter Remote 说明
+### 关于 Quantumult X Filter Remote 说明
 
-**要求**排序如下：
+要求排序如下：
 
 1. Unbreak.list - 用于修正 PROXY 和 REJECT 行为
 2. Advertising.list - 广告、行为分析、隐私追踪（macOS 不建议开启）
@@ -85,51 +73,32 @@
 
 ### 常见问题
 
-> 0.什么是白名单和黑名单模式？该使用哪个？
+> 0.Final 有什么作用？该怎样使用？
 
-⚠️ 注意：仅推荐使用白名单模式，除非你有特殊需求。
+⚠️ 注意：在日常使用之中，推荐使用 [Final，Proxy] 模式，除非有着特殊需求。
 
-简单的说，除了规则以外的请求，都走代理就是白名单模式，都走直连就是黑名单模式。
+换种方式而言，就是除了配置文件中选定规则以外的所有请求，都通过代理访问。
 
-**那么，是不是白名单模式应该把全中国的网址都写进规则？**
-
-不是，仅是该代理还是直连的问题上使用 GeoIP 规则就可以解决绝大多数的中国网站直连。
+- GeoIP 规则已经可以解决绝大多数的境内网站直连。
+- 剩下未能被匹配的规则使用 Final 就好。
 
 > 1.遇到连接公共场所 Wi-Fi 时验证页面无法显示？
 
-暂时关闭待验证成功后再开启，或者如校园网运营商客户端的可将相关域名或 IP 地址加入到「skip-proxy」中（Surge、Shadowrocket、Pepi(ShadowRay) 支持）。
+请暂时关闭待验证成功后再开启，或者如校园网运营商客户端的可将相关域名或 IP 地址手动加入至 【分流】中。
 
 > 2.iOS 12 上 Siri 无法正常使用
 
 [#55](https://github.com/ConnersHua/Profiles/issues/55) （仅）iOS 12 的 Bug，尝试多次重启直至正常。
 
-> 3.关于知乎避免强制「App 内打开」
+> 3.Clash 连接不上内网服务器
 
-此功能目前仅 Surge 用户可用，若想使用桌面版网页的知乎（但会影响 App）可以在「Header Rewrite」加入复写规则：
+您可以手动移除掉配置内的相关 DNS 配置。
 
-```
-^https?://www\.zhihu\.com header-replace User-Agent Mozilla/5.0  (Macintosh; Intel Mac OS X 10_13_6) AppleWebKit/605.1.15 (KHTML, like  Gecko) Version/12.0.2 Safari/605.1.15
-```
+> 4.打开「淘宝」等阿里系应用时遇到「访问被拒绝」、「请检查是否使用了代理」等提示
 
-> 4.如何解锁 TikTok？
+部分「阿里云」节点会导致此问题，请尝试使用其他节点。
 
-仅支持 Surge 和 Quantumult(X) 专业版规则。另外，复写规则默认设置的 TikTok 为日本区，若想切换到其他地区，在软件里的复写设置中将「JP」修改成其他地区英文缩写即可。
-
-> 5.Apple News 具体怎么使用
-
-副作用为 macOS 及 iOS 12 以前的系统地图会变成海外 TOMTOM 版。
-
-[关于解锁 Apple News 区域限制](https://chua.pro/unlock-apple-news-regional-restrictions/)
-
-> 6.Clash 连接不上内网服务器
-
-移除掉配置内的 DNS 配置。
-
-> 7.打开「淘宝」等阿里巴巴系应用时遇到「访问被拒绝」、「请检查是否使用了代理」等提示
-
-部分「阿里云」节点会导致此问题，如遇此问题主节点换成其他的。
-
-> 8.关于 Speedtest 想直连/代理？
+> 5.关于 Speedtest 想直连/代理？
 
 规则对于 Speedtest 不是绝对的直连也不是绝对的代理，对于国内测速点是直连，对于国外测速点是代理。
 
@@ -163,13 +132,7 @@
 
 **2.功能**
 
-广告阻止不仅于使用 [Rule] 规则，有的广告需要 [URL Rewrite] 和 [MITM]，这就意味着：
-
-- Kitsunebi 不支持 [URL Rewrite] 和 [MITM]
-- Quantumult 虽然支持 [URL Rewrite] 和 [MITM]，但需要在「更多 > 附加功能」中开启「激进阻止」以开启更全面的支持否则同 Surge 效果一样，另外 Quantumult 对于 IP 的 Server Name 不会进行 MitM，所以对于个别应用如瑞幸咖啡也无效。
-- Shadowrocket 的 [MITM] 功能不稳定影响正常功能，已从规则配置中移除，不再支持。
-- Surfboard 仅支持 [URL Rewrite] 且仅支持 302 没有阻止功能
-- Surge 虽然支持 [URL Rewrite] 和 [MITM]，但对于个别应用如优酷、腾讯视频（部分）的请求（TUN）无法处理。
+广告阻止不仅于使用 [Rule] 规则，有的广告需要 [URL Rewrite] 和 [MITM]
 
 **3.规则不是万能的**
 
@@ -181,7 +144,7 @@
 
 - 网页版可能无法正常播放
 - YouTube Premium 用户无法正常播放
-- Quantumult 遇到片头广告时可能会卡黑屏
+- Quantumult X 个别情况下遇到片头广告时可能会卡黑屏
 
 所以默认并没有启用，如果仍需启用需在「HTTPS 解密(MitM)」的「主机名」列表中添加：
 
@@ -194,7 +157,7 @@
 
 
 ## 部分规则来源及鸣谢
-
+- [ConnersHua](https://github.com/ConnersHua)
 - [lhie1](https://github.com/lhie1)
 - Lison Bin
 - [linjiacheng](https://github.com/linjiacheng)
