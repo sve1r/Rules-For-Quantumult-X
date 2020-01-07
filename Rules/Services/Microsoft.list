@@ -1,7 +1,8 @@
-#Micosoft
+# > Micosoft
 
 USER-AGENT,Microsoft*,Microsoft
 USER-AGENT,OneDrive*,Microsoft
+
 DOMAIN-KEYWORD,microsoft,Microsoft
 DOMAIN-SUFFIX,bing.com,Microsoft
 DOMAIN-SUFFIX,bing.net,Microsoft
