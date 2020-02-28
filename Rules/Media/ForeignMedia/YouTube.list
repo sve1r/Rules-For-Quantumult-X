@@ -1,7 +1,0 @@
-# YouTube部分
-//请注意，导入此规则将自动创建名为[YouTube]的策略组
-USER-AGENT,com.google.ios.youtube*,YouTube
-USER-AGENT,YouTube*,YouTube
-DOMAIN-SUFFIX,googlevideo.com,YouTube
-DOMAIN-SUFFIX,youtube.com,YouTube
-DOMAIN,youtubei.googleapis.com,YouTube

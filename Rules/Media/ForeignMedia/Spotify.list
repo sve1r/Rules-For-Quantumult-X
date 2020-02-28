@@ -1,8 +1,0 @@
-#  Spotify
-//请注意，导入此规则将自动创建名为[Spotify]的策略组
-USER-AGENT,Spotify*,Spotify
-DOMAIN-SUFFIX,pscdn.co,Spotify
-DOMAIN-SUFFIX,scdn.co,Spotify
-DOMAIN-SUFFIX,spotify.com,Spotify
-DOMAIN-SUFFIX,spoti.fi,Spotify
-IP-CIDR,35.186.224.47/32,Spotify

@@ -1,9 +1,0 @@
-# BBC
-USER-AGENT,BBC*,BBC
-USER-AGENT,BBCBeacon*,BBC
-DOMAIN-KEYWORD,bbcfmt,BBC
-DOMAIN-KEYWORD,uk-live,BBC
-DOMAIN-SUFFIX,bbc.com,BBC
-DOMAIN-SUFFIX,bbc.co.uk,BBC
-DOMAIN-SUFFIX,bbci.co.uk,BBC
-DOMAIN-SUFFIX,vod-hls-uk-live.akamaized.net,BBC

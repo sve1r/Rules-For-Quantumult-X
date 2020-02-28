@@ -1,9 +1,0 @@
-# HBO NOW(GO)
-USER-AGENT,HBO%20NOW*,HBO
-USER-AGENT,HBOAsia*,HBO
-DOMAIN-SUFFIX,hbo.com,HBO
-DOMAIN-SUFFIX,hbogo.com,HBO
-DOMAIN-SUFFIX,hboasia.com,HBO
-DOMAIN-SUFFIX,hbogo.com,HBO
-DOMAIN-SUFFIX,hbogoasia.hk,HBO
-DOMAIN-SUFFIX,execute-api.ap-southeast-1.amazonaws.com,HBO
