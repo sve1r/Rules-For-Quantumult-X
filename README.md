@@ -228,6 +228,7 @@ Repository
 │  │  ├── Readme.md
 │  ├── /Region/
 │  ├── /Services/
+├── /Scripts/
 ├── LICENSE
 └── Readme.md
 ```
