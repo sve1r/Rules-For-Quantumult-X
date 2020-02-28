@@ -1,0 +1,23 @@
+# Apple 部分
+//请注意，此规则导入后将自动创建同名策略组
+PROCESS-NAME,storedownloadd
+PROCESS-NAME,trustd
+DOMAIN-SUFFIX,aaplimg.com,Apple
+DOMAIN-SUFFIX,apple.co,Apple
+DOMAIN-SUFFIX,apple.com,Apple
+DOMAIN-SUFFIX,appstore.com,Apple
+DOMAIN-SUFFIX,cdn-apple.com,Apple
+DOMAIN-SUFFIX,apple-cloudkit.com,Apple
+DOMAIN-SUFFIX,crashlytics.com,Apple
+DOMAIN-SUFFIX,icloud.com,Apple
+DOMAIN-SUFFIX,icloud-content.com,Apple
+DOMAIN-SUFFIX,me.com,Apple
+DOMAIN-SUFFIX,mzstatic.com,Apple
+DOMAIN-SUFFIX,music.apple.com,Apple
+DOMAIN,www-cdn.icloud.com.akadns.net,Apple
+IP-CIDR,17.0.0.0/8,Apple
+
+#以下内容规则需要通过代理访问
+PROCESS-NAME,News,Proxy
+DOMAIN,hls.itunes.apple.com,Proxy
+DOMAIN-SUFFIX,apps.apple.com,Proxy
