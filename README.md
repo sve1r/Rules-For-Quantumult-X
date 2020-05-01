@@ -247,17 +247,18 @@ Repository
 
 
 # **6️⃣来源与鸣谢**
-- [anti-AD V4](https://github.com/privacy-protection-tools/anti-AD)
-- [ConnersHua](https://github.com/ConnersHua)
-- [lhie1](https://github.com/lhie1)
+- [@anti-AD V4](https://github.com/privacy-protection-tools/anti-AD)
+- [@ConnersHua](https://github.com/ConnersHua)
+- [@lhie1](https://github.com/lhie1)
 - Lison Bin
-- [linjiacheng](https://github.com/linjiacheng)
-- Booui
-- liceva
-- [JO2EY](https://github.com/JO2EY) 
-- [Choler](https://github.com/Choler)
-- [xream](https://github.com/xream)
-- [gkeyes](https://github.com/gkeyes)
+- [@linjiacheng](https://github.com/linjiacheng)
+- @Booui
+- @liceva
+- [@JO2EY](https://github.com/JO2EY) 
+- [@Choler](https://github.com/Choler)
+- [@xream](https://github.com/xream)
+- [@gkeyes](https://github.com/gkeyes)
+- [@LeeeMooo](https://github.com/LeeeMooo)
 
 # **7️⃣许可与说明**
 
