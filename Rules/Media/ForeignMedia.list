@@ -37,9 +37,6 @@ DOMAIN-SUFFIX,bbc.com,ForeignMedia
 DOMAIN-SUFFIX,bbc.co.uk,ForeignMedia
 DOMAIN-SUFFIX,bbci.co.uk,ForeignMedia
 DOMAIN-SUFFIX,vod-hls-uk-live.akamaized.net,ForeignMedia
-# DAZN
-USER-AGENT,DAZN*,,ForeignMedia
-DOMAIN-SUFFIX,dazn.com,,ForeignMedia
 # Deezer
 USER-AGENT,Deezer*,ForeignMedia
 DOMAIN-SUFFIX,deezer.com,Deezer
