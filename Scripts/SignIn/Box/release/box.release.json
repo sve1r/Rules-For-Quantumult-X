@@ -1,0 +1,95 @@
+{
+  "releases": [
+    {
+      "version": "0.3.1",
+      "tags": ["beta"],
+      "author": "@chavyleung",
+      "icon": "https://avatars3.githubusercontent.com/u/29748519",
+      "repo": "https://github.com/chavyleung",
+      "notes": [
+        {
+          "name": "修复",
+          "descs": ["手动切换会话会导致自动切换顺序错误问题"]
+        }
+      ]
+    },
+    {
+      "version": "0.3.0",
+      "tags": ["beta"],
+      "author": "@chavyleung",
+      "icon": "https://avatars3.githubusercontent.com/u/29748519",
+      "repo": "https://github.com/chavyleung",
+      "notes": [
+        {
+          "name": "新增",
+          "descs": ["全局搜索"]
+        }
+      ]
+    },
+    {
+      "version": "0.2.4",
+      "tags": ["beta"],
+      "author": "@chavyleung",
+      "icon": "https://avatars3.githubusercontent.com/u/29748519",
+      "repo": "https://github.com/chavyleung",
+      "notes": [
+        {
+          "name": "优化",
+          "descs": ["帮助页面样式", "订阅链接多余空格&换行等字符"]
+        }
+      ]
+    },
+    {
+      "version": "0.2.2",
+      "tags": ["beta"],
+      "author": "@chavyleung",
+      "icon": "https://avatars3.githubusercontent.com/u/29748519",
+      "repo": "https://github.com/chavyleung",
+      "notes": [
+        {
+          "name": "优化",
+          "descs": ["悬浮按钮刷新不用确认", "侧栏可以隐藏帮助按钮"]
+        }
+      ]
+    },
+    {
+      "version": "0.2.1",
+      "tags": ["beta"],
+      "author": "@chavyleung",
+      "icon": "https://avatars3.githubusercontent.com/u/29748519",
+      "repo": "https://github.com/chavyleung",
+      "notes": [
+        {
+          "name": "新增",
+          "descs": ["可以设置悬浮按钮的位置"]
+        }
+      ]
+    },
+    {
+      "version": "0.2.0",
+      "tags": ["beta"],
+      "author": "@chavyleung",
+      "icon": "https://avatars3.githubusercontent.com/u/29748519",
+      "repo": "https://github.com/chavyleung",
+      "notes": [
+        {
+          "name": "新增",
+          "descs": ["版本更新提醒", "BoxJs升级教程"]
+        }
+      ]
+    },
+    {
+      "version": "0.1.3",
+      "tags": ["beta"],
+      "author": "@chavyleung",
+      "icon": "https://avatars3.githubusercontent.com/u/29748519",
+      "repo": "https://github.com/chavyleung",
+      "notes": [
+        {
+          "name": "新增",
+          "descs": ["长文本控件", "读写表达式"]
+        }
+      ]
+    }
+  ]
+}
