@@ -39,7 +39,7 @@ let VAL_findlotteryheader = chavy.getdata(KEY_findlotteryheader)
 
 function loginapp() {
     return new Promise((resolve, reject) => {
-        const url = { url: VAL_loginurl, headers: JSON.parse(VAL_loginheader) }
+        const url = {url: VAL_loginurl, headers: JSON.parse(VAL_loginheader)}
         chavy.post(url, (error, response, data) => {
             try {
                 resolve()
@@ -56,7 +56,7 @@ function loginapp() {
 function signapp() {
     return new Promise((resolve, reject) => {
         if (VAL_signurl.endsWith('.do')) VAL_signurl = VAL_signurl.replace('.do', '')
-        const url = { url: 'https://act.10010.com/SigninApp/signin/daySign', headers: JSON.parse(VAL_signheader) }
+        const url = {url: 'https://act.10010.com/SigninApp/signin/daySign', headers: JSON.parse(VAL_signheader)}
         chavy.post(url, (error, response, data) => {
             try {
                 signinfo.signapp = JSON.parse(data)
@@ -73,7 +73,7 @@ function signapp() {
 
 function loginlottery() {
     return new Promise((resolve, reject) => {
-        const url = { url: VAL_loginlotteryurl, headers: JSON.parse(VAL_loginlotteryheader) }
+        const url = {url: VAL_loginlotteryurl, headers: JSON.parse(VAL_loginlotteryheader)}
         chavy.get(url, (error, response, data) => {
             try {
                 const encryptmobileMatch = data.match(/encryptmobile=([^('|")]*)/)
@@ -99,7 +99,7 @@ function findlottery() {
     return new Promise((resolve, reject) => {
         VAL_findlotteryurl = VAL_findlotteryurl.replace(/encryptmobile=[^(&|$)]*/, `encryptmobile=${signinfo.encryptmobile}`)
         VAL_findlotteryurl = VAL_findlotteryurl.replace(/mobile=[^(&|$)]*/, `mobile=${signinfo.encryptmobile}`)
-        const url = { url: VAL_findlotteryurl, headers: JSON.parse(VAL_findlotteryheader) }
+        const url = {url: VAL_findlotteryurl, headers: JSON.parse(VAL_findlotteryheader)}
         chavy.get(url, (error, response, data) => {
             try {
                 signinfo.findlottery = JSON.parse(data)
@@ -116,7 +116,10 @@ function findlottery() {
 
 function lottery() {
     return new Promise((resolve, reject) => {
-        const url = { url: `https://m.client.10010.com/dailylottery/static/doubleball/choujiang?usernumberofjsp=${signinfo.encryptmobile}`, headers: JSON.parse(VAL_loginlotteryheader) }
+        const url = {
+            url: `https://m.client.10010.com/dailylottery/static/doubleball/choujiang?usernumberofjsp=${signinfo.encryptmobile}`,
+            headers: JSON.parse(VAL_loginlotteryheader)
+        }
         url.headers['Referer'] = `https://m.client.10010.com/dailylottery/static/doubleball/firstpage?encryptmobile=${signinfo.encryptmobile}`
         chavy.post(url, (error, response, data) => {
             try {
@@ -145,7 +148,7 @@ function gettel() {
 
 function getinfo() {
     return new Promise((resolve, reject) => {
-        const url = { url: `https://mina.10010.com/wxapplet/bind/getIndexData/alipay/alipaymini?user_id=${gettel()}` }
+        const url = {url: `https://mina.10010.com/wxapplet/bind/getIndexData/alipay/alipaymini?user_id=${gettel()}`}
         chavy.get(url, (error, response, data) => {
             try {
                 signinfo.info = JSON.parse(data)
@@ -249,5 +252,5 @@ function init() {
     done = (value = {}) => {
         $done(value)
     }
-    return { isSurge, isQuanX, msg, log, getdata, setdata, get, post, done }
+    return {isSurge, isQuanX, msg, log, getdata, setdata, get, post, done}
 }
