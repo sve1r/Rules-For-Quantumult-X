@@ -137,6 +137,7 @@ function double() {
         all()
     }
 }
+
 // 抽奖
 function drawPrize(bodyVal) {
     return new Promise((resolve, reject) => {
@@ -220,6 +221,7 @@ function prizeInfo(bodyVal) {
         })
     })
 }
+
 // 阅读时长
 function readTime(header, token, urlVal) {
     return new Promise((resolve, reject) => {

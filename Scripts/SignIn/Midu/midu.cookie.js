@@ -168,4 +168,5 @@ function init() {
         done
     }
 }
+
 senku.done()
