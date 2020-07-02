@@ -1,5 +1,5 @@
 /*
-VSCO unlock vip
+VSCO_Vip unlock vip
 
 QX:
 ^https?:\/\/vsco\.co\/api\/subscriptions\/2.1\/user-subscriptions\/ url script-response-body https://raw.githubusercontent.com/NobyDa/Script/master/QuantumultX/File/vsco.js
