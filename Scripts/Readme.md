@@ -77,12 +77,17 @@
 
 ```
 ..Preview Repository
-├── /Scripts/
+├── /AdBlock/   *广告去除脚本*
+├── /Game/  *游戏脚本*
+├── /Media/     *视频播放脚本*
+├── /Other/
 │  ├── /Example/
 │  │  ├── /Example.js
 │  │  ├── Readme.md
-│  ├── /.../
-│  └── /.../
+├── /SignIn/    *签到脚本*
+├── /VIP/   *VIP脚本*
+├── /.../
+├── /.../
 └── Readme.md
 ```
 
