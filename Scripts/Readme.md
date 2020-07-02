@@ -107,6 +107,7 @@
 - [@linjiacheng](https://github.com/linjiacheng)
 - @Booui
 - @liceva
+- [@chavyleung](https://github.com/chavyleung/scripts)
 - [@JO2EY](https://github.com/JO2EY) 
 - [@Choler](https://github.com/Choler)
 - [@xream](https://github.com/xream)
