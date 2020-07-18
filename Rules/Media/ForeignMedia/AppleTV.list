@@ -1,0 +1,4 @@
+# > Apple TV
+DOMAIN,np-edge.itunes.apple.com,AppleTV
+DOMAIN,play-edge.itunes.apple.com,AppleTV
+DOMAIN-SUFFIX,tv.apple.com,AppleTV
