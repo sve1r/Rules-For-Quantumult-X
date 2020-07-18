@@ -217,18 +217,25 @@ Repository
 ├── /Rewrite/
 ├── /Rules/
 │  ├── /Advertising/
-│  ├── /Apps/
-│  │  ├── /SNS/
+│  │  ├── /NormalApp/ -> 常用 App 屏蔽
+│  │  ├── /VideoApp/ -> 视频 App 屏蔽
+│  │  ├── AdReject.list -> 补充规则
+│  │  ├── antiAD-V4.list -> 补充规则
 │  ├── /Games/
+│  │  ├── Game.list -> 游戏规则
 │  ├── /Media/
 │  │  ├── /Domestic/
+│  │  │  ├── ....    -> 详细规则
 │  │  ├── /Foreign/
+│  │  │  ├── ....    -> 详细规则
 │  │  ├── DomesticMedia.list
 │  │  ├── ForeignMedia.list
 │  │  ├── Readme.md
 │  ├── /Region/
 │  ├── /Services/
-├── /Scripts/
+│  │  ├── /SNS/   -> SNS 规则
+│  │  ├── ....    -> 详细规则
+├── /Scripts/   -> 内容请参见文件夹内 README
 ├── LICENSE
 └── Readme.md
 ```
