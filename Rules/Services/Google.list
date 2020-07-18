@@ -68,5 +68,8 @@ DOMAIN-SUFFIX,xn--ngstr-lra8j.com,Google
 IP-CIDR,173.194.0.0/16,Google,no-resolve
 IP-CIDR,74.125.0.0/16,Google,no-resolve
 
-# > 国内部分
+# > 国内部分修正
+DOMAIN-KEYWORD,mtalk.google.com,DIRECT
+DOMAIN,safebrowsing.googleapis.com,DIRECT
+OMAIN-SUFFIX,dl.google.com,DIRECT
 DOMAIN-SUFFIX,google.cn,Domestic
