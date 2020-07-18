@@ -24,6 +24,8 @@ DOMAIN-SUFFIX,onmicrosoft.com,Microsoft
 DOMAIN-SUFFIX,outlook.com,Microsoft
 DOMAIN-SUFFIX,outlookgroups.ms,Microsoft
 DOMAIN-SUFFIX,visualstudio.com,Microsoft
-DOMAIN-SUFFIX,windows.com,Microsoft
-DOMAIN-SUFFIX,windows.net,Microsoft
-DOMAIN-SUFFIX,windowsupdate.com,Microsoft
+
+# 国内 CDN 修复
+DOMAIN-SUFFIX,windows.com,DIRECT
+DOMAIN-SUFFIX,windows.net,DIRECT
+DOMAIN-SUFFIX,windowsupdate.com,DIRECT
