@@ -1,12 +1,19 @@
 # 常用游戏平台整合
 
-//Humble bundle 
+# Humble bundle
 DOMAIN-SUFFIX,humblebundle.com,Game
 
-//Fanatical
+# > Blizzard
+# - USER-AGENT,hearthstone*,Domestic
+DOMAIN,cdp.cloud.unity3d.com,Domestic
+DOMAIN-SUFFIX,battle.net,Domestic
+DOMAIN-SUFFIX,battlenet.com,Domestic
+DOMAIN-SUFFIX,blizzard.com,Domestic
+
+# Fanatical
 DOMAIN-SUFFIX,fanatical.com,Game
 
-// Steam
+# Steam
 DOMAIN,api.steampowered.com,Game
 DOMAIN-SUFFIX,steamcommunity.com,Game
 DOMAIN-SUFFIX,steampowered.com,Game
@@ -19,6 +26,15 @@ DOMAIN-SUFFIX,steamstatic.com,Game
 DOMAIN-SUFFIX,steamcdn-a.akamaihd.net,Game
 DOMAIN-SUFFIX,steamstat.us,Game
 
-// Epicgames
+# Epicgames
 DOMAIN-KEYWORD,epicgames,Game
 DOMAIN-SUFFIX,helpshift.com,Game
+
+# Sony
+# > Sony
+DOMAIN-SUFFIX,playstation.com,Game
+DOMAIN-SUFFIX,playstation.net,Game
+DOMAIN-SUFFIX,playstationnetwork.com,Game
+DOMAIN-SUFFIX,sony.com,Game
+DOMAIN-SUFFIX,sonyentertainmentnetwork.com,Game
+
