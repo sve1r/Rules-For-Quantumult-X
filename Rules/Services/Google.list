@@ -4,6 +4,7 @@ DOMAIN-KEYWORD,gmail,Google
 DOMAIN-KEYWORD,gstatic,Google
 DOMAIN-KEYWORD,google,Google
 DOMAIN-KEYWORD,blogspot,Google
+
 # > 域名部分
 DOMAIN-SUFFIX,abc.xyz,Google
 DOMAIN-SUFFIX,android.com,Google
@@ -50,6 +51,10 @@ DOMAIN-SUFFIX,x.company,Google
 DOMAIN-SUFFIX,youtu.be,Google
 DOMAIN-SUFFIX,yt.be,Google
 DOMAIN-SUFFIX,ytimg.com,Google
+DOMAIN-SUFFIX,googleapis.com,Google
+#Google 翻译 @mxhx
+DOMAIN,translate.googleapis.com,Google
+
 # > DNS缓存 保护
 DOMAIN-SUFFIX,appspot.com,Google
 DOMAIN-SUFFIX,blogger.com,Google
@@ -62,3 +67,6 @@ DOMAIN-SUFFIX,xn--ngstr-lra8j.com,Google
 # > IP段 代理
 IP-CIDR,173.194.0.0/16,Google,no-resolve
 IP-CIDR,74.125.0.0/16,Google,no-resolve
+
+# > 国内部分
+DOMAIN-SUFFIX,google.cn,Domestic
