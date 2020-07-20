@@ -1,5 +1,5 @@
 # Region / 区域性 list -- China部分
-//请注意，此规则仍然处于未完善并持续更新的状态
+# 请注意，此规则仍然处于未完善并持续更新的状态
 # 常用UA
 USER-AGENT, %E4%BA%AC%E4%B8%9C%E5%88%B0%E5%AE%B6*,DIRECT
 USER-AGENT,%E5%8D%B3%E5%88%BB*,DIRECT
