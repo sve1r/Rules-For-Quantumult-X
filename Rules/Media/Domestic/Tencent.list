@@ -1,7 +1,7 @@
 # > MOO
-# - USER-AGENT,MOO*,AsianTV
-# - USER-AGENT,TencentMidasConnect*,AsianTV
+# - USER-AGENT,MOO*,Tencent
+# - USER-AGENT,TencentMidasConnect*,Tencent
 
 # > Tencent Video
-DOMAIN-SUFFIX,v.smtcdns.com,AsianTV
-DOMAIN-SUFFIX,vv.video.qq.com,AsianTV
+DOMAIN-SUFFIX,v.smtcdns.com,Tencent
+DOMAIN-SUFFIX,vv.video.qq.com,Tencent
