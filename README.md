@@ -19,6 +19,7 @@
 ![GitHub stars](https://img.shields.io/github/stars/sve1r/Rules-For-Quantumult-X?color=ffd700&style=for-the-badge)
 ![GitHub forks](https://img.shields.io/github/forks/sve1r/Rules-For-Quantumult-X?color=60c5ba&style=for-the-badge)
 ![GitHub issues](https://img.shields.io/github/issues/sve1r/Rules-For-Quantumult-X?color=1E90FF&style=for-the-badge)
+![Github Codelines](https://img.shields.io/tokei/lines/github/sve1r/Rules-For-Quantumult-X?style=for-the-badge)
 ![GitHub](https://img.shields.io/github/license/sve1r/Rules-For-Quantumult-X?style=for-the-badge)
 ![Twitter URL](https://img.shields.io/twitter/url?label=Twitter&logo=Twitter&color=e85a71&style=for-the-badge&url=https%3A%2F%2Ftwitter.com%2FSveirH)
 
