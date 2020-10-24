@@ -1,7 +1,7 @@
 # Apple 部分
 # 请注意，此规则导入后将自动创建同名策略组
-PROCESS-NAME,storedownloadd
-PROCESS-NAME,trustd
+#PROCESS-NAME,storedownloadd
+#PROCESS-NAME,trustd
 
 # > Apple API
 DOMAIN-SUFFIX,aaplimg.com,Apple
@@ -44,6 +44,6 @@ DOMAIN-SUFFIX,ls.apple.com,DIRECT
 DOMAIN-SUFFIX,mzstatic.com,DIRECT
 
   #以下内容规则需要通过代理访问
-PROCESS-NAME,News,Proxy
+#PROCESS-NAME,News,Proxy
 DOMAIN,hls.itunes.apple.com,Proxy
 DOMAIN-SUFFIX,apps.apple.com,Proxy
