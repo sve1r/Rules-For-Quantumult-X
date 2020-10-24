@@ -2,6 +2,7 @@
 # - USER-AGENT,Disney*,DisneyPlus
 DOMAIN,cdn.registerdisney.go.com,DisneyPlus
 DOMAIN,cdn.cdn.unid.go.com,DisneyPlus
+DOMAIN,disney.my.sentry.io,DisneyPlus
 DOMAIN-SUFFIX,bamgrid.com,DisneyPlus
 DOMAIN-SUFFIX,braze.com,DisneyPlus
 DOMAIN-SUFFIX,conviva.com,DisneyPlus
