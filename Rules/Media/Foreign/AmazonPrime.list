@@ -1,6 +1,9 @@
 # Amazon Prime Video
 USER-AGENT,InstantVideo.US*,AmazonPrime
 USER-AGENT,Prime%20Video*,AmazonPrime
+DOMAIN-SUFFIX,media-amazon.com,AmazonPrime
+DOMAIN,atv-ps.amazon.com,AmazonPrime
+DOMAIN,fls-na.amazon.com,AmazonPrime
 DOMAIN-SUFFIX,aiv-cdn.net,AmazonPrime
 DOMAIN-SUFFIX,amazonaws.com,AmazonPrime
 DOMAIN-SUFFIX,amazonvideo.com,AmazonPrime
