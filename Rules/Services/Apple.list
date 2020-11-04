@@ -40,10 +40,16 @@ DOMAIN,osxapps.itunes.apple.com,DIRECT
 DOMAIN,supportdownload.apple.com,DIRECT
 DOMAIN,swcdn.apple.com,DIRECT
 DOMAIN,updates-http.cdn-apple.com,DIRECT
+
 DOMAIN-SUFFIX,ls.apple.com,DIRECT
 DOMAIN-SUFFIX,mzstatic.com,DIRECT
 
   #以下内容规则需要通过代理访问
 #PROCESS-NAME,News,Proxy
 DOMAIN,hls.itunes.apple.com,Proxy
+DOMAIN,news-assets.apple.com,PROXY
 DOMAIN-SUFFIX,apps.apple.com,Proxy
+DOMAIN-SUFFIX,apple.news,Proxy
+DOMAIN,news-client.apple.com,Proxy
+DOMAIN,news-edge.apple.com,Proxy
+DOMAIN,news-events.apple.com,Proxy
