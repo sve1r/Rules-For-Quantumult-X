@@ -1,0 +1,12 @@
+# Steam
+DOMAIN,api.steampowered.com,Steam
+DOMAIN-SUFFIX,steamcommunity.com,Steam
+DOMAIN-SUFFIX,steampowered.com,Steam
+DOMAIN-SUFFIX,steamstatic.com,Steam
+DOMAIN-SUFFIX,steam-chat.com,Steam
+DOMAIN-SUFFIX,steamgames.com,Steam
+DOMAIN-SUFFIX,steamusercontent.com,Steam
+DOMAIN-SUFFIX,steamcontent.com,Steam
+DOMAIN-SUFFIX,steamstatic.com,Steam
+DOMAIN-SUFFIX,steamcdn-a.akamaihd.net,Steam
+DOMAIN-SUFFIX,steamstat.us,Steam
