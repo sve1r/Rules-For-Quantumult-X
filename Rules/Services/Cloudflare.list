@@ -14,3 +14,10 @@ IP-CIDR,162.158.0.0/15,Cloudflare
 IP-CIDR,104.16.0.0/12,Cloudflare
 IP-CIDR,172.64.0.0/13,Cloudflare
 IP-CIDR,131.0.72.0/22,Cloudflare
+IP6-CIDR,2400:cb00::/32,Cloudflare
+IP6-CIDR,2606:4700::/32,Cloudflare
+IP6-CIDR,2803:f800::/32,Cloudflare
+IP6-CIDR,2405:b500::/32,Cloudflare
+IP6-CIDR,2405:8100::/32,Cloudflare
+IP6-CIDR,2a06:98c0::/29,Cloudflare
+IP6-CIDR,2c0f:f248::/32,Cloudflare
