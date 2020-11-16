@@ -1,4 +1,5 @@
 # LineTV
-USER-AGENT,LINE%20TV*,LineTV
+#USER-AGENT,LINE%20TV*,LineTV
 DOMAIN-SUFFIX,linetv.tw,LineTV
 DOMAIN,d3c7rimkq79yfu.cloudfront.net,LineTV
+DOMAIN-SUFFIX,profile.line-scdn.net,LineTV
