@@ -1,17 +1,25 @@
-# > Micosoft
+# > Microsoft
 
-USER-AGENT,Microsoft*,Microsoft
-USER-AGENT,OneDrive*,Microsoft
+#USER-AGENT,Microsoft*,Microsoft
+#USER-AGENT,OneDrive*,Microsoft
 
+DOMAIN-KEYWORD,onedrive,Microsoft
 DOMAIN-KEYWORD,microsoft,Microsoft
+DOMAIN-SUFFIX,azure.com,Microsoft
 DOMAIN-SUFFIX,bing.com,Microsoft
 DOMAIN-SUFFIX,bing.net,Microsoft
 DOMAIN-SUFFIX,cloudappsecurity.com,Microsoft
 DOMAIN-SUFFIX,docs.com,Microsoft
+DOMAIN-SUFFIX,fabric.io,Microsoft
+DOMAIN-SUFFIX,files.1drv.com,Microsoft
 DOMAIN-SUFFIX,hotmail.com,Microsoft
 DOMAIN-SUFFIX,live.com,Microsoft
 DOMAIN-SUFFIX,live.net,Microsoft
+DOMAIN-SUFFIX,livefilestore.com,Microsoft
+DOMAIN-SUFFIX,mesh.com,Microsoft
 DOMAIN-SUFFIX,microsoft.com,Microsoft
+DOMAIN-SUFFIX,microsoftonline.com,Microsoft
+DOMAIN-SUFFIX,microsoft-tst.com,Microsoft
 DOMAIN-SUFFIX,msedge.net,Microsoft
 DOMAIN-SUFFIX,msn.com,Microsoft
 DOMAIN-SUFFIX,office.com,Microsoft
@@ -23,6 +31,13 @@ DOMAIN-SUFFIX,onenote.net,Microsoft
 DOMAIN-SUFFIX,onmicrosoft.com,Microsoft
 DOMAIN-SUFFIX,outlook.com,Microsoft
 DOMAIN-SUFFIX,outlookgroups.ms,Microsoft
+DOMAIN-SUFFIX,p.sfx.ms,Microsoft
+DOMAIN-SUFFIX,sharepoint.com,Microsoft
+DOMAIN-SUFFIX,skype.com,Microsoft
+DOMAIN-SUFFIX,spoprod-a.akamaihd.net,Microsoft
+DOMAIN-SUFFIX,storage.msn.com,Microsoft
+DOMAIN-SUFFIX,xbox.com,Microsoft
+DOMAIN-SUFFIX,xboxlive.com,Microsoft
 DOMAIN-SUFFIX,visualstudio.com,Microsoft
 
 # 国内 CDN 修复
