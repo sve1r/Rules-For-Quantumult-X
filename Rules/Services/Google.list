@@ -65,8 +65,8 @@ DOMAIN-SUFFIX,gvt3.com,Google
 DOMAIN-SUFFIX,xn--ngstr-lra8j.com,Google
 
 # > IP段 代理
-IP-CIDR,173.194.0.0/16,Google,no-resolve
-IP-CIDR,74.125.0.0/16,Google,no-resolve
+IP-CIDR,173.194.0.0/16,Google
+IP-CIDR,74.125.0.0/16,Google
 
 # > 国内部分修正
 DOMAIN,safebrowsing.googleapis.com,DIRECT
