@@ -3,8 +3,12 @@ DOMAIN,apm.music.163.com,NeteaseMusic
 DOMAIN,apm3.music.163.com,NeteaseMusic
 DOMAIN,interface.music.163.com,NeteaseMusic
 DOMAIN,interface3.music.163.com,NeteaseMusic
-DOMAIN,music.126.com,NeteaseMusic
-DOMAIN,music.163.com,NeteaseMusic
+DOMAIN-SUFFIX,163yun.com,NeteaseMusic
+DOMAIN-SUFFIX,api.iplay.163.com,NeteaseMusic
+DOMAIN-SUFFIX,hz.netease.com,NeteaseMusic
+DOMAIN-SUFFIX,mam.netease.com,NeteaseMusic
+DOMAIN-SUFFIX,music.126.com,NeteaseMusic
+DOMAIN-SUFFIX,music.163.com,NeteaseMusic
 IP-CIDR,101.71.154.241/32,NeteaseMusic
 IP-CIDR,103.126.92.132/32,NeteaseMusic
 IP-CIDR,103.126.92.133/32,NeteaseMusic
@@ -23,4 +27,3 @@ IP-CIDR,59.111.160.195/32,NeteaseMusic
 IP-CIDR,59.111.160.197/32,NeteaseMusic
 IP-CIDR,59.111.181.35/32,NeteaseMusic
 IP-CIDR,59.111.181.38/32,NeteaseMusic
-IP-CIDR,59.111.181.60/32,NeteaseMusic
