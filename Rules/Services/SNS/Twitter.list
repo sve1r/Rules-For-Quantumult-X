@@ -1,9 +1,9 @@
-# Twitter
-DOMAIN-SUFFIX,pscp.tv,PROXY
-DOMAIN-SUFFIX,periscope.tv,PROXY
-DOMAIN-SUFFIX,t.co,PROXY
-DOMAIN-SUFFIX,twimg.co,PROXY
-DOMAIN-SUFFIX,twimg.com,PROXY
-DOMAIN-SUFFIX,twitpic.com,PROXY
-DOMAIN-SUFFIX,vine.co,PROXY
-DOMAIN-KEYWORD,twitter,PROXY
+# > Twitter
+host-suffix,pscp.tv,PROXY
+host-suffix,periscope.tv,PROXY
+host-suffix,t.co,PROXY
+host-suffix,twimg.co,PROXY
+host-suffix,twimg.com,PROXY
+host-suffix,twitpic.com,PROXY
+host-suffix,vine.co,PROXY
+host-keyword,twitter,PROXY

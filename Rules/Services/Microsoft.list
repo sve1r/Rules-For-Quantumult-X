@@ -1,7 +1,7 @@
 # > Microsoft
 
-#USER-AGENT,Microsoft*,Microsoft
-#USER-AGENT,OneDrive*,Microsoft
+USER-AGENT,Microsoft*,Microsoft
+USER-AGENT,OneDrive*,Microsoft
 
 DOMAIN-KEYWORD,onedrive,Microsoft
 DOMAIN-KEYWORD,microsoft,Microsoft
