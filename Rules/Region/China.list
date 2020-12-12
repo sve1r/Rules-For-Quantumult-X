@@ -37,7 +37,7 @@ host-suffix,whatismyip.com,DIRECT
 //Speed Test
 # host-suffix,speedtest.net,DIRECT
 host-suffix,netspeedtestmaster.com,DIRECT
-DOMAIN,speedtest.macpaw.com,DIRECT
+host,speedtest.macpaw.com,DIRECT
 # 京东
 host-suffix,jd.com,DIRECT
 host-suffix,jd.hk,DIRECT
@@ -230,7 +230,7 @@ host-suffix,zhangzishi.cc,DIRECT
 host-suffix,zhihu.com,DIRECT
 host-suffix,zhimg.com,DIRECT
 host-suffix,zhuihd.com,DIRECT
-DOMAIN,download.jetbrains.com,DIRECT
+host,download.jetbrains.com,DIRECT
 host-suffix,12306.com,DIRECT
 host-suffix,126.net,DIRECT
 host-suffix,163.com,DIRECT

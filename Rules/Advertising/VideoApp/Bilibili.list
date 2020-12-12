@@ -1,7 +1,7 @@
 # Bilibili
-DOMAIN-SUFFIX,acgvideo.com,Bilibili
-DOMAIN-SUFFIX,biliapi.com,Bilibili
-DOMAIN-SUFFIX,biliapi.net,Bilibili
-DOMAIN-SUFFIX,bilibili.com,Bilibili
-DOMAIN-SUFFIX,bilibili.tv,Bilibili
-DOMAIN-SUFFIX,hdslb.com,Bilibili
+host-suffix,acgvideo.com,Bilibili
+host-suffix,biliapi.com,Bilibili
+host-suffix,biliapi.net,Bilibili
+host-suffix,bilibili.com,Bilibili
+host-suffix,bilibili.tv,Bilibili
+host-suffix,hdslb.com,Bilibili

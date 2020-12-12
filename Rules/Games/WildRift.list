@@ -1,5 +1,5 @@
 # 英雄联盟手游
 
-DOMAIN-SUFFIX,pvp.net,Game
-DOMAIN-SUFFIX,riotgames.com,Game
-DOMAIN-SUFFIX,riotcdn.net,Game
+host-suffix,pvp.net,Game
+host-suffix,riotgames.com,Game
+host-suffix,riotcdn.net,Game

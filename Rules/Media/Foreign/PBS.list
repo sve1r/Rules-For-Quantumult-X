@@ -1,3 +1,3 @@
 # PBS
-USER-AGENT,PBS*,PBS
-DOMAIN-SUFFIX,pbs.org,PBS
+user-agent,PBS*,PBS
+host-suffix,pbs.org,PBS

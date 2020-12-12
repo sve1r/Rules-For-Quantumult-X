@@ -1,10 +1,10 @@
 # > PPTV
-DOMAIN-SUFFIX,afp.pplive.com,AdBlock
-DOMAIN-SUFFIX,app.aplus.pptv.com,AdBlock
-DOMAIN-SUFFIX,as.aplus.pptv.com,AdBlock
-DOMAIN-SUFFIX,asimgs.pplive.cn,AdBlock
-DOMAIN-SUFFIX,de.as.pptv.com,AdBlock
-DOMAIN-SUFFIX,jp.as.pptv.com,AdBlock
-DOMAIN-SUFFIX,pp2.pptv.com,AdBlock
-DOMAIN-SUFFIX,stat.pptv.com,AdBlock
-DOMAIN-SUFFIX,static.g.pptv.com,AdBlock
+host-suffix,afp.pplive.com,AdBlock
+host-suffix,app.aplus.pptv.com,AdBlock
+host-suffix,as.aplus.pptv.com,AdBlock
+host-suffix,asimgs.pplive.cn,AdBlock
+host-suffix,de.as.pptv.com,AdBlock
+host-suffix,jp.as.pptv.com,AdBlock
+host-suffix,pp2.pptv.com,AdBlock
+host-suffix,stat.pptv.com,AdBlock
+host-suffix,static.g.pptv.com,AdBlock

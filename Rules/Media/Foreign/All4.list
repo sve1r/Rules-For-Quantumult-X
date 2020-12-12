@@ -1,4 +1,4 @@
 # All4
-USER-AGENT,All4*,All4
-DOMAIN-SUFFIX,c4assets.com,All4
-DOMAIN-SUFFIX,channel4.com,All4
+user-agent,All4*,All4
+host-suffix,c4assets.com,All4
+host-suffix,channel4.com,All4

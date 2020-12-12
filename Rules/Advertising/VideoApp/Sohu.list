@@ -1,13 +1,13 @@
 # > Sohu
-DOMAIN-SUFFIX,adnet.sohu.com,AdBlock
-DOMAIN-SUFFIX,aty.sohu.com,AdBlock
-DOMAIN-SUFFIX,data.vod.itc.cn,AdBlock
-DOMAIN-SUFFIX,epro.sogou.com,AdBlock
-DOMAIN-SUFFIX,go.sohu.com,AdBlock
-DOMAIN-SUFFIX,golden1.sogou.com,AdBlock
-DOMAIN-SUFFIX,imp.optaim.com,AdBlock
-DOMAIN-SUFFIX,inte.sogou.com,AdBlock
-DOMAIN-SUFFIX,inte.sogoucdn.com,AdBlock
-DOMAIN-SUFFIX,lu.sogoucdn.com,AdBlock
-DOMAIN-SUFFIX,theta.sogoucdn.com,AdBlock
-DOMAIN-SUFFIX,uranus.sogou.com,AdBlock
+host-suffix,adnet.sohu.com,AdBlock
+host-suffix,aty.sohu.com,AdBlock
+host-suffix,data.vod.itc.cn,AdBlock
+host-suffix,epro.sogou.com,AdBlock
+host-suffix,go.sohu.com,AdBlock
+host-suffix,golden1.sogou.com,AdBlock
+host-suffix,imp.optaim.com,AdBlock
+host-suffix,inte.sogou.com,AdBlock
+host-suffix,inte.sogoucdn.com,AdBlock
+host-suffix,lu.sogoucdn.com,AdBlock
+host-suffix,theta.sogoucdn.com,AdBlock
+host-suffix,uranus.sogou.com,AdBlock

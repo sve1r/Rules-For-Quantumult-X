@@ -1,15 +1,15 @@
 # > Bilibili
-# - USER-AGENT,bili*,AsianTV
-# - USER-AGENT,Bilibili*,AsianTV
-DOMAIN-SUFFIX,acg.tv,AsianTV
-DOMAIN-SUFFIX,acgvideo.com,AsianTV
-DOMAIN-SUFFIX,b23.tv,AsianTV
-DOMAIN-SUFFIX,biliapi.com,AsianTV
-DOMAIN-SUFFIX,biliapi.net,AsianTV
-DOMAIN-SUFFIX,bilibili.com,AsianTV
-DOMAIN-SUFFIX,biligame.com,AsianTV
-DOMAIN-SUFFIX,biligame.net,AsianTV
-DOMAIN-SUFFIX,bilivideo.com,AsianTV
-DOMAIN-SUFFIX,hdslb.com,AsianTV
-DOMAIN-SUFFIX,im9.com,AsianTV
-DOMAIN-SUFFIX,smtcdns.net,AsianTV
+# - user-agent,bili*,AsianTV
+# - user-agent,Bilibili*,AsianTV
+host-suffix,acg.tv,AsianTV
+host-suffix,acgvideo.com,AsianTV
+host-suffix,b23.tv,AsianTV
+host-suffix,biliapi.com,AsianTV
+host-suffix,biliapi.net,AsianTV
+host-suffix,bilibili.com,AsianTV
+host-suffix,biligame.com,AsianTV
+host-suffix,biligame.net,AsianTV
+host-suffix,bilivideo.com,AsianTV
+host-suffix,hdslb.com,AsianTV
+host-suffix,im9.com,AsianTV
+host-suffix,smtcdns.net,AsianTV

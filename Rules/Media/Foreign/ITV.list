@@ -1,5 +1,5 @@
 # ITV
-USER-AGENT,ITV_Player*,ITV
-DOMAIN-SUFFIX,itv.com,ITV
-DOMAIN-SUFFIX,itvstatic.com,ITV
-DOMAIN,itvpnpmobile-a.akamaihd.net,ITV
+user-agent,ITV_Player*,ITV
+host-suffix,itv.com,ITV
+host-suffix,itvstatic.com,ITV
+host,itvpnpmobile-a.akamaihd.net,ITV

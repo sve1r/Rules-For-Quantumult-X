@@ -269,7 +269,7 @@ host-suffix,ying.com,Proxy
 host-suffix,yoyo.org,Proxy
 host-suffix,ytimg.com,Proxy
 host-suffix,smartmailcloud.com,PROXY
-USER-AGENT,TwDramas,PROXY
+user-agent,TwDramas,PROXY
 host-suffix,chocotv.com.tw,PROXY
 host-suffix,2o7.net,PROXY
 host-suffix,4everProxy.com,PROXY

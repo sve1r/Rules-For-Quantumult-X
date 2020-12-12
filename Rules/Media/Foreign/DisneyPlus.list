@@ -1,14 +1,14 @@
 # > Disney Plus
-# - USER-AGENT,Disney*,DisneyPlus
-DOMAIN,cdn.registerdisney.go.com,DisneyPlus
-DOMAIN,cdn.cdn.unid.go.com,DisneyPlus
-DOMAIN,disney.my.sentry.io,DisneyPlus
-DOMAIN-SUFFIX,adobedtm.com
-DOMAIN-SUFFIX,bamgrid.com,DisneyPlus
-DOMAIN-SUFFIX,braze.com,DisneyPlus
-DOMAIN-SUFFIX,conviva.com,DisneyPlus
-DOMAIN-SUFFIX,disney.demdex.net,DisneyPlus
-DOMAIN-SUFFIX,disneyplus.com,DisneyPlus
-DOMAIN-SUFFIX,disney-plus.net,DisneyPlus
-DOMAIN-SUFFIX,dssott.com,DisneyPlus
-DOMAIN-SUFFIX,execute-api.us-east-1.amazonaws.com,DisneyPlus
+# - user-agent,Disney*,DisneyPlus
+host,cdn.registerdisney.go.com,DisneyPlus
+host,cdn.cdn.unid.go.com,DisneyPlus
+host,disney.my.sentry.io,DisneyPlus
+host-suffix,adobedtm.com
+host-suffix,bamgrid.com,DisneyPlus
+host-suffix,braze.com,DisneyPlus
+host-suffix,conviva.com,DisneyPlus
+host-suffix,disney.demdex.net,DisneyPlus
+host-suffix,disneyplus.com,DisneyPlus
+host-suffix,disney-plus.net,DisneyPlus
+host-suffix,dssott.com,DisneyPlus
+host-suffix,execute-api.us-east-1.amazonaws.com,DisneyPlus

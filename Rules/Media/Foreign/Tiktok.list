@@ -1,6 +1,6 @@
 # TikTok
-USER-AGENT,TikTok*,TikTok
-DOMAIN-SUFFIX,musical.ly,TikTok
-DOMAIN-SUFFIX,tiktokv.com,TikTok
-DOMAIN-SUFFIX,tiktokcdn.com,TikTok
-DOMAIN-KEYWORD,-tiktokcdn-com,TikTok
+user-agent,TikTok*,TikTok
+host-suffix,musical.ly,TikTok
+host-suffix,tiktokv.com,TikTok
+host-suffix,tiktokcdn.com,TikTok
+host-keyword,-tiktokcdn-com,TikTok

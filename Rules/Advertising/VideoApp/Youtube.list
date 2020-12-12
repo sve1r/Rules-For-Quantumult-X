@@ -1,8 +1,8 @@
 # > Youtube
-DOMAIN-SUFFIX,azabu-u.ac.jp,AdBlock
-DOMAIN-SUFFIX,couchcoaster.jp,AdBlock
-DOMAIN-SUFFIX,delivery.dmkt-sp.jp,AdBlock
-DOMAIN-SUFFIX,ehg-youtube.hitbox.com,AdBlock
-DOMAIN-SUFFIX,m-78.jp,AdBlock
-DOMAIN-SUFFIX,nichibenren.or.jp,AdBlock
-DOMAIN-SUFFIX,nicorette.co.kr,AdBlock
+host-suffix,azabu-u.ac.jp,AdBlock
+host-suffix,couchcoaster.jp,AdBlock
+host-suffix,delivery.dmkt-sp.jp,AdBlock
+host-suffix,ehg-youtube.hitbox.com,AdBlock
+host-suffix,m-78.jp,AdBlock
+host-suffix,nichibenren.or.jp,AdBlock
+host-suffix,nicorette.co.kr,AdBlock
