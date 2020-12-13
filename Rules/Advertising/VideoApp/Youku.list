@@ -45,17 +45,17 @@ host-suffix,ykatr.youku.com,AdBlock
 host-suffix,ykrec.youku.com,AdBlock
 
 # IP 部分
-IP-CIDR,117.177.248.17/32,AdBlock
-IP-CIDR,117.177.248.41/32,AdBlock
-IP-CIDR,223.87.176.139/32,AdBlock
-IP-CIDR,223.87.176.176/32,AdBlock
-IP-CIDR,223.87.177.180/32,AdBlock
-IP-CIDR,223.87.177.182/32,AdBlock
-IP-CIDR,223.87.177.184/32,AdBlock
-IP-CIDR,223.87.177.43/32,AdBlock
-IP-CIDR,223.87.177.47/32,AdBlock
-IP-CIDR,223.87.177.80/32,AdBlock
-IP-CIDR,223.87.182.101/32,AdBlock
-IP-CIDR,223.87.182.102/32,AdBlock
-IP-CIDR,223.87.182.11/32,AdBlock
-IP-CIDR,223.87.182.52/32,AdBlock
+ip-cidr,117.177.248.17/32,AdBlock
+ip-cidr,117.177.248.41/32,AdBlock
+ip-cidr,223.87.176.139/32,AdBlock
+ip-cidr,223.87.176.176/32,AdBlock
+ip-cidr,223.87.177.180/32,AdBlock
+ip-cidr,223.87.177.182/32,AdBlock
+ip-cidr,223.87.177.184/32,AdBlock
+ip-cidr,223.87.177.43/32,AdBlock
+ip-cidr,223.87.177.47/32,AdBlock
+ip-cidr,223.87.177.80/32,AdBlock
+ip-cidr,223.87.182.101/32,AdBlock
+ip-cidr,223.87.182.102/32,AdBlock
+ip-cidr,223.87.182.11/32,AdBlock
+ip-cidr,223.87.182.52/32,AdBlock
