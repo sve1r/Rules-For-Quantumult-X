@@ -1,4 +1,8 @@
 # Hulu
+host-suffix,cws-hulu.conviva.com,Hulu
 host-suffix,hulu.com,Hulu
+host-suffix,hulu.hb.omtrdc.net,Hulu
+host-suffix,hulu.sc.omtrdc.net,Hulu
+host-suffix,huluad.com,Hulu
 host-suffix,huluim.com,Hulu
 host-suffix,hulustream.com,Hulu
