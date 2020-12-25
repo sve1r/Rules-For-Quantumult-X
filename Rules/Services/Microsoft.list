@@ -2,7 +2,6 @@
 
 user-agent,Microsoft*,Microsoft
 user-agent,OneDrive*,Microsoft
-
 host-keyword,onedrive,Microsoft
 host-keyword,microsoft,Microsoft
 host-suffix,azure.com,Microsoft
@@ -36,11 +35,12 @@ host-suffix,sharepoint.com,Microsoft
 host-suffix,skype.com,Microsoft
 host-suffix,spoprod-a.akamaihd.net,Microsoft
 host-suffix,storage.msn.com,Microsoft
-host-suffix,xbox.com,Microsoft
-host-suffix,xboxlive.com,Microsoft
 host-suffix,visualstudio.com,Microsoft
 
 # 国内 CDN 修复
+host-suffix,msftconnecttest.com,DIRECT
 host-suffix,windows.com,DIRECT
 host-suffix,windows.net,DIRECT
 host-suffix,windowsupdate.com,DIRECT
+host-suffix,xbox.com,DIRECT
+host-suffix,xboxlive.com,DIRECT
