@@ -1,9 +1,16 @@
 # HBO NOW(GO)
 user-agent,HBO%20NOW*,HBO
 user-agent,HBOAsia*,HBO
+host-suffix,bcbolthboa-a.akamaihd.net,HBO
+host-suffix,cf-images.ap-southeast-1.prod.boltdns.net,HBO
+host-suffix,execute-api.ap-southeast-1.amazonaws.com,HBO
+host-suffix,execute-api.us-east-1.amazonaws.com,HBO
 host-suffix,hbo.com,HBO
 host-suffix,hbogo.com,HBO
 host-suffix,hboasia.com,HBO
 host-suffix,hbogo.com,HBO
+host-suffix,hbomax.com,HBO
+host-suffix,hbonow.com,HBO
 host-suffix,hbogoasia.hk,HBO
-host-suffix,execute-api.ap-southeast-1.amazonaws.com,HBO
+host-suffix,manifest.prod.boltdns.net,HBO
+host-suffix,s3-ap-southeast-1.amazonaws.com ,HBO
