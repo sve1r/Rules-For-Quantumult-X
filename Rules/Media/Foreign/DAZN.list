@@ -1,3 +1,15 @@
 # DAZN
 user-agent,DAZN*,DAZN
+host-suffix,control.kochava.com,DAZN
+host-suffix,d151l6v8er5bdm.cloudfront.net,DAZN
 host-suffix,dazn.com,DAZN
+host-suffix,dazn-api.com,DAZN
+host-suffix,dazndn.com,DAZN
+host-suffix,dc2-vodhls-perform.secure.footprint.net,DAZN
+host-suffix,dcalivedazn.akamaized.net,DAZN
+host-suffix,dca-ll-livedazn-dznlivejp.s.llnwi.net,DAZN
+host-suffix,dca-ll-voddazn-dznvodjp.s.llnwi.net,DAZN
+host-suffix,dcblivedazn.akamaized.net,DAZN
+host-suffix,indazn.com,DAZN
+host-suffix,intercom.io,DAZN
+host-suffix,s.yimg.jp,DAZN
