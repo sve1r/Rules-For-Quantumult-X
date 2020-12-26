@@ -36,11 +36,15 @@ host-suffix,skype.com,Microsoft
 host-suffix,spoprod-a.akamaihd.net,Microsoft
 host-suffix,storage.msn.com,Microsoft
 host-suffix,visualstudio.com,Microsoft
+host-suffix,xbox.com,Microsoft
+host-suffix,xboxlive.com,Microsoft
 
 # 国内 CDN 修复
+host-suffix,azure.cn,DIRECT
+host-suffix,download.microsoft.com,DIRECT
 host-suffix,msftconnecttest.com,DIRECT
 host-suffix,windows.com,DIRECT
 host-suffix,windows.net,DIRECT
 host-suffix,windowsupdate.com,DIRECT
-host-suffix,xbox.com,DIRECT
-host-suffix,xboxlive.com,DIRECT
+host-suffix,xbox.cn,DIRECT
+host-suffix,xboxlive.cn,DIRECT
