@@ -22,7 +22,7 @@
 ![Github Codelines](https://img.shields.io/tokei/lines/github/sve1r/Rules-For-Quantumult-X?style=for-the-badge)
 ![GitHub](https://img.shields.io/github/license/sve1r/Rules-For-Quantumult-X?style=for-the-badge)
 ![Twitter URL](https://img.shields.io/twitter/url?label=Twitter&logo=Twitter&color=e85a71&style=for-the-badge&url=https%3A%2F%2Ftwitter.com%2FSveirH)
-
+[![](https://img.shields.io/badge/-t.me/sve1r-3db6f1?style=for-the-badge&logo=Telegram&logoColor=2ca5e0)](https://t.me/sve1r)
 <!-- PROJECT LOGO -->
 <br />
 
