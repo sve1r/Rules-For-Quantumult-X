@@ -1,6 +1,6 @@
-# > IQIYI
-host-keyword,qiyi,AsianTV
-host-suffix,qy.net,AsianTV
-ip-cidr,101.227.0.0/16,no-resolve,AsianTV
-ip-cidr,101.224.0.0/13,no-resolve,AsianTV
-ip-cidr,119.176.0.0/12,no-resolve,AsianTV
+# > iQiyi
+host-keyword,qiyi,iQiyi
+host-suffix,qy.net,iQiyi
+ip-cidr,101.227.0.0/16,no-resolve,iQiyi
+ip-cidr,101.224.0.0/13,no-resolve,iQiyi
+ip-cidr,119.176.0.0/12,no-resolve,iQiyi
