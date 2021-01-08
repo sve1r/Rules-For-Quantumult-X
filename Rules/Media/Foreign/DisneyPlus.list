@@ -1,8 +1,12 @@
 # > Disney Plus
 user-agent,Disney*,DisneyPlus
+user-agent,DPlus*,DisneyPlus
 host-keyword,disneyplus,DisneyPlus
 host-suffix,cdn.registerdisney.go.com,DisneyPlus
 host-suffix,cdn.cdn.unid.go.com,DisneyPlus
+host-suffix,content-ause1-ur-discovery1.uplynk.com,DisneyPlus
+host-suffix,disco-api.com,DisneyPlus
+host-suffix,discoveryplus.com,DisneyPlus
 host-suffix,disney.my.sentry.io,DisneyPlus
 host-suffix,adobedtm.com,DisneyPlus
 host-suffix,bamgrid.com,DisneyPlus
@@ -12,7 +16,7 @@ host-suffix,conviva.com,DisneyPlus
 host-suffix,cdn.optimizely.com,DisneyPlus
 host-suffix,cdn.registerdisney.go.com,DisneyPlus
 host-suffix,cws.conviva.com,DisneyPlus
-host-suffix,d9.flashtalking.com
+host-suffix,d9.flashtalking.com,DisneyPlus
 host-suffix,disney.demdex.net,DisneyPlus
 host-suffix,disneyplus.com,DisneyPlus
 host-suffix,disney-plus.net,DisneyPlus
@@ -20,4 +24,9 @@ host-suffix,disneyplus.com.ssl.sc.omtrdc.net,DisneyPlus
 host-suffix,disney-portal.my.onetrust.com,DisneyPlus
 host-suffix,dssott.com,DisneyPlus
 host-suffix,execute-api.us-east-1.amazonaws.com,DisneyPlus
+host-suffix,fwmrm.net,DisneyPlus
+host-suffix,getblueshift.com,DisneyPlus
+host-suffix,litix.io,DisneyPlus
+host-suffix,mobile-collector.newrelic.com,DisneyPlus
+host-suffix,uplynk.com,DisneyPlus
 host-suffix,js-agent.newrelic.com,DisneyPlus
