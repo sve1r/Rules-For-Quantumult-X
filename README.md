@@ -93,23 +93,23 @@
 ```
 例如：
   
-  https://raw.githubusercontent.com/sve1r/Rules-For-Quantumult-X/master/Rules/Media/ForeignMedia.list `此为浏览器地址栏中获取到的链接`
+  https://raw.githubusercontent.com/sve1r/Rules-For-Quantumult-X/master/Rules/Media/ForeignMedia.list 
+  此为浏览器地址栏中获取到的链接
 
-``` 
-  
+```
 3.使用 **镜像加速域名** 替换 RAW链接,以避免更新配置时出错的相关问题
-
 ```
 例如：
   
   https://raw.githubusercontent.com/sve1r/Rules-For-Quantumult-X/master/Rules/Media/ForeignMedia.list 
   
-  请将 `raw.githubusercontent.com` 替换为 `raw.sevencdn.com`
+  请将 *raw.githubusercontent.com* 替换为 *raw.sevencdn.com*
   
   替换后链接为
   
   https://raw.sevencdn.com/sve1r/Rules-For-Quantumult-X/master/Rules/Media/ForeignMedia.list 
 ```
+
 #### *此处鸣谢 7ed.net 提供的公共 CDN 加速服务*
 
 
