@@ -8,3 +8,5 @@ host-suffix,spoti.fi,Spotify
 host-suffix,spotify.com,Spotify
 host-suffix,spotifycdn.net,Spotify
 ip-cidr,35.186.224.47/32,Spotify
+# 直连修复
+host-suffix,ap.spotify.com,DIRECT
