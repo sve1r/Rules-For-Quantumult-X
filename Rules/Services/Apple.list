@@ -1,15 +1,13 @@
-# > Apple
-# > Apple API
+# = Apple
+# > Apple Websites
 host-suffix,aaplimg.com,Apple
 host-suffix,apple.co,Apple
 host-suffix,apple.com,Apple
-host-suffix,apple-cloudkit.com,Apple
-host-suffix,appsto.re,Apple
-host-suffix,cdn-apple.com,Apple
-host-suffix,icloud.com,Apple
-host-suffix,icloud-content.com,Apple
+host-suffix,apple.com.cn,Apple
 host-suffix,itunes.com,Apple
 host-suffix,me.com,Apple
+
+# > Apple CIDR
 ip-cidr,17.0.0.0/8,Apple
 ip-cidr,63.92.224.0/19,Apple
 ip-cidr,65.199.22.0/23,Apple
@@ -21,27 +19,92 @@ ip-cidr,192.35.50.0/24,Apple
 ip-cidr,198.183.17.0/24,Apple
 ip-cidr,205.180.175.0/24,Apple
 
-# > Apple CDN
-host,aod.itunes.apple.com,DIRECT
-host,api.smoot.apple.cn,DIRECT
-host,appldnld.apple.com,DIRECT
-host,apptrailers.itunes.apple.com,DIRECT
-host,gs-loc-cn.apple.com,DIRECT
-host,iosapps.itunes.apple.com,DIRECT
-host,music.apple.com,DIRECT
-host,mvod.itunes.apple.com,DIRECT
-host,osxapps.itunes.apple.com,DIRECT
-host,supportdownload.apple.com,DIRECT
-host,swcdn.apple.com,DIRECT
-host,updates-http.cdn-apple.com,DIRECT
-host-suffix,ls.apple.com,DIRECT
-host-suffix,mzstatic.com,DIRECT
+# > Apple Stores
+host,iosapps.itunes.apple.com,Apple
+host,osxapps.itunes.apple.com,Apple
+host-suffix,appsto.re,Apple
+host-suffix,mzstatic.com,Apple
+
+# > Apple Developer
+host-suffix,adcdownload.apple.com,Apple
+host-suffix,developer.apple.com,Apple
+
+# > iCloud
+host-keyword,icloud,Apple
+host-ketword,icoudo,Apple
+host-ketword,icoudos,Apple
+host-suffix,applemx-icloud.com,Apple
+host-suffix,icloud-content.com,Apple
+host-suffix,icloud-isupport.com,Apple
+host-suffix,icloudads.net,Apple
+host-suffix,icloudbox.net,Apple
+host-suffix,icloudbrowser.net,Apple
+host-suffix,icloude.com,Apple
+host-suffix,icloudmusic.net,Apple
+host-suffix,icloudmail.net,Apple
+host-suffix,icloudnet.net,Apple
+host-suffix,icloudpay.net,Apple
+host-suffix,icloudsecure.net,Apple
+host-suffix,myicloud.net,Apple
+host-suffix,www-cdn.icloud.com.akadns.net,Apple
+host-suffix,icloud-sandbox.com,Apple
+host-suffix,icloud.com.cn,Apple
+host-suffix,icloud.net.cn,Apple
+
+# > Apple APIs
+# >> Location Service
+host-suffix,ls.apple.com,Apple
+# >> Push Service
+host,init-p01md.apple.com,Apple
+host,init-p01st.push.apple.com,Apple
+host,init-s01st.push.apple.com,Apple
+host-suffix,push.apple.com,Apple
+# >> Other Service
+host,api.smoot.apple.cn,Proxy
+
+# > Apple Music
+host,hls.itunes.apple.com,Proxy
+host,aod.itunes.apple.com,Apple
+host,mvod.itunes.apple.com,Apple
+host-suffix,itunes.apple.com,Apple
+host-suffix,music.apple.com,Apple
+host-suffix,play.itunes.apple.com,Apple
+host-suffix,phobos.apple.com,Proxy
+host-suffix,radio.itunes.apple.com,Proxy
+host-suffix,radio-activity.itunes.apple.com,Proxy
+host-suffix,radio-services.itunes.apple.com,Proxy
+host-suffix,streamingaudio.itunes.apple.com,Apple
+
+# > Apple Kit
+host-suffix,apple-cloudkit.com,Apple
+host-suffix,apple-mapkit.com,Apple
+host-suffix,apple-livephotoskit.com,Apple
+
+# > Apple Resources Server
+host-suffix,appldnld.apple.com,Apple
+host-suffix,secure-appldnld.apple.com,Apple
+host-suffix,testflight.apple.com,Proxy
+host-suffix,itunesu.assets.itunes.com,Proxy
+
+# > Apple CDNs
+host,updates-http.cdn-apple.com,Apple
+host-suffix,apple-support.akadns.net,Apple
+host-suffix,apple.com.akadns.net,Apple
+host-suffix,apple.com.cdn20.com,Apple
+host-suffix,apple.com.edgekey.net.globalredir.akadns.net,Apple
+host-suffix,apple.com.mwcname.com,Apple
+host-suffix,apple.com.mwcloudcdn.com,Apple
+host-suffix,cdn-apple.com,Apple
+host-suffix,cdn-apple.com.akadns.net,Apple
+host-suffix,isu.apple.com.akadns.net,Apple
+host-suffix,itunes-apple.com.akadns.net,Proxy
+host-suffix,itunes.com.edgekey.net,Proxy
+host-suffix,origin-apple.com.akadns.net,Apple
+host-suffix,push-apple.com.akadns.net,Apple
 
 #以下内容规则需要通过代理访问
-host,hls.itunes.apple.com,Proxy
 host,news-assets.apple.com,PROXY
-host-suffix,apps.apple.com,Proxy
-host-suffix,apple.news,Proxy
 host,news-client.apple.com,Proxy
 host,news-edge.apple.com,Proxy
 host,news-events.apple.com,Proxy
+host-suffix,apple.news,Proxy
