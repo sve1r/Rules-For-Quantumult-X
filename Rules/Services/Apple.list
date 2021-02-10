@@ -46,6 +46,7 @@ host-suffix,icloudnet.net,Apple
 host-suffix,icloudpay.net,Apple
 host-suffix,icloudsecure.net,Apple
 host-suffix,myicloud.net,Apple
+host-suffix,mail.me.com.akadns.net,Apple
 host-suffix,www-cdn.icloud.com.akadns.net,Apple
 host-suffix,icloud-sandbox.com,Apple
 host-suffix,icloud.com.cn,Apple
@@ -58,7 +59,9 @@ host-suffix,ls.apple.com,Apple
 host,init-p01md.apple.com,Apple
 host,init-p01st.push.apple.com,Apple
 host,init-s01st.push.apple.com,Apple
+host-suffix,courier-push-apple.com.akadns.net,Apple
 host-suffix,push.apple.com,Apple
+
 # >> Other Service
 host,api.smoot.apple.cn,Proxy
 
@@ -81,9 +84,9 @@ host-suffix,apple-mapkit.com,Apple
 host-suffix,apple-livephotoskit.com,Apple
 
 # > Apple Resources Server
+host,testflight.apple.com,Proxy
 host-suffix,appldnld.apple.com,Apple
 host-suffix,secure-appldnld.apple.com,Apple
-host-suffix,testflight.apple.com,Proxy
 host-suffix,itunesu.assets.itunes.com,Proxy
 
 # > Apple CDNs
