@@ -1236,6 +1236,7 @@ host-suffix,adsor.openrunner.com,REJECT
 host-suffix,adsp.xunlei.com,REJECT
 host-suffix,ad-specs.guoshipartners.com,REJECT
 host-suffix,adsdk.dmzj.com,REJECT
+host-suffix,adsdk.dmzj1.com,REJECT
 host-suffix,adsqqclick.qq.com,REJECT
 host-suffix,adsremote.scrippsnetworks.com,REJECT
 host-suffix,adsrvr.org,REJECT
@@ -2833,6 +2834,7 @@ host-suffix,dmpclick.deliver.ifeng.com,REJECT
 host-suffix,dmrtb.com,REJECT
 host-suffix,dmt.qcrx.cn,REJECT
 host-suffix,dmtrck.com,REJECT
+host-suffix,dmzj.hxltad.com,REJECT
 host-suffix,dn3.ixinwei.com,REJECT
 host-suffix,dn7788.com,REJECT
 host-suffix,dn-growing.qbox.me,REJECT
@@ -4239,6 +4241,7 @@ host-suffix,j.qiqiww.com,REJECT
 host-suffix,j.s11.cn,REJECT
 host-suffix,j.sc1369.com,REJECT
 host-suffix,j.sdqoi2d.com,REJECT
+host-suffix,j.sousoudus.com,REJECT
 host-suffix,j.wan.liebao.cn,REJECT
 host-suffix,j.wit.qq.com,REJECT
 host-suffix,j.xinshipu.com,REJECT
@@ -5774,6 +5777,7 @@ host-suffix,palmnews.sina.cn,REJECT
 host-suffix,panda.kdnet.net,REJECT
 host-suffix,pangu.cc,REJECT
 host-suffix,panoramio.com,REJECT
+host-suffix,pangolin.snssdk.com,REJECT
 host-suffix,papajia55.com,REJECT
 host-suffix,parking.zunmi.cn,REJECT
 host-suffix,parser.houyi.baofeng.net,REJECT
