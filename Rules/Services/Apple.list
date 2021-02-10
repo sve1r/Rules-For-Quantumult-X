@@ -31,8 +31,8 @@ host-suffix,developer.apple.com,Apple
 
 # > iCloud
 host-keyword,icloud,Apple
-host-ketword,icoudo,Apple
-host-ketword,icoudos,Apple
+host-keyword,icoudo,Apple
+host-keyword,icoudos,Apple
 host-suffix,applemx-icloud.com,Apple
 host-suffix,icloud-content.com,Apple
 host-suffix,icloud-isupport.com,Apple
