@@ -104,6 +104,7 @@ host-suffix,itunes-apple.com.akadns.net,Proxy
 host-suffix,itunes.com.edgekey.net,Proxy
 host-suffix,origin-apple.com.akadns.net,Apple
 host-suffix,push-apple.com.akadns.net,Apple
+host-suffix,prod-support.apple-support.akadns.net,Apple
 
 #以下内容规则需要通过代理访问
 host,news-assets.apple.com,PROXY
