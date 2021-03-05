@@ -162,4 +162,4 @@ host-suffix,static.g.iqiyi.com,REJECT
 host-suffix,static.g.ppstream.com,REJECT
 host-suffix,store.iqiyi.com,REJECT
 host-suffix,tracker.sns.iqiyi.com,REJECT
-host-suffix,yuedu.iqiyi.com,REJECT2
+host-suffix,yuedu.iqiyi.com,REJECT
