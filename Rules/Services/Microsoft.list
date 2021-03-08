@@ -35,6 +35,7 @@ host-suffix,sharepoint.com,Microsoft
 host-suffix,skype.com,Microsoft
 host-suffix,spoprod-a.akamaihd.net,Microsoft
 host-suffix,storage.msn.com,Microsoft
+host-suffix,svc.ms,Microsoft
 host-suffix,visualstudio.com,Microsoft
 host-suffix,xbox.com,Microsoft
 host-suffix,xboxlive.com,Microsoft
