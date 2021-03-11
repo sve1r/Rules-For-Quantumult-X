@@ -17,7 +17,6 @@ host-keyword,azurefd,Microsoft
 host-keyword,azureplanetscale,Microsoft
 host-keyword,cosmosdb,Microsoft
 host-keyword,windowsazure,Microsoft
-
 host-suffix,azure-apim.net,Microsoft
 host-suffix,azure-mobile.net,Microsoft
 host-suffix,azure-sphere.com,Microsoft
@@ -134,7 +133,6 @@ host-suffix,m12.vc,Microsoft
 host-keyword,hotmail,Microsoft
 host-keyword,outlook,Microsoft
 host-suffix,outlookgroups.ms,Microsoft
-<<<<<<< HEAD
 host-suffix,outlookmobile.com,Microsoft
 
 # > Live
@@ -203,7 +201,6 @@ host-suffix,sqlserveronlinux.com,Microsoft
 host-suffix,timelinestoryteller.com,Microsoft
 host-suffix,uwpcommunitytoolkit.com,Microsoft
 host-suffix,xamarin.com,Microsoft
-=======
 host-suffix,p.sfx.ms,Microsoft
 host-suffix,sharepoint.com,Microsoft
 host-suffix,skype.com,Microsoft
@@ -213,7 +210,6 @@ host-suffix,svc.ms,Microsoft
 host-suffix,visualstudio.com,Microsoft
 host-suffix,xbox.com,Microsoft
 host-suffix,xboxlive.com,Microsoft
->>>>>>> be2114e030abf8323db9f220228ddecc9c7d8e45
 
 # > Office 365
 host-keyword,Office,Microsoft
