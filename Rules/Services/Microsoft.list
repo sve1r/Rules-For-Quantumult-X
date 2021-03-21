@@ -474,11 +474,11 @@ host-suffix,yammer.com,Microsoft
 host-suffix,yammerusercontent.com,Microsoft
 
 # > Microsoft Domestics
-host-suffix,bj1.api.bing.com,DIRECT
-host-suffix,azure.cn,DIRECT
-host-suffix,download.microsoft.com,DIRECT
-host-suffix,msftconnecttest.com,DIRECT
-host-suffix,windowsupdate.com,DIRECT
+host-suffix,bj1.api.bing.com,Microsoft Dometics
+host-suffix,azure.cn,Microsoft Dometics
+host-suffix,download.microsoft.com,Microsoft Dometics
+host-suffix,msftconnecttest.com,Microsoft Dometics
+host-suffix,windowsupdate.com,Microsoft Dometics
 
 # > Microsoft CDNs
 host-suffix,aka.ms,Microsoft
