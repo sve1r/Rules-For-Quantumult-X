@@ -394,7 +394,6 @@ host-suffix,msads.net,Microsoft
 host-suffix,msappproxy.net,Microsoft
 host-suffix,msauthimages.net,Microsoft
 host-suffix,mschallenge2018.com,Microsoft
-host-suffix,msecnd.net,Microsoft
 host-suffix,msftauthimages.net,Microsoft
 host-suffix,msftcenterone.cn,Microsoft
 host-suffix,msftconnecttest.com,Microsoft
@@ -482,6 +481,7 @@ host-suffix,windowsupdate.com,Microsoft Dometics
 
 # > Microsoft CDNs
 host-suffix,aka.ms,Microsoft
+host-suffix,msecnd.net,Microsoft
 host-suffix,live.com.akadns.net,Microsoft
 host-suffix,spoprod-a.akamaihd.net,Microsoft
 host-suffix,microsoft.com.akadns.net,Microsoft
