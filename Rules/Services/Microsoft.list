@@ -476,6 +476,7 @@ host-suffix,yammerusercontent.com,Microsoft
 host-suffix,bj1.api.bing.com,Microsoft Dometics
 host-suffix,azure.cn,Microsoft Dometics
 host-suffix,download.microsoft.com,Microsoft Dometics
+host-suffix,download.visualstudio.microsoft.com,Microsoft Dometics
 host-suffix,msftconnecttest.com,Microsoft Dometics
 host-suffix,windowsupdate.com,Microsoft Dometics
 
