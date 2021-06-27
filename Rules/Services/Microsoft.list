@@ -496,6 +496,7 @@ host-suffix,a767.dscg3.akamai.net,Microsoft
 host-suffix,cs11.wpc.v0cdn.net,Microsoft
 host-suffix,cs9.wac.phicdn.net,Microsoft
 host-suffix,b.akamaiedge.net,Microsoft
+host-suffix,livetileedge.dsx.mp.microsoft.com.edgekey.net,Microsoft
 host-suffix,spoprod-a.akamaihd.net,Microsoft
 host-suffix,windows.com.akadns.net,Microsoft
 host-suffix,prod-video-cms-rt-microsoft-com.akamaized.net,Microsoft
@@ -509,3 +510,4 @@ host-suffix,mwf-service.akamaized.net,Microsoft
 host-suffix,officecdn-microsoft-com.akamaized.net,Microsoft
 host-suffix,statics-marketingsites-eus-ms-com.akamaized.net,Microsoft
 host-suffix,statics-marketingsites-wcus-ms-com.akamaized.net,Microsoft
+host-suffix,store-images.s-microsoft.com,Microsoft
