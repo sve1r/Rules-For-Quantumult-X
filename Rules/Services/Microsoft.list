@@ -478,6 +478,7 @@ host-suffix,azure.cn,Microsoft Dometics
 host-suffix,download.microsoft.com,Microsoft Dometics
 host-suffix,download.visualstudio.microsoft.com,Microsoft Dometics
 host-suffix,msftconnecttest.com,Microsoft Dometics
+host-suffix,tlu.dl.delivery.mp.microsoft.com,Microsoft Dometics
 host-suffix,windowsupdate.com,Microsoft Dometics
 
 # > Microsoft CDNs
