@@ -20,13 +20,13 @@ ip-cidr,198.183.17.0/24,Apple
 ip-cidr,205.180.175.0/24,Apple
 
 # > Apple Stores
-host,iosapps.itunes.apple.com,Apple
-host,osxapps.itunes.apple.com,Apple
+host,iosapps.itunes.apple.com,Apple Domestic
+host,osxapps.itunes.apple.com,Apple Domestic
 host-suffix,appsto.re,Apple
 host-suffix,mzstatic.com,Apple
 
 # > Apple Developer
-host-suffix,adcdownload.apple.com,Apple
+host-suffix,adcdownload.apple.com,Apple Domestic
 host-suffix,developer.apple.com,Apple
 
 # > iCloud
@@ -66,44 +66,44 @@ host-suffix,push.apple.com,Apple
 host,api.smoot.apple.cn,Proxy
 
 # > Apple Music
-host,hls.itunes.apple.com,Proxy
-host,aod.itunes.apple.com,Apple
-host,mvod.itunes.apple.com,Apple
-host-suffix,itunes.apple.com,Apple
-host-suffix,music.apple.com,Apple
-host-suffix,play.itunes.apple.com,Apple
-host-suffix,phobos.apple.com,Proxy
-host-suffix,radio.itunes.apple.com,Proxy
-host-suffix,radio-activity.itunes.apple.com,Proxy
-host-suffix,radio-services.itunes.apple.com,Proxy
-host-suffix,streamingaudio.itunes.apple.com,Apple
+host,hls.itunes.apple.com,Apple Music
+host,aod.itunes.apple.com,Apple Music
+host,mvod.itunes.apple.com,Apple Music
+host-suffix,itunes.apple.com,Apple Music
+host-suffix,music.apple.com,Apple Music
+host-suffix,play.itunes.apple.com,Apple Music
+host-suffix,phobos.apple.com,Apple Music
+host-suffix,radio.itunes.apple.com,Apple Music
+host-suffix,radio-activity.itunes.apple.com,Apple Music
+host-suffix,radio-services.itunes.apple.com,Apple Music
+host-suffix,streamingaudio.itunes.apple.com,Apple Music
 
 # > Apple Kit
 host-suffix,apple-cloudkit.com,Apple
-host-suffix,apple-mapkit.com,Apple
+host-suffix,apple-mapkit.com,Apple Domestic
 host-suffix,apple-livephotoskit.com,Apple
 
 # > Apple Resources Server
 host,testflight.apple.com,Proxy
-host-suffix,appldnld.apple.com,Apple
+host-suffix,appldnld.apple.com,Apple Domestic
 host-suffix,secure-appldnld.apple.com,Apple
 host-suffix,itunesu.assets.itunes.com,Proxy
 
 # > Apple CDNs
-host,updates-http.cdn-apple.com,Apple
+host,updates-http.cdn-apple.com,Apple Domestic
 host-suffix,apple-support.akadns.net,Apple
 host-suffix,apple.com.akadns.net,Apple
-host-suffix,apple.com.cdn20.com,Apple
+host-suffix,apple.com.cdn20.com,Apple Domestic
 host-suffix,apple.com.edgekey.net.globalredir.akadns.net,Apple
-host-suffix,apple.com.mwcname.com,Apple
-host-suffix,apple.com.mwcloudcdn.com,Apple
-host-suffix,cdn-apple.com,Apple
+host-suffix,apple.com.mwcname.com,Apple Domestic
+host-suffix,apple.com.mwcloudcdn.com,Apple Domestic
+host-suffix,cdn-apple.com,Apple Domestic
 host-suffix,cdn-apple.com.akadns.net,Apple
 host-suffix,isu.apple.com.akadns.net,Apple
 host-suffix,itunes-apple.com.akadns.net,Proxy
 host-suffix,itunes.com.edgekey.net,Proxy
 host-suffix,origin-apple.com.akadns.net,Apple
-host-suffix,push-apple.com.akadns.net,Apple
+host-suffix,push-apple.com.akadns.net,Apple 
 host-suffix,prod-support.apple-support.akadns.net,Apple
 
 #以下内容规则需要通过代理访问
