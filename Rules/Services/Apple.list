@@ -64,6 +64,7 @@ host-suffix,push.apple.com,Apple
 
 # >> Other Service
 host,api.smoot.apple.cn,Proxy
+host-suffix,safebrowsing.apple,Proxy
 
 # > Apple Music
 host,hls.itunes.apple.com,Apple Music
