@@ -1,6 +1,17 @@
 # > iQiyi
 host-keyword,qiyi,iQiyi
 host-suffix,qy.net,iQiyi
-ip-cidr,101.227.0.0/16,no-resolve,iQiyi
-ip-cidr,101.224.0.0/13,no-resolve,iQiyi
-ip-cidr,119.176.0.0/12,no-resolve,iQiyi
+ip-cidr,23.211.15.99/32,iQiyi
+ip-cidr,101.227.0.0/16,iQiyi
+ip-cidr,101.224.0.0/13,iQiyi
+ip-cidr,103.5.34.153/32,iQiyi
+ip-cidr,104.109.129.153/32,iQiyi
+ip-cidr,110.238.107.47/32,iQiyi
+ip-cidr,118.26.32.178/32,iQiyi
+ip-cidr,119.176.0.0/12,iQiyi
+ip-cidr,203.74.95.131/32,iQiyi
+ip-cidr,203.74.95.139/32,iQiyi
+ip-cidr,203.211.4.169/32,iQiyi
+ip-cidr,203.211.4.193/32,iQiyi
+ip-cidr,210.201.32.8/32,iQiyi
+ip-cidr,210.201.32.11/32,iQiyi
