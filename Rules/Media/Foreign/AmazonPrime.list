@@ -1,10 +1,21 @@
 # Amazon Prime Video
 user-agent,InstantVideo.US*,AmazonPrime
 user-agent,Prime%20Video*,AmazonPrime
-host-suffix,media-amazon.com,AmazonPrime
+host,avodmp4s3ww-a.akamaihd.net,AmazonPrime
+host,d1v5ir2lpwr8os.cloudfront.net,AmazonPrime
+host,d1xfray82862hr.cloudfront.net,AmazonPrime
+host,d22qjgkvxw22r6.cloudfront.net,AmazonPrime
+host,d25xi40x97liuc.cloudfront.net,AmazonPrime
+host,d27xxe7juh1us6.cloudfront.net,AmazonPrime
+host,d3196yreox78o9.cloudfront.net,AmazonPrime
+host,dmqdd6hw24ucf.cloudfront.net,AmazonPrime
+host,ktpx.amazon.com,AmazonPrime
 host,atv-ps.amazon.com,AmazonPrime
 host,fls-na.amazon.com,AmazonPrime
+host-keyword,avoddashs,AmazonPrime
+host-suffix,pv-cdn.net,AmazonPrime
 host-suffix,aiv-cdn.net,AmazonPrime
+host-suffix,aiv-delivery.net,AmazonPrime
 host-suffix,amazonaws.com,AmazonPrime
 host-suffix,amazonvideo.com,AmazonPrime
 host-suffix,llnwd.net,AmazonPrime
@@ -12,5 +23,3 @@ host-suffix,aiv-delivery.net,AmazonPrime
 host-suffix,media-amazon.com,AmazonPrime
 host-suffix,primevideo.com,AmazonPrime
 host-suffix,media-amazon.com,AmazonPrime
-host,atv-ps.amazon.com,AmazonPrime
-host,fls-na.amazon.com,AmazonPrime
