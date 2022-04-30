@@ -1,9 +1,9 @@
 # > Twitter
-host-suffix,pscp.tv,PROXY
-host-suffix,periscope.tv,PROXY
-host-suffix,t.co,PROXY
-host-suffix,twimg.co,PROXY
-host-suffix,twimg.com,PROXY
-host-suffix,twitpic.com,PROXY
-host-suffix,vine.co,PROXY
-host-keyword,twitter,PROXY
+host-suffix,pscp.tv,Twitter
+host-suffix,periscope.tv,Twitter
+host-suffix,t.co,Twitter
+host-suffix,twimg.co,Twitter
+host-suffix,twimg.com,Twitter
+host-suffix,twitpic.com,Twitter
+host-suffix,vine.co,Twitter
+host-keyword,twitter,Twitter
