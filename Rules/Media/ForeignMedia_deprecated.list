@@ -1,0 +1,200 @@
+# AbemaTV
+user-agent,AbemaTV*,ForeignMedia
+host-suffix,abema.io,ForeignMedia
+host-suffix,ameba.jp,ForeignMedia
+host-suffix,hayabusa.io,ForeignMedia
+host,abematv.akamaized.net,ForeignMedia
+host,ds-linear-abematv.akamaized.net,ForeignMedia
+host,ds-vod-abematv.akamaized.net,ForeignMedia
+host,linear-abematv.akamaized.net,ForeignMedia
+
+# All4
+user-agent,All4*,ForeignMedia
+host-suffix,c4assets.com,ForeignMedia
+host-suffix,channel4.com,ForeignMedia
+
+# Amazon Prime Video
+user-agent,InstantVideo.US*,ForeignMedia
+user-agent,Prime%20Video*,ForeignMedia
+host-suffix,aiv-cdn.net,ForeignMedia
+host-suffix,amazonaws.com,ForeignMedia
+host-suffix,amazonvideo.com,ForeignMedia
+host-suffix,llnwd.net,ForeignMedia
+host-suffix,aiv-delivery.net,ForeignMedia
+host-suffix,amazonvideo.com,ForeignMedia
+host-suffix,media-amazon.com,ForeignMedia
+host-suffix,primevideo.com,ForeignMedia
+# Bahamut
+user-agent,Anime*,ForeignMedia
+host-suffix,bahamut.com.tw,ForeignMedia
+host-suffix,gamer.com.tw,ForeignMedia
+host,gamer-cds.cdn.hinet.net,ForeignMedia
+host,gamer2-cds.cdn.hinet.net,ForeignMedia
+# BBC
+user-agent,BBC*,ForeignMedia
+user-agent,BBCBeacon*,ForeignMedia
+host-keyword,bbcfmt,ForeignMedia
+host-keyword,uk-live,ForeignMedia
+host-suffix,bbc.com,ForeignMedia
+host-suffix,bbc.co.uk,ForeignMedia
+host-suffix,bbci.co.uk,ForeignMedia
+host-suffix,vod-hls-uk-live.akamaized.net,ForeignMedia
+
+#Fixed June,24
+# DAZN
+user-agent,DAZN*,ForeignMedia
+host-suffix,dazn.com,ForeignMedia
+
+# Deezer
+user-agent,Deezer*,ForeignMedia
+host-suffix,deezer.com,Deezer
+host-suffix,dzcdn.net,Deezer
+# Fox + (Now)
+user-agent,FOX%20NOW*,ForeignMedia
+user-agent,FOXPlus*,ForeignMedia
+host-keyword,foxplus,ForeignMedia
+host-suffix,dashasiafox.akamaized.net,ForeignMedia
+host-suffix,fox.com,ForeignMedia
+host-suffix,foxdcg.com,ForeignMedia
+host-suffix,foxplus.com,ForeignMedia
+host-suffix,staticasiafox.akamaized.net,ForeignMedia
+host-suffix,theplatform.com,ForeignMedia
+host-suffix,config.fox.com,ForeignMedia
+host-suffix,emome.net,ForeignMedia
+host-suffix,fox.com,ForeignMedia
+host-suffix,foxplay.com,ForeignMedia
+host-suffix,ipinfo.io,ForeignMedia
+host-suffix,mstage.io,ForeignMedia
+host-suffix,now.com,ForeignMedia
+host-suffix,theplatform.com,ForeignMedia
+host-suffix,urlload.net,ForeignMedia
+# HBO NOW(GO)
+user-agent,HBO%20NOW*,ForeignMedia
+user-agent,HBOAsia*,ForeignMedia
+host-suffix,hbo.com,ForeignMedia
+host-suffix,hbogo.com,ForeignMedia
+host-suffix,hboasia.com,ForeignMedia
+host-suffix,hbogo.com,ForeignMedia
+host-suffix,hbogoasia.hk,ForeignMedia
+host-suffix,execute-api.ap-southeast-1.amazonaws.com,ForeignMedia
+# Hulu
+host-suffix,hulu.com,ForeignMedia
+host-suffix,huluim.com,ForeignMedia
+host-suffix,hulustream.com,ForeignMedia
+# ITV
+user-agent,ITV_Player*,ForeignMedia
+host-suffix,itv.com,ForeignMedia
+host-suffix,itvstatic.com,ForeignMedia
+host,itvpnpmobile-a.akamaihd.net,ForeignMedia
+# JOOX
+user-agent,WeMusic*,ForeignMedia
+user-agent,JOOX*,ForeignMedia
+host-suffix,joox.com,ForeignMedia
+# KKBOX
+host-suffix,kkbox.com,ForeignMedia
+host-suffix,kkbox.com.tw,ForeignMedia
+host-suffix,kfs.io,ForeignMedia
+# KKTV
+user-agent,KKTV*,ForeignMedia
+user-agent,com.kktv.ios.kktv*,ForeignMedia
+host-suffix,kktv.com.tw,ForeignMedia
+host-suffix,kktv.me,ForeignMedia
+host,kktv-theater.kk.stream,ForeignMedia
+# LineTV
+user-agent,LINE%20TV*,ForeignMedia
+host-suffix,linetv.tw,ForeignMedia
+host,d3c7rimkq79yfu.cloudfront.net,ForeignMedia
+# LiTV
+host-suffix,litv.tv,ForeignMedia
+host,litvfreemobile-hichannel.cdn.hinet.net,ForeignMedia
+# Netflix
+user-agent,Argo*,ForeignMedia
+host-keyword,nflx,ForeignMedia
+host-suffix,netflix.com,ForeignMedia
+host-suffix,netflix.net,ForeignMedia
+host-suffix,nflxext.com,ForeignMedia
+host-suffix,nflximg.com,ForeignMedia
+host-suffix,nflximg.net,ForeignMedia
+host-suffix,nflxso.net,ForeignMedia
+host-suffix,nflxvideo.net,ForeignMedia
+ip-cidr,23.246.0.0/18,ForeignMedia
+ip-cidr,37.77.184.0/21,ForeignMedia
+ip-cidr,45.57.0.0/17,ForeignMedia
+ip-cidr,64.120.128.0/17,ForeignMedia
+ip-cidr,66.197.128.0/17,ForeignMedia
+ip-cidr,108.175.32.0/20,ForeignMedia
+ip-cidr,192.173.64.0/18,ForeignMedia
+ip-cidr,198.38.96.0/19,ForeignMedia
+ip-cidr,198.45.48.0/20,ForeignMedia
+# Pandora
+user-agent,Pandora*,ForeignMedia
+host-suffix,pandora.com,ForeignMedia
+# PBS
+user-agent,PBS*,ForeignMedia
+host-suffix,pbs.org,ForeignMedia
+# Pornhub
+host-suffix,phncdn.com,ForeignMedia
+host-suffix,pornhub.com,ForeignMedia
+host-suffix,pornhubpremium.com,ForeignMedia
+#  Spotify
+user-agent,Spotify*,ForeignMedia
+host-suffix,pscdn.co,ForeignMedia
+host-suffix,scdn.co,ForeignMedia
+host-suffix,spotify.com,ForeignMedia
+host-suffix,spoti.fi,ForeignMedia
+ip-cidr,35.186.224.47/32,ForeignMedia
+# TIDAL
+user-agent,TIDAL*dia,ForeignMedia
+host-suffix,tidal.comdia,ForeignMedia
+# TikTok
+user-agent,TikTok*,ForeignMedia
+host-suffix,musical.ly,ForeignMedia
+host-suffix,tiktokv.com,ForeignMedia
+host-suffix,tiktokcdn.com,ForeignMedia
+host-keyword,-tiktokcdn-com,ForeignMedia
+# TVB
+user-agent,mytv*,ForeignMedia
+user-agent,OTT_iPhone*,ForeignMedia
+user-agent,Viu*,ForeignMedia
+user-agent,TVB*,ForeignMedia
+user-agent,*nowe*,ForeignMedia
+user-agent,*PCCW*,ForeignMedia
+user-agent,*pccw*,ForeignMedia
+host,edge.api.brightcove.com,ForeignMedia
+host,bcbolt446c5271-a.akamaihd.net,ForeignMedia
+host-suffix,mytvsuper.com,ForeignMedia
+host-keyword,nowtv100,ForeignMedia
+host-keyword,rthklive,ForeignMedia
+host-suffix,TVB.com,ForeignMedia
+host-suffix,tvb.com,ForeignMedia
+host-suffix,bcbolthboa-a.akamaihd.net,ForeignMedia
+host-suffix,boltdns.net,ForeignMedia
+host-suffix,now.com,ForeignMedia
+host-suffix,nowe.com,ForeignMedia
+host-suffix,nowestatic.com,ForeignMedia
+host-suffix,youboranqs01.com,ForeignMedia
+host-suffix,emarsys.net,ForeignMedia
+host-suffix,api.segment.io,ForeignMedia
+host-suffix,segment.com,ForeignMedia
+host-suffix,nqs.nice264.com,ForeignMedia
+host-suffix,viu.com,ForeignMedia
+host-suffix,viu.tv,ForeignMedia
+# Twitch
+host-suffix,twitch.tv,ForeignMedia
+host-suffix,twitchcdn.net,ForeignMedia
+host-suffix,ttvnw.net,ForeignMedia
+# ViuTV
+user-agent,Viu*,ForeignMedia
+user-agent,ViuTV*,ForeignMedia
+host-suffix,viu.com,ForeignMedia
+host-suffix,viu.tv,ForeignMedia
+host,api.viu.now.com,ForeignMedia
+host,d1k2us671qcoau.cloudfront.net,ForeignMedia
+host,d2anahhhmp1ffz.cloudfront.net,ForeignMedia
+host,dfp6rglgjqszk.cloudfront.net,ForeignMedia
+# YouTube部分
+user-agent,com.google.ios.youtube*,ForeignMedia
+user-agent,YouTube*,ForeignMedia
+host-suffix,googlevideo.com,ForeignMedia
+host-suffix,youtube.com,ForeignMedia
+host,youtubei.googleapis.com,ForeignMedia
