@@ -1,9 +1,29 @@
 # AbemaTV
 user-agent,AbemaTV*,AbemaTV
-host-suffix,abema.io,AbemaTV
-host-suffix,ameba.jp,AbemaTV
-host-suffix,hayabusa.io,AbemaTV
 host,abematv.akamaized.net,AbemaTV
 host,ds-linear-abematv.akamaized.net,AbemaTV
 host,ds-vod-abematv.akamaized.net,AbemaTV
 host,linear-abematv.akamaized.net,AbemaTV
+host-suffix,abema.io,AbemaTV
+host-suffix,ameba.jp,AbemaTV
+host-suffix,hayabusa.io,AbemaTV
+host-suffix,abema.tv,AbemaTV
+host-suffix,adx.promo,AbemaTV
+host-suffix,amebame.com,AbemaTV
+host-suffix,amebaownd.com,AbemaTV
+host-suffix,amebaowndme.com,AbemaTV
+host-suffix,ameblo.jp,AbemaTV
+host-suffix,bucketeer.jp,AbemaTV
+host-suffix,dokusho-ojikan.jp,AbemaTV
+host-suffix,hayabusa.dev,AbemaTV
+host-suffix,hayabusa.media,AbemaTV
+host-suffix,winticket.jp,AbemaTV
+
+# >> Abema TV CDN FQDN
+host-suffix,abematv.akamaized.net,AbemaTV
+host-suffix,d1otoma47x30pg.cloudfront.net,AbemaTV
+host-suffix,d2wy8f7a9ursnm.cloudfront.net,AbemaTV
+host-suffix,ds-linear-abematv.akamaized.net,AbemaTV
+host-suffix,ds-vod-abematv.akamaized.net,AbemaTV
+host-suffix,linear-abematv.akamaized.net,AbemaTV
+host-suffix,vod-abematv.akamaized.net,AbemaTV

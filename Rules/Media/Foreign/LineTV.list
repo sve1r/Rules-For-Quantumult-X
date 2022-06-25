@@ -1,5 +1,8 @@
 # LineTV
 #user-agent,LINE%20TV*,LineTV
 host-suffix,linetv.tw,LineTV
+host-suffix,chocotv.com.tw,LineTV
+host-suffix,line-cdn.net,LineTV
+host-suffix,line-scdn.net,LineTV
 host,d3c7rimkq79yfu.cloudfront.net,LineTV
 host-suffix,profile.line-scdn.net,LineTV
