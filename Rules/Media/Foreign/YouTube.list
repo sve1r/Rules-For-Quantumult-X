@@ -180,4 +180,4 @@ host-suffix,yt.be,YouTube
 host-suffix,ytimg.com,YouTube
 ip-cidr,172.110.32.0/21,YouTube
 ip-cidr,216.73.80.0/20,YouTube
-ip-cidr6,2620:120:e000::/40,YouTube
+ip6-cidr,2620:120:e000::/40,YouTube
