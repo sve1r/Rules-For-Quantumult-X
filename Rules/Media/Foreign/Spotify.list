@@ -1,12 +1,23 @@
 # > Spotify
 # 请注意，导入此规则将自动创建名为[Spotify]的策略组
 user-agent,Spotify*,Spotify
+host-keyword,-spotify-com,Spotify
 host-suffix,pscdn.co,Spotify
 host-suffix,scdn.co,Spotify
 host-suffix,spotify.com,Spotify
 host-suffix,spoti.fi,Spotify
-host-suffix,spotify.com,Spotify
 host-suffix,spotifycdn.net,Spotify
+host-suffix,audio-ak-spotify-com.akamaized.net,Spotify
+host-suffix,byspotify.com,Spotify
+host-suffix,heads4-ak-spotify-com.akamaized.net,Spotify
+host-suffix,spotify-com.akamaized.net,Spotify
+host-suffix,spotify-everywhere.com,Spotify
+host-suffix,spotify.design,Spotify
+host-suffix,spotifycdn.com,Spotify
+host-suffix,spotifycharts.com,Spotify
+host-suffix,spotifycodes.com,Spotify
+host-suffix,spotifyforbrands.com,Spotify
+host-suffix,spotifyjobs.com,Spotify
 ip-cidr,35.186.224.47/32,Spotify
 # 直连修复
 host-suffix,ap.spotify.com,DIRECT

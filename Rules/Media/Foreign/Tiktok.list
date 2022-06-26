@@ -1,6 +1,16 @@
 # TikTok
 user-agent,TikTok*,TikTok
+host,p16-tiktokcdn-com.akamaized.net,TikTok
+host-keyword,-tiktokcdn-com,TikTok
 host-suffix,musical.ly,TikTok
 host-suffix,tiktokv.com,TikTok
 host-suffix,tiktokcdn.com,TikTok
-host-keyword,-tiktokcdn-com,TikTok
+host-suffix,byteoversea.com,TikTok
+host-suffix,ibytedtos.com,TikTok
+host-suffix,ibyteimg.com,TikTok
+host-suffix,ipstatp.com,TikTok
+host-suffix,muscdn.com,TikTok
+host-suffix,sgpstatp.com,TikTok
+host-suffix,snssdk.com,TikTok
+host-suffix,tik-tokapi.com,TikTok
+host-suffix,tiktok.com,TikTok
