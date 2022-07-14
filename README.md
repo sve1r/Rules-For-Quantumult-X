@@ -118,7 +118,7 @@
   
   替换后链接为
   
-  https://cdn.jsdelivr.net/gh/sve1r/Rules-For-Quantumult-X@mai/Rules/Services/SNS/Weibo.list
+  https://cdn.jsdelivr.net/gh/sve1r/Rules-For-Quantumult-X@main/Rules/Services/SNS/Weibo.list
   
 ```
 
