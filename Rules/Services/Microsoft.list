@@ -136,7 +136,8 @@ host-suffix,outlookgroups.ms,Microsoft
 host-suffix,outlookmobile.com,Microsoft
 
 # > Live
-host-keyword,live,Microsoft
+host-suffix,live.com,Microsoft
+host-suffix,live.net,Microsoft
 host-suffix,sclive.net,Microsoft
 host-suffix,windowslive.cn,Microsoft
 host-suffix,wlxrs.com,Microsoft
