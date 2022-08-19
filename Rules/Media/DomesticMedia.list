@@ -5,6 +5,7 @@ host-suffix,biliapi.net,Bilibili
 host-suffix,bilibili.com,Bilibili
 host-suffix,bilibili.tv,Bilibili
 host-suffix,hdslb.com,Bilibili
+host-suffix,bilivideo.com,Bilibili
 # YYeTs
 user-agent,YYeTs*,DIRECT
 host-suffix,jstucdn.com,DIRECT
