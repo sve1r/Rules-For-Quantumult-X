@@ -411,7 +411,7 @@ host-suffix,hath.network,ForeignMedia
 host-suffix,hentaiverse.org,ForeignMedia
 
 # > Fox
-host-suffix,.fox,ForeignMedia
+host-suffix,fox,ForeignMedia
 host-suffix,cdn-fox-networks-group-green.akamaized.net,ForeignMedia
 host-suffix,d3cv4a9a9wh0bt.cloudfront.net,ForeignMedia
 host-suffix,dashasiafox.akamaized.net,ForeignMedia
