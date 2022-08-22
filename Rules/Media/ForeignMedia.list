@@ -1751,7 +1751,7 @@ host-suffix,voxmedia.com,ForeignMedia
 host-suffix,voxops.net,ForeignMedia
 
 # > YouTube
-host-suffix,.youtube,ForeignMedia
+host-suffix,youtube,ForeignMedia
 host-suffix,ggpht.cn,ForeignMedia
 host-suffix,ggpht.com,ForeignMedia
 host-suffix,googlevideo.com,ForeignMedia
