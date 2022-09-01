@@ -5,7 +5,7 @@ user-agent,YouTube*,YouTube
 host-suffix,googlevideo.com,YouTube
 host-suffix,youtube.com,YouTube
 host,youtubei.googleapis.com,YouTube
-host-suffix,.youtube,YouTube
+host-suffix,youtube,YouTube
 host-suffix,ggpht.cn,YouTube
 host-suffix,ggpht.com,YouTube
 host-suffix,googlevideo.com,YouTube
