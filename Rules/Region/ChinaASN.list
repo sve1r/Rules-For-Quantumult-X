@@ -1,0 +1,946 @@
+IP-ASN,4134, direct // 中国电信骨干网
+IP-ASN,4538, direct // 中国教育科研网络中心
+IP-ASN,4611, direct // 中国新华网
+IP-ASN,4789, direct // 中国北京清华大学教育网
+IP-ASN,4808, direct // 中国联通北京省网
+IP-ASN,4809, direct // 中国电信下一代承载网
+IP-ASN,4811, direct // 中国电信（集团）
+IP-ASN,4812, direct // 中国电信（集团）
+IP-ASN,4813, direct // 中国电信（集团）
+IP-ASN,4816, direct // 中国电信（集团）
+IP-ASN,4835, direct // 中国电信（集团）
+IP-ASN,4837, direct // 中国联通骨干网
+IP-ASN,4842, direct // Tianhai InfoTech
+IP-ASN,4847, direct // CNIX（现北京电信省网）
+IP-ASN,4859, direct // 中华人民共和国国家信息中心
+IP-ASN,7497, direct // 计算机网络信息中心
+IP-ASN,7586, direct // Cloudfort IT
+IP-ASN,7640, direct // 中国国际信托投资公司管理信息中心
+IP-ASN,7641, direct // 中国广播电视网
+# IP-ASN,7720, direct // Skywolf Technology LLC   【未广播中国大陆IP】
+# IP-ASN,7721, direct // Qin Cloud Networks       【未广播中国大陆IP】
+IP-ASN,9298, direct // 北京光环讯通数码科技有限公司
+IP-ASN,9306, direct // 中国国际电子商务中心
+IP-ASN,9308, direct // 北京毅云网络科技有限公司
+# IP-ASN,9384, direct // MIKU NETWORK LIMITED     【未广播中国大陆IP】
+IP-ASN,9389, direct // 北京神州长城通信
+IP-ASN,9391, direct // 广东省公路宽带网络服务中心
+IP-ASN,9392, direct // 亚太卫星宽带通信（深圳）有限公司
+IP-ASN,9394, direct // 中国铁通电讯公司
+IP-ASN,9395, direct // 北京国信比林电信科技有限公司
+IP-ASN,9401, direct // 中国国家图书馆
+IP-ASN,9405, direct // 中国清华大学测试平台服务中心
+# IP-ASN,9516, direct // Sakura Network LTD       【未广播中国大陆IP】
+IP-ASN,9535, direct // INTERNET-SOLUTION -HK
+IP-ASN,9800, direct // 中国联通
+IP-ASN,9801, direct // 北京中关村信息技术有限公司
+IP-ASN,9802, direct // 北京毅云网络科技有限公司
+IP-ASN,9803, direct // 北京京讯公共信息技术有限公司
+IP-ASN,9805, direct // 西门子（中国）有限公司
+IP-ASN,9806, direct // 北京教育信息网
+IP-ASN,9807, direct // 中国国家统计局数据管理中心
+IP-ASN,9808, direct // 广东移动通信有限公司
+IP-ASN,9809, direct // 中国深圳市福田区雅柏公园
+IP-ASN,9810, direct // 北京时代网星科技有限公司
+IP-ASN,9811, direct // 国务院发展研究中心网
+IP-ASN,9812, direct // 东方有线网络有限公司
+IP-ASN,9814, direct // 北京光纤网络有限公司
+IP-ASN,9818, direct // 中国清华大学互联网金融实验室
+IP-ASN,9886, direct // MercyCloud Network
+IP-ASN,9929, direct // 中国联通工业互联网骨干网
+IP-ASN,9939, direct // 中国第一线(深圳)有限公司
+IP-ASN,10111, direct // Zeofast Network （现上海吉实信息技术有限公司）
+IP-ASN,10206, direct // 中国联通 中卫云
+IP-ASN,10212, direct // 中国企业通讯
+IP-ASN,17428, direct // 北京世纪互联宽带数据中心有限公司
+IP-ASN,17429, direct // 北京歌华有线电视网络有限公司
+IP-ASN,17430, direct // 北京西朗传媒文化有限公司
+IP-ASN,17442, direct // 中国互联网服务提供商
+# IP-ASN,17457, direct // 雅虎网络科技           【未广播中国大陆IP】
+IP-ASN,17490, direct // 3/F,Yi Qing Building,Hua Jing Xin Cheng,Guangzhou
+IP-ASN,17621, direct // 中国联通上海城网
+IP-ASN,17622, direct // 中国联通广州城网
+IP-ASN,17623, direct // 中国联通深圳城网
+IP-ASN,17633, direct // 中国电信山东省网
+IP-ASN,17638, direct // 中国电信天津省网
+IP-ASN,17739, direct // 上海电信恒联网络有限公司
+IP-ASN,17767, direct // 石家庄旭鼎科技有限公司
+IP-ASN,17775, direct // 上海科技网络通信有限公司
+IP-ASN,17776, direct // 中企网络通信技术有限公司
+IP-ASN,17781, direct // 中国新华社
+IP-ASN,17785, direct // 中国电信河南省网
+IP-ASN,17799, direct // 中国电信辽宁省网
+IP-ASN,17816, direct // 中国联通广东省网
+# IP-ASN,17830, direct // David Liu aka PotatoNet 【未广播中国大陆IP】
+IP-ASN,17897, direct // 中国电信黑龙江省网
+IP-ASN,17962, direct // 深圳市拓威视讯传播有限公司
+IP-ASN,17964, direct // 北京电信通网络科技有限公司
+IP-ASN,17966, direct // 中国信息广播网络有限公司
+IP-ASN,17968, direct // 大庆中基石油电信建设有限公司
+IP-ASN,17969, direct // 北京宽通网络科技有限公司
+IP-ASN,18011, direct // 中国教育实验网
+IP-ASN,18118, direct // 中信网络管理有限公司
+IP-ASN,18239, direct // 北京首都公共信息平台
+IP-ASN,18241, direct // 国家电力信息网
+IP-ASN,18242, direct // 成都信息港有限公司
+IP-ASN,18243, direct // 上海易思网络科技发展有限公司
+IP-ASN,18244, direct // 上海国联互联网数据中心有限公司
+IP-ASN,18245, direct // 北京方正宽带网络技术有限公司
+IP-ASN,18257, direct // 常州比特姆软件科技有限公司
+IP-ASN,23650, direct // 中国电信江苏省网
+IP-ASN,23724, direct // 中国电信IDC网络
+IP-ASN,23771, direct // 陕西广电网络
+IP-ASN,23839, direct // 辽河油田电讯公司
+IP-ASN,23840, direct // 天津先进信息产品有限公司
+IP-ASN,23842, direct // 深圳市信息网络中心
+IP-ASN,23844, direct // 北京光环新旺数码
+IP-ASN,23848, direct // 深圳市平安通讯科技有限公司
+IP-ASN,23851, direct // 重庆数控宽带网络有限公司
+IP-ASN,23852, direct // 广州未来科技有限公司
+IP-ASN,23853, direct // 上海数据解决方案有限公司
+IP-ASN,23910, direct // 中国电信下一代承载网 (CERNET2)
+IP-ASN,23911, direct // 中国电信下一代承载网 (BeiJing IX)
+IP-ASN,24133, direct // 北京世纪互联宽带数据中心有限公司
+IP-ASN,24134, direct // 北京互联通网络科技有限公司
+IP-ASN,24137, direct // 河南平煤集团
+IP-ASN,24138, direct // 中国铁通电信公司
+IP-ASN,24139, direct // 华蜀传媒网络有限公司
+IP-ASN,24141, direct // 上海地面通信息网络有限公司
+IP-ASN,24143, direct // 青岛有线电视网络中心
+IP-ASN,24144, direct // 武汉蓝视云科技有限公司
+IP-ASN,24147, direct // 北京商务中心区通信科技有限公司
+IP-ASN,24149, direct // 中国互联网域名系统北京工程研究中心有限公司
+IP-ASN,24150, direct // 四川有线电视网络有限公司
+IP-ASN,24151, direct // 中国互联网络信息中心
+IP-ASN,24239, direct // 中国清华大学TWD2教育和研究网络
+IP-ASN,24302, direct // 中国清华大学
+IP-ASN,24311, direct // 中国移动通信集团公司 IPv6 网络
+IP-ASN,24348, direct // 中国清华大学 (CERNET2 IX)
+IP-ASN,24349, direct // 中国北京大学 (CERNET2 IX)
+IP-ASN,24350, direct // 中国北京邮电大学 (CERNET2 IX)
+IP-ASN,24351, direct // 中国北京航空航天大学 (CERNET2 IX)
+IP-ASN,24352, direct // 中国天津大学 (CERNET2 IX)
+IP-ASN,24353, direct // 中国西安交通大学 (CERNET2 IX)
+IP-ASN,24354, direct // 中国中国兰州大学 (CERNET2 IX)
+IP-ASN,24355, direct // 中国电子科技大学 (CERNET2 IX)
+IP-ASN,24356, direct // 中国重庆大学 (CERNET2 IX)
+IP-ASN,24357, direct // 中国华南理工大学 (CERNET2 IX)
+IP-ASN,24358, direct // 中国华中科技大学 (CERNET2 IX)
+IP-ASN,24359, direct // 中国中南大学 (CERNET2 IX)
+IP-ASN,24360, direct // 中国郑州大学 (CERNET2 IX)
+IP-ASN,24361, direct // 中国东南大学 (CERNET2 IX)
+IP-ASN,24362, direct // 中国科学技术大学 (CERNET2 IX)
+IP-ASN,24363, direct // 中国山东大学 (CERNET2 IX)
+IP-ASN,24364, direct // 中国上海交通大学 (CERNET2 IX)
+IP-ASN,24365, direct // 中国复旦大学 (CERNET2 IX)
+IP-ASN,24366, direct // 中国同济大学 (CERNET2 IX)
+IP-ASN,24367, direct // 中国浙江大学 (CERNET2 IX)
+IP-ASN,24368, direct // 中国厦门大学 (CERNET2 IX)
+IP-ASN,24369, direct // 中国东北大学 (CERNET2 IX)
+IP-ASN,24370, direct // 中国大连理工大学 (CERNET2 IX)
+IP-ASN,24371, direct // 中国吉林大学 (CERNET2 IX)
+IP-ASN,24372, direct // 哈尔滨工业大学 (CERNET2 IX)
+IP-ASN,24376, direct // 雅虎中国数据中心
+IP-ASN,24400, direct // 上海移动通信有限公司
+IP-ASN,24404, direct // 北京铜牛信息科技股份有限公司
+IP-ASN,24406, direct // 中国互联网络信息中心
+IP-ASN,24409, direct // 中国互联网络信息中心
+IP-ASN,24413, direct // 深圳市日升科技有限公司
+IP-ASN,24416, direct // 北京三信时代科技有限公司
+IP-ASN,24422, direct // 华北石油通信有限公司
+IP-ASN,24423, direct // 福建广电网络集团
+IP-ASN,24424, direct // 北京谷翔信息技术有限公司
+IP-ASN,24427, direct // 上海驰信信息技术有限公司
+IP-ASN,24428, direct // 北京方正宽带网络技术有限公司
+IP-ASN,24429, direct // 浙江淘宝网络有限公司
+IP-ASN,24430, direct // 中国国家邮政局
+IP-ASN,24444, direct // 山东移动通信有限公司
+IP-ASN,24445, direct // 河南移动通信有限公司
+IP-ASN,24489, direct // 跨欧亚信息网络 (TEIN2)
+# IP-ASN,24490, direct // 跨欧亚信息网络 (TEIN2) 【未广播中国大陆IP】
+IP-ASN,24495, direct // G-NET综合服务有限公司
+IP-ASN,24547, direct // 河北移动通信有限公司
+IP-ASN,24575, direct // 清华大学实验室
+IP-ASN,37936, direct // 北京市海淀区北四环西路58号理想国际大厦15楼
+IP-ASN,37937, direct // 中国电子政务信息中心
+IP-ASN,37941, direct // 中国数码科技有限公司
+IP-ASN,37942, direct // 中国文化遗产信息咨询中心
+IP-ASN,37943, direct // 郑州巨特计算机网络技术有限公司
+IP-ASN,37957, direct // 中国通讯有限公司
+IP-ASN,37963, direct // 杭州阿里巴巴广告有限公司
+IP-ASN,37965, direct // 亚太环通商务解决方案
+IP-ASN,37969, direct // 杭州云泽网络科技有限公司
+IP-ASN,37970, direct // 中国华电公司
+IP-ASN,38019, direct // 天津移动通信有限公司
+IP-ASN,38027, direct // 信息中心，科学技术部
+IP-ASN,38057, direct // 戴尔（中国）有限公司
+IP-ASN,38238, direct // 法国兴业银行（中国）有限公司
+IP-ASN,38255, direct // 中国教育研究网（CERNET）
+IP-ASN,38272, direct // 中国教育研究网（CERNET）
+IP-ASN,38283, direct // 中国电信四川电信互联网数据中心
+IP-ASN,38323, direct // 广州麦克疯广告有限公司
+IP-ASN,38339, direct // 深圳市虎盟科技有限公司
+IP-ASN,38340, direct // 北京百度网通科技有限公司
+IP-ASN,38341, direct // 中国和信信息技术有限公司
+IP-ASN,38342, direct // 上海维赛特网络系统有限公司
+IP-ASN,38345, direct // 中国互联网域名系统北京工程研究中心有限公司
+IP-ASN,38346, direct // 中国航天信息网络有限公司
+IP-ASN,38353, direct // 资本在线数据服务有限公司
+IP-ASN,38355, direct // 重庆广播电视宽带IP城域网
+IP-ASN,38357, direct // 北京数据快讯科技有限公司
+IP-ASN,38358, direct // 中国科学技术协会信息中心
+IP-ASN,38363, direct // 上海高速公路信息技术有限公司
+IP-ASN,38364, direct // 龙泰网络科技有限公司
+IP-ASN,38365, direct // 北京百度网通科技有限公司
+IP-ASN,38367, direct // 联合人寿保险股份有限公司
+IP-ASN,38370, direct // 中国铁路互联网广东分公司
+IP-ASN,38372, direct // 佛山市瑞江科技有限公司
+IP-ASN,38375, direct // 北京高华证券股份有限公司
+IP-ASN,38378, direct // 博世（中国）投资有限公司
+IP-ASN,38379, direct // 上海劢杰网络数据科技有限公司
+IP-ASN,38380, direct // 中国南方机车车辆工业公司
+IP-ASN,38381, direct // 浙江民航信息科技有限公司
+IP-ASN,38439, direct // 北京烽鸟网络科技有限公司
+# IP-ASN,38564, direct // 英伟达亚洲互联网网关   【未广播中国大陆IP】
+IP-ASN,38587, direct // 中国教育网互联网数据中心
+IP-ASN,38834, direct // 上海英伟达企业网
+IP-ASN,42962, direct // 石家庄旭鼎科技有限公司
+IP-ASN,45057, direct // 中国铁通上海城网
+IP-ASN,45058, direct // 金桥网通通信有限公司
+IP-ASN,45061, direct // 上海信息网络有限公司
+IP-ASN,45062, direct // 广州网易电脑系统有限公司
+IP-ASN,45064, direct // 北京中关村软件园发展有限公司
+IP-ASN,45069, direct // 中国铁通山东省网
+IP-ASN,45071, direct // 李宁（中国）体育用品有限公司
+IP-ASN,45074, direct // 中国国家统计局数据管理中心
+IP-ASN,45075, direct // 中国中央广播电视总台
+IP-ASN,45079, direct // 中国长安服务有限公司
+IP-ASN,45080, direct // 上海联网通讯科技有限公司
+IP-ASN,45083, direct // 北京市海讯达通信有限责任公司
+IP-ASN,45084, direct // 中国北京市朝阳区建国路98号
+IP-ASN,45086, direct // 上海有孚网络股份有限公司 
+IP-ASN,45087, direct // 中国免税集团
+IP-ASN,45090, direct // 深圳市腾讯计算机系统有限公司
+IP-ASN,45093, direct // 北京亿安天下科技股份有限公司 (Cnean IX)
+IP-ASN,45101, direct // 沃尔玛（中国）投资有限公司
+IP-ASN,45110, direct // 北京天威鑫通科技股份有限公司
+IP-ASN,45113, direct // 山西大同煤业集团通信有限公司
+IP-ASN,45275, direct // 天地互连信息技术有限公司
+IP-ASN,45576, direct // 中国清华大学
+IP-ASN,45587, direct // 中国宽带通信（CBCnet）
+IP-ASN,49953, direct // 宠赞（上海）网络科技有限公司
+IP-ASN,55439, direct // 互联网系统联盟 （中国北京）
+IP-ASN,55461, direct // 北京日升科技有限公司
+IP-ASN,55468, direct // 中国国际广播电台
+# IP-ASN,55515, direct // GOIP-AULA 【未广播中国大陆IP】
+IP-ASN,55641, direct // 北京市昌平区
+IP-ASN,55786, direct // 肇嘉浜路1065-A
+IP-ASN,55826, direct // Tianjin University IPv6 Campus Network
+IP-ASN,55956, direct // 麦格纳汽车技术服务（上海）有限公司
+IP-ASN,55958, direct // Intel China Ltd.
+IP-ASN,55960, direct // 北京光环新旺数码
+IP-ASN,55962, direct // Beijing Kuaishou Technology Co., Ltd.
+IP-ASN,55966, direct // 邮政储蓄银行
+IP-ASN,55967, direct // 北京百度网通科技有限公司
+IP-ASN,55971, direct // 中国社会科学院
+IP-ASN,55973, direct // APNIC ASN Block
+IP-ASN,55976, direct // Beijing DxConsole Technology Co. Ltd
+IP-ASN,55977, direct // 浙江瓦苏广播电视网络有限公司
+IP-ASN,55982, direct // 长虹IT信息产品有限公司
+IP-ASN,55990, direct // 华为云服务数据中心
+IP-ASN,55992, direct // 北京奇湖科技有限公司
+IP-ASN,55994, direct // 上海AnchNet Tec，Inc。
+IP-ASN,55996, direct // CYPRESS TELECOM（CHINA）LIMITED
+IP-ASN,55998, direct // CNLink网络科技有限公司
+IP-ASN,56000, direct // 康宝莱（中国）保健品有限公司
+IP-ASN,56001, direct // 上海晨毅网络科技有限公司
+IP-ASN,56002, direct // 北京海洋通信与导航公司
+IP-ASN,56003, direct // 北京世纪联盟网络科技有限公司
+IP-ASN,56004, direct // Information Center of Shanghai Municipal Education Commission
+IP-ASN,56005, direct // 郑州法斯特科技有限公司
+IP-ASN,56006, direct // Shanghai Pudong Development Bank Co.,Ltd.
+IP-ASN,56011, direct // UNICLOUD TECH CO.,LTD.
+IP-ASN,56012, direct // LGNET中国
+IP-ASN,56013, direct // 三星SDS中国
+IP-ASN,56015, direct // 中国体育彩票科技发展有限公司
+IP-ASN,56019, direct // 北京舒居佳科技有限公司
+IP-ASN,56040, direct // 中国移动通信公司
+IP-ASN,56041, direct // 中国移动通信公司
+IP-ASN,56042, direct // 中国移动通信公司
+IP-ASN,56044, direct // 中国移动通信公司
+IP-ASN,56046, direct // 中国移动通信公司
+IP-ASN,56047, direct // 中国移动通信公司
+IP-ASN,56048, direct // 中国移动通信公司
+IP-ASN,56282, direct // 北京互联网港科技有限公司
+IP-ASN,56292, direct // Beijing Sanxin Shidai Co.Ltd
+IP-ASN,58336, direct // Chengde TsingYao Network Technology Service Co., Ltd.
+IP-ASN,58416, direct // 佛山市四海网络科技有限公司
+IP-ASN,58448, direct // CONAC（中国组织名称管理中心）
+IP-ASN,58461, direct // 富春路288号
+IP-ASN,58466, direct // CHINANET广东省网络
+IP-ASN,58517, direct // 中国电信
+IP-ASN,58518, direct // 中国电信
+IP-ASN,58519, direct // 云计算公司
+IP-ASN,58520, direct // NANTON
+IP-ASN,58536, direct // CONAC（中国组织名称管理中心）
+IP-ASN,58539, direct // China Telecom Changsha
+IP-ASN,58540, direct // 株洲
+IP-ASN,58541, direct // 湘潭
+IP-ASN,58542, direct // 岳阳
+IP-ASN,58543, direct // 广东省
+IP-ASN,58563, direct // CHINANET湖北省网络
+IP-ASN,58571, direct // CHINANET广东省佛山网
+IP-ASN,58593, direct // 上海蓝云科技有限公司
+IP-ASN,58772, direct // CHINANET Fujian province Fuzhou IDC network
+IP-ASN,58811, direct // CONAC（中国组织名称管理中心）
+IP-ASN,58828, direct // GUANGDONG RURAL CREDIT UNION
+IP-ASN,58829, direct // 森林永恒传播技术。有限公司
+IP-ASN,58834, direct // 广东电缆有限公司
+IP-ASN,58842, direct // Beijing Sheng Hexuan Culture Communication Co., Ltd
+IP-ASN,58844, direct // 广东奥菲数据科技有限公司
+IP-ASN,58850, direct // 彭博财务信息（北京）有限公司
+IP-ASN,58852, direct // Guizhou provincial radio and television information Network Inc
+IP-ASN,58854, direct // 厦门艾雅网络科技有限公司
+IP-ASN,58859, direct // Shenzhen WSUNet Technology Co., Ltd.
+IP-ASN,58862, direct // 微软（中国）有限公司
+IP-ASN,58863, direct // hijingshan District, Beijing to reunite the property the second floor
+IP-ASN,58866, direct // 中国金融认证局
+IP-ASN,58879, direct // 上海安昌网络安全技术有限公司
+IP-ASN,58962, direct // 四川世纪立新财务管理咨询有限公司
+IP-ASN,58998, direct // Beijing Internet Harbor Technology Co.,Ltd
+IP-ASN,59000, direct // Grande Arche Technologies（Shanghai），Co.Ltd.
+IP-ASN,59003, direct // Tianjin B&T broadband network technology Co., Ltd.
+IP-ASN,59008, direct // Beijing flash newsletter cas telecommunication
+IP-ASN,59009, direct // 青岛旺信电讯有限公司
+IP-ASN,59010, direct // 联合网络信息服务有限公司
+IP-ASN,59011, direct // 北京云林网络科技有限公司
+IP-ASN,59012, direct // 中粮储备集团有限公司
+IP-ASN,59019, direct // 北京金山云互联科技有限公司
+IP-ASN,59022, direct // 昆明广播电视网络有限公司
+IP-ASN,59023, direct // Forest Eternal Communication Tech. co.ltd
+IP-ASN,59025, direct // Beijing Sankuai Technology Co.,Ltd.
+IP-ASN,59029, direct // People.Cn CO.,LTD
+IP-ASN,59033, direct // 艾森科技（上海）有限公司
+IP-ASN,59034, direct // 北京希望网络科技有限公司
+IP-ASN,59037, direct // 国家计算机网络与信息
+IP-ASN,59043, direct // 广州兰东信息技术有限公司
+IP-ASN,59045, direct // APNIC ASN Block
+IP-ASN,59048, direct // 北京云时代科技有限公司
+IP-ASN,59049, direct // 沃尔玛（中国）投资有限公司
+IP-ASN,59050, direct // 北京云方舟科技有限公司
+IP-ASN,59056, direct // 上海圆通科技有限公司
+IP-ASN,59057, direct // Bei jing yong xin chang lian ke ji you xian gong si
+IP-ASN,59065, direct // 贝宝网络信息服务（上海）有限公司
+IP-ASN,59067, direct // 微软移动联盟互联网服务有限公司
+IP-ASN,59068, direct // Shanghai Pudong Development Bank Co.,Ltd.
+IP-ASN,59070, direct // Chengdu Zhongli Data Technology Co.,Ltd
+IP-ASN,59072, direct // Shenzhen ESIN Technology Co., Ltd
+IP-ASN,59073, direct // 中国银行股份有限公司
+IP-ASN,59074, direct // 泰康保险集团有限公司
+IP-ASN,59077, direct // 上海UCloud信息技术有限公司
+IP-ASN,59078, direct // 云能科技公司
+IP-ASN,59080, direct // Beijing HuaxiaYakue Network Technology Co., Ltd.
+IP-ASN,59081, direct // 上海远思网络信息服务有限公司
+IP-ASN,59083, direct // 上海宽辉科技有限公司
+IP-ASN,59089, direct // 18号建筑科技大学
+IP-ASN,59201, direct // Peking University
+IP-ASN,59265, direct // 中国电信中国下一代互联网
+IP-ASN,63531, direct // Beijing BAIWU Technology Co., Ltd.
+IP-ASN,63534, direct // 深圳春秋云集团
+IP-ASN,63535, direct // 成都万达电子信息技术有限公司
+IP-ASN,63540, direct // 山东云梳文化有限公司
+IP-ASN,63541, direct // 北京蓝天科技有限公司
+IP-ASN,63545, direct // 北京迅捷云技术有限公司
+IP-ASN,63548, direct // 联诺（北京）有限公司
+IP-ASN,63549, direct // 辽宁图隆科技有限公司
+IP-ASN,63554, direct // 九鹏网络有限公司
+IP-ASN,63555, direct // 北京北龙云海网络数据技术有限公司
+IP-ASN,63561, direct // 中国电子科技网络安全有限公司
+IP-ASN,63564, direct // 贵州白山云科技有限公司
+IP-ASN,63565, direct // Beijing lian guang tong network technology co., LTD
+IP-ASN,63570, direct // APNIC ASN Block
+IP-ASN,63571, direct // APNIC ASN Block
+IP-ASN,63580, direct // 中国诺华生物医学研究有限公司
+IP-ASN,63581, direct // 广西广播电视信息网络有限公司
+IP-ASN,63582, direct // 中国电信研究院
+IP-ASN,63583, direct // 中国电信研究院
+IP-ASN,63590, direct // Hebei Broadcasting&TV Network
+IP-ASN,63593, direct // Guangdong HeyTap Technology Co., Ltd.
+IP-ASN,63598, direct // Hebei Kun Time Network Technology Co. Ltd.
+IP-ASN,63603, direct // 北京HYCT网络有限公司
+IP-ASN,63612, direct // 深圳前海鸟云计算有限公司
+IP-ASN,63614, direct // A4, 5th Floor, Tower C, Triumph Plaza, Unit A, No 143,
+IP-ASN,63615, direct // 通用（中国）有限公司
+IP-ASN,63617, direct // 麦肯锡咨询公司上海
+IP-ASN,63619, direct // Beijing Sankuai Cloud Computing Co.,Ltd.
+IP-ASN,63620, direct // 深圳市华博科技发展有限公司
+IP-ASN,63621, direct // 宁夏广播电视网络有限公司
+IP-ASN,63629, direct // 北京汽车信息科技有限公司
+IP-ASN,63630, direct // Guangzhou Power Communication Networks CO.,Ltd.
+IP-ASN,63631, direct // 广东云基科技有限公司
+IP-ASN,63634, direct // APNIC ASN Block
+IP-ASN,63641, direct // 兆丰华帝信息咨询有限公司
+IP-ASN,63646, direct // 北京小巨科技有限公司
+IP-ASN,63648, direct // 北京小巨科技有限公司
+IP-ASN,63654, direct // BEIJING NETEAST TECHNOLOGIES CORPORATION LTD
+IP-ASN,63655, direct // Huawei Technologies Co., Ltd
+IP-ASN,63673, direct // 深圳市平安通讯科技有限公司
+IP-ASN,63677, direct // 江苏云永信息技术有限公司
+IP-ASN,63678, direct // 江苏云永信息技术有限公司
+IP-ASN,63679, direct // 江苏云联信息技术有限公司
+IP-ASN,63689, direct // Esun Technology(Shanghai) Co.,Ltd
+IP-ASN,63690, direct // China Dragon Telecom Co.,Ltd
+IP-ASN,63691, direct // 北京智慧网络科技有限公司
+IP-ASN,63695, direct // WeiYi Network Technology Co., Ltd
+IP-ASN,63696, direct // China Securities Co., Ltd
+IP-ASN,63697, direct // China Securities Co., Ltd
+IP-ASN,63701, direct // Jishi Media Co ., Ltd.
+IP-ASN,63704, direct // Guizhou provincial radio and television information Network Inc
+IP-ASN,63705, direct // 南京安来新西同心吉树佑县公司
+IP-ASN,63711, direct // 中国铁通电讯公司
+IP-ASN,63722, direct // Hodo Telecom Co，Ltd。
+IP-ASN,63724, direct // APNIC ASN Block
+IP-ASN,63727, direct // 华为
+IP-ASN,63835, direct // 万宝大道293号
+IP-ASN,63838, direct // 衡阳
+IP-ASN,131134, direct // APNIC 32位ASN Block
+IP-ASN,131137, direct // Inspur Software Group Co., Ltd.
+IP-ASN,131171, direct // Everlife Networks
+IP-ASN,131285, direct // CHINATELECOM Hubei province Shengji 5G network
+IP-ASN,131325, direct // 昆明
+IP-ASN,131477, direct // 上海华娟信息技术有限公司
+IP-ASN,131482, direct // Hangzhou Aron Teconology Co.,Ltd.
+IP-ASN,131484, direct // Ubisoft Shanghai
+IP-ASN,131486, direct // 北京京东360度电子商务有限公司
+IP-ASN,131495, direct // Beijing nine cloud infinite network technology co., LTD
+IP-ASN,131497, direct // 大众（中国）投资有限公司
+IP-ASN,131503, direct // 中国航空技术进出口总公司
+IP-ASN,131506, direct // 黑龙江广播电视网络有限公司
+IP-ASN,131512, direct // Beijing Xinchi Technology Co., Ltd
+IP-ASN,131519, direct // 海信
+IP-ASN,131521, direct // Haitong Securities Company Limited
+IP-ASN,131524, direct // 上海普捷通讯科技有限公司
+IP-ASN,131525, direct // Nanjing Tuniu Technology Co. Ltd.
+IP-ASN,131535, direct // 北京博盛拓网络科技有限公司
+IP-ASN,131536, direct // Shanghai Great Wall Broadband Network Service Co., Ltd.
+IP-ASN,131558, direct // Wal-mart (China) Investment Co., Ltd.
+IP-ASN,131562, direct // APNIC 32位ASN Block
+IP-ASN,131567, direct // Fnetlink International Co., Ltd.
+IP-ASN,131574, direct // Beijing Haiyu Technology Co. Ltd..
+IP-ASN,131577, direct // APNIC 32位ASN Block
+IP-ASN,131578, direct // 北京外国语大学
+IP-ASN,132019, direct // Earth network technology (Shanghai) Co., Ltd
+IP-ASN,132147, direct // 蜀马路3号
+IP-ASN,132153, direct // 蜀马路3号
+IP-ASN,132203, direct // 科技中医大道腾讯大厦
+IP-ASN,132225, direct // China Telecom
+IP-ASN,132352, direct // meshlab.net – MEGATRANS
+IP-ASN,132437, direct // 安顺路10号
+IP-ASN,132510, direct // IDC山西中国移动通信公司
+IP-ASN,132525, direct // 黑龙江移动通信有限公司
+IP-ASN,132553, direct // 中国石油大学（华东）
+IP-ASN,132623, direct // Tsukeru Networks
+IP-ASN,132698, direct // Shenzhen Balian Network Technology Co., Ltd
+IP-ASN,132719, direct // 成都西维数码科技有限公司
+IP-ASN,132886, direct // 聊城大学
+IP-ASN,133111, direct // CERNET内容分发网络（CCDN）
+IP-ASN,133118, direct // 中国联通IP网络
+IP-ASN,133119, direct // 中国联通IP网络
+IP-ASN,133194, direct // 连接集线器科技（上海）有限公司
+IP-ASN,133219, direct // NewMedia Express Pte Ltd.
+IP-ASN,133365, direct // CordCloud LTD
+IP-ASN,133465, direct // 昆山杜克大学
+IP-ASN,133475, direct // 纽约大学ASN
+IP-ASN,133492, direct // 张爱云
+IP-ASN,133512, direct // CERNET新技术有限公司
+IP-ASN,133513, direct // CERNET新技术有限公司
+IP-ASN,133515, direct // CERNET New Technology Co., Ltd
+IP-ASN,133517, direct // CERNET New Technology Co., Ltd
+IP-ASN,133518, direct // CERNET New Technology Co., Ltd
+IP-ASN,133555, direct // DOORPOST Limited
+IP-ASN,133731, direct // 鑫源互连（香港）有限公司
+IP-ASN,133774, direct // 福州
+IP-ASN,133775, direct // 厦门
+IP-ASN,133776, direct // 泉州
+IP-ASN,133846, direct // IMLONGHAO
+IP-ASN,133865, direct // 北京IQIYI科技有限公司
+IP-ASN,133952, direct // 郑州龙陵科技有限公司
+IP-ASN,134098, direct // Licson互联网服务
+IP-ASN,134169, direct // CERNEWTECH (Beijing) co.,LTD
+IP-ASN,134238, direct // CHINANET江城省IDC网络
+IP-ASN,134417, direct // 南京
+IP-ASN,134418, direct // 陕西省
+IP-ASN,134419, direct // 北海
+IP-ASN,134420, direct // 重庆电信
+IP-ASN,134477, direct // Shaoxing Junruiyunjisuan Co Ltd
+IP-ASN,134478, direct // JSMSR
+IP-ASN,134488, direct // CTJ's Global Network
+IP-ASN,134542, direct // 中国联通IP网络
+IP-ASN,134543, direct // 中国联通广东IP网络
+IP-ASN,134578, direct // UNION FU WAH DIGITAL TECHNOLOGY LIMITED
+IP-ASN,134602, direct // shuiM数据交换中心
+IP-ASN,134755, direct // CHINANET四川省成都市MAN网络
+IP-ASN,134756, direct // CHINANET南京IDC网络
+IP-ASN,134760, direct // Shijiazhuang IDC network, CHINANET Hebei province
+IP-ASN,134761, direct // CHINANET四川省成都市MAN网络
+IP-ASN,134762, direct // CHINANET四川省成都市MAN网络
+IP-ASN,134763, direct // CHINANET广东省网络
+IP-ASN,134764, direct // CHINANET广东省网络
+IP-ASN,134765, direct // CHINANET四川省成都市MAN网络
+IP-ASN,134766, direct // CHINANET四川省成都市MAN网络
+IP-ASN,134768, direct // CHINANET四川省成都市MAN网络
+IP-ASN,134769, direct // ChinaNet江苏常州IDC网络
+IP-ASN,134770, direct // CHINANET Jiangsu province Suzhou taihu IDC network
+IP-ASN,134771, direct // CHINANET四川省成都市MAN网络
+IP-ASN,134772, direct // CHINANET广东省东莞MAN网络
+IP-ASN,134773, direct // CHINANET Guangdong province Guangzhou MAN network
+IP-ASN,134774, direct // CHINANET广东省深圳MAN网络
+IP-ASN,134775, direct // CHINANET Guangdong province Zhusanjiao MAN network
+IP-ASN,134810, direct // 中国移动集团吉林通信公司
+IP-ASN,134981, direct // 优步公司
+IP-ASN,134993, direct // iLemonrain Network
+IP-ASN,135006, direct // VERI2
+IP-ASN,135028, direct // Malindex网络
+IP-ASN,135061, direct // 中国联通广东IP网络
+IP-ASN,135357, direct // 深圳凯瑟恒科技信息有限公司
+IP-ASN,135363, direct // 北京敦煌和光信息技术有限公司
+IP-ASN,135365, direct // 上海优祖信息技术有限公司
+IP-ASN,135629, direct // 宁夏西云数据科技有限公司
+IP-ASN,135646, direct // Luginbash AS
+IP-ASN,135663, direct // ShenZhen rainbow Computer Network company Limited
+IP-ASN,135671, direct // RBB InfoTech
+IP-ASN,136146, direct // Beijing 3389 Network Technology Co., Ltd.
+IP-ASN,136160, direct // Beijing Shijihulian Yuntong Network Technology Co., Ltd.
+IP-ASN,136173, direct // Quanzhou Yuntun Network Technology Co., Ltd.
+IP-ASN,136180, direct // Beijing Tiantexin Tech. Co., Ltd.
+IP-ASN,136188, direct // 迪庆
+IP-ASN,136189, direct // Opera软件技术（北京）有限公司
+IP-ASN,136190, direct // 大理
+IP-ASN,136191, direct // YICHANG, Hubei Province, P.R.China.
+IP-ASN,136192, direct // Xiangyang, Hubei Province, P.R.China.
+IP-ASN,136193, direct // Jingzhou, Hubei Province, P.R.China.
+IP-ASN,136194, direct // Huangshi, Hubei Province, P.R.China.
+IP-ASN,136195, direct // China Telecom Dehong
+IP-ASN,136197, direct // 文山
+IP-ASN,136198, direct // CHINANET Guangdong province Yuexi MAN network
+IP-ASN,136199, direct // CHINANET Guangdong province Yuedong MAN network
+IP-ASN,136200, direct // CHINANET广东省佛山市MAN网络
+IP-ASN,136237, direct // 双宇通讯科技有限公司
+IP-ASN,136250, direct // ZhongShanShi QiYi HuDong WangLuoKeJi Ltd
+IP-ASN,136390, direct // 深圳市奥特科技有限公司
+IP-ASN,136545, direct // 蓝色数据中心
+IP-ASN,136559, direct // TYPCN全球网络
+IP-ASN,136574, direct // 哲业网络
+IP-ASN,136591, direct // MxxCloud LLC
+IP-ASN,136600, direct // 北京丰鸟网络科技有限公司
+IP-ASN,136758, direct // 深圳市世纪一号有限公司
+IP-ASN,136766, direct // ROBLOX (SHENZHEN) DIGITAL SCIENCE AND TECHNOLOGY CO., LTD
+IP-ASN,136782, direct // 麒麟网络
+IP-ASN,136958, direct // 中国联通广东IP网络
+IP-ASN,136959, direct // 中国联通广东IP网络
+IP-ASN,137218, direct // 快运信息技术有限公司
+IP-ASN,137256, direct // CatIO网络
+IP-ASN,137266, direct // CHINATELECOM Hubei province Wuhan 5G network
+IP-ASN,137401, direct // CHINATELECOM Hubei province Huangshi 5G network
+IP-ASN,137402, direct // CHINATELECOM Hubei province Shiyan 5G network
+IP-ASN,137410, direct // 巴卡网络
+IP-ASN,137509, direct // 江门市天达网络有限公司
+IP-ASN,137539, direct // 中国联通
+IP-ASN,137547, direct // 郑州绿林科信息技术有限公司
+IP-ASN,137571, direct // arebz.com
+IP-ASN,137686, direct // Zhengzhou, Henan Province, P.R.China.
+IP-ASN,137687, direct // 芜湖
+IP-ASN,137688, direct // CHINATELECOM Liaoning Benxi MAN
+IP-ASN,137689, direct // 淮南
+IP-ASN,137690, direct // 马鞍山
+IP-ASN,137691, direct // Heilongjiang Province, P.R.China.
+IP-ASN,137692, direct // 铜陵
+IP-ASN,137693, direct // 安庆
+IP-ASN,137694, direct // CHINATELECOM Xinjiang Kezhou MAN network
+IP-ASN,137695, direct // CHINATELECOM Xinjiang Wulumuqi MAN network
+IP-ASN,137697, direct // CHINATELECOM江苏扬州IDC网络报道：江苏省扬州市，中国。
+IP-ASN,137698, direct // Haerbing, Heilongjiang Province, P.R.China.
+IP-ASN,137699, direct // CHINATELECOM江苏宿迁IDC网络
+IP-ASN,137702, direct // 池州
+IP-ASN,137710, direct // APNIC ASN Block
+IP-ASN,137711, direct // Shanghai GongQi Network Technology Co., Ltd
+IP-ASN,137715, direct // GTJA证券
+IP-ASN,137718, direct // Beijing Volcano Engine Technology Co., Ltd.
+IP-ASN,137719, direct // Qingdao Weidong Big Data Technology Co., Ltd
+IP-ASN,137726, direct // 中国石油化工股份有限公司
+IP-ASN,137735, direct // APNIC ASN Block
+IP-ASN,137747, direct // Beijing Chijun Network Advisory Service Co,Ltd
+IP-ASN,137753, direct // Beijing Jingdong Shangke Information Technology Co. Ltd.
+IP-ASN,137758, direct // Industrial and Commercial Bank of China Limited,ICBC
+IP-ASN,137759, direct // APNIC ASN Block
+IP-ASN,137761, direct // APNIC ASN Block
+IP-ASN,137762, direct // Guosen youyun software system co. LTD.
+IP-ASN,137764, direct // 北京卓越科技有限公司
+IP-ASN,137767, direct // Shanghai General Motor Corporation Limited
+IP-ASN,137782, direct // STATE GRID SHANGHAI MUNICIPAL ELECTRIC POWER COMPANY
+IP-ASN,137784, direct // CACloud Services (Shanghai) Co., Ltd.
+IP-ASN,137785, direct // APNIC ASN Block
+IP-ASN,137787, direct // Beijing Jingdong Shangke Information Technology Co. Ltd.
+IP-ASN,137788, direct // Shanxi Beacon Cloudscape
+IP-ASN,137791, direct // Guangzhou enjoyVC Communication Technology CO., Ltd
+IP-ASN,137794, direct // Dahe tianchi (Beijing) network co. LTD
+IP-ASN,137798, direct // 5/F, Zhujiang Yide Building, 362 Dongfeng Middle Road, Yuexiu District,
+IP-ASN,137799, direct // China Guangfa Bank
+IP-ASN,137801, direct // AIPO Cloud (Guizhou) Technology Co., Ltd.
+IP-ASN,137804, direct // China Internet Exchange
+IP-ASN,137805, direct // 北京京金融科技控股有限公司
+IP-ASN,137806, direct // WMGS咨询（深圳）有限公司
+IP-ASN,137813, direct // LeanCloud
+IP-ASN,137835, direct // Nathaniel Chan Jie Le
+IP-ASN,137882, direct // 华娟企业网
+IP-ASN,137897, direct // ELIX网络
+IP-ASN,137936, direct // Nyatwork
+IP-ASN,137946, direct // 厦门优田科技有限公司
+IP-ASN,138029, direct // 深圳市胡联先锋科技有限公司
+IP-ASN,138166, direct // 刘璐瑶
+IP-ASN,138169, direct // China Telecom
+IP-ASN,138182, direct // CERNET2 regional IX at Hebei Normal University
+IP-ASN,138211, direct // MoeQing网络服务
+IP-ASN,138333, direct // Hingcloud
+IP-ASN,138369, direct // CERNET2 regional IX at Shenzhen University
+IP-ASN,138370, direct // CERNET2 regional IX at Nanchang University
+IP-ASN,138371, direct // CERNET2 regional IX at Ocean University of China
+IP-ASN,138373, direct // CERNET2 regional IX at Fuzhou University
+IP-ASN,138374, direct // CERNET2 regional IX at Taiyuan University
+IP-ASN,138375, direct // CERNET2 regional IX at Inner Mongolia University
+IP-ASN,138376, direct // CERNET2 regional IX at Ningxia University
+IP-ASN,138377, direct // CERNET2 regional IX at Qinghai Normal University
+IP-ASN,138378, direct // CERNET2 regional IX at Yunnan University
+IP-ASN,138381, direct // CERNET2 regional IX at Guizhou University
+IP-ASN,138387, direct // CHINATELECOM Shaanxi province Xi'an 5G network
+IP-ASN,138393, direct // CERNET2 regional IX at Guangxi University
+IP-ASN,138405, direct // Lee Kinshing
+IP-ASN,138407, direct // 贵州移动通信有限公司互联网数据中心
+IP-ASN,138409, direct // CHINATELECOM Shaanxi province Tongchuan 5G network
+IP-ASN,138421, direct // 中国联通
+IP-ASN,138436, direct // CHINATELECOM Shaanxi province Baoji 5G network
+IP-ASN,138438, direct // CERNET2 regional IX at Guangxi Normal University
+IP-ASN,138440, direct // CERNET2 regional IX at Hainan Normal University
+IP-ASN,138441, direct // CERNET2 regional IX at Xinjiang University
+IP-ASN,138442, direct // CERNET2 regional IX at Tibet University
+IP-ASN,138513, direct // CHINATELECOM Shaanxi province Weinan 5G network
+IP-ASN,138514, direct // CHINATELECOM Shaanxi province Xianyang 5G network
+IP-ASN,138517, direct // Poema Network
+IP-ASN,138538, direct // 宁波南边拓罗新溪吉树有限公司
+IP-ASN,138542, direct // 云梦有限公司
+IP-ASN,138545, direct // Zero Cirrus Cloud Computing (Shanghai) Co., Ltd.
+IP-ASN,138597, direct // CHINATELECOM Shaanxi province Hanzhong 5G network
+IP-ASN,138635, direct // CHINATELECOM Shaanxi province Ankang 5G network
+IP-ASN,138641, direct // CHINATELECOM Shaanxi province Yulin 5G network
+IP-ASN,138667, direct // 小狼连接
+IP-ASN,138679, direct // CHINATELECOM Shaanxi province Yanan 5G network
+IP-ASN,138914, direct // 深圳华洋科技有限公司
+IP-ASN,138949, direct // Jiangsu Kunshan IDC
+IP-ASN,138950, direct // Jiangsu Wuxi International IDC network
+IP-ASN,138982, direct // Hubei Jiangxia IDC
+IP-ASN,138990, direct // WooMai Network
+IP-ASN,138991, direct // China Telecom
+IP-ASN,139007, direct // UNICOM InnerMongolia province network
+IP-ASN,139018, direct // Henan Luoyang IDC
+IP-ASN,139019, direct // Henan Xinxiang MAN
+IP-ASN,139023, direct // 武汉LSHIY网络科技有限公司
+IP-ASN,139057, direct // Baishan Cloud
+IP-ASN,139061, direct // Societe Generale (China) Limited
+IP-ASN,139073, direct // Fantasy Sky Internet eXchange
+IP-ASN,139080, direct // The Internet Data Center of Sichuan Mobile Communication Company Limited
+IP-ASN,139090, direct // Wuxi Education Information Management Service Center
+IP-ASN,139091, direct // Shanghai MBN telecommunication technology Co., LTD.
+IP-ASN,139100, direct // BMW Brilliance Automotive Ltd.
+IP-ASN,139108, direct // Beckman Coulter Commercial Enterprise(China)Co.,Ltd.
+IP-ASN,139110, direct // Lenovo Mobile Communication Technology (Beijing) Ltd
+IP-ASN,139112, direct // Shanghai Qnet Networking Technology Co.,Ltd
+IP-ASN,139113, direct // Shanghai Felizlink Communication Technology Co., Ltd.
+IP-ASN,139118, direct // Shanghai Rugu Info&Tech Co.,Ltd.
+IP-ASN,139122, direct // BEIJING MUNICIPAL ADMINISTRATION COMMUNICATION CARD CO..LTD
+IP-ASN,139136, direct // ZHEJIANG PROVINCE NEW-TYPE INTERNET EXCHANGE POINT CO.,LTD.
+IP-ASN,139138, direct // Gopay Information Technology Co.,Ltd
+IP-ASN,139139, direct // Shenyang Agricultural University
+IP-ASN,139141, direct // Yusys Financial Cloud
+IP-ASN,139154, direct // Big Data Center Of Shandong Province
+IP-ASN,139157, direct // Business-intelligence of Oriental Nations Corporation Ltd.
+IP-ASN,139161, direct // Xinjiang Rural Credit Union
+IP-ASN,139172, direct // Hangzhou Woodnn Technology Co., Ltd.
+IP-ASN,139177, direct // New Oriental Education & Technology Group Ltd.
+IP-ASN,139178, direct // Rural Credit Banks Funds Clearing Center
+IP-ASN,139179, direct // China Pacific Insurance (Group) Co.,Ltd.
+IP-ASN,139182, direct // ABC Life Insurance Co., Ltd
+IP-ASN,139183, direct // Thomson Reuters (Beijing) Technology Development Co. Ltd
+IP-ASN,139188, direct // China Merchants Bank Co., Ltd.
+IP-ASN,139189, direct // Beijing Yu Jia Heng Tong Communications and Information Co., Ltd.
+IP-ASN,139201, direct // Jiangxi Jiujiang IDC
+IP-ASN,139203, direct // Guizhou GuiAn IDC
+IP-ASN,139216, direct // Htroy Network Research Limited
+IP-ASN,139220, direct // Sichuan Chuanxn IDC
+IP-ASN,139231, direct // Zero
+IP-ASN,139247, direct // PPPWAW Network
+IP-ASN,139248, direct // LSC.MOE
+IP-ASN,139249, direct // ENMOE LTD.
+IP-ASN,139266, direct // Guangzhou Tiansui Information Technology Co., Ltd.
+IP-ASN,139316, direct // Hubei Huanggang IDC
+IP-ASN,139317, direct // Ningbo Dahuamao Information Technology Co Ltd
+IP-ASN,139328, direct // Haima Global Network
+IP-ASN,139462, direct // CHINANET Guizhou Yilong IDC
+IP-ASN,139589, direct // GTDev Network
+IP-ASN,139618, direct // Zhu Hai Shi Fu Yuan Le Yu Technology Limited
+IP-ASN,139635, direct // Hubei Yunwutong Network Technology Co., Ltd.
+IP-ASN,139721, direct // HeFei
+IP-ASN,139726, direct // Guangdong Yunjie Communication Co., Ltd.
+IP-ASN,139734, direct // XINGCHEN DATA HK CO., LIMITED
+IP-ASN,139742, direct // Peddie Institute Co., Ltd
+IP-ASN,139743, direct // Shen Zhen Shi Fang Technology Co., Limited
+IP-ASN,139767, direct // China Telecom Headquarters OA network
+IP-ASN,139774, direct // CERNET Center
+IP-ASN,139796, direct // JiuYao NET
+IP-ASN,139799, direct // Beijing Dajia Internet Information Technology Co., Ltd.
+IP-ASN,139833, direct // Evsio0n Network Inc.
+IP-ASN,139866, direct // Ankang Puchuang Network Technology Co., Ltd.
+IP-ASN,139874, direct // Wu'an Chihong Network Technology Co., Ltd.
+IP-ASN,139887, direct // ChinaNet Shandong Yantai IDC network
+IP-ASN,139888, direct // No.16 Hengcha Rd, Zhuhui, Hengyang, Hunan
+IP-ASN,139908, direct // Karamay Hzon Network Technology Development Co.,Ltd.
+IP-ASN,140053, direct // China Telecom
+IP-ASN,140056, direct // China Telecom
+IP-ASN,140061, direct // Qinghai Telecom
+IP-ASN,140083, direct // China Telecom
+IP-ASN,140105, direct // Shaanxi Mobile Communication Company Limited
+IP-ASN,140219, direct // TENVM TECHNOLOGY LIMITED
+IP-ASN,140238, direct // CHINATELECOM Shaanxi province Shangluo 5G network
+IP-ASN,140245, direct // CHINATELECOM Anhui province Shengji 5G network
+IP-ASN,140246, direct // CHINATELECOM Anhui province Hefei 5G network
+IP-ASN,140247, direct // CHINATELECOM Anhui province Wuhu 5G network
+IP-ASN,140248, direct // CHINATELECOM Anhui province Anqing 5G network
+IP-ASN,140249, direct // CHINATELECOM Anhui province Bengbu 5G network
+IP-ASN,140250, direct // CHINATELECOM Anhui province Fuyang 5G network
+IP-ASN,140251, direct // CHINATELECOM Anhui province Bozhou 5G network
+IP-ASN,140252, direct // CHINATELECOM Anhui province Huaibei 5G network
+IP-ASN,140253, direct // CHINATELECOM Anhui province Huainan 5G network
+IP-ASN,140254, direct // CHINATELECOM Anhui province Shuzhou 5G network
+IP-ASN,140255, direct // CHINATELECOM Anhui province Chuzhou 5G network
+IP-ASN,140256, direct // CHINATELECOM Anhui province Liuan 5G network
+IP-ASN,140257, direct // CHINATELECOM Anhui province Chizhou 5G network
+IP-ASN,140258, direct // CHINATELECOM Anhui province Maanshan 5G network
+IP-ASN,140259, direct // CHINATELECOM Anhui province Tongling 5G network
+IP-ASN,140260, direct // CHINATELECOM Anhui province Xuancheng 5G network
+IP-ASN,140261, direct // CHINATELECOM Anhui province Huangshan 5G network
+IP-ASN,140265, direct // CHINATELECOM SiChuan province Chengdu 5G network
+IP-ASN,140290, direct // CHINATELECOM Jiangsu province 5G CORE network
+IP-ASN,140291, direct // CHINATELECOM Jiangsu province Nanjing 5G network
+IP-ASN,140292, direct // CHINATELECOM Jiangsu province Suzhou 5G network
+IP-ASN,140293, direct // CHINATELECOM Jiangsu province Changzhou 5G network
+IP-ASN,140294, direct // CHINATELECOM Jiangsu provinceYangzhou 5G network
+IP-ASN,140295, direct // CHINATELECOM Jiangsu province Lianyungang 5G network
+IP-ASN,140296, direct // CHINATELECOM Jiangsu province Wuxi 5G network
+IP-ASN,140297, direct // CHINATELECOM Jiangsu province Xuzhou 5G network
+IP-ASN,140298, direct // CHINATELECOM Jiangsu province Yancheng 5G network
+IP-ASN,140299, direct // CHINATELECOM Jiangsu province Nantong 5G network
+IP-ASN,140300, direct // CHINATELECOM Jiangsu province Suqian 5G network
+IP-ASN,140301, direct // CHINATELECOM Jiangsu province Taizhou 5G network
+IP-ASN,140302, direct // CHINATELECOM Jiangsu province Zhenjiang 5G network
+IP-ASN,140303, direct // CHINATELECOM Jiangsu province Huaian 5G network
+IP-ASN,140308, direct // CHINATELECOM Guangdong province Zhuhai 5G network
+IP-ASN,140309, direct // CHINATELECOM Guangdong province Zhongshan 5G network
+IP-ASN,140310, direct // CHINATELECOM Guangdong province Dongguan 5G network
+IP-ASN,140311, direct // CHINATELECOM Guangdong province Jiangmen 5G network
+IP-ASN,140312, direct // CHINATELECOM Guangdong province Zhanjiang 5G network
+IP-ASN,140313, direct // CHINATELECOM Guangdong province Zhaoqing 5G network
+IP-ASN,140314, direct // CHINATELECOM Guangdong province Shantou 5G network
+IP-ASN,140315, direct // CHINATELECOM Guangdong province Jieyang 5G network
+IP-ASN,140316, direct // CHINATELECOM Guangdong province Chaozhou 5G network
+IP-ASN,140317, direct // CHINATELECOM Guangdong province Shaoguan 5G network
+IP-ASN,140318, direct // CHINATELECOM Guangdong province Heyuan 5G network
+IP-ASN,140319, direct // CHINATELECOM Guangdong province Qingyuan 5G network
+IP-ASN,140320, direct // CHINATELECOM Guangdong province Shanwei 5G network
+IP-ASN,140328, direct // CHINATELECOM Fujian province Shengji 5G network
+IP-ASN,140329, direct // CHINATELECOM Fujian province Fuzhou 5G network
+IP-ASN,140330, direct // CHINATELECOM Fujian province Xiamen 5G network
+IP-ASN,140331, direct // CHINATELECOM Fujian province NINGDE 5G network
+IP-ASN,140332, direct // CHINATELECOM Fujian province Putian 5G network
+IP-ASN,140333, direct // CHINATELECOM Fujian province Quanzhou 5G network
+IP-ASN,140334, direct // CHINATELECOM Fujian province Zhangzhou 5G network
+IP-ASN,140335, direct // CHINATELECOM Fujian province Longyan 5G network
+IP-ASN,140336, direct // CHINATELECOM Fujian province Sanming 5G network
+IP-ASN,140337, direct // CHINATELECOM Fujian province Nanping 5G network
+IP-ASN,140345, direct // CHINATELECOM Yunnan province Shengji 5G network
+IP-ASN,140346, direct // CHINATELECOM Yunnan province Kunming 5G network
+IP-ASN,140347, direct // CHINATELECOM Yunnan province Xishuangbanna 5G network
+IP-ASN,140348, direct // CHINATELECOM Yunnan province Baoshan 5G network
+IP-ASN,140349, direct // CHINATELECOM Yunnan province Chuxiong 5G network
+IP-ASN,140350, direct // CHINATELECOM Yunnan province Dali 5G network
+IP-ASN,140351, direct // CHINATELECOM Yunnan province Dehong 5G network
+IP-ASN,140352, direct // CHINATELECOM Yunnan province Diqing 5G network
+IP-ASN,140353, direct // CHINATELECOM Yunnan province Honghe 5G network
+IP-ASN,140354, direct // CHINATELECOM Yunnan province Lijiang 5G network
+IP-ASN,140355, direct // CHINATELECOM Yunnan province Lincang 5G network
+IP-ASN,140356, direct // CHINATELECOM Yunnan province Nujiang 5G network
+IP-ASN,140357, direct // CHINATELECOM Yunnan province Puer 5G network
+IP-ASN,140358, direct // CHINATELECOM Yunnan province Qujing 5G network
+IP-ASN,140359, direct // CHINATELECOM Yunnan province Wenshan 5G network
+IP-ASN,140360, direct // CHINATELECOM Yunnan province Yuxi 5G network
+IP-ASN,140361, direct // CHINATELECOM Yunnan province Zhaotong 5G network
+IP-ASN,140364, direct // CHINATELECOM Hunan province 5G Core Network 5G network
+IP-ASN,140365, direct // CHINATELECOM Hunan province Changsha 5G network
+IP-ASN,140366, direct // CHINATELECOM Hunan province Hengyang 5G network
+IP-ASN,140367, direct // CHINATELECOM Hunan province Yueyang 5G network
+IP-ASN,140368, direct // CHINATELECOM Hunan province Zhuzhou 5G network
+IP-ASN,140369, direct // CHINATELECOM Hunan province Xiangtan 5G network
+IP-ASN,140370, direct // CHINATELECOM Hunan province Chenzhou 5G network
+IP-ASN,140371, direct // CHINATELECOM Hunan province Yongzhou 5G network
+IP-ASN,140372, direct // CHINATELECOM Hunan province Yiyang 5G network
+IP-ASN,140373, direct // CHINATELECOM Hunan province Changde 5G network
+IP-ASN,140374, direct // CHINATELECOM Hunan province Zhangjiajie 5G network
+IP-ASN,140375, direct // CHINATELECOM Hunan province Xiangxi 5G network
+IP-ASN,140376, direct // CHINATELECOM Hunan province Huaihua 5G network
+IP-ASN,140377, direct // CHINATELECOM Hunan province Shaoyang 5G network
+IP-ASN,140378, direct // CHINATELECOM Hunan province Loudi 5G network
+IP-ASN,140483, direct // CHINATELECOM ZHEJIANG province Shengji 5G network
+IP-ASN,140484, direct // CHINATELECOM ZHEJIANG province Shengji EPCCE network
+IP-ASN,140485, direct // CHINATELECOM ZHEJIANG province HANGZHOU 5GC network
+IP-ASN,140486, direct // CHINATELECOM ZHEJIANG province JINHUA 5GC network
+IP-ASN,140487, direct // CHINATELECOM ZHEJIANG province HANGZHOU 5G network
+IP-ASN,140488, direct // CHINATELECOM ZHEJIANG province NINGBO 5G network
+IP-ASN,140489, direct // CHINATELECOM ZHEJIANG province WENZHOU 5G network
+IP-ASN,140490, direct // CHINATELECOM ZHEJIANG province JINHUA 5G network
+IP-ASN,140491, direct // CHINATELECOM ZHEJIANG province TAIZHOU 5G network
+IP-ASN,140492, direct // CHINATELECOM ZHEJIANG province SHAOXING 5G network
+IP-ASN,140493, direct // CHINATELECOM ZHEJIANG province JIAXING 5G network
+IP-ASN,140494, direct // CHINATELECOM ZHEJIANG province HUZHOU 5G network
+IP-ASN,140495, direct // CHINATELECOM ZHEJIANG province QUZHOU 5G network
+IP-ASN,140496, direct // CHINATELECOM ZHEJIANG province LISHUI 5G network
+IP-ASN,140497, direct // CHINATELECOM ZHEJIANG province ZHOUSHAN 5G network
+IP-ASN,140498, direct // RCold Network
+IP-ASN,140506, direct // ZR Global Network
+IP-ASN,140508, direct // CHINATELECOM GUANGXI province Shengji 5G network
+IP-ASN,140509, direct // CHINATELECOM GUANGXI province NanNing 5G network
+IP-ASN,140510, direct // CHINATELECOM GUANGXI province LiuZhou 5G network
+IP-ASN,140511, direct // CHINATELECOM GUANGXI province GuiLin 5G network
+IP-ASN,140512, direct // CHINATELECOM GUANGXI province YuLin 5G network
+IP-ASN,140513, direct // CHINATELECOM GUANGXI province BaiSe 5G network
+IP-ASN,140514, direct // CHINATELECOM GUANGXI province GuiGang 5G network
+IP-ASN,140515, direct // CHINATELECOM GUANGXI province HeChi 5G network
+IP-ASN,140516, direct // CHINATELECOM GUANGXI province QinZhou 5G network
+IP-ASN,140517, direct // CHINATELECOM GUANGXI province WuZhou 5G network
+IP-ASN,140518, direct // CHINATELECOM GUANGXI province BeiHai 5G network
+IP-ASN,140519, direct // CHINATELECOM GUANGXI province ChongZuo 5G network
+IP-ASN,140520, direct // CHINATELECOM GUANGXI province LaiBin 5G network
+IP-ASN,140521, direct // CHINATELECOM GUANGXI province HeZhou 5G network
+IP-ASN,140522, direct // CHINATELECOM GUANGXI province FangChengGang 5G network
+IP-ASN,140527, direct // China Telecom
+IP-ASN,140528, direct // CHINATELECOM Hubei province Yichang 5G network
+IP-ASN,140529, direct // CHINATELECOM Hubei province Xiangyang 5G network
+IP-ASN,140530, direct // CHINATELECOM Hubei province Ezhou 5G network
+IP-ASN,140531, direct // CHINATELECOM Hubei province Jingmen 5G network
+IP-ASN,140532, direct // CHINATELECOM Hubei province Xiaogan 5G network
+IP-ASN,140533, direct // CHINATELECOM Hubei province Jingzhou 5G network
+IP-ASN,140534, direct // CHINATELECOM Hubei province Huanggang 5G network
+IP-ASN,140535, direct // CHINATELECOM Hubei province Xianning 5G network
+IP-ASN,140536, direct // CHINATELECOM Hubei province Suizhou 5G network
+IP-ASN,140537, direct // CHINATELECOM Hubei province Enshi 5G network
+IP-ASN,140538, direct // CHINATELECOM Hubei province Xiantao 5G network
+IP-ASN,140553, direct // CHINATELECOM XINJIANG province Shengji 5G network
+IP-ASN,140596, direct // SHENZHEN TUTENG NETWORK CO.,LTD
+IP-ASN,140633, direct // BILIBILI HK LIMITED
+IP-ASN,140636, direct // China Telecom
+IP-ASN,140638, direct // China Telecom
+IP-ASN,140647, direct // CHINATELECOM Guizhou province Shengji 5G network
+IP-ASN,140648, direct // CHINATELECOM Guizhou province Guiyang 5G network
+IP-ASN,140649, direct // CHINATELECOM Guizhou province Zunyi 5G network
+IP-ASN,140650, direct // CHINATELECOM Guizhou province Anshun 5G network
+IP-ASN,140651, direct // CHINATELECOM Guizhou province Qiannan 5G network
+IP-ASN,140652, direct // CHINATELECOM Guizhou province Qiandongnan 5G network
+IP-ASN,140653, direct // CHINATELECOM Guizhou province Tongren 5G network
+IP-ASN,140654, direct // CHINATELECOM Guizhou province Bijie 5G network
+IP-ASN,140655, direct // CHINATELECOM Guizhou province Liupanshui 5G network
+IP-ASN,140656, direct // CHINATELECOM Guizhou province Qianxinan 5G network
+IP-ASN,140657, direct // CHINATELECOM Guizhou province Guian 5G network
+IP-ASN,140707, direct // UNICOM Ningxia province network
+IP-ASN,140716, direct // UNICOM JiangSu WuXi IDC network
+IP-ASN,140717, direct // UNICOM JiangSu Suzhou IDC network
+IP-ASN,140720, direct // UNICOM JiangSu NanTong IDC network
+IP-ASN,140726, direct // UNICOM AnHui province network
+IP-ASN,140731, direct // TOHU Public Internet
+IP-ASN,140852, direct // CHINATELECOM Jiangxi province Shengji 5G network
+IP-ASN,140853, direct // CHINATELECOM Jiangxi province Nanchang 5G network
+IP-ASN,140854, direct // CHINATELECOM Jiangxi province Jiujiang 5G network
+IP-ASN,140855, direct // CHINATELECOM Jiangxi province Jingdezhen 5G network
+IP-ASN,140856, direct // CHINATELECOM Jiangxi province Shangrao 5G network
+IP-ASN,140857, direct // CHINATELECOM Jiangxi province yingtan 5G network
+IP-ASN,140858, direct // CHINATELECOM Jiangxi province Yichun 5G network
+IP-ASN,140859, direct // CHINATELECOM Jiangxi province Pingxiang 5G network
+IP-ASN,140860, direct // CHINATELECOM Jiangxi province Xinyu 5G network
+IP-ASN,140861, direct // CHINATELECOM Jiangxi province Ganzhou 5G network
+IP-ASN,140862, direct // CHINATELECOM Jiangxi province Jian 5G network
+IP-ASN,140863, direct // CHINATELECOM Jiangxi province Fuzhou 5G network
+IP-ASN,140886, direct // UNICOM Guangxi province network
+IP-ASN,140895, direct // China Mobile Group AnHui communications corporation
+IP-ASN,140903, direct // CHINA TELECOM
+IP-ASN,140913, direct // Hentai Network Lab
+IP-ASN,140936, direct // SUNNET Global Network
+IP-ASN,140979, direct // China Unicom Shanghai FuTe IDC network
+IP-ASN,141025, direct // Shenyang MAN, Liaoning, China Telecom
+IP-ASN,141157, direct // Guangxi Telecom Nanning Wuxiang Yuanyang IDC
+IP-ASN,141425, direct // China Mobile Group Guangdong communications corporation
+IP-ASN,141429, direct // Agatha Network
+IP-ASN,141445, direct // Phoenix Network
+IP-ASN,141679, direct // China Telecom Beijing Tianjin Hebei Big Data Industry Park Branch
+IP-ASN,141694, direct // Otaku Limited
+IP-ASN,141739, direct // China Telecom
+IP-ASN,141771, direct // China Telecom
+IP-ASN,141776, direct // Baoshuo Network
+IP-ASN,141998, direct // China Telecom
+IP-ASN,142048, direct // vscloud.cc
+IP-ASN,142111, direct // Zhejiang Aiyun Network Technology Co Ltd
+IP-ASN,142112, direct // Star Horizon Tech Inc
+IP-ASN,142164, direct // GoldDoge Computer Technologies & Networks Information Center
+IP-ASN,142280, direct // NaiveTomcat Education and Research Experimental Network Backbone
+IP-ASN,142284, direct // Koala Network
+IP-ASN,142404, direct // China Telecom
+IP-ASN,142418, direct // TaterLi Education And Research Network
+IP-ASN,142438, direct // Kasumi Networks Inc
+IP-ASN,142549, direct // Magnetic Discovery Education and Research Network
+IP-ASN,142551, direct // Azurite27 Network
+IP-ASN,142553, direct // Airs Project Private Network Main
+IP-ASN,142554, direct // hongmicloud.com
+IP-ASN,142582, direct // NNET-BACKBONE
+IP-ASN,142586, direct // Dotnet Ltd
+IP-ASN,142588, direct // Lichun Tang Trading as 400Host
+IP-ASN,142608, direct // China Telecom
+IP-ASN,142611, direct // Shanghai Tujuan Information Technology Co., Ltd.
+IP-ASN,142634, direct // Wut Exchange RS
+IP-ASN,142642, direct // Atonal System
+IP-ASN,146746, direct // TaiKang Insurance Group CO.,LTD.,Wuhan Operating Center
+IP-ASN,146753, direct // kgzxnet
+IP-ASN,146758, direct // ShangHai Sensetime Technology Development Co., Ltd.
+IP-ASN,146834, direct // SiChuan XunYou Network Technologe Limit, co
+IP-ASN,146842, direct // ChinaDataCom Corporation Limited
+IP-ASN,146966, direct // China Telecom
+IP-ASN,148969, direct // China Telecom
+IP-ASN,149056, direct // Harbin Liangyue Network Technology Co., Ltd.
+IP-ASN,149178, direct // China Telecom
+IP-ASN,149292, direct // Shanghai YanFu Technology Co Ltd
+IP-ASN,149475, direct // 南京天开信息技术有限公司 
+IP-ASN,149506, direct // YousaFan LTD
+IP-ASN,149513, direct // 91440300MA5DH1CC86
+IP-ASN,149648, direct // Fuzhou Lefeng Networks Technology Co., Ltd.
+IP-ASN,149790, direct // Octopus Cloud Computing (Shanghai) Co., Ltd
+IP-ASN,149795, direct // XiaoJin233 Network
+IP-ASN,205794, direct // JINZE YANG
+IP-ASN,206729, direct // YANGYINGTAO
+IP-ASN,208191, direct // MINGWEI LI
+IP-ASN,208577, direct // Chaohui Liu
+IP-ASN,208679, direct // YIKAI-ZHAO
+IP-ASN,209100, direct // 成渝，王
+IP-ASN,210041, direct // Licheng MAO
+# IP-ASN,210320, direct // Zihan Sun 【未广播中国大陆IP】
+# IP-ASN,210426, direct // Liang Zhu 【未广播中国大陆IP】
+# IP-ASN,210714, direct // Wang Yongjin 【未广播中国大陆IP】
+IP-ASN,210903, direct // 承德青曜网络技术服务有限公司
+# IP-ASN,210934, direct // YAO PEI 【未广播中国大陆IP】
+IP-ASN,211481, direct // JINGQUAN LI
+IP-ASN,211843, direct // 南京天开信息技术有限公司 
+IP-ASN,212237, direct // Changgong Zhang
+# IP-ASN,212292, direct // SKYWTH.COM LTD 【未广播中国大陆IP】
