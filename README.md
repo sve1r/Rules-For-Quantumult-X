@@ -284,6 +284,8 @@ Repository
 - [@gkeyes](https://github.com/gkeyes)
 - [@LeeeMooo](https://github.com/LeeeMooo)
 - [@uranuswch](https://github.com/uranuswch)
+- [@ddgksf2013](https://github.com/ddgksf2013)
+- [@cherish](https://github.com/cherish)
 
 # **7️⃣许可与说明**
 
