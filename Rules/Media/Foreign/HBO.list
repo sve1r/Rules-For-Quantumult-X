@@ -6,11 +6,7 @@ host,bcbolthboa-a.akamaihd.net,HBO
 host,cf-images.ap-southeast-1.prod.boltdns.net,HBO
 host,dai3fd1oh325y.cloudfront.net,HBO
 host,s3-ap-southeast-1.amazonaws.com,HBO
-host,hboasia1-i.akamaihd.net,HBO
-host,hboasia2-i.akamaihd.net,HBO
-host,hboasia3-i.akamaihd.net,HBO
-host,hboasia4-i.akamaihd.net,HBO
-host,hboasia5-i.akamaihd.net,HBO
+host-wildcard,hboasia*-i.akamaihd.net,HBO
 host,players.brightcove.net,HBO
 host-suffix,bcbolthboa-a.akamaihd.net,HBO
 host-suffix,cf-images.ap-southeast-1.prod.boltdns.net,HBO

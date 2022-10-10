@@ -1,11 +1,4 @@
 # > Japonx
 host-keyword,japonx,Japonx
 host-keyword,japronx,Japonx
-host-suffix,japonx.com,Japonx
-host-suffix,japonx.tv,Japonx
-host-suffix,japonx.net,Japonx
-host-suffix,japonx.vip,Japonx
-host-suffix,japronx.com,Japonx
-host-suffix,japronx.tv,Japonx
-host-suffix,japronx.net,Japonx
-host-suffix,japronx.vip,Japonx
+host-wildcard,japonx.*,Japonx

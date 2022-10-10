@@ -1,6 +1,6 @@
 # TikTok
 user-agent,TikTok*,TikTok
-host-keyword,tiktokcdn-,TikTok
+host-wildcard,tiktokcdn-*,TikTok
 host-keyword,musical.ly,TikTok
 host-keyword,tiktok,TikTok
 host-keyword,tiktokv,TikTok

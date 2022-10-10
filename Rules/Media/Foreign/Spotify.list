@@ -1,7 +1,7 @@
 # > Spotify
 # 请注意，导入此规则将自动创建名为[Spotify]的策略组
 user-agent,Spotify*,Spotify
-host-keyword,-spotify-com,Spotify
+host-wildcard,*-spotify-com,Spotify
 host-suffix,pscdn.co,Spotify
 host-suffix,scdn.co,Spotify
 host-suffix,spotify.com,Spotify
