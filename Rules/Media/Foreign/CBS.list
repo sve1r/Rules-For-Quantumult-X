@@ -1,0 +1,24 @@
+# > CBS
+host-suffix,cbs,CBS
+host-suffix,cbs.com,CBS
+host-suffix,cbscorporation.com,CBS
+host-suffix,cbsi.video,CBS
+host-suffix,cbsiam.com,CBS
+host-suffix,cbsig.net,CBS
+host-suffix,cbsimg.net,CBS
+host-suffix,cbsinteractive.com,CBS
+host-suffix,cbsistatic.com,CBS
+host-suffix,cbsnews.com,CBS
+host-suffix,cbspressexpress.com,CBS
+host-suffix,cbssports.com,CBS
+host-suffix,cbsstatic.com,CBS
+host-suffix,cbsstore.com,CBS
+host-suffix,cbssvideo.com,CBS
+host-suffix,cbstelevisioncity.com,CBS
+host-suffix,viacbs.com,CBS
+host-suffix,viacom.com,CBS
+host-suffix,viacomcbs.com,CBS
+host-suffix,viacomcbspressexpress.com,CBS
+
+# >> CBS Radio
+host-suffix,cbsradio.com,CBS

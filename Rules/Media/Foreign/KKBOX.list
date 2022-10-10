@@ -1,4 +1,4 @@
 # KKBOX
-DOMAIN-SUFFIX,kkbox.com,KKBOX
-DOMAIN-SUFFIX,kkbox.com.tw,KKBOX
-DOMAIN-SUFFIX,kfs.io,KKBOX
+host-suffix,kkbox.com,KKBOX
+host-suffix,kkbox.com.tw,KKBOX
+host-suffix,kfs.io,KKBOX

@@ -1,0 +1,27 @@
+# > Weibo
+host-keyword,weibo,Weibo
+host-suffix,weibo.com,Weibo
+host-suffix,weibo.cn,Weibo
+
+# > Weibo Api
+host-suffix,api.weibo.cn,Weibo
+host-suffix,api.weibo.com,Weibo
+host-suffix,dns.weibo.cn,Weibo
+
+# > Weibo CDN
+host-suffix,weibocdn.com,Weibo
+
+# > Weibo Client & SDK
+host-suffix,wbapp.mobile.sina.cn,Reject
+host-suffix,sdkapp.mobile.sina.cn,Reject
+
+# > Weibo Img
+host-suffix,sinajs.cn,Weibo
+host-suffix,vip.storage.weibo.com,Weibo
+host-suffix,simg.s.weibo.com,Weibo
+host-suffix,sinaimg.cn,Weibo
+host-suffix,miaozhen.com,Weibo
+host-suffix,data.kuiniuca.com,Weibo
+
+# > Weibo Live
+host-suffix,live.weibo.com,Weibo

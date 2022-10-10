@@ -1,0 +1,12 @@
+# Steam
+host,api.steampowered.com,Steam
+host-suffix,steamcommunity.com,Steam
+host-suffix,steampowered.com,Steam
+host-suffix,steamstatic.com,Steam
+host-suffix,steam-chat.com,Steam
+host-suffix,steamgames.com,Steam
+host-suffix,steamusercontent.com,Steam
+host-suffix,steamcontent.com,Steam
+host-suffix,steamstatic.com,Steam
+host-suffix,steamcdn-a.akamaihd.net,Steam
+host-suffix,steamstat.us,Steam

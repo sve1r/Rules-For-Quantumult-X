@@ -1,4 +1,4 @@
 # Twitch
-DOMAIN-SUFFIX,twitch.tv,Twitch
-DOMAIN-SUFFIX,twitchcdn.net,Twitch
-DOMAIN-SUFFIX,ttvnw.net,Twitch
+host-suffix,twitch.tv,Twitch
+host-suffix,twitchcdn.net,Twitch
+host-suffix,ttvnw.net,Twitch

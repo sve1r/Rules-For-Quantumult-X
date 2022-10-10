@@ -1,0 +1,40 @@
+# 常用游戏平台整合
+
+# Humble bundle
+host-suffix,humblebundle.com,Game
+
+# > Blizzard
+# - user-agent,hearthstone*,Domestic
+host,cdp.cloud.unity3d.com,Domestic
+host-suffix,battle.net,Domestic
+host-suffix,battlenet.com,Domestic
+host-suffix,blizzard.com,Domestic
+
+# Fanatical
+host-suffix,fanatical.com,Game
+
+# Steam
+host,api.steampowered.com,Game
+host-suffix,steamcommunity.com,Game
+host-suffix,steampowered.com,Game
+host-suffix,steamstatic.com,Game
+host-suffix,steam-chat.com,Game
+host-suffix,steamgames.com,Game
+host-suffix,steamusercontent.com,Game
+host-suffix,steamcontent.com,Game
+host-suffix,steamstatic.com,Game
+host-suffix,steamcdn-a.akamaihd.net,Game
+host-suffix,steamstat.us,Game
+
+# Epicgames
+host-keyword,epicgames,Game
+host-suffix,helpshift.com,Game
+
+# Sony
+# > Sony
+host-suffix,playstation.com,Game
+host-suffix,playstation.net,Game
+host-suffix,playstationnetwork.com,Game
+host-suffix,sony.com,Game
+host-suffix,sonyentertainmentnetwork.com,Game
+

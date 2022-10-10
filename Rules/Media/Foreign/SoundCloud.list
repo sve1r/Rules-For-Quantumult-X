@@ -1,4 +1,4 @@
 # > SoundCloud
-# - USER-AGENT,SoundCloud*,GlobalTV
-DOMAIN-SUFFIX,sndcdn.com,GlobalTV
-DOMAIN-SUFFIX,soundcloud.com,GlobalTV
+# - user-agent,SoundCloud*,GlobalTV
+host-suffix,sndcdn.com,GlobalTV
+host-suffix,soundcloud.com,GlobalTV

@@ -1,0 +1,30 @@
+# Unbreak
+# > General
+user-agent,archero*,DIRECT
+user-agent,coffeecorp*,DIRECT
+user-agent,Coffee%20Corp*,DIRECT
+user-agent,restaurant-mobile*,DIRECT
+host,app.adjust.com,DIRECT
+host,bdtj.tagtic.cn,DIRECT
+# > Alibaba
+host,log.mmstat.com,DIRECT
+host,sycm.mmstat.com,DIRECT
+# > Google
+host-SUFFIX,blog.google,DIRECT
+host-SUFFIX,googletraveladservices.com,DIRECT
+host,clientservices.googleapis.com,DIRECT
+host,dl.google.com,DIRECT
+host,dl.l.google.com,DIRECT
+host,fonts.googleapis.com,DIRECT
+host,fonts.gstatic.com,DIRECT
+host,mtalk.google.com,DIRECT
+host,translate.googleapis.com,DIRECT
+host,update.googleapis.com,DIRECT
+# > Tencent
+host,livew.l.qq.com,DIRECT
+host,vd.l.qq.com,DIRECT
+# > Strava
+host,analytics.strava.com,DIRECT
+# > Umeng
+host,msg.umeng.com,DIRECT
+host,msg.umengcloud.com,DIRECT

@@ -1,0 +1,8 @@
+# ClubHouse
+user-agent,Clubhouse*,ClubHouse
+host-suffix,clubhouse.com,ClubHouse
+host-suffix,clubhouseapi.com,ClubHouse
+host-suffix,clubhouseprod.s3.amazonaws.com,ClubHouse
+host-suffix,clubhouse.pubnub.com,ClubHouse
+host-suffix,maintainance.joinclubhouse.com,ClubHouse
+host-suffix,ap3.agora.io,ClubHouse

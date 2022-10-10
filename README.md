@@ -19,9 +19,9 @@
 ![GitHub stars](https://img.shields.io/github/stars/sve1r/Rules-For-Quantumult-X?color=ffd700&style=for-the-badge)
 ![GitHub forks](https://img.shields.io/github/forks/sve1r/Rules-For-Quantumult-X?color=60c5ba&style=for-the-badge)
 ![GitHub issues](https://img.shields.io/github/issues/sve1r/Rules-For-Quantumult-X?color=1E90FF&style=for-the-badge)
+![Github Codelines](https://img.shields.io/tokei/lines/github/sve1r/Rules-For-Quantumult-X?style=for-the-badge)
 ![GitHub](https://img.shields.io/github/license/sve1r/Rules-For-Quantumult-X?style=for-the-badge)
-![Twitter URL](https://img.shields.io/twitter/url?label=Twitter&logo=Twitter&color=e85a71&style=for-the-badge&url=https%3A%2F%2Ftwitter.com%2FSveirH)
-
+[![](https://img.shields.io/badge/-t.me/sve1r-3db6f1?style=for-the-badge&logo=Telegram&logoColor=2ca5e0)](https://t.me/sve1r)
 <!-- PROJECT LOGO -->
 <br />
 
@@ -72,6 +72,7 @@
 
 ### `🌐 公共 DNS 推荐`
 
+    - https://doh.pub/dns-query
     - 119.29.29.29 [腾讯DnsPod+]
     - 182.254.116.116
     - 223.5.5.5 [阿里云公共DNS]
@@ -88,17 +89,40 @@
 
 1. 选择你想要使用的规则
 2. 获取 RAW 链接
- 
+```
 例如：
+  
+  https://raw.githubusercontent.com/sve1r/Rules-For-Quantumult-X/master/Rules/Media/ForeignMedia.list 
+  此为浏览器地址栏中获取到的链接
 
-① https://raw.githubusercontent.com/sve1r/Rules-For-Quantumult-X/master/Rules/Media/ForeignMedia.list `此为浏览器地址栏中获取到的链接`
-
+```
+3.使用 **镜像加速域名** 替换 RAW链接,以避免更新配置时出错的相关问题
+```
+例如：
+  
+  https://raw.githubusercontent.com/sve1r/Rules-For-Quantumult-X/master/Rules/Media/ForeignMedia.list 
+  
+  请将 *raw.githubusercontent.com* 替换为 *raw.githubusercontents.com* => 后面加个s
+  
+  替换后链接为
+  
+  https://raw.githubusercontents.com/sve1r/Rules-For-Quantumult-X/master/Rules/Media/ForeignMedia.list 
+```
 或
+```
+使用新 CDN 链接
 
-② https://github.com/sve1r/Rules-For-Quantumult-X/raw/master/Rules/Media/ForeignMedia.list `此为右键 RAW 按钮获取到的链接`
+  e.g: https://cdn.jsdelivr.net/gh/sve1r/Rules-For-Quantumult-X@分支名/文件夹/文件名.list
+  
+  例如文件: https://github.com/sve1r/Rules-For-Quantumult-X/blob/develop/Rules/Services/SNS/Weibo.list
+  
+  替换后链接为
+  
+  https://cdn.jsdelivr.net/gh/sve1r/Rules-For-Quantumult-X@develop/Rules/Services/SNS/Weibo.list
+  
+```
 
->Tips：由于 Github 会将 ②链接 302重定向至 ①链接，所以上面两个链接在实际使用中为等同效果。
-实际使用中可以使用 ②链接 以此减少一部分的配置文件存储大小。
+
 
 ### 3.推荐排序
 
@@ -144,19 +168,11 @@
 
 请暂时关闭待验证成功后再开启，或者如校园网运营商客户端的可将相关域名或 IP 地址手动加入至 【分流】中。
 
-> 2.iOS 12 上 Siri 无法正常使用
-
-[#55](https://github.com/ConnersHua/Profiles/issues/55) （仅）iOS 12 的 Bug，尝试多次重启直至正常。
-
-> 3.Clash 连接不上内网服务器
-
-您可以手动移除掉配置内的相关 DNS 配置。
-
-> 4.打开「淘宝」等阿里系应用时遇到「访问被拒绝」、「请检查是否使用了代理」等提示
+> 2.打开「淘宝」等阿里系应用时遇到「访问被拒绝」、「请检查是否使用了代理」等提示
 
 部分「阿里云」节点会导致此问题，请尝试使用其他节点。
 
-> 5.关于 Speedtest 想直连/代理？
+> 3.关于 Speedtest 想直连/代理？
 
 规则对于 Speedtest 不是绝对的直连也不是绝对的代理，对于国内测速点是直连，对于国外测速点是代理。
 
@@ -254,6 +270,7 @@ Repository
 
 
 # **6️⃣来源与鸣谢**
+- [@NobyDa](https://github.com/NobyDa/Scipts)
 - [@anti-AD V4](https://github.com/privacy-protection-tools/anti-AD)
 - [@ConnersHua](https://github.com/ConnersHua)
 - [@lhie1](https://github.com/lhie1)

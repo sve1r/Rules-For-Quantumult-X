@@ -1,9 +1,9 @@
 # YYeTs
-USER-AGENT,YYeTs*,DIRECT
-DOMAIN-SUFFIX,jstucdn.com,DIRECT
-DOMAIN-SUFFIX,zimuzu.io,DIRECT
-DOMAIN-SUFFIX,zimuzu.tv,DIRECT
-DOMAIN-SUFFIX,zmz2019.com,DIRECT
-DOMAIN-SUFFIX,zmzapi.com,DIRECT
-DOMAIN-SUFFIX,zmzapi.net,DIRECT
-DOMAIN-SUFFIX,zmzfile.com,DIRECT
+user-agent,YYeTs*,DIRECT
+host-suffix,jstucdn.com,DIRECT
+host-suffix,zimuzu.io,DIRECT
+host-suffix,zimuzu.tv,DIRECT
+host-suffix,zmz2019.com,DIRECT
+host-suffix,zmzapi.com,DIRECT
+host-suffix,zmzapi.net,DIRECT
+host-suffix,zmzfile.com,DIRECT

@@ -1,0 +1,6 @@
+# > Blizzard
+# - user-agent,hearthstone*,Domestic
+host,cdp.cloud.unity3d.com,Blizzard
+host-suffix,battle.net,Blizzard
+host-suffix,battlenet.com,Blizzard
+host-suffix,blizzard.com,Blizzard

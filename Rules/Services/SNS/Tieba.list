@@ -1,0 +1,12 @@
+# > Tieba
+host,www.baidu.com,Tieba
+host,tracker.dcdn.baidu.com,Tieba
+host,bgg.baidu.com,Tieba
+host,query.dcdn.baidu.com,Tieba
+host,afdconf.baidu.com,Tieba
+host,mbd.baidu.com,Tieba
+host,cdn.hiphotos.baidu.com,Tieba
+host,im.tieba.baidu.com,Tieba
+host,bdbus-turbonet.baidu.com,Tieba
+host,tcbox.baidu.com,Tieba
+host,tiebac.baidu.com,Tieba

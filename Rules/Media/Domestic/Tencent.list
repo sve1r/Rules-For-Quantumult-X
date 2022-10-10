@@ -1,7 +1,10 @@
 # > MOO
-# - USER-AGENT,MOO*,Tencent
-# - USER-AGENT,TencentMidasConnect*,Tencent
+user-agent,MOO*,TencentVideo
+user-agent,TencentMidasConnect*,TencentVideo
 
 # > Tencent Video
-DOMAIN-SUFFIX,v.smtcdns.com,Tencent
-DOMAIN-SUFFIX,vv.video.qq.com,Tencent
+host-suffix,v.smtcdns.com,TencentVideo
+host-suffix,vv.video.qq.com,TencentVideo
+
+# > 弹幕相关
+host-suffix,mfm.video.qq.com,DIRECT

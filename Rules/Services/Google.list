@@ -1,75 +1,113 @@
-# Google
-# > 域名关键字匹配
-DOMAIN-KEYWORD,gmail,Google
-DOMAIN-KEYWORD,gstatic,Google
-DOMAIN-KEYWORD,google,Google
-DOMAIN-KEYWORD,blogspot,Google
+# >> Google
+host-keyword,google,Google
+host-suffix,265.com,Google
 
-# > 域名部分
-DOMAIN-SUFFIX,abc.xyz,Google
-DOMAIN-SUFFIX,android.com,Google
-DOMAIN-SUFFIX,androidify.com,Google
-DOMAIN-SUFFIX,dialogflow.com,Google
-DOMAIN-SUFFIX,autodraw.com,Google
-DOMAIN-SUFFIX,capitalg.com,Google
-DOMAIN-SUFFIX,certificate-transparency.org,Google
-DOMAIN-SUFFIX,chrome.com,Google
-DOMAIN-SUFFIX,chromeexperiments.com,Google
-DOMAIN-SUFFIX,chromestatus.com,Google
-DOMAIN-SUFFIX,chromium.org,Google
-DOMAIN-SUFFIX,creativelab5.com,Google
-DOMAIN-SUFFIX,debug.com,Google
-DOMAIN-SUFFIX,deepmind.com,Google
-DOMAIN-SUFFIX,firebaseio.com,Google
-DOMAIN-SUFFIX,getmdl.io,Google
-DOMAIN-SUFFIX,ggpht.com,Google
-DOMAIN-SUFFIX,gmail.com,Google
-DOMAIN-SUFFIX,gmodules.com,Google
-DOMAIN-SUFFIX,godoc.org,Google
-DOMAIN-SUFFIX,golang.org,Google
-DOMAIN-SUFFIX,gstatic.com,Google
-DOMAIN-SUFFIX,gv.com,Google
-DOMAIN-SUFFIX,gwtproject.org,Google
-DOMAIN-SUFFIX,itasoftware.com,Google
-DOMAIN-SUFFIX,madewithcode.com,Google
-DOMAIN-SUFFIX,material.io,Google
-DOMAIN-SUFFIX,polymer-project.org,Google
-DOMAIN-SUFFIX,admin.recaptcha.net,Google
-DOMAIN-SUFFIX,recaptcha.net,Google
-DOMAIN-SUFFIX,shattered.io,Google
-DOMAIN-SUFFIX,synergyse.com,Google
-DOMAIN-SUFFIX,tensorflow.org,Google
-DOMAIN-SUFFIX,tfhub.dev,Google
-DOMAIN-SUFFIX,tiltbrush.com,Google
-DOMAIN-SUFFIX,waveprotocol.org,Google
-DOMAIN-SUFFIX,waymo.com,Google
-DOMAIN-SUFFIX,webmproject.org,Google
-DOMAIN-SUFFIX,webrtc.org,Google
-DOMAIN-SUFFIX,whatbrowser.org,Google
-DOMAIN-SUFFIX,widevine.com,Google
-DOMAIN-SUFFIX,x.company,Google
-DOMAIN-SUFFIX,youtu.be,Google
-DOMAIN-SUFFIX,yt.be,Google
-DOMAIN-SUFFIX,ytimg.com,Google
-DOMAIN-SUFFIX,googleapis.com,Google
-#Google 翻译 @mxhx
-DOMAIN,translate.googleapis.com,Google
+# > Alphabet Websites 
+host-suffix,abc.xyz,Google
+host-suffix,capitalg.com,Google
 
-# > DNS缓存 保护
-DOMAIN-SUFFIX,appspot.com,Google
-DOMAIN-SUFFIX,blogger.com,Google
-DOMAIN-SUFFIX,getoutline.org,Google
-DOMAIN-SUFFIX,gvt0.com,Google
-DOMAIN-SUFFIX,gvt1.com,Google
-DOMAIN-SUFFIX,gvt3.com,Google
-DOMAIN-SUFFIX,xn--ngstr-lra8j.com,Google
+# > Android
+host-suffix,android.com,Google
+host-suffix,androidify.com,Google
 
-# > IP段 代理
-IP-CIDR,173.194.0.0/16,Google,no-resolve
-IP-CIDR,74.125.0.0/16,Google,no-resolve
+# > Appspot
+host-keyword,appspot,Google
 
-# > 国内部分修正
-DOMAIN-KEYWORD,mtalk.google.com,DIRECT
-DOMAIN,safebrowsing.googleapis.com,DIRECT
-DOMAIN-SUFFIX,dl.google.com,DIRECT
-DOMAIN-SUFFIX,google.cn,Domestic
+# > Chrome & Chromium
+host-suffix,chrome.com,Google
+host-suffix,chromeexperiments.com,Google
+host-suffix,chromestatus.com,Google
+host-suffix,chromium.org,Google
+host-suffix,whatbrowser.org,Google
+
+# > Google AI
+host-suffix,autodraw.com,Google
+host-suffix,deepmind.com,Google
+host-suffix,tensorflow.org,Google
+host-suffix,tfhub.dev,Google
+
+# > Google APIs
+host-suffix,googleapis.com,Google
+
+# > Google Blogger
+host-keyword,blogspot,Google
+host-suffix,blogger.com,Google
+host-suffix,googleblog.com,Google
+
+# > Google Cloud Platform
+host-suffix,dialogflow.com,Google
+host-suffix,gcp.gvt2.com,Google
+
+# > Google Developer
+host-keyword,googlesource,Google
+host-suffix,godoc.org,Google
+host-suffix,golang.org,Google
+host-suffix,googlemashups.com,Google
+host-suffix,gwtproject.org,Google
+host-suffix,itasoftware.com,Google
+host-suffix,pkg.go.dev,Google
+host-suffix,shattered.io,Google
+host-suffix,waveprotocol.org,Google
+host-suffix,webmproject.org,Google
+host-suffix,webrtc.org,Google
+host-suffix,withgoogle.com,Google
+
+# > Google Education
+host-suffix,madewithcode.com,Google
+
+# > Google Enterprise
+host-suffix,synergyse.com,Google
+
+# > Gmail
+host-keyword,gmail,Google
+
+# > Google Recaptcha
+host-keyword,recaptcha,Google
+
+# > Google Static Files
+host-keyword,gstatic,Google
+host-suffix,gmodules.com,Google
+host-suffix,googleusercontent.com,Google
+host-suffix,gvt0.com,Google
+host-suffix,gvt1.com,Google
+host-suffix,gvt3.com,Google
+
+# > Google VR
+host-suffix,tiltbrush.com,Google
+
+# > Material Design
+host-suffix,getmdl.io,Google
+host-suffix,material.io,Google
+
+# > Other
+host-suffix,certificate-transparency.org,Google
+host-suffix,certificate-transparency.dev,Google
+host-suffix,creativelab5.com,Google
+host-suffix,debug.com,Google
+host-suffix,gv.com,Google
+host-suffix,polymer-project.org,Google
+host-suffix,waymo.com,Google
+host-suffix,widevine.com,Google
+host-suffix,x.company,Google
+
+# > Google IP-CIDR
+ip-cidr,173.194.0.0/16,Google
+ip-cidr,74.125.0.0/16,Google
+
+# > Google Domestic CDNs
+host,fonts.googleapis.com,Google Domestic
+host,fonts.gstatic.com,Google Domestic
+host,ocsp.pki.goog,Google Domestic
+host,crl.pki.goog,Google Domestic
+host,redirector.c.bigcache.googleapis.com,Google Domestic
+host,redirector.gvt1.com,Google Domestic
+host,safebrowsing.googleapis.com,Google Domestic
+host,safebrowsing-cache.google.com,Google Domestic
+host,translate.googleapis.com,Google Domestic
+host-suffix,dl.google.com,Google Domestic
+host-suffix,dl.l.google.com,Google Domestic
+host-suffix,google.cn,Google Domestic
+host-suffix,ssl.gstatic.com,Google Domestic
+host-suffix,tools.google.com,Google Domestic
+host-suffix,tools.l.google.com,Google Domestic
+host-suffix,update.googleapis.com,Google Domestic
