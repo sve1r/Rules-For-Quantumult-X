@@ -15,12 +15,12 @@ host-suffix,nflxsearch.net,Netflix
 host-suffix,nflxso.net,Netflix
 host-suffix,nflxvideo.net,Netflix
 host-suffix,us-west-2.amazonaws.com,Netflix
-host-keyword,dualstack.apiproxy-device-prod-nlb-,Netflix
-host-keyword,dualstack.ichnaea-web-,Netflix
+host-wildcard,dualstack.apiproxy-device-prod-nlb-*,Netflix
+host-wildcard,dualstack.ichnaea-web-*,Netflix
 host-keyword,Netflix,Netflix
 host-keyword,nflx,Netflix
-host-keyword,dualstack.apiproxy-,Netflix
-host-wildcard,netflixdnstest*.com,GMedia
+host-wildcard,dualstack.apiproxy-*,Netflix
+host-wildcard,netflixdnstest*.com,Netflix
 ip-cidr,8.41.4.0/24,Netflix
 ip-cidr,23.78.0.0/16,Netflix
 ip-cidr,23.246.0.0/16,Netflix

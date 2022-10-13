@@ -986,17 +986,7 @@ host-keyword,dualstack.apiproxy-device-prod-nlb-,ForeignMedia
 host-keyword,dualstack.ichnaea-web-,ForeignMedia
 
 # >> DNS test
-host-suffix,netflixdnstest0.com,ForeignMedia
-host-suffix,netflixdnstest1.com,ForeignMedia
-host-suffix,netflixdnstest2.com,ForeignMedia
-host-suffix,netflixdnstest3.com,ForeignMedia
-host-suffix,netflixdnstest4.com,ForeignMedia
-host-suffix,netflixdnstest5.com,ForeignMedia
-host-suffix,netflixdnstest6.com,ForeignMedia
-host-suffix,netflixdnstest7.com,ForeignMedia
-host-suffix,netflixdnstest8.com,ForeignMedia
-host-suffix,netflixdnstest9.com,ForeignMedia
-host-suffix,netflixdnstest10.com,ForeignMedia
+host-wildcard,netflixdnstest*.com,ForeignMedia
 ip-cidr,8.41.4.0/24,ForeignMedia
 ip-cidr,23.78.0.0/16,ForeignMedia
 ip-cidr,23.246.0.0/18,ForeignMedia
