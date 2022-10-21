@@ -1,12 +1,12 @@
 # Kakao Talk
-host-suffix,kakao.com,PROXY
-host-suffix,kakaocorp.com,PROXY
-host-suffix,kakao.co.kr,PROXY
-host-suffix,kakao.com,PROXY
-host-suffix,kakaocdn.net,PROXY
-ip-cidr,1.201.0.0/24,PROXY,no-resolve
-ip-cidr,103.246.56.0/22,PROXY,no-resolve
-ip-cidr,103.27.148.0/22,PROXY,no-resolve
-ip-cidr,110.76.140.0/22,PROXY,no-resolve
-ip-cidr,113.61.104.0/22,PROXY,no-resolve
-ip-cidr,27.0.236.0/22,PROXY,no-resolve
+host-suffix,kakao.com,Kakao Talk
+host-suffix,kakaocorp.com,Kakao Talk
+host-suffix,kakao.co.kr,Kakao Talk
+host-suffix,kakao.com,Kakao Talk
+host-suffix,kakaocdn.net,Kakao Talk
+ip-cidr,1.201.0.0/24,Kakao Talk
+ip-cidr,103.246.56.0/22,Kakao Talk
+ip-cidr,103.27.148.0/22,Kakao Talk
+ip-cidr,110.76.140.0/22,Kakao Talk
+ip-cidr,113.61.104.0/22,Kakao Talk
+ip-cidr,27.0.236.0/22,Kakao Talk

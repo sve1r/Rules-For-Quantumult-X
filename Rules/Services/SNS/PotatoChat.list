@@ -1,5 +1,5 @@
 # > Potato Chat
-ip-cidr,13.251.24.157/24,Proxy
-ip-cidr,13.251.41.203/24,Proxy
-ip-cidr,17.252.156.147/24,Proxy
-ip-cidr,17.252.157.26/24,Proxy
+ip-cidr,13.251.24.157/24,Potato Chat
+ip-cidr,13.251.41.203/24,Potato Chat
+ip-cidr,17.252.156.147/24,Potato Chat
+ip-cidr,17.252.157.26/24,Potato Chat
