@@ -36,4 +36,4 @@ var url = $request.url;
 body = modifyMain(url, body);
 // }
 
-$done({ body });
+$done(body);
