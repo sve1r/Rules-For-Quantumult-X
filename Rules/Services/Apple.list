@@ -63,7 +63,7 @@ host-suffix,courier-push-apple.com.akadns.net,Apple
 host-suffix,push.apple.com,Apple
 
 # >> Other Service
-host,api.smoot.apple.cn,Outside
+host,api.smoot.apple.cn,OutSide
 host-suffix,safebrowsing.apple,OutSide
 
 # > Apple Music
