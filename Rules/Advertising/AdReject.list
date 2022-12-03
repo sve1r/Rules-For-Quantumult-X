@@ -5603,7 +5603,7 @@ host-suffix,panda.kdnet.net,REJECT
 host-suffix,pangu.cc,REJECT
 host-suffix,panoramio.com,REJECT
 host-suffix,pangolin.snssdk.com,REJECT
-host-wildcard,*.pangolin-sdk-toutiao.com,REJECT
+host-suffix,pangolin-sdk-toutiao.com,REJECT
 host-suffix,papajia55.com,REJECT
 host-suffix,parking.zunmi.cn,REJECT
 host-suffix,parser.houyi.baofeng.net,REJECT
@@ -7058,8 +7058,11 @@ host-suffix,ukeiae.com,REJECT
 host-suffix,ulic.baidu.com,REJECT
 host-suffix,ulink.cc,REJECT
 host-suffix,ulog.imap.baidu.com,REJECT
+host-wildcard,*log.umeng.co,REJECT
 host-wildcard,*log.umeng.com,REJECT
-host-suffix,ulogs.umeng.com,REJECT
+host-wildcard,*logs.umeng.com,REJECT
+host-wildcard,*log.umengcloud.com,REJECT
+host-wildcard,*logs.umengcloud.com,REJECT
 host-suffix,um.simpli.fi,REJECT
 host-suffix,um0592.com,REJECT
 host-suffix,um2.eqads.com,REJECT
