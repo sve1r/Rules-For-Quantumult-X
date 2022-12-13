@@ -1,0 +1,9 @@
+# Local History for Visual Studio Code
+.history/
+
+# JetBrains IDEs
+.idea/
+*.sln.iml
+
+#Temporary Files
+*temp*.txt
