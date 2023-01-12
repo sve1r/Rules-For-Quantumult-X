@@ -1,295 +1,285 @@
-/*
-应用名称：自用B站去广告脚本
-脚本作者：Cuttlefish
-微信账号：公众号墨鱼手记
-更新时间：2022-12-07
-脚本版本：(78) 
-通知频道：https://t.me/ddgksf2021
-问题反馈：ddgksf2013@163.com
-*/
+/***********************************************
+> 应用名称：墨鱼自用B站去广告脚本
+> 脚本作者：@ddgksf2013
+> 微信账号：墨鱼手记
+> 更新时间：2022-01-11
+> 通知频道：https://t.me/ddgksf2021
+> 贡献投稿：https://t.me/ddgksf2013_bot
+> 问题反馈：ddgksf2013@163.com
+> 特别提醒：如需转载请注明出处，谢谢合作！
+***********************************************/
 
-const scriptName = "BiliBili",
-  storyAidKey = "bilibili_story_aid",
-  blackKey = "bilibili_feed_black";
-let magicJS = MagicJS("BiliBili", "INFO"),
-  blacklist = [];
-magicJS.read(blackKey)
-  ? (blacklist = magicJS.read(blackKey).split(";"))
-  : (magicJS.write(blackKey, ""), (blacklist = "".split(";"))),
-  (() => {
-    let t = null;
-    if (magicJS.isResponse)
-      switch (!0) {
-        case /^https:\/\/app\.bilibili\.com\/x\/v2\/feed\/index\?/.test(
-          magicJS.request.url
-        ):
-          try {
-            let e = JSON.parse(magicJS.response.body),
-              i = [];
-            for (let a of e.data.items)
-              if (a.hasOwnProperty("banner_item")) {
-                let s = [];
-                for (let r of a.banner_item)
-                  if ("ad" !== r.type) {
-                    if ("static" === r.type) continue;
-                    else
-                      r.static_banner &&
-                        !0 != r.static_banner.is_ad_loc &&
-                        s.push(r);
-                  }
-                s.length >= 1 && ((a.banner_item = s), i.push(a));
-              } else
-                a.hasOwnProperty("ad_info") ||
-                  blacklist.includes(a.args.up_name) ||
-                  -1 !== a.card_goto.indexOf("ad") ||
-                  ("small_cover_v2" !== a.card_type &&
-                    "large_cover_v1" !== a.card_type &&
-                    "large_cover_single_v9" !== a.card_type) ||
-                  i.push(a);
-            (e.data.items = i), (t = JSON.stringify(e));
-          } catch (c) {
-            magicJS.logError(`推荐去广告出现异常：${c}`);
+const version = "V2.0.98";
+
+let body = $response.body;
+if (body) {
+  switch (!0) {
+    case /^https:\/\/app\.bilibili\.com\/x\/v2\/feed\/index\?/.test(
+      $request.url
+    ):
+      try {
+        let t = JSON.parse(body),
+          i = [];
+        for (let e of t.data.items)
+          if (!e.hasOwnProperty("banner_item")) {
+            if (
+              e.hasOwnProperty("ad_info") ||
+              -1 !== e.card_goto.indexOf("ad") ||
+              ("small_cover_v2" !== e.card_type &&
+                "large_cover_v1" !== e.card_type &&
+                "large_cover_single_v9" !== e.card_type)
+            )
+              continue;
+            else i.push(e);
           }
-          break;
-        case /^https?:\/\/app\.bilibili\.com\/x\/v2\/feed\/index\/story\?/.test(
-          magicJS.request.url
-        ):
-          try {
-            let l = JSON.parse(magicJS.response.body),
-              o = [];
-            for (let d of l.data.items)
-              d.hasOwnProperty("ad_info") ||
-                -1 !== d.card_goto.indexOf("ad") ||
-                o.push(d);
-            (l.data.items = o), (t = JSON.stringify(l));
-          } catch (n) {
-            magicJS.logError(`记录Story的aid出现异常：${n}`);
-          }
-          break;
-        case /^https?:\/\/app\.bilibili\.com\/x\/v\d\/account\/teenagers\/status\?/.test(
-          magicJS.request.url
-        ):
-          try {
-            let p = JSON.parse(magicJS.response.body);
-            (p.data.teenagers_status = 0), (t = JSON.stringify(p));
-          } catch (m) {
-            magicJS.logError(`teenagers出现异常：${m}`);
-          }
-          break;
-        case /^https?:\/\/app\.bilibili\.com\/x\/resource\/show\/tab/.test(
-          magicJS.request.url
-        ):
-          try {
-            let g = new Set([
-                39, 40, 41, 774, 857, 545, 151, 442, 99, 100, 101, 554, 556,
-              ]),
-              b = new Set([176, 107]),
-              y = new Set([177, 178, 179, 181, 102, 104, 106, 486, 488, 489]),
-              h = JSON.parse(magicJS.response.body);
-            if (h.data.tab) {
-              let u = h.data.tab.filter((t) => g.has(t.id));
-              h.data.tab = u;
-            }
-            let f = magicJS.read("bilibili_story_aid");
-            if ((f || (f = "246834163"), h.data.top)) {
-              let S = h.data.top.filter(
-                (t) => (
-                  (222 === t.id || 107 === t.id) &&
-                    ((t.uri = `bilibili://story/${f}`),
-                    (t.icon =
-                      "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/script/bilibili/bilibili_icon.png"),
-                    (t.tab_id = "Story_Top"),
-                    (t.name = "Story")),
-                  b.has(t.id)
-                )
-              );
-              h.data.top = S;
-            }
-            if (h.data.bottom) {
-              let J = h.data.bottom.filter((t) => y.has(t.id));
-              h.data.bottom = J;
-            }
-            t = JSON.stringify(h);
-          } catch (v) {
-            magicJS.logError(`标签页处理出现异常：${v}`);
-          }
-          break;
-        case /^https?:\/\/app\.bilibili\.com\/x\/v2\/account\/mine/.test(
-          magicJS.request.url
-        ):
-          try {
-            let _ = JSON.parse(magicJS.response.body),
-              $ = new Set([
-                396, 397, 398, 399, 402, 404, 407, 410, 425, 426, 427, 428, 430,
-                432, 433, 434, 494, 495, 496, 497, 500, 501,
-              ]);
-            _.data.sections_v2.forEach((t, e) => {
-              t.items.forEach((t) => {
-                622 === t.id &&
-                  ((t.title = "会员购"), (t.uri = "bilibili://mall/home"));
-              });
-              let i = t.items.filter((t) => $.has(t.id));
-              (_.data.sections_v2[e].button = {}),
-                delete _.data.sections_v2[e].be_up_title,
-                delete _.data.sections_v2[e].tip_icon,
-                delete _.data.sections_v2[e].tip_title;
-              for (let a = 0; a < _.data.sections_v2.length; a++)
-                ("创作中心" == _.data.sections_v2[a].title ||
-                  "創作中心" == _.data.sections_v2[a].title) &&
-                  (delete _.data.sections_v2[a].title,
-                  delete _.data.sections_v2[a].type);
-              delete _.data.vip_section_v2,
-                delete _.data.vip_section,
-                (_.data.sections_v2[e].items = i),
-                _.data.hasOwnProperty("live_tip") && (_.data.live_tip = {}),
-                _.data.hasOwnProperty("answer") && (_.data.answer = {}),
-                (_.data.vip_type = 2),
-                (_.data.vip.type = 2),
-                (_.data.vip.status = 1),
-                (_.data.vip.vip_pay_type = 1),
-                (_.data.vip.due_date = 4669824160);
-            }),
-              (t = JSON.stringify(_));
-          } catch (k) {
-            magicJS.logError(`我的页面处理出现异常：${k}`);
-          }
-          break;
-        case /^https?:\/\/api\.live\.bilibili\.com\/xlive\/app-room\/v1\/index\/getInfoByRoom/.test(
-          magicJS.request.url
-        ):
-          try {
-            let w = JSON.parse(magicJS.response.body);
-            (w.data.activity_banner_info = null), (t = JSON.stringify(w));
-          } catch (x) {
-            magicJS.logError(`直播去广告出现异常：${x}`);
-          }
-          break;
-        case /^https?:\/\/app\.bilibili\.com\/x\/resource\/top\/activity/.test(
-          magicJS.request.url
-        ):
-          try {
-            let E = JSON.parse(magicJS.response.body);
-            E.data && ((E.data.hash = "ddgksf2013"), (E.data.online.icon = "")),
-              (t = JSON.stringify(E));
-          } catch (q) {
-            magicJS.logError(`右上角去广告出现异常：${q}`);
-          }
-          break;
-        case /^https?:\/\/app\.bilibili\.com\/x\/v2\/search\/square/.test(
-          magicJS.request.url
-        ):
-          try {
-            let O = JSON.parse(magicJS.response.body);
-            (O.data = {
-              type: "history",
-              title: "搜索历史",
-              search_hotword_revision: 2,
-            }),
-              (t = JSON.stringify(O));
-          } catch (P) {
-            magicJS.logError(`热搜去广告出现异常：${P}`);
-          }
-          break;
-        case /https?:\/\/app\.bilibili\.com\/x\/v2\/account\/myinfo\?/.test(
-          magicJS.request.url
-        ):
-          try {
-            let W = JSON.parse(magicJS.response.body);
-            (W.data.vip.type = 2),
-              (W.data.vip.status = 1),
-              (W.data.vip.vip_pay_type = 1),
-              (W.data.vip.due_date = 4669824160),
-              (t = JSON.stringify(W));
-          } catch (B) {
-            magicJS.logError(`1080P出现异常：${B}`);
-          }
-          break;
-        case /pgc\/page\/bangumi/.test(magicJS.request.url):
-          try {
-            let K = JSON.parse(magicJS.response.body);
-            K.result.modules.forEach((t) => {
-              t.style.startsWith("banner") &&
-                (t.items = t.items.filter((t) => -1 != t.link.indexOf("play"))),
-                t.style.startsWith("function") &&
-                  (t.items = t.items.filter(
-                    (t) => -1 == t.blink.indexOf("www.bilibili.com")
-                  )),
-                t.style.startsWith("tip") && (t.items = []);
-            }),
-              (t = JSON.stringify(K));
-          } catch (I) {
-            magicJS.logError(`追番去广告出现异常：${I}`);
-          }
-          break;
-        case /pgc\/page\/cinema\/tab\?/.test(magicJS.request.url):
-          try {
-            let N = JSON.parse(magicJS.response.body);
-            N.result.modules.forEach((t) => {
-              t.style.startsWith("banner") &&
-                (t.items = t.items.filter((t) => -1 != t.link.indexOf("play"))),
-                t.style.startsWith("function") &&
-                  (t.items = t.items.filter(
-                    (t) => -1 == t.blink.indexOf("www.bilibili.com")
-                  )),
-                t.style.startsWith("tip") && (t.items = []);
-            }),
-              (t = JSON.stringify(N));
-          } catch (R) {
-            magicJS.logError(`观影页去广告出现异常：${R}`);
-          }
-          break;
-        case /^https?:\/\/api\.vc\.bilibili\.com\/dynamic_svr\/v1\/dynamic_svr\/dynamic_(history|new)\?/.test(
-          magicJS.request.url
-        ):
-          try {
-            let A = JSON.parse(magicJS.response.body),
-              F = [];
-            A.data.cards.forEach((t) => {
-              t.hasOwnProperty("display") &&
-                0 >= t.card.indexOf("ad_ctx") &&
-                ((t.desc.dynamic_id = t.desc.dynamic_id_str),
-                (t.desc.pre_dy_id = t.desc.pre_dy_id_str),
-                (t.desc.orig_dy_id = t.desc.orig_dy_id_str),
-                (t.desc.rid = t.desc.rid_str),
-                F.push(t));
-            }),
-              (A.data.cards = F),
-              (t = JSON.stringify(A));
-          } catch (T) {
-            magicJS.logError(`动态去广告出现异常：${T}`);
-          }
-          break;
-        case /^https?:\/\/app\.bilibili\.com\/x\/resource\/show\/skin\?/.test(
-          magicJS.request.url
-        ):
-          try {
-            let j = JSON.parse(magicJS.response.body);
-            j &&
-              j.hasOwnProperty("data") &&
-              j.data.hasOwnProperty("common_equip") &&
-              j.data.common_equip.hasOwnProperty("package_url"),
-              (t = JSON.stringify(j));
-          } catch (z) {
-            magicJS.logError(`去除强制设置的皮肤出现异常：${z}`);
-          }
-          break;
-        case /^https:\/\/app\.bilibili\.com\/x\/v2\/splash\/list/.test(
-          magicJS.request.url
-        ):
-          try {
-            let C = JSON.parse(magicJS.response.body);
-            if (C.data && C.data.list)
-              for (let D of C.data.list)
-                (D.duration = 0),
-                  (D.begin_time = 2240150400),
-                  (D.end_time = 2240150400);
-            t = JSON.stringify(C);
-          } catch (G) {
-            magicJS.logError(`开屏广告（预加载）出现异常：${G}`);
-          }
+        (t.data.items = i), (body = JSON.stringify(t));
+      } catch (a) {
+        console.log("bilibili index:" + a);
       }
-    else magicJS.logWarning("触发意外的请求处理，请确认脚本或复写配置正常。");
-    t ? magicJS.done({ body: t }) : magicJS.done();
-  })();
-// prettier-ignore
-function MagicJS(scriptName="MagicJS",logLevel="INFO"){return new class{constructor(){if(this.version="2.2.3.3",this.scriptName=scriptName,this.logLevels={DEBUG:5,INFO:4,NOTIFY:3,WARNING:2,ERROR:1,CRITICAL:0,NONE:-1},this.isLoon="undefined"!=typeof $loon,this.isQuanX="undefined"!=typeof $task,this.isJSBox="undefined"!=typeof $drive,this.isNode="undefined"!=typeof module&&!this.isJSBox,this.isSurge="undefined"!=typeof $httpClient&&!this.isLoon,this.node={request:void 0,fs:void 0,data:{}},this.iOSUserAgent="Mozilla/5.0 (iPhone; CPU iPhone OS 13_3_1 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/13.0.5 Mobile/15E148 Safari/604.1",this.pcUserAgent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/84.0.4147.125 Safari/537.36 Edg/84.0.522.59",this.logLevel=logLevel,this._barkUrl="",this.isNode){this.node.fs=require("fs"),this.node.request=require("request");try{this.node.fs.accessSync("./magic.json",this.node.fs.constants.R_OK|this.node.fs.constants.W_OK)}catch(err){this.node.fs.writeFileSync("./magic.json","{}",{encoding:"utf8"})}this.node.data=require("./magic.json")}else this.isJSBox&&($file.exists("drive://MagicJS")||$file.mkdir("drive://MagicJS"),$file.exists("drive://MagicJS/magic.json")||$file.write({data:$data({string:"{}"}),path:"drive://MagicJS/magic.json"}))}set barkUrl(url){this._barkUrl=url.replace(/\/+$/g,"")}set logLevel(level){this._logLevel="string"==typeof level?level.toUpperCase():"DEBUG"}get logLevel(){return this._logLevel}get isRequest(){return"undefined"!=typeof $request&&"undefined"==typeof $response}get isResponse(){return"undefined"!=typeof $response}get request(){return"undefined"!=typeof $request?$request:void 0}get response(){return"undefined"!=typeof $response?($response.hasOwnProperty("status")&&($response.statusCode=$response.status),$response.hasOwnProperty("statusCode")&&($response.status=$response.statusCode),$response):void 0}get platform(){return this.isSurge?"Surge":this.isQuanX?"Quantumult X":this.isLoon?"Loon":this.isJSBox?"JSBox":this.isNode?"Node.js":"Unknown"}read(key,session=""){let val="";this.isSurge||this.isLoon?val=$persistentStore.read(key):this.isQuanX?val=$prefs.valueForKey(key):this.isNode?val=this.node.data:this.isJSBox&&(val=$file.read("drive://MagicJS/magic.json").string);try{this.isNode&&(val=val[key]),this.isJSBox&&(val=JSON.parse(val)[key]),session&&("string"==typeof val&&(val=JSON.parse(val)),val=val&&"object"==typeof val?val[session]:null)}catch(err){this.logError(err),val=session?{}:null,this.del(key)}void 0===val&&(val=null);try{val&&"string"==typeof val&&(val=JSON.parse(val))}catch(err){}return this.logDebug(`READ DATA [${key}]${session?`[${session}]`:""}(${typeof val})\n${JSON.stringify(val)}`),val}write(key,val,session=""){let data=session?{}:"";if(session&&(this.isSurge||this.isLoon)?data=$persistentStore.read(key):session&&this.isQuanX?data=$prefs.valueForKey(key):this.isNode?data=this.node.data:this.isJSBox&&(data=JSON.parse($file.read("drive://MagicJS/magic.json").string)),session){try{"string"==typeof data&&(data=JSON.parse(data)),data="object"==typeof data&&data?data:{}}catch(err){this.logError(err),this.del(key),data={}}this.isJSBox||this.isNode?(data[key]&&"object"==typeof data[key]||(data[key]={}),data[key].hasOwnProperty(session)||(data[key][session]=null),void 0===val?delete data[key][session]:data[key][session]=val):void 0===val?delete data[session]:data[session]=val}else this.isNode||this.isJSBox?void 0===val?delete data[key]:data[key]=val:data=void 0===val?null:val;"object"==typeof data&&(data=JSON.stringify(data)),this.isSurge||this.isLoon?$persistentStore.write(data,key):this.isQuanX?$prefs.setValueForKey(data,key):this.isNode?this.node.fs.writeFileSync("./magic.json",data):this.isJSBox&&$file.write({data:$data({string:data}),path:"drive://MagicJS/magic.json"}),this.logDebug(`WRITE DATA [${key}]${session?`[${session}]`:""}(${typeof val})\n${JSON.stringify(val)}`)}del(key,session=""){this.logDebug(`DELETE KEY [${key}]${session?`[${session}]`:""}`),this.write(key,null,session)}notify(title=this.scriptName,subTitle="",body="",opts=""){let convertOptions;if(opts=(_opts=>{let newOpts={};if("string"==typeof _opts)this.isLoon?newOpts={openUrl:_opts}:this.isQuanX?newOpts={"open-url":_opts}:this.isSurge&&(newOpts={url:_opts});else if("object"==typeof _opts)if(this.isLoon)newOpts.openUrl=_opts["open-url"]?_opts["open-url"]:"",newOpts.mediaUrl=_opts["media-url"]?_opts["media-url"]:"";else if(this.isQuanX)newOpts=_opts["open-url"]||_opts["media-url"]?_opts:{};else if(this.isSurge){let openUrl=_opts["open-url"]||_opts.openUrl;newOpts=openUrl?{url:openUrl}:{}}return newOpts})(opts),1==arguments.length&&(title=this.scriptName,subTitle="",body=arguments[0]),this.logNotify(`title:${title}\nsubTitle:${subTitle}\nbody:${body}\noptions:${"object"==typeof opts?JSON.stringify(opts):opts}`),this.isSurge)$notification.post(title,subTitle,body,opts);else if(this.isLoon)opts?$notification.post(title,subTitle,body,opts):$notification.post(title,subTitle,body);else if(this.isQuanX)$notify(title,subTitle,body,opts);else if(this.isNode){if(this._barkUrl){let content=encodeURI(`${title}/${subTitle}\n${body}`);this.get(`${this._barkUrl}/${content}`,()=>{})}}else if(this.isJSBox){let push={title:title,body:subTitle?`${subTitle}\n${body}`:body};$push.schedule(push)}}notifyDebug(title=this.scriptName,subTitle="",body="",opts=""){"DEBUG"===this.logLevel&&(1==arguments.length&&(title=this.scriptName,subTitle="",body=arguments[0]),this.notify(title,subTitle,body,opts))}log(msg,level="INFO"){this.logLevels[this._logLevel]<this.logLevels[level.toUpperCase()]||console.log(`[${level}] [${this.scriptName}]\n${msg}\n`)}logDebug(msg){this.log(msg,"DEBUG")}logInfo(msg){this.log(msg,"INFO")}logNotify(msg){this.log(msg,"NOTIFY")}logWarning(msg){this.log(msg,"WARNING")}logError(msg){this.log(msg,"ERROR")}logRetry(msg){this.log(msg,"RETRY")}adapterHttpOptions(options,method){let _options="object"==typeof options?Object.assign({},options):{url:options,headers:{}};_options.hasOwnProperty("header")&&!_options.hasOwnProperty("headers")&&(_options.headers=_options.header,delete _options.header);const headersMap={accept:"Accept","accept-ch":"Accept-CH","accept-charset":"Accept-Charset","accept-features":"Accept-Features","accept-encoding":"Accept-Encoding","accept-language":"Accept-Language","accept-ranges":"Accept-Ranges","access-control-allow-credentials":"Access-Control-Allow-Credentials","access-control-allow-origin":"Access-Control-Allow-Origin","access-control-allow-methods":"Access-Control-Allow-Methods","access-control-allow-headers":"Access-Control-Allow-Headers","access-control-max-age":"Access-Control-Max-Age","access-control-expose-headers":"Access-Control-Expose-Headers","access-control-request-method":"Access-Control-Request-Method","access-control-request-headers":"Access-Control-Request-Headers",age:"Age",allow:"Allow",alternates:"Alternates",authorization:"Authorization","cache-control":"Cache-Control",connection:"Connection","content-encoding":"Content-Encoding","content-language":"Content-Language","content-length":"Content-Length","content-location":"Content-Location","content-md5":"Content-MD5","content-range":"Content-Range","content-security-policy":"Content-Security-Policy","content-type":"Content-Type",cookie:"Cookie",dnt:"DNT",date:"Date",etag:"ETag",expect:"Expect",expires:"Expires",from:"From",host:"Host","if-match":"If-Match","if-modified-since":"If-Modified-Since","if-none-match":"If-None-Match","if-range":"If-Range","if-unmodified-since":"If-Unmodified-Since","last-event-id":"Last-Event-ID","last-modified":"Last-Modified",link:"Link",location:"Location","max-forwards":"Max-Forwards",negotiate:"Negotiate",origin:"Origin",pragma:"Pragma","proxy-authenticate":"Proxy-Authenticate","proxy-authorization":"Proxy-Authorization",range:"Range",referer:"Referer","retry-after":"Retry-After","sec-websocket-extensions":"Sec-Websocket-Extensions","sec-websocket-key":"Sec-Websocket-Key","sec-websocket-origin":"Sec-Websocket-Origin","sec-websocket-protocol":"Sec-Websocket-Protocol","sec-websocket-version":"Sec-Websocket-Version",server:"Server","set-cookie":"Set-Cookie","set-cookie2":"Set-Cookie2","strict-transport-security":"Strict-Transport-Security",tcn:"TCN",te:"TE",trailer:"Trailer","transfer-encoding":"Transfer-Encoding",upgrade:"Upgrade","user-agent":"User-Agent","variant-vary":"Variant-Vary",vary:"Vary",via:"Via",warning:"Warning","www-authenticate":"WWW-Authenticate","x-content-duration":"X-Content-Duration","x-content-security-policy":"X-Content-Security-Policy","x-dnsprefetch-control":"X-DNSPrefetch-Control","x-frame-options":"X-Frame-Options","x-requested-with":"X-Requested-With","x-surge-skip-scripting":"X-Surge-Skip-Scripting"};if("object"==typeof _options.headers)for(let key in _options.headers)headersMap[key]&&(_options.headers[headersMap[key]]=_options.headers[key],delete _options.headers[key]);_options.headers&&"object"==typeof _options.headers&&_options.headers["User-Agent"]||(_options.headers&&"object"==typeof _options.headers||(_options.headers={}),this.isNode?_options.headers["User-Agent"]=this.pcUserAgent:_options.headers["User-Agent"]=this.iOSUserAgent);let skipScripting=!1;if(("object"==typeof _options.opts&&(!0===_options.opts.hints||!0===_options.opts["Skip-Scripting"])||"object"==typeof _options.headers&&!0===_options.headers["X-Surge-Skip-Scripting"])&&(skipScripting=!0),skipScripting||(this.isSurge?_options.headers["X-Surge-Skip-Scripting"]=!1:this.isLoon?_options.headers["X-Requested-With"]="XMLHttpRequest":this.isQuanX&&("object"!=typeof _options.opts&&(_options.opts={}),_options.opts.hints=!1)),this.isSurge&&!skipScripting||delete _options.headers["X-Surge-Skip-Scripting"],!this.isQuanX&&_options.hasOwnProperty("opts")&&delete _options.opts,this.isQuanX&&_options.hasOwnProperty("opts")&&delete _options.opts["Skip-Scripting"],"GET"===method&&!this.isNode&&_options.body){let qs=Object.keys(_options.body).map(key=>void 0===_options.body?"":`${encodeURIComponent(key)}=${encodeURIComponent(_options.body[key])}`).join("&");_options.url.indexOf("?")<0&&(_options.url+="?"),_options.url.lastIndexOf("&")+1!=_options.url.length&&_options.url.lastIndexOf("?")+1!=_options.url.length&&(_options.url+="&"),_options.url+=qs,delete _options.body}return this.isQuanX?(_options.hasOwnProperty("body")&&"string"!=typeof _options.body&&(_options.body=JSON.stringify(_options.body)),_options.method=method):this.isNode?(delete _options.headers["Accept-Encoding"],"object"==typeof _options.body&&("GET"===method?(_options.qs=_options.body,delete _options.body):"POST"===method&&(_options.json=!0,_options.body=_options.body))):this.isJSBox&&(_options.header=_options.headers,delete _options.headers),_options}adapterHttpResponse(resp){let _resp={body:resp.body,headers:resp.headers,json:()=>JSON.parse(_resp.body)};return resp.hasOwnProperty("statusCode")&&resp.statusCode&&(_resp.status=resp.statusCode),_resp}get(options,callback){let _options=this.adapterHttpOptions(options,"GET");this.logDebug(`HTTP GET: ${JSON.stringify(_options)}`),this.isSurge||this.isLoon?$httpClient.get(_options,callback):this.isQuanX?$task.fetch(_options).then(resp=>{resp.status=resp.statusCode,callback(null,resp,resp.body)},reason=>callback(reason.error,null,null)):this.isNode?this.node.request.get(_options,(err,resp,data)=>{resp=this.adapterHttpResponse(resp),callback(err,resp,data)}):this.isJSBox&&(_options.handler=resp=>{let err=resp.error?JSON.stringify(resp.error):void 0,data="object"==typeof resp.data?JSON.stringify(resp.data):resp.data;callback(err,resp.response,data)},$http.get(_options))}getPromise(options){return new Promise((resolve,reject)=>{magicJS.get(options,(err,resp)=>{err?reject(err):resolve(resp)})})}post(options,callback){let _options=this.adapterHttpOptions(options,"POST");if(this.logDebug(`HTTP POST: ${JSON.stringify(_options)}`),this.isSurge||this.isLoon)$httpClient.post(_options,callback);else if(this.isQuanX)$task.fetch(_options).then(resp=>{resp.status=resp.statusCode,callback(null,resp,resp.body)},reason=>{callback(reason.error,null,null)});else if(this.isNode){let resp=this.node.request.post(_options,callback);resp.status=resp.statusCode,delete resp.statusCode}else this.isJSBox&&(_options.handler=resp=>{let err=resp.error?JSON.stringify(resp.error):void 0,data="object"==typeof resp.data?JSON.stringify(resp.data):resp.data;callback(err,resp.response,data)},$http.post(_options))}get http(){return{get:this.getPromise,post:this.post}}done(value={}){"undefined"!=typeof $done&&$done(value)}isToday(day){if(null==day)return!1;{let today=new Date;return"string"==typeof day&&(day=new Date(day)),today.getFullYear()==day.getFullYear()&&today.getMonth()==day.getMonth()&&today.getDay()==day.getDay()}}isNumber(val){return"NaN"!==parseFloat(val).toString()}attempt(promise,defaultValue=null){return promise.then(args=>[null,args]).catch(ex=>(this.logError(ex),[ex,defaultValue]))}retry(fn,retries=5,interval=0,callback=null){return(...args)=>new Promise((resolve,reject)=>{function _retry(...args){Promise.resolve().then(()=>fn.apply(this,args)).then(result=>{"function"==typeof callback?Promise.resolve().then(()=>callback(result)).then(()=>{resolve(result)}).catch(ex=>{retries>=1?interval>0?setTimeout(()=>_retry.apply(this,args),interval):_retry.apply(this,args):reject(ex),retries--}):resolve(result)}).catch(ex=>{this.logRetry(ex),retries>=1&&interval>0?setTimeout(()=>_retry.apply(this,args),interval):retries>=1?_retry.apply(this,args):reject(ex),retries--})}_retry.apply(this,args)})}formatTime(time,fmt="yyyy-MM-dd hh:mm:ss"){var o={"M+":time.getMonth()+1,"d+":time.getDate(),"h+":time.getHours(),"m+":time.getMinutes(),"s+":time.getSeconds(),"q+":Math.floor((time.getMonth()+3)/3),S:time.getMilliseconds()};/(y+)/.test(fmt)&&(fmt=fmt.replace(RegExp.$1,(time.getFullYear()+"").substr(4-RegExp.$1.length)));for(let k in o)new RegExp("("+k+")").test(fmt)&&(fmt=fmt.replace(RegExp.$1,1==RegExp.$1.length?o[k]:("00"+o[k]).substr((""+o[k]).length)));return fmt}now(){return this.formatTime(new Date,"yyyy-MM-dd hh:mm:ss")}today(){return this.formatTime(new Date,"yyyy-MM-dd")}sleep(time){return new Promise(resolve=>setTimeout(resolve,time))}}(scriptName)}
+      break;
+    case /^https?:\/\/app\.bilibili\.com\/x\/v2\/feed\/index\/story\?/.test(
+      $request.url
+    ):
+      try {
+        let s = JSON.parse(body),
+          l = [];
+        for (let o of s.data.items)
+          o.hasOwnProperty("ad_info") ||
+            -1 !== o.card_goto.indexOf("ad") ||
+            l.push(o);
+        (s.data.items = l), (body = JSON.stringify(s));
+      } catch (r) {
+        console.log("bilibili Story:" + r);
+      }
+      break;
+    case /^https?:\/\/app\.bilibili\.com\/x\/v\d\/account\/teenagers\/status\?/.test(
+      $request.url
+    ):
+      try {
+        let d = JSON.parse(body);
+        (d.data.teenagers_status = 0), (body = JSON.stringify(d));
+      } catch (b) {
+        console.log("bilibili teenagers:" + b);
+      }
+      break;
+    case /^https?:\/\/app\.bilibili\.com\/x\/resource\/show\/tab/.test(
+      $request.url
+    ):
+      try {
+        let p = new Set([177, 178, 179, 181, 102, 104, 106, 486, 488, 489]),
+          c = JSON.parse(body);
+        if (
+          (c.data?.tab &&
+            (c.data.tab = [
+              {
+                id: 39,
+                name: "直播",
+                uri: "bilibili://live/home",
+                tab_id: "直播tab",
+                pos: 1,
+              },
+              {
+                id: 40,
+                name: "推荐",
+                uri: "bilibili://pegasus/promo",
+                tab_id: "推荐tab",
+                pos: 2,
+                default_selected: 1,
+              },
+              {
+                id: 41,
+                name: "热门",
+                uri: "bilibili://pegasus/hottopic",
+                tab_id: "hottopic",
+                pos: 3,
+              },
+              {
+                id: 545,
+                name: "番剧",
+                uri: "bilibili://pgc/home",
+                tab_id: "bangumi",
+                pos: 4,
+              },
+              {
+                id: 151,
+                name: "影视",
+                uri: "bilibili://pgc/cinema-tab",
+                tab_id: "film",
+                pos: 5,
+              },
+            ]),
+          c.data.top &&
+            (c.data.top = [
+              {
+                id: 481,
+                icon: "http://i0.hdslb.com/bfs/archive/d43047538e72c9ed8fd8e4e34415fbe3a4f632cb.png",
+                name: "消息",
+                uri: "bilibili://link/im_home",
+                tab_id: "消息Top",
+                pos: 1,
+              },
+            ]),
+          c.data.bottom)
+        ) {
+          let n = c.data.bottom.filter((t) => p.has(t.id));
+          c.data.bottom = n;
+        }
+        body = JSON.stringify(c);
+      } catch (y) {
+        console.log("bilibili tab processing:" + y);
+      }
+      break;
+    case /^https?:\/\/app\.bilibili\.com\/x\/v2\/account\/mine/.test(
+      $request.url
+    ):
+      try {
+        let m = JSON.parse(body),
+          h = new Set([
+            396, 397, 398, 399, 407, 410, 402, 404, 425, 426, 427, 428, 430,
+            432, 433, 434, 494, 495, 496, 497, 500, 501,
+          ]);
+        m.data.sections_v2.forEach((t, i) => {
+          let e = t.items.filter((t) => h.has(t.id));
+          (m.data.sections_v2[i].items = e),
+            (m.data.sections_v2[i].button = {}),
+            delete m.data.sections_v2[i].be_up_title,
+            delete m.data.sections_v2[i].tip_icon,
+            delete m.data.sections_v2[i].tip_title,
+            "创作中心" == m.data.sections_v2[i].title &&
+              (delete m.data.sections_v2[i].title,
+              delete m.data.sections_v2[i].type);
+        }),
+          delete m.data.vip_section_v2,
+          delete m.data.vip_section,
+          m.data.hasOwnProperty("live_tip") && (m.data.live_tip = {}),
+          m.data.hasOwnProperty("answer") && (m.data.answer = {}),
+          (m.data.vip_type = 2),
+          (m.data.vip.type = 2),
+          (m.data.vip.status = 1),
+          (m.data.vip.vip_pay_type = 1),
+          (m.data.vip.due_date = 4669824160),
+          (body = JSON.stringify(m));
+      } catch (u) {
+        console.log("bilibili mypage:" + u);
+      }
+      break;
+    case /^https?:\/\/api\.live\.bilibili\.com\/xlive\/app-room\/v1\/index\/getInfoByRoom/.test(
+      $request.url
+    ):
+      try {
+        let f = JSON.parse(body);
+        (f.data.activity_banner_info = null), (body = JSON.stringify(f));
+      } catch (g) {
+        console.log("bilibili live broadcast:" + g);
+      }
+      break;
+    case /^https?:\/\/app\.bilibili\.com\/x\/resource\/top\/activity/.test(
+      $request.url
+    ):
+      try {
+        let v = JSON.parse(body);
+        v.data && ((v.data.hash = "ddgksf2013"), (v.data.online.icon = "")),
+          (body = JSON.stringify(v));
+      } catch (_) {
+        console.log("bilibili right corner:" + _);
+      }
+      break;
+    case /^https?:\/\/app\.bilibili\.com\/x\/v2\/search\/square/.test(
+      $request.url
+    ):
+      try {
+        let $ = JSON.parse(body);
+        ($.data = {
+          type: "history",
+          title: "搜索历史",
+          search_hotword_revision: 2,
+        }),
+          (body = JSON.stringify($));
+      } catch (k) {
+        console.log("bilibili hot search:" + k);
+      }
+      break;
+    case /https?:\/\/app\.bilibili\.com\/x\/v2\/account\/myinfo\?/.test(
+      $request.url
+    ):
+      try {
+        let w = JSON.parse(body);
+        (w.data.vip.type = 2),
+          (w.data.vip.status = 1),
+          (w.data.vip.vip_pay_type = 1),
+          (w.data.vip.due_date = 4669824160),
+          (body = JSON.stringify(w));
+      } catch (x) {
+        console.log("bilibili 1080p:" + x);
+      }
+      break;
+    case /pgc\/page\/bangumi/.test($request.url):
+      try {
+        let O = JSON.parse(body);
+        O.result.modules.forEach((t) => {
+          t.style.startsWith("banner") &&
+            (t.items = t.items.filter((t) => -1 != t.link.indexOf("play"))),
+            t.style.startsWith("function") &&
+              ((t.items = t.items.filter(
+                (t) => -1 == t.blink.indexOf("www.bilibili.com")
+              )),
+              (1283 == t.module_id || 241 == t.module_id) && (t.items = [])),
+            t.style.startsWith("tip") && (t.items = []);
+        }),
+          (body = JSON.stringify(O));
+      } catch (P) {
+        console.log("bilibili fanju:" + P);
+      }
+      break;
+    case /pgc\/page\/cinema\/tab\?/.test($request.url):
+      try {
+        let W = JSON.parse(body);
+        W.result.modules.forEach((t) => {
+          t.style.startsWith("banner") &&
+            (t.items = t.items.filter((t) => -1 != t.link.indexOf("play"))),
+            t.style.startsWith("function") &&
+              ((t.items = t.items.filter(
+                (t) => -1 == t.blink.indexOf("www.bilibili.com")
+              )),
+              (1441 == t.module_id || 1284 == t.module_id) && (t.items = [])),
+            t.style.startsWith("tip") && (t.items = []);
+        }),
+          (body = JSON.stringify(W));
+      } catch (q) {
+        console.log("bilibili video:" + q);
+      }
+      break;
+    case /^https?:\/\/app\.bilibili\.com\/x\/resource\/show\/skin\?/.test(
+      $request.url
+    ):
+      try {
+        let E = JSON.parse(body);
+        E &&
+          E.hasOwnProperty("data") &&
+          E.data.hasOwnProperty("common_equip") &&
+          E.data.common_equip.hasOwnProperty("package_url"),
+          (body = JSON.stringify(E));
+      } catch (j) {
+        console.log("bilibili skin:" + j);
+      }
+      break;
+    case /^https:\/\/app\.bilibili\.com\/x\/v2\/splash\/list/.test(
+      $request.url
+    ):
+      try {
+        let B = JSON.parse(body);
+        if (B.data && B.data.list)
+          for (let I of B.data.list)
+            (I.duration = 0),
+              (I.begin_time = 2240150400),
+              (I.end_time = 2240150400);
+        body = JSON.stringify(B);
+      } catch (R) {
+        console.log("bilibili openad:" + R);
+      }
+      break;
+    default:
+      $done({});
+  }
+  $done({ body });
+} else $done({});
