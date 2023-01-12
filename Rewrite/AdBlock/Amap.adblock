@@ -1,0 +1,44 @@
+// ==UserScript==
+// @ScriptName        高德地图☆净化
+// @Author            @ddgksf2013
+// @ForHelp           若有屏蔽广告的需求，可公众号后台回复APP名称
+// @WechatID          公众号墨鱼手记
+// @TgChannel         https://t.me/ddgksf2021
+// @Contribute        https://t.me/ddgksf2013_bot
+// @Feedback          📮 ddgksf2013@163.com 📮
+// @UpdateTime        2023-01-09
+// @Suitable          自行观看“# > ”注释内容
+// @Attention         使用前请卸载高德地图，挂载脚本然后使用
+// @Attention         如需引用请注明出处，谢谢合作！
+// @Version           V1.0.14
+// @ScriptURL         https://github.com/ddgksf2013/Rewrite/raw/master/AdBlock/Amap.conf
+// ==/UserScript==
+
+
+hostname=*amap.com
+
+
+# > 高德地图_请自行添加本地分流@ddgksf2013
+;host, amdc.m.taobao.com, reject
+# > 高德地图_Tip请求@ddgksf2013
+^https?:\/\/.*\.amap\.com\/ws\/boss\/order_web\/\w{8}_information url reject-200
+# > 高德地图_首页底部处理@ddgksf2013
+^https?:\/\/.*\.amap\.com\/ws\/faas\/amap-navigation\/main-page url script-response-body https://cdn.jsdelivr.net/gh/sve1r/Rules-For-Quantumult-X@develop/Scripts/AdBlock/Other/Amap.js
+# > 高德地图_通用广告请求@ddgksf2013
+^https?:\/\/.*\.amap\.com\/ws\/asa\/ads_attribution url reject
+# > 高德地图_开屏广告@ddgksf2013
+^https?:\/\/.*\.amap\.com\/ws\/valueadded\/alimama\/splash_screen url script-response-body https://cdn.jsdelivr.net/gh/sve1r/Rules-For-Quantumult-X@develop/Scripts/AdBlock/Other/Amap.js
+# > 高德地图_首页顶部推广@ddgksf2013
+^https?:\/\/.*\.amap\.com\/ws\/msgbox\/pull url script-response-body https://cdn.jsdelivr.net/gh/sve1r/Rules-For-Quantumult-X@develop/Scripts/AdBlock/Other/Amap.js
+# > 高德地图_我的页面@ddgksf2013
+^https?:\/\/.*\.amap\.com\/ws\/shield\/dsp\/profile\/index\/nodefaas url script-response-body https://cdn.jsdelivr.net/gh/sve1r/Rules-For-Quantumult-X@develop/Scripts/AdBlock/Other/Amap.js
+# > 高德地图_搜索框热词@ddgksf2013
+^https?:\/\/.*\.amap\.com\/ws\/shield\/search\/new_hotword url script-response-body https://cdn.jsdelivr.net/gh/sve1r/Rules-For-Quantumult-X@develop/Scripts/AdBlock/Other/Amap.js
+# > 高德地图_搜索框scene@ddgksf2013
+^https?:\/\/.*\.amap\.com\/ws\/shield\/scene\/recommend url reject-dict
+# > 高德地图_首页左上角gif@ddgksf2013
+^https?:\/\/.*\.amap\.com\/uploadimg\/\w+\.gif url reject-img
+# > 高德地图_首页右中'2022出行报告'[自行添加]@ddgksf2013
+;^https?:\/\/img\.alicdn\.com\/imgextra\/i1\/O1CN01z5u64r1EdKvtRa19q_!!6000000000374-2-tps-120-120\.png
+# > 高德地图_左下天气@ddgksf2013
+^https?:\/\/.*\.amap\.com\/ws\/valueadded\/weather url reject-dict
