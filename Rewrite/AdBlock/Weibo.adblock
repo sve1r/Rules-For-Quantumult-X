@@ -1,0 +1,59 @@
+// ==UserScript==
+// @UpdateTime        2023-02-15
+// @Attention         微博、微博国际版净化，现已二合一，使用中若有问题请发邮件！
+// @Version           V2.0.62
+// @ScriptURL         https://github.com/ddgksf2013/Rewrite/raw/master/AdBlock/Weibo.conf
+// ==/UserScript==
+
+
+hostname = *api.weibo*, *uve.weibo.com, new.vip.weibo.cn
+
+# > 微博_请手动添加以下分流至本地@ddgksf2013
+; host, sdkapp.uve.weibo.com, direct
+
+# > 微博_视频信息处理@ddgksf2013
+^https?:\/\/api\.weibo\.cn\/\d\/video\/tiny_stream_mid_detail url script-response-body https://cdn.jsdelivr.net/gh/sve1r/Rules-For-Quantumult-X@develop/Scripts/AdBlock/Weibo/weibo_json.js
+# > 微博_去除底部超话栏表层浮icon及tips@ddgksf2013
+^https?:\/\/api\.weibo\.cn\/\d\/!\/huati\/discovery_home_bottom_getdotinfo url reject-dict
+# > 微博_屏蔽首页左上角每日的弹窗tips@ddgksf2013
+^https?:\/\/m?api\.weibo\.c(n|om)\/\d/push/daily url reject-dict
+# > 微博_屏蔽发现页面搜索框热词@ddgksf2013
+^https?:\/\/m?api\.weibo\.c(n|om)\/\d\/\w{5}\/cardlist url script-response-body https://cdn.jsdelivr.net/gh/sve1r/Rules-For-Quantumult-X@develop/Scripts/AdBlock/Weibo/weibo_json.js
+# > 微博_应用内弹窗广告@ddgksf2013
+^https?:\/\/(preload-click|preload-impression)\.uve\.weibo\.com\/(interface\/wbpullad\/wbpullad_click\.php|wbapplua\/get_wbpullad_log\.lua) url reject
+# > 微博_屏蔽sdkconfig请求@ddgksf2013
+^https?:\/\/sdkapp\.uve\.weibo\.com\/interface\/sdk\/sdkconfig\.php url reject
+# > 微博_Spotlight@ddgksf2013
+^https?:\/\/m?api\.weibo\.c(n|om)\/\d\/hot\/hours_spotlight url reject-dict
+# > 微博_自定义tab皮肤@zmqcherish
+^https://api.weibo.cn/2/!/client/light_skin url script-response-body https://cdn.jsdelivr.net/gh/sve1r/Rules-For-Quantumult-X@develop/Scripts/AdBlock/Weibo/weibo_json.js
+# > 微博_非会员设置tab皮肤@zmqcherish
+^https://new.vip.weibo.cn/littleskin/preview url script-response-body https://cdn.jsdelivr.net/gh/sve1r/Rules-For-Quantumult-X@develop/Scripts/AdBlock/Weibo/weibo_json.js
+# > 微博_去广告以及去除各部分推广模块@zmqcherish,@ddgksf2013
+^https?:\/\/m?api\.weibo\.c(n|om)\/\d\/(searchall|page\?|messageflow) url script-response-body https://cdn.jsdelivr.net/gh/sve1r/Rules-For-Quantumult-X@develop/Scripts/AdBlock/Weibo/weibo_json.js
+^https?:\/\/m?api\.weibo\.c(n|om)\/\d\/statuses/(unread_)?friends(/|_)timeline url script-response-body https://cdn.jsdelivr.net/gh/sve1r/Rules-For-Quantumult-X@develop/Scripts/AdBlock/Weibo/weibo_json.js
+^https?:\/\/m?api\.weibo\.c(n|om)\/\d\/groups/timeline url script-response-body https://cdn.jsdelivr.net/gh/sve1r/Rules-For-Quantumult-X@develop/Scripts/AdBlock/Weibo/weibo_json.js
+^https?:\/\/m?api\.weibo\.c(n|om)\/\d\/statuses/(container_timeline|unread_hot_timeline|extend|video_mixtimeline|unread_topic_timeline) url script-response-body https://cdn.jsdelivr.net/gh/sve1r/Rules-For-Quantumult-X@develop/Scripts/AdBlock/Weibo/weibo_json.js
+^https?:\/\/m?api\.weibo\.c(n|om)\/\d\/profile/(me|container_timeline) url script-response-body https://cdn.jsdelivr.net/gh/sve1r/Rules-For-Quantumult-X@develop/Scripts/AdBlock/Weibo/weibo_json.js
+^https?:\/\/m?api\.weibo\.c(n|om)\/\d\/video/(community_tab|remind_info|tiny_stream_video_list) url script-response-body https://cdn.jsdelivr.net/gh/sve1r/Rules-For-Quantumult-X@develop/Scripts/AdBlock/Weibo/weibo_json.js
+^https?:\/\/m?api\.weibo\.c(n|om)\/\d\/search/(finder|container_timeline|container_discover) url script-response-body https://cdn.jsdelivr.net/gh/sve1r/Rules-For-Quantumult-X@develop/Scripts/AdBlock/Weibo/weibo_json.js
+^https?:\/\/m?api\.weibo\.c(n|om)\/\d\/(checkin/show|\!/live/media_homelist|comments/build_comments|container/get_item) url script-response-body https://cdn.jsdelivr.net/gh/sve1r/Rules-For-Quantumult-X@develop/Scripts/AdBlock/Weibo/weibo_json.js
+^https?:\/\/m?api\.weibo\.c(n|om)\/\d\/cardlist url script-response-body https://cdn.jsdelivr.net/gh/sve1r/Rules-For-Quantumult-X@develop/Scripts/AdBlock/Weibo/weibo_json.js
+# > 微博国际版_屏蔽hotsearch@ddgksf2013
+^https?:\/\/weibointl\.api\.weibo\.c(n|om)\/portal\.php\?a=hot_search_users url reject-dict
+# > 微博国际版_屏蔽热推荐@ddgksf2013
+^https?:\/\/m?api\.weibo\.c(n|om)\/\d\/ad\/weibointl\? url reject-dict
+# > 微博国际版_屏蔽searching_info@shiro
+^https?:\/\/weibointl\.api\.weibo\.c(n|om)\/portal\.php.*user&a=get_searching_info url echo-response text/html echo-response https://cdn.jsdelivr.net/gh/sve1r/Rules-For-Quantumult-X@develop/Scripts/AdBlock/Weibo/weibo_search_info.json
+# > 微博国际版_屏蔽search_topic@shiro
+^https?:\/\/weibointl\.api\.weibo\.c(n|om)\/portal\.php.*feed&a=search_topic url echo-response text/html echo-response https://cdn.jsdelivr.net/gh/sve1r/Rules-For-Quantumult-X@develop/Scripts/AdBlock/Weibo/weibo_search_topic.json
+# > 微博国际版_屏蔽开屏广告@ddgksf2013 
+^https?:\/\/weibointl\.api\.weibo\.c(n|om)\/portal\.php.*get_coopen_ads url script-response-body https://cdn.jsdelivr.net/gh/sve1r/Rules-For-Quantumult-X@develop/Scripts/AdBlock/Weibo/weibo_json.js
+# > 微博国际版_屏蔽sdkad@ddgksf2013
+^https?://(sdk|wb)app\.uve\.weibo\.com(/interface/sdk/sdkad.php|/wbapplua/wbpullad.lua) url script-response-body https://cdn.jsdelivr.net/gh/sve1r/Rules-For-Quantumult-X@develop/Scripts/AdBlock/Weibo/weibo_json.js
+# > 微博国际版_趋势顶部Card去广告@ddgksf2013
+^https?:\/\/weibointl\.api\.weibo\.c(n|om)\/portal\.php.*feed&a=trends url script-response-body https://cdn.jsdelivr.net/gh/sve1r/Rules-For-Quantumult-X@develop/Scripts/AdBlock/Weibo/weibo_json.js
+# > 微博国际版_屏蔽用户VIP栏@ddgksf2013
+^https?:\/\/weibointl\.api\.weibo\.cn\/portal\.php\?a=user_center url script-response-body https://cdn.jsdelivr.net/gh/sve1r/Rules-For-Quantumult-X@develop/Scripts/AdBlock/Weibo/weibo_json.js
+# > 微博国际版_热搜处理@ddgksf2013
+^https?:\/\/weibointl\.api\.weibo\.cn\/portal\.php\?a=search_topic url script-response-body https://cdn.jsdelivr.net/gh/sve1r/Rules-For-Quantumult-X@develop/Scripts/AdBlock/Weibo/weibo_json.js
