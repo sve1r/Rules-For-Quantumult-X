@@ -203,7 +203,6 @@ host-suffix,timelinestoryteller.com,Microsoft
 host-suffix,uwpcommunitytoolkit.com,Microsoft
 host-suffix,xamarin.com,Microsoft
 host-suffix,p.sfx.ms,Microsoft
-host-suffix,sharepoint.com,Microsoft
 host-suffix,skype.com,Microsoft
 host-suffix,spoprod-a.akamaihd.net,Microsoft
 host-suffix,storage.msn.com,Microsoft
@@ -225,9 +224,14 @@ host-suffix,microsoft365.com,Microsoft
 
 # > OneDrive & Sharepoint
 user-agent,OneDrive*,Microsoft
+user-agent,OneDriveiOSApp*,Microsoft
 host-keyword,Onedrive,Microsoft
+host-wildcard,Onedrive.*,Microsoft
+host-keyword,skydrive,Microsoft
 host-keyword,1drv,Microsoft
 host-keyword,sharepoint,Microsoft
+host-suffix,sharepoint.com,Microsoft
+host-suffix,sharepoint.cn,Microsoft Domestic
 host-suffix,sharepointonline.com,Microsoft
 host-suffix,svc.ms,Microsoft
 

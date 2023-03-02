@@ -4,8 +4,14 @@ host-suffix,aaplimg.com,Apple
 host-suffix,apple.co,Apple
 host-suffix,apple.com,Apple
 host-suffix,apple.com.cn,Apple
+host-wildcard,apple.*,Apple
+host-wildcard,apple.com.*,Apple
 host-suffix,itunes.com,Apple
 host-suffix,me.com,Apple
+host-wildcard,ipod.*,Apple
+host-wildcard,imac.*,Apple
+host-wildcard,iphone.*,Apple
+host-wildcard,macbook.*,Apple
 
 # > Apple CIDR
 ip-cidr,17.0.0.0/8,Apple
@@ -20,14 +26,19 @@ ip-cidr,198.183.17.0/24,Apple
 ip-cidr,205.180.175.0/24,Apple
 
 # > Apple Stores
+host,apps.apple.com,Apple Domestic
 host,iosapps.itunes.apple.com,Apple Domestic
 host,osxapps.itunes.apple.com,Apple Domestic
 host-suffix,appsto.re,Apple
 host-suffix,mzstatic.com,Apple
 
 # > Apple Developer
+host-wildcard,appleworldwidedeveloper.*.net,Apple
 host-suffix,adcdownload.apple.com,Apple Domestic
 host-suffix,developer.apple.com,Apple
+
+# > Beats
+
 
 # > iCloud
 host-keyword,icloud,Apple
@@ -63,6 +74,7 @@ host-suffix,courier-push-apple.com.akadns.net,Apple
 host-suffix,push.apple.com,Apple
 
 # >> Other Service
+HOST,amp-api.apps.apple.com,Apple Domestic
 host,api.smoot.apple.cn,OutSide
 host-suffix,safebrowsing.apple,OutSide
 
@@ -94,6 +106,7 @@ host-suffix,itunesu.assets.itunes.com,OutSide
 host,updates-http.cdn-apple.com,Apple Domestic
 host-suffix,apple-support.akadns.net,Apple
 host-suffix,apple.com.akadns.net,Apple
+host,adcdownload.apple.com.akadns.net,Apple Domestic
 host-suffix,apple.com.cdn20.com,Apple Domestic
 host-suffix,apple.com.edgekey.net.globalredir.akadns.net,Apple
 host-suffix,apple.com.mwcname.com,Apple Domestic
