@@ -2,7 +2,7 @@
 > 应用名称：墨鱼自用微博&微博国际版净化脚本
 > 脚本作者：@ddgksf2013, @Zmqcherish 
 > 微信账号：墨鱼手记
-> 更新时间：2022-02-13
+> 更新时间：2022-02-25
 > 通知频道：https://t.me/ddgksf2021
 > 贡献投稿：https://t.me/ddgksf2013_bot
 > 原作者库：https://github.com/zmqcherish
@@ -12,7 +12,7 @@
 > 脚本声明：若有侵犯原作者权利，请邮箱联系删除
 ***********************************************/
 
-const version = "V2.0.98";
+const version = "V2.0.101";
 
 const mainConfig = {
     isDebug: !1,
@@ -102,7 +102,7 @@ const mainConfig = {
     user_center: "modifiedUserCenter",
     "a=get_coopen_ads": "removeIntlOpenAds",
     "php?a=search_topic": "removeSearchTopic",
-    "v2/strategy/ad": "removeStrategyAd",
+    "v1/ad/realtime": "removeRealtimeAd",
   };
 function getModifyMethod(e) {
   for (let t of modifyCardsUrls) if (e.indexOf(t) > -1) return "removeCards";
@@ -110,6 +110,9 @@ function getModifyMethod(e) {
     if (e.indexOf(o) > -1) return "removeTimeLine";
   for (let [i, r] of Object.entries(otherUrls)) if (e.indexOf(i) > -1) return r;
   return null;
+}
+function removeRealtimeAd(e) {
+  return delete e.ads, (e.code = 4016), e;
 }
 function removeIntlOpenAds(e) {
   return (
@@ -148,12 +151,7 @@ function modifiedUserCenter(e) {
   );
 }
 function removeTopics(e) {
-  return (
-    e.data &&
-      (e.data.topics && delete e.data.topics,
-      e.data.discover && delete e.data.discover),
-    e
-  );
+  return e.data && (e.data.order = ["search_topic", "native_content"]), e;
 }
 function isAd(e) {
   return (
@@ -229,27 +227,27 @@ function topicHandler(e) {
   for (let i of t) {
     let r = !0;
     if (i.mblog) {
-      let a = i.mblog.buttons;
-      mainConfig.removeUnfollowTopic && a && "follow" == a[0].type && (r = !1);
+      let n = i.mblog.buttons;
+      mainConfig.removeUnfollowTopic && n && "follow" == n[0].type && (r = !1);
     } else {
       if (!mainConfig.removeUnusedPart) continue;
       if ("bottom_mix_activity" == i.itemid) r = !1;
       else if (i?.top?.title == "正在活跃") r = !1;
       else if (200 == i.card_type && i.group) r = !1;
       else {
-        let n = i.card_group;
-        if (!n) continue;
+        let a = i.card_group;
+        if (!a) continue;
         if (
           [
             "guess_like_title",
             "cats_top_title",
             "chaohua_home_readpost_samecity_title",
-          ].indexOf(n[0].itemid) > -1
+          ].indexOf(a[0].itemid) > -1
         )
           r = !1;
-        else if (n.length > 1) {
+        else if (a.length > 1) {
           let d = [];
-          for (let s of n)
+          for (let s of a)
             -1 ==
               ["chaohua_discovery_banner_1", "bottom_mix_activity"].indexOf(
                 s.itemid
@@ -333,17 +331,17 @@ function removeCards(e) {
     let i = o.card_group;
     if (i && i.length > 0) {
       let r = [];
-      for (let a of i)
-        118 == a.card_type ||
-          isAd(a.mblog) ||
-          -1 != JSON.stringify(a).indexOf("res_from:ads") ||
-          r.push(a);
+      for (let n of i)
+        118 == n.card_type ||
+          isAd(n.mblog) ||
+          -1 != JSON.stringify(n).indexOf("res_from:ads") ||
+          r.push(n);
       (o.card_group = r), t.push(o);
     } else {
-      let n = o.card_type;
-      if ([9, 165].indexOf(n) > -1) isAd(o.mblog) || t.push(o);
+      let a = o.card_type;
+      if ([9, 165].indexOf(a) > -1) isAd(o.mblog) || t.push(o);
       else {
-        if ([1007, 180].indexOf(n) > -1) continue;
+        if ([1007, 180].indexOf(a) > -1) continue;
         t.push(o);
       }
     }
@@ -411,13 +409,13 @@ function itemExtendHandler(e) {
   if (mainConfig.modifyMenus && e.custom_action_list) {
     let i = [];
     for (let r of e.custom_action_list) {
-      let a = r.type,
-        n = itemMenusConfig[a];
-      void 0 === n
+      let n = r.type,
+        a = itemMenusConfig[n];
+      void 0 === a
         ? i.push(r)
-        : "mblog_menus_copy_url" === a
+        : "mblog_menus_copy_url" === n
         ? i.unshift(r)
-        : n && i.push(r);
+        : a && i.push(r);
     }
     e.custom_action_list = i;
   }
@@ -450,9 +448,9 @@ function updateProfileSkin(e, t) {
             "alpha" != dm && (r.image.style.darkMode = "alpha"),
             (r.image.iconUrl = o[i++]),
             r.dot && (r.dot = []);
-        } catch (a) {}
+        } catch (n) {}
     log("updateProfileSkin success");
-  } catch (n) {
+  } catch (a) {
     console.log("updateProfileSkin fail");
   }
 }
@@ -497,15 +495,13 @@ function removeMediaHomelist(e) {
   mainConfig.removeLiveMedia && (log("remove 首页直播"), (e.data = {}));
 }
 function removeComments(e) {
-  let t = ["广告", "廣告"];
-  mainConfig.removeRelateItem && t.push(...["相关内容"]),
-    mainConfig.removeRecommendItem && t.push(...["推荐", "热推"]);
-  let o = e.datas || [];
+  let t = ["广告", "廣告", "相关内容", "推荐", "热推", "推薦"],
+    o = e.datas || [];
   if (0 === o.length) return;
   let i = [];
   for (let r of o) {
-    let a = r.adType || "";
-    -1 == t.indexOf(a) && 6 != r.type && i.push(r);
+    let n = r.adType || "";
+    -1 == t.indexOf(n) && 6 != r.type && i.push(r);
   }
   log("remove 评论区相关和推荐内容"), (e.datas = i);
 }
