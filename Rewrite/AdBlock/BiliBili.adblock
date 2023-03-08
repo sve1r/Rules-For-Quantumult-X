@@ -63,9 +63,9 @@ hostname = -broadcast.chat.bilibili.com, -*cdn*.biliapi.net, -*tracker*.biliapi.
 # ～ BiliBili_哔哩哔哩_我的页面处理@ddgksf2013
 ^https?:\/\/app\.bilibili\.com\/x\/v2\/account\/mine url script-response-body https://cdn.jsdelivr.net/gh/sve1r/Rules-For-Quantumult-X@develop/Scripts/AdBlock/Bilibili/BiliBili.min.js
 # ～ BiliBili_哔哩哔哩_UP主推荐广告[适配ipad端]@app2smile@ddgksf2013
-^https?:\/\/(app\.bilibili\.com|grpc\.biliapi\.net)\/bilibili\.app\.view\.v1\.View\/View$ url script-response-body https://cdn.jsdelivr.net/gh/sve1r/Rules-For-Quantumult-X@develop/Scripts/Unlock/BiliBili.proto.min.js.js
+^https?:\/\/(app\.bilibili\.com|grpc\.biliapi\.net)\/bilibili\.app\.view\.v1\.View\/View$ url script-response-body https://cdn.jsdelivr.net/gh/sve1r/Rules-For-Quantumult-X@develop/Scripts/Unlock/BiliBili.proto.min.js
 # ～ BiliBili_哔哩哔哩_动态页面去广告@app2smile@kokoryh@ddgksf2013
-^https?:\/\/(app\.bilibili\.com|grpc\.biliapi\.net)\/bilibili\.app\.dynamic\.v2\.Dynamic\/DynAll$ url script-response-body https://cdn.jsdelivr.net/gh/sve1r/Rules-For-Quantumult-X@develop/Scripts/Unlock/BiliBili.proto.min.js.js
+^https?:\/\/(app\.bilibili\.com|grpc\.biliapi\.net)\/bilibili\.app\.dynamic\.v2\.Dynamic\/DynAll$ url script-response-body https://cdn.jsdelivr.net/gh/sve1r/Rules-For-Quantumult-X@develop/Scripts/Unlock/BiliBili.proto.min.js
 # ～ BiliBili_哔哩哔哩_启动时开启直连模式[自行启用]@ddgksf2013
 ;^https?:\/\/app\.bilibili\.com\/x\/resource\/domain url script-response-body https://github.com/ddgksf2013/Scripts/raw/master/bilibili_startup_direct.js
 # ～ BiliBili_哔哩哔哩_繁体CC字幕转中文简体[自行启用]@ddgksf2013
