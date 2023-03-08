@@ -1,11 +1,15 @@
-const version = "V1.0.18";
+const version = "V1.0.22";
 
-var body = JSON.parse($response.body);
-body.materialsList &&
-  (1 == body.materialsList.length
-    ? ((body.materialsList[0].filePath = "https://api.dujin.org/bing/m.php"),
-      (body.advertParam.skipTime = 1),
-      delete body.materialsList[0].billId,
-      (body.materialsList[0].billMaterialsId = "6491"))
-    : body.materialsList.length > 1 && (body.materialsList = [{}])),
-  $done({ body: JSON.stringify(body) });
+var obj = JSON.parse($request.body),
+  advy = {};
+"0007" == obj.placementNo
+  ? ((advy.materialsList = [
+      { billMaterialsId: "6491", filePath: "advy", creativeType: 1 },
+    ]),
+    (advy.advertParam = { skipTime: 1 }),
+    (advy.code = "00"))
+  : (advy =
+      "G0054" == obj.placementNo
+        ? { code: "00", materialsList: [{}] }
+        : { code: "00", message: "无广告返回" }),
+  $done({ body: JSON.stringify(advy) });
