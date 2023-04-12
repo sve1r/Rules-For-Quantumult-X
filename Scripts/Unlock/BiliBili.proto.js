@@ -2,7 +2,7 @@
 > 应用名称：墨鱼自用B站proto去广告脚本
 > 脚本作者：@app2smile,@ddgksf2013,@kokoryh
 > 微信账号：墨鱼手记
-> 更新时间：2023-03-03
+> 更新时间：2023-04-09
 > 通知频道：https://t.me/ddgksf2021
 > 贡献投稿：https://t.me/ddgksf2013_bot
 > 原作者库：https://github.com/app2smile
@@ -12,7 +12,7 @@
 > 脚本声明：若有侵犯原作者权利，请邮箱联系删除
 ***********************************************/
 
-const version = "V2.0.16";
+const version = "V2.0.19";
 
 let protobuf;
 !(function (g) {
@@ -11364,92 +11364,102 @@ if (
 ) {
   log("Dynamic page Dynamic/DynAll");
   let e = biliRoot.lookupType("bilibili.app.dynamic.DynAllReply"),
-    o = e.decode(unGzipBody);
+    i = e.decode(unGzipBody);
   if (
-    (o.topicList &&
-      ((needProcessFlag = !0), (o.topicList = null), log("Delete topicList")),
-    o.upList,
-    o.dynamicList?.list?.length)
+    (i.topicList &&
+      ((needProcessFlag = !0), (i.topicList = null), log("Delete topicList")),
+    i.upList,
+    i.dynamicList?.list?.length)
   ) {
-    let i = 0,
+    let o = 0,
       l = RegExp("红包|拼多多|京东|天猫|淘宝");
-    (o.dynamicList.list = o.dynamicList.list.filter(
+    (i.dynamicList.list = i.dynamicList.list.filter(
       (e) =>
         !(
           15 === e.cardType ||
           19 === e.cardType ||
           l.test(JSON.stringify(e.extend?.origDesc))
-        ) || (i++, !1)
+        ) || (o++, !1)
     )),
-      i &&
+      o &&
         ((needProcessFlag = !0),
-        log("Number of dynamic page advertisements：" + i));
+        log("Number of dynamic page advertisements：" + o));
   }
-  needProcessFlag && (body = processNewBody(e.encode(o).finish()));
+  needProcessFlag && (body = processNewBody(e.encode(i).finish()));
 } else if (url.includes("View/View")) {
   log("Video playback page View/View");
   let t = biliRoot.lookupType("bilibili.app.view.ViewReply"),
-    n = t.decode(unGzipBody);
+    n = t.decode(unGzipBody),
+    s = [
+      "cmIpad",
+      "specialCellNew",
+      "specialCell",
+      "activityUrl",
+      "reqUser",
+      "materialLeft",
+      "refreshSpecialCell",
+    ];
   if (
-    (n.cmIpad &&
-      ((n.cmIpad = null),
-      (needProcessFlag = !0),
-      log("Remove iPad advertising")),
+    (s.forEach((e) => {
+      n[e] &&
+        ((n[e] = null), (needProcessFlag = !0), log("Remove advertising"));
+    }),
     n.cms?.length)
   ) {
-    let s = 0,
+    let a = 0,
       d = biliRoot.lookupType("bilibili.ad.v1.SourceContentDto");
-    for (let a = 0; a < n.cms.length; a++) {
-      let r = n.cms[a];
-      if (r.sourceContent?.value) {
-        let c = d.decode(r.sourceContent.value);
-        c.adContent && s++;
+    for (let r = 0; r < n.cms.length; r++) {
+      let c = n.cms[r];
+      if (c.sourceContent?.value) {
+        let y = d.decode(c.sourceContent.value);
+        y.adContent && a++;
       }
     }
     (n.cms = []),
-      log(`Up recommendation advertisement:${s}`),
-      s && (needProcessFlag = !0);
+      log(`Up recommendation advertisement:${a}`),
+      a && (needProcessFlag = !0);
   }
   if (n.relates?.length) {
-    let y = 0;
-    (n.relates = n.relates.filter((e) => "cm" !== e.goto || (y++, !1))),
-      log(`Related recommendation advertisement:${y}`),
-      y && (needProcessFlag = !0);
+    let p = 0;
+    (n.relates = n.relates.filter((e) => "cm" !== e.goto || (p++, !1))),
+      log(`Related recommendation advertisement:${p}`),
+      p && (needProcessFlag = !0);
   }
-  let p = n.cmConfig?.adsControl?.value;
-  if (p) {
-    let g = biliRoot.lookupType("bilibili.ad.v1.AdsControlDto"),
-      u = g.decode(p);
-    (u?.hasDanmu === 1 || u?.cids?.length > 0) &&
-      (log(`Up danmu advertisement. ${u?.hasDanmu}, ${u?.cids}`),
+  let g = n.cmConfig?.adsControl?.value;
+  if (g) {
+    let u = biliRoot.lookupType("bilibili.ad.v1.AdsControlDto"),
+      b = u.decode(g);
+    (b?.hasDanmu === 1 || b?.cids?.length > 0) &&
+      (log(`Up danmu advertisement. ${b?.hasDanmu}, ${b?.cids}`),
       (n.cmConfig = null),
       (needProcessFlag = !0));
   }
   if (needProcessFlag) {
-    let b = n.tIcon;
-    for (let m in b) null === b[m] && (log(`tIconMap:${m}`), delete b[m]);
+    let m = n.tIcon;
+    for (let f in m) null === m[f] && (log(`tIconMap:${f}`), delete m[f]);
     body = processNewBody(t.encode(n).finish());
   }
 } else if (url.includes("PlayURL/PlayView")) {
-  let f = biliRoot.lookupType("bilibili.app.playurl.PlayViewReply"),
-    h = f.decode(unGzipBody),
-    P = h.playArc?.backgroundPlayConf;
-  P &&
-    (!P.isSupport || P.disabled) &&
-    ((h.playArc.backgroundPlayConf.isSupport = !0),
-    (h.playArc.backgroundPlayConf.disabled = !1),
-    (h.playArc.backgroundPlayConf.extraContent = null),
+  log("PlayURL/PlayView");
+  let h = biliRoot.lookupType("bilibili.app.playurl.PlayViewReply"),
+    P = h.decode(unGzipBody),
+    w = P.playArc?.backgroundPlayConf;
+  w &&
+    (!w.isSupport || w.disabled) &&
+    ((P.playArc.backgroundPlayConf.isSupport = !0),
+    (P.playArc.backgroundPlayConf.disabled = !1),
+    (P.playArc.backgroundPlayConf.extraContent = null),
     (needProcessFlag = !0),
-    (body = processNewBody(f.encode(h).finish())));
+    (body = processNewBody(h.encode(P).finish())));
 } else $notification.post("bilibili-proto", "path mistake:", url);
 function processNewBody(e) {
-  let o = e.length,
-    i = new Uint8Array(5 + o);
-  return i.set(intToUint8Array(o), 1), i.set(e, 5), i;
+  let i = e.length,
+    o = new Uint8Array(5 + i);
+  return o.set(intToUint8Array(i), 1), o.set(e, 5), o;
 }
 function intToUint8Array(e) {
-  let o = new ArrayBuffer(4);
-  return new DataView(o).setUint32(0, e, !1), new Uint8Array(o);
+  let i = new ArrayBuffer(4);
+  return new DataView(i).setUint32(0, e, !1), new Uint8Array(i);
 }
 function log(e) {
   isDebug && console.log(e);
