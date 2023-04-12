@@ -6,10 +6,10 @@
 // @TgChannel         https://t.me/ddgksf2021
 // @Contribute        https://t.me/ddgksf2013_bot
 // @Feedback          📮 ddgksf2013@163.com 📮
-// @UpdateTime        2023-03-05
+// @UpdateTime        2023-03-16
 // @Suitable          自行观看“# > ”注释内容
 // @Attention         如需引用请注明出处，谢谢合作！
-// @Version           V1.0.21
+// @Version           V1.0.22
 // @RewriteURL        https://github.com/ddgksf2013/Rewrite/raw/master/AdBlock/Netease.conf
 // ==/UserScript==
 
@@ -23,6 +23,9 @@
 
 hostname = interface*.music.163.com 
 
+
+# > 网易云_每日推荐Tips
+^https?:\/\/interface(\d)?\.music\.163\.com\/w?e?api/homepage/daily/song/elf/notice url reject-dict
 # > 网易云_通用广告请求
 ^https?:\/\/interface(\d)?\.music\.163\.com\/w?e?api\/ad\/ url reject-dict
 # > 网易云_不知道是个啥

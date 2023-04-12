@@ -1,46 +1,54 @@
-/*
-version     v0.0.1
-updatetime  2022-11-04
-tgchannel   https://t.me/ddgksf2021
-function    酷安去首页广告、信息流广告、评论广告
-author      kk pp
+/***********************************
+> 应用名称：酷安净化
+> 脚本作者：ddgksf2013
+> 微信账号：墨鱼手记
+> 更新时间：2023-01-21
+> 通知频道：https://t.me/ddgksf2021
+> 贡献投稿：https://t.me/ddgksf2013_bot
+> 问题反馈：ddgksf2013@163.com
+> 特别提醒：如需转载请注明出处，谢谢合作！
+> 特别说明：⚠️⚠️⚠️
+          本脚本仅供学习交流使用，禁止转载、售卖
+          ⚠️⚠️⚠️
+		  
+***********************************/
 
+const version = "V1.0.9";
 
-[rewrite_local]
-^https?:\/\/api.coolapk.com\/v6\/(feed\/(replyList|detail)|main\/indexV8|dataList) url script-response-body https://github.com/ddgksf2013/Scripts/raw/master/coolapk.js
-
-[mitm]
-hostname = api.coolapk.com
-
-*/
-
-if ($request.url.indexOf("replyList") != -1) {
-    var bodyObj = JSON.parse($response.body);
-    bodyObj.data = Object.values(bodyObj.data).filter((item) => item.id);
-    $done({
-        body: JSON.stringify(bodyObj),
-    });
-} else if ($request.url.indexOf("indexV8") != -1) {
-    var bodyObj = JSON.parse($response.body);
-    bodyObj.data = Object.values(bodyObj.data).filter((item) => !(item["entityTemplate"] == "sponsorCard" || item.entityId == 8639 || item.entityId == 33006 || item.entityId == 32557 || item.title.indexOf("值得买") != -1));
-    //去除头条信息流推广和首页轮转
-    $done({
-        body: JSON.stringify(bodyObj),
-    });
-} else if ($request.url.indexOf("dataList") != -1) {
-    var bodyObj = JSON.parse($response.body);
-    bodyObj.data = Object.values(bodyObj.data).filter((item) => !(item["entityTemplate"] == "sponsorCard" || item.title == "精选配件"));
-    $done({
-        body: JSON.stringify(bodyObj),
-    });
-} else if ($request.url.indexOf("detail") != -1) {
-    var bodyObj = JSON.parse($response.body);
-    bodyObj.data.hotReplyRows = Object.values(bodyObj.data.hotReplyRows).filter((item) => item["id"]);
-    bodyObj.data.include_goods_ids = [];
-    bodyObj.data.include_goods = [];
-    $done({
-        body: JSON.stringify(bodyObj),
-    });
-} else {
-    $done($response);
-}
+if (-1 != $request.url.indexOf("replyList")) {
+  var t = JSON.parse($response.body);
+  t.data.length && (t.data = t.data.filter((t) => t.id)),
+    $done({ body: JSON.stringify(t) });
+} else if (-1 != $request.url.indexOf("indexV8")) {
+  var t = JSON.parse($response.body);
+  (t.data = t.data.filter(
+    (t) =>
+      !(
+        "sponsorCard" == t.entityTemplate ||
+        8639 == t.entityId ||
+        29349 == t.entityId ||
+        33006 == t.entityId ||
+        32557 == t.entityId ||
+        -1 != t.title.indexOf("值得买") ||
+        -1 != t.title.indexOf("红包")
+      )
+  )),
+    $done({ body: JSON.stringify(t) });
+} else if (-1 != $request.url.indexOf("dataList")) {
+  var t = JSON.parse($response.body);
+  (t.data = t.data.filter(
+    (t) =>
+      !("sponsorCard" == t.entityTemplate || -1 != t.title.indexOf("精选配件"))
+  )),
+    $done({ body: JSON.stringify(t) });
+} else if (-1 != $request.url.indexOf("detail")) {
+  var t = JSON.parse($response.body);
+  t.data?.hotReplyRows?.length &&
+    (t.data.hotReplyRows = t.data.hotReplyRows.filter((t) => t.id)),
+    t.data?.topReplyRows?.length &&
+      (t.data.topReplyRows = t.data.topReplyRows.filter((t) => t.id)),
+    t.data?.include_goods_ids && (t.data.include_goods_ids = []),
+    t.data?.include_goods && (t.data.include_goods = []),
+    t.data?.detailSponsorCard && (t.data.detailSponsorCard = []),
+    $done({ body: JSON.stringify(t) });
+} else $done($response);
