@@ -17,6 +17,7 @@ host-suffix,weibocdn.com,Weibo
 # > Weibo Client & SDK
 host-suffix,wbapp.mobile.sina.cn,reject
 host-suffix,sdkapp.mobile.sina.cn,reject
+host,sdkapp.uve.weibo.com, direct
 
 # > Weibo Img
 host-suffix,sinajs.cn,Weibo
