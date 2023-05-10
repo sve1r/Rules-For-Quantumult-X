@@ -2,7 +2,7 @@
 > 应用名称：墨鱼自用微博&微博国际版净化脚本
 > 脚本作者：@ddgksf2013, @Zmqcherish 
 > 微信账号：墨鱼手记
-> 更新时间：2022-04-11
+> 更新时间：2022-04-27
 > 通知频道：https://t.me/ddgksf2021
 > 贡献投稿：https://t.me/ddgksf2013_bot
 > 原作者库：https://github.com/zmqcherish
@@ -12,7 +12,7 @@
 > 脚本声明：若有侵犯原作者权利，请邮箱联系删除
 ***********************************************/
 
-const version = "V2.0.107";
+const version = "V2.0.112";
 
 const mainConfig = {
     isDebug: !1,
@@ -104,6 +104,7 @@ const mainConfig = {
     "a=get_coopen_ads": "removeIntlOpenAds",
     "php?a=search_topic": "removeSearchTopic",
     "v1/ad/realtime": "removeRealtimeAd",
+    "v1/ad/preload": "removeAdPreload",
   };
 function getModifyMethod(e) {
   for (let t of modifyCardsUrls) if (e.indexOf(t) > -1) return "removeCards";
@@ -114,6 +115,16 @@ function getModifyMethod(e) {
 }
 function removeRealtimeAd(e) {
   return delete e.ads, (e.code = 4016), e;
+}
+function removeAdPreload(e) {
+  if (!e.ads) return e;
+  for (let t of ((e.last_ad_show_interval = 86400), e.ads))
+    (t.start_time = 2681574400),
+      (t.end_time = 2681660799),
+      (t.display_duration = 0),
+      (t.daily_display_cnt = 0),
+      (t.total_display_cnt = 0);
+  return e;
 }
 function removeIntlOpenAds(e) {
   return (
@@ -176,7 +187,8 @@ function removeMainTab(e) {
   let t = [];
   for (let o of e.items)
     isAd(o.data) ||
-      (o.data?.common_struct && delete o.data.common_struct,
+      (o.data?.page_info?.video_limit && delete o.data.page_info.video_limit,
+      o.data?.common_struct && delete o.data.common_struct,
       o.category
         ? "group" != o.category
           ? t.push(o)
@@ -218,7 +230,11 @@ function removeMain(e) {
           )),
           t.push(o);
       }
-    } else -1 == [202, 200].indexOf(o.data.card_type) && t.push(o);
+    } else {
+      if (o.data?.card_type && [202, 200].indexOf(o.data.card_type) > -1)
+        continue;
+      t.push(o);
+    }
   return (e.items = t), log("removeMain success"), e;
 }
 function topicHandler(e) {
@@ -332,11 +348,9 @@ function removeCards(e) {
   if ((e.hotwords && (e.hotwords = []), !e.cards)) return;
   let t = [];
   for (let o of e.cards) {
-    if (
-      e.cardlistInfo?.page_type == "08" &&
-      (17 == o.card_type || 58 == o.card_type || 11 == o.card_type)
-    )
-      continue;
+    e.cardlistInfo?.containerid == "232082type=1" &&
+      (17 == o.card_type || 58 == o.card_type || 11 == o.card_type) &&
+      (o = { card_type: o.card_type + 1 });
     let i = o.card_group;
     if (i && i.length > 0) {
       let a = [];
