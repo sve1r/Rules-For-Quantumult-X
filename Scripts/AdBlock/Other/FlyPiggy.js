@@ -1,16 +1,21 @@
-/**
- * 飞猪去开屏广告
- */
+/*
 
-var response = JSON.parse($response.body);
+Author：@ddgksf2013
 
-if (response.Variables.data.threaddetail)
+通知频道：https://t.me/ddgksf2021
+
+*/
+var body = $response.body;
+var ddgksf2013 = JSON.parse(body);
+
+if (ddgksf2013.Variables.data.threaddetail) 
 {
-    response.Variables.data.threaddetail.tagadv = "";
-    response.Variables.data.threaddetail.threadapp_ad_video = [];
-    response.Variables.data.threaddetail.pingyouadv = "";
-    response.Variables.data.threaddetail.middleadv = "";
-    response.Variables.data.threaddetail.bottomadv = "";
-    response.Variables.data.threaddetail.appdetailadv = [];
+ddgksf2013.Variables.data.threaddetail.tagadv = "";
+	ddgksf2013.Variables.data.threaddetail.threadapp_ad_video = [];
+	ddgksf2013.Variables.data.threaddetail.pingyouadv = "";
+	ddgksf2013.Variables.data.threaddetail.middleadv = "";
+	ddgksf2013.Variables.data.threaddetail.bottomadv = "";
+	ddgksf2013.Variables.data.threaddetail.appdetailadv = [];
 }
-$done({body: JSON.stringify(response)});
+
+$done({body: JSON.stringify(ddgksf2013)});
