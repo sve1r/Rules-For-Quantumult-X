@@ -2,7 +2,7 @@
 > 应用名称：墨鱼自用B站proto去广告脚本
 > 脚本作者：@app2smile,@ddgksf2013,@kokoryh
 > 微信账号：墨鱼手记
-> 更新时间：2023-04-09
+> 更新时间：2023-04-26
 > 通知频道：https://t.me/ddgksf2021
 > 贡献投稿：https://t.me/ddgksf2013_bot
 > 原作者库：https://github.com/app2smile
@@ -12,7 +12,7 @@
 > 脚本声明：若有侵犯原作者权利，请邮箱联系删除
 ***********************************************/
 
-const version = "V2.0.19";
+const version = "V2.0.21";
 
 let protobuf;
 !(function (g) {
@@ -11372,7 +11372,7 @@ if (
     i.dynamicList?.list?.length)
   ) {
     let o = 0,
-      l = RegExp("红包|拼多多|京东|天猫|淘宝");
+      l = RegExp("红包|拼多多|京东|天猫|淘宝|抽奖");
     (i.dynamicList.list = i.dynamicList.list.filter(
       (e) =>
         !(
@@ -11395,7 +11395,7 @@ if (
       "specialCellNew",
       "specialCell",
       "activityUrl",
-      "reqUser",
+      "1reqUser",
       "materialLeft",
       "refreshSpecialCell",
     ];
