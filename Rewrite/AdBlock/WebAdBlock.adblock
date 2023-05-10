@@ -7,14 +7,14 @@
 // @Contribute        https://t.me/ddgksf2013_bot
 // @Feedback          📮 ddgksf2013@163.com 📮
 // @Attention         如需引用请注明出处，谢谢合作！
-// @UpdateTime        2022-12-08
+// @UpdateTime        2023-04-24
 // @Function          自用影视网站去广告配置（不定期更新）
 // @Suitable          自行观看"# > "注释内容
 // @Explain           推荐使用手机版Chrome或Alook浏览器(仅供墨鱼本人及小部分QX用户使用)
 // @ScriptURL         https://github.com/ddgksf2013/Rewrite/raw/master/Html/WebAdBlock.conf
 // ==/UserScript==
 
-hostname=*netflix*, *bdys*,cupfox.app,*cokemv*,*pornhub.com,*lezhutv*,*bimi*,18comic.org,*5y*,*gimytv*,*tkznp*,*czspp*,*ikandy*,*libvio*
+hostname=*netflix*, *bdys*,*cupfox*,*cokemv*,*pornhub.com,*lezhutv*,*bimi*,18comic.org,*5y*,*gimytv*,*tkznp*,*czspp*,*ikandy*,*libvio*
 
 # > 14 奈飞鸭[网页优化]@ddgksf2013 - 网站地址：https://yanetflix.com
 ^https?:\/\/.*netflix.*\/($|[0-9a-zA-Z=_/-]+\.html$) url script-response-body https://cdn.jsdelivr.net/gh/ddgksf2013/Scripts@master/netflix.js
@@ -23,7 +23,7 @@ hostname=*netflix*, *bdys*,cupfox.app,*cokemv*,*pornhub.com,*lezhutv*,*bimi*,18c
 ^https?:\/\/.*bdys.*com\/($|([a-z]+)\/(play\/)?\d+.*$) url script-response-body https://cdn.jsdelivr.net/gh/ddgksf2013/Scripts@master/bdys.js
 
 # > 12 茶杯狐[网页优化]@ddgksf2013 - 网站地址：https://cupfox.app
-^https?:/\/cupfox\.app\/($|(search|list|s|_next).*$) url script-response-body https://cdn.jsdelivr.net/gh/ddgksf2013/Scripts@master/cupbox.js
+^https?:/\/.*cupfox\.app\/($|(search|list|s|_next).*$) url script-response-body https://cdn.jsdelivr.net/gh/ddgksf2013/Scripts@master/cupbox.js
 
 # > 11 Cokemv[网页优化]@ddgksf2013 - 网站地址：https://cokemv.me 
 ^https?:/\/cokemv\.me\/($|vod.*$) url script-response-body https://cdn.jsdelivr.net/gh/ddgksf2013/Scripts@master/cokemv.js
