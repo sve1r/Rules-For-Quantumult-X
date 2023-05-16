@@ -1,0 +1,35 @@
+# > Github
+# >> Github Main
+host-keyword,github,Github
+host-suffix,github.blog,Github
+host-suffix,github.com,Github
+host-suffix,github.community,Github
+host-suffix,githubstatus.com,Github
+
+# >> Github Assets
+host-suffix,githubusercontent.com,Github
+host-suffix,githubassets.com,Github
+
+# >> Github Features
+host-suffix,dependabot.com,Github
+host-suffix,atom.io,Github
+host-suffix,ghcr.io,Github
+host-suffix,git.io,Github
+host-suffix,github.io,Github
+host-suffix,github.dev,Github
+host-suffix,githubapp.com,Github
+host-suffix,githubpreview.dev,Github
+
+# >> Github CDN
+host-suffix,github-atom-io-herokuapp-com.freetls.fastly.net,Github
+host-suffix,github-avatars.oss-cn-hongkong.aliyuncs.com,Github
+host-suffix,github-cloud.s3.amazonaws.com,Github
+
+# >> Github Other
+host-suffix,thegithubshop.com,Github
+host-suffix,githubuniverse.com,Github
+host-suffix,githubnext.com,Github
+host-suffix,githubhackathon.com,Github
+host-suffix,myoctocat.com,Github
+host-suffix,opensource.guide,Github
+host-suffix,repo.new,Github
