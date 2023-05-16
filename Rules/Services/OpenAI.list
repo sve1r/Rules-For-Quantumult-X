@@ -1,0 +1,21 @@
+# > OpenAI
+# >> OpenAI Challenge & SSO
+host-suffix,auth0.com,OpenAI
+host,challenges.cloudflare.com,OpenAI
+
+# >> OpenAI Related
+host-suffix,ai.com,OpenAI
+host-suffix,openai.com,OpenAI
+host-suffix,sentry.io,OpenAI
+host-suffix,intercom.io,OpenAI
+host-suffix,identrust.com,OpenAI
+
+# >> OpenAI CDN
+host-suffix,chat.openai.com.cdn.cloudflare.net,OpenAI
+host-suffix,openaiapi-site.azureedge.net,OpenAI
+
+# >> OpenAI Other
+host-suffix,challenges.cloudflare.com,OpenAI
+host-suffix,invoice.stripe.com,OpenAI
+host-suffix,stripe.com,OpenAI
+host-suffix,poe.com,OpenAI
