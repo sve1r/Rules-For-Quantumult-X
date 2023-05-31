@@ -3,6 +3,11 @@
 动画疯，屏蔽播放广告脚本 (黑屏25秒自动播放)
 由于动画疯强制验证观看广告时间，无法实现真正意义上的跳过广告。
 
+Surge(4.11+)模块：
+https://raw.githubusercontent.com/NobyDa/Script/master/Surge/Module/BahamutAnimeAds.sgmodule
+
+QX(1.0.27+)用户请自行搭配KOP-XIAO资源解析器重写引用Surge模块。
+
 ************************/
 
 let [req, rsp] = [$request, JSON.parse($response.body || "{}")];
