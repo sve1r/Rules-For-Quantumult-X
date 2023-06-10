@@ -1,4 +1,4 @@
-const version = "V2.0.117";
+const version = 'V2.0.117';
 
 let body = $response.body;
 if (body) {
@@ -10,7 +10,7 @@ if (body) {
           (t.result.cards = t.result.cards.filter((t) => 2 != t.type)),
           (body = JSON.stringify(t));
       } catch (i) {
-        console.log("bilibili recommend:" + i);
+        console.log('bilibili recommend:' + i);
       }
       break;
     case /^https?:\/\/app\.bilibili\.com\/x\/resource\/show\/skin\?/.test(
@@ -20,7 +20,7 @@ if (body) {
         let a = JSON.parse(body);
         delete a.data?.common_equip, (body = JSON.stringify(a));
       } catch (e) {
-        console.log("bilibili skin:" + e);
+        console.log('bilibili skin:' + e);
       }
       break;
     case /^https:\/\/app\.bilibili\.com\/x\/v2\/feed\/index\?/.test(
@@ -30,15 +30,15 @@ if (body) {
         let s = JSON.parse(body),
           l = [];
         for (let o of s.data.items)
-          if (!o.hasOwnProperty("banner_item")) {
+          if (!o.hasOwnProperty('banner_item')) {
             if (
               !(
-                !o.hasOwnProperty("ad_info") &&
-                -1 === o.card_goto?.indexOf("ad") &&
+                !o.hasOwnProperty('ad_info') &&
+                -1 === o.card_goto?.indexOf('ad') &&
                 [
-                  "small_cover_v2",
-                  "large_cover_v1",
-                  "large_cover_single_v9",
+                  'small_cover_v2',
+                  'large_cover_v1',
+                  'large_cover_single_v9',
                 ].includes(o.card_type)
               )
             )
@@ -47,7 +47,7 @@ if (body) {
           }
         (s.data.items = l), (body = JSON.stringify(s));
       } catch (d) {
-        console.log("bilibili index:" + d);
+        console.log('bilibili index:' + d);
       }
       break;
     case /^https?:\/\/app\.bilibili\.com\/x\/v2\/feed\/index\/story\?/.test(
@@ -57,12 +57,12 @@ if (body) {
         let r = JSON.parse(body),
           b = [];
         for (let p of r.data.items)
-          p.hasOwnProperty("ad_info") ||
-            -1 !== p.card_goto.indexOf("ad") ||
+          p.hasOwnProperty('ad_info') ||
+            -1 !== p.card_goto.indexOf('ad') ||
             b.push(p);
         (r.data.items = b), (body = JSON.stringify(r));
       } catch (c) {
-        console.log("bilibili Story:" + c);
+        console.log('bilibili Story:' + c);
       }
       break;
     case /^https?:\/\/app\.bilibili\.com\/x\/v\d\/account\/teenagers\/status\?/.test(
@@ -72,7 +72,7 @@ if (body) {
         let n = JSON.parse(body);
         (n.data.teenagers_status = 0), (body = JSON.stringify(n));
       } catch (y) {
-        console.log("bilibili teenagers:" + y);
+        console.log('bilibili teenagers:' + y);
       }
       break;
     case /^https?:\/\/app\.bilibili\.com\/x\/resource\/show\/tab/.test(
@@ -86,48 +86,48 @@ if (body) {
           f.push(
             {
               id: 39,
-              name: "直播",
-              uri: "bilibili://live/home",
-              tab_id: "直播tab",
+              name: '直播',
+              uri: 'bilibili://live/home',
+              tab_id: '直播tab',
               pos: 1,
             },
             {
               id: 40,
-              name: "推荐",
-              uri: "bilibili://pegasus/promo",
-              tab_id: "推荐tab",
+              name: '推荐',
+              uri: 'bilibili://pegasus/promo',
+              tab_id: '推荐tab',
               pos: 2,
               default_selected: 1,
             }
           ),
-            -1 == JSON.stringify(h.data.tab).indexOf("pgc/home")
+            -1 == JSON.stringify(h.data.tab).indexOf('pgc/home')
               ? f.push({
                   id: 774,
-                  name: "番剧",
-                  uri: "bilibili://following/home_activity_tab/6544",
-                  tab_id: "bangumi",
+                  name: '番剧',
+                  uri: 'bilibili://following/home_activity_tab/6544',
+                  tab_id: 'bangumi',
                   pos: 3,
                 })
               : f.push({
                   id: 545,
-                  name: "番剧",
-                  uri: "bilibili://pgc/home",
-                  tab_id: "bangumi",
+                  name: '番剧',
+                  uri: 'bilibili://pgc/home',
+                  tab_id: 'bangumi',
                   pos: 3,
                 }),
             f.push(
               {
                 id: 41,
-                name: "热门",
-                uri: "bilibili://pegasus/hottopic",
-                tab_id: "hottopic",
+                name: '热门',
+                uri: 'bilibili://pegasus/hottopic',
+                tab_id: 'hottopic',
                 pos: 4,
               },
               {
                 id: 151,
-                name: "影视",
-                uri: "bilibili://pgc/cinema-tab",
-                tab_id: "film",
+                name: '影视',
+                uri: 'bilibili://pgc/cinema-tab',
+                tab_id: 'film',
                 pos: 5,
               }
             ),
@@ -138,10 +138,10 @@ if (body) {
             (h.data.top = [
               {
                 id: 481,
-                icon: "http://i0.hdslb.com/bfs/archive/d43047538e72c9ed8fd8e4e34415fbe3a4f632cb.png",
-                name: "消息",
-                uri: "bilibili://link/im_home",
-                tab_id: "消息Top",
+                icon: 'http://i0.hdslb.com/bfs/archive/d43047538e72c9ed8fd8e4e34415fbe3a4f632cb.png',
+                name: '消息',
+                uri: 'bilibili://link/im_home',
+                tab_id: '消息Top',
                 pos: 1,
               },
             ]),
@@ -152,7 +152,7 @@ if (body) {
         }
         body = JSON.stringify(h);
       } catch (g) {
-        console.log("bilibili tabprocess:" + g);
+        console.log('bilibili tabprocess:' + g);
       }
       break;
     case /^https?:\/\/app\.bilibili\.com\/x\/v2\/account\/mine/.test(
@@ -171,15 +171,15 @@ if (body) {
             delete v.data.sections_v2[i].be_up_title,
             delete v.data.sections_v2[i].tip_icon,
             delete v.data.sections_v2[i].tip_title,
-            ("创作中心" == v.data.sections_v2[i].title ||
-              "創作中心" == v.data.sections_v2[i].title) &&
+            ('创作中心' == v.data.sections_v2[i].title ||
+              '創作中心' == v.data.sections_v2[i].title) &&
               (delete v.data.sections_v2[i].title,
               delete v.data.sections_v2[i].type);
         }),
           delete v.data.vip_section_v2,
           delete v.data.vip_section,
-          v.data.hasOwnProperty("live_tip") && (v.data.live_tip = {}),
-          v.data.hasOwnProperty("answer") && (v.data.answer = {}),
+          v.data.hasOwnProperty('live_tip') && (v.data.live_tip = {}),
+          v.data.hasOwnProperty('answer') && (v.data.answer = {}),
           v.data.vip.status ||
             ((v.data.vip_type = 2),
             (v.data.vip.type = 2),
@@ -188,7 +188,7 @@ if (body) {
             (v.data.vip.due_date = 466982416e4)),
           (body = JSON.stringify(v));
       } catch (_) {
-        console.log("bilibili mypage:" + _);
+        console.log('bilibili mypage:' + _);
       }
       break;
     case /^https?:\/\/api\.live\.bilibili\.com\/xlive\/app-room\/v1\/index\/getInfoByRoom/.test(
@@ -204,7 +204,7 @@ if (body) {
               x.data.new_tab_info.outer_list.filter((t) => 33 != t.biz_id)),
           (body = JSON.stringify(x));
       } catch (k) {
-        console.log("bilibili live broadcast:" + k);
+        console.log('bilibili live broadcast:' + k);
       }
       break;
     case /^https?:\/\/app\.bilibili\.com\/x\/resource\/top\/activity/.test(
@@ -212,10 +212,10 @@ if (body) {
     ):
       try {
         let w = JSON.parse(body);
-        w.data && ((w.data.hash = "ddgksf2013"), (w.data.online.icon = "")),
+        w.data && ((w.data.hash = 'ddgksf2013'), (w.data.online.icon = '')),
           (body = JSON.stringify(w));
       } catch (O) {
-        console.log("bilibili right corner:" + O);
+        console.log('bilibili right corner:' + O);
       }
       break;
     case /ecommerce-user\/get_shopping_info\?/.test($request.url):
@@ -231,7 +231,7 @@ if (body) {
           }),
           (body = JSON.stringify(P));
       } catch (W) {
-        console.log("bilibili shopping info:" + W);
+        console.log('bilibili shopping info:' + W);
       }
       break;
     case /^https?:\/\/app\.bilibili\.com\/x\/v2\/search\/square/.test(
@@ -240,13 +240,13 @@ if (body) {
       try {
         let j = JSON.parse(body);
         (j.data = {
-          type: "history",
-          title: "搜索历史",
+          type: 'history',
+          title: '搜索历史',
           search_hotword_revision: 2,
         }),
           (body = JSON.stringify(j));
       } catch (q) {
-        console.log("bilibili hot search:" + q);
+        console.log('bilibili hot search:' + q);
       }
       break;
     case /https?:\/\/app\.bilibili\.com\/x\/v2\/account\/myinfo\?/.test(
@@ -261,25 +261,25 @@ if (body) {
           (E.data.vip.due_date = 466982416e4)),
           (body = JSON.stringify(E));
       } catch (z) {
-        console.log("bilibili 1080p:" + z);
+        console.log('bilibili 1080p:' + z);
       }
       break;
     case /pgc\/page\/(bangumi|cinema\/tab\?)/.test($request.url):
       try {
         let B = JSON.parse(body);
         B.result.modules.forEach((t) => {
-          t.style.startsWith("banner") &&
-            (t.items = t.items.filter((t) => -1 != t.link.indexOf("play"))),
-            t.style.startsWith("function") &&
+          t.style.startsWith('banner') &&
+            (t.items = t.items.filter((t) => -1 != t.link.indexOf('play'))),
+            t.style.startsWith('function') &&
               ((t.items = t.items.filter(
-                (t) => -1 == t.blink.indexOf("bilibili.com")
+                (t) => -1 == t.blink.indexOf('bilibili.com')
               )),
               [1283, 241, 1441, 1284].includes(t.module_id) && (t.items = [])),
-            t.style.startsWith("tip") && (t.items = []);
+            t.style.startsWith('tip') && (t.items = []);
         }),
           (body = JSON.stringify(B));
       } catch (I) {
-        console.log("bilibili fanju:" + I);
+        console.log('bilibili fanju:' + I);
       }
       break;
     case /^https:\/\/app\.bilibili\.com\/x\/v2\/splash\/list/.test(
@@ -294,7 +294,7 @@ if (body) {
               (S.end_time = 2240150400);
         body = JSON.stringify(R);
       } catch (T) {
-        console.log("bilibili openad:" + T);
+        console.log('bilibili openad:' + T);
       }
       break;
     case /^https:\/\/api\.live\.bilibili\.com\/xlive\/app-interface\/v2\/index\/feed/.test(
@@ -305,11 +305,11 @@ if (body) {
         A.data &&
           A.data.card_list &&
           (A.data.card_list = A.data.card_list.filter(
-            (t) => "banner_v1" != t.card_type
+            (t) => 'banner_v1' != t.card_type
           )),
           (body = JSON.stringify(A));
       } catch (C) {
-        console.log("bilibili xlive:" + C);
+        console.log('bilibili xlive:' + C);
       }
       break;
     default:

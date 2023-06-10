@@ -12,11 +12,11 @@
 > 脚本声明：若有侵犯原作者权利，请邮箱联系删除
 ***********************************************/
 
-const version = "V2.0.21";
+const version = 'V2.0.21';
 
 let protobuf;
 !(function (g) {
-  "use strict";
+  'use strict';
   !(function (r, e, t) {
     var i = (function t(i) {
       var n = e[i];
@@ -26,12 +26,12 @@ let protobuf;
       );
     })(t[0]);
     (protobuf = i.util.global.protobuf = i),
-      "function" == typeof define &&
+      'function' == typeof define &&
         define.amd &&
-        define(["long"], function (t) {
+        define(['long'], function (t) {
           return t && t.isLong && ((i.util.Long = t), i.configure()), i;
         }),
-      "object" == typeof module &&
+      'object' == typeof module &&
         module &&
         module.exports &&
         (module.exports = i);
@@ -74,7 +74,7 @@ let protobuf;
           n.length = function (t) {
             var i = t.length;
             if (!i) return 0;
-            for (var n = 0; 1 < --i % 4 && "=" == (t[0 | i] || ""); ) ++n;
+            for (var n = 0; 1 < --i % 4 && '=' == (t[0 | i] || ''); ) ++n;
             return Math.ceil(3 * t.length) / 4 - n;
           };
           for (var f = Array(64), h = Array(123), r = 0; r < 64; )
@@ -110,11 +110,11 @@ let protobuf;
               e
                 ? (u &&
                     e.push(String.fromCharCode.apply(String, s.slice(0, u))),
-                  e.join(""))
+                  e.join(''))
                 : String.fromCharCode.apply(String, s.slice(0, u))
             );
           };
-          var c = "invalid encoding";
+          var c = 'invalid encoding';
           (n.decode = function (t, i, n) {
             for (var r, e = n, s = 0, u = 0; u < t.length; ) {
               var o = t.charCodeAt(u++);
@@ -150,14 +150,14 @@ let protobuf;
       3: [
         function (t, i, n) {
           function a(i, n) {
-            "string" == typeof i && ((n = i), (i = g));
+            'string' == typeof i && ((n = i), (i = g));
             var h = [];
             function f(t) {
-              if ("string" != typeof t) {
+              if ('string' != typeof t) {
                 var i = c();
                 if (
-                  (a.verbose && console.log("codegen: " + i),
-                  (i = "return " + i),
+                  (a.verbose && console.log('codegen: ' + i),
+                  (i = 'return ' + i),
                   t)
                 ) {
                   for (
@@ -180,32 +180,32 @@ let protobuf;
                 (t = t.replace(/%([%dfijs])/g, function (t, i) {
                   var n = u[o++];
                   switch (i) {
-                    case "d":
-                    case "f":
-                      return "" + +("" + n);
-                    case "i":
-                      return "" + Math.floor(n);
-                    case "j":
+                    case 'd':
+                    case 'f':
+                      return '' + +('' + n);
+                    case 'i':
+                      return '' + Math.floor(n);
+                    case 'j':
                       return JSON.stringify(n);
-                    case "s":
-                      return "" + n;
+                    case 's':
+                      return '' + n;
                   }
-                  return "%";
+                  return '%';
                 })),
                 o !== u.length)
               )
-                throw Error("parameter count mismatch");
+                throw Error('parameter count mismatch');
               return h.push(t), f;
             }
             function c(t) {
               return (
-                "function " +
-                (t || n || "") +
-                "(" +
-                ((i && i.join(",")) || "") +
-                "){\n  " +
-                h.join("\n  ") +
-                "\n}"
+                'function ' +
+                (t || n || '') +
+                '(' +
+                ((i && i.join(',')) || '') +
+                '){\n  ' +
+                h.join('\n  ') +
+                '\n}'
               );
             }
             return (f.toString = c), f;
@@ -249,18 +249,18 @@ let protobuf;
         function (t, i, n) {
           i.exports = o;
           var s = t(1),
-            u = t(7)("fs");
+            u = t(7)('fs');
           function o(n, r, e) {
             return (
-              (r = "function" == typeof r ? ((e = r), {}) : r || {}),
+              (r = 'function' == typeof r ? ((e = r), {}) : r || {}),
               e
                 ? !r.xhr && u && u.readFile
                   ? u.readFile(n, function (t, i) {
-                      return t && "undefined" != typeof XMLHttpRequest
+                      return t && 'undefined' != typeof XMLHttpRequest
                         ? o.xhr(n, r, e)
                         : t
                         ? e(t)
-                        : e(null, r.binary ? i : i.toString("utf8"));
+                        : e(null, r.binary ? i : i.toString('utf8'));
                     })
                   : o.xhr(n, r, e)
                 : s(o, this, n, r)
@@ -271,23 +271,23 @@ let protobuf;
             (e.onreadystatechange = function () {
               if (4 !== e.readyState) return g;
               if (0 !== e.status && 200 !== e.status)
-                return r(Error("status " + e.status));
+                return r(Error('status ' + e.status));
               if (n.binary) {
                 if (!(t = e.response))
                   for (var t = [], i = 0; i < e.responseText.length; ++i)
                     t.push(255 & e.responseText.charCodeAt(i));
                 return r(
                   null,
-                  "undefined" != typeof Uint8Array ? new Uint8Array(t) : t
+                  'undefined' != typeof Uint8Array ? new Uint8Array(t) : t
                 );
               }
               return r(null, e.responseText);
             }),
               n.binary &&
-                ("overrideMimeType" in e &&
-                  e.overrideMimeType("text/plain; charset=x-user-defined"),
-                (e.responseType = "arraybuffer")),
-              e.open("GET", t),
+                ('overrideMimeType' in e &&
+                  e.overrideMimeType('text/plain; charset=x-user-defined'),
+                (e.responseType = 'arraybuffer')),
+              e.open('GET', t),
               e.send();
           };
         },
@@ -462,7 +462,7 @@ let protobuf;
               );
             }
             return (
-              "undefined" != typeof Float32Array
+              'undefined' != typeof Float32Array
                 ? ((o = new Float32Array([-0])),
                   (h = new Uint8Array(o.buffer)),
                   (a = 128 === h[3]),
@@ -474,7 +474,7 @@ let protobuf;
                   (t.writeFloatBE = i.bind(null, w)),
                   (t.readFloatLE = n.bind(null, g)),
                   (t.readFloatBE = n.bind(null, j))),
-              "undefined" != typeof Float64Array
+              'undefined' != typeof Float64Array
                 ? ((f = new Float64Array([-0])),
                   (c = new Uint8Array(f.buffer)),
                   (a = 128 === c[7]),
@@ -521,7 +521,7 @@ let protobuf;
         function (t, i, n) {
           function r(t) {
             try {
-              var i = eval("require")(t);
+              var i = eval('require')(t);
               if (i && (i.length || Object.keys(i).length)) return i;
             } catch (t) {}
             return null;
@@ -536,30 +536,30 @@ let protobuf;
               return /^(?:\/|\w+:)/.test(t);
             }),
             r = (n.normalize = function (t) {
-              var i = (t = t.replace(/\\/g, "/").replace(/\/{2,}/g, "/")).split(
-                  "/"
+              var i = (t = t.replace(/\\/g, '/').replace(/\/{2,}/g, '/')).split(
+                  '/'
                 ),
                 n = e(t),
-                t = "";
-              n && (t = i.shift() + "/");
+                t = '';
+              n && (t = i.shift() + '/');
               for (var r = 0; r < i.length; )
-                ".." === i[r]
-                  ? 0 < r && ".." !== i[r - 1]
+                '..' === i[r]
+                  ? 0 < r && '..' !== i[r - 1]
                     ? i.splice(--r, 2)
                     : n
                     ? i.splice(r, 1)
                     : ++r
-                  : "." === i[r]
+                  : '.' === i[r]
                   ? i.splice(r, 1)
                   : ++r;
-              return t + i.join("/");
+              return t + i.join('/');
             });
           n.resolve = function (t, i, n) {
             return (
               n || (i = r(i)),
               !e(i) &&
-              (t = (t = n ? t : r(t)).replace(/(?:\/|^)[^/]+$/, "")).length
-                ? r(t + "/" + i)
+              (t = (t = n ? t : r(t)).replace(/(?:\/|^)[^/]+$/, '')).length
+                ? r(t + '/' + i)
                 : i
             );
           };
@@ -597,7 +597,7 @@ let protobuf;
             return n;
           }),
             (n.read = function (t, i, n) {
-              if (n - i < 1) return "";
+              if (n - i < 1) return '';
               for (var r, e = null, s = [], u = 0; i < n; )
                 (r = t[i++]) < 128
                   ? (s[u++] = r)
@@ -620,7 +620,7 @@ let protobuf;
               return e
                 ? (u &&
                     e.push(String.fromCharCode.apply(String, s.slice(0, u))),
-                  e.join(""))
+                  e.join(''))
                 : String.fromCharCode.apply(String, s.slice(0, u));
             }),
             (n.write = function (t, i, n) {
@@ -653,7 +653,7 @@ let protobuf;
             var e = !1;
             if (i.resolvedType)
               if (i.resolvedType instanceof l) {
-                t("switch(d%s){", r);
+                t('switch(d%s){', r);
                 for (
                   var s = i.resolvedType.values, u = Object.keys(s), o = 0;
                   o < u.length;
@@ -661,81 +661,81 @@ let protobuf;
                 )
                   s[u[o]] !== i.typeDefault ||
                     e ||
-                    (t("default:")(
+                    (t('default:')(
                       'if(typeof(d%s)==="number"){m%s=d%s;break}',
                       r,
                       r,
                       r
                     ),
-                    i.repeated || t("break"),
+                    i.repeated || t('break'),
                     (e = !0)),
-                    t("case%j:", u[o])("case %i:", s[u[o]])(
-                      "m%s=%j",
+                    t('case%j:', u[o])('case %i:', s[u[o]])(
+                      'm%s=%j',
                       r,
                       s[u[o]]
-                    )("break");
-                t("}");
+                    )('break');
+                t('}');
               } else
                 t('if(typeof d%s!=="object")', r)(
-                  "throw TypeError(%j)",
-                  i.fullName + ": object expected"
-                )("m%s=types[%i].fromObject(d%s)", r, n, r);
+                  'throw TypeError(%j)',
+                  i.fullName + ': object expected'
+                )('m%s=types[%i].fromObject(d%s)', r, n, r);
             else {
               var h = !1;
               switch (i.type) {
-                case "double":
-                case "float":
-                  t("m%s=Number(d%s)", r, r);
+                case 'double':
+                case 'float':
+                  t('m%s=Number(d%s)', r, r);
                   break;
-                case "uint32":
-                case "fixed32":
-                  t("m%s=d%s>>>0", r, r);
+                case 'uint32':
+                case 'fixed32':
+                  t('m%s=d%s>>>0', r, r);
                   break;
-                case "int32":
-                case "sint32":
-                case "sfixed32":
-                  t("m%s=d%s|0", r, r);
+                case 'int32':
+                case 'sint32':
+                case 'sfixed32':
+                  t('m%s=d%s|0', r, r);
                   break;
-                case "uint64":
+                case 'uint64':
                   h = !0;
-                case "int64":
-                case "sint64":
-                case "fixed64":
-                case "sfixed64":
-                  t("if(util.Long)")(
-                    "(m%s=util.Long.fromValue(d%s)).unsigned=%j",
+                case 'int64':
+                case 'sint64':
+                case 'fixed64':
+                case 'sfixed64':
+                  t('if(util.Long)')(
+                    '(m%s=util.Long.fromValue(d%s)).unsigned=%j',
                     r,
                     r,
                     h
                   )('else if(typeof d%s==="string")', r)(
-                    "m%s=parseInt(d%s,10)",
+                    'm%s=parseInt(d%s,10)',
                     r,
                     r
                   )('else if(typeof d%s==="number")', r)(
-                    "m%s=d%s",
+                    'm%s=d%s',
                     r,
                     r
                   )('else if(typeof d%s==="object")', r)(
-                    "m%s=new util.LongBits(d%s.low>>>0,d%s.high>>>0).toNumber(%s)",
+                    'm%s=new util.LongBits(d%s.low>>>0,d%s.high>>>0).toNumber(%s)',
                     r,
                     r,
                     r,
-                    h ? "true" : ""
+                    h ? 'true' : ''
                   );
                   break;
-                case "bytes":
+                case 'bytes':
                   t('if(typeof d%s==="string")', r)(
-                    "util.base64.decode(d%s,m%s=util.newBuffer(util.base64.length(d%s)),0)",
+                    'util.base64.decode(d%s,m%s=util.newBuffer(util.base64.length(d%s)),0)',
                     r,
                     r,
                     r
-                  )("else if(d%s.length >= 0)", r)("m%s=d%s", r, r);
+                  )('else if(d%s.length >= 0)', r)('m%s=d%s', r, r);
                   break;
-                case "string":
-                  t("m%s=String(d%s)", r, r);
+                case 'string':
+                  t('m%s=String(d%s)', r, r);
                   break;
-                case "bool":
-                  t("m%s=Boolean(d%s)", r, r);
+                case 'bool':
+                  t('m%s=Boolean(d%s)', r, r);
               }
             }
             return t;
@@ -744,7 +744,7 @@ let protobuf;
             if (i.resolvedType)
               i.resolvedType instanceof l
                 ? t(
-                    "d%s=o.enums===String?(types[%i].values[m%s]===undefined?m%s:types[%i].values[m%s]):m%s",
+                    'd%s=o.enums===String?(types[%i].values[m%s]===undefined?m%s:types[%i].values[m%s]):m%s',
                     r,
                     n,
                     r,
@@ -753,38 +753,38 @@ let protobuf;
                     r,
                     r
                   )
-                : t("d%s=types[%i].toObject(m%s,o)", r, n, r);
+                : t('d%s=types[%i].toObject(m%s,o)', r, n, r);
             else {
               var e = !1;
               switch (i.type) {
-                case "double":
-                case "float":
-                  t("d%s=o.json&&!isFinite(m%s)?String(m%s):m%s", r, r, r, r);
+                case 'double':
+                case 'float':
+                  t('d%s=o.json&&!isFinite(m%s)?String(m%s):m%s', r, r, r, r);
                   break;
-                case "uint64":
+                case 'uint64':
                   e = !0;
-                case "int64":
-                case "sint64":
-                case "fixed64":
-                case "sfixed64":
+                case 'int64':
+                case 'sint64':
+                case 'fixed64':
+                case 'sfixed64':
                   t('if(typeof m%s==="number")', r)(
-                    "d%s=o.longs===String?String(m%s):m%s",
+                    'd%s=o.longs===String?String(m%s):m%s',
                     r,
                     r,
                     r
-                  )("else")(
-                    "d%s=o.longs===String?util.Long.prototype.toString.call(m%s):o.longs===Number?new util.LongBits(m%s.low>>>0,m%s.high>>>0).toNumber(%s):m%s",
+                  )('else')(
+                    'd%s=o.longs===String?util.Long.prototype.toString.call(m%s):o.longs===Number?new util.LongBits(m%s.low>>>0,m%s.high>>>0).toNumber(%s):m%s',
                     r,
                     r,
                     r,
                     r,
-                    e ? "true" : "",
+                    e ? 'true' : '',
                     r
                   );
                   break;
-                case "bytes":
+                case 'bytes':
                   t(
-                    "d%s=o.bytes===String?util.base64.encode(m%s,0,m%s.length):o.bytes===Array?Array.prototype.slice.call(m%s):m%s",
+                    'd%s=o.bytes===String?util.base64.encode(m%s,0,m%s.length):o.bytes===Array?Array.prototype.slice.call(m%s):m%s',
                     r,
                     r,
                     r,
@@ -793,7 +793,7 @@ let protobuf;
                   );
                   break;
                 default:
-                  t("d%s=m%s", r, r);
+                  t('d%s=m%s', r, r);
               }
             }
             return t;
@@ -801,42 +801,42 @@ let protobuf;
           (n.fromObject = function (t) {
             var i = t.fieldsArray,
               n = d.codegen(
-                ["d"],
-                t.name + "$fromObject"
-              )("if(d instanceof this.ctor)")("return d");
-            if (!i.length) return n("return new this.ctor");
-            n("var m=new this.ctor");
+                ['d'],
+                t.name + '$fromObject'
+              )('if(d instanceof this.ctor)')('return d');
+            if (!i.length) return n('return new this.ctor');
+            n('var m=new this.ctor');
             for (var r = 0; r < i.length; ++r) {
               var e = i[r].resolve(),
                 s = d.safeProp(e.name);
               e.map
-                ? (n("if(d%s){", s)('if(typeof d%s!=="object")', s)(
-                    "throw TypeError(%j)",
-                    e.fullName + ": object expected"
-                  )("m%s={}", s)(
-                    "for(var ks=Object.keys(d%s),i=0;i<ks.length;++i){",
+                ? (n('if(d%s){', s)('if(typeof d%s!=="object")', s)(
+                    'throw TypeError(%j)',
+                    e.fullName + ': object expected'
+                  )('m%s={}', s)(
+                    'for(var ks=Object.keys(d%s),i=0;i<ks.length;++i){',
                     s
                   ),
-                  u(n, e, r, s + "[ks[i]]")("}")("}"))
+                  u(n, e, r, s + '[ks[i]]')('}')('}'))
                 : e.repeated
-                ? (n("if(d%s){", s)("if(!Array.isArray(d%s))", s)(
-                    "throw TypeError(%j)",
-                    e.fullName + ": array expected"
-                  )("m%s=[]", s)("for(var i=0;i<d%s.length;++i){", s),
-                  u(n, e, r, s + "[i]")("}")("}"))
-                : (e.resolvedType instanceof l || n("if(d%s!=null){", s),
+                ? (n('if(d%s){', s)('if(!Array.isArray(d%s))', s)(
+                    'throw TypeError(%j)',
+                    e.fullName + ': array expected'
+                  )('m%s=[]', s)('for(var i=0;i<d%s.length;++i){', s),
+                  u(n, e, r, s + '[i]')('}')('}'))
+                : (e.resolvedType instanceof l || n('if(d%s!=null){', s),
                   u(n, e, r, s),
-                  e.resolvedType instanceof l || n("}"));
+                  e.resolvedType instanceof l || n('}'));
             }
-            return n("return m");
+            return n('return m');
           }),
             (n.toObject = function (t) {
               var i = t.fieldsArray.slice().sort(d.compareFieldsById);
-              if (!i.length) return d.codegen()("return {}");
+              if (!i.length) return d.codegen()('return {}');
               for (
-                var n = d.codegen(["m", "o"], t.name + "$toObject")("if(!o)")(
-                    "o={}"
-                  )("var d={}"),
+                var n = d.codegen(['m', 'o'], t.name + '$toObject')('if(!o)')(
+                    'o={}'
+                  )('var d={}'),
                   r = [],
                   e = [],
                   s = [],
@@ -847,92 +847,92 @@ let protobuf;
                 i[u].partOf ||
                   (i[u].resolve().repeated ? r : i[u].map ? e : s).push(i[u]);
               if (r.length) {
-                for (n("if(o.arrays||o.defaults){"), u = 0; u < r.length; ++u)
-                  n("d%s=[]", d.safeProp(r[u].name));
-                n("}");
+                for (n('if(o.arrays||o.defaults){'), u = 0; u < r.length; ++u)
+                  n('d%s=[]', d.safeProp(r[u].name));
+                n('}');
               }
               if (e.length) {
-                for (n("if(o.objects||o.defaults){"), u = 0; u < e.length; ++u)
-                  n("d%s={}", d.safeProp(e[u].name));
-                n("}");
+                for (n('if(o.objects||o.defaults){'), u = 0; u < e.length; ++u)
+                  n('d%s={}', d.safeProp(e[u].name));
+                n('}');
               }
               if (s.length) {
-                for (n("if(o.defaults){"), u = 0; u < s.length; ++u) {
+                for (n('if(o.defaults){'), u = 0; u < s.length; ++u) {
                   var o,
                     h = s[u],
                     f = d.safeProp(h.name);
                   h.resolvedType instanceof l
                     ? n(
-                        "d%s=o.enums===String?%j:%j",
+                        'd%s=o.enums===String?%j:%j',
                         f,
                         h.resolvedType.valuesById[h.typeDefault],
                         h.typeDefault
                       )
                     : h.long
-                    ? n("if(util.Long){")(
-                        "var n=new util.Long(%i,%i,%j)",
+                    ? n('if(util.Long){')(
+                        'var n=new util.Long(%i,%i,%j)',
                         h.typeDefault.low,
                         h.typeDefault.high,
                         h.typeDefault.unsigned
                       )(
-                        "d%s=o.longs===String?n.toString():o.longs===Number?n.toNumber():n",
+                        'd%s=o.longs===String?n.toString():o.longs===Number?n.toNumber():n',
                         f
-                      )("}else")(
-                        "d%s=o.longs===String?%j:%i",
+                      )('}else')(
+                        'd%s=o.longs===String?%j:%i',
                         f,
                         h.typeDefault.toString(),
                         h.typeDefault.toNumber()
                       )
                     : h.bytes
                     ? ((o =
-                        "[" +
-                        Array.prototype.slice.call(h.typeDefault).join(",") +
-                        "]"),
+                        '[' +
+                        Array.prototype.slice.call(h.typeDefault).join(',') +
+                        ']'),
                       n(
-                        "if(o.bytes===String)d%s=%j",
+                        'if(o.bytes===String)d%s=%j',
                         f,
                         String.fromCharCode.apply(String, h.typeDefault)
-                      )("else{")("d%s=%s", f, o)(
-                        "if(o.bytes!==Array)d%s=util.newBuffer(d%s)",
+                      )('else{')('d%s=%s', f, o)(
+                        'if(o.bytes!==Array)d%s=util.newBuffer(d%s)',
                         f,
                         f
-                      )("}"))
-                    : n("d%s=%j", f, h.typeDefault);
+                      )('}'))
+                    : n('d%s=%j', f, h.typeDefault);
                 }
-                n("}");
+                n('}');
               }
               for (var c = !1, u = 0; u < i.length; ++u) {
                 var h = i[u],
                   a = t.i.indexOf(h),
                   f = d.safeProp(h.name);
                 h.map
-                  ? (c || ((c = !0), n("var ks2")),
+                  ? (c || ((c = !0), n('var ks2')),
                     n(
-                      "if(m%s&&(ks2=Object.keys(m%s)).length){",
+                      'if(m%s&&(ks2=Object.keys(m%s)).length){',
                       f,
                       f
                     )(
-                      "d%s={}",
+                      'd%s={}',
                       f
-                    )("for(var j=0;j<ks2.length;++j){"),
-                    v(n, h, a, f + "[ks2[j]]")("}"))
+                    )('for(var j=0;j<ks2.length;++j){'),
+                    v(n, h, a, f + '[ks2[j]]')('}'))
                   : h.repeated
-                  ? (n("if(m%s&&m%s.length){", f, f)("d%s=[]", f)(
-                      "for(var j=0;j<m%s.length;++j){",
+                  ? (n('if(m%s&&m%s.length){', f, f)('d%s=[]', f)(
+                      'for(var j=0;j<m%s.length;++j){',
                       f
                     ),
-                    v(n, h, a, f + "[j]")("}"))
-                  : (n("if(m%s!=null&&m.hasOwnProperty(%j)){", f, h.name),
+                    v(n, h, a, f + '[j]')('}'))
+                  : (n('if(m%s!=null&&m.hasOwnProperty(%j)){', f, h.name),
                     v(n, h, a, f),
                     h.partOf &&
-                      n("if(o.oneofs)")(
-                        "d%s=%j",
+                      n('if(o.oneofs)')(
+                        'd%s=%j',
                         d.safeProp(h.partOf.name),
                         h.name
                       )),
-                  n("}");
+                  n('}');
               }
-              return n("return d");
+              return n('return d');
             });
         },
         { 14: 14, 33: 33 },
@@ -941,94 +941,94 @@ let protobuf;
         function (t, i, n) {
           i.exports = function (t) {
             var i = f.codegen(
-              ["r", "l"],
-              t.name + "$decode"
-            )("if(!(r instanceof Reader))")("r=Reader.create(r)")(
-              "var c=l===undefined?r.len:r.pos+l,m=new this.ctor" +
+              ['r', 'l'],
+              t.name + '$decode'
+            )('if(!(r instanceof Reader))')('r=Reader.create(r)')(
+              'var c=l===undefined?r.len:r.pos+l,m=new this.ctor' +
                 (t.fieldsArray.filter(function (t) {
                   return t.map;
                 }).length
-                  ? ",k,value"
-                  : "")
-            )("while(r.pos<c){")("var t=r.uint32()");
-            t.group && i("if((t&7)===4)")("break");
-            i("switch(t>>>3){");
+                  ? ',k,value'
+                  : '')
+            )('while(r.pos<c){')('var t=r.uint32()');
+            t.group && i('if((t&7)===4)')('break');
+            i('switch(t>>>3){');
             for (var n = 0; n < t.fieldsArray.length; ++n) {
               var r = t.i[n].resolve(),
-                e = r.resolvedType instanceof o ? "int32" : r.type,
-                s = "m" + f.safeProp(r.name);
-              i("case %i: {", r.id),
+                e = r.resolvedType instanceof o ? 'int32' : r.type,
+                s = 'm' + f.safeProp(r.name);
+              i('case %i: {', r.id),
                 r.map
-                  ? (i("if(%s===util.emptyObject)", s)("%s={}", s)(
-                      "var c2 = r.uint32()+r.pos"
+                  ? (i('if(%s===util.emptyObject)', s)('%s={}', s)(
+                      'var c2 = r.uint32()+r.pos'
                     ),
                     h.defaults[r.keyType] !== g
-                      ? i("k=%j", h.defaults[r.keyType])
-                      : i("k=null"),
+                      ? i('k=%j', h.defaults[r.keyType])
+                      : i('k=null'),
                     h.defaults[e] !== g
-                      ? i("value=%j", h.defaults[e])
-                      : i("value=null"),
-                    i("while(r.pos<c2){")("var tag2=r.uint32()")(
-                      "switch(tag2>>>3){"
+                      ? i('value=%j', h.defaults[e])
+                      : i('value=null'),
+                    i('while(r.pos<c2){')('var tag2=r.uint32()')(
+                      'switch(tag2>>>3){'
                     )(
-                      "case 1: k=r.%s(); break",
+                      'case 1: k=r.%s(); break',
                       r.keyType
-                    )("case 2:"),
+                    )('case 2:'),
                     h.basic[e] === g
-                      ? i("value=types[%i].decode(r,r.uint32())", n)
-                      : i("value=r.%s()", e),
-                    i("break")("default:")("r.skipType(tag2&7)")("break")("}")(
-                      "}"
+                      ? i('value=types[%i].decode(r,r.uint32())', n)
+                      : i('value=r.%s()', e),
+                    i('break')('default:')('r.skipType(tag2&7)')('break')('}')(
+                      '}'
                     ),
                     h.long[r.keyType] !== g
                       ? i(
                           '%s[typeof k==="object"?util.longToHash(k):k]=value',
                           s
                         )
-                      : i("%s[k]=value", s))
+                      : i('%s[k]=value', s))
                   : r.repeated
-                  ? (i("if(!(%s&&%s.length))", s, s)("%s=[]", s),
+                  ? (i('if(!(%s&&%s.length))', s, s)('%s=[]', s),
                     h.packed[e] !== g &&
-                      i("if((t&7)===2){")("var c2=r.uint32()+r.pos")(
-                        "while(r.pos<c2)"
+                      i('if((t&7)===2){')('var c2=r.uint32()+r.pos')(
+                        'while(r.pos<c2)'
                       )(
-                        "%s.push(r.%s())",
+                        '%s.push(r.%s())',
                         s,
                         e
-                      )("}else"),
+                      )('}else'),
                     h.basic[e] === g
                       ? i(
                           r.resolvedType.group
-                            ? "%s.push(types[%i].decode(r))"
-                            : "%s.push(types[%i].decode(r,r.uint32()))",
+                            ? '%s.push(types[%i].decode(r))'
+                            : '%s.push(types[%i].decode(r,r.uint32()))',
                           s,
                           n
                         )
-                      : i("%s.push(r.%s())", s, e))
+                      : i('%s.push(r.%s())', s, e))
                   : h.basic[e] === g
                   ? i(
                       r.resolvedType.group
-                        ? "%s=types[%i].decode(r)"
-                        : "%s=types[%i].decode(r,r.uint32())",
+                        ? '%s=types[%i].decode(r)'
+                        : '%s=types[%i].decode(r,r.uint32())',
                       s,
                       n
                     )
-                  : i("%s=r.%s()", s, e),
-                i("break")("}");
+                  : i('%s=r.%s()', s, e),
+                i('break')('}');
             }
             for (
-              i("default:")("r.skipType(t&7)")("break")("}")("}"), n = 0;
+              i('default:')('r.skipType(t&7)')('break')('}')('}'), n = 0;
               n < t.i.length;
               ++n
             ) {
               var u = t.i[n];
               u.required &&
-                i("if(!m.hasOwnProperty(%j))", u.name)(
-                  "throw util.ProtocolError(%j,{instance:m})",
+                i('if(!m.hasOwnProperty(%j))', u.name)(
+                  'throw util.ProtocolError(%j,{instance:m})',
                   "missing required '" + u.name + "'"
                 );
             }
-            return i("return m");
+            return i('return m');
           };
           var o = t(14),
             h = t(32),
@@ -1041,8 +1041,8 @@ let protobuf;
           i.exports = function (t) {
             for (
               var i,
-                n = a.codegen(["m", "w"], t.name + "$encode")("if(!w)")(
-                  "w=Writer.create()"
+                n = a.codegen(['m', 'w'], t.name + '$encode')('if(!w)')(
+                  'w=Writer.create()'
                 ),
                 r = t.fieldsArray.slice().sort(a.compareFieldsById),
                 e = 0;
@@ -1051,65 +1051,65 @@ let protobuf;
             ) {
               var s = r[e].resolve(),
                 u = t.i.indexOf(s),
-                o = s.resolvedType instanceof f ? "int32" : s.type,
+                o = s.resolvedType instanceof f ? 'int32' : s.type,
                 h = c.basic[o];
-              (i = "m" + a.safeProp(s.name)),
+              (i = 'm' + a.safeProp(s.name)),
                 s.map
                   ? (n(
-                      "if(%s!=null&&Object.hasOwnProperty.call(m,%j)){",
+                      'if(%s!=null&&Object.hasOwnProperty.call(m,%j)){',
                       i,
                       s.name
-                    )("for(var ks=Object.keys(%s),i=0;i<ks.length;++i){", i)(
-                      "w.uint32(%i).fork().uint32(%i).%s(ks[i])",
+                    )('for(var ks=Object.keys(%s),i=0;i<ks.length;++i){', i)(
+                      'w.uint32(%i).fork().uint32(%i).%s(ks[i])',
                       ((s.id << 3) | 2) >>> 0,
                       8 | c.mapKey[s.keyType],
                       s.keyType
                     ),
                     h === g
                       ? n(
-                          "types[%i].encode(%s[ks[i]],w.uint32(18).fork()).ldelim().ldelim()",
+                          'types[%i].encode(%s[ks[i]],w.uint32(18).fork()).ldelim().ldelim()',
                           u,
                           i
                         )
-                      : n(".uint32(%i).%s(%s[ks[i]]).ldelim()", 16 | h, o, i),
-                    n("}")("}"))
+                      : n('.uint32(%i).%s(%s[ks[i]]).ldelim()', 16 | h, o, i),
+                    n('}')('}'))
                   : s.repeated
-                  ? (n("if(%s!=null&&%s.length){", i, i),
+                  ? (n('if(%s!=null&&%s.length){', i, i),
                     s.packed && c.packed[o] !== g
-                      ? n("w.uint32(%i).fork()", ((s.id << 3) | 2) >>> 0)(
-                          "for(var i=0;i<%s.length;++i)",
+                      ? n('w.uint32(%i).fork()', ((s.id << 3) | 2) >>> 0)(
+                          'for(var i=0;i<%s.length;++i)',
                           i
                         )(
-                          "w.%s(%s[i])",
+                          'w.%s(%s[i])',
                           o,
                           i
-                        )("w.ldelim()")
-                      : (n("for(var i=0;i<%s.length;++i)", i),
+                        )('w.ldelim()')
+                      : (n('for(var i=0;i<%s.length;++i)', i),
                         h === g
-                          ? l(n, s, u, i + "[i]")
+                          ? l(n, s, u, i + '[i]')
                           : n(
-                              "w.uint32(%i).%s(%s[i])",
+                              'w.uint32(%i).%s(%s[i])',
                               ((s.id << 3) | h) >>> 0,
                               o,
                               i
                             )),
-                    n("}"))
+                    n('}'))
                   : (s.optional &&
                       n(
-                        "if(%s!=null&&Object.hasOwnProperty.call(m,%j))",
+                        'if(%s!=null&&Object.hasOwnProperty.call(m,%j))',
                         i,
                         s.name
                       ),
                     h === g
                       ? l(n, s, u, i)
                       : n(
-                          "w.uint32(%i).%s(%s)",
+                          'w.uint32(%i).%s(%s)',
                           ((s.id << 3) | h) >>> 0,
                           o,
                           i
                         ));
             }
-            return n("return w");
+            return n('return w');
           };
           var f = t(14),
             c = t(32),
@@ -1117,14 +1117,14 @@ let protobuf;
           function l(t, i, n, r) {
             i.resolvedType.group
               ? t(
-                  "types[%i].encode(%s,w.uint32(%i)).uint32(%i)",
+                  'types[%i].encode(%s,w.uint32(%i)).uint32(%i)',
                   n,
                   r,
                   ((i.id << 3) | 3) >>> 0,
                   ((i.id << 3) | 4) >>> 0
                 )
               : t(
-                  "types[%i].encode(%s,w.uint32(%i).fork()).ldelim()",
+                  'types[%i].encode(%s,w.uint32(%i).fork()).ldelim()',
                   n,
                   r,
                   ((i.id << 3) | 2) >>> 0
@@ -1139,12 +1139,12 @@ let protobuf;
           var h = t(22),
             r =
               ((((s.prototype = Object.create(h.prototype)).constructor =
-                s).className = "Enum"),
+                s).className = 'Enum'),
               t(21)),
             e = t(33);
           function s(t, i, n, r, e, s) {
-            if ((h.call(this, t, n), i && "object" != typeof i))
-              throw TypeError("values must be an object");
+            if ((h.call(this, t, n), i && 'object' != typeof i))
+              throw TypeError('values must be an object');
             if (
               ((this.valuesById = {}),
               (this.values = Object.create(this.valuesById)),
@@ -1155,7 +1155,7 @@ let protobuf;
               i)
             )
               for (var u = Object.keys(i), o = 0; o < u.length; ++o)
-                "number" == typeof i[u[o]] &&
+                'number' == typeof i[u[o]] &&
                   (this.valuesById[(this.values[u[o]] = i[u[o]])] = u[o]);
           }
           (s.fromJSON = function (t, i) {
@@ -1165,32 +1165,32 @@ let protobuf;
             (s.prototype.toJSON = function (t) {
               t = !!t && !!t.keepComments;
               return e.toObject([
-                "options",
+                'options',
                 this.options,
-                "valuesOptions",
+                'valuesOptions',
                 this.valuesOptions,
-                "values",
+                'values',
                 this.values,
-                "reserved",
+                'reserved',
                 this.reserved && this.reserved.length ? this.reserved : g,
-                "comment",
+                'comment',
                 t ? this.comment : g,
-                "comments",
+                'comments',
                 t ? this.comments : g,
               ]);
             }),
             (s.prototype.add = function (t, i, n, r) {
-              if (!e.isString(t)) throw TypeError("name must be a string");
-              if (!e.isInteger(i)) throw TypeError("id must be an integer");
+              if (!e.isString(t)) throw TypeError('name must be a string');
+              if (!e.isInteger(i)) throw TypeError('id must be an integer');
               if (this.values[t] !== g)
                 throw Error("duplicate name '" + t + "' in " + this);
               if (this.isReservedId(i))
-                throw Error("id " + i + " is reserved in " + this);
+                throw Error('id ' + i + ' is reserved in ' + this);
               if (this.isReservedName(t))
                 throw Error("name '" + t + "' is reserved in " + this);
               if (this.valuesById[i] !== g) {
                 if (!this.options || !this.options.allow_alias)
-                  throw Error("duplicate id " + i + " in " + this);
+                  throw Error('duplicate id ' + i + ' in ' + this);
                 this.values[t] = i;
               } else this.valuesById[(this.values[t] = i)] = t;
               return (
@@ -1202,7 +1202,7 @@ let protobuf;
               );
             }),
             (s.prototype.remove = function (t) {
-              if (!e.isString(t)) throw TypeError("name must be a string");
+              if (!e.isString(t)) throw TypeError('name must be a string');
               var i = this.values[t];
               if (null == i)
                 throw Error("name '" + t + "' does not exist in " + this);
@@ -1230,7 +1230,7 @@ let protobuf;
             o = t(22),
             e =
               ((((u.prototype = Object.create(o.prototype)).constructor =
-                u).className = "Field"),
+                u).className = 'Field'),
               t(14)),
             h = t(32),
             f = t(33),
@@ -1243,29 +1243,29 @@ let protobuf;
               o.call(this, t, s),
               !f.isInteger(i) || i < 0)
             )
-              throw TypeError("id must be a non-negative integer");
-            if (!f.isString(n)) throw TypeError("type must be a string");
+              throw TypeError('id must be a non-negative integer');
+            if (!f.isString(n)) throw TypeError('type must be a string');
             if (r !== g && !c.test((r = r.toString().toLowerCase())))
-              throw TypeError("rule must be a string rule");
+              throw TypeError('rule must be a string rule');
             if (e !== g && !f.isString(e))
-              throw TypeError("extend must be a string");
+              throw TypeError('extend must be a string');
             (this.rule =
-              (r = "proto3_optional" === r ? "optional" : r) && "optional" !== r
+              (r = 'proto3_optional' === r ? 'optional' : r) && 'optional' !== r
                 ? r
                 : g),
               (this.type = n),
               (this.id = i),
               (this.extend = e || g),
-              (this.required = "required" === r),
+              (this.required = 'required' === r),
               (this.optional = !this.required),
-              (this.repeated = "repeated" === r),
+              (this.repeated = 'repeated' === r),
               (this.map = !1),
               (this.message = null),
               (this.partOf = null),
               (this.typeDefault = null),
               (this.defaultValue = null),
               (this.long = !!f.Long && h.long[n] !== g),
-              (this.bytes = "bytes" === n),
+              (this.bytes = 'bytes' === n),
               (this.resolvedType = null),
               (this.extensionField = null),
               (this.declaringField = null),
@@ -1283,34 +1283,34 @@ let protobuf;
               i.comment
             );
           }),
-            Object.defineProperty(u.prototype, "packed", {
+            Object.defineProperty(u.prototype, 'packed', {
               get: function () {
                 return (
-                  null === this.n && (this.n = !1 !== this.getOption("packed")),
+                  null === this.n && (this.n = !1 !== this.getOption('packed')),
                   this.n
                 );
               },
             }),
             (u.prototype.setOption = function (t, i, n) {
               return (
-                "packed" === t && (this.n = null),
+                'packed' === t && (this.n = null),
                 o.prototype.setOption.call(this, t, i, n)
               );
             }),
             (u.prototype.toJSON = function (t) {
               t = !!t && !!t.keepComments;
               return f.toObject([
-                "rule",
-                ("optional" !== this.rule && this.rule) || g,
-                "type",
+                'rule',
+                ('optional' !== this.rule && this.rule) || g,
+                'type',
                 this.type,
-                "id",
+                'id',
                 this.id,
-                "extend",
+                'extend',
                 this.extend,
-                "options",
+                'options',
                 this.options,
-                "comment",
+                'comment',
                 t ? this.comment : g,
               ]);
             }),
@@ -1335,7 +1335,7 @@ let protobuf;
                     null != this.options.default &&
                     ((this.typeDefault = this.options.default),
                     this.resolvedType instanceof e &&
-                      "string" == typeof this.typeDefault &&
+                      'string' == typeof this.typeDefault &&
                       (this.typeDefault =
                         this.resolvedType.values[this.typeDefault])),
                   this.options &&
@@ -1348,11 +1348,11 @@ let protobuf;
                   this.long
                     ? ((this.typeDefault = f.Long.fromNumber(
                         this.typeDefault,
-                        "u" == (this.type[0] || "")
+                        'u' == (this.type[0] || '')
                       )),
                       Object.freeze && Object.freeze(this.typeDefault))
                     : this.bytes &&
-                      "string" == typeof this.typeDefault &&
+                      'string' == typeof this.typeDefault &&
                       (f.base64.test(this.typeDefault)
                         ? f.base64.decode(
                             this.typeDefault,
@@ -1378,9 +1378,9 @@ let protobuf;
             }),
             (u.d = function (n, r, e, s) {
               return (
-                "function" == typeof r
+                'function' == typeof r
                   ? (r = f.decorateType(r).name)
-                  : r && "object" == typeof r && (r = f.decorateEnum(r).name),
+                  : r && 'object' == typeof r && (r = f.decorateEnum(r).name),
                 function (t, i) {
                   f.decorateType(t.constructor).add(
                     new u(i, n, r, e, { default: s })
@@ -1397,10 +1397,10 @@ let protobuf;
       16: [
         function (t, i, n) {
           var r = (i.exports = t(17));
-          (r.build = "light"),
+          (r.build = 'light'),
             (r.load = function (t, i, n) {
               return (i =
-                "function" == typeof i
+                'function' == typeof i
                   ? ((n = i), new r.Root())
                   : i || new r.Root()).load(t, n);
             }),
@@ -1458,7 +1458,7 @@ let protobuf;
           function e() {
             r.util.r(), r.Writer.r(r.BufferWriter), r.Reader.r(r.BufferReader);
           }
-          (r.build = "minimal"),
+          (r.build = 'minimal'),
             (r.Writer = t(38)),
             (r.BufferWriter = t(39)),
             (r.Reader = t(24)),
@@ -1477,12 +1477,12 @@ let protobuf;
           var u = t(15),
             r =
               ((((s.prototype = Object.create(u.prototype)).constructor =
-                s).className = "MapField"),
+                s).className = 'MapField'),
               t(32)),
             o = t(33);
           function s(t, i, n, r, e, s) {
             if ((u.call(this, t, i, r, g, g, e, s), !o.isString(n)))
-              throw TypeError("keyType must be a string");
+              throw TypeError('keyType must be a string');
             (this.keyType = n), (this.resolvedKeyType = null), (this.map = !0);
           }
           (s.fromJSON = function (t, i) {
@@ -1491,31 +1491,31 @@ let protobuf;
             (s.prototype.toJSON = function (t) {
               t = !!t && !!t.keepComments;
               return o.toObject([
-                "keyType",
+                'keyType',
                 this.keyType,
-                "type",
+                'type',
                 this.type,
-                "id",
+                'id',
                 this.id,
-                "extend",
+                'extend',
                 this.extend,
-                "options",
+                'options',
                 this.options,
-                "comment",
+                'comment',
                 t ? this.comment : g,
               ]);
             }),
             (s.prototype.resolve = function () {
               if (this.resolved) return this;
               if (r.mapKey[this.keyType] === g)
-                throw Error("invalid key type: " + this.keyType);
+                throw Error('invalid key type: ' + this.keyType);
               return u.prototype.resolve.call(this);
             }),
             (s.d = function (n, r, e) {
               return (
-                "function" == typeof e
+                'function' == typeof e
                   ? (e = o.decorateType(e).name)
-                  : e && "object" == typeof e && (e = o.decorateEnum(e).name),
+                  : e && 'object' == typeof e && (e = o.decorateEnum(e).name),
                 function (t, i) {
                   o.decorateType(t.constructor).add(new s(i, n, r, e));
                 }
@@ -1569,7 +1569,7 @@ let protobuf;
           var f = t(22),
             c =
               ((((r.prototype = Object.create(f.prototype)).constructor =
-                r).className = "Method"),
+                r).className = 'Method'),
               t(33));
           function r(t, i, n, r, e, s, u, o, h) {
             if (
@@ -1578,12 +1578,12 @@ let protobuf;
                 : c.isObject(s) && ((u = s), (s = g)),
               i !== g && !c.isString(i))
             )
-              throw TypeError("type must be a string");
-            if (!c.isString(n)) throw TypeError("requestType must be a string");
+              throw TypeError('type must be a string');
+            if (!c.isString(n)) throw TypeError('requestType must be a string');
             if (!c.isString(r))
-              throw TypeError("responseType must be a string");
+              throw TypeError('responseType must be a string');
             f.call(this, t, u),
-              (this.type = i || "rpc"),
+              (this.type = i || 'rpc'),
               (this.requestType = n),
               (this.requestStream = !!e || g),
               (this.responseType = r),
@@ -1609,21 +1609,21 @@ let protobuf;
             (r.prototype.toJSON = function (t) {
               t = !!t && !!t.keepComments;
               return c.toObject([
-                "type",
-                ("rpc" !== this.type && this.type) || g,
-                "requestType",
+                'type',
+                ('rpc' !== this.type && this.type) || g,
+                'requestType',
                 this.requestType,
-                "requestStream",
+                'requestStream',
                 this.requestStream,
-                "responseType",
+                'responseType',
                 this.responseType,
-                "responseStream",
+                'responseStream',
                 this.responseStream,
-                "options",
+                'options',
                 this.options,
-                "comment",
+                'comment',
                 t ? this.comment : g,
-                "parsedOptions",
+                'parsedOptions',
                 this.parsedOptions,
               ]);
             }),
@@ -1650,7 +1650,7 @@ let protobuf;
             r = t(22),
             o =
               ((((a.prototype = Object.create(r.prototype)).constructor =
-                a).className = "Namespace"),
+                a).className = 'Namespace'),
               t(15)),
             h = t(33),
             f = t(23);
@@ -1673,7 +1673,7 @@ let protobuf;
             (a.isReservedId = function (t, i) {
               if (t)
                 for (var n = 0; n < t.length; ++n)
-                  if ("string" != typeof t[n] && t[n][0] <= i && t[n][1] > i)
+                  if ('string' != typeof t[n] && t[n][0] <= i && t[n][1] > i)
                     return !0;
               return !1;
             }),
@@ -1682,16 +1682,16 @@ let protobuf;
                 for (var n = 0; n < t.length; ++n) if (t[n] === i) return !0;
               return !1;
             }),
-            Object.defineProperty(a.prototype, "nestedArray", {
+            Object.defineProperty(a.prototype, 'nestedArray', {
               get: function () {
                 return this.e || (this.e = h.toArray(this.nested));
               },
             }),
             (a.prototype.toJSON = function (t) {
               return h.toObject([
-                "options",
+                'options',
                 this.options,
-                "nested",
+                'nested',
                 c(this.nestedArray, t),
               ]);
             }),
@@ -1719,7 +1719,7 @@ let protobuf;
             (a.prototype.getEnum = function (t) {
               if (this.nested && this.nested[t] instanceof u)
                 return this.nested[t].values;
-              throw Error("no such enum: " + t);
+              throw Error('no such enum: ' + t);
             }),
             (a.prototype.add = function (t) {
               if (
@@ -1732,7 +1732,7 @@ let protobuf;
                   t instanceof a
                 )
               )
-                throw TypeError("object must be a valid nested object");
+                throw TypeError('object must be a valid nested object');
               if (this.nested) {
                 var i = this.get(t.name);
                 if (i) {
@@ -1753,9 +1753,9 @@ let protobuf;
             }),
             (a.prototype.remove = function (t) {
               if (!(t instanceof r))
-                throw TypeError("object must be a ReflectionObject");
+                throw TypeError('object must be a ReflectionObject');
               if (t.parent !== this)
-                throw Error(t + " is not a member of " + this);
+                throw Error(t + ' is not a member of ' + this);
               return (
                 delete this.nested[t.name],
                 Object.keys(this.nested).length || (this.nested = g),
@@ -1764,15 +1764,15 @@ let protobuf;
               );
             }),
             (a.prototype.define = function (t, i) {
-              if (h.isString(t)) t = t.split(".");
-              else if (!Array.isArray(t)) throw TypeError("illegal path");
-              if (t && t.length && "" === t[0])
-                throw Error("path must be relative");
+              if (h.isString(t)) t = t.split('.');
+              else if (!Array.isArray(t)) throw TypeError('illegal path');
+              if (t && t.length && '' === t[0])
+                throw Error('path must be relative');
               for (var n = this; 0 < t.length; ) {
                 var r = t.shift();
                 if (n.nested && n.nested[r]) {
                   if (!((n = n.nested[r]) instanceof a))
-                    throw Error("path conflicts with non-namespace objects");
+                    throw Error('path conflicts with non-namespace objects');
                 } else n.add((n = new a(r)));
               }
               return i && n.addJSON(i), n;
@@ -1784,15 +1784,15 @@ let protobuf;
             }),
             (a.prototype.lookup = function (t, i, n) {
               if (
-                ("boolean" == typeof i
+                ('boolean' == typeof i
                   ? ((n = i), (i = g))
                   : i && !Array.isArray(i) && (i = [i]),
                 h.isString(t) && t.length)
               ) {
-                if ("." === t) return this.root;
-                t = t.split(".");
+                if ('.' === t) return this.root;
+                t = t.split('.');
               } else if (!t.length) return this;
-              if ("" === t[0]) return this.root.lookup(t.slice(1), i);
+              if ('' === t[0]) return this.root.lookup(t.slice(1), i);
               var r = this.get(t[0]);
               if (r) {
                 if (1 === t.length) {
@@ -1813,7 +1813,7 @@ let protobuf;
             (a.prototype.lookupType = function (t) {
               var i = this.lookup(t, [e]);
               if (i) return i;
-              throw Error("no such type: " + t);
+              throw Error('no such type: ' + t);
             }),
             (a.prototype.lookupEnum = function (t) {
               var i = this.lookup(t, [u]);
@@ -1838,13 +1838,13 @@ let protobuf;
       ],
       22: [
         function (t, i, n) {
-          (i.exports = e).className = "ReflectionObject";
+          (i.exports = e).className = 'ReflectionObject';
           var r,
             u = t(33);
           function e(t, i) {
-            if (!u.isString(t)) throw TypeError("name must be a string");
+            if (!u.isString(t)) throw TypeError('name must be a string');
             if (i && !u.isObject(i))
-              throw TypeError("options must be an object");
+              throw TypeError('options must be an object');
             (this.options = i),
               (this.parsedOptions = null),
               (this.name = t),
@@ -1864,7 +1864,7 @@ let protobuf;
               get: function () {
                 for (var t = [this.name], i = this.parent; i; )
                   t.unshift(i.name), (i = i.parent);
-                return t.join(".");
+                return t.join('.');
               },
             },
           }),
@@ -1926,7 +1926,7 @@ let protobuf;
             (e.prototype.toString = function () {
               var t = this.constructor.className,
                 i = this.fullName;
-              return i.length ? t + " " + i : t;
+              return i.length ? t + ' ' + i : t;
             }),
             (e.r = function (t) {
               r = t;
@@ -1940,7 +1940,7 @@ let protobuf;
           var e = t(22),
             r =
               ((((u.prototype = Object.create(e.prototype)).constructor =
-                u).className = "OneOf"),
+                u).className = 'OneOf'),
               t(15)),
             s = t(33);
           function u(t, i, n, r) {
@@ -1949,7 +1949,7 @@ let protobuf;
               e.call(this, t, n),
               i !== g && !Array.isArray(i))
             )
-              throw TypeError("fieldNames must be an Array");
+              throw TypeError('fieldNames must be an Array');
             (this.oneof = i || []), (this.fieldsArray = []), (this.comment = r);
           }
           function o(t) {
@@ -1963,11 +1963,11 @@ let protobuf;
             (u.prototype.toJSON = function (t) {
               t = !!t && !!t.keepComments;
               return s.toObject([
-                "options",
+                'options',
                 this.options,
-                "oneof",
+                'oneof',
                 this.oneof,
-                "comment",
+                'comment',
                 t ? this.comment : g,
               ]);
             }),
@@ -1980,12 +1980,12 @@ let protobuf;
                   o((t.partOf = this)),
                   this
                 );
-              throw TypeError("field must be a Field");
+              throw TypeError('field must be a Field');
             }),
             (u.prototype.remove = function (t) {
-              if (!(t instanceof r)) throw TypeError("field must be a Field");
+              if (!(t instanceof r)) throw TypeError('field must be a Field');
               var i = this.fieldsArray.indexOf(t);
-              if (i < 0) throw Error(t + " is not a member of " + this);
+              if (i < 0) throw Error(t + ' is not a member of ' + this);
               return (
                 this.fieldsArray.splice(i, 1),
                 -1 < (i = this.oneof.indexOf(t.name)) &&
@@ -2034,7 +2034,7 @@ let protobuf;
             u = e.utf8;
           function o(t, i) {
             return RangeError(
-              "index out of range: " + t.pos + " + " + (i || 1) + " > " + t.len
+              'index out of range: ' + t.pos + ' + ' + (i || 1) + ' > ' + t.len
             );
           }
           function h(t) {
@@ -2051,15 +2051,15 @@ let protobuf;
           }
           var c,
             a =
-              "undefined" != typeof Uint8Array
+              'undefined' != typeof Uint8Array
                 ? function (t) {
                     if (t instanceof Uint8Array || Array.isArray(t))
                       return new h(t);
-                    throw Error("illegal buffer");
+                    throw Error('illegal buffer');
                   }
                 : function (t) {
                     if (Array.isArray(t)) return new h(t);
-                    throw Error("illegal buffer");
+                    throw Error('illegal buffer');
                   };
           function l() {
             var t = new s(0, 0),
@@ -2111,7 +2111,7 @@ let protobuf;
                 )
                   return t;
               }
-            throw Error("invalid varint encoding");
+            throw Error('invalid varint encoding');
           }
           function d(t, i) {
             return (
@@ -2198,7 +2198,7 @@ let protobuf;
               return u.read(t, 0, t.length);
             }),
             (h.prototype.skip = function (t) {
-              if ("number" == typeof t) {
+              if ('number' == typeof t) {
                 if (this.pos + t > this.len) throw o(this, t);
                 this.pos += t;
               } else
@@ -2226,14 +2226,14 @@ let protobuf;
                   break;
                 default:
                   throw Error(
-                    "invalid wire type " + t + " at offset " + this.pos
+                    'invalid wire type ' + t + ' at offset ' + this.pos
                   );
               }
               return this;
             }),
             (h.r = function (t) {
               (r = t), (h.create = f()), r.r();
-              var i = e.Long ? "toLong" : "toNumber";
+              var i = e.Long ? 'toLong' : 'toNumber';
               e.merge(h.prototype, {
                 int64: function () {
                   return l.call(this)[i](!1);
@@ -2276,7 +2276,7 @@ let protobuf;
                     (this.pos = Math.min(this.pos + t, this.len))
                   )
                 : this.buf.toString(
-                    "utf-8",
+                    'utf-8',
                     this.pos,
                     (this.pos = Math.min(this.pos + t, this.len))
                   );
@@ -2294,13 +2294,13 @@ let protobuf;
             e = t(21),
             s =
               ((((h.prototype = Object.create(e.prototype)).constructor =
-                h).className = "Root"),
+                h).className = 'Root'),
               t(15)),
             u = t(14),
             o = t(23),
             b = t(33);
           function h(t) {
-            e.call(this, "", t), (this.deferred = []), (this.files = []);
+            e.call(this, '', t), (this.deferred = []), (this.files = []);
           }
           function p() {}
           (h.fromJSON = function (t, i) {
@@ -2313,7 +2313,7 @@ let protobuf;
             (h.prototype.resolvePath = b.path.resolve),
             (h.prototype.fetch = b.fetch),
             (h.prototype.load = function t(i, s, e) {
-              "function" == typeof s && ((e = s), (s = g));
+              'function' == typeof s && ((e = s), (s = g));
               var u = this;
               if (!e) return b.asPromise(t, u, i, s);
               var o = e === p;
@@ -2325,7 +2325,7 @@ let protobuf;
                 }
               }
               function f(t) {
-                var i = t.lastIndexOf("google/protobuf/");
+                var i = t.lastIndexOf('google/protobuf/');
                 if (-1 < i) {
                   t = t.substring(i);
                   if (t in v) return t;
@@ -2336,7 +2336,7 @@ let protobuf;
                 try {
                   if (
                     (b.isString(i) &&
-                      "{" == (i[0] || "") &&
+                      '{' == (i[0] || '') &&
                       (i = JSON.parse(i)),
                     b.isString(i))
                   ) {
@@ -2372,7 +2372,7 @@ let protobuf;
                   else if (o) {
                     var t;
                     try {
-                      t = b.fs.readFileSync(n).toString("utf8");
+                      t = b.fs.readFileSync(n).toString('utf8');
                     } catch (t) {
                       return void (r || h(t));
                     }
@@ -2386,24 +2386,24 @@ let protobuf;
               var l = 0;
               b.isString(i) && (i = [i]);
               for (var n, r = 0; r < i.length; ++r)
-                (n = u.resolvePath("", i[r])) && a(n);
+                (n = u.resolvePath('', i[r])) && a(n);
               return o ? u : (l || h(null, u), g);
             }),
             (h.prototype.loadSync = function (t, i) {
               if (b.isNode) return this.load(t, i, p);
-              throw Error("not supported");
+              throw Error('not supported');
             }),
             (h.prototype.resolveAll = function () {
               if (this.deferred.length)
                 throw Error(
-                  "unresolvable extensions: " +
+                  'unresolvable extensions: ' +
                     this.deferred
                       .map(function (t) {
                         return (
                           "'extend " + t.extend + "' in " + t.parent.fullName
                         );
                       })
-                      .join(", ")
+                      .join(', ')
                 );
               return e.prototype.resolveAll.call(this);
             });
@@ -2480,8 +2480,8 @@ let protobuf;
           i.exports = r;
           var o = t(35);
           function r(t, i, n) {
-            if ("function" != typeof t)
-              throw TypeError("rpcImpl must be a function");
+            if ('function' != typeof t)
+              throw TypeError('rpcImpl must be a function');
             o.EventEmitter.call(this),
               (this.rpcImpl = t),
               (this.requestDelimited = !!i),
@@ -2490,40 +2490,40 @@ let protobuf;
           (((r.prototype = Object.create(
             o.EventEmitter.prototype
           )).constructor = r).prototype.rpcCall = function t(n, i, r, e, s) {
-            if (!e) throw TypeError("request must be specified");
+            if (!e) throw TypeError('request must be specified');
             var u = this;
             if (!s) return o.asPromise(t, u, n, i, r, e);
             if (!u.rpcImpl)
               return (
                 setTimeout(function () {
-                  s(Error("already ended"));
+                  s(Error('already ended'));
                 }, 0),
                 g
               );
             try {
               return u.rpcImpl(
                 n,
-                i[u.requestDelimited ? "encodeDelimited" : "encode"](
+                i[u.requestDelimited ? 'encodeDelimited' : 'encode'](
                   e
                 ).finish(),
                 function (t, i) {
-                  if (t) return u.emit("error", t, n), s(t);
+                  if (t) return u.emit('error', t, n), s(t);
                   if (null === i) return u.end(!0), g;
                   if (!(i instanceof r))
                     try {
                       i =
-                        r[u.responseDelimited ? "decodeDelimited" : "decode"](
+                        r[u.responseDelimited ? 'decodeDelimited' : 'decode'](
                           i
                         );
                     } catch (t) {
-                      return u.emit("error", t, n), s(t);
+                      return u.emit('error', t, n), s(t);
                     }
-                  return u.emit("data", i, n), s(null, i);
+                  return u.emit('data', i, n), s(null, i);
                 }
               );
             } catch (t) {
               return (
-                u.emit("error", t, n),
+                u.emit('error', t, n),
                 setTimeout(function () {
                   s(t);
                 }, 0),
@@ -2536,7 +2536,7 @@ let protobuf;
                 this.rpcImpl &&
                   (t || this.rpcImpl(null, null, null),
                   (this.rpcImpl = null),
-                  this.emit("end").off()),
+                  this.emit('end').off()),
                 this
               );
             });
@@ -2549,7 +2549,7 @@ let protobuf;
           var r = t(21),
             s =
               ((((u.prototype = Object.create(r.prototype)).constructor =
-                u).className = "Service"),
+                u).className = 'Service'),
               t(20)),
             o = t(33),
             h = t(28);
@@ -2570,17 +2570,17 @@ let protobuf;
               var i = r.prototype.toJSON.call(this, t),
                 n = !!t && !!t.keepComments;
               return o.toObject([
-                "options",
+                'options',
                 (i && i.options) || g,
-                "methods",
+                'methods',
                 r.arrayToJSON(this.methodsArray, t) || {},
-                "nested",
+                'nested',
                 (i && i.nested) || g,
-                "comment",
+                'comment',
                 n ? this.comment : g,
               ]);
             }),
-            Object.defineProperty(u.prototype, "methodsArray", {
+            Object.defineProperty(u.prototype, 'methodsArray', {
               get: function () {
                 return this.f || (this.f = o.toArray(this.methods));
               },
@@ -2603,7 +2603,7 @@ let protobuf;
             (u.prototype.remove = function (t) {
               if (t instanceof s) {
                 if (this.methods[t.name] !== t)
-                  throw Error(t + " is not a member of " + this);
+                  throw Error(t + ' is not a member of ' + this);
                 return delete this.methods[t.name], (t.parent = null), e(this);
               }
               return r.prototype.remove.call(this, t);
@@ -2616,11 +2616,11 @@ let protobuf;
               ) {
                 var u = o
                   .lcFirst((r = this.f[s]).resolve().name)
-                  .replace(/[^$\w_]/g, "");
+                  .replace(/[^$\w_]/g, '');
                 e[u] = o.codegen(
-                  ["r", "c"],
-                  o.isReserved(u) ? u + "_" : u
-                )("return this.rpcCall(m,q,s,r,c)")({
+                  ['r', 'c'],
+                  o.isReserved(u) ? u + '_' : u
+                )('return this.rpcCall(m,q,s,r,c)')({
                   m: r,
                   q: r.resolvedRequestType.ctor,
                   s: r.resolvedResponseType.ctor,
@@ -2637,7 +2637,7 @@ let protobuf;
           var u = t(21),
             o =
               ((((w.prototype = Object.create(u.prototype)).constructor =
-                w).className = "Type"),
+                w).className = 'Type'),
               t(14)),
             h = t(23),
             f = t(15),
@@ -2686,7 +2686,7 @@ let protobuf;
                     var n = this.fields[t[i]],
                       r = n.id;
                     if (this.c[r])
-                      throw Error("duplicate id " + r + " in " + this);
+                      throw Error('duplicate id ' + r + ' in ' + this);
                     this.c[r] = n;
                   }
                 }
@@ -2733,16 +2733,16 @@ let protobuf;
           }),
             (w.generateConstructor = function (t) {
               for (
-                var i, n = d.codegen(["p"], t.name), r = 0;
+                var i, n = d.codegen(['p'], t.name), r = 0;
                 r < t.fieldsArray.length;
                 ++r
               )
                 (i = t.i[r]).map
-                  ? n("this%s={}", d.safeProp(i.name))
-                  : i.repeated && n("this%s=[]", d.safeProp(i.name));
+                  ? n('this%s={}', d.safeProp(i.name))
+                  : i.repeated && n('this%s=[]', d.safeProp(i.name));
               return n(
-                "if(p)for(var ks=Object.keys(p),i=0;i<ks.length;++i)if(p[ks[i]]!=null)"
-              )("this[ks[i]]=p[ks[i]]");
+                'if(p)for(var ks=Object.keys(p),i=0;i<ks.length;++i)if(p[ks[i]]!=null)'
+              )('this[ks[i]]=p[ks[i]]');
             }),
             (w.fromJSON = function (t, i) {
               for (
@@ -2794,26 +2794,26 @@ let protobuf;
               var i = u.prototype.toJSON.call(this, t),
                 n = !!t && !!t.keepComments;
               return d.toObject([
-                "options",
+                'options',
                 (i && i.options) || g,
-                "oneofs",
+                'oneofs',
                 u.arrayToJSON(this.oneofsArray, t),
-                "fields",
+                'fields',
                 u.arrayToJSON(
                   this.fieldsArray.filter(function (t) {
                     return !t.declaringField;
                   }),
                   t
                 ) || {},
-                "extensions",
+                'extensions',
                 this.extensions && this.extensions.length ? this.extensions : g,
-                "reserved",
+                'reserved',
                 this.reserved && this.reserved.length ? this.reserved : g,
-                "group",
+                'group',
                 this.group || g,
-                "nested",
+                'nested',
                 (i && i.nested) || g,
-                "comment",
+                'comment',
                 n ? this.comment : g,
               ]);
             }),
@@ -2837,9 +2837,9 @@ let protobuf;
                 throw Error("duplicate name '" + t.name + "' in " + this);
               if (t instanceof f && t.extend === g) {
                 if ((this.c || this.fieldsById)[t.id])
-                  throw Error("duplicate id " + t.id + " in " + this);
+                  throw Error('duplicate id ' + t.id + ' in ' + this);
                 if (this.isReservedId(t.id))
-                  throw Error("id " + t.id + " is reserved in " + this);
+                  throw Error('id ' + t.id + ' is reserved in ' + this);
                 if (this.isReservedName(t.name))
                   throw Error("name '" + t.name + "' is reserved in " + this);
                 return (
@@ -2864,7 +2864,7 @@ let protobuf;
                     t.onRemove(this),
                     r(this)
                   );
-                throw Error(t + " is not a member of " + this);
+                throw Error(t + ' is not a member of ' + this);
               }
               if (t instanceof h) {
                 if (this.oneofs && this.oneofs[t.name] === t)
@@ -2874,7 +2874,7 @@ let protobuf;
                     t.onRemove(this),
                     r(this)
                   );
-                throw Error(t + " is not a member of " + this);
+                throw Error(t + ' is not a member of ' + this);
               }
               return u.prototype.remove.call(this, t);
             }),
@@ -2961,21 +2961,21 @@ let protobuf;
         function (t, i, n) {
           var t = t(33),
             e = [
-              "double",
-              "float",
-              "int32",
-              "uint32",
-              "sint32",
-              "fixed32",
-              "sfixed32",
-              "int64",
-              "uint64",
-              "sint64",
-              "fixed64",
-              "sfixed64",
-              "bool",
-              "string",
-              "bytes",
+              'double',
+              'float',
+              'int32',
+              'uint32',
+              'sint32',
+              'fixed32',
+              'sfixed32',
+              'int64',
+              'uint64',
+              'sint64',
+              'fixed64',
+              'sfixed64',
+              'bool',
+              'string',
+              'bytes',
             ];
           function r(t, i) {
             var n = 0,
@@ -2998,7 +2998,7 @@ let protobuf;
               0,
               0,
               !1,
-              "",
+              '',
               t.emptyArray,
               null,
             ])),
@@ -3018,7 +3018,7 @@ let protobuf;
               ((s.codegen = n(3)),
               (s.fetch = n(5)),
               (s.path = n(8)),
-              (s.fs = s.inquire("fs")),
+              (s.fs = s.inquire('fs')),
               (s.toArray = function (t) {
                 if (t) {
                   for (
@@ -3049,11 +3049,11 @@ let protobuf;
               }),
               (s.safeProp = function (t) {
                 return !/^[$\w_]+$/.test(t) || s.isReserved(t)
-                  ? '["' + t.replace(o, "\\\\").replace(h, '\\"') + '"]'
-                  : "." + t;
+                  ? '["' + t.replace(o, '\\\\').replace(h, '\\"') + '"]'
+                  : '.' + t;
               }),
               (s.ucFirst = function (t) {
-                return (t[0] || "").toUpperCase() + t.substring(1);
+                return (t[0] || '').toUpperCase() + t.substring(1);
               }),
               /_([a-z])/g),
             c =
@@ -3079,11 +3079,11 @@ let protobuf;
                   : ((i = new (r = r || n(31))(i || t.name)),
                     s.decorateRoot.add(i),
                     (i.ctor = t),
-                    Object.defineProperty(t, "$type", {
+                    Object.defineProperty(t, '$type', {
                       value: i,
                       enumerable: !1,
                     }),
-                    Object.defineProperty(t.prototype, "$type", {
+                    Object.defineProperty(t.prototype, '$type', {
                       value: i,
                       enumerable: !1,
                     }),
@@ -3094,30 +3094,30 @@ let protobuf;
             var i;
             return (
               t.$type ||
-              ((i = new (e = e || n(14))("Enum" + c++, t)),
+              ((i = new (e = e || n(14))('Enum' + c++, t)),
               s.decorateRoot.add(i),
-              Object.defineProperty(t, "$type", { value: i, enumerable: !1 }),
+              Object.defineProperty(t, '$type', { value: i, enumerable: !1 }),
               i)
             );
           }),
             (s.setProperty = function (t, i, n) {
-              if ("object" != typeof t)
-                throw TypeError("dst must be an object");
+              if ('object' != typeof t)
+                throw TypeError('dst must be an object');
               if (i)
                 return (function t(i, n, r) {
                   var e = n.shift();
                   return (
-                    "__proto__" !== e &&
+                    '__proto__' !== e &&
                       (0 < n.length
                         ? (i[e] = t(i[e] || {}, n, r))
                         : ((n = i[e]) && (r = [].concat(n).concat(r)),
                           (i[e] = r))),
                     i
                   );
-                })(t, (i = i.split(".")), n);
-              throw TypeError("path must be specified");
+                })(t, (i = i.split('.')), n);
+              throw TypeError('path must be specified');
             }),
-            Object.defineProperty(s, "decorateRoot", {
+            Object.defineProperty(s, 'decorateRoot', {
               get: function () {
                 return u.decorated || (u.decorated = new (n(26))());
               },
@@ -3144,7 +3144,7 @@ let protobuf;
               (s.length = function () {
                 return 1;
               }),
-              (e.zeroHash = "\0\0\0\0\0\0\0\0"),
+              (e.zeroHash = '\0\0\0\0\0\0\0\0'),
               (e.fromNumber = function (t) {
                 var i, n;
                 return 0 === t
@@ -3159,7 +3159,7 @@ let protobuf;
                     new e(n, t));
               }),
               (e.from = function (t) {
-                if ("number" == typeof t) return e.fromNumber(t);
+                if ('number' == typeof t) return e.fromNumber(t);
                 if (r.isString(t)) {
                   if (!r.Long) return e.fromNumber(parseInt(t, 10));
                   t = r.Long.fromString(t);
@@ -3181,7 +3181,7 @@ let protobuf;
               }),
               String.prototype.charCodeAt);
           (e.fromHash = function (t) {
-            return "\0\0\0\0\0\0\0\0" === t
+            return '\0\0\0\0\0\0\0\0' === t
               ? s
               : new e(
                   (u.call(t, 0) |
@@ -3262,15 +3262,15 @@ let protobuf;
           function s(t) {
             function n(t, i) {
               if (!(this instanceof n)) return new n(t, i);
-              Object.defineProperty(this, "message", {
+              Object.defineProperty(this, 'message', {
                 get: function () {
                   return t;
                 },
               }),
                 Error.captureStackTrace
                   ? Error.captureStackTrace(this, n)
-                  : Object.defineProperty(this, "stack", {
-                      value: Error().stack || "",
+                  : Object.defineProperty(this, 'stack', {
+                      value: Error().stack || '',
                     }),
                 i && e(this, i);
             }
@@ -3292,7 +3292,7 @@ let protobuf;
                 },
                 toString: {
                   value() {
-                    return this.name + ": " + this.message;
+                    return this.name + ': ' + this.message;
                   },
                   writable: !0,
                   enumerable: !1,
@@ -3311,7 +3311,7 @@ let protobuf;
             (r.pool = t(9)),
             (r.LongBits = t(34)),
             (r.isNode = !!(
-              "undefined" != typeof global &&
+              'undefined' != typeof global &&
               global &&
               global.process &&
               global.process.versions &&
@@ -3319,8 +3319,8 @@ let protobuf;
             )),
             (r.global =
               (r.isNode && global) ||
-              ("undefined" != typeof window && window) ||
-              ("undefined" != typeof self && self) ||
+              ('undefined' != typeof window && window) ||
+              ('undefined' != typeof self && self) ||
               this),
             (r.emptyArray = Object.freeze ? Object.freeze([]) : []),
             (r.emptyObject = Object.freeze ? Object.freeze({}) : {}),
@@ -3328,14 +3328,14 @@ let protobuf;
               Number.isInteger ||
               function (t) {
                 return (
-                  "number" == typeof t && isFinite(t) && Math.floor(t) === t
+                  'number' == typeof t && isFinite(t) && Math.floor(t) === t
                 );
               }),
             (r.isString = function (t) {
-              return "string" == typeof t || t instanceof String;
+              return 'string' == typeof t || t instanceof String;
             }),
             (r.isObject = function (t) {
-              return t && "object" == typeof t;
+              return t && 'object' == typeof t;
             }),
             (r.isset = r.isSet =
               function (t, i) {
@@ -3343,13 +3343,13 @@ let protobuf;
                 return (
                   null != n &&
                   t.hasOwnProperty(i) &&
-                  ("object" != typeof n ||
+                  ('object' != typeof n ||
                     0 < (Array.isArray(n) ? n : Object.keys(n)).length)
                 );
               }),
             (r.Buffer = (function () {
               try {
-                var t = r.inquire("buffer").Buffer;
+                var t = r.inquire('buffer').Buffer;
                 return t.prototype.utf8Write ? t : null;
               } catch (t) {
                 return null;
@@ -3358,21 +3358,21 @@ let protobuf;
             (r.v = null),
             (r.b = null),
             (r.newBuffer = function (t) {
-              return "number" == typeof t
+              return 'number' == typeof t
                 ? r.Buffer
                   ? r.b(t)
                   : new r.Array(t)
                 : r.Buffer
                 ? r.v(t)
-                : "undefined" == typeof Uint8Array
+                : 'undefined' == typeof Uint8Array
                 ? t
                 : new Uint8Array(t);
             }),
-            (r.Array = "undefined" != typeof Uint8Array ? Uint8Array : Array),
+            (r.Array = 'undefined' != typeof Uint8Array ? Uint8Array : Array),
             (r.Long =
               (r.global.dcodeIO && r.global.dcodeIO.Long) ||
               r.global.Long ||
-              r.inquire("long")),
+              r.inquire('long')),
             (r.key2Re = /^true|false|0|1$/),
             (r.key32Re = /^-?(?:0|[1-9][0-9]*)$/),
             (r.key64Re = /^(?:[\\x00-\\xff]{8}|-?(?:0|[1-9][0-9]*))$/),
@@ -3385,10 +3385,10 @@ let protobuf;
             }),
             (r.merge = e),
             (r.lcFirst = function (t) {
-              return (t[0] || "").toLowerCase() + t.substring(1);
+              return (t[0] || '').toLowerCase() + t.substring(1);
             }),
             (r.newError = s),
-            (r.ProtocolError = s("ProtocolError")),
+            (r.ProtocolError = s('ProtocolError')),
             (r.oneOfGetter = function (t) {
               for (var n = {}, i = 0; i < t.length; ++i) n[t[i]] = 1;
               return function () {
@@ -3431,148 +3431,148 @@ let protobuf;
         function (t, i, n) {
           i.exports = function (t) {
             var i = h.codegen(
-                ["m"],
-                t.name + "$verify"
+                ['m'],
+                t.name + '$verify'
               )('if(typeof m!=="object"||m===null)')(
-                "return%j",
-                "object expected"
+                'return%j',
+                'object expected'
               ),
               n = t.oneofsArray,
               r = {};
-            n.length && i("var p={}");
+            n.length && i('var p={}');
             for (var e = 0; e < t.fieldsArray.length; ++e) {
               var s,
                 u = t.i[e].resolve(),
-                o = "m" + h.safeProp(u.name);
-              u.optional && i("if(%s!=null&&m.hasOwnProperty(%j)){", o, u.name),
+                o = 'm' + h.safeProp(u.name);
+              u.optional && i('if(%s!=null&&m.hasOwnProperty(%j)){', o, u.name),
                 u.map
-                  ? (i("if(!util.isObject(%s))", o)("return%j", f(u, "object"))(
-                      "var k=Object.keys(%s)",
+                  ? (i('if(!util.isObject(%s))', o)('return%j', f(u, 'object'))(
+                      'var k=Object.keys(%s)',
                       o
-                    )("for(var i=0;i<k.length;++i){"),
+                    )('for(var i=0;i<k.length;++i){'),
                     (function (t, i, n) {
                       switch (i.keyType) {
-                        case "int32":
-                        case "uint32":
-                        case "sint32":
-                        case "fixed32":
-                        case "sfixed32":
-                          t("if(!util.key32Re.test(%s))", n)(
-                            "return%j",
-                            f(i, "integer key")
+                        case 'int32':
+                        case 'uint32':
+                        case 'sint32':
+                        case 'fixed32':
+                        case 'sfixed32':
+                          t('if(!util.key32Re.test(%s))', n)(
+                            'return%j',
+                            f(i, 'integer key')
                           );
                           break;
-                        case "int64":
-                        case "uint64":
-                        case "sint64":
-                        case "fixed64":
-                        case "sfixed64":
-                          t("if(!util.key64Re.test(%s))", n)(
-                            "return%j",
-                            f(i, "integer|Long key")
+                        case 'int64':
+                        case 'uint64':
+                        case 'sint64':
+                        case 'fixed64':
+                        case 'sfixed64':
+                          t('if(!util.key64Re.test(%s))', n)(
+                            'return%j',
+                            f(i, 'integer|Long key')
                           );
                           break;
-                        case "bool":
-                          t("if(!util.key2Re.test(%s))", n)(
-                            "return%j",
-                            f(i, "boolean key")
+                        case 'bool':
+                          t('if(!util.key2Re.test(%s))', n)(
+                            'return%j',
+                            f(i, 'boolean key')
                           );
                       }
-                    })(i, u, "k[i]"),
-                    c(i, u, e, o + "[k[i]]")("}"))
+                    })(i, u, 'k[i]'),
+                    c(i, u, e, o + '[k[i]]')('}'))
                   : u.repeated
-                  ? (i("if(!Array.isArray(%s))", o)("return%j", f(u, "array"))(
-                      "for(var i=0;i<%s.length;++i){",
+                  ? (i('if(!Array.isArray(%s))', o)('return%j', f(u, 'array'))(
+                      'for(var i=0;i<%s.length;++i){',
                       o
                     ),
-                    c(i, u, e, o + "[i]")("}"))
+                    c(i, u, e, o + '[i]')('}'))
                   : (u.partOf &&
                       ((s = h.safeProp(u.partOf.name)),
                       1 === r[u.partOf.name] &&
-                        i("if(p%s===1)", s)(
-                          "return%j",
-                          u.partOf.name + ": multiple values"
+                        i('if(p%s===1)', s)(
+                          'return%j',
+                          u.partOf.name + ': multiple values'
                         ),
                       (r[u.partOf.name] = 1),
-                      i("p%s=1", s)),
+                      i('p%s=1', s)),
                     c(i, u, e, o)),
-                u.optional && i("}");
+                u.optional && i('}');
             }
-            return i("return null");
+            return i('return null');
           };
           var u = t(14),
             h = t(33);
           function f(t, i) {
             return (
               t.name +
-              ": " +
+              ': ' +
               i +
-              (t.repeated && "array" !== i
-                ? "[]"
-                : t.map && "object" !== i
-                ? "{k:" + t.keyType + "}"
-                : "") +
-              " expected"
+              (t.repeated && 'array' !== i
+                ? '[]'
+                : t.map && 'object' !== i
+                ? '{k:' + t.keyType + '}'
+                : '') +
+              ' expected'
             );
           }
           function c(t, i, n, r) {
             if (i.resolvedType)
               if (i.resolvedType instanceof u) {
-                t("switch(%s){", r)("default:")("return%j", f(i, "enum value"));
+                t('switch(%s){', r)('default:')('return%j', f(i, 'enum value'));
                 for (
                   var e = Object.keys(i.resolvedType.values), s = 0;
                   s < e.length;
                   ++s
                 )
-                  t("case %i:", i.resolvedType.values[e[s]]);
-                t("break")("}");
+                  t('case %i:', i.resolvedType.values[e[s]]);
+                t('break')('}');
               } else
-                t("{")("var e=types[%i].verify(%s);", n, r)("if(e)")(
-                  "return%j+e",
-                  i.name + "."
-                )("}");
+                t('{')('var e=types[%i].verify(%s);', n, r)('if(e)')(
+                  'return%j+e',
+                  i.name + '.'
+                )('}');
             else
               switch (i.type) {
-                case "int32":
-                case "uint32":
-                case "sint32":
-                case "fixed32":
-                case "sfixed32":
-                  t("if(!util.isInteger(%s))", r)("return%j", f(i, "integer"));
+                case 'int32':
+                case 'uint32':
+                case 'sint32':
+                case 'fixed32':
+                case 'sfixed32':
+                  t('if(!util.isInteger(%s))', r)('return%j', f(i, 'integer'));
                   break;
-                case "int64":
-                case "uint64":
-                case "sint64":
-                case "fixed64":
-                case "sfixed64":
+                case 'int64':
+                case 'uint64':
+                case 'sint64':
+                case 'fixed64':
+                case 'sfixed64':
                   t(
-                    "if(!util.isInteger(%s)&&!(%s&&util.isInteger(%s.low)&&util.isInteger(%s.high)))",
+                    'if(!util.isInteger(%s)&&!(%s&&util.isInteger(%s.low)&&util.isInteger(%s.high)))',
                     r,
                     r,
                     r,
                     r
-                  )("return%j", f(i, "integer|Long"));
+                  )('return%j', f(i, 'integer|Long'));
                   break;
-                case "float":
-                case "double":
-                  t('if(typeof %s!=="number")', r)("return%j", f(i, "number"));
+                case 'float':
+                case 'double':
+                  t('if(typeof %s!=="number")', r)('return%j', f(i, 'number'));
                   break;
-                case "bool":
+                case 'bool':
                   t('if(typeof %s!=="boolean")', r)(
-                    "return%j",
-                    f(i, "boolean")
+                    'return%j',
+                    f(i, 'boolean')
                   );
                   break;
-                case "string":
-                  t("if(!util.isString(%s))", r)("return%j", f(i, "string"));
+                case 'string':
+                  t('if(!util.isString(%s))', r)('return%j', f(i, 'string'));
                   break;
-                case "bytes":
+                case 'bytes':
                   t(
                     'if(!(%s&&typeof %s.length==="number"||util.isString(%s)))',
                     r,
                     r,
                     r
-                  )("return%j", f(i, "buffer"));
+                  )('return%j', f(i, 'buffer'));
               }
             return t;
           }
@@ -3582,18 +3582,18 @@ let protobuf;
       37: [
         function (t, i, n) {
           var u = t(19);
-          n[".google.protobuf.Any"] = {
+          n['.google.protobuf.Any'] = {
             fromObject: function (t) {
-              if (t && t["@type"]) {
+              if (t && t['@type']) {
                 var i,
-                  n = t["@type"].substring(1 + t["@type"].lastIndexOf("/")),
+                  n = t['@type'].substring(1 + t['@type'].lastIndexOf('/')),
                   n = this.lookup(n);
                 if (n)
                   return (
                     ~(i =
-                      "." == (t["@type"][0] || "")
-                        ? t["@type"].slice(1)
-                        : t["@type"]).indexOf("/") || (i = "/" + i),
+                      '.' == (t['@type'][0] || '')
+                        ? t['@type'].slice(1)
+                        : t['@type']).indexOf('/') || (i = '/' + i),
                     this.create({
                       type_url: i,
                       value: n.encode(n.fromObject(t)).finish(),
@@ -3605,27 +3605,27 @@ let protobuf;
             toObject: function (t, i) {
               var n,
                 r,
-                e = "",
-                s = "";
+                e = '',
+                s = '';
               return (
                 i &&
                   i.json &&
                   t.type_url &&
                   t.value &&
-                  ((s = t.type_url.substring(1 + t.type_url.lastIndexOf("/"))),
+                  ((s = t.type_url.substring(1 + t.type_url.lastIndexOf('/'))),
                   (e = t.type_url.substring(
                     0,
-                    1 + t.type_url.lastIndexOf("/")
+                    1 + t.type_url.lastIndexOf('/')
                   )),
                   (n = this.lookup(s)) && (t = n.decode(t.value))),
                 !(t instanceof this.ctor) && t instanceof u
                   ? ((n = t.$type.toObject(t, i)),
                     (r =
-                      "." === t.$type.fullName[0]
+                      '.' === t.$type.fullName[0]
                         ? t.$type.fullName.slice(1)
                         : t.$type.fullName),
-                    (n["@type"] = s =
-                      (e = "" === e ? "type.googleapis.com/" : e) + r),
+                    (n['@type'] = s =
+                      (e = '' === e ? 'type.googleapis.com/' : e) + r),
                     n)
                   : this.toObject(t, i)
               );
@@ -3853,7 +3853,7 @@ let protobuf;
               (s.writeBytesBuffer =
                 e.Buffer &&
                 e.Buffer.prototype instanceof Uint8Array &&
-                "set" === e.Buffer.prototype.set.name
+                'set' === e.Buffer.prototype.set.name
                   ? function (t, i, n) {
                       i.set(t, n);
                     }
@@ -3863,7 +3863,7 @@ let protobuf;
                     });
           }),
             (s.prototype.bytes = function (t) {
-              var i = (t = e.isString(t) ? e.v(t, "base64") : t).length >>> 0;
+              var i = (t = e.isString(t) ? e.v(t, 'base64') : t).length >>> 0;
               return (
                 this.uint32(i), i && this.p(s.writeBytesBuffer, i, t), this
               );
@@ -3882,16 +3882,16 @@ let protobuf;
   );
 })();
 !(function (t, e) {
-  "object" == typeof exports && "undefined" != typeof module
+  'object' == typeof exports && 'undefined' != typeof module
     ? e(exports)
-    : "function" == typeof define && define.amd
-    ? define(["exports"], e)
+    : 'function' == typeof define && define.amd
+    ? define(['exports'], e)
     : e(
-        ((t = "undefined" != typeof globalThis ? globalThis : t || self).pako =
+        ((t = 'undefined' != typeof globalThis ? globalThis : t || self).pako =
           {})
       );
 })(this, function (t) {
-  "use strict";
+  'use strict';
   function e(t) {
     let e = t.length;
     for (; --e >= 0; ) t[e] = 0;
@@ -4343,15 +4343,15 @@ let protobuf;
       return -1 ^ t;
     },
     H = {
-      2: "need dictionary",
-      1: "stream end",
-      0: "",
-      "-1": "file error",
-      "-2": "stream error",
-      "-3": "data error",
-      "-4": "insufficient memory",
-      "-5": "buffer error",
-      "-6": "incompatible version",
+      2: 'need dictionary',
+      1: 'stream end',
+      0: '',
+      '-1': 'file error',
+      '-2': 'stream error',
+      '-3': 'data error',
+      '-4': 'insufficient memory',
+      '-5': 'buffer error',
+      '-6': 'incompatible version',
     },
     j = {
       Z_NO_FLUSH: 0,
@@ -5222,7 +5222,7 @@ let protobuf;
         $
       );
     },
-    deflateInfo: "pako deflate (from Nodeca project)",
+    deflateInfo: 'pako deflate (from Nodeca project)',
   };
   const Nt = (t, e) => Object.prototype.hasOwnProperty.call(t, e);
   var Bt = function (t) {
@@ -5230,8 +5230,8 @@ let protobuf;
       for (; e.length; ) {
         const a = e.shift();
         if (a) {
-          if ("object" != typeof a)
-            throw new TypeError(a + "must be non-object");
+          if ('object' != typeof a)
+            throw new TypeError(a + 'must be non-object');
           for (const e in a) Nt(a, e) && (t[e] = a[e]);
         }
       }
@@ -5269,7 +5269,7 @@ let protobuf;
         : 1;
   Ht[254] = Ht[254] = 1;
   var jt = (t) => {
-      if ("function" == typeof TextEncoder && TextEncoder.prototype.encode)
+      if ('function' == typeof TextEncoder && TextEncoder.prototype.encode)
         return new TextEncoder().encode(t);
       let e,
         a,
@@ -5309,7 +5309,7 @@ let protobuf;
     },
     Kt = (t, e) => {
       const a = e || t.length;
-      if ("function" == typeof TextDecoder && TextDecoder.prototype.decode)
+      if ('function' == typeof TextDecoder && TextDecoder.prototype.decode)
         return new TextDecoder().decode(t.subarray(0, e));
       let i, n;
       const s = new Array(2 * a);
@@ -5339,7 +5339,7 @@ let protobuf;
             null,
             t.length === e ? t : t.subarray(0, e)
           );
-        let a = "";
+        let a = '';
         for (let i = 0; i < e; i++) a += String.fromCharCode(t[i]);
         return a;
       })(s, n);
@@ -5359,7 +5359,7 @@ let protobuf;
       (this.next_out = 0),
       (this.avail_out = 0),
       (this.total_out = 0),
-      (this.msg = ""),
+      (this.msg = ''),
       (this.state = null),
       (this.data_type = 2),
       (this.adler = 0);
@@ -5393,7 +5393,7 @@ let protobuf;
       ? (e.windowBits = -e.windowBits)
       : e.gzip && e.windowBits > 0 && e.windowBits < 16 && (e.windowBits += 16),
       (this.err = 0),
-      (this.msg = ""),
+      (this.msg = ''),
       (this.ended = !1),
       (this.chunks = []),
       (this.strm = new Yt()),
@@ -5411,9 +5411,9 @@ let protobuf;
       let t;
       if (
         ((t =
-          "string" == typeof e.dictionary
+          'string' == typeof e.dictionary
             ? jt(e.dictionary)
-            : "[object ArrayBuffer]" === Gt.call(e.dictionary)
+            : '[object ArrayBuffer]' === Gt.call(e.dictionary)
             ? new Uint8Array(e.dictionary)
             : e.dictionary),
         (a = Lt.deflateSetDictionary(this.strm, t)),
@@ -5435,9 +5435,9 @@ let protobuf;
     if (this.ended) return !1;
     for (
       s = e === ~~e ? e : !0 === e ? Jt : Xt,
-        "string" == typeof t
+        'string' == typeof t
           ? (a.input = jt(t))
-          : "[object ArrayBuffer]" === Gt.call(t)
+          : '[object ArrayBuffer]' === Gt.call(t)
           ? (a.input = new Uint8Array(t))
           : (a.input = t),
         a.next_in = 0,
@@ -5531,7 +5531,7 @@ let protobuf;
               E.mode = 12;
               break t;
             }
-            (t.msg = "invalid literal/length code"), (E.mode = 30);
+            (t.msg = 'invalid literal/length code'), (E.mode = 30);
             break t;
           }
           (k = 65535 & p),
@@ -5556,7 +5556,7 @@ let protobuf;
                 p = w[(65535 & p) + (f & ((1 << m) - 1))];
                 continue a;
               }
-              (t.msg = "invalid distance code"), (E.mode = 30);
+              (t.msg = 'invalid distance code'), (E.mode = 30);
               break t;
             }
             if (
@@ -5569,12 +5569,12 @@ let protobuf;
               (v += f & ((1 << m) - 1)),
               v > l)
             ) {
-              (t.msg = "invalid distance too far back"), (E.mode = 30);
+              (t.msg = 'invalid distance too far back'), (E.mode = 30);
               break t;
             }
             if (((f >>>= m), (c -= m), (m = n - s), v > m)) {
               if (((m = v - m), m > h && E.sane)) {
-                (t.msg = "invalid distance too far back"), (E.mode = 30);
+                (t.msg = 'invalid distance too far back'), (E.mode = 30);
                 break t;
               }
               if (((y = 0), (x = _), 0 === d)) {
@@ -5808,7 +5808,7 @@ let protobuf;
       const e = t.state;
       return (
         (t.total_in = t.total_out = e.total = 0),
-        (t.msg = ""),
+        (t.msg = ''),
         e.wrap && (t.adler = 1 & e.wrap),
         (e.mode = 1),
         (e.last = 0),
@@ -5969,17 +5969,17 @@ let protobuf;
               a.head && (a.head.done = !1),
               !(1 & a.wrap) || (((255 & h) << 8) + (h >> 8)) % 31)
             ) {
-              (t.msg = "incorrect header check"), (a.mode = ze);
+              (t.msg = 'incorrect header check'), (a.mode = ze);
               break;
             }
             if ((15 & h) !== ye) {
-              (t.msg = "unknown compression method"), (a.mode = ze);
+              (t.msg = 'unknown compression method'), (a.mode = ze);
               break;
             }
             if (((h >>>= 4), (d -= 4), (y = 8 + (15 & h)), 0 === a.wbits))
               a.wbits = y;
             else if (y > a.wbits) {
-              (t.msg = "invalid window size"), (a.mode = ze);
+              (t.msg = 'invalid window size'), (a.mode = ze);
               break;
             }
             (a.dmax = 1 << a.wbits),
@@ -5994,11 +5994,11 @@ let protobuf;
               l--, (h += i[s++] << d), (d += 8);
             }
             if (((a.flags = h), (255 & a.flags) !== ye)) {
-              (t.msg = "unknown compression method"), (a.mode = ze);
+              (t.msg = 'unknown compression method'), (a.mode = ze);
               break;
             }
             if (57344 & a.flags) {
-              (t.msg = "unknown header flags set"), (a.mode = ze);
+              (t.msg = 'unknown header flags set'), (a.mode = ze);
               break;
             }
             a.head && (a.head.text = (h >> 8) & 1),
@@ -6119,7 +6119,7 @@ let protobuf;
                 l--, (h += i[s++] << d), (d += 8);
               }
               if (h !== (65535 & a.check)) {
-                (t.msg = "header crc mismatch"), (a.mode = ze);
+                (t.msg = 'header crc mismatch'), (a.mode = ze);
                 break;
               }
               (h = 0), (d = 0);
@@ -6171,7 +6171,7 @@ let protobuf;
                 a.mode = 17;
                 break;
               case 3:
-                (t.msg = "invalid block type"), (a.mode = ze);
+                (t.msg = 'invalid block type'), (a.mode = ze);
             }
             (h >>>= 2), (d -= 2);
             break;
@@ -6181,7 +6181,7 @@ let protobuf;
               l--, (h += i[s++] << d), (d += 8);
             }
             if ((65535 & h) != ((h >>> 16) ^ 65535)) {
-              (t.msg = "invalid stored block lengths"), (a.mode = ze);
+              (t.msg = 'invalid stored block lengths'), (a.mode = ze);
               break;
             }
             if (
@@ -6224,7 +6224,7 @@ let protobuf;
               (d -= 4),
               a.nlen > 286 || a.ndist > 30)
             ) {
-              (t.msg = "too many length or distance symbols"), (a.mode = ze);
+              (t.msg = 'too many length or distance symbols'), (a.mode = ze);
               break;
             }
             (a.have = 0), (a.mode = 18);
@@ -6245,7 +6245,7 @@ let protobuf;
               (a.lenbits = E.bits),
               x)
             ) {
-              (t.msg = "invalid code lengths set"), (a.mode = ze);
+              (t.msg = 'invalid code lengths set'), (a.mode = ze);
               break;
             }
             (a.have = 0), (a.mode = 19);
@@ -6271,7 +6271,7 @@ let protobuf;
                     l--, (h += i[s++] << d), (d += 8);
                   }
                   if (((h >>>= b), (d -= b), 0 === a.have)) {
-                    (t.msg = "invalid bit length repeat"), (a.mode = ze);
+                    (t.msg = 'invalid bit length repeat'), (a.mode = ze);
                     break;
                   }
                   (y = a.lens[a.have - 1]),
@@ -6302,7 +6302,7 @@ let protobuf;
                     (d -= 7);
                 }
                 if (a.have + c > a.nlen + a.ndist) {
-                  (t.msg = "invalid bit length repeat"), (a.mode = ze);
+                  (t.msg = 'invalid bit length repeat'), (a.mode = ze);
                   break;
                 }
                 for (; c--; ) a.lens[a.have++] = y;
@@ -6310,7 +6310,7 @@ let protobuf;
             }
             if (a.mode === ze) break;
             if (0 === a.lens[256]) {
-              (t.msg = "invalid code -- missing end-of-block"), (a.mode = ze);
+              (t.msg = 'invalid code -- missing end-of-block'), (a.mode = ze);
               break;
             }
             if (
@@ -6320,7 +6320,7 @@ let protobuf;
               (a.lenbits = E.bits),
               x)
             ) {
-              (t.msg = "invalid literal/lengths set"), (a.mode = ze);
+              (t.msg = 'invalid literal/lengths set'), (a.mode = ze);
               break;
             }
             if (
@@ -6331,7 +6331,7 @@ let protobuf;
               (a.distbits = E.bits),
               x)
             ) {
-              (t.msg = "invalid distances set"), (a.mode = ze);
+              (t.msg = 'invalid distances set'), (a.mode = ze);
               break;
             }
             if (((a.mode = 20), e === ue)) break t;
@@ -6395,7 +6395,7 @@ let protobuf;
               break;
             }
             if (64 & g) {
-              (t.msg = "invalid literal/length code"), (a.mode = ze);
+              (t.msg = 'invalid literal/length code'), (a.mode = ze);
               break;
             }
             (a.extra = 15 & g), (a.mode = 22);
@@ -6440,7 +6440,7 @@ let protobuf;
               (h >>>= m), (d -= m), (a.back += m);
             }
             if (((h >>>= b), (d -= b), (a.back += b), 64 & g)) {
-              (t.msg = "invalid distance code"), (a.mode = ze);
+              (t.msg = 'invalid distance code'), (a.mode = ze);
               break;
             }
             (a.offset = p), (a.extra = 15 & g), (a.mode = 24);
@@ -6456,7 +6456,7 @@ let protobuf;
                 (a.back += a.extra);
             }
             if (a.offset > a.dmax) {
-              (t.msg = "invalid distance too far back"), (a.mode = ze);
+              (t.msg = 'invalid distance too far back'), (a.mode = ze);
               break;
             }
             a.mode = 25;
@@ -6464,7 +6464,7 @@ let protobuf;
             if (0 === o) break t;
             if (((c = f - o), a.offset > c)) {
               if (((c = a.offset - c), c > a.whave && a.sane)) {
-                (t.msg = "invalid distance too far back"), (a.mode = ze);
+                (t.msg = 'invalid distance too far back'), (a.mode = ze);
                 break;
               }
               c > a.wnext
@@ -6501,7 +6501,7 @@ let protobuf;
                 (f = o),
                 (a.flags ? h : Ae(h)) !== a.check)
               ) {
-                (t.msg = "incorrect data check"), (a.mode = ze);
+                (t.msg = 'incorrect data check'), (a.mode = ze);
                 break;
               }
               (h = 0), (d = 0);
@@ -6514,7 +6514,7 @@ let protobuf;
                 l--, (h += i[s++] << d), (d += 8);
               }
               if (h !== (4294967295 & a.total)) {
-                (t.msg = "incorrect length check"), (a.mode = ze);
+                (t.msg = 'incorrect length check'), (a.mode = ze);
                 break;
               }
               (h = 0), (d = 0);
@@ -6585,7 +6585,7 @@ let protobuf;
               s ? ((i.mode = 31), ke) : ((i.havedict = 1), we)))
         : pe;
     },
-    inflateInfo: "pako inflate (from Nodeca project)",
+    inflateInfo: 'pako inflate (from Nodeca project)',
   };
   var Ne = function () {
     (this.text = 0),
@@ -6594,8 +6594,8 @@ let protobuf;
       (this.os = 0),
       (this.extra = null),
       (this.extra_len = 0),
-      (this.name = ""),
-      (this.comment = ""),
+      (this.name = ''),
+      (this.comment = ''),
       (this.hcrc = 0),
       (this.done = !1);
   };
@@ -6611,7 +6611,7 @@ let protobuf;
       Z_MEM_ERROR: Ge,
     } = j;
   function Xe(t) {
-    this.options = Bt({ chunkSize: 65536, windowBits: 15, to: "" }, t || {});
+    this.options = Bt({ chunkSize: 65536, windowBits: 15, to: '' }, t || {});
     const e = this.options;
     e.raw &&
       e.windowBits >= 0 &&
@@ -6626,7 +6626,7 @@ let protobuf;
         0 == (15 & e.windowBits) &&
         (e.windowBits |= 15),
       (this.err = 0),
-      (this.msg = ""),
+      (this.msg = ''),
       (this.ended = !1),
       (this.chunks = []),
       (this.strm = new Yt()),
@@ -6637,9 +6637,9 @@ let protobuf;
       ((this.header = new Ne()),
       Le.inflateGetHeader(this.strm, this.header),
       e.dictionary &&
-        ("string" == typeof e.dictionary
+        ('string' == typeof e.dictionary
           ? (e.dictionary = jt(e.dictionary))
-          : "[object ArrayBuffer]" === Be.call(e.dictionary) &&
+          : '[object ArrayBuffer]' === Be.call(e.dictionary) &&
             (e.dictionary = new Uint8Array(e.dictionary)),
         e.raw &&
           ((a = Le.inflateSetDictionary(this.strm, e.dictionary)), a !== He)))
@@ -6659,7 +6659,7 @@ let protobuf;
     if (this.ended) return !1;
     for (
       r = e === ~~e ? e : !0 === e ? Me : Ce,
-        "[object ArrayBuffer]" === Be.call(t)
+        '[object ArrayBuffer]' === Be.call(t)
           ? (a.input = new Uint8Array(t))
           : (a.input = t),
         a.next_in = 0,
@@ -6687,7 +6687,7 @@ let protobuf;
           return this.onEnd(s), (this.ended = !0), !1;
       }
       if (((l = a.avail_out), a.next_out && (0 === a.avail_out || s === je)))
-        if ("string" === this.options.to) {
+        if ('string' === this.options.to) {
           let t = Pt(a.output, a.next_out),
             e = a.next_out - t,
             n = Kt(a.output, t);
@@ -6716,8 +6716,8 @@ let protobuf;
     }),
     (Xe.prototype.onEnd = function (t) {
       t === He &&
-        ("string" === this.options.to
-          ? (this.result = this.chunks.join(""))
+        ('string' === this.options.to
+          ? (this.result = this.chunks.join(''))
           : (this.result = Ct(this.chunks))),
         (this.chunks = []),
         (this.err = t),
@@ -6764,7 +6764,7 @@ let protobuf;
     (t.inflate = ha),
     (t.inflateRaw = da),
     (t.ungzip = _a),
-    Object.defineProperty(t, "__esModule", { value: !0 });
+    Object.defineProperty(t, '__esModule', { value: !0 });
 });
 const biliJson = {
   nested: {
@@ -6773,27 +6773,27 @@ const biliJson = {
         ad: {
           nested: {
             v1: {
-              options: { java_package: "com.smile.bilibili.model" },
+              options: { java_package: 'com.smile.bilibili.model' },
               nested: {
                 AdDto: {
                   fields: {
-                    creativeId: { type: "int64", id: 1 },
-                    adCb: { type: "string", id: 2 },
-                    cmMark: { type: "int32", id: 4 },
-                    topViewId: { type: "int64", id: 5 },
-                    creativeType: { type: "int32", id: 6 },
-                    cardType: { type: "int32", id: 7 },
-                    creativeStyle: { type: "int32", id: 8 },
-                    isAd: { type: "bool", id: 9 },
+                    creativeId: { type: 'int64', id: 1 },
+                    adCb: { type: 'string', id: 2 },
+                    cmMark: { type: 'int32', id: 4 },
+                    topViewId: { type: 'int64', id: 5 },
+                    creativeType: { type: 'int32', id: 6 },
+                    cardType: { type: 'int32', id: 7 },
+                    creativeStyle: { type: 'int32', id: 8 },
+                    isAd: { type: 'bool', id: 9 },
                   },
                 },
                 SourceContentDto: {
-                  fields: { adContent: { type: "AdDto", id: 9 } },
+                  fields: { adContent: { type: 'AdDto', id: 9 } },
                 },
                 AdsControlDto: {
                   fields: {
-                    hasDanmu: { type: "int32", id: 1 },
-                    cids: { rule: "repeated", type: "int64", id: 2 },
+                    hasDanmu: { type: 'int32', id: 1 },
+                    cids: { rule: 'repeated', type: 'int64', id: 2 },
                   },
                 },
               },
@@ -6805,113 +6805,113 @@ const biliJson = {
             archive: {
               nested: {
                 v1: {
-                  options: { java_package: "com.smile.bilibili.model" },
+                  options: { java_package: 'com.smile.bilibili.model' },
                   nested: {
                     Arc: {
                       fields: {
-                        aid: { type: "int64", id: 1 },
-                        videos: { type: "int64", id: 2 },
-                        typeId: { type: "int32", id: 3 },
-                        typeName: { type: "string", id: 4 },
-                        copyright: { type: "int32", id: 5 },
-                        pic: { type: "string", id: 6 },
-                        title: { type: "string", id: 7 },
-                        pubdate: { type: "int64", id: 8 },
-                        ctime: { type: "int64", id: 9 },
-                        desc: { type: "string", id: 10 },
-                        state: { type: "int32", id: 11 },
-                        access: { type: "int32", id: 12 },
-                        attribute: { type: "int32", id: 13 },
-                        tag: { type: "string", id: 14 },
-                        tags: { rule: "repeated", type: "string", id: 15 },
-                        duration: { type: "int64", id: 16 },
-                        missionId: { type: "int64", id: 17 },
-                        orderId: { type: "int64", id: 18 },
-                        redirectUrl: { type: "string", id: 19 },
-                        forward: { type: "int64", id: 20 },
-                        rights: { type: "Rights", id: 21 },
-                        author: { type: "Author", id: 22 },
-                        stat: { type: "Stat", id: 23 },
-                        reportResult: { type: "string", id: 24 },
-                        dynamic: { type: "string", id: 25 },
-                        firstCid: { type: "int64", id: 26 },
-                        dimension: { type: "Dimension", id: 27 },
+                        aid: { type: 'int64', id: 1 },
+                        videos: { type: 'int64', id: 2 },
+                        typeId: { type: 'int32', id: 3 },
+                        typeName: { type: 'string', id: 4 },
+                        copyright: { type: 'int32', id: 5 },
+                        pic: { type: 'string', id: 6 },
+                        title: { type: 'string', id: 7 },
+                        pubdate: { type: 'int64', id: 8 },
+                        ctime: { type: 'int64', id: 9 },
+                        desc: { type: 'string', id: 10 },
+                        state: { type: 'int32', id: 11 },
+                        access: { type: 'int32', id: 12 },
+                        attribute: { type: 'int32', id: 13 },
+                        tag: { type: 'string', id: 14 },
+                        tags: { rule: 'repeated', type: 'string', id: 15 },
+                        duration: { type: 'int64', id: 16 },
+                        missionId: { type: 'int64', id: 17 },
+                        orderId: { type: 'int64', id: 18 },
+                        redirectUrl: { type: 'string', id: 19 },
+                        forward: { type: 'int64', id: 20 },
+                        rights: { type: 'Rights', id: 21 },
+                        author: { type: 'Author', id: 22 },
+                        stat: { type: 'Stat', id: 23 },
+                        reportResult: { type: 'string', id: 24 },
+                        dynamic: { type: 'string', id: 25 },
+                        firstCid: { type: 'int64', id: 26 },
+                        dimension: { type: 'Dimension', id: 27 },
                         staffInfo: {
-                          rule: "repeated",
-                          type: "StaffInfo",
+                          rule: 'repeated',
+                          type: 'StaffInfo',
                           id: 28,
                         },
-                        seasonId: { type: "int64", id: 29 },
-                        attributeV2: { type: "int64", id: 30 },
-                        shortLinkV2: { type: "string", id: 40 },
-                        upFromV2: { type: "int32", id: 41 },
-                        firstFrame: { type: "string", id: 42 },
+                        seasonId: { type: 'int64', id: 29 },
+                        attributeV2: { type: 'int64', id: 30 },
+                        shortLinkV2: { type: 'string', id: 40 },
+                        upFromV2: { type: 'int32', id: 41 },
+                        firstFrame: { type: 'string', id: 42 },
                       },
                     },
                     Rights: {
                       fields: {
-                        bp: { type: "int32", id: 1 },
-                        elec: { type: "int32", id: 2 },
-                        download: { type: "int32", id: 3 },
-                        movie: { type: "int32", id: 4 },
-                        pay: { type: "int32", id: 5 },
-                        hd5: { type: "int32", id: 6 },
-                        noReprint: { type: "int32", id: 7 },
-                        autoplay: { type: "int32", id: 8 },
-                        ugcPay: { type: "int32", id: 9 },
-                        isCooperation: { type: "int32", id: 10 },
-                        ugcPayPreview: { type: "int32", id: 11 },
-                        noBackground: { type: "int32", id: 12 },
+                        bp: { type: 'int32', id: 1 },
+                        elec: { type: 'int32', id: 2 },
+                        download: { type: 'int32', id: 3 },
+                        movie: { type: 'int32', id: 4 },
+                        pay: { type: 'int32', id: 5 },
+                        hd5: { type: 'int32', id: 6 },
+                        noReprint: { type: 'int32', id: 7 },
+                        autoplay: { type: 'int32', id: 8 },
+                        ugcPay: { type: 'int32', id: 9 },
+                        isCooperation: { type: 'int32', id: 10 },
+                        ugcPayPreview: { type: 'int32', id: 11 },
+                        noBackground: { type: 'int32', id: 12 },
                       },
                     },
                     Author: {
                       fields: {
-                        mid: { type: "int64", id: 1 },
-                        name: { type: "string", id: 2 },
-                        face: { type: "string", id: 3 },
+                        mid: { type: 'int64', id: 1 },
+                        name: { type: 'string', id: 2 },
+                        face: { type: 'string', id: 3 },
                       },
                     },
                     Stat: {
                       fields: {
-                        aid: { type: "int64", id: 1 },
-                        view: { type: "int32", id: 2 },
-                        danmaku: { type: "int32", id: 3 },
-                        reply: { type: "int32", id: 4 },
-                        fav: { type: "int32", id: 5 },
-                        coin: { type: "int32", id: 6 },
-                        share: { type: "int32", id: 7 },
-                        nowRank: { type: "int32", id: 8 },
-                        hisRank: { type: "int32", id: 9 },
-                        like: { type: "int32", id: 10 },
-                        dislike: { type: "int32", id: 11 },
+                        aid: { type: 'int64', id: 1 },
+                        view: { type: 'int32', id: 2 },
+                        danmaku: { type: 'int32', id: 3 },
+                        reply: { type: 'int32', id: 4 },
+                        fav: { type: 'int32', id: 5 },
+                        coin: { type: 'int32', id: 6 },
+                        share: { type: 'int32', id: 7 },
+                        nowRank: { type: 'int32', id: 8 },
+                        hisRank: { type: 'int32', id: 9 },
+                        like: { type: 'int32', id: 10 },
+                        dislike: { type: 'int32', id: 11 },
                       },
                     },
                     StaffInfo: {
                       fields: {
-                        mid: { type: "int64", id: 1 },
-                        title: { type: "string", id: 2 },
-                        attribute: { type: "int64", id: 3 },
+                        mid: { type: 'int64', id: 1 },
+                        title: { type: 'string', id: 2 },
+                        attribute: { type: 'int64', id: 3 },
                       },
                     },
                     Dimension: {
                       fields: {
-                        width: { type: "int64", id: 1 },
-                        height: { type: "int64", id: 2 },
-                        rotate: { type: "int64", id: 3 },
+                        width: { type: 'int64', id: 1 },
+                        height: { type: 'int64', id: 2 },
+                        rotate: { type: 'int64', id: 3 },
                       },
                     },
                     Page: {
                       fields: {
-                        cid: { type: "int64", id: 1 },
-                        page: { type: "int32", id: 2 },
-                        from: { type: "string", id: 3 },
-                        part: { type: "string", id: 4 },
-                        duration: { type: "int64", id: 5 },
-                        vid: { type: "string", id: 6 },
-                        desc: { type: "string", id: 7 },
-                        webLink: { type: "string", id: 8 },
-                        dimension: { type: "Dimension", id: 9 },
-                        firstFrame: { type: "string", id: 10 },
+                        cid: { type: 'int64', id: 1 },
+                        page: { type: 'int32', id: 2 },
+                        from: { type: 'string', id: 3 },
+                        part: { type: 'string', id: 4 },
+                        duration: { type: 'int64', id: 5 },
+                        vid: { type: 'string', id: 6 },
+                        desc: { type: 'string', id: 7 },
+                        webLink: { type: 'string', id: 8 },
+                        dimension: { type: 'Dimension', id: 9 },
+                        firstFrame: { type: 'string', id: 10 },
                       },
                     },
                   },
@@ -6921,17 +6921,17 @@ const biliJson = {
             dynamic: {
               nested: {
                 v2: {
-                  options: { java_package: "com.smile.bilibili.model" },
+                  options: { java_package: 'com.smile.bilibili.model' },
                   nested: {
                     AdditionalButton: {
                       fields: {
-                        type: { type: "AddButtonType", id: 1 },
-                        jumpStyle: { type: "AdditionalButtonStyle", id: 2 },
-                        jumpUrl: { type: "string", id: 3 },
-                        uncheck: { type: "AdditionalButtonStyle", id: 4 },
-                        check: { type: "AdditionalButtonStyle", id: 5 },
-                        status: { type: "AdditionalButtonStatus", id: 6 },
-                        clickType: { type: "AdditionalButtonClickType", id: 7 },
+                        type: { type: 'AddButtonType', id: 1 },
+                        jumpStyle: { type: 'AdditionalButtonStyle', id: 2 },
+                        jumpUrl: { type: 'string', id: 3 },
+                        uncheck: { type: 'AdditionalButtonStyle', id: 4 },
+                        check: { type: 'AdditionalButtonStyle', id: 5 },
+                        status: { type: 'AdditionalButtonStatus', id: 6 },
+                        clickType: { type: 'AdditionalButtonClickType', id: 7 },
                       },
                     },
                     AddButtonType: {
@@ -6945,24 +6945,24 @@ const biliJson = {
                     },
                     AdditionalButtonInteractive: {
                       fields: {
-                        popups: { type: "string", id: 1 },
-                        confirm: { type: "string", id: 2 },
-                        cancel: { type: "string", id: 3 },
-                        desc: { type: "string", id: 4 },
+                        popups: { type: 'string', id: 1 },
+                        confirm: { type: 'string', id: 2 },
+                        cancel: { type: 'string', id: 3 },
+                        desc: { type: 'string', id: 4 },
                       },
                     },
                     AdditionalButtonStyle: {
                       fields: {
-                        icon: { type: "string", id: 1 },
-                        text: { type: "string", id: 2 },
+                        icon: { type: 'string', id: 1 },
+                        text: { type: 'string', id: 2 },
                         interactive: {
-                          type: "AdditionalButtonInteractive",
+                          type: 'AdditionalButtonInteractive',
                           id: 3,
                         },
-                        bgStyle: { type: "AddButtonBgStyle", id: 4 },
-                        toast: { type: "string", id: 5 },
-                        disable: { type: "DisableState", id: 6 },
-                        share: { type: "AdditionalButtonShare", id: 7 },
+                        bgStyle: { type: 'AddButtonBgStyle', id: 4 },
+                        toast: { type: 'string', id: 5 },
+                        disable: { type: 'DisableState', id: 6 },
+                        share: { type: 'AdditionalButtonShare', id: 7 },
                       },
                     },
                     AddButtonBgStyle: {
@@ -6971,9 +6971,9 @@ const biliJson = {
                     DisableState: { values: { highlight: 0, gary: 1 } },
                     AdditionalButtonShare: {
                       fields: {
-                        show: { type: "AdditionalShareShowType", id: 1 },
-                        icon: { type: "string", id: 2 },
-                        text: { type: "string", id: 3 },
+                        show: { type: 'AdditionalShareShowType', id: 1 },
+                        icon: { type: 'string', id: 2 },
+                        text: { type: 'string', id: 3 },
                       },
                     },
                     AdditionalShareShowType: {
@@ -6981,16 +6981,16 @@ const biliJson = {
                     },
                     AdditionalPGC: {
                       fields: {
-                        headText: { type: "string", id: 1 },
-                        title: { type: "string", id: 2 },
-                        imageUrl: { type: "string", id: 3 },
-                        descText1: { type: "string", id: 4 },
-                        descText2: { type: "string", id: 5 },
-                        url: { type: "string", id: 6 },
-                        button: { type: "AdditionalButton", id: 7 },
-                        headIcon: { type: "string", id: 8 },
-                        style: { type: "ImageStyle", id: 9 },
-                        type: { type: "string", id: 10 },
+                        headText: { type: 'string', id: 1 },
+                        title: { type: 'string', id: 2 },
+                        imageUrl: { type: 'string', id: 3 },
+                        descText1: { type: 'string', id: 4 },
+                        descText2: { type: 'string', id: 5 },
+                        url: { type: 'string', id: 6 },
+                        button: { type: 'AdditionalButton', id: 7 },
+                        headIcon: { type: 'string', id: 8 },
+                        style: { type: 'ImageStyle', id: 9 },
+                        type: { type: 'string', id: 10 },
                       },
                     },
                     ImageStyle: {
@@ -7011,87 +7011,87 @@ const biliJson = {
                     },
                     AdditionCommon: {
                       fields: {
-                        headText: { type: "string", id: 1 },
-                        title: { type: "string", id: 2 },
-                        imageUrl: { type: "string", id: 3 },
-                        descText1: { type: "string", id: 4 },
-                        descText2: { type: "string", id: 5 },
-                        url: { type: "string", id: 6 },
-                        button: { type: "AdditionalButton", id: 7 },
-                        headIcon: { type: "string", id: 8 },
-                        style: { type: "ImageStyle", id: 9 },
-                        type: { type: "string", id: 10 },
-                        cardType: { type: "string", id: 11 },
+                        headText: { type: 'string', id: 1 },
+                        title: { type: 'string', id: 2 },
+                        imageUrl: { type: 'string', id: 3 },
+                        descText1: { type: 'string', id: 4 },
+                        descText2: { type: 'string', id: 5 },
+                        url: { type: 'string', id: 6 },
+                        button: { type: 'AdditionalButton', id: 7 },
+                        headIcon: { type: 'string', id: 8 },
+                        style: { type: 'ImageStyle', id: 9 },
+                        type: { type: 'string', id: 10 },
+                        cardType: { type: 'string', id: 11 },
                       },
                     },
                     AdditionEsport: {
-                      oneofs: { item: { oneof: ["additionEsportMoba"] } },
+                      oneofs: { item: { oneof: ['additionEsportMoba'] } },
                       fields: {
-                        style: { type: "EspaceStyle", id: 1 },
+                        style: { type: 'EspaceStyle', id: 1 },
                         additionEsportMoba: {
-                          type: "AdditionEsportMoba",
+                          type: 'AdditionEsportMoba',
                           id: 2,
                         },
-                        type: { type: "string", id: 3 },
-                        cardType: { type: "string", id: 4 },
+                        type: { type: 'string', id: 3 },
+                        cardType: { type: 'string', id: 4 },
                       },
                     },
                     AdditionEsportMoba: {
                       fields: {
-                        headText: { type: "string", id: 1 },
-                        title: { type: "string", id: 2 },
+                        headText: { type: 'string', id: 1 },
+                        title: { type: 'string', id: 2 },
                         matchTeam: {
-                          rule: "repeated",
-                          type: "MatchTeam",
+                          rule: 'repeated',
+                          type: 'MatchTeam',
                           id: 3,
                         },
                         additionEsportMobaStatus: {
-                          type: "AdditionEsportMobaStatus",
+                          type: 'AdditionEsportMobaStatus',
                           id: 4,
                         },
-                        uri: { type: "string", id: 5 },
-                        button: { type: "AdditionalButton", id: 6 },
-                        subTitle: { type: "string", id: 7 },
-                        type: { type: "string", id: 10 },
-                        cardType: { type: "string", id: 11 },
-                        headIcon: { type: "string", id: 12 },
+                        uri: { type: 'string', id: 5 },
+                        button: { type: 'AdditionalButton', id: 6 },
+                        subTitle: { type: 'string', id: 7 },
+                        type: { type: 'string', id: 10 },
+                        cardType: { type: 'string', id: 11 },
+                        headIcon: { type: 'string', id: 12 },
                       },
                     },
                     AdditionEsportMobaStatus: {
                       fields: {
                         additionEsportMobaStatusDesc: {
-                          rule: "repeated",
-                          type: "AdditionEsportMobaStatusDesc",
+                          rule: 'repeated',
+                          type: 'AdditionEsportMobaStatusDesc',
                           id: 1,
                         },
-                        title: { type: "string", id: 2 },
-                        status: { type: "int32", id: 3 },
-                        color: { type: "string", id: 4 },
-                        nightColor: { type: "string", id: 5 },
+                        title: { type: 'string', id: 2 },
+                        status: { type: 'int32', id: 3 },
+                        color: { type: 'string', id: 4 },
+                        nightColor: { type: 'string', id: 5 },
                       },
                     },
                     AdditionEsportMobaStatusDesc: {
                       fields: {
-                        title: { type: "string", id: 1 },
-                        color: { type: "string", id: 2 },
-                        nightColor: { type: "string", id: 3 },
+                        title: { type: 'string', id: 1 },
+                        color: { type: 'string', id: 2 },
+                        nightColor: { type: 'string', id: 3 },
                       },
                     },
                     AdditionGoods: {
                       fields: {
-                        rcmdDesc: { type: "string", id: 1 },
+                        rcmdDesc: { type: 'string', id: 1 },
                         goodsItems: {
-                          rule: "repeated",
-                          type: "GoodsItem",
+                          rule: 'repeated',
+                          type: 'GoodsItem',
                           id: 2,
                         },
-                        cardType: { type: "string", id: 3 },
-                        icon: { type: "string", id: 4 },
-                        uri: { type: "string", id: 5 },
-                        sourceType: { type: "int32", id: 6 },
-                        jumpType: { type: "GoodsJumpType", id: 7 },
-                        appName: { type: "string", id: 8 },
-                        adMarkIcon: { type: "string", id: 9 },
+                        cardType: { type: 'string', id: 3 },
+                        icon: { type: 'string', id: 4 },
+                        uri: { type: 'string', id: 5 },
+                        sourceType: { type: 'int32', id: 6 },
+                        jumpType: { type: 'GoodsJumpType', id: 7 },
+                        appName: { type: 'string', id: 8 },
+                        adMarkIcon: { type: 'string', id: 9 },
                       },
                     },
                     GoodsJumpType: {
@@ -7099,41 +7099,41 @@ const biliJson = {
                     },
                     AdditionUgc: {
                       fields: {
-                        headText: { type: "string", id: 1 },
-                        title: { type: "string", id: 2 },
-                        cover: { type: "string", id: 3 },
-                        descText1: { type: "string", id: 4 },
-                        descText2: { type: "string", id: 5 },
-                        uri: { type: "string", id: 6 },
-                        duration: { type: "string", id: 7 },
-                        lineFeed: { type: "bool", id: 8 },
-                        cardType: { type: "string", id: 9 },
+                        headText: { type: 'string', id: 1 },
+                        title: { type: 'string', id: 2 },
+                        cover: { type: 'string', id: 3 },
+                        descText1: { type: 'string', id: 4 },
+                        descText2: { type: 'string', id: 5 },
+                        uri: { type: 'string', id: 6 },
+                        duration: { type: 'string', id: 7 },
+                        lineFeed: { type: 'bool', id: 8 },
+                        cardType: { type: 'string', id: 9 },
                       },
                     },
                     AdditionUP: {
                       fields: {
-                        title: { type: "string", id: 1 },
-                        descText1: { type: "HighlightText", id: 2 },
-                        descText2: { type: "string", id: 3 },
-                        url: { type: "string", id: 4 },
-                        button: { type: "AdditionalButton", id: 5 },
-                        cardType: { type: "string", id: 6 },
-                        reserveTotal: { type: "int64", id: 7 },
-                        actSkin: { type: "AdditionalActSkin", id: 8 },
-                        rid: { type: "int64", id: 9 },
+                        title: { type: 'string', id: 1 },
+                        descText1: { type: 'HighlightText', id: 2 },
+                        descText2: { type: 'string', id: 3 },
+                        url: { type: 'string', id: 4 },
+                        button: { type: 'AdditionalButton', id: 5 },
+                        cardType: { type: 'string', id: 6 },
+                        reserveTotal: { type: 'int64', id: 7 },
+                        actSkin: { type: 'AdditionalActSkin', id: 8 },
+                        rid: { type: 'int64', id: 9 },
                         lotteryType: {
-                          type: "ReserveRelationLotteryType",
+                          type: 'ReserveRelationLotteryType',
                           id: 10,
                         },
-                        descText3: { type: "HighlightText", id: 11 },
-                        upMid: { type: "int64", id: 12 },
-                        userInfo: { type: "AdditionUserInfo", id: 13 },
-                        dynamicId: { type: "string", id: 14 },
-                        showText2: { type: "bool", id: 15 },
-                        dynType: { type: "int64", id: 16 },
-                        businessId: { type: "string", id: 17 },
-                        badgeText: { type: "string", id: 18 },
-                        isPremiere: { type: "bool", id: 19 },
+                        descText3: { type: 'HighlightText', id: 11 },
+                        upMid: { type: 'int64', id: 12 },
+                        userInfo: { type: 'AdditionUserInfo', id: 13 },
+                        dynamicId: { type: 'string', id: 14 },
+                        showText2: { type: 'bool', id: 15 },
+                        dynType: { type: 'int64', id: 16 },
+                        businessId: { type: 'string', id: 17 },
+                        badgeText: { type: 'string', id: 18 },
+                        isPremiere: { type: 'bool', id: 19 },
                       },
                     },
                     ReserveRelationLotteryType: {
@@ -7144,85 +7144,85 @@ const biliJson = {
                     },
                     AdditionalActSkin: {
                       fields: {
-                        svga: { type: "string", id: 1 },
-                        lastImage: { type: "string", id: 2 },
-                        playTimes: { type: "int64", id: 3 },
+                        svga: { type: 'string', id: 1 },
+                        lastImage: { type: 'string', id: 2 },
+                        playTimes: { type: 'int64', id: 3 },
                       },
                     },
                     AdditionUserInfo: {
                       fields: {
-                        name: { type: "string", id: 1 },
-                        face: { type: "string", id: 2 },
+                        name: { type: 'string', id: 1 },
+                        face: { type: 'string', id: 2 },
                       },
                     },
                     AdditionVote: {
                       fields: {
-                        imageUrl: { type: "string", id: 1 },
-                        title: { type: "string", id: 2 },
-                        text1: { type: "string", id: 3 },
-                        buttonText: { type: "string", id: 4 },
-                        url: { type: "string", id: 5 },
+                        imageUrl: { type: 'string', id: 1 },
+                        title: { type: 'string', id: 2 },
+                        text1: { type: 'string', id: 3 },
+                        buttonText: { type: 'string', id: 4 },
+                        url: { type: 'string', id: 5 },
                       },
                     },
                     AdditionVote2: {
                       oneofs: {
                         item: {
                           oneof: [
-                            "additionVoteWord",
-                            "additionVotePic",
-                            "additionVoteDefaule",
+                            'additionVoteWord',
+                            'additionVotePic',
+                            'additionVoteDefaule',
                           ],
                         },
                       },
                       fields: {
-                        additionVoteType: { type: "AdditionVoteType", id: 1 },
-                        voteId: { type: "int64", id: 2 },
-                        title: { type: "string", id: 3 },
-                        label: { type: "string", id: 4 },
-                        deadline: { type: "int64", id: 5 },
-                        openText: { type: "string", id: 6 },
-                        closeText: { type: "string", id: 7 },
-                        votedText: { type: "string", id: 8 },
-                        state: { type: "AdditionVoteState", id: 9 },
-                        additionVoteWord: { type: "AdditionVoteWord", id: 10 },
-                        additionVotePic: { type: "AdditionVotePic", id: 11 },
+                        additionVoteType: { type: 'AdditionVoteType', id: 1 },
+                        voteId: { type: 'int64', id: 2 },
+                        title: { type: 'string', id: 3 },
+                        label: { type: 'string', id: 4 },
+                        deadline: { type: 'int64', id: 5 },
+                        openText: { type: 'string', id: 6 },
+                        closeText: { type: 'string', id: 7 },
+                        votedText: { type: 'string', id: 8 },
+                        state: { type: 'AdditionVoteState', id: 9 },
+                        additionVoteWord: { type: 'AdditionVoteWord', id: 10 },
+                        additionVotePic: { type: 'AdditionVotePic', id: 11 },
                         additionVoteDefaule: {
-                          type: "AdditionVoteDefaule",
+                          type: 'AdditionVoteDefaule',
                           id: 12,
                         },
-                        bizType: { type: "int32", id: 13 },
-                        total: { type: "int64", id: 14 },
-                        cardType: { type: "string", id: 15 },
-                        tips: { type: "string", id: 16 },
-                        uri: { type: "string", id: 17 },
-                        isVoted: { type: "bool", id: 18 },
-                        choiceCnt: { type: "int32", id: 19 },
-                        defauleSelectShare: { type: "bool", id: 20 },
+                        bizType: { type: 'int32', id: 13 },
+                        total: { type: 'int64', id: 14 },
+                        cardType: { type: 'string', id: 15 },
+                        tips: { type: 'string', id: 16 },
+                        uri: { type: 'string', id: 17 },
+                        isVoted: { type: 'bool', id: 18 },
+                        choiceCnt: { type: 'int32', id: 19 },
+                        defauleSelectShare: { type: 'bool', id: 20 },
                       },
                     },
                     AdditionVoteDefaule: {
                       fields: {
-                        cover: { rule: "repeated", type: "string", id: 1 },
+                        cover: { rule: 'repeated', type: 'string', id: 1 },
                       },
                     },
                     AdditionVotePic: {
                       fields: {
                         item: {
-                          rule: "repeated",
-                          type: "AdditionVotePicItem",
+                          rule: 'repeated',
+                          type: 'AdditionVotePicItem',
                           id: 1,
                         },
                       },
                     },
                     AdditionVotePicItem: {
                       fields: {
-                        optIdx: { type: "int32", id: 1 },
-                        cover: { type: "string", id: 2 },
-                        isVote: { type: "bool", id: 3 },
-                        total: { type: "int32", id: 4 },
-                        persent: { type: "double", id: 5 },
-                        title: { type: "string", id: 6 },
-                        isMaxOption: { type: "bool", id: 7 },
+                        optIdx: { type: 'int32', id: 1 },
+                        cover: { type: 'string', id: 2 },
+                        isVote: { type: 'bool', id: 3 },
+                        total: { type: 'int32', id: 4 },
+                        persent: { type: 'double', id: 5 },
+                        title: { type: 'string', id: 6 },
+                        isMaxOption: { type: 'bool', id: 7 },
                       },
                     },
                     AdditionVoteState: {
@@ -7243,77 +7243,77 @@ const biliJson = {
                     AdditionVoteWord: {
                       fields: {
                         item: {
-                          rule: "repeated",
-                          type: "AdditionVoteWordItem",
+                          rule: 'repeated',
+                          type: 'AdditionVoteWordItem',
                           id: 1,
                         },
                       },
                     },
                     AdditionVoteWordItem: {
                       fields: {
-                        optIdx: { type: "int32", id: 1 },
-                        title: { type: "string", id: 2 },
-                        isVote: { type: "bool", id: 3 },
-                        total: { type: "int32", id: 4 },
-                        persent: { type: "double", id: 5 },
-                        isMaxOption: { type: "bool", id: 6 },
+                        optIdx: { type: 'int32', id: 1 },
+                        title: { type: 'string', id: 2 },
+                        isVote: { type: 'bool', id: 3 },
+                        total: { type: 'int32', id: 4 },
+                        persent: { type: 'double', id: 5 },
+                        isMaxOption: { type: 'bool', id: 6 },
                       },
                     },
                     CardVideoUpList: {
                       fields: {
-                        title: { type: "string", id: 1 },
-                        list: { rule: "repeated", type: "UpListItem", id: 2 },
-                        footprint: { type: "string", id: 3 },
-                        showLiveNum: { type: "int32", id: 4 },
-                        moreLabel: { type: "UpListMoreLabel", id: 5 },
-                        titleSwitch: { type: "int32", id: 6 },
-                        showMoreLabel: { type: "bool", id: 7 },
-                        showInPersonal: { type: "bool", id: 8 },
-                        showMoreButton: { type: "bool", id: 9 },
+                        title: { type: 'string', id: 1 },
+                        list: { rule: 'repeated', type: 'UpListItem', id: 2 },
+                        footprint: { type: 'string', id: 3 },
+                        showLiveNum: { type: 'int32', id: 4 },
+                        moreLabel: { type: 'UpListMoreLabel', id: 5 },
+                        titleSwitch: { type: 'int32', id: 6 },
+                        showMoreLabel: { type: 'bool', id: 7 },
+                        showInPersonal: { type: 'bool', id: 8 },
+                        showMoreButton: { type: 'bool', id: 9 },
                       },
                     },
                     CmtShowItem: {
                       fields: {
-                        uid: { type: "int64", id: 1 },
-                        uname: { type: "string", id: 2 },
-                        uri: { type: "string", id: 3 },
-                        comment: { type: "string", id: 4 },
+                        uid: { type: 'int64', id: 1 },
+                        uname: { type: 'string', id: 2 },
+                        uri: { type: 'string', id: 3 },
+                        comment: { type: 'string', id: 4 },
                       },
                     },
                     DecoCardFan: {
                       fields: {
-                        isFan: { type: "int32", id: 1 },
-                        number: { type: "int32", id: 2 },
-                        numberStr: { type: "string", id: 3 },
-                        color: { type: "string", id: 4 },
+                        isFan: { type: 'int32', id: 1 },
+                        number: { type: 'int32', id: 2 },
+                        numberStr: { type: 'string', id: 3 },
+                        color: { type: 'string', id: 4 },
                       },
                     },
                     DecorateCard: {
                       fields: {
-                        id: { type: "int64", id: 1 },
-                        cardUrl: { type: "string", id: 2 },
-                        jumpUrl: { type: "string", id: 3 },
-                        fan: { type: "DecoCardFan", id: 4 },
+                        id: { type: 'int64', id: 1 },
+                        cardUrl: { type: 'string', id: 2 },
+                        jumpUrl: { type: 'string', id: 3 },
+                        fan: { type: 'DecoCardFan', id: 4 },
                       },
                     },
                     Description: {
                       fields: {
-                        text: { type: "string", id: 1 },
-                        type: { type: "DescType", id: 2 },
-                        uri: { type: "string", id: 3 },
-                        emojiType: { type: "EmojiType", id: 4 },
-                        goodsType: { type: "string", id: 5 },
-                        iconUrl: { type: "string", id: 6 },
-                        iconName: { type: "string", id: 7 },
-                        rid: { type: "string", id: 8 },
-                        goods: { type: "ModuleDescGoods", id: 9 },
-                        origText: { type: "string", id: 10 },
-                        emojiSize: { type: "int32", id: 11 },
-                        emojiSizeSpec: { type: "EmojiSizeSpec", id: 12 },
+                        text: { type: 'string', id: 1 },
+                        type: { type: 'DescType', id: 2 },
+                        uri: { type: 'string', id: 3 },
+                        emojiType: { type: 'EmojiType', id: 4 },
+                        goodsType: { type: 'string', id: 5 },
+                        iconUrl: { type: 'string', id: 6 },
+                        iconName: { type: 'string', id: 7 },
+                        rid: { type: 'string', id: 8 },
+                        goods: { type: 'ModuleDescGoods', id: 9 },
+                        origText: { type: 'string', id: 10 },
+                        emojiSize: { type: 'int32', id: 11 },
+                        emojiSizeSpec: { type: 'EmojiSizeSpec', id: 12 },
                       },
                     },
                     EmojiSizeSpec: {
-                      fields: { width: { type: "int64", id: 1 } },
+                      fields: { width: { type: 'int64', id: 1 } },
                     },
                     EmojiType: {
                       values: {
@@ -7348,94 +7348,94 @@ const biliJson = {
                     },
                     Dimension: {
                       fields: {
-                        height: { type: "int64", id: 1 },
-                        width: { type: "int64", id: 2 },
-                        rotate: { type: "int64", id: 3 },
-                        forceHorizontal: { type: "bool", id: 4 },
+                        height: { type: 'int64', id: 1 },
+                        width: { type: 'int64', id: 2 },
+                        rotate: { type: 'int64', id: 3 },
+                        forceHorizontal: { type: 'bool', id: 4 },
                       },
                     },
                     DynAllReply: {
                       fields: {
-                        dynamicList: { type: "DynamicList", id: 1 },
-                        upList: { type: "CardVideoUpList", id: 2 },
-                        topicList: { type: "TopicList", id: 3 },
-                        unfollow: { type: "Unfollow", id: 4 },
-                        regionRcmd: { type: "DynRegionRcmd", id: 5 },
-                        config: { type: "Config", id: 6 },
+                        dynamicList: { type: 'DynamicList', id: 1 },
+                        upList: { type: 'CardVideoUpList', id: 2 },
+                        topicList: { type: 'TopicList', id: 3 },
+                        unfollow: { type: 'Unfollow', id: 4 },
+                        regionRcmd: { type: 'DynRegionRcmd', id: 5 },
+                        config: { type: 'Config', id: 6 },
                       },
                     },
                     Config: {
                       fields: {
-                        storyVerticalExp: { type: "bool", id: 1 },
-                        detailViewBits: { type: "int64", id: 2 },
+                        storyVerticalExp: { type: 'bool', id: 1 },
+                        detailViewBits: { type: 'int64', id: 2 },
                       },
                     },
                     DynRegionRcmd: {
                       fields: {
                         items: {
-                          rule: "repeated",
-                          type: "DynRegionRcmdItem",
+                          rule: 'repeated',
+                          type: 'DynRegionRcmdItem',
                           id: 1,
                         },
-                        opts: { type: "RcmdOption", id: 2 },
+                        opts: { type: 'RcmdOption', id: 2 },
                       },
                     },
                     RcmdOption: {
-                      fields: { showTitle: { type: "bool", id: 1 } },
+                      fields: { showTitle: { type: 'bool', id: 1 } },
                     },
                     DynRegionRcmdItem: {
                       fields: {
-                        rid: { type: "int64", id: 1 },
-                        title: { type: "string", id: 2 },
-                        items: { rule: "repeated", type: "ModuleRcmd", id: 3 },
+                        rid: { type: 'int64', id: 1 },
+                        title: { type: 'string', id: 2 },
+                        items: { rule: 'repeated', type: 'ModuleRcmd', id: 3 },
                       },
                     },
                     ModuleRcmd: {
                       fields: {
-                        author: { type: "RcmdAuthor", id: 1 },
-                        items: { rule: "repeated", type: "RcmdItem", id: 2 },
-                        serverInfo: { type: "string", id: 3 },
+                        author: { type: 'RcmdAuthor', id: 1 },
+                        items: { rule: 'repeated', type: 'RcmdItem', id: 2 },
+                        serverInfo: { type: 'string', id: 3 },
                       },
                     },
                     RcmdAuthor: {
                       fields: {
-                        author: { type: "UserInfo", id: 1 },
-                        desc: { type: "string", id: 2 },
-                        relation: { type: "Relation", id: 3 },
+                        author: { type: 'UserInfo', id: 1 },
+                        desc: { type: 'string', id: 2 },
+                        relation: { type: 'Relation', id: 3 },
                       },
                     },
                     RcmdItem: {
-                      oneofs: { item: { oneof: ["rcmdArchive"] } },
+                      oneofs: { item: { oneof: ['rcmdArchive'] } },
                       fields: {
-                        type: { type: "RcmdType", id: 1 },
-                        rcmdArchive: { type: "RcmdArchive", id: 2 },
+                        type: { type: 'RcmdType', id: 1 },
+                        rcmdArchive: { type: 'RcmdArchive', id: 2 },
                       },
                     },
                     RcmdArchive: {
                       fields: {
-                        title: { type: "string", id: 1 },
-                        cover: { type: "string", id: 2 },
-                        coverLeftIcon1: { type: "CoverIcon", id: 3 },
-                        coverLeftText1: { type: "string", id: 4 },
-                        uri: { type: "string", id: 5 },
-                        isPgc: { type: "bool", id: 6 },
-                        aid: { type: "int64", id: 7 },
-                        badge: { type: "IconBadge", id: 8 },
-                        coverLeftIcon2: { type: "CoverIcon", id: 9 },
-                        coverLeftText2: { type: "string", id: 10 },
-                        coverLeftIcon3: { type: "CoverIcon", id: 11 },
-                        coverLeftText3: { type: "string", id: 12 },
-                        desc: { type: "string", id: 13 },
-                        trackId: { type: "string", id: 14 },
-                        rcmdReason: { type: "RcmdReason", id: 15 },
+                        title: { type: 'string', id: 1 },
+                        cover: { type: 'string', id: 2 },
+                        coverLeftIcon1: { type: 'CoverIcon', id: 3 },
+                        coverLeftText1: { type: 'string', id: 4 },
+                        uri: { type: 'string', id: 5 },
+                        isPgc: { type: 'bool', id: 6 },
+                        aid: { type: 'int64', id: 7 },
+                        badge: { type: 'IconBadge', id: 8 },
+                        coverLeftIcon2: { type: 'CoverIcon', id: 9 },
+                        coverLeftText2: { type: 'string', id: 10 },
+                        coverLeftIcon3: { type: 'CoverIcon', id: 11 },
+                        coverLeftText3: { type: 'string', id: 12 },
+                        desc: { type: 'string', id: 13 },
+                        trackId: { type: 'string', id: 14 },
+                        rcmdReason: { type: 'RcmdReason', id: 15 },
                       },
                     },
                     RcmdReason: {
                       fields: {
-                        campusName: { type: "string", id: 1 },
-                        style: { type: "RcmdReasonStyle", id: 2 },
-                        rcmdReason: { type: "string", id: 3 },
-                        upName: { type: "string", id: 4 },
+                        campusName: { type: 'string', id: 1 },
+                        style: { type: 'RcmdReasonStyle', id: 2 },
+                        rcmdReason: { type: 'string', id: 3 },
+                        upName: { type: 'string', id: 4 },
                       },
                     },
                     RcmdReasonStyle: {
@@ -7456,19 +7456,19 @@ const biliJson = {
                     },
                     IconBadge: {
                       fields: {
-                        iconBgUrl: { type: "string", id: 1 },
-                        text: { type: "string", id: 2 },
+                        iconBgUrl: { type: 'string', id: 1 },
+                        text: { type: 'string', id: 2 },
                       },
                     },
                     RcmdType: { values: { rcmd_archive: 0, rcmd_dynamic: 1 } },
                     DynamicItem: {
                       fields: {
-                        cardType: { type: "DynamicType", id: 1 },
-                        itemType: { type: "DynamicType", id: 2 },
-                        modules: { rule: "repeated", type: "Module", id: 3 },
-                        extend: { type: "Extend", id: 4 },
-                        hasFold: { type: "int32", id: 5 },
-                        serverInfo: { type: "string", id: 6 },
+                        cardType: { type: 'DynamicType', id: 1 },
+                        itemType: { type: 'DynamicType', id: 2 },
+                        modules: { rule: 'repeated', type: 'Module', id: 3 },
+                        extend: { type: 'Extend', id: 4 },
+                        hasFold: { type: 'int32', id: 5 },
+                        serverInfo: { type: 'string', id: 6 },
                       },
                     },
                     DynamicType: {
@@ -7504,11 +7504,11 @@ const biliJson = {
                     },
                     DynamicList: {
                       fields: {
-                        list: { rule: "repeated", type: "DynamicItem", id: 1 },
-                        updateNum: { type: "int64", id: 2 },
-                        historyOffset: { type: "string", id: 3 },
-                        updateBaseline: { type: "string", id: 4 },
-                        hasMore: { type: "bool", id: 5 },
+                        list: { rule: 'repeated', type: 'DynamicItem', id: 1 },
+                        updateNum: { type: 'int64', id: 2 },
+                        historyOffset: { type: 'string', id: 3 },
+                        updateBaseline: { type: 'string', id: 4 },
+                        hasMore: { type: 'bool', id: 5 },
                       },
                     },
                     DynExtendType: {
@@ -7565,128 +7565,128 @@ const biliJson = {
                     EspaceStyle: { values: { moba: 0 } },
                     Extend: {
                       fields: {
-                        dynIdStr: { type: "string", id: 1 },
-                        businessId: { type: "string", id: 2 },
-                        origDynIdStr: { type: "string", id: 3 },
-                        origName: { type: "string", id: 4 },
-                        origImgUrl: { type: "string", id: 5 },
+                        dynIdStr: { type: 'string', id: 1 },
+                        businessId: { type: 'string', id: 2 },
+                        origDynIdStr: { type: 'string', id: 3 },
+                        origName: { type: 'string', id: 4 },
+                        origImgUrl: { type: 'string', id: 5 },
                         origDesc: {
-                          rule: "repeated",
-                          type: "Description",
+                          rule: 'repeated',
+                          type: 'Description',
                           id: 6,
                         },
-                        desc: { rule: "repeated", type: "Description", id: 7 },
-                        origDynType: { type: "DynamicType", id: 8 },
-                        shareType: { type: "string", id: 9 },
-                        shareScene: { type: "string", id: 10 },
-                        isFastShare: { type: "bool", id: 11 },
-                        rType: { type: "int32", id: 12 },
-                        dynType: { type: "int64", id: 13 },
-                        uid: { type: "int64", id: 14 },
-                        cardUrl: { type: "string", id: 15 },
-                        sourceContent: { type: "google.protobuf.Any", id: 16 },
-                        origFace: { type: "string", id: 17 },
-                        reply: { type: "ExtendReply", id: 18 },
-                        trackId: { type: "string", id: 19 },
-                        opusSummary: { type: "ModuleOpusSummary", id: 20 },
-                        onlyFansProperty: { type: "OnlyFansProperty", id: 21 },
-                        featureGate: { type: "DynFeatureGate", id: 22 },
-                        isInAudit: { type: "bool", id: 23 },
+                        desc: { rule: 'repeated', type: 'Description', id: 7 },
+                        origDynType: { type: 'DynamicType', id: 8 },
+                        shareType: { type: 'string', id: 9 },
+                        shareScene: { type: 'string', id: 10 },
+                        isFastShare: { type: 'bool', id: 11 },
+                        rType: { type: 'int32', id: 12 },
+                        dynType: { type: 'int64', id: 13 },
+                        uid: { type: 'int64', id: 14 },
+                        cardUrl: { type: 'string', id: 15 },
+                        sourceContent: { type: 'google.protobuf.Any', id: 16 },
+                        origFace: { type: 'string', id: 17 },
+                        reply: { type: 'ExtendReply', id: 18 },
+                        trackId: { type: 'string', id: 19 },
+                        opusSummary: { type: 'ModuleOpusSummary', id: 20 },
+                        onlyFansProperty: { type: 'OnlyFansProperty', id: 21 },
+                        featureGate: { type: 'DynFeatureGate', id: 22 },
+                        isInAudit: { type: 'bool', id: 23 },
                       },
                     },
                     ExtendReply: {
                       fields: {
-                        uri: { type: "string", id: 1 },
+                        uri: { type: 'string', id: 1 },
                         params: {
-                          rule: "repeated",
-                          type: "ExtendReplyParam",
+                          rule: 'repeated',
+                          type: 'ExtendReplyParam',
                           id: 2,
                         },
                       },
                     },
                     ExtendReplyParam: {
                       fields: {
-                        key: { type: "string", id: 1 },
-                        value: { type: "string", id: 2 },
+                        key: { type: 'string', id: 1 },
+                        value: { type: 'string', id: 2 },
                       },
                     },
                     ExtInfoCommon: {
                       fields: {
-                        title: { type: "string", id: 1 },
-                        uri: { type: "string", id: 2 },
-                        icon: { type: "string", id: 3 },
-                        poiType: { type: "int32", id: 4 },
-                        type: { type: "DynExtendType", id: 5 },
-                        subModule: { type: "string", id: 6 },
-                        actionText: { type: "string", id: 7 },
-                        actionUrl: { type: "string", id: 8 },
-                        rid: { type: "int64", id: 9 },
-                        isShowLight: { type: "bool", id: 10 },
+                        title: { type: 'string', id: 1 },
+                        uri: { type: 'string', id: 2 },
+                        icon: { type: 'string', id: 3 },
+                        poiType: { type: 'int32', id: 4 },
+                        type: { type: 'DynExtendType', id: 5 },
+                        subModule: { type: 'string', id: 6 },
+                        actionText: { type: 'string', id: 7 },
+                        actionUrl: { type: 'string', id: 8 },
+                        rid: { type: 'int64', id: 9 },
+                        isShowLight: { type: 'bool', id: 10 },
                       },
                     },
                     ExtInfoGame: {
                       fields: {
-                        title: { type: "string", id: 1 },
-                        uri: { type: "string", id: 2 },
-                        icon: { type: "string", id: 3 },
+                        title: { type: 'string', id: 1 },
+                        uri: { type: 'string', id: 2 },
+                        icon: { type: 'string', id: 3 },
                       },
                     },
                     ExtInfoHot: {
                       fields: {
-                        title: { type: "string", id: 1 },
-                        uri: { type: "string", id: 2 },
-                        icon: { type: "string", id: 3 },
+                        title: { type: 'string', id: 1 },
+                        uri: { type: 'string', id: 2 },
+                        icon: { type: 'string', id: 3 },
                       },
                     },
                     ExtInfoLBS: {
                       fields: {
-                        title: { type: "string", id: 1 },
-                        uri: { type: "string", id: 2 },
-                        icon: { type: "string", id: 3 },
-                        poiType: { type: "int32", id: 4 },
+                        title: { type: 'string', id: 1 },
+                        uri: { type: 'string', id: 2 },
+                        icon: { type: 'string', id: 3 },
+                        poiType: { type: 'int32', id: 4 },
                       },
                     },
                     ExtInfoOGV: {
                       fields: {
-                        infoOgv: { rule: "repeated", type: "InfoOGV", id: 1 },
+                        infoOgv: { rule: 'repeated', type: 'InfoOGV', id: 1 },
                       },
                     },
                     ExtInfoTopic: {
                       fields: {
-                        title: { type: "string", id: 1 },
-                        uri: { type: "string", id: 2 },
-                        icon: { type: "string", id: 3 },
+                        title: { type: 'string', id: 1 },
+                        uri: { type: 'string', id: 2 },
+                        icon: { type: 'string', id: 3 },
                       },
                     },
                     GoodsItem: {
                       fields: {
-                        cover: { type: "string", id: 1 },
-                        schemaPackageName: { type: "string", id: 2 },
-                        sourceType: { type: "int32", id: 3 },
-                        jumpUrl: { type: "string", id: 4 },
-                        jumpDesc: { type: "string", id: 5 },
-                        title: { type: "string", id: 6 },
-                        brief: { type: "string", id: 7 },
-                        price: { type: "string", id: 8 },
-                        itemId: { type: "int64", id: 9 },
-                        schemaUrl: { type: "string", id: 10 },
+                        cover: { type: 'string', id: 1 },
+                        schemaPackageName: { type: 'string', id: 2 },
+                        sourceType: { type: 'int32', id: 3 },
+                        jumpUrl: { type: 'string', id: 4 },
+                        jumpDesc: { type: 'string', id: 5 },
+                        title: { type: 'string', id: 6 },
+                        brief: { type: 'string', id: 7 },
+                        price: { type: 'string', id: 8 },
+                        itemId: { type: 'int64', id: 9 },
+                        schemaUrl: { type: 'string', id: 10 },
                         openWhiteList: {
-                          rule: "repeated",
-                          type: "string",
+                          rule: 'repeated',
+                          type: 'string',
                           id: 11,
                         },
-                        userWebV2: { type: "bool", id: 12 },
-                        adMark: { type: "string", id: 13 },
-                        appName: { type: "string", id: 14 },
-                        jumpType: { type: "GoodsJumpType", id: 15 },
+                        userWebV2: { type: 'bool', id: 12 },
+                        adMark: { type: 'string', id: 13 },
+                        appName: { type: 'string', id: 14 },
+                        jumpType: { type: 'GoodsJumpType', id: 15 },
                       },
                     },
                     HighlightText: {
                       fields: {
-                        text: { type: "string", id: 1 },
-                        textStyle: { type: "HighlightTextStyle", id: 2 },
-                        jumpUrl: { type: "string", id: 3 },
-                        icon: { type: "string", id: 4 },
+                        text: { type: 'string', id: 1 },
+                        textStyle: { type: 'HighlightTextStyle', id: 2 },
+                        jumpUrl: { type: 'string', id: 3 },
+                        icon: { type: 'string', id: 4 },
                       },
                     },
                     HighlightTextStyle: {
@@ -7694,30 +7694,30 @@ const biliJson = {
                     },
                     InfoOGV: {
                       fields: {
-                        title: { type: "string", id: 1 },
-                        uri: { type: "string", id: 2 },
-                        icon: { type: "string", id: 3 },
-                        subModule: { type: "string", id: 4 },
+                        title: { type: 'string', id: 1 },
+                        uri: { type: 'string', id: 2 },
+                        icon: { type: 'string', id: 3 },
+                        subModule: { type: 'string', id: 4 },
                       },
                     },
                     InteractionItem: {
                       fields: {
-                        iconType: { type: "LocalIconType", id: 1 },
-                        desc: { rule: "repeated", type: "Description", id: 2 },
-                        uri: { type: "string", id: 3 },
-                        dynamicId: { type: "string", id: 4 },
-                        commentMid: { type: "int64", id: 6 },
+                        iconType: { type: 'LocalIconType', id: 1 },
+                        desc: { rule: 'repeated', type: 'Description', id: 2 },
+                        uri: { type: 'string', id: 3 },
+                        dynamicId: { type: 'string', id: 4 },
+                        commentMid: { type: 'int64', id: 6 },
                         faces: {
-                          rule: "repeated",
-                          type: "InteractionFace",
+                          rule: 'repeated',
+                          type: 'InteractionFace',
                           id: 7,
                         },
-                        stat: { type: "InteractionStat", id: 8 },
-                        icon: { type: "string", id: 9 },
-                        tailIcon: { type: "string", id: 10 },
+                        stat: { type: 'InteractionStat', id: 8 },
+                        icon: { type: 'string', id: 9 },
+                        tailIcon: { type: 'string', id: 10 },
                         tailDesc: {
-                          rule: "repeated",
-                          type: "Description",
+                          rule: 'repeated',
+                          type: 'Description',
                           id: 11,
                         },
                       },
@@ -7733,42 +7733,42 @@ const biliJson = {
                     },
                     InteractionFace: {
                       fields: {
-                        mid: { type: "int64", id: 1 },
-                        face: { type: "string", id: 2 },
+                        mid: { type: 'int64', id: 1 },
+                        face: { type: 'string', id: 2 },
                       },
                     },
                     InteractionStat: {
                       fields: {
-                        like: { type: "int64", id: 1 },
-                        forward: { type: "int64", id: 2 },
+                        like: { type: 'int64', id: 1 },
+                        forward: { type: 'int64', id: 2 },
                       },
                     },
                     LikeAnimation: {
                       fields: {
-                        begin: { type: "string", id: 1 },
-                        proc: { type: "string", id: 2 },
-                        end: { type: "string", id: 3 },
-                        likeIconId: { type: "int64", id: 4 },
+                        begin: { type: 'string', id: 1 },
+                        proc: { type: 'string', id: 2 },
+                        end: { type: 'string', id: 3 },
+                        likeIconId: { type: 'int64', id: 4 },
                       },
                     },
                     LikeInfo: {
                       fields: {
-                        animation: { type: "LikeAnimation", id: 1 },
-                        isLike: { type: "bool", id: 2 },
+                        animation: { type: 'LikeAnimation', id: 1 },
+                        isLike: { type: 'bool', id: 2 },
                       },
                     },
                     LikeUser: {
                       fields: {
-                        uid: { type: "int64", id: 1 },
-                        uname: { type: "string", id: 2 },
-                        uri: { type: "string", id: 3 },
+                        uid: { type: 'int64', id: 1 },
+                        uname: { type: 'string', id: 2 },
+                        uri: { type: 'string', id: 3 },
                       },
                     },
                     LiveInfo: {
                       fields: {
-                        isLiving: { type: "int32", id: 1 },
-                        uri: { type: "string", id: 2 },
-                        liveState: { type: "LiveState", id: 3 },
+                        isLiving: { type: 'int32', id: 1 },
+                        uri: { type: 'string', id: 2 },
+                        liveState: { type: 'LiveState', id: 3 },
                       },
                     },
                     LiveState: {
@@ -7776,63 +7776,63 @@ const biliJson = {
                     },
                     MatchTeam: {
                       fields: {
-                        id: { type: "int64", id: 1 },
-                        name: { type: "string", id: 2 },
-                        cover: { type: "string", id: 3 },
-                        color: { type: "string", id: 4 },
-                        nightColor: { type: "string", id: 5 },
+                        id: { type: 'int64', id: 1 },
+                        name: { type: 'string', id: 2 },
+                        cover: { type: 'string', id: 3 },
+                        color: { type: 'string', id: 4 },
+                        nightColor: { type: 'string', id: 5 },
                       },
                     },
                     MdlDynApplet: {
                       fields: {
-                        id: { type: "int64", id: 1 },
-                        uri: { type: "string", id: 2 },
-                        title: { type: "string", id: 4 },
-                        subTitle: { type: "string", id: 5 },
-                        cover: { type: "string", id: 6 },
-                        icon: { type: "string", id: 7 },
-                        label: { type: "string", id: 8 },
-                        buttonTitle: { type: "string", id: 9 },
+                        id: { type: 'int64', id: 1 },
+                        uri: { type: 'string', id: 2 },
+                        title: { type: 'string', id: 4 },
+                        subTitle: { type: 'string', id: 5 },
+                        cover: { type: 'string', id: 6 },
+                        icon: { type: 'string', id: 7 },
+                        label: { type: 'string', id: 8 },
+                        buttonTitle: { type: 'string', id: 9 },
                       },
                     },
                     MdlDynArchive: {
                       fields: {
-                        title: { type: "string", id: 1 },
-                        cover: { type: "string", id: 2 },
-                        uri: { type: "string", id: 3 },
-                        coverLeftText1: { type: "string", id: 4 },
-                        coverLeftText2: { type: "string", id: 5 },
-                        coverLeftText3: { type: "string", id: 6 },
-                        avid: { type: "int64", id: 7 },
-                        cid: { type: "int64", id: 8 },
-                        mediaType: { type: "MediaType", id: 9 },
-                        dimension: { type: "Dimension", id: 10 },
-                        badge: { rule: "repeated", type: "VideoBadge", id: 11 },
-                        canPlay: { type: "bool", id: 12 },
-                        stype: { type: "VideoType", id: 13 },
-                        isPGC: { type: "bool", id: 14 },
-                        inlineURL: { type: "string", id: 15 },
-                        episodeId: { type: "int64", id: 16 },
-                        subType: { type: "int32", id: 17 },
-                        pgcSeasonId: { type: "int64", id: 18 },
-                        playIcon: { type: "string", id: 19 },
-                        duration: { type: "int64", id: 20 },
-                        jumpUrl: { type: "string", id: 21 },
-                        isPreview: { type: "bool", id: 22 },
+                        title: { type: 'string', id: 1 },
+                        cover: { type: 'string', id: 2 },
+                        uri: { type: 'string', id: 3 },
+                        coverLeftText1: { type: 'string', id: 4 },
+                        coverLeftText2: { type: 'string', id: 5 },
+                        coverLeftText3: { type: 'string', id: 6 },
+                        avid: { type: 'int64', id: 7 },
+                        cid: { type: 'int64', id: 8 },
+                        mediaType: { type: 'MediaType', id: 9 },
+                        dimension: { type: 'Dimension', id: 10 },
+                        badge: { rule: 'repeated', type: 'VideoBadge', id: 11 },
+                        canPlay: { type: 'bool', id: 12 },
+                        stype: { type: 'VideoType', id: 13 },
+                        isPGC: { type: 'bool', id: 14 },
+                        inlineURL: { type: 'string', id: 15 },
+                        episodeId: { type: 'int64', id: 16 },
+                        subType: { type: 'int32', id: 17 },
+                        pgcSeasonId: { type: 'int64', id: 18 },
+                        playIcon: { type: 'string', id: 19 },
+                        duration: { type: 'int64', id: 20 },
+                        jumpUrl: { type: 'string', id: 21 },
+                        isPreview: { type: 'bool', id: 22 },
                         badgeCategory: {
-                          rule: "repeated",
-                          type: "VideoBadge",
+                          rule: 'repeated',
+                          type: 'VideoBadge',
                           id: 23,
                         },
-                        isFeature: { type: "bool", id: 24 },
-                        reserveType: { type: "ReserveType", id: 25 },
-                        bvid: { type: "string", id: 26 },
-                        view: { type: "int32", id: 27 },
-                        showPremiereBadge: { type: "bool", id: 28 },
-                        premiereCard: { type: "bool", id: 29 },
-                        showProgress: { type: "bool", id: 30 },
-                        partDuration: { type: "int64", id: 31 },
-                        partProgress: { type: "int64", id: 32 },
+                        isFeature: { type: 'bool', id: 24 },
+                        reserveType: { type: 'ReserveType', id: 25 },
+                        bvid: { type: 'string', id: 26 },
+                        view: { type: 'int32', id: 27 },
+                        showPremiereBadge: { type: 'bool', id: 28 },
+                        premiereCard: { type: 'bool', id: 29 },
+                        showProgress: { type: 'bool', id: 30 },
+                        partDuration: { type: 'int64', id: 31 },
+                        partProgress: { type: 'int64', id: 32 },
                       },
                     },
                     MediaType: {
@@ -7857,28 +7857,28 @@ const biliJson = {
                     },
                     MdlDynArticle: {
                       fields: {
-                        id: { type: "int64", id: 1 },
-                        uri: { type: "string", id: 2 },
-                        title: { type: "string", id: 3 },
-                        desc: { type: "string", id: 4 },
-                        covers: { rule: "repeated", type: "string", id: 5 },
-                        label: { type: "string", id: 6 },
-                        templateID: { type: "int32", id: 7 },
+                        id: { type: 'int64', id: 1 },
+                        uri: { type: 'string', id: 2 },
+                        title: { type: 'string', id: 3 },
+                        desc: { type: 'string', id: 4 },
+                        covers: { rule: 'repeated', type: 'string', id: 5 },
+                        label: { type: 'string', id: 6 },
+                        templateID: { type: 'int32', id: 7 },
                       },
                     },
                     MdlDynCommon: {
                       fields: {
-                        oid: { type: "int64", id: 1 },
-                        uri: { type: "string", id: 2 },
-                        title: { type: "string", id: 3 },
-                        desc: { type: "string", id: 4 },
-                        cover: { type: "string", id: 5 },
-                        label: { type: "string", id: 6 },
-                        bizType: { type: "int32", id: 7 },
-                        sketchID: { type: "int64", id: 8 },
-                        style: { type: "MdlDynCommonType", id: 9 },
-                        badge: { rule: "repeated", type: "VideoBadge", id: 10 },
-                        button: { type: "AdditionalButton", id: 11 },
+                        oid: { type: 'int64', id: 1 },
+                        uri: { type: 'string', id: 2 },
+                        title: { type: 'string', id: 3 },
+                        desc: { type: 'string', id: 4 },
+                        cover: { type: 'string', id: 5 },
+                        label: { type: 'string', id: 6 },
+                        bizType: { type: 'int32', id: 7 },
+                        sketchID: { type: 'int64', id: 8 },
+                        style: { type: 'MdlDynCommonType', id: 9 },
+                        badge: { rule: 'repeated', type: 'VideoBadge', id: 10 },
+                        button: { type: 'AdditionalButton', id: 11 },
                       },
                     },
                     MdlDynCommonType: {
@@ -7890,74 +7890,74 @@ const biliJson = {
                     },
                     MdlDynCourBatch: {
                       fields: {
-                        title: { type: "string", id: 1 },
-                        cover: { type: "string", id: 2 },
-                        uri: { type: "string", id: 3 },
-                        text1: { type: "string", id: 4 },
-                        text2: { type: "string", id: 5 },
-                        badge: { type: "VideoBadge", id: 6 },
-                        playIcon: { type: "string", id: 7 },
-                        canPlay: { type: "bool", id: 8 },
-                        isPreview: { type: "bool", id: 9 },
-                        coverLeftText1: { type: "string", id: 10 },
-                        coverLeftText2: { type: "string", id: 11 },
-                        coverLeftText3: { type: "string", id: 12 },
-                        avid: { type: "int64", id: 13 },
-                        cid: { type: "int64", id: 14 },
-                        epid: { type: "int64", id: 15 },
-                        duration: { type: "int64", id: 16 },
-                        seasonId: { type: "int64", id: 17 },
+                        title: { type: 'string', id: 1 },
+                        cover: { type: 'string', id: 2 },
+                        uri: { type: 'string', id: 3 },
+                        text1: { type: 'string', id: 4 },
+                        text2: { type: 'string', id: 5 },
+                        badge: { type: 'VideoBadge', id: 6 },
+                        playIcon: { type: 'string', id: 7 },
+                        canPlay: { type: 'bool', id: 8 },
+                        isPreview: { type: 'bool', id: 9 },
+                        coverLeftText1: { type: 'string', id: 10 },
+                        coverLeftText2: { type: 'string', id: 11 },
+                        coverLeftText3: { type: 'string', id: 12 },
+                        avid: { type: 'int64', id: 13 },
+                        cid: { type: 'int64', id: 14 },
+                        epid: { type: 'int64', id: 15 },
+                        duration: { type: 'int64', id: 16 },
+                        seasonId: { type: 'int64', id: 17 },
                       },
                     },
                     MdlDynCourSeason: {
                       fields: {
-                        title: { type: "string", id: 1 },
-                        cover: { type: "string", id: 2 },
-                        uri: { type: "string", id: 3 },
-                        text1: { type: "string", id: 4 },
-                        desc: { type: "string", id: 5 },
-                        badge: { type: "VideoBadge", id: 6 },
-                        playIcon: { type: "string", id: 7 },
-                        canPlay: { type: "bool", id: 8 },
-                        isPreview: { type: "bool", id: 9 },
-                        avid: { type: "int64", id: 10 },
-                        cid: { type: "int64", id: 11 },
-                        epid: { type: "int64", id: 12 },
-                        duration: { type: "int64", id: 13 },
-                        seasonId: { type: "int64", id: 14 },
+                        title: { type: 'string', id: 1 },
+                        cover: { type: 'string', id: 2 },
+                        uri: { type: 'string', id: 3 },
+                        text1: { type: 'string', id: 4 },
+                        desc: { type: 'string', id: 5 },
+                        badge: { type: 'VideoBadge', id: 6 },
+                        playIcon: { type: 'string', id: 7 },
+                        canPlay: { type: 'bool', id: 8 },
+                        isPreview: { type: 'bool', id: 9 },
+                        avid: { type: 'int64', id: 10 },
+                        cid: { type: 'int64', id: 11 },
+                        epid: { type: 'int64', id: 12 },
+                        duration: { type: 'int64', id: 13 },
+                        seasonId: { type: 'int64', id: 14 },
                       },
                     },
                     MdlDynDraw: {
                       fields: {
                         items: {
-                          rule: "repeated",
-                          type: "MdlDynDrawItem",
+                          rule: 'repeated',
+                          type: 'MdlDynDrawItem',
                           id: 1,
                         },
-                        uri: { type: "string", id: 2 },
-                        id: { type: "int64", id: 3 },
-                        isDrawFirst: { type: "bool", id: 4 },
-                        isBigCover: { type: "bool", id: 5 },
-                        isArticleCover: { type: "bool", id: 6 },
+                        uri: { type: 'string', id: 2 },
+                        id: { type: 'int64', id: 3 },
+                        isDrawFirst: { type: 'bool', id: 4 },
+                        isBigCover: { type: 'bool', id: 5 },
+                        isArticleCover: { type: 'bool', id: 6 },
                       },
                     },
                     MdlDynDrawItem: {
                       fields: {
-                        src: { type: "string", id: 1 },
-                        width: { type: "int64", id: 2 },
-                        height: { type: "int64", id: 3 },
-                        size: { type: "float", id: 4 },
+                        src: { type: 'string', id: 1 },
+                        width: { type: 'int64', id: 2 },
+                        height: { type: 'int64', id: 3 },
+                        size: { type: 'float', id: 4 },
                         tags: {
-                          rule: "repeated",
-                          type: "MdlDynDrawTag",
+                          rule: 'repeated',
+                          type: 'MdlDynDrawTag',
                           id: 5,
                         },
                       },
                     },
                     MdlDynDrawTag: {
                       fields: {
-                        type: { type: "MdlDynDrawTagType", id: 1 },
-                        item: { type: "MdlDynDrawTagItem", id: 2 },
+                        type: { type: 'MdlDynDrawTagType', id: 1 },
+                        item: { type: 'MdlDynDrawTagItem', id: 2 },
                       },
                     },
                     MdlDynDrawTagType: {
@@ -7972,103 +7972,103 @@ const biliJson = {
                     },
                     MdlDynDrawTagItem: {
                       fields: {
-                        url: { type: "string", id: 1 },
-                        text: { type: "string", id: 2 },
-                        x: { type: "int64", id: 3 },
-                        y: { type: "int64", id: 4 },
-                        orientation: { type: "int32", id: 5 },
-                        source: { type: "int32", id: 6 },
-                        itemId: { type: "int64", id: 7 },
-                        mid: { type: "int64", id: 8 },
-                        tid: { type: "int64", id: 9 },
-                        poi: { type: "string", id: 10 },
-                        schemaUrl: { type: "string", id: 11 },
+                        url: { type: 'string', id: 1 },
+                        text: { type: 'string', id: 2 },
+                        x: { type: 'int64', id: 3 },
+                        y: { type: 'int64', id: 4 },
+                        orientation: { type: 'int32', id: 5 },
+                        source: { type: 'int32', id: 6 },
+                        itemId: { type: 'int64', id: 7 },
+                        mid: { type: 'int64', id: 8 },
+                        tid: { type: 'int64', id: 9 },
+                        poi: { type: 'string', id: 10 },
+                        schemaUrl: { type: 'string', id: 11 },
                       },
                     },
                     MdlDynForward: {
                       fields: {
-                        item: { type: "DynamicItem", id: 1 },
-                        rtype: { type: "int32", id: 2 },
+                        item: { type: 'DynamicItem', id: 1 },
+                        rtype: { type: 'int32', id: 2 },
                       },
                     },
                     MdlDynLive: {
                       fields: {
-                        id: { type: "int64", id: 1 },
-                        uri: { type: "string", id: 2 },
-                        title: { type: "string", id: 3 },
-                        cover: { type: "string", id: 4 },
-                        coverLabel: { type: "string", id: 5 },
-                        coverLabel2: { type: "string", id: 6 },
-                        liveState: { type: "LiveState", id: 7 },
-                        badge: { type: "VideoBadge", id: 8 },
-                        reserveType: { type: "ReserveType", id: 9 },
+                        id: { type: 'int64', id: 1 },
+                        uri: { type: 'string', id: 2 },
+                        title: { type: 'string', id: 3 },
+                        cover: { type: 'string', id: 4 },
+                        coverLabel: { type: 'string', id: 5 },
+                        coverLabel2: { type: 'string', id: 6 },
+                        liveState: { type: 'LiveState', id: 7 },
+                        badge: { type: 'VideoBadge', id: 8 },
+                        reserveType: { type: 'ReserveType', id: 9 },
                       },
                     },
                     MdlDynLiveRcmd: {
                       fields: {
-                        content: { type: "string", id: 1 },
-                        reserveType: { type: "ReserveType", id: 2 },
-                        pendant: { type: "LivePendant", id: 3 },
+                        content: { type: 'string', id: 1 },
+                        reserveType: { type: 'ReserveType', id: 2 },
+                        pendant: { type: 'LivePendant', id: 3 },
                       },
                     },
                     LivePendant: {
                       fields: {
-                        text: { type: "string", id: 1 },
-                        icon: { type: "string", id: 2 },
-                        pendantId: { type: "int64", id: 3 },
+                        text: { type: 'string', id: 1 },
+                        icon: { type: 'string', id: 2 },
+                        pendantId: { type: 'int64', id: 3 },
                       },
                     },
                     MdlDynMedialist: {
                       fields: {
-                        id: { type: "int64", id: 1 },
-                        uri: { type: "string", id: 2 },
-                        title: { type: "string", id: 3 },
-                        subTitle: { type: "string", id: 4 },
-                        cover: { type: "string", id: 5 },
-                        coverType: { type: "int32", id: 6 },
-                        badge: { type: "VideoBadge", id: 7 },
-                        coverBottomRightIcon: { type: "string", id: 8 },
+                        id: { type: 'int64', id: 1 },
+                        uri: { type: 'string', id: 2 },
+                        title: { type: 'string', id: 3 },
+                        subTitle: { type: 'string', id: 4 },
+                        cover: { type: 'string', id: 5 },
+                        coverType: { type: 'int32', id: 6 },
+                        badge: { type: 'VideoBadge', id: 7 },
+                        coverBottomRightIcon: { type: 'string', id: 8 },
                       },
                     },
                     MdlDynMusic: {
                       fields: {
-                        id: { type: "int64", id: 1 },
-                        uri: { type: "string", id: 2 },
-                        upId: { type: "int64", id: 3 },
-                        title: { type: "string", id: 4 },
-                        cover: { type: "string", id: 5 },
-                        label1: { type: "string", id: 6 },
-                        upper: { type: "string", id: 7 },
+                        id: { type: 'int64', id: 1 },
+                        uri: { type: 'string', id: 2 },
+                        upId: { type: 'int64', id: 3 },
+                        title: { type: 'string', id: 4 },
+                        cover: { type: 'string', id: 5 },
+                        label1: { type: 'string', id: 6 },
+                        upper: { type: 'string', id: 7 },
                       },
                     },
                     MdlDynPGC: {
                       fields: {
-                        title: { type: "string", id: 1 },
-                        cover: { type: "string", id: 2 },
-                        uri: { type: "string", id: 3 },
-                        coverLeftText1: { type: "string", id: 4 },
-                        coverLeftText2: { type: "string", id: 5 },
-                        coverLeftText3: { type: "string", id: 6 },
-                        cid: { type: "int64", id: 7 },
-                        seasonId: { type: "int64", id: 8 },
-                        epid: { type: "int64", id: 9 },
-                        aid: { type: "int64", id: 10 },
-                        mediaType: { type: "MediaType", id: 11 },
-                        subType: { type: "VideoSubType", id: 12 },
-                        isPreview: { type: "bool", id: 13 },
-                        dimension: { type: "Dimension", id: 14 },
-                        badge: { rule: "repeated", type: "VideoBadge", id: 15 },
-                        canPlay: { type: "bool", id: 16 },
-                        season: { type: "PGCSeason", id: 17 },
-                        playIcon: { type: "string", id: 18 },
-                        duration: { type: "int64", id: 19 },
-                        jumpUrl: { type: "string", id: 20 },
+                        title: { type: 'string', id: 1 },
+                        cover: { type: 'string', id: 2 },
+                        uri: { type: 'string', id: 3 },
+                        coverLeftText1: { type: 'string', id: 4 },
+                        coverLeftText2: { type: 'string', id: 5 },
+                        coverLeftText3: { type: 'string', id: 6 },
+                        cid: { type: 'int64', id: 7 },
+                        seasonId: { type: 'int64', id: 8 },
+                        epid: { type: 'int64', id: 9 },
+                        aid: { type: 'int64', id: 10 },
+                        mediaType: { type: 'MediaType', id: 11 },
+                        subType: { type: 'VideoSubType', id: 12 },
+                        isPreview: { type: 'bool', id: 13 },
+                        dimension: { type: 'Dimension', id: 14 },
+                        badge: { rule: 'repeated', type: 'VideoBadge', id: 15 },
+                        canPlay: { type: 'bool', id: 16 },
+                        season: { type: 'PGCSeason', id: 17 },
+                        playIcon: { type: 'string', id: 18 },
+                        duration: { type: 'int64', id: 19 },
+                        jumpUrl: { type: 'string', id: 20 },
                         badgeCategory: {
-                          rule: "repeated",
-                          type: "VideoBadge",
+                          rule: 'repeated',
+                          type: 'VideoBadge',
                           id: 21,
                         },
-                        isFeature: { type: "bool", id: 22 },
+                        isFeature: { type: 'bool', id: 22 },
                       },
                     },
                     VideoSubType: {
@@ -8083,24 +8083,24 @@ const biliJson = {
                     },
                     MdlDynSubscription: {
                       fields: {
-                        id: { type: "int64", id: 1 },
-                        adId: { type: "int64", id: 2 },
-                        uri: { type: "string", id: 3 },
-                        title: { type: "string", id: 4 },
-                        cover: { type: "string", id: 5 },
-                        adTitle: { type: "string", id: 6 },
-                        badge: { type: "VideoBadge", id: 7 },
-                        tips: { type: "string", id: 8 },
+                        id: { type: 'int64', id: 1 },
+                        adId: { type: 'int64', id: 2 },
+                        uri: { type: 'string', id: 3 },
+                        title: { type: 'string', id: 4 },
+                        cover: { type: 'string', id: 5 },
+                        adTitle: { type: 'string', id: 6 },
+                        badge: { type: 'VideoBadge', id: 7 },
+                        tips: { type: 'string', id: 8 },
                       },
                     },
                     MdlDynSubscriptionNew: {
                       oneofs: {
-                        item: { oneof: ["dynSubscription", "dynLiveRcmd"] },
+                        item: { oneof: ['dynSubscription', 'dynLiveRcmd'] },
                       },
                       fields: {
-                        style: { type: "MdlDynSubscriptionNewStyle", id: 1 },
-                        dynSubscription: { type: "MdlDynSubscription", id: 2 },
-                        dynLiveRcmd: { type: "MdlDynLiveRcmd", id: 3 },
+                        style: { type: 'MdlDynSubscriptionNewStyle', id: 1 },
+                        dynSubscription: { type: 'MdlDynSubscription', id: 2 },
+                        dynLiveRcmd: { type: 'MdlDynLiveRcmd', id: 3 },
                       },
                     },
                     MdlDynSubscriptionNewStyle: {
@@ -8112,277 +8112,277 @@ const biliJson = {
                     },
                     MdlDynUGCSeason: {
                       fields: {
-                        title: { type: "string", id: 1 },
-                        cover: { type: "string", id: 2 },
-                        uri: { type: "string", id: 3 },
-                        coverLeftText1: { type: "string", id: 4 },
-                        coverLeftText2: { type: "string", id: 5 },
-                        coverLeftText3: { type: "string", id: 6 },
-                        id: { type: "int64", id: 7 },
-                        inlineURL: { type: "string", id: 8 },
-                        canPlay: { type: "bool", id: 9 },
-                        playIcon: { type: "string", id: 10 },
-                        avid: { type: "int64", id: 11 },
-                        cid: { type: "int64", id: 12 },
-                        dimension: { type: "Dimension", id: 13 },
-                        duration: { type: "int64", id: 14 },
-                        jumpUrl: { type: "string", id: 15 },
-                        badge: { rule: "repeated", type: "VideoBadge", id: 16 },
+                        title: { type: 'string', id: 1 },
+                        cover: { type: 'string', id: 2 },
+                        uri: { type: 'string', id: 3 },
+                        coverLeftText1: { type: 'string', id: 4 },
+                        coverLeftText2: { type: 'string', id: 5 },
+                        coverLeftText3: { type: 'string', id: 6 },
+                        id: { type: 'int64', id: 7 },
+                        inlineURL: { type: 'string', id: 8 },
+                        canPlay: { type: 'bool', id: 9 },
+                        playIcon: { type: 'string', id: 10 },
+                        avid: { type: 'int64', id: 11 },
+                        cid: { type: 'int64', id: 12 },
+                        dimension: { type: 'Dimension', id: 13 },
+                        duration: { type: 'int64', id: 14 },
+                        jumpUrl: { type: 'string', id: 15 },
+                        badge: { rule: 'repeated', type: 'VideoBadge', id: 16 },
                       },
                     },
                     Module: {
                       oneofs: {
                         moduleItem: {
                           oneof: [
-                            "moduleAuthor",
-                            "moduleDispute",
-                            "moduleDesc",
-                            "moduleDynamic",
-                            "moduleLikeUser",
-                            "moduleExtend",
-                            "moduleAdditional",
-                            "moduleStat",
-                            "moduleFold",
-                            "moduleComment",
-                            "moduleInteraction",
-                            "moduleAuthorForward",
-                            "moduleAd",
-                            "moduleBanner",
-                            "moduleItemNull",
-                            "moduleShareInfo",
-                            "moduleRecommend",
-                            "moduleTop",
-                            "moduleButtom",
-                            "moduleStat1",
-                            "moduleStory",
-                            "moduleTopic",
-                            "moduleTopicDetailsExt",
-                            "moduleTopTag",
-                            "moduleTopicBrief",
-                            "moduleTitle",
-                            "moduleButton",
-                            "moduleNotice",
-                            "moduleOpusSummary",
-                            "moduleCopyright",
-                            "moduleParagraph",
-                            "moduleBlocked",
+                            'moduleAuthor',
+                            'moduleDispute',
+                            'moduleDesc',
+                            'moduleDynamic',
+                            'moduleLikeUser',
+                            'moduleExtend',
+                            'moduleAdditional',
+                            'moduleStat',
+                            'moduleFold',
+                            'moduleComment',
+                            'moduleInteraction',
+                            'moduleAuthorForward',
+                            'moduleAd',
+                            'moduleBanner',
+                            'moduleItemNull',
+                            'moduleShareInfo',
+                            'moduleRecommend',
+                            'moduleTop',
+                            'moduleButtom',
+                            'moduleStat1',
+                            'moduleStory',
+                            'moduleTopic',
+                            'moduleTopicDetailsExt',
+                            'moduleTopTag',
+                            'moduleTopicBrief',
+                            'moduleTitle',
+                            'moduleButton',
+                            'moduleNotice',
+                            'moduleOpusSummary',
+                            'moduleCopyright',
+                            'moduleParagraph',
+                            'moduleBlocked',
                           ],
                         },
                       },
                       fields: {
-                        moduleType: { type: "DynModuleType", id: 1 },
-                        moduleAuthor: { type: "ModuleAuthor", id: 2 },
-                        moduleDispute: { type: "ModuleDispute", id: 3 },
-                        moduleDesc: { type: "ModuleDesc", id: 4 },
-                        moduleDynamic: { type: "ModuleDynamic", id: 5 },
-                        moduleLikeUser: { type: "ModuleLikeUser", id: 6 },
-                        moduleExtend: { type: "ModuleExtend", id: 7 },
-                        moduleAdditional: { type: "ModuleAdditional", id: 8 },
-                        moduleStat: { type: "ModuleStat", id: 9 },
-                        moduleFold: { type: "ModuleFold", id: 10 },
-                        moduleComment: { type: "ModuleComment", id: 11 },
+                        moduleType: { type: 'DynModuleType', id: 1 },
+                        moduleAuthor: { type: 'ModuleAuthor', id: 2 },
+                        moduleDispute: { type: 'ModuleDispute', id: 3 },
+                        moduleDesc: { type: 'ModuleDesc', id: 4 },
+                        moduleDynamic: { type: 'ModuleDynamic', id: 5 },
+                        moduleLikeUser: { type: 'ModuleLikeUser', id: 6 },
+                        moduleExtend: { type: 'ModuleExtend', id: 7 },
+                        moduleAdditional: { type: 'ModuleAdditional', id: 8 },
+                        moduleStat: { type: 'ModuleStat', id: 9 },
+                        moduleFold: { type: 'ModuleFold', id: 10 },
+                        moduleComment: { type: 'ModuleComment', id: 11 },
                         moduleInteraction: {
-                          type: "ModuleInteraction",
+                          type: 'ModuleInteraction',
                           id: 12,
                         },
                         moduleAuthorForward: {
-                          type: "ModuleAuthorForward",
+                          type: 'ModuleAuthorForward',
                           id: 13,
                         },
-                        moduleAd: { type: "ModuleAd", id: 14 },
-                        moduleBanner: { type: "ModuleBanner", id: 15 },
-                        moduleItemNull: { type: "ModuleItemNull", id: 16 },
-                        moduleShareInfo: { type: "ModuleShareInfo", id: 17 },
-                        moduleRecommend: { type: "ModuleRecommend", id: 18 },
-                        moduleTop: { type: "ModuleTop", id: 19 },
-                        moduleButtom: { type: "ModuleButtom", id: 20 },
-                        moduleStat1: { type: "ModuleStat", id: 21 },
-                        moduleStory: { type: "ModuleStory", id: 22 },
-                        moduleTopic: { type: "ModuleTopic", id: 23 },
+                        moduleAd: { type: 'ModuleAd', id: 14 },
+                        moduleBanner: { type: 'ModuleBanner', id: 15 },
+                        moduleItemNull: { type: 'ModuleItemNull', id: 16 },
+                        moduleShareInfo: { type: 'ModuleShareInfo', id: 17 },
+                        moduleRecommend: { type: 'ModuleRecommend', id: 18 },
+                        moduleTop: { type: 'ModuleTop', id: 19 },
+                        moduleButtom: { type: 'ModuleButtom', id: 20 },
+                        moduleStat1: { type: 'ModuleStat', id: 21 },
+                        moduleStory: { type: 'ModuleStory', id: 22 },
+                        moduleTopic: { type: 'ModuleTopic', id: 23 },
                         moduleTopicDetailsExt: {
-                          type: "ModuleTopicDetailsExt",
+                          type: 'ModuleTopicDetailsExt',
                           id: 24,
                         },
-                        moduleTopTag: { type: "ModuleTopTag", id: 25 },
-                        moduleTopicBrief: { type: "ModuleTopicBrief", id: 26 },
-                        moduleTitle: { type: "ModuleTitle", id: 27 },
-                        moduleButton: { type: "ModuleButton", id: 28 },
-                        moduleNotice: { type: "ModuleNotice", id: 29 },
+                        moduleTopTag: { type: 'ModuleTopTag', id: 25 },
+                        moduleTopicBrief: { type: 'ModuleTopicBrief', id: 26 },
+                        moduleTitle: { type: 'ModuleTitle', id: 27 },
+                        moduleButton: { type: 'ModuleButton', id: 28 },
+                        moduleNotice: { type: 'ModuleNotice', id: 29 },
                         moduleOpusSummary: {
-                          type: "ModuleOpusSummary",
+                          type: 'ModuleOpusSummary',
                           id: 30,
                         },
-                        moduleCopyright: { type: "ModuleCopyright", id: 31 },
-                        moduleParagraph: { type: "ModuleParagraph", id: 32 },
-                        moduleBlocked: { type: "ModuleBlocked", id: 33 },
+                        moduleCopyright: { type: 'ModuleCopyright', id: 31 },
+                        moduleParagraph: { type: 'ModuleParagraph', id: 32 },
+                        moduleBlocked: { type: 'ModuleBlocked', id: 33 },
                       },
                     },
                     ModuleButton: {
-                      fields: { btn: { type: "IconButton", id: 1 } },
+                      fields: { btn: { type: 'IconButton', id: 1 } },
                     },
                     ModuleTitle: {
                       fields: {
-                        title: { type: "string", id: 1 },
-                        rightBtn: { type: "IconButton", id: 2 },
-                        titleStyle: { type: "int32", id: 3 },
+                        title: { type: 'string', id: 1 },
+                        rightBtn: { type: 'IconButton', id: 2 },
+                        titleStyle: { type: 'int32', id: 3 },
                       },
                     },
                     IconButton: {
                       fields: {
-                        text: { type: "string", id: 1 },
-                        iconHead: { type: "string", id: 2 },
-                        iconTail: { type: "string", id: 3 },
-                        jumpUri: { type: "string", id: 4 },
-                        routerAction: { type: "RouterAction", id: 5 },
+                        text: { type: 'string', id: 1 },
+                        iconHead: { type: 'string', id: 2 },
+                        iconTail: { type: 'string', id: 3 },
+                        jumpUri: { type: 'string', id: 4 },
+                        routerAction: { type: 'RouterAction', id: 5 },
                       },
                     },
                     RouterAction: { values: { OPEN: 0, EMBED: 1 } },
                     ModuleTopicBrief: {
-                      fields: { topic: { type: "TopicItem", id: 1 } },
+                      fields: { topic: { type: 'TopicItem', id: 1 } },
                     },
                     TopicItem: {
                       fields: {
-                        topicId: { type: "int64", id: 1 },
-                        topicName: { type: "string", id: 2 },
-                        url: { type: "string", id: 3 },
-                        desc: { type: "string", id: 4 },
-                        desc2: { type: "string", id: 5 },
-                        rcmdDesc: { type: "string", id: 6 },
-                        button: { type: "IconButton", id: 7 },
+                        topicId: { type: 'int64', id: 1 },
+                        topicName: { type: 'string', id: 2 },
+                        url: { type: 'string', id: 3 },
+                        desc: { type: 'string', id: 4 },
+                        desc2: { type: 'string', id: 5 },
+                        rcmdDesc: { type: 'string', id: 6 },
+                        button: { type: 'IconButton', id: 7 },
                       },
                     },
                     ModuleTopicDetailsExt: {
-                      fields: { commentGuide: { type: "string", id: 1 } },
+                      fields: { commentGuide: { type: 'string', id: 1 } },
                     },
                     ModuleTopTag: {
-                      fields: { tagName: { type: "string", id: 1 } },
+                      fields: { tagName: { type: 'string', id: 1 } },
                     },
                     ModuleTopic: {
                       fields: {
-                        id: { type: "int64", id: 1 },
-                        name: { type: "string", id: 2 },
-                        url: { type: "string", id: 3 },
+                        id: { type: 'int64', id: 1 },
+                        name: { type: 'string', id: 2 },
+                        url: { type: 'string', id: 3 },
                       },
                     },
                     ModuleTop: {
                       fields: {
                         tpList: {
-                          rule: "repeated",
-                          type: "ThreePointItem",
+                          rule: 'repeated',
+                          type: 'ThreePointItem',
                           id: 1,
                         },
-                        archive: { type: "MdlDynArchive", id: 2 },
-                        author: { type: "ModuleAuthor", id: 3 },
-                        hiddenNavBar: { type: "bool", id: 4 },
+                        archive: { type: 'MdlDynArchive', id: 2 },
+                        author: { type: 'ModuleAuthor', id: 3 },
+                        hiddenNavBar: { type: 'bool', id: 4 },
                       },
                     },
                     ModuleButtom: {
                       fields: {
-                        moduleStat: { type: "ModuleStat", id: 1 },
-                        commentBox: { type: "bool", id: 2 },
-                        commentBoxMsg: { type: "string", id: 3 },
+                        moduleStat: { type: 'ModuleStat', id: 1 },
+                        commentBox: { type: 'bool', id: 2 },
+                        commentBoxMsg: { type: 'string', id: 3 },
                         interactionIcons: {
-                          rule: "repeated",
-                          type: "int32",
+                          rule: 'repeated',
+                          type: 'int32',
                           id: 4,
                         },
                         faces: {
-                          rule: "repeated",
-                          type: "InteractionFace",
+                          rule: 'repeated',
+                          type: 'InteractionFace',
                           id: 5,
                         },
                       },
                     },
                     ModuleStory: {
                       fields: {
-                        title: { type: "string", id: 1 },
-                        items: { rule: "repeated", type: "StoryItem", id: 2 },
-                        showPublishEntrance: { type: "bool", id: 3 },
-                        foldState: { type: "int64", id: 4 },
-                        uri: { type: "string", id: 5 },
-                        cover: { type: "string", id: 6 },
-                        publishText: { type: "string", id: 7 },
+                        title: { type: 'string', id: 1 },
+                        items: { rule: 'repeated', type: 'StoryItem', id: 2 },
+                        showPublishEntrance: { type: 'bool', id: 3 },
+                        foldState: { type: 'int64', id: 4 },
+                        uri: { type: 'string', id: 5 },
+                        cover: { type: 'string', id: 6 },
+                        publishText: { type: 'string', id: 7 },
                       },
                     },
                     StoryItem: {
-                      oneofs: { item: { oneof: ["storyArchive"] } },
+                      oneofs: { item: { oneof: ['storyArchive'] } },
                       fields: {
-                        author: { type: "UserInfo", id: 1 },
-                        desc: { type: "string", id: 2 },
-                        status: { type: "int64", id: 3 },
-                        type: { type: "RcmdType", id: 4 },
-                        storyArchive: { type: "StoryArchive", id: 5 },
+                        author: { type: 'UserInfo', id: 1 },
+                        desc: { type: 'string', id: 2 },
+                        status: { type: 'int64', id: 3 },
+                        type: { type: 'RcmdType', id: 4 },
+                        storyArchive: { type: 'StoryArchive', id: 5 },
                       },
                     },
                     StoryArchive: {
                       fields: {
-                        cover: { type: "string", id: 1 },
-                        aid: { type: "int64", id: 2 },
-                        uri: { type: "string", id: 3 },
-                        dimension: { type: "Dimension", id: 4 },
+                        cover: { type: 'string', id: 1 },
+                        aid: { type: 'int64', id: 2 },
+                        uri: { type: 'string', id: 3 },
+                        dimension: { type: 'Dimension', id: 4 },
                       },
                     },
                     ModuleAd: {
                       fields: {
-                        sourceContent: { type: "google.protobuf.Any", id: 1 },
-                        moduleAuthor: { type: "ModuleAuthor", id: 2 },
-                        adContentType: { type: "int32", id: 3 },
-                        coverLeftText1: { type: "string", id: 4 },
-                        coverLeftText2: { type: "string", id: 5 },
-                        coverLeftText3: { type: "string", id: 6 },
+                        sourceContent: { type: 'google.protobuf.Any', id: 1 },
+                        moduleAuthor: { type: 'ModuleAuthor', id: 2 },
+                        adContentType: { type: 'int32', id: 3 },
+                        coverLeftText1: { type: 'string', id: 4 },
+                        coverLeftText2: { type: 'string', id: 5 },
+                        coverLeftText3: { type: 'string', id: 6 },
                       },
                     },
                     ModuleAdditional: {
                       oneofs: {
                         item: {
                           oneof: [
-                            "pgc",
-                            "goods",
-                            "vote",
-                            "common",
-                            "esport",
-                            "vote2",
-                            "ugc",
-                            "up",
+                            'pgc',
+                            'goods',
+                            'vote',
+                            'common',
+                            'esport',
+                            'vote2',
+                            'ugc',
+                            'up',
                           ],
                         },
                       },
                       fields: {
-                        type: { type: "AdditionalType", id: 1 },
-                        pgc: { type: "AdditionalPGC", id: 2 },
-                        goods: { type: "AdditionGoods", id: 3 },
-                        vote: { type: "AdditionVote", id: 4 },
-                        common: { type: "AdditionCommon", id: 5 },
-                        esport: { type: "AdditionEsport", id: 6 },
-                        vote2: { type: "AdditionVote2", id: 8 },
-                        ugc: { type: "AdditionUgc", id: 9 },
-                        up: { type: "AdditionUP", id: 10 },
-                        rid: { type: "int64", id: 7 },
-                        needWriteCalender: { type: "bool", id: 11 },
+                        type: { type: 'AdditionalType', id: 1 },
+                        pgc: { type: 'AdditionalPGC', id: 2 },
+                        goods: { type: 'AdditionGoods', id: 3 },
+                        vote: { type: 'AdditionVote', id: 4 },
+                        common: { type: 'AdditionCommon', id: 5 },
+                        esport: { type: 'AdditionEsport', id: 6 },
+                        vote2: { type: 'AdditionVote2', id: 8 },
+                        ugc: { type: 'AdditionUgc', id: 9 },
+                        up: { type: 'AdditionUP', id: 10 },
+                        rid: { type: 'int64', id: 7 },
+                        needWriteCalender: { type: 'bool', id: 11 },
                       },
                     },
                     ModuleAuthor: {
                       fields: {
-                        mid: { type: "int64", id: 1 },
-                        ptimeLabelText: { type: "string", id: 2 },
-                        author: { type: "UserInfo", id: 3 },
-                        decorateCard: { type: "DecorateCard", id: 4 },
-                        uri: { type: "string", id: 5 },
+                        mid: { type: 'int64', id: 1 },
+                        ptimeLabelText: { type: 'string', id: 2 },
+                        author: { type: 'UserInfo', id: 3 },
+                        decorateCard: { type: 'DecorateCard', id: 4 },
+                        uri: { type: 'string', id: 5 },
                         tpList: {
-                          rule: "repeated",
-                          type: "ThreePointItem",
+                          rule: 'repeated',
+                          type: 'ThreePointItem',
                           id: 6,
                         },
-                        badgeType: { type: "ModuleAuthorBadgeType", id: 7 },
-                        badgeButton: { type: "ModuleAuthorBadgeButton", id: 8 },
-                        attend: { type: "int32", id: 9 },
-                        relation: { type: "Relation", id: 10 },
-                        weight: { type: "Weight", id: 11 },
-                        showFollow: { type: "bool", id: 12 },
-                        isTop: { type: "bool", id: 13 },
-                        ptimeLocationText: { type: "string", id: 14 },
-                        showLevel: { type: "bool", id: 15 },
-                        onlyFans: { type: "OnlyFans", id: 16 },
+                        badgeType: { type: 'ModuleAuthorBadgeType', id: 7 },
+                        badgeButton: { type: 'ModuleAuthorBadgeButton', id: 8 },
+                        attend: { type: 'int32', id: 9 },
+                        relation: { type: 'Relation', id: 10 },
+                        weight: { type: 'Weight', id: 11 },
+                        showFollow: { type: 'bool', id: 12 },
+                        isTop: { type: 'bool', id: 13 },
+                        ptimeLocationText: { type: 'string', id: 14 },
+                        showLevel: { type: 'bool', id: 15 },
+                        onlyFans: { type: 'OnlyFans', id: 16 },
                       },
                     },
                     ModuleAuthorBadgeType: {
@@ -8395,31 +8395,31 @@ const biliJson = {
                     },
                     Weight: {
                       fields: {
-                        title: { type: "string", id: 1 },
-                        items: { rule: "repeated", type: "WeightItem", id: 2 },
-                        icon: { type: "string", id: 3 },
+                        title: { type: 'string', id: 1 },
+                        items: { rule: 'repeated', type: 'WeightItem', id: 2 },
+                        icon: { type: 'string', id: 3 },
                       },
                     },
                     WeightItem: {
                       oneofs: {
-                        item: { oneof: ["weightButton", "weightDislike"] },
+                        item: { oneof: ['weightButton', 'weightDislike'] },
                       },
                       fields: {
-                        type: { type: "WeightType", id: 1 },
-                        weightButton: { type: "WeightButton", id: 2 },
-                        weightDislike: { type: "WeightDislike", id: 3 },
+                        type: { type: 'WeightType', id: 1 },
+                        weightButton: { type: 'WeightButton', id: 2 },
+                        weightDislike: { type: 'WeightDislike', id: 3 },
                       },
                     },
                     WeightDislike: {
                       fields: {
-                        feedBackType: { type: "string", id: 1 },
-                        title: { type: "string", id: 2 },
+                        feedBackType: { type: 'string', id: 1 },
+                        title: { type: 'string', id: 2 },
                       },
                     },
                     WeightButton: {
                       fields: {
-                        jumpUrl: { type: "string", id: 1 },
-                        title: { type: "string", id: 2 },
+                        jumpUrl: { type: 'string', id: 1 },
+                        title: { type: 'string', id: 2 },
                       },
                     },
                     WeightType: {
@@ -8431,46 +8431,46 @@ const biliJson = {
                     },
                     ModuleAuthorBadgeButton: {
                       fields: {
-                        icon: { type: "string", id: 1 },
-                        title: { type: "string", id: 2 },
-                        state: { type: "int32", id: 3 },
-                        id: { type: "int64", id: 4 },
+                        icon: { type: 'string', id: 1 },
+                        title: { type: 'string', id: 2 },
+                        state: { type: 'int32', id: 3 },
+                        id: { type: 'int64', id: 4 },
                       },
                     },
                     ModuleAuthorForward: {
                       fields: {
                         title: {
-                          rule: "repeated",
-                          type: "ModuleAuthorForwardTitle",
+                          rule: 'repeated',
+                          type: 'ModuleAuthorForwardTitle',
                           id: 1,
                         },
-                        url: { type: "string", id: 2 },
-                        uid: { type: "int64", id: 3 },
-                        ptimeLabelText: { type: "string", id: 4 },
-                        showFollow: { type: "bool", id: 5 },
-                        faceUrl: { type: "string", id: 6 },
-                        relation: { type: "Relation", id: 7 },
+                        url: { type: 'string', id: 2 },
+                        uid: { type: 'int64', id: 3 },
+                        ptimeLabelText: { type: 'string', id: 4 },
+                        showFollow: { type: 'bool', id: 5 },
+                        faceUrl: { type: 'string', id: 6 },
+                        relation: { type: 'Relation', id: 7 },
                         tpList: {
-                          rule: "repeated",
-                          type: "ThreePointItem",
+                          rule: 'repeated',
+                          type: 'ThreePointItem',
                           id: 8,
                         },
                       },
                     },
                     ModuleAuthorForwardTitle: {
                       fields: {
-                        text: { type: "string", id: 1 },
-                        url: { type: "string", id: 2 },
+                        text: { type: 'string', id: 1 },
+                        url: { type: 'string', id: 2 },
                       },
                     },
                     ModuleBanner: {
-                      oneofs: { item: { oneof: ["user"] } },
+                      oneofs: { item: { oneof: ['user'] } },
                       fields: {
-                        title: { type: "string", id: 1 },
-                        type: { type: "ModuleBannerType", id: 2 },
-                        user: { type: "ModuleBannerUser", id: 3 },
-                        dislikeText: { type: "string", id: 4 },
-                        dislikeIcon: { type: "string", id: 5 },
+                        title: { type: 'string', id: 1 },
+                        type: { type: 'ModuleBannerType', id: 2 },
+                        user: { type: 'ModuleBannerUser', id: 3 },
+                        dislikeText: { type: 'string', id: 4 },
+                        dislikeIcon: { type: 'string', id: 5 },
                       },
                     },
                     ModuleBannerType: {
@@ -8482,141 +8482,141 @@ const biliJson = {
                     ModuleBannerUser: {
                       fields: {
                         list: {
-                          rule: "repeated",
-                          type: "ModuleBannerUserItem",
+                          rule: 'repeated',
+                          type: 'ModuleBannerUserItem',
                           id: 1,
                         },
                       },
                     },
                     ModuleBannerUserItem: {
                       fields: {
-                        face: { type: "string", id: 1 },
-                        name: { type: "string", id: 2 },
-                        uid: { type: "int64", id: 3 },
-                        liveState: { type: "LiveState", id: 4 },
-                        official: { type: "OfficialVerify", id: 5 },
-                        vip: { type: "VipInfo", id: 6 },
-                        label: { type: "string", id: 7 },
-                        button: { type: "AdditionalButton", id: 8 },
-                        uri: { type: "string", id: 9 },
-                        relation: { type: "Relation", id: 10 },
+                        face: { type: 'string', id: 1 },
+                        name: { type: 'string', id: 2 },
+                        uid: { type: 'int64', id: 3 },
+                        liveState: { type: 'LiveState', id: 4 },
+                        official: { type: 'OfficialVerify', id: 5 },
+                        vip: { type: 'VipInfo', id: 6 },
+                        label: { type: 'string', id: 7 },
+                        button: { type: 'AdditionalButton', id: 8 },
+                        uri: { type: 'string', id: 9 },
+                        relation: { type: 'Relation', id: 10 },
                       },
                     },
                     ModuleComment: {
                       fields: {
                         cmtShowItem: {
-                          rule: "repeated",
-                          type: "CmtShowItem",
+                          rule: 'repeated',
+                          type: 'CmtShowItem',
                           id: 1,
                         },
                       },
                     },
                     ModuleDesc: {
                       fields: {
-                        desc: { rule: "repeated", type: "Description", id: 1 },
-                        jumpUri: { type: "string", id: 2 },
-                        text: { type: "string", id: 3 },
+                        desc: { rule: 'repeated', type: 'Description', id: 1 },
+                        jumpUri: { type: 'string', id: 2 },
+                        text: { type: 'string', id: 3 },
                       },
                     },
                     ModuleDescGoods: {
                       fields: {
-                        sourceType: { type: "int32", id: 1 },
-                        jumpUrl: { type: "string", id: 2 },
-                        schemaUrl: { type: "string", id: 3 },
-                        itemId: { type: "int64", id: 4 },
+                        sourceType: { type: 'int32', id: 1 },
+                        jumpUrl: { type: 'string', id: 2 },
+                        schemaUrl: { type: 'string', id: 3 },
+                        itemId: { type: 'int64', id: 4 },
                         openWhiteList: {
-                          rule: "repeated",
-                          type: "string",
+                          rule: 'repeated',
+                          type: 'string',
                           id: 5,
                         },
-                        userWebV2: { type: "bool", id: 6 },
-                        adMark: { type: "string", id: 7 },
-                        schemaPackageName: { type: "string", id: 8 },
-                        goodsJumpType: { type: "GoodsJumpType", id: 9 },
-                        appName: { type: "string", id: 10 },
+                        userWebV2: { type: 'bool', id: 6 },
+                        adMark: { type: 'string', id: 7 },
+                        schemaPackageName: { type: 'string', id: 8 },
+                        goodsJumpType: { type: 'GoodsJumpType', id: 9 },
+                        appName: { type: 'string', id: 10 },
                       },
                     },
                     ModuleDispute: {
                       fields: {
-                        title: { type: "string", id: 1 },
-                        desc: { type: "string", id: 2 },
-                        uri: { type: "string", id: 3 },
+                        title: { type: 'string', id: 1 },
+                        desc: { type: 'string', id: 2 },
+                        uri: { type: 'string', id: 3 },
                       },
                     },
                     ModuleDynamic: {
                       oneofs: {
                         moduleItem: {
                           oneof: [
-                            "dynArchive",
-                            "dynPgc",
-                            "dynCourSeason",
-                            "dynCourBatch",
-                            "dynForward",
-                            "dynDraw",
-                            "dynArticle",
-                            "dynMusic",
-                            "dynCommon",
-                            "dynCommonLive",
-                            "dynMedialist",
-                            "dynApplet",
-                            "dynSubscription",
-                            "dynLiveRcmd",
-                            "dynUgcSeason",
-                            "dynSubscriptionNew",
-                            "mdlDynCourUp",
-                            "mdlDynTopicSet",
+                            'dynArchive',
+                            'dynPgc',
+                            'dynCourSeason',
+                            'dynCourBatch',
+                            'dynForward',
+                            'dynDraw',
+                            'dynArticle',
+                            'dynMusic',
+                            'dynCommon',
+                            'dynCommonLive',
+                            'dynMedialist',
+                            'dynApplet',
+                            'dynSubscription',
+                            'dynLiveRcmd',
+                            'dynUgcSeason',
+                            'dynSubscriptionNew',
+                            'mdlDynCourUp',
+                            'mdlDynTopicSet',
                           ],
                         },
                       },
                       fields: {
-                        type: { type: "ModuleDynamicType", id: 1 },
-                        dynArchive: { type: "MdlDynArchive", id: 2 },
-                        dynPgc: { type: "MdlDynPGC", id: 3 },
-                        dynCourSeason: { type: "MdlDynCourSeason", id: 4 },
-                        dynCourBatch: { type: "MdlDynCourBatch", id: 5 },
-                        dynForward: { type: "MdlDynForward", id: 6 },
-                        dynDraw: { type: "MdlDynDraw", id: 7 },
-                        dynArticle: { type: "MdlDynArticle", id: 8 },
-                        dynMusic: { type: "MdlDynMusic", id: 9 },
-                        dynCommon: { type: "MdlDynCommon", id: 10 },
-                        dynCommonLive: { type: "MdlDynLive", id: 11 },
-                        dynMedialist: { type: "MdlDynMedialist", id: 12 },
-                        dynApplet: { type: "MdlDynApplet", id: 13 },
-                        dynSubscription: { type: "MdlDynSubscription", id: 14 },
-                        dynLiveRcmd: { type: "MdlDynLiveRcmd", id: 15 },
-                        dynUgcSeason: { type: "MdlDynUGCSeason", id: 16 },
+                        type: { type: 'ModuleDynamicType', id: 1 },
+                        dynArchive: { type: 'MdlDynArchive', id: 2 },
+                        dynPgc: { type: 'MdlDynPGC', id: 3 },
+                        dynCourSeason: { type: 'MdlDynCourSeason', id: 4 },
+                        dynCourBatch: { type: 'MdlDynCourBatch', id: 5 },
+                        dynForward: { type: 'MdlDynForward', id: 6 },
+                        dynDraw: { type: 'MdlDynDraw', id: 7 },
+                        dynArticle: { type: 'MdlDynArticle', id: 8 },
+                        dynMusic: { type: 'MdlDynMusic', id: 9 },
+                        dynCommon: { type: 'MdlDynCommon', id: 10 },
+                        dynCommonLive: { type: 'MdlDynLive', id: 11 },
+                        dynMedialist: { type: 'MdlDynMedialist', id: 12 },
+                        dynApplet: { type: 'MdlDynApplet', id: 13 },
+                        dynSubscription: { type: 'MdlDynSubscription', id: 14 },
+                        dynLiveRcmd: { type: 'MdlDynLiveRcmd', id: 15 },
+                        dynUgcSeason: { type: 'MdlDynUGCSeason', id: 16 },
                         dynSubscriptionNew: {
-                          type: "MdlDynSubscriptionNew",
+                          type: 'MdlDynSubscriptionNew',
                           id: 17,
                         },
-                        mdlDynCourUp: { type: "MdlDynCourUp", id: 18 },
-                        mdlDynTopicSet: { type: "MdlDynTopicSet", id: 19 },
+                        mdlDynCourUp: { type: 'MdlDynCourUp', id: 18 },
+                        mdlDynTopicSet: { type: 'MdlDynTopicSet', id: 19 },
                       },
                     },
                     MdlDynTopicSet: {
                       fields: {
-                        topics: { rule: "repeated", type: "TopicItem", id: 1 },
-                        moreBtn: { type: "IconButton", id: 2 },
-                        topicSetId: { type: "int64", id: 3 },
-                        pushId: { type: "int64", id: 4 },
+                        topics: { rule: 'repeated', type: 'TopicItem', id: 1 },
+                        moreBtn: { type: 'IconButton', id: 2 },
+                        topicSetId: { type: 'int64', id: 3 },
+                        pushId: { type: 'int64', id: 4 },
                       },
                     },
                     MdlDynCourUp: {
                       fields: {
-                        title: { type: "string", id: 1 },
-                        desc: { type: "string", id: 2 },
-                        cover: { type: "string", id: 3 },
-                        uri: { type: "string", id: 4 },
-                        text1: { type: "string", id: 5 },
-                        badge: { type: "VideoBadge", id: 6 },
-                        playIcon: { type: "string", id: 7 },
-                        canPlay: { type: "bool", id: 8 },
-                        isPreview: { type: "bool", id: 9 },
-                        avid: { type: "int64", id: 10 },
-                        cid: { type: "int64", id: 11 },
-                        epid: { type: "int64", id: 12 },
-                        duration: { type: "int64", id: 13 },
-                        seasonId: { type: "int64", id: 14 },
+                        title: { type: 'string', id: 1 },
+                        desc: { type: 'string', id: 2 },
+                        cover: { type: 'string', id: 3 },
+                        uri: { type: 'string', id: 4 },
+                        text1: { type: 'string', id: 5 },
+                        badge: { type: 'VideoBadge', id: 6 },
+                        playIcon: { type: 'string', id: 7 },
+                        canPlay: { type: 'bool', id: 8 },
+                        isPreview: { type: 'bool', id: 9 },
+                        avid: { type: 'int64', id: 10 },
+                        cid: { type: 'int64', id: 11 },
+                        epid: { type: 'int64', id: 12 },
+                        duration: { type: 'int64', id: 13 },
+                        seasonId: { type: 'int64', id: 14 },
                       },
                     },
                     ModuleDynamicType: {
@@ -8644,48 +8644,48 @@ const biliJson = {
                     ModuleExtend: {
                       fields: {
                         extend: {
-                          rule: "repeated",
-                          type: "ModuleExtendItem",
+                          rule: 'repeated',
+                          type: 'ModuleExtendItem',
                           id: 1,
                         },
-                        uri: { type: "string", id: 2 },
+                        uri: { type: 'string', id: 2 },
                       },
                     },
                     ModuleExtendItem: {
                       oneofs: {
                         extend: {
                           oneof: [
-                            "extInfoTopic",
-                            "extInfoLbs",
-                            "extInfoHot",
-                            "extInfoGame",
-                            "extInfoCommon",
-                            "extInfoOgv",
+                            'extInfoTopic',
+                            'extInfoLbs',
+                            'extInfoHot',
+                            'extInfoGame',
+                            'extInfoCommon',
+                            'extInfoOgv',
                           ],
                         },
                       },
                       fields: {
-                        type: { type: "DynExtendType", id: 1 },
-                        extInfoTopic: { type: "ExtInfoTopic", id: 2 },
-                        extInfoLbs: { type: "ExtInfoLBS", id: 3 },
-                        extInfoHot: { type: "ExtInfoHot", id: 4 },
-                        extInfoGame: { type: "ExtInfoGame", id: 5 },
-                        extInfoCommon: { type: "ExtInfoCommon", id: 6 },
-                        extInfoOgv: { type: "ExtInfoOGV", id: 7 },
+                        type: { type: 'DynExtendType', id: 1 },
+                        extInfoTopic: { type: 'ExtInfoTopic', id: 2 },
+                        extInfoLbs: { type: 'ExtInfoLBS', id: 3 },
+                        extInfoHot: { type: 'ExtInfoHot', id: 4 },
+                        extInfoGame: { type: 'ExtInfoGame', id: 5 },
+                        extInfoCommon: { type: 'ExtInfoCommon', id: 6 },
+                        extInfoOgv: { type: 'ExtInfoOGV', id: 7 },
                       },
                     },
                     ModuleFold: {
                       fields: {
-                        foldType: { type: "FoldType", id: 1 },
-                        text: { type: "string", id: 2 },
-                        foldIds: { type: "string", id: 3 },
+                        foldType: { type: 'FoldType', id: 1 },
+                        text: { type: 'string', id: 2 },
+                        foldIds: { type: 'string', id: 3 },
                         foldUsers: {
-                          rule: "repeated",
-                          type: "UserInfo",
+                          rule: 'repeated',
+                          type: 'UserInfo',
                           id: 4,
                         },
                         topicMergedResource: {
-                          type: "TopicMergedResource",
+                          type: 'TopicMergedResource',
                           id: 5,
                         },
                       },
@@ -8703,96 +8703,96 @@ const biliJson = {
                     ModuleInteraction: {
                       fields: {
                         interactionItem: {
-                          rule: "repeated",
-                          type: "InteractionItem",
+                          rule: 'repeated',
+                          type: 'InteractionItem',
                           id: 1,
                         },
                       },
                     },
                     ModuleItemNull: {
                       fields: {
-                        icon: { type: "string", id: 1 },
-                        text: { type: "string", id: 2 },
+                        icon: { type: 'string', id: 1 },
+                        text: { type: 'string', id: 2 },
                       },
                     },
                     ModuleLikeUser: {
                       fields: {
                         likeUsers: {
-                          rule: "repeated",
-                          type: "LikeUser",
+                          rule: 'repeated',
+                          type: 'LikeUser',
                           id: 1,
                         },
-                        displayText: { type: "string", id: 2 },
+                        displayText: { type: 'string', id: 2 },
                       },
                     },
                     ModuleRecommend: {
                       fields: {
-                        moduleTitle: { type: "string", id: 1 },
-                        image: { type: "string", id: 2 },
-                        tag: { type: "string", id: 3 },
-                        title: { type: "string", id: 4 },
-                        jumpUrl: { type: "string", id: 5 },
-                        ad: { type: "string", id: 6 },
+                        moduleTitle: { type: 'string', id: 1 },
+                        image: { type: 'string', id: 2 },
+                        tag: { type: 'string', id: 3 },
+                        title: { type: 'string', id: 4 },
+                        jumpUrl: { type: 'string', id: 5 },
+                        ad: { type: 'string', id: 6 },
                       },
                     },
                     ModuleShareInfo: {
                       fields: {
-                        title: { type: "string", id: 1 },
+                        title: { type: 'string', id: 1 },
                         shareChannels: {
-                          rule: "repeated",
-                          type: "ShareChannel",
+                          rule: 'repeated',
+                          type: 'ShareChannel',
                           id: 2,
                         },
-                        shareOrigin: { type: "string", id: 3 },
-                        oid: { type: "string", id: 4 },
-                        sid: { type: "string", id: 5 },
+                        shareOrigin: { type: 'string', id: 3 },
+                        oid: { type: 'string', id: 4 },
+                        sid: { type: 'string', id: 5 },
                       },
                     },
                     ModuleStat: {
                       fields: {
-                        repost: { type: "int64", id: 1 },
-                        like: { type: "int64", id: 2 },
-                        reply: { type: "int64", id: 3 },
-                        likeInfo: { type: "LikeInfo", id: 4 },
-                        noComment: { type: "bool", id: 5 },
-                        noForward: { type: "bool", id: 6 },
-                        replyUrl: { type: "string", id: 7 },
-                        noCommentText: { type: "string", id: 8 },
-                        noForwardText: { type: "string", id: 9 },
-                        favorite: { type: "int64", id: 10 },
-                        isFavorite: { type: "bool", id: 11 },
+                        repost: { type: 'int64', id: 1 },
+                        like: { type: 'int64', id: 2 },
+                        reply: { type: 'int64', id: 3 },
+                        likeInfo: { type: 'LikeInfo', id: 4 },
+                        noComment: { type: 'bool', id: 5 },
+                        noForward: { type: 'bool', id: 6 },
+                        replyUrl: { type: 'string', id: 7 },
+                        noCommentText: { type: 'string', id: 8 },
+                        noForwardText: { type: 'string', id: 9 },
+                        favorite: { type: 'int64', id: 10 },
+                        isFavorite: { type: 'bool', id: 11 },
                       },
                     },
                     Nameplate: {
                       fields: {
-                        nid: { type: "int64", id: 1 },
-                        name: { type: "string", id: 2 },
-                        image: { type: "string", id: 3 },
-                        imageSmall: { type: "string", id: 4 },
-                        level: { type: "string", id: 5 },
-                        condition: { type: "string", id: 6 },
+                        nid: { type: 'int64', id: 1 },
+                        name: { type: 'string', id: 2 },
+                        image: { type: 'string', id: 3 },
+                        imageSmall: { type: 'string', id: 4 },
+                        level: { type: 'string', id: 5 },
+                        condition: { type: 'string', id: 6 },
                       },
                     },
                     OfficialVerify: {
                       fields: {
-                        type: { type: "int32", id: 1 },
-                        desc: { type: "string", id: 2 },
-                        isAtten: { type: "int32", id: 3 },
+                        type: { type: 'int32', id: 1 },
+                        desc: { type: 'string', id: 2 },
+                        isAtten: { type: 'int32', id: 3 },
                       },
                     },
                     PGCSeason: {
                       fields: {
-                        isFinish: { type: "int32", id: 1 },
-                        title: { type: "string", id: 2 },
-                        type: { type: "int32", id: 3 },
+                        isFinish: { type: 'int32', id: 1 },
+                        title: { type: 'string', id: 2 },
+                        type: { type: 'int32', id: 3 },
                       },
                     },
                     Relation: {
                       fields: {
-                        status: { type: "RelationStatus", id: 1 },
-                        isFollow: { type: "int32", id: 2 },
-                        isFollowed: { type: "int32", id: 3 },
-                        title: { type: "string", id: 4 },
+                        status: { type: 'RelationStatus', id: 1 },
+                        isFollow: { type: 'int32', id: 2 },
+                        isFollowed: { type: 'int32', id: 3 },
+                        title: { type: 'string', id: 4 },
                       },
                     },
                     RelationStatus: {
@@ -8807,29 +8807,29 @@ const biliJson = {
                     },
                     ShareChannel: {
                       fields: {
-                        name: { type: "string", id: 1 },
-                        image: { type: "string", id: 2 },
-                        channel: { type: "string", id: 3 },
-                        reserve: { type: "ShareReserve", id: 4 },
+                        name: { type: 'string', id: 1 },
+                        image: { type: 'string', id: 2 },
+                        channel: { type: 'string', id: 3 },
+                        reserve: { type: 'ShareReserve', id: 4 },
                       },
                     },
                     ShareReserve: {
                       fields: {
-                        title: { type: "string", id: 1 },
-                        desc: { type: "string", id: 2 },
-                        qrCodeIcon: { type: "string", id: 3 },
-                        qrCodeText: { type: "string", id: 4 },
-                        qrCodeUrl: { type: "string", id: 5 },
-                        userInfo: { type: "AdditionUserInfo", id: 6 },
+                        title: { type: 'string', id: 1 },
+                        desc: { type: 'string', id: 2 },
+                        qrCodeIcon: { type: 'string', id: 3 },
+                        qrCodeText: { type: 'string', id: 4 },
+                        qrCodeUrl: { type: 'string', id: 5 },
+                        userInfo: { type: 'AdditionUserInfo', id: 6 },
                       },
                     },
                     ThreePointAttention: {
                       fields: {
-                        attentionIcon: { type: "string", id: 1 },
-                        attentionText: { type: "string", id: 2 },
-                        notAttentionIcon: { type: "string", id: 3 },
-                        notAttentionText: { type: "string", id: 4 },
-                        status: { type: "ThreePointAttentionStatus", id: 5 },
+                        attentionIcon: { type: 'string', id: 1 },
+                        attentionText: { type: 'string', id: 2 },
+                        notAttentionIcon: { type: 'string', id: 3 },
+                        notAttentionText: { type: 'string', id: 4 },
+                        status: { type: 'ThreePointAttentionStatus', id: 5 },
                       },
                     },
                     ThreePointAttentionStatus: {
@@ -8837,168 +8837,168 @@ const biliJson = {
                     },
                     ThreePointAutoPlay: {
                       fields: {
-                        openIcon: { type: "string", id: 1 },
-                        openText: { type: "string", id: 2 },
-                        closeIcon: { type: "string", id: 3 },
-                        closeText: { type: "string", id: 4 },
-                        openTextV2: { type: "string", id: 5 },
-                        closeTextV2: { type: "string", id: 6 },
-                        onlyIcon: { type: "string", id: 7 },
-                        onlyText: { type: "string", id: 8 },
-                        openIconV2: { type: "string", id: 9 },
-                        closeIconV2: { type: "string", id: 10 },
+                        openIcon: { type: 'string', id: 1 },
+                        openText: { type: 'string', id: 2 },
+                        closeIcon: { type: 'string', id: 3 },
+                        closeText: { type: 'string', id: 4 },
+                        openTextV2: { type: 'string', id: 5 },
+                        closeTextV2: { type: 'string', id: 6 },
+                        onlyIcon: { type: 'string', id: 7 },
+                        onlyText: { type: 'string', id: 8 },
+                        openIconV2: { type: 'string', id: 9 },
+                        closeIconV2: { type: 'string', id: 10 },
                       },
                     },
                     ThreePointDefault: {
                       fields: {
-                        icon: { type: "string", id: 1 },
-                        title: { type: "string", id: 2 },
-                        uri: { type: "string", id: 3 },
-                        id: { type: "string", id: 4 },
-                        toast: { type: "ThreePointDefaultToast", id: 5 },
+                        icon: { type: 'string', id: 1 },
+                        title: { type: 'string', id: 2 },
+                        uri: { type: 'string', id: 3 },
+                        id: { type: 'string', id: 4 },
+                        toast: { type: 'ThreePointDefaultToast', id: 5 },
                       },
                     },
                     ThreePointDefaultToast: {
                       fields: {
-                        title: { type: "string", id: 1 },
-                        desc: { type: "string", id: 2 },
+                        title: { type: 'string', id: 1 },
+                        desc: { type: 'string', id: 2 },
                       },
                     },
                     ThreePointDislike: {
                       fields: {
-                        icon: { type: "string", id: 1 },
-                        title: { type: "string", id: 2 },
+                        icon: { type: 'string', id: 1 },
+                        title: { type: 'string', id: 2 },
                       },
                     },
                     ThreePointFavorite: {
                       fields: {
-                        icon: { type: "string", id: 1 },
-                        title: { type: "string", id: 2 },
-                        id: { type: "int64", id: 3 },
-                        isFavourite: { type: "bool", id: 4 },
-                        cancelIcon: { type: "string", id: 5 },
-                        cancelTitle: { type: "string", id: 6 },
+                        icon: { type: 'string', id: 1 },
+                        title: { type: 'string', id: 2 },
+                        id: { type: 'int64', id: 3 },
+                        isFavourite: { type: 'bool', id: 4 },
+                        cancelIcon: { type: 'string', id: 5 },
+                        cancelTitle: { type: 'string', id: 6 },
                       },
                     },
                     ThreePointItem: {
                       oneofs: {
                         item: {
                           oneof: [
-                            "default",
-                            "autoPlayer",
-                            "share",
-                            "attention",
-                            "wait",
-                            "dislike",
-                            "favorite",
-                            "threePointTop",
-                            "threePointComment",
-                            "threePointHide",
-                            "threePointTopicIrrelevant",
-                            "threePointDynEdit",
-                            "threePointDynCoin",
+                            'default',
+                            'autoPlayer',
+                            'share',
+                            'attention',
+                            'wait',
+                            'dislike',
+                            'favorite',
+                            'threePointTop',
+                            'threePointComment',
+                            'threePointHide',
+                            'threePointTopicIrrelevant',
+                            'threePointDynEdit',
+                            'threePointDynCoin',
                           ],
                         },
                       },
                       fields: {
-                        type: { type: "ThreePointType", id: 1 },
-                        default: { type: "ThreePointDefault", id: 2 },
-                        autoPlayer: { type: "ThreePointAutoPlay", id: 3 },
-                        share: { type: "ThreePointShare", id: 4 },
-                        attention: { type: "ThreePointAttention", id: 5 },
-                        wait: { type: "ThreePointWait", id: 6 },
-                        dislike: { type: "ThreePointDislike", id: 7 },
-                        favorite: { type: "ThreePointFavorite", id: 8 },
-                        threePointTop: { type: "ThreePointTop", id: 9 },
+                        type: { type: 'ThreePointType', id: 1 },
+                        default: { type: 'ThreePointDefault', id: 2 },
+                        autoPlayer: { type: 'ThreePointAutoPlay', id: 3 },
+                        share: { type: 'ThreePointShare', id: 4 },
+                        attention: { type: 'ThreePointAttention', id: 5 },
+                        wait: { type: 'ThreePointWait', id: 6 },
+                        dislike: { type: 'ThreePointDislike', id: 7 },
+                        favorite: { type: 'ThreePointFavorite', id: 8 },
+                        threePointTop: { type: 'ThreePointTop', id: 9 },
                         threePointComment: {
-                          type: "ThreePointComment",
+                          type: 'ThreePointComment',
                           id: 10,
                         },
-                        threePointHide: { type: "ThreePointHide", id: 11 },
+                        threePointHide: { type: 'ThreePointHide', id: 11 },
                         threePointTopicIrrelevant: {
-                          type: "ThreePointTopicIrrelevant",
+                          type: 'ThreePointTopicIrrelevant',
                           id: 12,
                         },
                         threePointDynEdit: {
-                          type: "ThreePointDynEdit",
+                          type: 'ThreePointDynEdit',
                           id: 13,
                         },
                         threePointDynCoin: {
-                          type: "ThreePointDynCoin",
+                          type: 'ThreePointDynCoin',
                           id: 14,
                         },
                       },
                     },
                     ThreePointTopicIrrelevant: {
                       fields: {
-                        icon: { type: "string", id: 1 },
-                        title: { type: "string", id: 2 },
-                        toast: { type: "string", id: 3 },
-                        topicId: { type: "int64", id: 4 },
-                        resId: { type: "int64", id: 5 },
-                        resType: { type: "int64", id: 6 },
-                        reason: { type: "string", id: 7 },
+                        icon: { type: 'string', id: 1 },
+                        title: { type: 'string', id: 2 },
+                        toast: { type: 'string', id: 3 },
+                        topicId: { type: 'int64', id: 4 },
+                        resId: { type: 'int64', id: 5 },
+                        resType: { type: 'int64', id: 6 },
+                        reason: { type: 'string', id: 7 },
                       },
                     },
                     ThreePointHide: {
                       fields: {
-                        icon: { type: "string", id: 1 },
-                        title: { type: "string", id: 2 },
+                        icon: { type: 'string', id: 1 },
+                        title: { type: 'string', id: 2 },
                         interactive: {
-                          type: "ThreePointHideInteractive",
+                          type: 'ThreePointHideInteractive',
                           id: 3,
                         },
-                        blookFid: { type: "int64", id: 4 },
-                        blookType: { type: "string", id: 5 },
+                        blookFid: { type: 'int64', id: 4 },
+                        blookType: { type: 'string', id: 5 },
                       },
                     },
                     ThreePointHideInteractive: {
                       fields: {
-                        title: { type: "string", id: 1 },
-                        confirm: { type: "string", id: 2 },
-                        cancel: { type: "string", id: 3 },
-                        toast: { type: "string", id: 4 },
+                        title: { type: 'string', id: 1 },
+                        confirm: { type: 'string', id: 2 },
+                        cancel: { type: 'string', id: 3 },
+                        toast: { type: 'string', id: 4 },
                       },
                     },
                     ThreePointComment: {
                       fields: {
-                        upSelection: { type: "CommentDetail", id: 1 },
-                        upClose: { type: "CommentDetail", id: 2 },
-                        icon: { type: "string", id: 3 },
-                        title: { type: "string", id: 4 },
+                        upSelection: { type: 'CommentDetail', id: 1 },
+                        upClose: { type: 'CommentDetail', id: 2 },
+                        icon: { type: 'string', id: 3 },
+                        title: { type: 'string', id: 4 },
                       },
                     },
                     CommentDetail: {
                       fields: {
-                        canModify: { type: "bool", id: 1 },
-                        status: { type: "int64", id: 2 },
+                        canModify: { type: 'bool', id: 1 },
+                        status: { type: 'int64', id: 2 },
                       },
                     },
                     ThreePointTop: {
                       fields: {
-                        icon: { type: "string", id: 1 },
-                        title: { type: "string", id: 2 },
-                        type: { type: "TopType", id: 3 },
+                        icon: { type: 'string', id: 1 },
+                        title: { type: 'string', id: 2 },
+                        type: { type: 'TopType', id: 3 },
                       },
                     },
                     TopType: { values: { top_none: 0, top_cancel: 1 } },
                     ThreePointShare: {
                       fields: {
-                        icon: { type: "string", id: 1 },
-                        title: { type: "string", id: 2 },
+                        icon: { type: 'string', id: 1 },
+                        title: { type: 'string', id: 2 },
                         channel: {
-                          rule: "repeated",
-                          type: "ThreePointShareChannel",
+                          rule: 'repeated',
+                          type: 'ThreePointShareChannel',
                           id: 3,
                         },
-                        channelName: { type: "string", id: 4 },
-                        reserve: { type: "ShareReserve", id: 5 },
+                        channelName: { type: 'string', id: 4 },
+                        reserve: { type: 'ShareReserve', id: 5 },
                       },
                     },
                     ThreePointShareChannel: {
                       fields: {
-                        icon: { type: "string", id: 1 },
-                        title: { type: "string", id: 2 },
+                        icon: { type: 'string', id: 1 },
+                        title: { type: 'string', id: 2 },
                       },
                     },
                     ThreePointType: {
@@ -9027,95 +9027,95 @@ const biliJson = {
                     },
                     ThreePointWait: {
                       fields: {
-                        additionIcon: { type: "string", id: 1 },
-                        additionText: { type: "string", id: 2 },
-                        noAdditionIcon: { type: "string", id: 3 },
-                        noAdditionText: { type: "string", id: 4 },
-                        id: { type: "int64", id: 5 },
+                        additionIcon: { type: 'string', id: 1 },
+                        additionText: { type: 'string', id: 2 },
+                        noAdditionIcon: { type: 'string', id: 3 },
+                        noAdditionText: { type: 'string', id: 4 },
+                        id: { type: 'int64', id: 5 },
                       },
                     },
                     TopicButton: {
                       fields: {
-                        icon: { type: "string", id: 1 },
-                        title: { type: "string", id: 2 },
-                        jumpUri: { type: "string", id: 3 },
-                        redDot: { type: "bool", id: 4 },
+                        icon: { type: 'string', id: 1 },
+                        title: { type: 'string', id: 2 },
+                        jumpUri: { type: 'string', id: 3 },
+                        redDot: { type: 'bool', id: 4 },
                       },
                     },
                     TopicList: {
                       fields: {
-                        title: { type: "string", id: 1 },
+                        title: { type: 'string', id: 1 },
                         topicListItem: {
-                          rule: "repeated",
-                          type: "TopicListItem",
+                          rule: 'repeated',
+                          type: 'TopicListItem',
                           id: 2,
                         },
-                        actButton: { type: "TopicButton", id: 3 },
-                        moreButton: { type: "TopicButton", id: 4 },
-                        serverInfo: { type: "string", id: 5 },
-                        subTitle: { type: "string", id: 6 },
-                        expStyle: { type: "int32", id: 7 },
-                        titleIcon: { type: "string", id: 8 },
+                        actButton: { type: 'TopicButton', id: 3 },
+                        moreButton: { type: 'TopicButton', id: 4 },
+                        serverInfo: { type: 'string', id: 5 },
+                        subTitle: { type: 'string', id: 6 },
+                        expStyle: { type: 'int32', id: 7 },
+                        titleIcon: { type: 'string', id: 8 },
                       },
                     },
                     TopicListItem: {
                       fields: {
-                        icon: { type: "string", id: 1 },
-                        iconTitle: { type: "string", id: 2 },
-                        topicId: { type: "int64", id: 3 },
-                        topicName: { type: "string", id: 4 },
-                        url: { type: "string", id: 5 },
-                        pos: { type: "int64", id: 6 },
-                        serverInfo: { type: "string", id: 7 },
-                        headIconUrl: { type: "string", id: 8 },
-                        upMid: { type: "int64", id: 9 },
-                        tailIconUrl: { type: "string", id: 10 },
-                        extension: { type: "string", id: 11 },
-                        position: { type: "int64", id: 12 },
+                        icon: { type: 'string', id: 1 },
+                        iconTitle: { type: 'string', id: 2 },
+                        topicId: { type: 'int64', id: 3 },
+                        topicName: { type: 'string', id: 4 },
+                        url: { type: 'string', id: 5 },
+                        pos: { type: 'int64', id: 6 },
+                        serverInfo: { type: 'string', id: 7 },
+                        headIconUrl: { type: 'string', id: 8 },
+                        upMid: { type: 'int64', id: 9 },
+                        tailIconUrl: { type: 'string', id: 10 },
+                        extension: { type: 'string', id: 11 },
+                        position: { type: 'int64', id: 12 },
                       },
                     },
                     Unfollow: {
                       fields: {
-                        title: { type: "string", id: 1 },
+                        title: { type: 'string', id: 1 },
                         list: {
-                          rule: "repeated",
-                          type: "UnfollowUserItem",
+                          rule: 'repeated',
+                          type: 'UnfollowUserItem',
                           id: 2,
                         },
-                        trackId: { type: "string", id: 3 },
+                        trackId: { type: 'string', id: 3 },
                       },
                     },
                     UnfollowUserItem: {
                       fields: {
-                        hasUpdate: { type: "bool", id: 1 },
-                        face: { type: "string", id: 2 },
-                        name: { type: "string", id: 3 },
-                        uid: { type: "int64", id: 4 },
-                        pos: { type: "int32", id: 5 },
-                        liveState: { type: "LiveState", id: 6 },
-                        official: { type: "OfficialVerify", id: 7 },
-                        vip: { type: "VipInfo", id: 8 },
-                        sign: { type: "string", id: 9 },
-                        label: { type: "string", id: 10 },
-                        button: { type: "AdditionalButton", id: 11 },
-                        uri: { type: "string", id: 12 },
+                        hasUpdate: { type: 'bool', id: 1 },
+                        face: { type: 'string', id: 2 },
+                        name: { type: 'string', id: 3 },
+                        uid: { type: 'int64', id: 4 },
+                        pos: { type: 'int32', id: 5 },
+                        liveState: { type: 'LiveState', id: 6 },
+                        official: { type: 'OfficialVerify', id: 7 },
+                        vip: { type: 'VipInfo', id: 8 },
+                        sign: { type: 'string', id: 9 },
+                        label: { type: 'string', id: 10 },
+                        button: { type: 'AdditionalButton', id: 11 },
+                        uri: { type: 'string', id: 12 },
                       },
                     },
                     UpListItem: {
                       fields: {
-                        hasUpdate: { type: "bool", id: 1 },
-                        face: { type: "string", id: 2 },
-                        name: { type: "string", id: 3 },
-                        uid: { type: "int64", id: 4 },
-                        pos: { type: "int64", id: 5 },
-                        userItemType: { type: "UserItemType", id: 6 },
-                        displayStyleDay: { type: "UserItemStyle", id: 7 },
-                        displayStyleNight: { type: "UserItemStyle", id: 8 },
-                        styleId: { type: "int64", id: 9 },
-                        liveState: { type: "LiveState", id: 10 },
-                        separator: { type: "bool", id: 11 },
-                        uri: { type: "string", id: 12 },
-                        isRecall: { type: "bool", id: 13 },
+                        hasUpdate: { type: 'bool', id: 1 },
+                        face: { type: 'string', id: 2 },
+                        name: { type: 'string', id: 3 },
+                        uid: { type: 'int64', id: 4 },
+                        pos: { type: 'int64', id: 5 },
+                        userItemType: { type: 'UserItemType', id: 6 },
+                        displayStyleDay: { type: 'UserItemStyle', id: 7 },
+                        displayStyleNight: { type: 'UserItemStyle', id: 8 },
+                        styleId: { type: 'int64', id: 9 },
+                        liveState: { type: 'LiveState', id: 10 },
+                        separator: { type: 'bool', id: 11 },
+                        uri: { type: 'string', id: 12 },
+                        isRecall: { type: 'bool', id: 13 },
                       },
                     },
                     UserItemType: {
@@ -9131,87 +9131,87 @@ const biliJson = {
                     },
                     UpListMoreLabel: {
                       fields: {
-                        title: { type: "string", id: 1 },
-                        uri: { type: "string", id: 2 },
+                        title: { type: 'string', id: 1 },
+                        uri: { type: 'string', id: 2 },
                       },
                     },
                     UserInfo: {
                       fields: {
-                        mid: { type: "int64", id: 1 },
-                        name: { type: "string", id: 2 },
-                        face: { type: "string", id: 3 },
-                        official: { type: "OfficialVerify", id: 4 },
-                        vip: { type: "VipInfo", id: 5 },
-                        live: { type: "LiveInfo", id: 6 },
-                        uri: { type: "string", id: 7 },
-                        pendant: { type: "UserPendant", id: 8 },
-                        nameplate: { type: "Nameplate", id: 9 },
-                        level: { type: "int32", id: 10 },
-                        sign: { type: "string", id: 11 },
-                        faceNft: { type: "int32", id: 12 },
-                        faceNftNew: { type: "int32", id: 13 },
-                        nftInfo: { type: "NFTInfo", id: 14 },
-                        isSeniorMember: { type: "int32", id: 15 },
+                        mid: { type: 'int64', id: 1 },
+                        name: { type: 'string', id: 2 },
+                        face: { type: 'string', id: 3 },
+                        official: { type: 'OfficialVerify', id: 4 },
+                        vip: { type: 'VipInfo', id: 5 },
+                        live: { type: 'LiveInfo', id: 6 },
+                        uri: { type: 'string', id: 7 },
+                        pendant: { type: 'UserPendant', id: 8 },
+                        nameplate: { type: 'Nameplate', id: 9 },
+                        level: { type: 'int32', id: 10 },
+                        sign: { type: 'string', id: 11 },
+                        faceNft: { type: 'int32', id: 12 },
+                        faceNftNew: { type: 'int32', id: 13 },
+                        nftInfo: { type: 'NFTInfo', id: 14 },
+                        isSeniorMember: { type: 'int32', id: 15 },
                         avatar: {
-                          type: "bilibili.dagw.component.avatar.v1.AvatarItem",
+                          type: 'bilibili.dagw.component.avatar.v1.AvatarItem',
                           id: 16,
                         },
                       },
                     },
                     UserItemStyle: {
                       fields: {
-                        rectText: { type: "string", id: 1 },
-                        rectTextColor: { type: "string", id: 2 },
-                        rectIcon: { type: "string", id: 3 },
-                        rectBgColor: { type: "string", id: 4 },
-                        outerAnimation: { type: "string", id: 5 },
+                        rectText: { type: 'string', id: 1 },
+                        rectTextColor: { type: 'string', id: 2 },
+                        rectIcon: { type: 'string', id: 3 },
+                        rectBgColor: { type: 'string', id: 4 },
+                        outerAnimation: { type: 'string', id: 5 },
                       },
                     },
                     UserPendant: {
                       fields: {
-                        pid: { type: "int64", id: 1 },
-                        name: { type: "string", id: 2 },
-                        image: { type: "string", id: 3 },
-                        expire: { type: "int64", id: 4 },
+                        pid: { type: 'int64', id: 1 },
+                        name: { type: 'string', id: 2 },
+                        image: { type: 'string', id: 3 },
+                        expire: { type: 'int64', id: 4 },
                       },
                     },
                     VideoBadge: {
                       fields: {
-                        text: { type: "string", id: 1 },
-                        textColor: { type: "string", id: 2 },
-                        textColorNight: { type: "string", id: 3 },
-                        bgColor: { type: "string", id: 4 },
-                        bgColorNight: { type: "string", id: 5 },
-                        borderColor: { type: "string", id: 6 },
-                        borderColorNight: { type: "string", id: 7 },
-                        bgStyle: { type: "int32", id: 8 },
-                        bgAlpha: { type: "int32", id: 9 },
-                        bgAlphaNight: { type: "int32", id: 10 },
+                        text: { type: 'string', id: 1 },
+                        textColor: { type: 'string', id: 2 },
+                        textColorNight: { type: 'string', id: 3 },
+                        bgColor: { type: 'string', id: 4 },
+                        bgColorNight: { type: 'string', id: 5 },
+                        borderColor: { type: 'string', id: 6 },
+                        borderColorNight: { type: 'string', id: 7 },
+                        bgStyle: { type: 'int32', id: 8 },
+                        bgAlpha: { type: 'int32', id: 9 },
+                        bgAlphaNight: { type: 'int32', id: 10 },
                       },
                     },
                     VipInfo: {
                       fields: {
-                        type: { type: "int32", id: 1 },
-                        status: { type: "int32", id: 2 },
-                        dueDate: { type: "int64", id: 3 },
-                        label: { type: "VipLabel", id: 4 },
-                        themeType: { type: "int32", id: 5 },
-                        avatarSubscript: { type: "int32", id: 6 },
-                        nicknameColor: { type: "string", id: 7 },
+                        type: { type: 'int32', id: 1 },
+                        status: { type: 'int32', id: 2 },
+                        dueDate: { type: 'int64', id: 3 },
+                        label: { type: 'VipLabel', id: 4 },
+                        themeType: { type: 'int32', id: 5 },
+                        avatarSubscript: { type: 'int32', id: 6 },
+                        nicknameColor: { type: 'string', id: 7 },
                       },
                     },
                     VipLabel: {
                       fields: {
-                        path: { type: "string", id: 1 },
-                        text: { type: "string", id: 2 },
-                        labelTheme: { type: "string", id: 3 },
+                        path: { type: 'string', id: 1 },
+                        text: { type: 'string', id: 2 },
+                        labelTheme: { type: 'string', id: 3 },
                       },
                     },
                     NFTInfo: {
                       fields: {
-                        regionType: { type: "NFTRegionType", id: 1 },
-                        regionIcon: { type: "string", id: 2 },
-                        regionShowStatus: { type: "NFTShowStatus", id: 3 },
+                        regionType: { type: 'NFTRegionType', id: 1 },
+                        regionIcon: { type: 'string', id: 2 },
+                        regionShowStatus: { type: 'NFTShowStatus', id: 3 },
                       },
                     },
                     NFTRegionType: {
@@ -9230,27 +9230,27 @@ const biliJson = {
                     },
                     ModuleOpusSummary: {
                       fields: {
-                        title: { type: "Paragraph", id: 1 },
-                        summary: { type: "Paragraph", id: 2 },
-                        summaryJumpBtnText: { type: "string", id: 3 },
+                        title: { type: 'Paragraph', id: 1 },
+                        summary: { type: 'Paragraph', id: 2 },
+                        summaryJumpBtnText: { type: 'string', id: 3 },
                         covers: {
-                          rule: "repeated",
-                          type: "MdlDynDrawItem",
+                          rule: 'repeated',
+                          type: 'MdlDynDrawItem',
                           id: 4,
                         },
                       },
                     },
                     Paragraph: {
                       oneofs: {
-                        content: { oneof: ["text", "pic", "line", "card"] },
+                        content: { oneof: ['text', 'pic', 'line', 'card'] },
                       },
                       fields: {
-                        paraType: { type: "ParagraphType", id: 1 },
-                        paraFormat: { type: "ParagraphFormat", id: 2 },
-                        text: { type: "TextParagraph", id: 3 },
-                        pic: { type: "PicParagraph", id: 4 },
-                        line: { type: "LineParagraph", id: 5 },
-                        card: { type: "CardParagraph", id: 6 },
+                        paraType: { type: 'ParagraphType', id: 1 },
+                        paraFormat: { type: 'ParagraphFormat', id: 2 },
+                        text: { type: 'TextParagraph', id: 3 },
+                        pic: { type: 'PicParagraph', id: 4 },
+                        line: { type: 'LineParagraph', id: 5 },
+                        card: { type: 'CardParagraph', id: 6 },
                       },
                     },
                     ParagraphType: {
@@ -9267,8 +9267,8 @@ const biliJson = {
                     },
                     ParagraphFormat: {
                       fields: {
-                        align: { type: "ParagraphAlign", id: 1 },
-                        listFormat: { type: "ListFormat", id: 2 },
+                        align: { type: 'ParagraphAlign', id: 1 },
+                        listFormat: { type: 'ListFormat', id: 2 },
                       },
                     },
                     ParagraphAlign: {
@@ -9276,24 +9276,24 @@ const biliJson = {
                     },
                     ListFormat: {
                       fields: {
-                        level: { type: "int32", id: 1 },
-                        order: { type: "int32", id: 2 },
-                        theme: { type: "string", id: 3 },
+                        level: { type: 'int32', id: 1 },
+                        order: { type: 'int32', id: 2 },
+                        theme: { type: 'string', id: 3 },
                       },
                     },
                     TextParagraph: {
                       fields: {
-                        nodes: { rule: "repeated", type: "TextNode", id: 1 },
+                        nodes: { rule: 'repeated', type: 'TextNode', id: 1 },
                       },
                     },
                     TextNode: {
-                      oneofs: { text: { oneof: ["word", "emote", "link"] } },
+                      oneofs: { text: { oneof: ['word', 'emote', 'link'] } },
                       fields: {
-                        nodeType: { type: "TextNodeType", id: 1 },
-                        rawText: { type: "string", id: 2 },
-                        word: { type: "WordNode", id: 3 },
-                        emote: { type: "EmoteNode", id: 4 },
-                        link: { type: "LinkNode", id: 5 },
+                        nodeType: { type: 'TextNodeType', id: 1 },
+                        rawText: { type: 'string', id: 2 },
+                        word: { type: 'WordNode', id: 3 },
+                        emote: { type: 'EmoteNode', id: 4 },
+                        link: { type: 'LinkNode', id: 5 },
                       },
                     },
                     TextNodeType: {
@@ -9307,50 +9307,50 @@ const biliJson = {
                     },
                     WordNode: {
                       fields: {
-                        words: { type: "string", id: 1 },
-                        fontSize: { type: "double", id: 2 },
-                        color: { type: "Colors", id: 3 },
-                        style: { type: "WordNodeStyle", id: 4 },
+                        words: { type: 'string', id: 1 },
+                        fontSize: { type: 'double', id: 2 },
+                        color: { type: 'Colors', id: 3 },
+                        style: { type: 'WordNodeStyle', id: 4 },
                       },
                     },
                     Colors: {
                       fields: {
-                        colorDay: { type: "string", id: 1 },
-                        colorNight: { type: "string", id: 2 },
+                        colorDay: { type: 'string', id: 1 },
+                        colorNight: { type: 'string', id: 2 },
                       },
                     },
                     WordNodeStyle: {
                       fields: {
-                        bold: { type: "bool", id: 1 },
-                        italic: { type: "bool", id: 2 },
-                        strikethrough: { type: "bool", id: 3 },
-                        underline: { type: "bool", id: 4 },
+                        bold: { type: 'bool', id: 1 },
+                        italic: { type: 'bool', id: 2 },
+                        strikethrough: { type: 'bool', id: 3 },
+                        underline: { type: 'bool', id: 4 },
                       },
                     },
                     EmoteNode: {
                       fields: {
-                        rawText: { type: "WordNode", id: 1 },
-                        emoteUrl: { type: "string", id: 2 },
-                        emoteWidth: { type: "EmoteSize", id: 3 },
+                        rawText: { type: 'WordNode', id: 1 },
+                        emoteUrl: { type: 'string', id: 2 },
+                        emoteWidth: { type: 'EmoteSize', id: 3 },
                       },
                     },
                     EmoteSize: {
                       fields: {
-                        width: { type: "double", id: 1 },
-                        emojiSize: { type: "int32", id: 2 },
+                        width: { type: 'double', id: 1 },
+                        emojiSize: { type: 'int32', id: 2 },
                       },
                     },
                     LinkNode: {
                       fields: {
-                        showText: { type: "WordNode", id: 1 },
-                        link: { type: "string", id: 2 },
-                        icon: { type: "string", id: 3 },
-                        iconSuffix: { type: "string", id: 4 },
-                        linkType: { type: "string", id: 5 },
-                        linkTypeEnum: { type: "LinkNodeType", id: 6 },
-                        bizId: { type: "string", id: 7 },
-                        timestamp: { type: "int64", id: 8 },
-                        goodsItem: { type: "GoodsItem", id: 9 },
+                        showText: { type: 'WordNode', id: 1 },
+                        link: { type: 'string', id: 2 },
+                        icon: { type: 'string', id: 3 },
+                        iconSuffix: { type: 'string', id: 4 },
+                        linkType: { type: 'string', id: 5 },
+                        linkTypeEnum: { type: 'LinkNodeType', id: 6 },
+                        bizId: { type: 'string', id: 7 },
+                        timestamp: { type: 'int64', id: 8 },
+                        goodsItem: { type: 'GoodsItem', id: 9 },
                       },
                     },
                     LinkNodeType: {
@@ -9387,66 +9387,66 @@ const biliJson = {
                     },
                     PicParagraph: {
                       fields: {
-                        pics: { type: "MdlDynDraw", id: 1 },
-                        style: { type: "PicParagraphStyle", id: 2 },
+                        pics: { type: 'MdlDynDraw', id: 1 },
+                        style: { type: 'PicParagraphStyle', id: 2 },
                       },
                     },
                     PicParagraphStyle: {
                       values: { INVALID3: 0, NINE_CELL: 1, BIG_SCROLL: 2 },
                     },
                     LineParagraph: {
-                      fields: { pic: { type: "MdlDynDrawItem", id: 1 } },
+                      fields: { pic: { type: 'MdlDynDrawItem', id: 1 } },
                     },
                     CardParagraph: {
                       fields: {
-                        additionalCard: { type: "ModuleAdditional", id: 1 },
+                        additionalCard: { type: 'ModuleAdditional', id: 1 },
                       },
                     },
                     OnlyFansProperty: {
                       fields: {
-                        hasPrivilege: { type: "bool", id: 1 },
-                        isOnlyFans: { type: "bool", id: 2 },
+                        hasPrivilege: { type: 'bool', id: 1 },
+                        isOnlyFans: { type: 'bool', id: 2 },
                       },
                     },
                     DynFeatureGate: {
-                      fields: { enhancedInteraction: { type: "bool", id: 1 } },
+                      fields: { enhancedInteraction: { type: 'bool', id: 1 } },
                     },
                     ModuleNotice: {
                       fields: {
-                        identity: { type: "string", id: 1 },
-                        icon: { type: "string", id: 2 },
-                        title: { type: "string", id: 3 },
-                        url: { type: "string", id: 4 },
-                        noticeType: { type: "int32", id: 5 },
+                        identity: { type: 'string', id: 1 },
+                        icon: { type: 'string', id: 2 },
+                        title: { type: 'string', id: 3 },
+                        url: { type: 'string', id: 4 },
+                        noticeType: { type: 'int32', id: 5 },
                       },
                     },
                     ModuleCopyright: {
                       fields: {
-                        leftText: { type: "string", id: 1 },
-                        rightText: { type: "string", id: 2 },
+                        leftText: { type: 'string', id: 1 },
+                        rightText: { type: 'string', id: 2 },
                       },
                     },
                     ModuleParagraph: {
                       fields: {
-                        paragraph: { type: "Paragraph", id: 1 },
-                        isArticleTitle: { type: "bool", id: 2 },
-                        paraSpacing: { type: "ParaSpacing", id: 3 },
+                        paragraph: { type: 'Paragraph', id: 1 },
+                        isArticleTitle: { type: 'bool', id: 2 },
+                        paraSpacing: { type: 'ParaSpacing', id: 3 },
                       },
                     },
                     ParaSpacing: {
                       fields: {
-                        spacingBeforePara: { type: "double", id: 1 },
-                        spacingAfterPara: { type: "double", id: 2 },
-                        lineSpacing: { type: "double", id: 3 },
+                        spacingBeforePara: { type: 'double', id: 1 },
+                        spacingAfterPara: { type: 'double', id: 2 },
+                        lineSpacing: { type: 'double', id: 3 },
                       },
                     },
                     ModuleBlocked: {
                       fields: {
-                        icon: { type: "ImageSet", id: 1 },
-                        bgImg: { type: "ImageSet", id: 2 },
-                        hintMessage: { type: "string", id: 3 },
-                        actBtn: { type: "IconButton", id: 4 },
-                        blockStyle: { type: "MdlBlockedStyle", id: 5 },
+                        icon: { type: 'ImageSet', id: 1 },
+                        bgImg: { type: 'ImageSet', id: 2 },
+                        hintMessage: { type: 'string', id: 3 },
+                        actBtn: { type: 'IconButton', id: 4 },
+                        blockStyle: { type: 'MdlBlockedStyle', id: 5 },
                       },
                     },
                     MdlBlockedStyle: {
@@ -9457,36 +9457,36 @@ const biliJson = {
                     },
                     ImageSet: {
                       fields: {
-                        imgDay: { type: "string", id: 1 },
-                        imgDark: { type: "string", id: 2 },
+                        imgDay: { type: 'string', id: 1 },
+                        imgDark: { type: 'string', id: 2 },
                       },
                     },
                     OnlyFans: {
                       fields: {
-                        isOnlyFans: { type: "bool", id: 1 },
-                        badge: { type: "IconBadge", id: 2 },
+                        isOnlyFans: { type: 'bool', id: 1 },
+                        badge: { type: 'IconBadge', id: 2 },
                       },
                     },
                     TopicMergedResource: {
                       fields: {
-                        mergeType: { type: "int32", id: 1 },
-                        mergedResCnt: { type: "int32", id: 2 },
+                        mergeType: { type: 'int32', id: 1 },
+                        mergedResCnt: { type: 'int32', id: 2 },
                       },
                     },
                     ThreePointDynCoin: {
                       fields: {
-                        hadCoin: { type: "bool", id: 1 },
-                        coinNum: { type: "int64", id: 2 },
-                        coinBusiness: { type: "string", id: 3 },
-                        oid: { type: "int64", id: 4 },
+                        hadCoin: { type: 'bool', id: 1 },
+                        coinNum: { type: 'int64', id: 2 },
+                        coinBusiness: { type: 'string', id: 3 },
+                        oid: { type: 'int64', id: 4 },
                       },
                     },
                     ThreePointDynEdit: {
                       fields: {
-                        dynId: { type: "int64", id: 1 },
-                        originId: { type: "int64", id: 2 },
-                        isOriginDeleted: { type: "bool", id: 3 },
-                        url: { type: "string", id: 4 },
+                        dynId: { type: 'int64', id: 1 },
+                        originId: { type: 'int64', id: 2 },
+                        isOriginDeleted: { type: 'bool', id: 3 },
+                        url: { type: 'string', id: 4 },
                       },
                     },
                   },
@@ -9496,79 +9496,79 @@ const biliJson = {
             playurl: {
               nested: {
                 v1: {
-                  options: { java_package: "com.smile.bilibili.model" },
+                  options: { java_package: 'com.smile.bilibili.model' },
                   nested: {
                     PlayViewReply: {
                       fields: {
-                        videoInfo: { type: "VideoInfo", id: 1 },
-                        playConf: { type: "PlayAbilityConf", id: 2 },
-                        upgradeLimit: { type: "UpgradeLimit", id: 3 },
-                        chronos: { type: "Chronos", id: 4 },
-                        playArc: { type: "PlayArcConf", id: 5 },
-                        event: { type: "Event", id: 6 },
-                        ab: { type: "AB", id: 7 },
-                        playLimit: { type: "PlayLimit", id: 8 },
+                        videoInfo: { type: 'VideoInfo', id: 1 },
+                        playConf: { type: 'PlayAbilityConf', id: 2 },
+                        upgradeLimit: { type: 'UpgradeLimit', id: 3 },
+                        chronos: { type: 'Chronos', id: 4 },
+                        playArc: { type: 'PlayArcConf', id: 5 },
+                        event: { type: 'Event', id: 6 },
+                        ab: { type: 'AB', id: 7 },
+                        playLimit: { type: 'PlayLimit', id: 8 },
                       },
                     },
                     VideoInfo: {
                       fields: {
-                        quality: { type: "int32", id: 1 },
-                        format: { type: "string", id: 2 },
-                        timelength: { type: "int64", id: 3 },
-                        videoCodecid: { type: "int32", id: 4 },
-                        streamList: { rule: "repeated", type: "Stream", id: 5 },
+                        quality: { type: 'int32', id: 1 },
+                        format: { type: 'string', id: 2 },
+                        timelength: { type: 'int64', id: 3 },
+                        videoCodecid: { type: 'int32', id: 4 },
+                        streamList: { rule: 'repeated', type: 'Stream', id: 5 },
                         dashAudio: {
-                          rule: "repeated",
-                          type: "DashItem",
+                          rule: 'repeated',
+                          type: 'DashItem',
                           id: 6,
                         },
-                        dolby: { type: "DolbyItem", id: 7 },
-                        volume: { type: "VolumeInfo", id: 8 },
-                        lossLessItem: { type: "LossLessItem", id: 9 },
+                        dolby: { type: 'DolbyItem', id: 7 },
+                        volume: { type: 'VolumeInfo', id: 8 },
+                        lossLessItem: { type: 'LossLessItem', id: 9 },
                       },
                     },
                     LossLessItem: {
                       fields: {
-                        isLosslessAudio: { type: "bool", id: 1 },
-                        audio: { type: "DashItem", id: 2 },
-                        needVip: { type: "bool", id: 3 },
+                        isLosslessAudio: { type: 'bool', id: 1 },
+                        audio: { type: 'DashItem', id: 2 },
+                        needVip: { type: 'bool', id: 3 },
                       },
                     },
                     Stream: {
                       oneofs: {
-                        content: { oneof: ["dashVideo", "segmentVideo"] },
+                        content: { oneof: ['dashVideo', 'segmentVideo'] },
                       },
                       fields: {
-                        streamInfo: { type: "StreamInfo", id: 1 },
-                        dashVideo: { type: "DashVideo", id: 2 },
-                        segmentVideo: { type: "SegmentVideo", id: 3 },
+                        streamInfo: { type: 'StreamInfo', id: 1 },
+                        dashVideo: { type: 'DashVideo', id: 2 },
+                        segmentVideo: { type: 'SegmentVideo', id: 3 },
                       },
                     },
                     StreamInfo: {
                       fields: {
-                        quality: { type: "int32", id: 1 },
-                        format: { type: "string", id: 2 },
-                        description: { type: "string", id: 3 },
-                        errCode: { type: "PlayErr", id: 4 },
-                        limit: { type: "StreamLimit", id: 5 },
-                        needVip: { type: "bool", id: 6 },
-                        needLogin: { type: "bool", id: 7 },
-                        intact: { type: "bool", id: 8 },
-                        noRexcode: { type: "bool", id: 9 },
-                        attribute: { type: "int64", id: 10 },
-                        newDescription: { type: "string", id: 11 },
-                        displayDesc: { type: "string", id: 12 },
-                        superscript: { type: "string", id: 13 },
-                        vipFree: { type: "bool", id: 14 },
-                        subtitle: { type: "string", id: 15 },
-                        scheme: { type: "Scheme", id: 16 },
-                        supportDrm: { type: "bool", id: 17 },
+                        quality: { type: 'int32', id: 1 },
+                        format: { type: 'string', id: 2 },
+                        description: { type: 'string', id: 3 },
+                        errCode: { type: 'PlayErr', id: 4 },
+                        limit: { type: 'StreamLimit', id: 5 },
+                        needVip: { type: 'bool', id: 6 },
+                        needLogin: { type: 'bool', id: 7 },
+                        intact: { type: 'bool', id: 8 },
+                        noRexcode: { type: 'bool', id: 9 },
+                        attribute: { type: 'int64', id: 10 },
+                        newDescription: { type: 'string', id: 11 },
+                        displayDesc: { type: 'string', id: 12 },
+                        superscript: { type: 'string', id: 13 },
+                        vipFree: { type: 'bool', id: 14 },
+                        subtitle: { type: 'string', id: 15 },
+                        scheme: { type: 'Scheme', id: 16 },
+                        supportDrm: { type: 'bool', id: 17 },
                       },
                     },
                     Scheme: {
                       fields: {
-                        actionType: { type: "ActionType", id: 1 },
-                        toast: { type: "string", id: 2 },
+                        actionType: { type: 'ActionType', id: 1 },
+                        toast: { type: 'string', id: 2 },
                       },
                     },
                     ActionType: { values: { UNKNOWN: 0, SHOW_TOAST: 1 } },
@@ -9577,117 +9577,117 @@ const biliJson = {
                     },
                     StreamLimit: {
                       fields: {
-                        title: { type: "string", id: 1 },
-                        uri: { type: "string", id: 2 },
-                        msg: { type: "string", id: 3 },
+                        title: { type: 'string', id: 1 },
+                        uri: { type: 'string', id: 2 },
+                        msg: { type: 'string', id: 3 },
                       },
                     },
                     DashVideo: {
                       fields: {
-                        baseUrl: { type: "string", id: 1 },
-                        backupUrl: { rule: "repeated", type: "string", id: 2 },
-                        bandwidth: { type: "int32", id: 3 },
-                        codecid: { type: "int32", id: 4 },
-                        md5: { type: "string", id: 5 },
-                        size: { type: "int64", id: 6 },
-                        audioId: { type: "int32", id: 7 },
-                        noRexcode: { type: "bool", id: 8 },
-                        frameRate: { type: "string", id: 9 },
-                        width: { type: "int32", id: 10 },
-                        height: { type: "int32", id: 11 },
-                        widevinePssh: { type: "string", id: 12 },
+                        baseUrl: { type: 'string', id: 1 },
+                        backupUrl: { rule: 'repeated', type: 'string', id: 2 },
+                        bandwidth: { type: 'int32', id: 3 },
+                        codecid: { type: 'int32', id: 4 },
+                        md5: { type: 'string', id: 5 },
+                        size: { type: 'int64', id: 6 },
+                        audioId: { type: 'int32', id: 7 },
+                        noRexcode: { type: 'bool', id: 8 },
+                        frameRate: { type: 'string', id: 9 },
+                        width: { type: 'int32', id: 10 },
+                        height: { type: 'int32', id: 11 },
+                        widevinePssh: { type: 'string', id: 12 },
                       },
                     },
                     SegmentVideo: {
                       fields: {
                         segment: {
-                          rule: "repeated",
-                          type: "ResponseUrl",
+                          rule: 'repeated',
+                          type: 'ResponseUrl',
                           id: 1,
                         },
                       },
                     },
                     ResponseUrl: {
                       fields: {
-                        order: { type: "int32", id: 1 },
-                        length: { type: "int64", id: 2 },
-                        size: { type: "int64", id: 3 },
-                        url: { type: "string", id: 4 },
-                        backupUrl: { rule: "repeated", type: "string", id: 5 },
-                        md5: { type: "string", id: 6 },
+                        order: { type: 'int32', id: 1 },
+                        length: { type: 'int64', id: 2 },
+                        size: { type: 'int64', id: 3 },
+                        url: { type: 'string', id: 4 },
+                        backupUrl: { rule: 'repeated', type: 'string', id: 5 },
+                        md5: { type: 'string', id: 6 },
                       },
                     },
                     DashItem: {
                       fields: {
-                        id: { type: "int32", id: 1 },
-                        baseUrl: { type: "string", id: 2 },
-                        backupUrl: { rule: "repeated", type: "string", id: 3 },
-                        bandwidth: { type: "int32", id: 4 },
-                        codecid: { type: "int32", id: 5 },
-                        md5: { type: "string", id: 6 },
-                        size: { type: "int64", id: 7 },
-                        frameRate: { type: "string", id: 8 },
-                        widevinePssh: { type: "string", id: 9 },
+                        id: { type: 'int32', id: 1 },
+                        baseUrl: { type: 'string', id: 2 },
+                        backupUrl: { rule: 'repeated', type: 'string', id: 3 },
+                        bandwidth: { type: 'int32', id: 4 },
+                        codecid: { type: 'int32', id: 5 },
+                        md5: { type: 'string', id: 6 },
+                        size: { type: 'int64', id: 7 },
+                        frameRate: { type: 'string', id: 8 },
+                        widevinePssh: { type: 'string', id: 9 },
                       },
                     },
                     DolbyItem: {
                       fields: {
-                        type: { type: "Type", id: 1 },
-                        audio: { rule: "repeated", type: "DashItem", id: 2 },
+                        type: { type: 'Type', id: 1 },
+                        audio: { rule: 'repeated', type: 'DashItem', id: 2 },
                       },
                     },
                     Type: { values: { NONE: 0, COMMON: 1, ATMOS: 2 } },
                     VolumeInfo: {
                       fields: {
-                        measuredI: { type: "double", id: 1 },
-                        measuredLra: { type: "double", id: 2 },
-                        measuredTp: { type: "double", id: 3 },
-                        measuredThreshold: { type: "double", id: 4 },
-                        targetOffset: { type: "double", id: 5 },
-                        targetI: { type: "double", id: 6 },
-                        targetTp: { type: "double", id: 7 },
+                        measuredI: { type: 'double', id: 1 },
+                        measuredLra: { type: 'double', id: 2 },
+                        measuredTp: { type: 'double', id: 3 },
+                        measuredThreshold: { type: 'double', id: 4 },
+                        targetOffset: { type: 'double', id: 5 },
+                        targetI: { type: 'double', id: 6 },
+                        targetTp: { type: 'double', id: 7 },
                       },
                     },
                     PlayAbilityConf: {
                       fields: {
-                        backgroundPlayConf: { type: "CloudConf", id: 1 },
-                        flipConf: { type: "CloudConf", id: 2 },
-                        castConf: { type: "CloudConf", id: 3 },
-                        feedbackConf: { type: "CloudConf", id: 4 },
-                        subtitleConf: { type: "CloudConf", id: 5 },
-                        playbackRateConf: { type: "CloudConf", id: 6 },
-                        timeUpConf: { type: "CloudConf", id: 7 },
-                        playbackModeConf: { type: "CloudConf", id: 8 },
-                        scaleModeConf: { type: "CloudConf", id: 9 },
-                        likeConf: { type: "CloudConf", id: 10 },
-                        dislikeConf: { type: "CloudConf", id: 11 },
-                        coinConf: { type: "CloudConf", id: 12 },
-                        elecConf: { type: "CloudConf", id: 13 },
-                        shareConf: { type: "CloudConf", id: 14 },
-                        screenShotConf: { type: "CloudConf", id: 15 },
-                        lockScreenConf: { type: "CloudConf", id: 16 },
-                        recommendConf: { type: "CloudConf", id: 17 },
-                        playbackSpeedConf: { type: "CloudConf", id: 18 },
-                        definitionConf: { type: "CloudConf", id: 19 },
-                        selectionsConf: { type: "CloudConf", id: 20 },
-                        nextConf: { type: "CloudConf", id: 21 },
-                        editDmConf: { type: "CloudConf", id: 22 },
-                        smallWindowConf: { type: "CloudConf", id: 23 },
-                        shakeConf: { type: "CloudConf", id: 24 },
-                        outerDmConf: { type: "CloudConf", id: 25 },
-                        innerDmConf: { type: "CloudConf", id: 26 },
-                        panoramaConf: { type: "CloudConf", id: 27 },
-                        dolbyConf: { type: "CloudConf", id: 28 },
-                        colorFilterConf: { type: "CloudConf", id: 29 },
-                        lossLessConf: { type: "CloudConf", id: 30 },
+                        backgroundPlayConf: { type: 'CloudConf', id: 1 },
+                        flipConf: { type: 'CloudConf', id: 2 },
+                        castConf: { type: 'CloudConf', id: 3 },
+                        feedbackConf: { type: 'CloudConf', id: 4 },
+                        subtitleConf: { type: 'CloudConf', id: 5 },
+                        playbackRateConf: { type: 'CloudConf', id: 6 },
+                        timeUpConf: { type: 'CloudConf', id: 7 },
+                        playbackModeConf: { type: 'CloudConf', id: 8 },
+                        scaleModeConf: { type: 'CloudConf', id: 9 },
+                        likeConf: { type: 'CloudConf', id: 10 },
+                        dislikeConf: { type: 'CloudConf', id: 11 },
+                        coinConf: { type: 'CloudConf', id: 12 },
+                        elecConf: { type: 'CloudConf', id: 13 },
+                        shareConf: { type: 'CloudConf', id: 14 },
+                        screenShotConf: { type: 'CloudConf', id: 15 },
+                        lockScreenConf: { type: 'CloudConf', id: 16 },
+                        recommendConf: { type: 'CloudConf', id: 17 },
+                        playbackSpeedConf: { type: 'CloudConf', id: 18 },
+                        definitionConf: { type: 'CloudConf', id: 19 },
+                        selectionsConf: { type: 'CloudConf', id: 20 },
+                        nextConf: { type: 'CloudConf', id: 21 },
+                        editDmConf: { type: 'CloudConf', id: 22 },
+                        smallWindowConf: { type: 'CloudConf', id: 23 },
+                        shakeConf: { type: 'CloudConf', id: 24 },
+                        outerDmConf: { type: 'CloudConf', id: 25 },
+                        innerDmConf: { type: 'CloudConf', id: 26 },
+                        panoramaConf: { type: 'CloudConf', id: 27 },
+                        dolbyConf: { type: 'CloudConf', id: 28 },
+                        colorFilterConf: { type: 'CloudConf', id: 29 },
+                        lossLessConf: { type: 'CloudConf', id: 30 },
                       },
                     },
                     CloudConf: {
                       fields: {
-                        show: { type: "bool", id: 1 },
-                        confType: { type: "ConfType", id: 2 },
-                        fieldValue: { type: "FieldValue", id: 3 },
-                        confValue: { type: "ConfValue", id: 4 },
+                        show: { type: 'bool', id: 1 },
+                        confType: { type: 'ConfType', id: 2 },
+                        fieldValue: { type: 'FieldValue', id: 3 },
+                        confValue: { type: 'ConfValue', id: 4 },
                       },
                     },
                     ConfType: {
@@ -9726,111 +9726,111 @@ const biliJson = {
                       },
                     },
                     FieldValue: {
-                      oneofs: { value: { oneof: ["switch"] } },
-                      fields: { switch: { type: "bool", id: 1 } },
+                      oneofs: { value: { oneof: ['switch'] } },
+                      fields: { switch: { type: 'bool', id: 1 } },
                     },
                     ConfValue: {
-                      oneofs: { value: { oneof: ["switch", "selected"] } },
+                      oneofs: { value: { oneof: ['switch', 'selected'] } },
                       fields: {
-                        switch: { type: "bool", id: 1 },
-                        selected: { type: "int64", id: 2 },
+                        switch: { type: 'bool', id: 1 },
+                        selected: { type: 'int64', id: 2 },
                       },
                     },
                     UpgradeLimit: {
                       fields: {
-                        code: { type: "int32", id: 1 },
-                        message: { type: "string", id: 2 },
-                        image: { type: "string", id: 3 },
-                        button: { type: "UpgradeButton", id: 4 },
+                        code: { type: 'int32', id: 1 },
+                        message: { type: 'string', id: 2 },
+                        image: { type: 'string', id: 3 },
+                        button: { type: 'UpgradeButton', id: 4 },
                       },
                     },
                     UpgradeButton: {
                       fields: {
-                        title: { type: "string", id: 1 },
-                        link: { type: "string", id: 2 },
+                        title: { type: 'string', id: 1 },
+                        link: { type: 'string', id: 2 },
                       },
                     },
                     Chronos: {
                       fields: {
-                        md5: { type: "string", id: 1 },
-                        file: { type: "string", id: 2 },
+                        md5: { type: 'string', id: 1 },
+                        file: { type: 'string', id: 2 },
                       },
                     },
                     PlayArcConf: {
                       fields: {
-                        backgroundPlayConf: { type: "ArcConf", id: 1 },
-                        flipConf: { type: "ArcConf", id: 2 },
-                        castConf: { type: "ArcConf", id: 3 },
-                        feedbackConf: { type: "ArcConf", id: 4 },
-                        subtitleConf: { type: "ArcConf", id: 5 },
-                        playbackRateConf: { type: "ArcConf", id: 6 },
-                        timeUpConf: { type: "ArcConf", id: 7 },
-                        playbackModeConf: { type: "ArcConf", id: 8 },
-                        scaleModeConf: { type: "ArcConf", id: 9 },
-                        likeConf: { type: "ArcConf", id: 10 },
-                        dislikeConf: { type: "ArcConf", id: 11 },
-                        coinConf: { type: "ArcConf", id: 12 },
-                        elecConf: { type: "ArcConf", id: 13 },
-                        shareConf: { type: "ArcConf", id: 14 },
-                        screenShotConf: { type: "ArcConf", id: 15 },
-                        lockScreenConf: { type: "ArcConf", id: 16 },
-                        recommendConf: { type: "ArcConf", id: 17 },
-                        playbackSpeedConf: { type: "ArcConf", id: 18 },
-                        definitionConf: { type: "ArcConf", id: 19 },
-                        selectionsConf: { type: "ArcConf", id: 20 },
-                        nextConf: { type: "ArcConf", id: 21 },
-                        editDmConf: { type: "ArcConf", id: 22 },
-                        smallWindowConf: { type: "ArcConf", id: 23 },
-                        shakeConf: { type: "ArcConf", id: 24 },
-                        outerDmConf: { type: "ArcConf", id: 25 },
-                        innerDmConf: { type: "ArcConf", id: 26 },
-                        panoramaConf: { type: "ArcConf", id: 27 },
-                        dolbyConf: { type: "ArcConf", id: 28 },
-                        screenRecordingConf: { type: "ArcConf", id: 29 },
-                        colorFilterConf: { type: "ArcConf", id: 30 },
-                        lossLessConf: { type: "ArcConf", id: 31 },
+                        backgroundPlayConf: { type: 'ArcConf', id: 1 },
+                        flipConf: { type: 'ArcConf', id: 2 },
+                        castConf: { type: 'ArcConf', id: 3 },
+                        feedbackConf: { type: 'ArcConf', id: 4 },
+                        subtitleConf: { type: 'ArcConf', id: 5 },
+                        playbackRateConf: { type: 'ArcConf', id: 6 },
+                        timeUpConf: { type: 'ArcConf', id: 7 },
+                        playbackModeConf: { type: 'ArcConf', id: 8 },
+                        scaleModeConf: { type: 'ArcConf', id: 9 },
+                        likeConf: { type: 'ArcConf', id: 10 },
+                        dislikeConf: { type: 'ArcConf', id: 11 },
+                        coinConf: { type: 'ArcConf', id: 12 },
+                        elecConf: { type: 'ArcConf', id: 13 },
+                        shareConf: { type: 'ArcConf', id: 14 },
+                        screenShotConf: { type: 'ArcConf', id: 15 },
+                        lockScreenConf: { type: 'ArcConf', id: 16 },
+                        recommendConf: { type: 'ArcConf', id: 17 },
+                        playbackSpeedConf: { type: 'ArcConf', id: 18 },
+                        definitionConf: { type: 'ArcConf', id: 19 },
+                        selectionsConf: { type: 'ArcConf', id: 20 },
+                        nextConf: { type: 'ArcConf', id: 21 },
+                        editDmConf: { type: 'ArcConf', id: 22 },
+                        smallWindowConf: { type: 'ArcConf', id: 23 },
+                        shakeConf: { type: 'ArcConf', id: 24 },
+                        outerDmConf: { type: 'ArcConf', id: 25 },
+                        innerDmConf: { type: 'ArcConf', id: 26 },
+                        panoramaConf: { type: 'ArcConf', id: 27 },
+                        dolbyConf: { type: 'ArcConf', id: 28 },
+                        screenRecordingConf: { type: 'ArcConf', id: 29 },
+                        colorFilterConf: { type: 'ArcConf', id: 30 },
+                        lossLessConf: { type: 'ArcConf', id: 31 },
                       },
                     },
                     ArcConf: {
                       fields: {
-                        isSupport: { type: "bool", id: 1 },
-                        disabled: { type: "bool", id: 2 },
-                        extraContent: { type: "ExtraContent", id: 3 },
+                        isSupport: { type: 'bool', id: 1 },
+                        disabled: { type: 'bool', id: 2 },
+                        extraContent: { type: 'ExtraContent', id: 3 },
                         unsupportScene: {
-                          rule: "repeated",
-                          type: "int64",
+                          rule: 'repeated',
+                          type: 'int64',
                           id: 4,
                         },
                       },
                     },
                     ExtraContent: {
                       fields: {
-                        disabledReason: { type: "string", id: 1 },
-                        disabledCode: { type: "int64", id: 2 },
+                        disabledReason: { type: 'string', id: 1 },
+                        disabledCode: { type: 'int64', id: 2 },
                       },
                     },
-                    Event: { fields: { shake: { type: "Shake", id: 1 } } },
-                    Shake: { fields: { file: { type: "string", id: 1 } } },
+                    Event: { fields: { shake: { type: 'Shake', id: 1 } } },
+                    Shake: { fields: { file: { type: 'string', id: 1 } } },
                     AB: {
                       fields: {
-                        glance: { type: "Glance", id: 1 },
-                        group: { type: "Group", id: 2 },
+                        glance: { type: 'Glance', id: 1 },
+                        group: { type: 'Group', id: 2 },
                       },
                     },
                     Group: { values: { UnknownGroup: 0, A: 1, B: 2, C: 3 } },
                     Glance: {
                       fields: {
-                        canWatch: { type: "bool", id: 1 },
-                        times: { type: "int64", id: 2 },
-                        duration: { type: "int64", id: 3 },
+                        canWatch: { type: 'bool', id: 1 },
+                        times: { type: 'int64', id: 2 },
+                        duration: { type: 'int64', id: 3 },
                       },
                     },
                     PlayLimit: {
                       fields: {
-                        code: { type: "PlayLimitCode", id: 1 },
-                        message: { type: "string", id: 2 },
-                        subMessage: { type: "string", id: 3 },
-                        button: { type: "ButtonStyle", id: 4 },
+                        code: { type: 'PlayLimitCode', id: 1 },
+                        message: { type: 'string', id: 2 },
+                        subMessage: { type: 'string', id: 3 },
+                        button: { type: 'ButtonStyle', id: 4 },
                       },
                     },
                     PlayLimitCode: {
@@ -9838,10 +9838,10 @@ const biliJson = {
                     },
                     ButtonStyle: {
                       fields: {
-                        text: { type: "string", id: 1 },
-                        textColor: { type: "string", id: 2 },
-                        bgColor: { type: "string", id: 3 },
-                        jumpLink: { type: "string", id: 4 },
+                        text: { type: 'string', id: 1 },
+                        textColor: { type: 'string', id: 2 },
+                        bgColor: { type: 'string', id: 3 },
+                        jumpLink: { type: 'string', id: 4 },
                       },
                     },
                   },
@@ -9851,141 +9851,141 @@ const biliJson = {
             view: {
               nested: {
                 v1: {
-                  options: { java_package: "com.smile.bilibili.model" },
+                  options: { java_package: 'com.smile.bilibili.model' },
                   nested: {
                     ViewReply: {
                       fields: {
-                        arc: { type: "bilibili.app.archive.v1.Arc", id: 1 },
-                        pages: { rule: "repeated", type: "ViewPage", id: 2 },
-                        ownerExt: { type: "OnwerExt", id: 3 },
-                        reqUser: { type: "ReqUser", id: 4 },
-                        tag: { rule: "repeated", type: "Tag", id: 5 },
-                        tIcon: { keyType: "string", type: "TIcon", id: 6 },
-                        season: { type: "Season", id: 7 },
-                        elecRank: { type: "ElecRank", id: 8 },
-                        history: { type: "History", id: 9 },
-                        relates: { rule: "repeated", type: "Relate", id: 10 },
-                        dislike: { type: "Dislike", id: 11 },
-                        playerIcon: { type: "PlayerIcon", id: 12 },
-                        vipActive: { type: "string", id: 13 },
-                        bvid: { type: "string", id: 14 },
-                        honor: { type: "Honor", id: 15 },
+                        arc: { type: 'bilibili.app.archive.v1.Arc', id: 1 },
+                        pages: { rule: 'repeated', type: 'ViewPage', id: 2 },
+                        ownerExt: { type: 'OnwerExt', id: 3 },
+                        reqUser: { type: 'ReqUser', id: 4 },
+                        tag: { rule: 'repeated', type: 'Tag', id: 5 },
+                        tIcon: { keyType: 'string', type: 'TIcon', id: 6 },
+                        season: { type: 'Season', id: 7 },
+                        elecRank: { type: 'ElecRank', id: 8 },
+                        history: { type: 'History', id: 9 },
+                        relates: { rule: 'repeated', type: 'Relate', id: 10 },
+                        dislike: { type: 'Dislike', id: 11 },
+                        playerIcon: { type: 'PlayerIcon', id: 12 },
+                        vipActive: { type: 'string', id: 13 },
+                        bvid: { type: 'string', id: 14 },
+                        honor: { type: 'Honor', id: 15 },
                         relateTab: {
-                          rule: "repeated",
-                          type: "RelateTab",
+                          rule: 'repeated',
+                          type: 'RelateTab',
                           id: 16,
                         },
-                        activityUrl: { type: "string", id: 17 },
-                        bgm: { rule: "repeated", type: "Bgm", id: 18 },
-                        staff: { rule: "repeated", type: "Staff", id: 19 },
-                        argueMsg: { type: "string", id: 20 },
-                        shortLink: { type: "string", id: 21 },
-                        playParam: { type: "int32", id: 22 },
-                        label: { type: "Label", id: 23 },
-                        ugcSeason: { type: "UgcSeason", id: 24 },
-                        config: { type: "Config", id: 25 },
-                        shareSubtitle: { type: "string", id: 26 },
-                        interaction: { type: "Interaction", id: 27 },
-                        ecode: { type: "ECode", id: 28 },
-                        customConfig: { type: "CustomConfig", id: 29 },
-                        cms: { rule: "repeated", type: "CM", id: 30 },
-                        cmConfig: { type: "CMConfig", id: 31 },
-                        tab: { type: "Tab", id: 32 },
-                        rank: { type: "Rank", id: 33 },
+                        activityUrl: { type: 'string', id: 17 },
+                        bgm: { rule: 'repeated', type: 'Bgm', id: 18 },
+                        staff: { rule: 'repeated', type: 'Staff', id: 19 },
+                        argueMsg: { type: 'string', id: 20 },
+                        shortLink: { type: 'string', id: 21 },
+                        playParam: { type: 'int32', id: 22 },
+                        label: { type: 'Label', id: 23 },
+                        ugcSeason: { type: 'UgcSeason', id: 24 },
+                        config: { type: 'Config', id: 25 },
+                        shareSubtitle: { type: 'string', id: 26 },
+                        interaction: { type: 'Interaction', id: 27 },
+                        ecode: { type: 'ECode', id: 28 },
+                        customConfig: { type: 'CustomConfig', id: 29 },
+                        cms: { rule: 'repeated', type: 'CM', id: 30 },
+                        cmConfig: { type: 'CMConfig', id: 31 },
+                        tab: { type: 'Tab', id: 32 },
+                        rank: { type: 'Rank', id: 33 },
                         tfPanelCustomized: {
-                          type: "TFPanelCustomized",
+                          type: 'TFPanelCustomized',
                           id: 34,
                         },
-                        upAct: { type: "UpAct", id: 35 },
-                        userGarb: { type: "UserGarb", id: 36 },
-                        activitySeason: { type: "ActivitySeason", id: 37 },
-                        badgeUrl: { type: "string", id: 38 },
-                        liveOrderInfo: { type: "LiveOrderInfo", id: 39 },
-                        descV2: { rule: "repeated", type: "DescV2", id: 40 },
-                        cmIpad: { type: "CmIpad", id: 41 },
+                        upAct: { type: 'UpAct', id: 35 },
+                        userGarb: { type: 'UserGarb', id: 36 },
+                        activitySeason: { type: 'ActivitySeason', id: 37 },
+                        badgeUrl: { type: 'string', id: 38 },
+                        liveOrderInfo: { type: 'LiveOrderInfo', id: 39 },
+                        descV2: { rule: 'repeated', type: 'DescV2', id: 40 },
+                        cmIpad: { type: 'CmIpad', id: 41 },
                         sticker: {
-                          rule: "repeated",
-                          type: "ViewMaterial",
+                          rule: 'repeated',
+                          type: 'ViewMaterial',
                           id: 42,
                         },
-                        upLikeImg: { type: "UpLikeImg", id: 43 },
-                        likeCustom: { type: "LikeCustom", id: 44 },
-                        descTag: { rule: "repeated", type: "Tag", id: 45 },
-                        specialCell: { type: "SpecialCell", id: 46 },
-                        online: { type: "Online", id: 47 },
-                        cmUnderPlayer: { type: "google.protobuf.Any", id: 48 },
+                        upLikeImg: { type: 'UpLikeImg', id: 43 },
+                        likeCustom: { type: 'LikeCustom', id: 44 },
+                        descTag: { rule: 'repeated', type: 'Tag', id: 45 },
+                        specialCell: { type: 'SpecialCell', id: 46 },
+                        online: { type: 'Online', id: 47 },
+                        cmUnderPlayer: { type: 'google.protobuf.Any', id: 48 },
                         videoSource: {
-                          rule: "repeated",
-                          type: "ViewMaterial",
+                          rule: 'repeated',
+                          type: 'ViewMaterial',
                           id: 49,
                         },
                         specialCellNew: {
-                          rule: "repeated",
-                          type: "SpecialCell",
+                          rule: 'repeated',
+                          type: 'SpecialCell',
                           id: 50,
                         },
-                        premiere: { type: "PremiereResource", id: 51 },
-                        refreshSpecialCell: { type: "bool", id: 52 },
-                        materialLeft: { type: "MaterialLeft", id: 53 },
-                        notesCount: { type: "int64", id: 54 },
-                        pullAction: { type: "PullClientAction", id: 55 },
-                        arcExtra: { type: "ArcExtra", id: 56 },
-                        pagination: { type: "PaginationReply", id: 57 },
-                        likeAnimation: { type: "LikeAnimation", id: 58 },
-                        replyPreface: { type: "ReplyStyle", id: 59 },
-                        refreshPage: { type: "RefreshPage", id: 60 },
-                        controlConfig: { type: "ControlConfig", id: 62 },
-                        upViewMaterial: { type: "UpViewMaterial", id: 63 },
-                        userRelation: { type: "UserRelation", id: 64 },
-                        coinStyle: { type: "CoinStyle", id: 65 },
-                        rabbitYear: { type: "RabbitYear", id: 66 },
+                        premiere: { type: 'PremiereResource', id: 51 },
+                        refreshSpecialCell: { type: 'bool', id: 52 },
+                        materialLeft: { type: 'MaterialLeft', id: 53 },
+                        notesCount: { type: 'int64', id: 54 },
+                        pullAction: { type: 'PullClientAction', id: 55 },
+                        arcExtra: { type: 'ArcExtra', id: 56 },
+                        pagination: { type: 'PaginationReply', id: 57 },
+                        likeAnimation: { type: 'LikeAnimation', id: 58 },
+                        replyPreface: { type: 'ReplyStyle', id: 59 },
+                        refreshPage: { type: 'RefreshPage', id: 60 },
+                        controlConfig: { type: 'ControlConfig', id: 62 },
+                        upViewMaterial: { type: 'UpViewMaterial', id: 63 },
+                        userRelation: { type: 'UserRelation', id: 64 },
+                        coinStyle: { type: 'CoinStyle', id: 65 },
+                        rabbitYear: { type: 'RabbitYear', id: 66 },
                       },
                     },
                     MaterialLeft: {
                       fields: {
-                        icon: { type: "string", id: 1 },
-                        text: { type: "string", id: 2 },
-                        url: { type: "string", id: 3 },
-                        leftType: { type: "string", id: 4 },
-                        param: { type: "string", id: 5 },
-                        operationalType: { type: "string", id: 6 },
-                        staticIcon: { type: "string", id: 7 },
+                        icon: { type: 'string', id: 1 },
+                        text: { type: 'string', id: 2 },
+                        url: { type: 'string', id: 3 },
+                        leftType: { type: 'string', id: 4 },
+                        param: { type: 'string', id: 5 },
+                        operationalType: { type: 'string', id: 6 },
+                        staticIcon: { type: 'string', id: 7 },
                       },
                     },
                     PremiereResource: {
                       fields: {
-                        premiere: { type: "Premiere", id: 1 },
-                        reserve: { type: "PremiereReserve", id: 2 },
-                        text: { type: "PremiereText", id: 3 },
+                        premiere: { type: 'Premiere', id: 1 },
+                        reserve: { type: 'PremiereReserve', id: 2 },
+                        text: { type: 'PremiereText', id: 3 },
                       },
                     },
                     PremiereText: {
                       fields: {
-                        title: { type: "string", id: 1 },
-                        subtitle_: { type: "string", id: 2 },
-                        onlineText_: { type: "string", id: 3 },
-                        onlineIcon_: { type: "string", id: 4 },
-                        onlineIconDark_: { type: "string", id: 5 },
-                        introTitle: { type: "string", id: 6 },
-                        introIcon: { type: "string", id: 7 },
-                        guidancePulldown: { type: "string", id: 8 },
-                        guidanceEntry: { type: "string", id: 9 },
-                        introIconNight: { type: "string", id: 10 },
+                        title: { type: 'string', id: 1 },
+                        subtitle_: { type: 'string', id: 2 },
+                        onlineText_: { type: 'string', id: 3 },
+                        onlineIcon_: { type: 'string', id: 4 },
+                        onlineIconDark_: { type: 'string', id: 5 },
+                        introTitle: { type: 'string', id: 6 },
+                        introIcon: { type: 'string', id: 7 },
+                        guidancePulldown: { type: 'string', id: 8 },
+                        guidanceEntry: { type: 'string', id: 9 },
+                        introIconNight: { type: 'string', id: 10 },
                       },
                     },
                     PremiereReserve: {
                       fields: {
-                        reserveId: { type: "int64", id: 1 },
-                        count: { type: "int64", id: 2 },
-                        isFollow: { type: "bool", id: 3 },
+                        reserveId: { type: 'int64', id: 1 },
+                        count: { type: 'int64', id: 2 },
+                        isFollow: { type: 'bool', id: 3 },
                       },
                     },
                     Premiere: {
                       fields: {
-                        premiereState: { type: "PremiereState", id: 1 },
-                        serviceTime: { type: "int64", id: 3 },
-                        startTime: { type: "int64", id: 2 },
-                        roomId: { type: "int64", id: 4 },
+                        premiereState: { type: 'PremiereState', id: 1 },
+                        serviceTime: { type: 'int64', id: 3 },
+                        startTime: { type: 'int64', id: 2 },
+                        roomId: { type: 'int64', id: 4 },
                       },
                     },
                     PremiereState: {
@@ -9998,75 +9998,75 @@ const biliJson = {
                     },
                     Online: {
                       fields: {
-                        onlineShow: { type: "bool", id: 1 },
-                        playerOnlineLogo: { type: "string", id: 2 },
+                        onlineShow: { type: 'bool', id: 1 },
+                        playerOnlineLogo: { type: 'string', id: 2 },
                       },
                     },
                     SpecialCell: {
                       fields: {
-                        icon: { type: "string", id: 1 },
-                        iconNight: { type: "string", id: 2 },
-                        text: { type: "string", id: 3 },
-                        textColor: { type: "string", id: 4 },
-                        textColorNight: { type: "string", id: 5 },
-                        jumpUrl: { type: "string", id: 6 },
-                        cellType: { type: "string", id: 7 },
-                        cellBgcolor: { type: "string", id: 8 },
-                        cellBgcolorNight: { type: "string", id: 9 },
-                        param: { type: "string", id: 10 },
-                        pageTitle: { type: "string", id: 11 },
-                        jumpType: { type: "string", id: 12 },
-                        endIcon: { type: "string", id: 13 },
-                        endIconNight: { type: "string", id: 14 },
-                        notesCount: { type: "int64", id: 15 },
-                        cellFluid: { type: "CellFluid", id: 16 },
+                        icon: { type: 'string', id: 1 },
+                        iconNight: { type: 'string', id: 2 },
+                        text: { type: 'string', id: 3 },
+                        textColor: { type: 'string', id: 4 },
+                        textColorNight: { type: 'string', id: 5 },
+                        jumpUrl: { type: 'string', id: 6 },
+                        cellType: { type: 'string', id: 7 },
+                        cellBgcolor: { type: 'string', id: 8 },
+                        cellBgcolorNight: { type: 'string', id: 9 },
+                        param: { type: 'string', id: 10 },
+                        pageTitle: { type: 'string', id: 11 },
+                        jumpType: { type: 'string', id: 12 },
+                        endIcon: { type: 'string', id: 13 },
+                        endIconNight: { type: 'string', id: 14 },
+                        notesCount: { type: 'int64', id: 15 },
+                        cellFluid: { type: 'CellFluid', id: 16 },
                       },
                     },
                     LikeCustom: {
                       fields: {
-                        likeSwitch: { type: "bool", id: 1 },
-                        fullToHalfProgress: { type: "int64", id: 2 },
-                        nonFullProgress: { type: "int64", id: 3 },
-                        updateCount: { type: "int64", id: 4 },
-                        immediatelyUpgrade: { type: "bool", id: 5 },
-                        likeComment: { type: "LikeComment", id: 6 },
+                        likeSwitch: { type: 'bool', id: 1 },
+                        fullToHalfProgress: { type: 'int64', id: 2 },
+                        nonFullProgress: { type: 'int64', id: 3 },
+                        updateCount: { type: 'int64', id: 4 },
+                        immediatelyUpgrade: { type: 'bool', id: 5 },
+                        likeComment: { type: 'LikeComment', id: 6 },
                       },
                     },
                     UpLikeImg: {
                       fields: {
-                        preImg: { type: "string", id: 1 },
-                        sucImg: { type: "string", id: 2 },
-                        content: { type: "string", id: 3 },
-                        type: { type: "int64", id: 4 },
+                        preImg: { type: 'string', id: 1 },
+                        sucImg: { type: 'string', id: 2 },
+                        content: { type: 'string', id: 3 },
+                        type: { type: 'int64', id: 4 },
                       },
                     },
                     ViewMaterial: {
                       fields: {
-                        oid: { type: "int64", id: 1 },
-                        mid: { type: "int64", id: 2 },
-                        title: { type: "string", id: 3 },
-                        author: { type: "string", id: 4 },
-                        jumpUrl: { type: "string", id: 5 },
+                        oid: { type: 'int64', id: 1 },
+                        mid: { type: 'int64', id: 2 },
+                        title: { type: 'string', id: 3 },
+                        author: { type: 'string', id: 4 },
+                        jumpUrl: { type: 'string', id: 5 },
                       },
                     },
                     CmIpad: {
                       fields: {
-                        cm: { type: "CM", id: 1 },
+                        cm: { type: 'CM', id: 1 },
                         author: {
-                          type: "bilibili.app.archive.v1.Author",
+                          type: 'bilibili.app.archive.v1.Author',
                           id: 2,
                         },
-                        stat: { type: "bilibili.app.archive.v1.Stat", id: 3 },
-                        duration: { type: "int64", id: 4 },
-                        aid: { type: "int64", id: 5 },
+                        stat: { type: 'bilibili.app.archive.v1.Stat', id: 3 },
+                        duration: { type: 'int64', id: 4 },
+                        aid: { type: 'int64', id: 5 },
                       },
                     },
                     DescV2: {
                       fields: {
-                        text: { type: "string", id: 1 },
-                        type: { type: "DescType", id: 2 },
-                        uri: { type: "string", id: 3 },
-                        rid: { type: "int64", id: 4 },
+                        text: { type: 'string', id: 1 },
+                        type: { type: 'DescType', id: 2 },
+                        uri: { type: 'string', id: 3 },
+                        rid: { type: 'int64', id: 4 },
                       },
                     },
                     DescType: {
@@ -10078,399 +10078,399 @@ const biliJson = {
                     },
                     LiveOrderInfo: {
                       fields: {
-                        sid: { type: "int64", id: 1 },
-                        text: { type: "string", id: 2 },
-                        livePlanStartTime: { type: "int64", id: 3 },
-                        isFollow: { type: "bool", id: 4 },
-                        followCount: { type: "int64", id: 5 },
-                        style: { type: "string", id: 6 },
+                        sid: { type: 'int64', id: 1 },
+                        text: { type: 'string', id: 2 },
+                        livePlanStartTime: { type: 'int64', id: 3 },
+                        isFollow: { type: 'bool', id: 4 },
+                        followCount: { type: 'int64', id: 5 },
+                        style: { type: 'string', id: 6 },
                       },
                     },
                     Season: {
                       fields: {
-                        allowDownload: { type: "string", id: 1 },
-                        seasonId: { type: "int64", id: 2 },
-                        isJump: { type: "int32", id: 3 },
-                        title: { type: "string", id: 4 },
-                        cover: { type: "string", id: 5 },
-                        isFinish: { type: "int32", id: 6 },
-                        newestEpId: { type: "int64", id: 7 },
-                        newestEpIndex: { type: "string", id: 8 },
-                        totalCount: { type: "int64", id: 9 },
-                        weekday: { type: "int32", id: 10 },
-                        userSeason: { type: "UserSeason", id: 11 },
-                        player: { type: "SeasonPlayer", id: 12 },
-                        ogvPlayurl: { type: "string", id: 13 },
+                        allowDownload: { type: 'string', id: 1 },
+                        seasonId: { type: 'int64', id: 2 },
+                        isJump: { type: 'int32', id: 3 },
+                        title: { type: 'string', id: 4 },
+                        cover: { type: 'string', id: 5 },
+                        isFinish: { type: 'int32', id: 6 },
+                        newestEpId: { type: 'int64', id: 7 },
+                        newestEpIndex: { type: 'string', id: 8 },
+                        totalCount: { type: 'int64', id: 9 },
+                        weekday: { type: 'int32', id: 10 },
+                        userSeason: { type: 'UserSeason', id: 11 },
+                        player: { type: 'SeasonPlayer', id: 12 },
+                        ogvPlayurl: { type: 'string', id: 13 },
                       },
                     },
                     SeasonPlayer: {
                       fields: {
-                        aid: { type: "int64", id: 1 },
-                        vid: { type: "string", id: 2 },
-                        cid: { type: "int64", id: 3 },
-                        from: { type: "string", id: 4 },
+                        aid: { type: 'int64', id: 1 },
+                        vid: { type: 'string', id: 2 },
+                        cid: { type: 'int64', id: 3 },
+                        from: { type: 'string', id: 4 },
                       },
                     },
                     UserSeason: {
-                      fields: { attention: { type: "string", id: 1 } },
+                      fields: { attention: { type: 'string', id: 1 } },
                     },
                     Tag: {
                       fields: {
-                        id: { type: "int64", id: 1 },
-                        name: { type: "string", id: 2 },
-                        likes: { type: "int64", id: 3 },
-                        hates: { type: "int64", id: 4 },
-                        liked: { type: "int32", id: 5 },
-                        hated: { type: "int32", id: 6 },
-                        uri: { type: "string", id: 7 },
-                        tagType: { type: "string", id: 8 },
+                        id: { type: 'int64', id: 1 },
+                        name: { type: 'string', id: 2 },
+                        likes: { type: 'int64', id: 3 },
+                        hates: { type: 'int64', id: 4 },
+                        liked: { type: 'int32', id: 5 },
+                        hated: { type: 'int32', id: 6 },
+                        uri: { type: 'string', id: 7 },
+                        tagType: { type: 'string', id: 8 },
                       },
                     },
-                    TIcon: { fields: { icon: { type: "string", id: 1 } } },
+                    TIcon: { fields: { icon: { type: 'string', id: 1 } } },
                     ECode: { values: { DEFAULT: 0, CODE404: 1 } },
                     ViewPage: {
                       fields: {
-                        page: { type: "bilibili.app.archive.v1.Page", id: 1 },
-                        audio: { type: "Audio", id: 2 },
-                        dm: { type: "DM", id: 3 },
-                        downloadTitle: { type: "string", id: 4 },
-                        downloadSubtitle: { type: "string", id: 5 },
+                        page: { type: 'bilibili.app.archive.v1.Page', id: 1 },
+                        audio: { type: 'Audio', id: 2 },
+                        dm: { type: 'DM', id: 3 },
+                        downloadTitle: { type: 'string', id: 4 },
+                        downloadSubtitle: { type: 'string', id: 5 },
                       },
                     },
                     Audio: {
                       fields: {
-                        title: { type: "string", id: 1 },
-                        coverUrl: { type: "string", id: 2 },
-                        songId: { type: "int64", id: 3 },
-                        playCount: { type: "int64", id: 4 },
-                        replyCount: { type: "int64", id: 5 },
-                        upperId: { type: "int64", id: 6 },
-                        entrance: { type: "string", id: 7 },
-                        songAttr: { type: "int64", id: 8 },
+                        title: { type: 'string', id: 1 },
+                        coverUrl: { type: 'string', id: 2 },
+                        songId: { type: 'int64', id: 3 },
+                        playCount: { type: 'int64', id: 4 },
+                        replyCount: { type: 'int64', id: 5 },
+                        upperId: { type: 'int64', id: 6 },
+                        entrance: { type: 'string', id: 7 },
+                        songAttr: { type: 'int64', id: 8 },
                       },
                     },
                     DM: {
                       fields: {
-                        closed: { type: "bool", id: 1 },
-                        realName: { type: "bool", id: 2 },
-                        count: { type: "int64", id: 3 },
+                        closed: { type: 'bool', id: 1 },
+                        realName: { type: 'bool', id: 2 },
+                        count: { type: 'int64', id: 3 },
                       },
                     },
                     OnwerExt: {
                       fields: {
-                        officialVerify: { type: "OfficialVerify", id: 1 },
-                        live: { type: "Live", id: 2 },
-                        vip: { type: "Vip", id: 3 },
-                        assists: { rule: "repeated", type: "int64", id: 4 },
-                        fans: { type: "int64", id: 5 },
-                        arcCount: { type: "string", id: 6 },
-                        nftFaceIcon: { type: "NftFaceIcon", id: 7 },
+                        officialVerify: { type: 'OfficialVerify', id: 1 },
+                        live: { type: 'Live', id: 2 },
+                        vip: { type: 'Vip', id: 3 },
+                        assists: { rule: 'repeated', type: 'int64', id: 4 },
+                        fans: { type: 'int64', id: 5 },
+                        arcCount: { type: 'string', id: 6 },
+                        nftFaceIcon: { type: 'NftFaceIcon', id: 7 },
                       },
                     },
                     OfficialVerify: {
                       fields: {
-                        type: { type: "int32", id: 1 },
-                        desc: { type: "string", id: 2 },
+                        type: { type: 'int32', id: 1 },
+                        desc: { type: 'string', id: 2 },
                       },
                     },
                     Live: {
                       fields: {
-                        mid: { type: "int64", id: 1 },
-                        roomid: { type: "int64", id: 2 },
-                        uri: { type: "string", id: 3 },
-                        endpageUri: { type: "string", id: 4 },
+                        mid: { type: 'int64', id: 1 },
+                        roomid: { type: 'int64', id: 2 },
+                        uri: { type: 'string', id: 3 },
+                        endpageUri: { type: 'string', id: 4 },
                       },
                     },
                     Vip: {
                       fields: {
-                        type: { type: "int32", id: 1 },
-                        dueDate: { type: "int64", id: 2 },
-                        dueRemark: { type: "string", id: 3 },
-                        accessStatus: { type: "int32", id: 4 },
-                        vipStatus: { type: "int32", id: 5 },
-                        vipStatusWarn: { type: "string", id: 6 },
-                        themeType: { type: "int32", id: 7 },
-                        label: { type: "VipLabel", id: 8 },
+                        type: { type: 'int32', id: 1 },
+                        dueDate: { type: 'int64', id: 2 },
+                        dueRemark: { type: 'string', id: 3 },
+                        accessStatus: { type: 'int32', id: 4 },
+                        vipStatus: { type: 'int32', id: 5 },
+                        vipStatusWarn: { type: 'string', id: 6 },
+                        themeType: { type: 'int32', id: 7 },
+                        label: { type: 'VipLabel', id: 8 },
                       },
                     },
                     VipLabel: {
                       fields: {
-                        path: { type: "string", id: 1 },
-                        text: { type: "string", id: 2 },
-                        labelTheme: { type: "string", id: 3 },
+                        path: { type: 'string', id: 1 },
+                        text: { type: 'string', id: 2 },
+                        labelTheme: { type: 'string', id: 3 },
                       },
                     },
                     ReqUser: {
                       fields: {
-                        attention: { type: "int32", id: 1 },
-                        guestAttention: { type: "int32", id: 2 },
-                        favorite: { type: "int32", id: 3 },
-                        like: { type: "int32", id: 4 },
-                        dislike: { type: "int32", id: 5 },
-                        coin: { type: "int32", id: 6 },
-                        attentionLevel: { type: "int32", id: 7 },
-                        favSeason: { type: "int32", id: 8 },
-                        elecPlusBtn: { type: "Button", id: 9 },
+                        attention: { type: 'int32', id: 1 },
+                        guestAttention: { type: 'int32', id: 2 },
+                        favorite: { type: 'int32', id: 3 },
+                        like: { type: 'int32', id: 4 },
+                        dislike: { type: 'int32', id: 5 },
+                        coin: { type: 'int32', id: 6 },
+                        attentionLevel: { type: 'int32', id: 7 },
+                        favSeason: { type: 'int32', id: 8 },
+                        elecPlusBtn: { type: 'Button', id: 9 },
                       },
                     },
                     ElecRank: {
                       fields: {
-                        list: { rule: "repeated", type: "ElecRankItem", id: 1 },
-                        count: { type: "int64", id: 2 },
-                        text: { type: "string", id: 3 },
+                        list: { rule: 'repeated', type: 'ElecRankItem', id: 1 },
+                        count: { type: 'int64', id: 2 },
+                        text: { type: 'string', id: 3 },
                       },
                     },
                     ElecRankItem: {
                       fields: {
-                        avatar: { type: "string", id: 1 },
-                        nickname: { type: "string", id: 2 },
-                        message: { type: "string", id: 3 },
-                        mid: { type: "int64", id: 4 },
+                        avatar: { type: 'string', id: 1 },
+                        nickname: { type: 'string', id: 2 },
+                        message: { type: 'string', id: 3 },
+                        mid: { type: 'int64', id: 4 },
                       },
                     },
                     History: {
                       fields: {
-                        cid: { type: "int64", id: 1 },
-                        progress: { type: "int64", id: 2 },
+                        cid: { type: 'int64', id: 1 },
+                        progress: { type: 'int64', id: 2 },
                       },
                     },
                     Relate: {
                       fields: {
-                        aid: { type: "int64", id: 1 },
-                        pic: { type: "string", id: 2 },
-                        title: { type: "string", id: 3 },
+                        aid: { type: 'int64', id: 1 },
+                        pic: { type: 'string', id: 2 },
+                        title: { type: 'string', id: 3 },
                         author: {
-                          type: "bilibili.app.archive.v1.Author",
+                          type: 'bilibili.app.archive.v1.Author',
                           id: 4,
                         },
-                        stat: { type: "bilibili.app.archive.v1.Stat", id: 5 },
-                        duration: { type: "int64", id: 6 },
-                        goto: { type: "string", id: 7 },
-                        param: { type: "string", id: 8 },
-                        uri: { type: "string", id: 9 },
-                        jumpUrl: { type: "string", id: 10 },
-                        rating: { type: "double", id: 11 },
-                        reserve: { type: "string", id: 12 },
-                        from: { type: "string", id: 13 },
-                        desc: { type: "string", id: 14 },
-                        rcmdReason: { type: "string", id: 15 },
-                        badge: { type: "string", id: 16 },
-                        cid: { type: "int64", id: 17 },
-                        seasonType: { type: "int32", id: 18 },
-                        ratingCount: { type: "int32", id: 19 },
-                        tagName: { type: "string", id: 20 },
-                        packInfo: { type: "PackInfo", id: 21 },
-                        notice: { type: "Notice", id: 22 },
-                        button: { type: "Button", id: 23 },
-                        trackid: { type: "string", id: 24 },
-                        newCard: { type: "int32", id: 25 },
-                        rcmdReasonStyle: { type: "ReasonStyle", id: 26 },
-                        coverGif: { type: "string", id: 27 },
-                        cm: { type: "CM", id: 28 },
-                        reserveStatus: { type: "int64", id: 29 },
-                        rcmdReasonExtra_: { type: "string", id: 30 },
-                        recThreePoint: { type: "RecThreePoint", id: 31 },
-                        uniqueId: { type: "string", id: 32 },
-                        materialId: { type: "int64", id: 33 },
-                        fromSourceType: { type: "int64", id: 34 },
-                        fromSourceId: { type: "string", id: 35 },
+                        stat: { type: 'bilibili.app.archive.v1.Stat', id: 5 },
+                        duration: { type: 'int64', id: 6 },
+                        goto: { type: 'string', id: 7 },
+                        param: { type: 'string', id: 8 },
+                        uri: { type: 'string', id: 9 },
+                        jumpUrl: { type: 'string', id: 10 },
+                        rating: { type: 'double', id: 11 },
+                        reserve: { type: 'string', id: 12 },
+                        from: { type: 'string', id: 13 },
+                        desc: { type: 'string', id: 14 },
+                        rcmdReason: { type: 'string', id: 15 },
+                        badge: { type: 'string', id: 16 },
+                        cid: { type: 'int64', id: 17 },
+                        seasonType: { type: 'int32', id: 18 },
+                        ratingCount: { type: 'int32', id: 19 },
+                        tagName: { type: 'string', id: 20 },
+                        packInfo: { type: 'PackInfo', id: 21 },
+                        notice: { type: 'Notice', id: 22 },
+                        button: { type: 'Button', id: 23 },
+                        trackid: { type: 'string', id: 24 },
+                        newCard: { type: 'int32', id: 25 },
+                        rcmdReasonStyle: { type: 'ReasonStyle', id: 26 },
+                        coverGif: { type: 'string', id: 27 },
+                        cm: { type: 'CM', id: 28 },
+                        reserveStatus: { type: 'int64', id: 29 },
+                        rcmdReasonExtra_: { type: 'string', id: 30 },
+                        recThreePoint: { type: 'RecThreePoint', id: 31 },
+                        uniqueId: { type: 'string', id: 32 },
+                        materialId: { type: 'int64', id: 33 },
+                        fromSourceType: { type: 'int64', id: 34 },
+                        fromSourceId: { type: 'string', id: 35 },
                         dimension: {
-                          type: "bilibili.app.archive.v1.Dimension",
+                          type: 'bilibili.app.archive.v1.Dimension',
                           id: 36,
                         },
-                        cover: { type: "string", id: 37 },
-                        badgeStyle: { type: "ReasonStyle", id: 38 },
-                        powerIconStyle: { type: "PowerIconStyle", id: 39 },
-                        reserveStatusText: { type: "string", id: 40 },
-                        dislikeReportData: { type: "string", id: 41 },
-                        firstFrame: { type: "string", id: 43 },
-                        gameRecommendReason: { type: "string", id: 44 },
-                        wikiInfoGame: { type: "WikiInfo", id: 45 },
-                        liveInfo: { type: "LiveInfo", id: 46 },
+                        cover: { type: 'string', id: 37 },
+                        badgeStyle: { type: 'ReasonStyle', id: 38 },
+                        powerIconStyle: { type: 'PowerIconStyle', id: 39 },
+                        reserveStatusText: { type: 'string', id: 40 },
+                        dislikeReportData: { type: 'string', id: 41 },
+                        firstFrame: { type: 'string', id: 43 },
+                        gameRecommendReason: { type: 'string', id: 44 },
+                        wikiInfoGame: { type: 'WikiInfo', id: 45 },
+                        liveInfo: { type: 'LiveInfo', id: 46 },
                       },
                     },
                     PowerIconStyle: {
                       fields: {
-                        iconUrl: { type: "string", id: 1 },
-                        iconNightUrl: { type: "string", id: 2 },
-                        iconWidth: { type: "int64", id: 3 },
-                        iconHeight: { type: "int64", id: 4 },
+                        iconUrl: { type: 'string', id: 1 },
+                        iconNightUrl: { type: 'string', id: 2 },
+                        iconWidth: { type: 'int64', id: 3 },
+                        iconHeight: { type: 'int64', id: 4 },
                       },
                     },
                     RecThreePoint: {
                       fields: {
-                        dislike: { type: "RecDislike", id: 1 },
-                        feedback: { type: "RecDislike", id: 2 },
-                        watchLater: { type: "bool", id: 3 },
+                        dislike: { type: 'RecDislike', id: 1 },
+                        feedback: { type: 'RecDislike', id: 2 },
+                        watchLater: { type: 'bool', id: 3 },
                       },
                     },
                     RecDislike: {
                       fields: {
-                        title: { type: "string", id: 1 },
-                        subTitle: { type: "string", id: 2 },
-                        closedSubTitle: { type: "string", id: 3 },
-                        pasteText: { type: "string", id: 4 },
-                        closedPasteText: { type: "string", id: 5 },
+                        title: { type: 'string', id: 1 },
+                        subTitle: { type: 'string', id: 2 },
+                        closedSubTitle: { type: 'string', id: 3 },
+                        pasteText: { type: 'string', id: 4 },
+                        closedPasteText: { type: 'string', id: 5 },
                         dislikeReason: {
-                          rule: "repeated",
-                          type: "DislikeReasons",
+                          rule: 'repeated',
+                          type: 'DislikeReasons',
                           id: 6,
                         },
-                        toast: { type: "string", id: 7 },
-                        closedToast: { type: "string", id: 8 },
+                        toast: { type: 'string', id: 7 },
+                        closedToast: { type: 'string', id: 8 },
                       },
                     },
                     PackInfo: {
                       fields: {
-                        title: { type: "string", id: 1 },
-                        uri: { type: "string", id: 2 },
+                        title: { type: 'string', id: 1 },
+                        uri: { type: 'string', id: 2 },
                       },
                     },
                     Notice: {
                       fields: {
-                        title: { type: "string", id: 1 },
-                        desc: { type: "string", id: 2 },
+                        title: { type: 'string', id: 1 },
+                        desc: { type: 'string', id: 2 },
                       },
                     },
                     Button: {
                       fields: {
-                        title: { type: "string", id: 1 },
-                        uri: { type: "string", id: 2 },
-                        icon: { type: "string", id: 3 },
+                        title: { type: 'string', id: 1 },
+                        uri: { type: 'string', id: 2 },
+                        icon: { type: 'string', id: 3 },
                       },
                     },
                     ReasonStyle: {
                       fields: {
-                        text: { type: "string", id: 1 },
-                        textColor: { type: "string", id: 2 },
-                        bgColor: { type: "string", id: 3 },
-                        borderColor: { type: "string", id: 4 },
-                        textColorNight: { type: "string", id: 5 },
-                        bgColorNight: { type: "string", id: 6 },
-                        borderColorNight: { type: "string", id: 7 },
-                        bgStyle: { type: "int32", id: 8 },
-                        selected: { type: "int32", id: 9 },
+                        text: { type: 'string', id: 1 },
+                        textColor: { type: 'string', id: 2 },
+                        bgColor: { type: 'string', id: 3 },
+                        borderColor: { type: 'string', id: 4 },
+                        textColorNight: { type: 'string', id: 5 },
+                        bgColorNight: { type: 'string', id: 6 },
+                        borderColorNight: { type: 'string', id: 7 },
+                        bgStyle: { type: 'int32', id: 8 },
+                        selected: { type: 'int32', id: 9 },
                       },
                     },
                     CM: {
                       fields: {
-                        sourceContent: { type: "google.protobuf.Any", id: 1 },
+                        sourceContent: { type: 'google.protobuf.Any', id: 1 },
                       },
                     },
                     Dislike: {
                       fields: {
-                        title: { type: "string", id: 1 },
-                        subtitle: { type: "string", id: 2 },
+                        title: { type: 'string', id: 1 },
+                        subtitle: { type: 'string', id: 2 },
                         reasons: {
-                          rule: "repeated",
-                          type: "DislikeReasons",
+                          rule: 'repeated',
+                          type: 'DislikeReasons',
                           id: 3,
                         },
                       },
                     },
                     DislikeReasons: {
                       fields: {
-                        id: { type: "int64", id: 1 },
-                        mid: { type: "int64", id: 2 },
-                        rid: { type: "int32", id: 3 },
-                        tagId: { type: "int64", id: 4 },
-                        name: { type: "string", id: 5 },
+                        id: { type: 'int64', id: 1 },
+                        mid: { type: 'int64', id: 2 },
+                        rid: { type: 'int32', id: 3 },
+                        tagId: { type: 'int64', id: 4 },
+                        name: { type: 'string', id: 5 },
                       },
                     },
                     PlayerIcon: {
                       fields: {
-                        url1: { type: "string", id: 1 },
-                        hash1: { type: "string", id: 2 },
-                        url2: { type: "string", id: 3 },
-                        hash2: { type: "string", id: 4 },
-                        dragLeftPng: { type: "string", id: 5 },
-                        middlePng: { type: "string", id: 6 },
-                        dragRightPng: { type: "string", id: 7 },
-                        dragData: { type: "IconData", id: 8 },
-                        nodragData: { type: "IconData", id: 9 },
+                        url1: { type: 'string', id: 1 },
+                        hash1: { type: 'string', id: 2 },
+                        url2: { type: 'string', id: 3 },
+                        hash2: { type: 'string', id: 4 },
+                        dragLeftPng: { type: 'string', id: 5 },
+                        middlePng: { type: 'string', id: 6 },
+                        dragRightPng: { type: 'string', id: 7 },
+                        dragData: { type: 'IconData', id: 8 },
+                        nodragData: { type: 'IconData', id: 9 },
                       },
                     },
                     Honor: {
                       fields: {
-                        icon: { type: "string", id: 1 },
-                        iconNight: { type: "string", id: 2 },
-                        text: { type: "string", id: 3 },
-                        textExtra: { type: "string", id: 4 },
-                        textColor: { type: "string", id: 5 },
-                        textColorNight: { type: "string", id: 6 },
-                        bgColor: { type: "string", id: 7 },
-                        bgColorNight: { type: "string", id: 8 },
-                        url: { type: "string", id: 9 },
-                        urlText: { type: "string", id: 10 },
-                        category: { type: "string", id: 11 },
+                        icon: { type: 'string', id: 1 },
+                        iconNight: { type: 'string', id: 2 },
+                        text: { type: 'string', id: 3 },
+                        textExtra: { type: 'string', id: 4 },
+                        textColor: { type: 'string', id: 5 },
+                        textColorNight: { type: 'string', id: 6 },
+                        bgColor: { type: 'string', id: 7 },
+                        bgColorNight: { type: 'string', id: 8 },
+                        url: { type: 'string', id: 9 },
+                        urlText: { type: 'string', id: 10 },
+                        category: { type: 'string', id: 11 },
                       },
                     },
                     RelateTab: {
                       fields: {
-                        id: { type: "string", id: 1 },
-                        title: { type: "string", id: 2 },
+                        id: { type: 'string', id: 1 },
+                        title: { type: 'string', id: 2 },
                       },
                     },
                     Bgm: {
                       fields: {
-                        sid: { type: "int64", id: 1 },
-                        mid: { type: "int64", id: 2 },
-                        title: { type: "string", id: 3 },
-                        author: { type: "string", id: 4 },
-                        jumpUrl: { type: "string", id: 5 },
-                        cover: { type: "string", id: 6 },
+                        sid: { type: 'int64', id: 1 },
+                        mid: { type: 'int64', id: 2 },
+                        title: { type: 'string', id: 3 },
+                        author: { type: 'string', id: 4 },
+                        jumpUrl: { type: 'string', id: 5 },
+                        cover: { type: 'string', id: 6 },
                       },
                     },
                     Staff: {
                       fields: {
-                        mid: { type: "int64", id: 1 },
-                        title: { type: "string", id: 2 },
-                        face: { type: "string", id: 3 },
-                        name: { type: "string", id: 4 },
-                        officialVerify: { type: "OfficialVerify", id: 5 },
-                        vip: { type: "Vip", id: 6 },
-                        attention: { type: "int32", id: 7 },
-                        labelStyle: { type: "int32", id: 8 },
+                        mid: { type: 'int64', id: 1 },
+                        title: { type: 'string', id: 2 },
+                        face: { type: 'string', id: 3 },
+                        name: { type: 'string', id: 4 },
+                        officialVerify: { type: 'OfficialVerify', id: 5 },
+                        vip: { type: 'Vip', id: 6 },
+                        attention: { type: 'int32', id: 7 },
+                        labelStyle: { type: 'int32', id: 8 },
                       },
                     },
                     Label: {
                       fields: {
-                        type: { type: "int32", id: 1 },
-                        uri: { type: "string", id: 2 },
-                        icon: { type: "string", id: 3 },
-                        iconNight: { type: "string", id: 4 },
-                        iconWidth: { type: "int64", id: 5 },
-                        iconHeight: { type: "int64", id: 6 },
-                        lottie: { type: "string", id: 7 },
-                        lottieNight: { type: "string", id: 8 },
+                        type: { type: 'int32', id: 1 },
+                        uri: { type: 'string', id: 2 },
+                        icon: { type: 'string', id: 3 },
+                        iconNight: { type: 'string', id: 4 },
+                        iconWidth: { type: 'int64', id: 5 },
+                        iconHeight: { type: 'int64', id: 6 },
+                        lottie: { type: 'string', id: 7 },
+                        lottieNight: { type: 'string', id: 8 },
                       },
                     },
                     UgcSeason: {
                       fields: {
-                        id: { type: "int64", id: 1 },
-                        title: { type: "string", id: 2 },
-                        cover: { type: "string", id: 3 },
-                        intro: { type: "string", id: 4 },
-                        sections: { rule: "repeated", type: "Section", id: 5 },
-                        stat: { type: "UgcSeasonStat", id: 6 },
-                        labelText: { type: "string", id: 7 },
-                        labelTextColor: { type: "string", id: 8 },
-                        labelBgColor: { type: "string", id: 9 },
-                        labelTextNightColor: { type: "string", id: 10 },
-                        labelBgNightColor: { type: "string", id: 11 },
-                        descRight: { type: "string", id: 12 },
-                        epCount: { type: "int64", id: 13 },
-                        seasonType: { type: "SeasonType", id: 14 },
-                        showContinualButton: { type: "bool", id: 15 },
-                        epNum: { type: "int64", id: 16 },
-                        seasonPay: { type: "bool", id: 17 },
-                        goodsInfo: { type: "GoodsInfo", id: 18 },
-                        payButton: { type: "ButtonStyle", id: 19 },
-                        labelTextNew: { type: "string", id: 20 },
-                        activity: { type: "UgcSeasonActivity", id: 21 },
+                        id: { type: 'int64', id: 1 },
+                        title: { type: 'string', id: 2 },
+                        cover: { type: 'string', id: 3 },
+                        intro: { type: 'string', id: 4 },
+                        sections: { rule: 'repeated', type: 'Section', id: 5 },
+                        stat: { type: 'UgcSeasonStat', id: 6 },
+                        labelText: { type: 'string', id: 7 },
+                        labelTextColor: { type: 'string', id: 8 },
+                        labelBgColor: { type: 'string', id: 9 },
+                        labelTextNightColor: { type: 'string', id: 10 },
+                        labelBgNightColor: { type: 'string', id: 11 },
+                        descRight: { type: 'string', id: 12 },
+                        epCount: { type: 'int64', id: 13 },
+                        seasonType: { type: 'SeasonType', id: 14 },
+                        showContinualButton: { type: 'bool', id: 15 },
+                        epNum: { type: 'int64', id: 16 },
+                        seasonPay: { type: 'bool', id: 17 },
+                        goodsInfo: { type: 'GoodsInfo', id: 18 },
+                        payButton: { type: 'ButtonStyle', id: 19 },
+                        labelTextNew: { type: 'string', id: 20 },
+                        activity: { type: 'UgcSeasonActivity', id: 21 },
                         seasonAbility: {
-                          rule: "repeated",
-                          type: "string",
+                          rule: 'repeated',
+                          type: 'string',
                           id: 22,
                         },
                       },
@@ -10478,129 +10478,129 @@ const biliJson = {
                     SeasonType: { values: { Unknown: 0, Base: 1, Good: 2 } },
                     Section: {
                       fields: {
-                        id: { type: "int64", id: 1 },
-                        title: { type: "string", id: 2 },
-                        type: { type: "int64", id: 3 },
-                        episodes: { rule: "repeated", type: "Episode", id: 4 },
+                        id: { type: 'int64', id: 1 },
+                        title: { type: 'string', id: 2 },
+                        type: { type: 'int64', id: 3 },
+                        episodes: { rule: 'repeated', type: 'Episode', id: 4 },
                       },
                     },
                     Episode: {
                       fields: {
-                        id: { type: "int64", id: 1 },
-                        aid: { type: "int64", id: 2 },
-                        cid: { type: "int64", id: 3 },
-                        title: { type: "string", id: 4 },
-                        cover: { type: "string", id: 5 },
-                        coverRightText: { type: "string", id: 6 },
-                        page: { type: "bilibili.app.archive.v1.Page", id: 7 },
-                        stat: { type: "bilibili.app.archive.v1.Stat", id: 8 },
-                        bvid: { type: "string", id: 9 },
+                        id: { type: 'int64', id: 1 },
+                        aid: { type: 'int64', id: 2 },
+                        cid: { type: 'int64', id: 3 },
+                        title: { type: 'string', id: 4 },
+                        cover: { type: 'string', id: 5 },
+                        coverRightText: { type: 'string', id: 6 },
+                        page: { type: 'bilibili.app.archive.v1.Page', id: 7 },
+                        stat: { type: 'bilibili.app.archive.v1.Stat', id: 8 },
+                        bvid: { type: 'string', id: 9 },
                         author: {
-                          type: "bilibili.app.archive.v1.Author",
+                          type: 'bilibili.app.archive.v1.Author',
                           id: 10,
                         },
-                        authorDesc: { type: "string", id: 11 },
-                        firstFrame: { type: "string", id: 16 },
+                        authorDesc: { type: 'string', id: 11 },
+                        firstFrame: { type: 'string', id: 16 },
                       },
                     },
                     UgcSeasonStat: {
                       fields: {
-                        seasonId: { type: "int64", id: 1 },
-                        view: { type: "int32", id: 2 },
-                        danmaku: { type: "int32", id: 3 },
-                        reply: { type: "int32", id: 4 },
-                        fav: { type: "int32", id: 5 },
-                        coin: { type: "int32", id: 6 },
-                        share: { type: "int32", id: 7 },
-                        nowRank: { type: "int32", id: 8 },
-                        hisRank: { type: "int32", id: 9 },
-                        like: { type: "int32", id: 10 },
+                        seasonId: { type: 'int64', id: 1 },
+                        view: { type: 'int32', id: 2 },
+                        danmaku: { type: 'int32', id: 3 },
+                        reply: { type: 'int32', id: 4 },
+                        fav: { type: 'int32', id: 5 },
+                        coin: { type: 'int32', id: 6 },
+                        share: { type: 'int32', id: 7 },
+                        nowRank: { type: 'int32', id: 8 },
+                        hisRank: { type: 'int32', id: 9 },
+                        like: { type: 'int32', id: 10 },
                       },
                     },
                     Config: {
                       fields: {
-                        relatesTitle: { type: "string", id: 1 },
-                        relatesStyle: { type: "int32", id: 2 },
-                        relateGifExp: { type: "int32", id: 3 },
-                        endPageHalf: { type: "int32", id: 4 },
-                        endPageFull: { type: "int32", id: 5 },
-                        autoSwindow: { type: "bool", id: 6 },
-                        popupInfo_: { type: "bool", id: 7 },
-                        abtestSmallWindow: { type: "string", id: 8 },
-                        recThreePointStyle: { type: "int32", id: 9 },
-                        isAbsoluteTime: { type: "bool", id: 10 },
-                        newSwindow: { type: "bool", id: 11 },
-                        relatesBiserial: { type: "bool", id: 12 },
-                        listenerConf: { type: "ListenerConfig", id: 13 },
-                        relatesFeedStyle: { type: "string", id: 14 },
-                        relatesFeedPopup: { type: "bool", id: 15 },
-                        relatesHasNext: { type: "bool", id: 16 },
-                        localPlay: { type: "int32", id: 17 },
-                        playStory: { type: "bool", id: 18 },
-                        arcPlayStory: { type: "bool", id: 19 },
-                        storyIcon: { type: "string", id: 20 },
-                        landscapeStory: { type: "bool", id: 21 },
-                        arcLandscapeStory: { type: "bool", id: 22 },
-                        landscapeIcon: { type: "string", id: 23 },
-                        showListenButton: { type: "bool", id: 24 },
-                        validShowM: { type: "int64", id: 25 },
-                        validShowN: { type: "int64", id: 26 },
-                        dmTreasureBoxControl: { type: "bool", id: 27 },
+                        relatesTitle: { type: 'string', id: 1 },
+                        relatesStyle: { type: 'int32', id: 2 },
+                        relateGifExp: { type: 'int32', id: 3 },
+                        endPageHalf: { type: 'int32', id: 4 },
+                        endPageFull: { type: 'int32', id: 5 },
+                        autoSwindow: { type: 'bool', id: 6 },
+                        popupInfo_: { type: 'bool', id: 7 },
+                        abtestSmallWindow: { type: 'string', id: 8 },
+                        recThreePointStyle: { type: 'int32', id: 9 },
+                        isAbsoluteTime: { type: 'bool', id: 10 },
+                        newSwindow: { type: 'bool', id: 11 },
+                        relatesBiserial: { type: 'bool', id: 12 },
+                        listenerConf: { type: 'ListenerConfig', id: 13 },
+                        relatesFeedStyle: { type: 'string', id: 14 },
+                        relatesFeedPopup: { type: 'bool', id: 15 },
+                        relatesHasNext: { type: 'bool', id: 16 },
+                        localPlay: { type: 'int32', id: 17 },
+                        playStory: { type: 'bool', id: 18 },
+                        arcPlayStory: { type: 'bool', id: 19 },
+                        storyIcon: { type: 'string', id: 20 },
+                        landscapeStory: { type: 'bool', id: 21 },
+                        arcLandscapeStory: { type: 'bool', id: 22 },
+                        landscapeIcon: { type: 'string', id: 23 },
+                        showListenButton: { type: 'bool', id: 24 },
+                        validShowM: { type: 'int64', id: 25 },
+                        validShowN: { type: 'int64', id: 26 },
+                        dmTreasureBoxControl: { type: 'bool', id: 27 },
                       },
                     },
                     ListenerConfig: {
                       fields: {
-                        jumpStyle: { type: "int64", id: 1 },
-                        guideBar: { type: "ListenerGuideBar", id: 2 },
+                        jumpStyle: { type: 'int64', id: 1 },
+                        guideBar: { type: 'ListenerGuideBar', id: 2 },
                       },
                     },
                     ListenerGuideBar: {
                       fields: {
-                        showStrategy: { type: "int64", id: 1 },
-                        icon: { type: "string", id: 2 },
-                        text: { type: "string", id: 3 },
-                        btnText: { type: "string", id: 4 },
-                        showTime: { type: "int64", id: 5 },
-                        backgroundTime: { type: "int64", id: 6 },
+                        showStrategy: { type: 'int64', id: 1 },
+                        icon: { type: 'string', id: 2 },
+                        text: { type: 'string', id: 3 },
+                        btnText: { type: 'string', id: 4 },
+                        showTime: { type: 'int64', id: 5 },
+                        backgroundTime: { type: 'int64', id: 6 },
                       },
                     },
                     Interaction: {
                       fields: {
-                        historyNode: { type: "Node", id: 1 },
-                        graphVersion: { type: "int64", id: 2 },
-                        msg: { type: "string", id: 3 },
-                        evaluation: { type: "string", id: 4 },
-                        mark: { type: "int64", id: 5 },
+                        historyNode: { type: 'Node', id: 1 },
+                        graphVersion: { type: 'int64', id: 2 },
+                        msg: { type: 'string', id: 3 },
+                        evaluation: { type: 'string', id: 4 },
+                        mark: { type: 'int64', id: 5 },
                       },
                     },
                     Node: {
                       fields: {
-                        nodeId: { type: "int64", id: 1 },
-                        title: { type: "string", id: 2 },
-                        cid: { type: "int64", id: 3 },
+                        nodeId: { type: 'int64', id: 1 },
+                        title: { type: 'string', id: 2 },
+                        cid: { type: 'int64', id: 3 },
                       },
                     },
                     CustomConfig: {
-                      fields: { redirectUrl: { type: "string", id: 1 } },
+                      fields: { redirectUrl: { type: 'string', id: 1 } },
                     },
                     CMConfig: {
                       fields: {
-                        adsControl: { type: "google.protobuf.Any", id: 1 },
+                        adsControl: { type: 'google.protobuf.Any', id: 1 },
                       },
                     },
                     Tab: {
                       fields: {
-                        background: { type: "string", id: 1 },
-                        otype: { type: "TabOtype", id: 2 },
-                        oid: { type: "int64", id: 3 },
-                        uri: { type: "string", id: 4 },
-                        style: { type: "TabStyle", id: 5 },
-                        text: { type: "string", id: 6 },
-                        textColor: { type: "string", id: 7 },
-                        textColorSelected: { type: "string", id: 8 },
-                        pic: { type: "string", id: 9 },
-                        id: { type: "int64", id: 10 },
-                        adTabInfo: { type: "google.protobuf.Any", id: 11 },
+                        background: { type: 'string', id: 1 },
+                        otype: { type: 'TabOtype', id: 2 },
+                        oid: { type: 'int64', id: 3 },
+                        uri: { type: 'string', id: 4 },
+                        style: { type: 'TabStyle', id: 5 },
+                        text: { type: 'string', id: 6 },
+                        textColor: { type: 'string', id: 7 },
+                        textColorSelected: { type: 'string', id: 8 },
+                        pic: { type: 'string', id: 9 },
+                        id: { type: 'int64', id: 10 },
+                        adTabInfo: { type: 'google.protobuf.Any', id: 11 },
                       },
                     },
                     TabOtype: {
@@ -10609,118 +10609,118 @@ const biliJson = {
                     TabStyle: { values: { UnknownStyle: 0, Text: 1, Pic: 2 } },
                     Rank: {
                       fields: {
-                        icon: { type: "string", id: 1 },
-                        iconNight: { type: "string", id: 2 },
-                        text: { type: "string", id: 3 },
+                        icon: { type: 'string', id: 1 },
+                        iconNight: { type: 'string', id: 2 },
+                        text: { type: 'string', id: 3 },
                       },
                     },
                     TFPanelCustomized: {
                       fields: {
-                        rightBtnImg: { type: "string", id: 1 },
-                        rightBtnText: { type: "string", id: 2 },
-                        rightBtnTextColor: { type: "string", id: 3 },
-                        rightBtnLink: { type: "string", id: 4 },
-                        mainLabel: { type: "string", id: 5 },
-                        operator: { type: "string", id: 6 },
+                        rightBtnImg: { type: 'string', id: 1 },
+                        rightBtnText: { type: 'string', id: 2 },
+                        rightBtnTextColor: { type: 'string', id: 3 },
+                        rightBtnLink: { type: 'string', id: 4 },
+                        mainLabel: { type: 'string', id: 5 },
+                        operator: { type: 'string', id: 6 },
                         subPanel: {
-                          keyType: "string",
-                          type: "subTFPanel",
+                          keyType: 'string',
+                          type: 'subTFPanel',
                           id: 7,
                         },
                       },
                     },
                     subTFPanel: {
                       fields: {
-                        rightBtnImg: { type: "string", id: 1 },
-                        rightBtnText: { type: "string", id: 2 },
-                        rightBtnTextColor: { type: "string", id: 3 },
-                        rightBtnLink: { type: "string", id: 4 },
-                        mainLabel: { type: "string", id: 5 },
-                        operator: { type: "string", id: 6 },
+                        rightBtnImg: { type: 'string', id: 1 },
+                        rightBtnText: { type: 'string', id: 2 },
+                        rightBtnTextColor: { type: 'string', id: 3 },
+                        rightBtnLink: { type: 'string', id: 4 },
+                        mainLabel: { type: 'string', id: 5 },
+                        operator: { type: 'string', id: 6 },
                       },
                     },
                     UpAct: {
                       fields: {
-                        sid: { type: "int64", id: 1 },
-                        mid: { type: "int64", id: 2 },
-                        title: { type: "string", id: 3 },
-                        statement: { type: "string", id: 4 },
-                        image: { type: "string", id: 5 },
-                        url: { type: "string", id: 6 },
-                        button: { type: "string", id: 7 },
+                        sid: { type: 'int64', id: 1 },
+                        mid: { type: 'int64', id: 2 },
+                        title: { type: 'string', id: 3 },
+                        statement: { type: 'string', id: 4 },
+                        image: { type: 'string', id: 5 },
+                        url: { type: 'string', id: 6 },
+                        button: { type: 'string', id: 7 },
                       },
                     },
                     UserGarb: {
                       fields: {
-                        urlImageAniCut: { type: "string", id: 1 },
-                        likeToast: { type: "string", id: 2 },
+                        urlImageAniCut: { type: 'string', id: 1 },
+                        likeToast: { type: 'string', id: 2 },
                       },
                     },
                     ActivitySeason: {
                       fields: {
-                        arc: { type: "bilibili.app.archive.v1.Arc", id: 1 },
-                        pages: { rule: "repeated", type: "ViewPage", id: 2 },
-                        ownerExt: { type: "OnwerExt", id: 3 },
-                        reqUser: { type: "ReqUser", id: 4 },
-                        elecRank: { type: "ElecRank", id: 5 },
-                        history: { type: "History", id: 6 },
-                        bvid: { type: "string", id: 7 },
-                        honor: { type: "Honor", id: 8 },
-                        staff: { rule: "repeated", type: "Staff", id: 9 },
-                        ugcSeason: { type: "UgcSeason", id: 10 },
-                        tab: { type: "Tab", id: 11 },
-                        rank: { type: "Rank", id: 12 },
-                        order: { type: "Order", id: 13 },
-                        supportDislike: { type: "bool", id: 14 },
-                        operationRelate: { type: "OperationRelate", id: 15 },
-                        activityResource: { type: "ActivityResource", id: 16 },
-                        shortLink: { type: "string", id: 17 },
-                        label: { type: "Label", id: 18 },
-                        dislike: { type: "Dislike", id: 19 },
-                        playerIcon: { type: "PlayerIcon", id: 20 },
-                        shareSubtitle: { type: "string", id: 21 },
-                        cmConfig: { type: "CMConfig", id: 22 },
+                        arc: { type: 'bilibili.app.archive.v1.Arc', id: 1 },
+                        pages: { rule: 'repeated', type: 'ViewPage', id: 2 },
+                        ownerExt: { type: 'OnwerExt', id: 3 },
+                        reqUser: { type: 'ReqUser', id: 4 },
+                        elecRank: { type: 'ElecRank', id: 5 },
+                        history: { type: 'History', id: 6 },
+                        bvid: { type: 'string', id: 7 },
+                        honor: { type: 'Honor', id: 8 },
+                        staff: { rule: 'repeated', type: 'Staff', id: 9 },
+                        ugcSeason: { type: 'UgcSeason', id: 10 },
+                        tab: { type: 'Tab', id: 11 },
+                        rank: { type: 'Rank', id: 12 },
+                        order: { type: 'Order', id: 13 },
+                        supportDislike: { type: 'bool', id: 14 },
+                        operationRelate: { type: 'OperationRelate', id: 15 },
+                        activityResource: { type: 'ActivityResource', id: 16 },
+                        shortLink: { type: 'string', id: 17 },
+                        label: { type: 'Label', id: 18 },
+                        dislike: { type: 'Dislike', id: 19 },
+                        playerIcon: { type: 'PlayerIcon', id: 20 },
+                        shareSubtitle: { type: 'string', id: 21 },
+                        cmConfig: { type: 'CMConfig', id: 22 },
                         tfPanelCustomized: {
-                          type: "TFPanelCustomized",
+                          type: 'TFPanelCustomized',
                           id: 23,
                         },
-                        argueMsg: { type: "string", id: 24 },
-                        ecode: { type: "ECode", id: 25 },
-                        customConfig: { type: "CustomConfig", id: 26 },
-                        badgeUrl: { type: "string", id: 27 },
-                        descV2: { rule: "repeated", type: "DescV2", id: 28 },
-                        config: { type: "Config", id: 29 },
-                        online: { type: "Online", id: 30 },
-                        arcExtra: { type: "ArcExtra", id: 31 },
-                        replyPreface: { type: "ReplyStyle", id: 32 },
-                        upLikeImg: { type: "UpLikeImg", id: 33 },
+                        argueMsg: { type: 'string', id: 24 },
+                        ecode: { type: 'ECode', id: 25 },
+                        customConfig: { type: 'CustomConfig', id: 26 },
+                        badgeUrl: { type: 'string', id: 27 },
+                        descV2: { rule: 'repeated', type: 'DescV2', id: 28 },
+                        config: { type: 'Config', id: 29 },
+                        online: { type: 'Online', id: 30 },
+                        arcExtra: { type: 'ArcExtra', id: 31 },
+                        replyPreface: { type: 'ReplyStyle', id: 32 },
+                        upLikeImg: { type: 'UpLikeImg', id: 33 },
                         specialCellNew: {
-                          rule: "repeated",
-                          type: "SpecialCell",
+                          rule: 'repeated',
+                          type: 'SpecialCell',
                           id: 34,
                         },
-                        likeAnimation: { type: "LikeAnimation", id: 35 },
-                        userGarb: { type: "UserGarb", id: 36 },
-                        controlConfig: { type: "ControlConfig", id: 37 },
-                        coinStyle: { type: "CoinStyle", id: 38 },
-                        rabbitYear: { type: "RabbitYear", id: 39 },
+                        likeAnimation: { type: 'LikeAnimation', id: 35 },
+                        userGarb: { type: 'UserGarb', id: 36 },
+                        controlConfig: { type: 'ControlConfig', id: 37 },
+                        coinStyle: { type: 'CoinStyle', id: 38 },
+                        rabbitYear: { type: 'RabbitYear', id: 39 },
                       },
                     },
                     Order: {
                       oneofs: {
-                        orderParam: { oneof: ["reserve", "favSeason"] },
+                        orderParam: { oneof: ['reserve', 'favSeason'] },
                       },
                       fields: {
-                        status: { type: "bool", id: 1 },
-                        title: { type: "string", id: 2 },
-                        buttonTitle: { type: "string", id: 3 },
-                        buttonSelectedTitle: { type: "string", id: 4 },
-                        seasonStatView: { type: "int64", id: 5 },
-                        seasonStatDanmaku: { type: "int64", id: 6 },
-                        orderType: { type: "BizType", id: 7 },
-                        reserve: { type: "BizReserveActivityParam", id: 8 },
-                        favSeason: { type: "BizFavSeasonParam", id: 9 },
-                        intro: { type: "string", id: 10 },
+                        status: { type: 'bool', id: 1 },
+                        title: { type: 'string', id: 2 },
+                        buttonTitle: { type: 'string', id: 3 },
+                        buttonSelectedTitle: { type: 'string', id: 4 },
+                        seasonStatView: { type: 'int64', id: 5 },
+                        seasonStatDanmaku: { type: 'int64', id: 6 },
+                        orderType: { type: 'BizType', id: 7 },
+                        reserve: { type: 'BizReserveActivityParam', id: 8 },
+                        favSeason: { type: 'BizFavSeasonParam', id: 9 },
+                        intro: { type: 'string', id: 10 },
                       },
                     },
                     BizType: {
@@ -10735,58 +10735,58 @@ const biliJson = {
                     },
                     BizReserveActivityParam: {
                       fields: {
-                        activityId: { type: "int64", id: 1 },
-                        from: { type: "string", id: 2 },
-                        type: { type: "string", id: 3 },
-                        oid: { type: "int64", id: 4 },
-                        reserveId: { type: "int64", id: 5 },
+                        activityId: { type: 'int64', id: 1 },
+                        from: { type: 'string', id: 2 },
+                        type: { type: 'string', id: 3 },
+                        oid: { type: 'int64', id: 4 },
+                        reserveId: { type: 'int64', id: 5 },
                       },
                     },
                     BizFavSeasonParam: {
-                      fields: { seasonId: { type: "int64", id: 1 } },
+                      fields: { seasonId: { type: 'int64', id: 1 } },
                     },
                     OperationRelate: {
                       fields: {
-                        title: { type: "string", id: 1 },
+                        title: { type: 'string', id: 1 },
                         relateItem: {
-                          rule: "repeated",
-                          type: "RelateItem",
+                          rule: 'repeated',
+                          type: 'RelateItem',
                           id: 2,
                         },
                         aiRelateItem: {
-                          rule: "repeated",
-                          type: "Relate",
+                          rule: 'repeated',
+                          type: 'Relate',
                           id: 3,
                         },
                       },
                     },
                     RelateItem: {
                       fields: {
-                        url: { type: "string", id: 1 },
-                        cover: { type: "string", id: 2 },
-                        useDefaultBrowser: { type: "bool", id: 3 },
+                        url: { type: 'string', id: 1 },
+                        cover: { type: 'string', id: 2 },
+                        useDefaultBrowser: { type: 'bool', id: 3 },
                       },
                     },
                     ActivityResource: {
                       fields: {
-                        modPoolName: { type: "string", id: 1 },
-                        modResourceName: { type: "string", id: 2 },
-                        bgColor: { type: "string", id: 3 },
-                        selectedBgColor: { type: "string", id: 4 },
-                        textColor: { type: "string", id: 5 },
-                        lightTextColor: { type: "string", id: 6 },
-                        darkTextColor: { type: "string", id: 7 },
-                        dividerColor: { type: "string", id: 8 },
+                        modPoolName: { type: 'string', id: 1 },
+                        modResourceName: { type: 'string', id: 2 },
+                        bgColor: { type: 'string', id: 3 },
+                        selectedBgColor: { type: 'string', id: 4 },
+                        textColor: { type: 'string', id: 5 },
+                        lightTextColor: { type: 'string', id: 6 },
+                        darkTextColor: { type: 'string', id: 7 },
+                        dividerColor: { type: 'string', id: 8 },
                       },
                     },
                     GoodsInfo: {
                       fields: {
-                        goodsId: { type: "string", id: 1 },
-                        category: { type: "Category", id: 2 },
-                        goodsPrice: { type: "int64", id: 3 },
-                        payState: { type: "PayState", id: 4 },
-                        goodsName: { type: "string", id: 5 },
-                        priceFmt: { type: "string", id: 6 },
+                        goodsId: { type: 'string', id: 1 },
+                        category: { type: 'Category', id: 2 },
+                        goodsPrice: { type: 'int64', id: 3 },
+                        payState: { type: 'PayState', id: 4 },
+                        goodsName: { type: 'string', id: 5 },
+                        priceFmt: { type: 'string', id: 6 },
                       },
                     },
                     Category: {
@@ -10797,211 +10797,211 @@ const biliJson = {
                     },
                     ButtonStyle: {
                       fields: {
-                        text: { type: "string", id: 1 },
-                        textColor: { type: "string", id: 2 },
-                        textColorNight: { type: "string", id: 3 },
-                        bgColor: { type: "string", id: 4 },
-                        bgColorNight: { type: "string", id: 5 },
-                        jumpLink: { type: "string", id: 6 },
+                        text: { type: 'string', id: 1 },
+                        textColor: { type: 'string', id: 2 },
+                        textColorNight: { type: 'string', id: 3 },
+                        bgColor: { type: 'string', id: 4 },
+                        bgColorNight: { type: 'string', id: 5 },
+                        jumpLink: { type: 'string', id: 6 },
                       },
                     },
                     UgcSeasonActivity: {
                       fields: {
-                        type: { type: "int32", id: 1 },
-                        oid: { type: "int64", id: 2 },
-                        activityId: { type: "int64", id: 3 },
-                        title: { type: "string", id: 4 },
-                        intro: { type: "string", id: 5 },
-                        dayCount: { type: "int32", id: 6 },
-                        userCount: { type: "int32", id: 7 },
-                        joinDeadline: { type: "int64", id: 8 },
-                        activityDeadline: { type: "int64", id: 9 },
-                        checkinViewTime: { type: "int32", id: 10 },
-                        newActivity: { type: "bool", id: 11 },
-                        userActivity: { type: "UserActivity", id: 12 },
-                        seasonShow: { type: "SeasonShow", id: 13 },
+                        type: { type: 'int32', id: 1 },
+                        oid: { type: 'int64', id: 2 },
+                        activityId: { type: 'int64', id: 3 },
+                        title: { type: 'string', id: 4 },
+                        intro: { type: 'string', id: 5 },
+                        dayCount: { type: 'int32', id: 6 },
+                        userCount: { type: 'int32', id: 7 },
+                        joinDeadline: { type: 'int64', id: 8 },
+                        activityDeadline: { type: 'int64', id: 9 },
+                        checkinViewTime: { type: 'int32', id: 10 },
+                        newActivity: { type: 'bool', id: 11 },
+                        userActivity: { type: 'UserActivity', id: 12 },
+                        seasonShow: { type: 'SeasonShow', id: 13 },
                       },
                     },
                     UserActivity: {
                       fields: {
-                        userState: { type: "int32", id: 1 },
-                        lastCheckinDate: { type: "int64", id: 2 },
-                        checkinToday: { type: "int32", id: 3 },
-                        userDayCount: { type: "int32", id: 4 },
-                        userViewTime: { type: "int32", id: 5 },
-                        portrait: { type: "string", id: 6 },
+                        userState: { type: 'int32', id: 1 },
+                        lastCheckinDate: { type: 'int64', id: 2 },
+                        checkinToday: { type: 'int32', id: 3 },
+                        userDayCount: { type: 'int32', id: 4 },
+                        userViewTime: { type: 'int32', id: 5 },
+                        portrait: { type: 'string', id: 6 },
                       },
                     },
                     SeasonShow: {
                       fields: {
-                        buttonText: { type: "string", id: 1 },
-                        joinText: { type: "string", id: 2 },
-                        ruleText: { type: "string", id: 3 },
-                        checkinText: { type: "string", id: 4 },
-                        checkinPrompt: { type: "string", id: 5 },
+                        buttonText: { type: 'string', id: 1 },
+                        joinText: { type: 'string', id: 2 },
+                        ruleText: { type: 'string', id: 3 },
+                        checkinText: { type: 'string', id: 4 },
+                        checkinPrompt: { type: 'string', id: 5 },
                       },
                     },
                     PullClientAction: {
                       fields: {
-                        type: { type: "string", id: 1 },
-                        pullAction: { type: "bool", id: 2 },
-                        params: { type: "string", id: 3 },
+                        type: { type: 'string', id: 1 },
+                        pullAction: { type: 'bool', id: 2 },
+                        params: { type: 'string', id: 3 },
                       },
                     },
                     ArcExtra: {
-                      fields: { arcPubLocation: { type: "string", id: 1 } },
+                      fields: { arcPubLocation: { type: 'string', id: 1 } },
                     },
                     PaginationReply: {
                       fields: {
-                        next: { type: "string", id: 1 },
-                        prev: { type: "string", id: 2 },
+                        next: { type: 'string', id: 1 },
+                        prev: { type: 'string', id: 2 },
                       },
                     },
                     LikeAnimation: {
                       fields: {
-                        likeIcon: { type: "string", id: 1 },
-                        likedIcon: { type: "string", id: 2 },
-                        likeAnimation: { type: "string", id: 3 },
+                        likeIcon: { type: 'string', id: 1 },
+                        likedIcon: { type: 'string', id: 2 },
+                        likeAnimation: { type: 'string', id: 3 },
                       },
                     },
                     ReplyStyle: {
                       fields: {
-                        badgeUrl: { type: "string", id: 1 },
-                        badgeText: { type: "string", id: 2 },
-                        badgeType: { type: "int64", id: 3 },
+                        badgeUrl: { type: 'string', id: 1 },
+                        badgeText: { type: 'string', id: 2 },
+                        badgeType: { type: 'int64', id: 3 },
                       },
                     },
                     RefreshPage: {
                       fields: {
-                        refreshable: { type: "int32", id: 1 },
-                        refreshIcon: { type: "int32", id: 2 },
-                        refreshText: { type: "string", id: 3 },
-                        refreshShow: { type: "float", id: 4 },
+                        refreshable: { type: 'int32', id: 1 },
+                        refreshIcon: { type: 'int32', id: 2 },
+                        refreshText: { type: 'string', id: 3 },
+                        refreshShow: { type: 'float', id: 4 },
                       },
                     },
                     ControlConfig: {
                       fields: {
-                        likeShow: { type: "Control", id: 1 },
-                        dislikeShow: { type: "Control", id: 2 },
-                        coinShow: { type: "Control", id: 3 },
-                        favShow: { type: "Control", id: 4 },
-                        shareShow: { type: "Control", id: 5 },
-                        toastShow: { type: "Control", id: 6 },
-                        materialShow: { type: "Control", id: 7 },
-                        danmuShow: { type: "Control", id: 8 },
+                        likeShow: { type: 'Control', id: 1 },
+                        dislikeShow: { type: 'Control', id: 2 },
+                        coinShow: { type: 'Control', id: 3 },
+                        favShow: { type: 'Control', id: 4 },
+                        shareShow: { type: 'Control', id: 5 },
+                        toastShow: { type: 'Control', id: 6 },
+                        materialShow: { type: 'Control', id: 7 },
+                        danmuShow: { type: 'Control', id: 8 },
                       },
                     },
-                    Control: { fields: { limit: { type: "bool", id: 1 } } },
+                    Control: { fields: { limit: { type: 'bool', id: 1 } } },
                     WikiInfo: {
                       fields: {
-                        wikiLabel: { type: "string", id: 1 },
-                        wikiUrl: { type: "string", id: 2 },
+                        wikiLabel: { type: 'string', id: 1 },
+                        wikiUrl: { type: 'string', id: 2 },
                       },
                     },
                     LiveInfo: {
                       fields: {
-                        areaName: { type: "string", id: 1 },
-                        watchedShow: { type: "int64", id: 2 },
-                        liveStatus: { type: "int64", id: 3 },
-                        iconType: { type: "int64", id: 4 },
+                        areaName: { type: 'string', id: 1 },
+                        watchedShow: { type: 'int64', id: 2 },
+                        liveStatus: { type: 'int64', id: 3 },
+                        iconType: { type: 'int64', id: 4 },
                       },
                     },
                     LikeComment: {
                       fields: {
-                        reply: { type: "string", id: 1 },
-                        title: { type: "string", id: 2 },
+                        reply: { type: 'string', id: 1 },
+                        title: { type: 'string', id: 2 },
                       },
                     },
                     UpViewMaterial: {
                       fields: {
-                        likeInfo: { type: "InteractArea", id: 1 },
-                        dataCenterInfo: { type: "string", id: 2 },
+                        likeInfo: { type: 'InteractArea', id: 1 },
+                        dataCenterInfo: { type: 'string', id: 2 },
                       },
                     },
                     InteractArea: {
                       fields: {
-                        list: { rule: "repeated", type: "User", id: 1 },
-                        text: { type: "string", id: 2 },
+                        list: { rule: 'repeated', type: 'User', id: 1 },
+                        text: { type: 'string', id: 2 },
                       },
                     },
                     User: {
                       fields: {
-                        mid: { type: "int64", id: 1 },
-                        name: { type: "string", id: 2 },
-                        face: { type: "string", id: 3 },
-                        follower: { type: "int64", id: 4 },
-                        isAttention: { type: "int64", id: 5 },
-                        isInterrelation: { type: "int64", id: 6 },
-                        isFollow: { type: "int64", id: 7 },
-                        interactDesc: { type: "string", id: 8 },
+                        mid: { type: 'int64', id: 1 },
+                        name: { type: 'string', id: 2 },
+                        face: { type: 'string', id: 3 },
+                        follower: { type: 'int64', id: 4 },
+                        isAttention: { type: 'int64', id: 5 },
+                        isInterrelation: { type: 'int64', id: 6 },
+                        isFollow: { type: 'int64', id: 7 },
+                        interactDesc: { type: 'string', id: 8 },
                       },
                     },
                     UserRelation: {
-                      fields: { likeInfo: { type: "InteractArea", id: 1 } },
+                      fields: { likeInfo: { type: 'InteractArea', id: 1 } },
                     },
                     CoinStyle: {
                       fields: {
-                        coinAppZipIcon: { type: "string", id: 1 },
-                        coinAppIcon1: { type: "string", id: 2 },
-                        coinAppIcon2: { type: "string", id: 3 },
-                        coinAppIcon3: { type: "string", id: 4 },
-                        coinAppIcon4: { type: "string", id: 5 },
+                        coinAppZipIcon: { type: 'string', id: 1 },
+                        coinAppIcon1: { type: 'string', id: 2 },
+                        coinAppIcon2: { type: 'string', id: 3 },
+                        coinAppIcon3: { type: 'string', id: 4 },
+                        coinAppIcon4: { type: 'string', id: 5 },
                       },
                     },
                     RabbitYear: {
                       fields: {
-                        playerAutomate: { type: "PlayerAutomate", id: 1 },
-                        dmSummon: { type: "DmSummon", id: 2 },
-                        halfScreen: { type: "HalfScreen", id: 3 },
-                        specialDm: { type: "SpecialDm", id: 4 },
+                        playerAutomate: { type: 'PlayerAutomate', id: 1 },
+                        dmSummon: { type: 'DmSummon', id: 2 },
+                        halfScreen: { type: 'HalfScreen', id: 3 },
+                        specialDm: { type: 'SpecialDm', id: 4 },
                       },
                     },
                     PlayerAutomate: {
                       fields: {
-                        dailyMax: { type: "int64", id: 1 },
-                        url: { type: "string", id: 2 },
+                        dailyMax: { type: 'int64', id: 1 },
+                        url: { type: 'string', id: 2 },
                       },
                     },
                     DmSummon: {
                       fields: {
-                        title: { rule: "repeated", type: "string", id: 1 },
-                        url: { type: "string", id: 2 },
-                        errMsg: { type: "string", id: 3 },
-                        longContent: { type: "string", id: 4 },
-                        shortContent: { type: "string", id: 5 },
+                        title: { rule: 'repeated', type: 'string', id: 1 },
+                        url: { type: 'string', id: 2 },
+                        errMsg: { type: 'string', id: 3 },
+                        longContent: { type: 'string', id: 4 },
+                        shortContent: { type: 'string', id: 5 },
                       },
                     },
                     HalfScreen: {
                       fields: {
-                        dailyMax: { type: "int64", id: 1 },
-                        url: { type: "string", id: 2 },
+                        dailyMax: { type: 'int64', id: 1 },
+                        url: { type: 'string', id: 2 },
                       },
                     },
                     SpecialDm: {
                       fields: {
-                        start: { type: "int64", id: 1 },
-                        end: { type: "int64", id: 2 },
-                        isDisplay: { type: "bool", id: 3 },
+                        start: { type: 'int64', id: 1 },
+                        end: { type: 'int64', id: 2 },
+                        isDisplay: { type: 'bool', id: 3 },
                       },
                     },
                     CellFluid: {
                       fields: {
-                        topBaseColor: { type: "string", id: 1 },
-                        topSplitColor: { type: "string", id: 2 },
-                        topTextColor: { type: "string", id: 3 },
+                        topBaseColor: { type: 'string', id: 1 },
+                        topSplitColor: { type: 'string', id: 2 },
+                        topTextColor: { type: 'string', id: 3 },
                       },
                     },
                     NftFaceIcon: {
                       fields: {
-                        regionType: { type: "int32", id: 1 },
-                        icon: { type: "string", id: 2 },
-                        showStatus: { type: "int32", id: 3 },
+                        regionType: { type: 'int32', id: 1 },
+                        icon: { type: 'string', id: 2 },
+                        showStatus: { type: 'int32', id: 3 },
                       },
                     },
                     IconData: {
                       fields: {
-                        metaJson: { type: "string", id: 1 },
-                        spritsImg: { type: "string", id: 2 },
+                        metaJson: { type: 'string', id: 1 },
+                        spritsImg: { type: 'string', id: 2 },
                       },
                     },
                   },
@@ -11017,35 +11017,35 @@ const biliJson = {
                 avatar: {
                   nested: {
                     common: {
-                      options: { java_package: "com.smile.bilibili.model" },
+                      options: { java_package: 'com.smile.bilibili.model' },
                       nested: {
                         SizeSpec: {
                           fields: {
-                            width: { type: "double", id: 1 },
-                            height: { type: "double", id: 2 },
+                            width: { type: 'double', id: 1 },
+                            height: { type: 'double', id: 2 },
                           },
                         },
                         MaskProperty: {
                           fields: {
-                            generalSpec: { type: "LayerGeneralSpec", id: 1 },
-                            maskSrc: { type: "ResourceSource", id: 2 },
+                            generalSpec: { type: 'LayerGeneralSpec', id: 1 },
+                            maskSrc: { type: 'ResourceSource', id: 2 },
                           },
                         },
                         LayerGeneralSpec: {
                           fields: {
-                            posSpec: { type: "PositionSpec", id: 1 },
-                            sizeSpec: { type: "SizeSpec", id: 2 },
-                            renderSpec: { type: "BasicRenderSpec", id: 3 },
+                            posSpec: { type: 'PositionSpec', id: 1 },
+                            sizeSpec: { type: 'SizeSpec', id: 2 },
+                            renderSpec: { type: 'BasicRenderSpec', id: 3 },
                           },
                         },
                         BasicRenderSpec: {
-                          fields: { opacity: { type: "double", id: 1 } },
+                          fields: { opacity: { type: 'double', id: 1 } },
                         },
                         PositionSpec: {
                           fields: {
-                            coordinatePos: { type: "CoordinatePos", id: 1 },
-                            axisX: { type: "double", id: 2 },
-                            axisY: { type: "double", id: 3 },
+                            coordinatePos: { type: 'CoordinatePos', id: 1 },
+                            axisX: { type: 'double', id: 2 },
+                            axisY: { type: 'double', id: 3 },
                           },
                         },
                         CoordinatePos: {
@@ -11057,14 +11057,14 @@ const biliJson = {
                         },
                         ResourceSource: {
                           oneofs: {
-                            res: { oneof: ["remoteRes", "local", "draw"] },
+                            res: { oneof: ['remoteRes', 'local', 'draw'] },
                           },
                           fields: {
-                            srcType: { type: "SourceType", id: 1 },
-                            placeholder: { type: "LocalRes", id: 2 },
-                            remoteRes: { type: "RemoteRes", id: 3 },
-                            local: { type: "LocalRes", id: 4 },
-                            draw: { type: "NativeDrawRes", id: 5 },
+                            srcType: { type: 'SourceType', id: 1 },
+                            placeholder: { type: 'LocalRes', id: 2 },
+                            remoteRes: { type: 'RemoteRes', id: 3 },
+                            local: { type: 'LocalRes', id: 4 },
+                            draw: { type: 'NativeDrawRes', id: 5 },
                           },
                         },
                         SourceType: {
@@ -11088,16 +11088,16 @@ const biliJson = {
                         },
                         RemoteRes: {
                           fields: {
-                            url: { type: "string", id: 1 },
-                            bfsStyle: { type: "string", id: 2 },
+                            url: { type: 'string', id: 1 },
+                            bfsStyle: { type: 'string', id: 2 },
                           },
                         },
                         NativeDrawRes: {
                           fields: {
-                            drawType: { type: "NativeDraw", id: 1 },
-                            fillMode: { type: "FillMode", id: 2 },
-                            colorConfig: { type: "ColorConfig", id: 3 },
-                            edgeWeight: { type: "double", id: 4 },
+                            drawType: { type: 'NativeDraw', id: 1 },
+                            fillMode: { type: 'FillMode', id: 2 },
+                            colorConfig: { type: 'ColorConfig', id: 3 },
+                            edgeWeight: { type: 'double', id: 4 },
                           },
                         },
                         NativeDraw: {
@@ -11116,63 +11116,63 @@ const biliJson = {
                         },
                         ColorConfig: {
                           fields: {
-                            isDarkModeAware: { type: "bool", id: 1 },
-                            day: { type: "ColorSpec", id: 2 },
-                            night: { type: "ColorSpec", id: 3 },
+                            isDarkModeAware: { type: 'bool', id: 1 },
+                            day: { type: 'ColorSpec', id: 2 },
+                            night: { type: 'ColorSpec', id: 3 },
                           },
                         },
                         ColorSpec: {
-                          fields: { argb: { type: "string", id: 1 } },
+                          fields: { argb: { type: 'string', id: 1 } },
                         },
                       },
                     },
                     v1: {
-                      options: { java_package: "com.smile.bilibili.model" },
+                      options: { java_package: 'com.smile.bilibili.model' },
                       nested: {
                         AvatarItem: {
                           fields: {
                             containerSize: {
-                              type: "bilibili.dagw.component.avatar.common.SizeSpec",
+                              type: 'bilibili.dagw.component.avatar.common.SizeSpec',
                               id: 1,
                             },
                             layers: {
-                              rule: "repeated",
-                              type: "LayerGroup",
+                              rule: 'repeated',
+                              type: 'LayerGroup',
                               id: 2,
                             },
-                            fallbackLayers: { type: "LayerGroup", id: 3 },
-                            mid: { type: "int64", id: 4 },
+                            fallbackLayers: { type: 'LayerGroup', id: 3 },
+                            mid: { type: 'int64', id: 4 },
                           },
                         },
                         LayerGroup: {
                           fields: {
-                            groupId: { type: "string", id: 1 },
-                            layers: { rule: "repeated", type: "Layer", id: 2 },
+                            groupId: { type: 'string', id: 1 },
+                            layers: { rule: 'repeated', type: 'Layer', id: 2 },
                             groupMask: {
-                              type: "bilibili.dagw.component.avatar.common.MaskProperty",
+                              type: 'bilibili.dagw.component.avatar.common.MaskProperty',
                               id: 3,
                             },
-                            isCriticalGroup: { type: "bool", id: 4 },
+                            isCriticalGroup: { type: 'bool', id: 4 },
                           },
                         },
                         Layer: {
                           fields: {
-                            layerId: { type: "string", id: 1 },
-                            visible: { type: "bool", id: 2 },
+                            layerId: { type: 'string', id: 1 },
+                            visible: { type: 'bool', id: 2 },
                             generalSpec: {
-                              type: "bilibili.dagw.component.avatar.common.LayerGeneralSpec",
+                              type: 'bilibili.dagw.component.avatar.common.LayerGeneralSpec',
                               id: 3,
                             },
-                            layerConfig: { type: "LayerConfig", id: 4 },
-                            resource: { type: "BasicLayerResource", id: 5 },
+                            layerConfig: { type: 'LayerConfig', id: 4 },
+                            resource: { type: 'BasicLayerResource', id: 5 },
                           },
                         },
                         LayerConfig: {
                           fields: {
-                            isCritical: { type: "bool", id: 2 },
-                            allowOverPaint: { type: "bool", id: 3 },
+                            isCritical: { type: 'bool', id: 2 },
+                            allowOverPaint: { type: 'bool', id: 3 },
                             layerMask: {
-                              type: "bilibili.dagw.component.avatar.common.MaskProperty",
+                              type: 'bilibili.dagw.component.avatar.common.MaskProperty',
                               id: 4,
                             },
                           },
@@ -11189,95 +11189,95 @@ const biliJson = {
                         GeneralConfig: {
                           fields: {
                             webCssStyle: {
-                              keyType: "string",
-                              type: "string",
+                              keyType: 'string',
+                              type: 'string',
                               id: 1,
                             },
                           },
                         },
                         GyroConfig: {
-                          fields: { gyroscope: { type: "NFTImageV2", id: 1 } },
+                          fields: { gyroscope: { type: 'NFTImageV2', id: 1 } },
                         },
                         NFTImageV2: {
                           fields: {
                             gyroscope: {
-                              rule: "repeated",
-                              type: "GyroscopeEntityV2",
+                              rule: 'repeated',
+                              type: 'GyroscopeEntityV2',
                               id: 1,
                             },
                           },
                         },
                         GyroscopeEntityV2: {
                           fields: {
-                            displayType: { type: "string", id: 1 },
+                            displayType: { type: 'string', id: 1 },
                             contents: {
-                              rule: "repeated",
-                              type: "GyroscopeContentV2",
+                              rule: 'repeated',
+                              type: 'GyroscopeContentV2',
                               id: 2,
                             },
                           },
                         },
                         GyroscopeContentV2: {
                           fields: {
-                            fileUrl: { type: "string", id: 1 },
-                            scale: { type: "float", id: 2 },
+                            fileUrl: { type: 'string', id: 1 },
+                            scale: { type: 'float', id: 2 },
                             physicalOrientation: {
-                              rule: "repeated",
-                              type: "PhysicalOrientationV2",
+                              rule: 'repeated',
+                              type: 'PhysicalOrientationV2',
                               id: 3,
                             },
                           },
                         },
                         PhysicalOrientationV2: {
                           fields: {
-                            type: { type: "string", id: 1 },
-                            angle: { rule: "repeated", type: "float", id: 2 },
+                            type: { type: 'string', id: 1 },
+                            angle: { rule: 'repeated', type: 'float', id: 2 },
                             animations: {
-                              rule: "repeated",
-                              type: "PhysicalOrientationAnimation",
+                              rule: 'repeated',
+                              type: 'PhysicalOrientationAnimation',
                               id: 3,
                             },
                           },
                         },
                         PhysicalOrientationAnimation: {
                           fields: {
-                            type: { type: "string", id: 1 },
-                            value: { rule: "repeated", type: "float", id: 2 },
-                            bezier: { type: "string", id: 3 },
+                            type: { type: 'string', id: 1 },
+                            value: { rule: 'repeated', type: 'float', id: 2 },
+                            bezier: { type: 'string', id: 3 },
                           },
                         },
                         CommentDoubleClickConfig: {
                           fields: {
-                            interaction: { type: "Interaction", id: 1 },
-                            animationScale: { type: "double", id: 2 },
+                            interaction: { type: 'Interaction', id: 1 },
+                            animationScale: { type: 'double', id: 2 },
                           },
                         },
                         Interaction: {
                           fields: {
-                            nftId: { type: "string", id: 1 },
-                            enabled: { type: "bool", id: 2 },
-                            itype: { type: "string", id: 3 },
-                            metadataUrl: { type: "string", id: 4 },
+                            nftId: { type: 'string', id: 1 },
+                            enabled: { type: 'bool', id: 2 },
+                            itype: { type: 'string', id: 3 },
+                            metadataUrl: { type: 'string', id: 4 },
                           },
                         },
                         LiveAnimeConfig: {
-                          fields: { isLive: { type: "bool", id: 1 } },
+                          fields: { isLive: { type: 'bool', id: 1 } },
                         },
                         BasicLayerResource: {
                           oneofs: {
                             payload: {
                               oneof: [
-                                "resImage",
-                                "resAnimation",
-                                "resNativeDraw",
+                                'resImage',
+                                'resAnimation',
+                                'resNativeDraw',
                               ],
                             },
                           },
                           fields: {
-                            resType: { type: "ResType", id: 1 },
-                            resImage: { type: "ResImage", id: 2 },
-                            resAnimation: { type: "ResAnimation", id: 3 },
-                            resNativeDraw: { type: "ResNativeDraw", id: 4 },
+                            resType: { type: 'ResType', id: 1 },
+                            resImage: { type: 'ResImage', id: 2 },
+                            resAnimation: { type: 'ResAnimation', id: 3 },
+                            resNativeDraw: { type: 'ResNativeDraw', id: 4 },
                           },
                         },
                         ResType: {
@@ -11293,7 +11293,7 @@ const biliJson = {
                         ResImage: {
                           fields: {
                             imageSrc: {
-                              type: "bilibili.dagw.component.avatar.common.ResourceSource",
+                              type: 'bilibili.dagw.component.avatar.common.ResourceSource',
                               id: 1,
                             },
                           },
@@ -11301,7 +11301,7 @@ const biliJson = {
                         ResAnimation: {
                           fields: {
                             webpSrc: {
-                              type: "bilibili.dagw.component.avatar.common.ResourceSource",
+                              type: 'bilibili.dagw.component.avatar.common.ResourceSource',
                               id: 1,
                             },
                           },
@@ -11309,7 +11309,7 @@ const biliJson = {
                         ResNativeDraw: {
                           fields: {
                             drawSrc: {
-                              type: "bilibili.dagw.component.avatar.common.ResourceSource",
+                              type: 'bilibili.dagw.component.avatar.common.ResourceSource',
                               id: 1,
                             },
                           },
@@ -11330,8 +11330,8 @@ const biliJson = {
           nested: {
             Any: {
               fields: {
-                type_url: { type: "string", id: 1 },
-                value: { type: "bytes", id: 2 },
+                type_url: { type: 'string', id: 1 },
+                value: { type: 'bytes', id: 2 },
               },
             },
           },
@@ -11344,35 +11344,35 @@ let isDebug = !1;
 const url = $request.url,
   method = $request.method;
 let headers = $response.headers;
-const isQuanX = "undefined" != typeof $task,
+const isQuanX = 'undefined' != typeof $task,
   binaryBody = isQuanX ? new Uint8Array($response.bodyBytes) : $response.body;
-let gzipStrName = "grpc-encoding";
-headers[gzipStrName] || (gzipStrName = "Grpc-Encoding");
-const isGzipCompress = "gzip" === headers[gzipStrName];
+let gzipStrName = 'grpc-encoding';
+headers[gzipStrName] || (gzipStrName = 'Grpc-Encoding');
+const isGzipCompress = 'gzip' === headers[gzipStrName];
 log(`isGzipCompress:${isGzipCompress}`);
 const unGzipBody = isGzipCompress
   ? pako.ungzip(binaryBody.slice(5))
   : binaryBody.slice(5);
-headers[gzipStrName] = "identity";
+headers[gzipStrName] = 'identity';
 let body;
 const biliRoot = protobuf.Root.fromJSON(biliJson);
 let needProcessFlag = !1;
 if (
-  ("POST" !== method &&
-    $notification.post(notifyTitle, "method mistake:", method),
-  url.includes("Dynamic/DynAll"))
+  ('POST' !== method &&
+    $notification.post(notifyTitle, 'method mistake:', method),
+  url.includes('Dynamic/DynAll'))
 ) {
-  log("Dynamic page Dynamic/DynAll");
-  let e = biliRoot.lookupType("bilibili.app.dynamic.DynAllReply"),
+  log('Dynamic page Dynamic/DynAll');
+  let e = biliRoot.lookupType('bilibili.app.dynamic.DynAllReply'),
     i = e.decode(unGzipBody);
   if (
     (i.topicList &&
-      ((needProcessFlag = !0), (i.topicList = null), log("Delete topicList")),
+      ((needProcessFlag = !0), (i.topicList = null), log('Delete topicList')),
     i.upList,
     i.dynamicList?.list?.length)
   ) {
     let o = 0,
-      l = RegExp("红包|拼多多|京东|天猫|淘宝|抽奖");
+      l = RegExp('红包|拼多多|京东|天猫|淘宝|抽奖');
     (i.dynamicList.list = i.dynamicList.list.filter(
       (e) =>
         !(
@@ -11383,31 +11383,31 @@ if (
     )),
       o &&
         ((needProcessFlag = !0),
-        log("Number of dynamic page advertisements：" + o));
+        log('Number of dynamic page advertisements：' + o));
   }
   needProcessFlag && (body = processNewBody(e.encode(i).finish()));
-} else if (url.includes("View/View")) {
-  log("Video playback page View/View");
-  let t = biliRoot.lookupType("bilibili.app.view.ViewReply"),
+} else if (url.includes('View/View')) {
+  log('Video playback page View/View');
+  let t = biliRoot.lookupType('bilibili.app.view.ViewReply'),
     n = t.decode(unGzipBody),
     s = [
-      "cmIpad",
-      "specialCellNew",
-      "specialCell",
-      "activityUrl",
-      "1reqUser",
-      "materialLeft",
-      "refreshSpecialCell",
+      'cmIpad',
+      'specialCellNew',
+      'specialCell',
+      'activityUrl',
+      '1reqUser',
+      'materialLeft',
+      'refreshSpecialCell',
     ];
   if (
     (s.forEach((e) => {
       n[e] &&
-        ((n[e] = null), (needProcessFlag = !0), log("Remove advertising"));
+        ((n[e] = null), (needProcessFlag = !0), log('Remove advertising'));
     }),
     n.cms?.length)
   ) {
     let a = 0,
-      d = biliRoot.lookupType("bilibili.ad.v1.SourceContentDto");
+      d = biliRoot.lookupType('bilibili.ad.v1.SourceContentDto');
     for (let r = 0; r < n.cms.length; r++) {
       let c = n.cms[r];
       if (c.sourceContent?.value) {
@@ -11421,13 +11421,13 @@ if (
   }
   if (n.relates?.length) {
     let p = 0;
-    (n.relates = n.relates.filter((e) => "cm" !== e.goto || (p++, !1))),
+    (n.relates = n.relates.filter((e) => 'cm' !== e.goto || (p++, !1))),
       log(`Related recommendation advertisement:${p}`),
       p && (needProcessFlag = !0);
   }
   let g = n.cmConfig?.adsControl?.value;
   if (g) {
-    let u = biliRoot.lookupType("bilibili.ad.v1.AdsControlDto"),
+    let u = biliRoot.lookupType('bilibili.ad.v1.AdsControlDto'),
       b = u.decode(g);
     (b?.hasDanmu === 1 || b?.cids?.length > 0) &&
       (log(`Up danmu advertisement. ${b?.hasDanmu}, ${b?.cids}`),
@@ -11439,9 +11439,9 @@ if (
     for (let f in m) null === m[f] && (log(`tIconMap:${f}`), delete m[f]);
     body = processNewBody(t.encode(n).finish());
   }
-} else if (url.includes("PlayURL/PlayView")) {
-  log("PlayURL/PlayView");
-  let h = biliRoot.lookupType("bilibili.app.playurl.PlayViewReply"),
+} else if (url.includes('PlayURL/PlayView')) {
+  log('PlayURL/PlayView');
+  let h = biliRoot.lookupType('bilibili.app.playurl.PlayViewReply'),
     P = h.decode(unGzipBody),
     w = P.playArc?.backgroundPlayConf;
   w &&
@@ -11451,7 +11451,7 @@ if (
     (P.playArc.backgroundPlayConf.extraContent = null),
     (needProcessFlag = !0),
     (body = processNewBody(h.encode(P).finish())));
-} else $notification.post("bilibili-proto", "path mistake:", url);
+} else $notification.post('bilibili-proto', 'path mistake:', url);
 function processNewBody(e) {
   let i = e.length,
     o = new Uint8Array(5 + i);
@@ -11475,4 +11475,4 @@ needProcessFlag
           headers,
         })
       : $done({ body, headers }))
-  : (log("no deal with"), $done({}));
+  : (log('no deal with'), $done({}));
