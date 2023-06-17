@@ -6,11 +6,11 @@
 // @TgChannel         https://t.me/ddgksf2021
 // @Contribute        https://t.me/ddgksf2013_bot
 // @Feedback          📮 ddgksf2013@163.com 📮
-// @UpdateTime        2023-05-19
+// @UpdateTime        2023-06-02
 // @Attention         微博、微博国际版净化，现已二合一，使用中若有问题请发邮件！
 // @Suitable          自行观看“# > ”注释内容
 // @Attention         如需引用请注明出处，谢谢合作！
-// @Version           V2.0.84
+// @Version           V2.0.85
 // @ScriptURL         https://github.com/ddgksf2013/Rewrite/raw/master/AdBlock/Weibo.conf
 // ==/UserScript==
 
@@ -20,7 +20,7 @@ hostname = api.weibo.*, *.api.weibo.*, mapi.weibo.*, *.uve.weibo.com, new.vip.we
 # > 微博_请手动添加以下分流至本地@ddgksf2013
 ; host, sdkapp.uve.weibo.com, direct
 
-;# > 微博_用户推荐弹窗@ddgksf2013
+# > 微博_用户推荐弹窗@ddgksf2013
 ;^https?:\/\/api\.weibo\.cn\/\d\/profile\/recommend_popuser url reject-dict
 # > 微博_开屏广告预加载处理@ddgksf2013
 ^https?:\/\/boot.*weibo\.com\/v\d\/ad\/preload url script-response-body https://cdn.jsdelivr.net/gh/sve1r/Rules-For-Quantumult-X@develop/Scripts/AdBlock/Weibo/weibo.min.js
