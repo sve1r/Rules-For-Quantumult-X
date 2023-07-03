@@ -131,14 +131,13 @@
 
 > 推荐使用的规则排序如下
 ```
-1. Unbreak.list - 用于修正 PROXY 和 REJECT 行为
-2. Advertising.list - 广告、行为分析、隐私追踪（macOS 不建议开启）
-3. Hijacking.list - 劫持（运营商、臭名昭著的诈骗网站或恶意应用）
-4. ForeignMedia.list - 国际流媒体
-5. DomesticMedia.list - 国内流媒体（可不加）
-6. Global.list - 国际网站/应用
-7. Apple.list - Apple 服务（可不加）
-9. China.list - 国内网站/应用
+1. Advertising.list - 广告、行为分析、隐私追踪（macOS 不建议开启）
+2. Hijacking.list - 劫持（运营商、臭名昭著的诈骗网站或恶意应用）
+3. ForeignMedia.list - 国际流媒体
+4. DomesticMedia.list - 国内流媒体（可不加）
+5. Global.list - 国际网站/应用
+6. Apple.list - Apple 服务（可不加）
+7. China.list - 国内网站/应用
 ```
 
 **说明**
@@ -190,7 +189,7 @@
 2. 安装并启用证书
 3. **到系统「设置 > 通用 > 关于本机」中底部的「证书信任设置」中信任所安装的证书！**
 
-#### 为什么某一些应用任然有广告
+#### 为什么某一些应用仍然有广告
 
 **1.缓存**
 

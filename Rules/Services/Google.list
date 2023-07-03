@@ -27,6 +27,7 @@ host-suffix,tensorflow.org,Google
 host-suffix,tfhub.dev,Google
 
 # > Google APIs
+host,translate.googleapis.com,Google
 host-suffix,googleapis.com,Google
 
 # > Google Blogger
@@ -80,6 +81,7 @@ host-suffix,getmdl.io,Google
 host-suffix,material.io,Google
 
 # > Other
+host-suffix,blog.google,DIRECT
 host-suffix,certificate-transparency.org,Google
 host-suffix,certificate-transparency.dev,Google
 host-suffix,creativelab5.com,Google
@@ -95,6 +97,7 @@ ip-cidr,173.194.0.0/16,Google
 ip-cidr,74.125.0.0/16,Google
 
 # > Google Domestic CDNs
+host,clientservices.googleapis.com,Google Domestic
 host,fonts.googleapis.com,Google Domestic
 host,fonts.gstatic.com,Google Domestic
 host,ocsp.pki.goog,Google Domestic
@@ -103,10 +106,10 @@ host,redirector.c.bigcache.googleapis.com,Google Domestic
 host,redirector.gvt1.com,Google Domestic
 host,safebrowsing.googleapis.com,Google Domestic
 host,safebrowsing-cache.google.com,Google Domestic
-host,translate.googleapis.com,Google Domestic
 host-suffix,dl.google.com,Google Domestic
 host-suffix,dl.l.google.com,Google Domestic
 host-suffix,google.cn,Google Domestic
+host-suffix,googletraveladservices.com,Google Domestic
 host-suffix,ssl.gstatic.com,Google Domestic
 host-suffix,tools.google.com,Google Domestic
 host-suffix,tools.l.google.com,Google Domestic
