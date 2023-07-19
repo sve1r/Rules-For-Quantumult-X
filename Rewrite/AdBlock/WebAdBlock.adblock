@@ -7,16 +7,19 @@
 // @Contribute        https://t.me/ddgksf2013_bot
 // @Feedback          📮 ddgksf2013@163.com 📮
 // @Attention         如需引用请注明出处，谢谢合作！
-// @UpdateTime        2023-04-24
+// @UpdateTime        2023-07-08
 // @Function          自用影视网站去广告配置（不定期更新）
 // @Suitable          自行观看"# > "注释内容
 // @Explain           推荐使用手机版Chrome或Alook浏览器(仅供墨鱼本人及小部分QX用户使用)
 // @ScriptURL         https://github.com/ddgksf2013/Rewrite/raw/master/Html/WebAdBlock.conf
 // ==/UserScript==
 
-hostname=*netflix*, *bdys*,*cupfox*,*cokemv*,*pornhub.com,*lezhutv*,*bimi*,18comic.org,*5y*,*gimytv*,*tkznp*,*czspp*,*ikandy*,*libvio*
+hostname=www.freeok.vip, *netflix*, *bdys*,*cupfox*,*cokemv*,*pornhub.com,*lezhutv*,*bimi*,18comic.org,*5y*,*gimy*,*tkznp*,*czzy*,*ikandy*,*libvio*
 
-# > 14 奈飞鸭[网页优化]@ddgksf2013 - 网站地址：https://yanetflix.com
+# > 15 FreeOk[网页优化]@ddgksf2013 - 网站地址：https://www.freeok.vip
+^https?:\/\/www\.freeok\.vip(\/$|\/[0-9a-zA-Z=_/-]+\.html$) url script-response-body https://cdn.jsdelivr.net/gh/ddgksf2013/Scripts@master/freeok.js
+
+# > 14 奈飞鸭[网页优化]@ddgksf2013 - 网站地址：https://yanetflix.com [未测试]
 ^https?:\/\/.*netflix.*\/($|[0-9a-zA-Z=_/-]+\.html$) url script-response-body https://cdn.jsdelivr.net/gh/ddgksf2013/Scripts@master/netflix.js
 
 # > 13 哔嘀影视[网页优化]@ddgksf2013 - 网站地址：https://www.bdys01.com 
@@ -44,17 +47,17 @@ hostname=*netflix*, *bdys*,*cupfox*,*cokemv*,*pornhub.com,*lezhutv*,*bimi*,18com
 # > 06 555影视[网页优化]@ddgksf2013 - 网站地址：https://555yy6.com
 ^https?:\/\/.*5y.*\/($|[0-9a-zA-Z=_/-]+\.html$) url script-response-body https://cdn.jsdelivr.net/gh/ddgksf2013/Scripts@master/555.js
 
-# > 05 剧迷[网页优化]@ddgksf2013 - 网站地址：https://gimytv.app
-^https?:\/\/.*gimytv.*\/($|[0-9a-zA-Z=_/-]+\.html$) url script-response-body https://cdn.jsdelivr.net/gh/ddgksf2013/Scripts@master/gimytv.js
+# > 05 剧迷[网页优化]@ddgksf2013 - 网站地址：https://gimys.app
+^https?:\/\/.*gimy.*\/($|[0-9a-zA-Z=_/-]+\.html$) url script-response-body https://cdn.jsdelivr.net/gh/ddgksf2013/Scripts@master/gimytv.js
 
-# > 04 天空影视[网页优化]@ddgksf2013 - 网站地址：https://tkznp.com/ ****
+# > 04 天空影视[网页优化]@ddgksf2013 - 网站地址：https://tkznp.com/ [未测试]
 ^https?:\/\/.*tkznp.*com\/($|[0-9a-zA-Z=_/-]+\.html$) url script-response-body https://cdn.jsdelivr.net/gh/ddgksf2013/Scripts@master/tkys.js
 
-# > 03 厂长电影[网页优化]@ddgksf2013 - 网站地址：https://www.czspp.com/
-^https?:/\/.*czspp.*com\/($|\?btwaf=\w+$|[0-9a-zA-Z=_/-]+\.html) url script-response-body https://cdn.jsdelivr.net/gh/ddgksf2013/Scripts@master/qianoo.js
+# > 03 厂长电影[网页优化]@ddgksf2013 - 网站地址：https://czzy.art/
+^https?:\/\/.*czzy.*\/($|\?btwaf=\w+$|[0-9a-zA-Z=_/-]+\.html) url script-response-body https://cdn.jsdelivr.net/gh/ddgksf2013/Scripts@master/qianoo.js
 
 # > 02 真不卡[网页优化]@ddgksf2013 - 网站地址：https://www.ikandy.fun
 ^https?:\/\/.*ikandy.*fun\/($|(vod|top).*$) url script-response-body https://cdn.jsdelivr.net/gh/ddgksf2013/Scripts@master/zhenbuka.js
 
-# > 01 libvio[网页优化]@ddgksf2013 - 网站地址：https://www.iioo.me
+# > 01 libvio[网页优化]@ddgksf2013 - 网站地址：https://www.libvio.me
 ^https?:\/\/.*libvio.*me\/($|[0-9a-zA-Z=_/-]+\.html$) url script-response-body https://cdn.jsdelivr.net/gh/ddgksf2013/Scripts@master/libvio.js
