@@ -1,4 +1,4 @@
-const version = 'V2.0.113';
+const version = 'V2.0.115';
 
 const mainConfig = {
     isDebug: !1,
@@ -334,11 +334,9 @@ function removeCards(e) {
   if ((e.hotwords && (e.hotwords = []), !e.cards)) return;
   let t = [];
   for (let o of e.cards) {
-    if (
-      e.cardlistInfo?.containerid == '232082type=1' &&
-      (17 == o.card_type || 58 == o.card_type || 11 == o.card_type)
-    )
-      continue;
+    e.cardlistInfo?.containerid == '232082type=1' &&
+      (17 == o.card_type || 58 == o.card_type || 11 == o.card_type) &&
+      (o = { card_type: o.card_type + 1 });
     let i = o.card_group;
     if (i && i.length > 0) {
       let a = [];
@@ -411,6 +409,7 @@ function itemExtendHandler(e) {
   }
   mainConfig.removeFollow && e.follow_data && (e.follow_data = null),
     mainConfig.removeRewardItem && e.reward_info && (e.reward_info = null),
+    e.head_cards && delete e.head_cards,
     e.page_alerts && (e.page_alerts = null);
   try {
     e.trend.extra_struct.extBtnInfo.btn_picurl.indexOf(
@@ -514,7 +513,9 @@ function removeComments(e) {
     let r = a.adType || '';
     -1 == t.indexOf(r) && 6 != a.type && i.push(a);
   }
-  log('remove 评论区相关和推荐内容'), (e.datas = i);
+  log('remove 评论区相关和推荐内容'),
+    (e.datas = i),
+    e.tip_msg && delete e.tip_msg;
 }
 function containerHandler(e) {
   mainConfig.removeInterestFriendInTopic &&
