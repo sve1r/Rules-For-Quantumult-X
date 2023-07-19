@@ -6,10 +6,10 @@
 // @TgChannel         https://t.me/ddgksf2021
 // @Contribute        https://t.me/ddgksf2013_bot
 // @Feedback          📮 ddgksf2013@163.com 📮
-// @UpdateTime        2023-03-16
+// @UpdateTime        2023-05-20
 // @Suitable          自行观看“# > ”注释内容
 // @Attention         如需引用请注明出处，谢谢合作！
-// @Version           V1.0.22
+// @Version           V1.0.26
 // @RewriteURL        https://github.com/ddgksf2013/Rewrite/raw/master/AdBlock/Netease.conf
 // ==/UserScript==
 
@@ -23,9 +23,12 @@
 
 hostname = interface*.music.163.com 
 
-
+# > 网易云_评论弹窗
+^https?:\/\/interface(\d)?\.music\.163\.com\/w?e?api\/music\/partner\/picked\/user\/top url reject-dict
+# > 网易云_位置请求
+^https?:\/\/interface(\d)?\.music\.163\.com\/w?e?api\/lbs\/gpsStatus\/upload url reject-dict
 # > 网易云_每日推荐Tips
-^https?:\/\/interface(\d)?\.music\.163\.com\/w?e?api/homepage/daily/song/elf/notice url reject-dict
+^https?:\/\/interface(\d)?\.music\.163\.com\/w?e?api\/homepage\/daily\/song\/elf\/notice url reject-dict
 # > 网易云_通用广告请求
 ^https?:\/\/interface(\d)?\.music\.163\.com\/w?e?api\/ad\/ url reject-dict
 # > 网易云_不知道是个啥
@@ -42,7 +45,7 @@ hostname = interface*.music.163.com
 ^https?:\/\/interface(\d)?\.music\.163\.com\/w?e?api\/link\/scene\/show\/resource url reject-dict
 # > 网易云_搜索框推荐
 ^https?:\/\/interface(\d)?\.music\.163\.com\/w?e?api\/search\/default url reject-dict
-# > 网易云_评论区下方广告
+# > 网易云_评论区下方广告[新版失效]
 ^https?:\/\/interface(\d)?\.music\.163\.com\/w?e?api\/comment\/feed\/inserted url reject-dict
 # > 网易云_评论回复区广告
 ^https?:\/\/interface(\d)?\.music\.163\.com\/w?e?api\/v1\/content\/exposure\/comment url reject-dict
@@ -52,9 +55,7 @@ hostname = interface*.music.163.com
 ^https?:\/\/interface(\d)?\.music\.163\.com\/w?e?api\/search\/default\/keyword url reject-dict
 # > 网易云_评论区右上角
 ^https?:\/\/interface(\d)?\.music\.163\.com\/w?e?api\/comment\/hotcomment\/collect url reject-dict
-# > 网易云_活动推广1
-; ^https?:\/\/interface(\d)?\.music\.163\.com\/w?e?api\/middle\/clientcfg\/config url reject-dict
-# > 网易云_活动推广2
+# > 网易云_活动推广
 ^https?:\/\/interface(\d)?\.music\.163\.com\/w?e?api\/resource-exposure\/activity\/config url reject-dict
 # > 网易云_VIP歌曲提醒框
 ^https?:\/\/interface(\d)?\.music\.163\.com\/w?e?api\/vipcenter/tspopup\/get url reject-dict
