@@ -1,6 +1,6 @@
 let protobuf;
 !(function (g) {
-  "use strict";
+  'use strict';
   !(function (r, e, t) {
     var i = (function t(i) {
       var n = e[i];
@@ -10,12 +10,12 @@ let protobuf;
       );
     })(t[0]);
     (protobuf = i.util.global.protobuf = i),
-      "function" == typeof define &&
+      'function' == typeof define &&
         define.amd &&
-        define(["long"], function (t) {
+        define(['long'], function (t) {
           return t && t.isLong && ((i.util.Long = t), i.configure()), i;
         }),
-      "object" == typeof module &&
+      'object' == typeof module &&
         module &&
         module.exports &&
         (module.exports = i);
@@ -58,7 +58,7 @@ let protobuf;
           n.length = function (t) {
             var i = t.length;
             if (!i) return 0;
-            for (var n = 0; 1 < --i % 4 && "=" == (t[0 | i] || ""); ) ++n;
+            for (var n = 0; 1 < --i % 4 && '=' == (t[0 | i] || ''); ) ++n;
             return Math.ceil(3 * t.length) / 4 - n;
           };
           for (var f = Array(64), h = Array(123), r = 0; r < 64; )
@@ -94,11 +94,11 @@ let protobuf;
               e
                 ? (u &&
                     e.push(String.fromCharCode.apply(String, s.slice(0, u))),
-                  e.join(""))
+                  e.join(''))
                 : String.fromCharCode.apply(String, s.slice(0, u))
             );
           };
-          var c = "invalid encoding";
+          var c = 'invalid encoding';
           (n.decode = function (t, i, n) {
             for (var r, e = n, s = 0, u = 0; u < t.length; ) {
               var o = t.charCodeAt(u++);
@@ -134,14 +134,14 @@ let protobuf;
       3: [
         function (t, i, n) {
           function a(i, n) {
-            "string" == typeof i && ((n = i), (i = g));
+            'string' == typeof i && ((n = i), (i = g));
             var h = [];
             function f(t) {
-              if ("string" != typeof t) {
+              if ('string' != typeof t) {
                 var i = c();
                 if (
-                  (a.verbose && console.log("codegen: " + i),
-                  (i = "return " + i),
+                  (a.verbose && console.log('codegen: ' + i),
+                  (i = 'return ' + i),
                   t)
                 ) {
                   for (
@@ -164,32 +164,32 @@ let protobuf;
                 (t = t.replace(/%([%dfijs])/g, function (t, i) {
                   var n = u[o++];
                   switch (i) {
-                    case "d":
-                    case "f":
-                      return "" + +("" + n);
-                    case "i":
-                      return "" + Math.floor(n);
-                    case "j":
+                    case 'd':
+                    case 'f':
+                      return '' + +('' + n);
+                    case 'i':
+                      return '' + Math.floor(n);
+                    case 'j':
                       return JSON.stringify(n);
-                    case "s":
-                      return "" + n;
+                    case 's':
+                      return '' + n;
                   }
-                  return "%";
+                  return '%';
                 })),
                 o !== u.length)
               )
-                throw Error("parameter count mismatch");
+                throw Error('parameter count mismatch');
               return h.push(t), f;
             }
             function c(t) {
               return (
-                "function " +
-                (t || n || "") +
-                "(" +
-                ((i && i.join(",")) || "") +
-                "){\n  " +
-                h.join("\n  ") +
-                "\n}"
+                'function ' +
+                (t || n || '') +
+                '(' +
+                ((i && i.join(',')) || '') +
+                '){\n  ' +
+                h.join('\n  ') +
+                '\n}'
               );
             }
             return (f.toString = c), f;
@@ -233,18 +233,18 @@ let protobuf;
         function (t, i, n) {
           i.exports = o;
           var s = t(1),
-            u = t(7)("fs");
+            u = t(7)('fs');
           function o(n, r, e) {
             return (
-              (r = "function" == typeof r ? ((e = r), {}) : r || {}),
+              (r = 'function' == typeof r ? ((e = r), {}) : r || {}),
               e
                 ? !r.xhr && u && u.readFile
                   ? u.readFile(n, function (t, i) {
-                      return t && "undefined" != typeof XMLHttpRequest
+                      return t && 'undefined' != typeof XMLHttpRequest
                         ? o.xhr(n, r, e)
                         : t
                         ? e(t)
-                        : e(null, r.binary ? i : i.toString("utf8"));
+                        : e(null, r.binary ? i : i.toString('utf8'));
                     })
                   : o.xhr(n, r, e)
                 : s(o, this, n, r)
@@ -255,23 +255,23 @@ let protobuf;
             (e.onreadystatechange = function () {
               if (4 !== e.readyState) return g;
               if (0 !== e.status && 200 !== e.status)
-                return r(Error("status " + e.status));
+                return r(Error('status ' + e.status));
               if (n.binary) {
                 if (!(t = e.response))
                   for (var t = [], i = 0; i < e.responseText.length; ++i)
                     t.push(255 & e.responseText.charCodeAt(i));
                 return r(
                   null,
-                  "undefined" != typeof Uint8Array ? new Uint8Array(t) : t
+                  'undefined' != typeof Uint8Array ? new Uint8Array(t) : t
                 );
               }
               return r(null, e.responseText);
             }),
               n.binary &&
-                ("overrideMimeType" in e &&
-                  e.overrideMimeType("text/plain; charset=x-user-defined"),
-                (e.responseType = "arraybuffer")),
-              e.open("GET", t),
+                ('overrideMimeType' in e &&
+                  e.overrideMimeType('text/plain; charset=x-user-defined'),
+                (e.responseType = 'arraybuffer')),
+              e.open('GET', t),
               e.send();
           };
         },
@@ -446,7 +446,7 @@ let protobuf;
               );
             }
             return (
-              "undefined" != typeof Float32Array
+              'undefined' != typeof Float32Array
                 ? ((o = new Float32Array([-0])),
                   (h = new Uint8Array(o.buffer)),
                   (a = 128 === h[3]),
@@ -458,7 +458,7 @@ let protobuf;
                   (t.writeFloatBE = i.bind(null, w)),
                   (t.readFloatLE = n.bind(null, g)),
                   (t.readFloatBE = n.bind(null, j))),
-              "undefined" != typeof Float64Array
+              'undefined' != typeof Float64Array
                 ? ((f = new Float64Array([-0])),
                   (c = new Uint8Array(f.buffer)),
                   (a = 128 === c[7]),
@@ -505,7 +505,7 @@ let protobuf;
         function (t, i, n) {
           function r(t) {
             try {
-              var i = eval("require")(t);
+              var i = eval('require')(t);
               if (i && (i.length || Object.keys(i).length)) return i;
             } catch (t) {}
             return null;
@@ -520,30 +520,30 @@ let protobuf;
               return /^(?:\/|\w+:)/.test(t);
             }),
             r = (n.normalize = function (t) {
-              var i = (t = t.replace(/\\/g, "/").replace(/\/{2,}/g, "/")).split(
-                  "/"
+              var i = (t = t.replace(/\\/g, '/').replace(/\/{2,}/g, '/')).split(
+                  '/'
                 ),
                 n = e(t),
-                t = "";
-              n && (t = i.shift() + "/");
+                t = '';
+              n && (t = i.shift() + '/');
               for (var r = 0; r < i.length; )
-                ".." === i[r]
-                  ? 0 < r && ".." !== i[r - 1]
+                '..' === i[r]
+                  ? 0 < r && '..' !== i[r - 1]
                     ? i.splice(--r, 2)
                     : n
                     ? i.splice(r, 1)
                     : ++r
-                  : "." === i[r]
+                  : '.' === i[r]
                   ? i.splice(r, 1)
                   : ++r;
-              return t + i.join("/");
+              return t + i.join('/');
             });
           n.resolve = function (t, i, n) {
             return (
               n || (i = r(i)),
               !e(i) &&
-              (t = (t = n ? t : r(t)).replace(/(?:\/|^)[^/]+$/, "")).length
-                ? r(t + "/" + i)
+              (t = (t = n ? t : r(t)).replace(/(?:\/|^)[^/]+$/, '')).length
+                ? r(t + '/' + i)
                 : i
             );
           };
@@ -581,7 +581,7 @@ let protobuf;
             return n;
           }),
             (n.read = function (t, i, n) {
-              if (n - i < 1) return "";
+              if (n - i < 1) return '';
               for (var r, e = null, s = [], u = 0; i < n; )
                 (r = t[i++]) < 128
                   ? (s[u++] = r)
@@ -604,7 +604,7 @@ let protobuf;
               return e
                 ? (u &&
                     e.push(String.fromCharCode.apply(String, s.slice(0, u))),
-                  e.join(""))
+                  e.join(''))
                 : String.fromCharCode.apply(String, s.slice(0, u));
             }),
             (n.write = function (t, i, n) {
@@ -637,7 +637,7 @@ let protobuf;
             var e = !1;
             if (i.resolvedType)
               if (i.resolvedType instanceof l) {
-                t("switch(d%s){", r);
+                t('switch(d%s){', r);
                 for (
                   var s = i.resolvedType.values, u = Object.keys(s), o = 0;
                   o < u.length;
@@ -645,81 +645,81 @@ let protobuf;
                 )
                   s[u[o]] !== i.typeDefault ||
                     e ||
-                    (t("default:")(
+                    (t('default:')(
                       'if(typeof(d%s)==="number"){m%s=d%s;break}',
                       r,
                       r,
                       r
                     ),
-                    i.repeated || t("break"),
+                    i.repeated || t('break'),
                     (e = !0)),
-                    t("case%j:", u[o])("case %i:", s[u[o]])(
-                      "m%s=%j",
+                    t('case%j:', u[o])('case %i:', s[u[o]])(
+                      'm%s=%j',
                       r,
                       s[u[o]]
-                    )("break");
-                t("}");
+                    )('break');
+                t('}');
               } else
                 t('if(typeof d%s!=="object")', r)(
-                  "throw TypeError(%j)",
-                  i.fullName + ": object expected"
-                )("m%s=types[%i].fromObject(d%s)", r, n, r);
+                  'throw TypeError(%j)',
+                  i.fullName + ': object expected'
+                )('m%s=types[%i].fromObject(d%s)', r, n, r);
             else {
               var h = !1;
               switch (i.type) {
-                case "double":
-                case "float":
-                  t("m%s=Number(d%s)", r, r);
+                case 'double':
+                case 'float':
+                  t('m%s=Number(d%s)', r, r);
                   break;
-                case "uint32":
-                case "fixed32":
-                  t("m%s=d%s>>>0", r, r);
+                case 'uint32':
+                case 'fixed32':
+                  t('m%s=d%s>>>0', r, r);
                   break;
-                case "int32":
-                case "sint32":
-                case "sfixed32":
-                  t("m%s=d%s|0", r, r);
+                case 'int32':
+                case 'sint32':
+                case 'sfixed32':
+                  t('m%s=d%s|0', r, r);
                   break;
-                case "uint64":
+                case 'uint64':
                   h = !0;
-                case "int64":
-                case "sint64":
-                case "fixed64":
-                case "sfixed64":
-                  t("if(util.Long)")(
-                    "(m%s=util.Long.fromValue(d%s)).unsigned=%j",
+                case 'int64':
+                case 'sint64':
+                case 'fixed64':
+                case 'sfixed64':
+                  t('if(util.Long)')(
+                    '(m%s=util.Long.fromValue(d%s)).unsigned=%j',
                     r,
                     r,
                     h
                   )('else if(typeof d%s==="string")', r)(
-                    "m%s=parseInt(d%s,10)",
+                    'm%s=parseInt(d%s,10)',
                     r,
                     r
                   )('else if(typeof d%s==="number")', r)(
-                    "m%s=d%s",
+                    'm%s=d%s',
                     r,
                     r
                   )('else if(typeof d%s==="object")', r)(
-                    "m%s=new util.LongBits(d%s.low>>>0,d%s.high>>>0).toNumber(%s)",
+                    'm%s=new util.LongBits(d%s.low>>>0,d%s.high>>>0).toNumber(%s)',
                     r,
                     r,
                     r,
-                    h ? "true" : ""
+                    h ? 'true' : ''
                   );
                   break;
-                case "bytes":
+                case 'bytes':
                   t('if(typeof d%s==="string")', r)(
-                    "util.base64.decode(d%s,m%s=util.newBuffer(util.base64.length(d%s)),0)",
+                    'util.base64.decode(d%s,m%s=util.newBuffer(util.base64.length(d%s)),0)',
                     r,
                     r,
                     r
-                  )("else if(d%s.length >= 0)", r)("m%s=d%s", r, r);
+                  )('else if(d%s.length >= 0)', r)('m%s=d%s', r, r);
                   break;
-                case "string":
-                  t("m%s=String(d%s)", r, r);
+                case 'string':
+                  t('m%s=String(d%s)', r, r);
                   break;
-                case "bool":
-                  t("m%s=Boolean(d%s)", r, r);
+                case 'bool':
+                  t('m%s=Boolean(d%s)', r, r);
               }
             }
             return t;
@@ -728,7 +728,7 @@ let protobuf;
             if (i.resolvedType)
               i.resolvedType instanceof l
                 ? t(
-                    "d%s=o.enums===String?(types[%i].values[m%s]===undefined?m%s:types[%i].values[m%s]):m%s",
+                    'd%s=o.enums===String?(types[%i].values[m%s]===undefined?m%s:types[%i].values[m%s]):m%s',
                     r,
                     n,
                     r,
@@ -737,38 +737,38 @@ let protobuf;
                     r,
                     r
                   )
-                : t("d%s=types[%i].toObject(m%s,o)", r, n, r);
+                : t('d%s=types[%i].toObject(m%s,o)', r, n, r);
             else {
               var e = !1;
               switch (i.type) {
-                case "double":
-                case "float":
-                  t("d%s=o.json&&!isFinite(m%s)?String(m%s):m%s", r, r, r, r);
+                case 'double':
+                case 'float':
+                  t('d%s=o.json&&!isFinite(m%s)?String(m%s):m%s', r, r, r, r);
                   break;
-                case "uint64":
+                case 'uint64':
                   e = !0;
-                case "int64":
-                case "sint64":
-                case "fixed64":
-                case "sfixed64":
+                case 'int64':
+                case 'sint64':
+                case 'fixed64':
+                case 'sfixed64':
                   t('if(typeof m%s==="number")', r)(
-                    "d%s=o.longs===String?String(m%s):m%s",
+                    'd%s=o.longs===String?String(m%s):m%s',
                     r,
                     r,
                     r
-                  )("else")(
-                    "d%s=o.longs===String?util.Long.prototype.toString.call(m%s):o.longs===Number?new util.LongBits(m%s.low>>>0,m%s.high>>>0).toNumber(%s):m%s",
+                  )('else')(
+                    'd%s=o.longs===String?util.Long.prototype.toString.call(m%s):o.longs===Number?new util.LongBits(m%s.low>>>0,m%s.high>>>0).toNumber(%s):m%s',
                     r,
                     r,
                     r,
                     r,
-                    e ? "true" : "",
+                    e ? 'true' : '',
                     r
                   );
                   break;
-                case "bytes":
+                case 'bytes':
                   t(
-                    "d%s=o.bytes===String?util.base64.encode(m%s,0,m%s.length):o.bytes===Array?Array.prototype.slice.call(m%s):m%s",
+                    'd%s=o.bytes===String?util.base64.encode(m%s,0,m%s.length):o.bytes===Array?Array.prototype.slice.call(m%s):m%s',
                     r,
                     r,
                     r,
@@ -777,7 +777,7 @@ let protobuf;
                   );
                   break;
                 default:
-                  t("d%s=m%s", r, r);
+                  t('d%s=m%s', r, r);
               }
             }
             return t;
@@ -785,42 +785,42 @@ let protobuf;
           (n.fromObject = function (t) {
             var i = t.fieldsArray,
               n = d.codegen(
-                ["d"],
-                t.name + "$fromObject"
-              )("if(d instanceof this.ctor)")("return d");
-            if (!i.length) return n("return new this.ctor");
-            n("var m=new this.ctor");
+                ['d'],
+                t.name + '$fromObject'
+              )('if(d instanceof this.ctor)')('return d');
+            if (!i.length) return n('return new this.ctor');
+            n('var m=new this.ctor');
             for (var r = 0; r < i.length; ++r) {
               var e = i[r].resolve(),
                 s = d.safeProp(e.name);
               e.map
-                ? (n("if(d%s){", s)('if(typeof d%s!=="object")', s)(
-                    "throw TypeError(%j)",
-                    e.fullName + ": object expected"
-                  )("m%s={}", s)(
-                    "for(var ks=Object.keys(d%s),i=0;i<ks.length;++i){",
+                ? (n('if(d%s){', s)('if(typeof d%s!=="object")', s)(
+                    'throw TypeError(%j)',
+                    e.fullName + ': object expected'
+                  )('m%s={}', s)(
+                    'for(var ks=Object.keys(d%s),i=0;i<ks.length;++i){',
                     s
                   ),
-                  u(n, e, r, s + "[ks[i]]")("}")("}"))
+                  u(n, e, r, s + '[ks[i]]')('}')('}'))
                 : e.repeated
-                ? (n("if(d%s){", s)("if(!Array.isArray(d%s))", s)(
-                    "throw TypeError(%j)",
-                    e.fullName + ": array expected"
-                  )("m%s=[]", s)("for(var i=0;i<d%s.length;++i){", s),
-                  u(n, e, r, s + "[i]")("}")("}"))
-                : (e.resolvedType instanceof l || n("if(d%s!=null){", s),
+                ? (n('if(d%s){', s)('if(!Array.isArray(d%s))', s)(
+                    'throw TypeError(%j)',
+                    e.fullName + ': array expected'
+                  )('m%s=[]', s)('for(var i=0;i<d%s.length;++i){', s),
+                  u(n, e, r, s + '[i]')('}')('}'))
+                : (e.resolvedType instanceof l || n('if(d%s!=null){', s),
                   u(n, e, r, s),
-                  e.resolvedType instanceof l || n("}"));
+                  e.resolvedType instanceof l || n('}'));
             }
-            return n("return m");
+            return n('return m');
           }),
             (n.toObject = function (t) {
               var i = t.fieldsArray.slice().sort(d.compareFieldsById);
-              if (!i.length) return d.codegen()("return {}");
+              if (!i.length) return d.codegen()('return {}');
               for (
-                var n = d.codegen(["m", "o"], t.name + "$toObject")("if(!o)")(
-                    "o={}"
-                  )("var d={}"),
+                var n = d.codegen(['m', 'o'], t.name + '$toObject')('if(!o)')(
+                    'o={}'
+                  )('var d={}'),
                   r = [],
                   e = [],
                   s = [],
@@ -831,92 +831,92 @@ let protobuf;
                 i[u].partOf ||
                   (i[u].resolve().repeated ? r : i[u].map ? e : s).push(i[u]);
               if (r.length) {
-                for (n("if(o.arrays||o.defaults){"), u = 0; u < r.length; ++u)
-                  n("d%s=[]", d.safeProp(r[u].name));
-                n("}");
+                for (n('if(o.arrays||o.defaults){'), u = 0; u < r.length; ++u)
+                  n('d%s=[]', d.safeProp(r[u].name));
+                n('}');
               }
               if (e.length) {
-                for (n("if(o.objects||o.defaults){"), u = 0; u < e.length; ++u)
-                  n("d%s={}", d.safeProp(e[u].name));
-                n("}");
+                for (n('if(o.objects||o.defaults){'), u = 0; u < e.length; ++u)
+                  n('d%s={}', d.safeProp(e[u].name));
+                n('}');
               }
               if (s.length) {
-                for (n("if(o.defaults){"), u = 0; u < s.length; ++u) {
+                for (n('if(o.defaults){'), u = 0; u < s.length; ++u) {
                   var o,
                     h = s[u],
                     f = d.safeProp(h.name);
                   h.resolvedType instanceof l
                     ? n(
-                        "d%s=o.enums===String?%j:%j",
+                        'd%s=o.enums===String?%j:%j',
                         f,
                         h.resolvedType.valuesById[h.typeDefault],
                         h.typeDefault
                       )
                     : h.long
-                    ? n("if(util.Long){")(
-                        "var n=new util.Long(%i,%i,%j)",
+                    ? n('if(util.Long){')(
+                        'var n=new util.Long(%i,%i,%j)',
                         h.typeDefault.low,
                         h.typeDefault.high,
                         h.typeDefault.unsigned
                       )(
-                        "d%s=o.longs===String?n.toString():o.longs===Number?n.toNumber():n",
+                        'd%s=o.longs===String?n.toString():o.longs===Number?n.toNumber():n',
                         f
-                      )("}else")(
-                        "d%s=o.longs===String?%j:%i",
+                      )('}else')(
+                        'd%s=o.longs===String?%j:%i',
                         f,
                         h.typeDefault.toString(),
                         h.typeDefault.toNumber()
                       )
                     : h.bytes
                     ? ((o =
-                        "[" +
-                        Array.prototype.slice.call(h.typeDefault).join(",") +
-                        "]"),
+                        '[' +
+                        Array.prototype.slice.call(h.typeDefault).join(',') +
+                        ']'),
                       n(
-                        "if(o.bytes===String)d%s=%j",
+                        'if(o.bytes===String)d%s=%j',
                         f,
                         String.fromCharCode.apply(String, h.typeDefault)
-                      )("else{")("d%s=%s", f, o)(
-                        "if(o.bytes!==Array)d%s=util.newBuffer(d%s)",
+                      )('else{')('d%s=%s', f, o)(
+                        'if(o.bytes!==Array)d%s=util.newBuffer(d%s)',
                         f,
                         f
-                      )("}"))
-                    : n("d%s=%j", f, h.typeDefault);
+                      )('}'))
+                    : n('d%s=%j', f, h.typeDefault);
                 }
-                n("}");
+                n('}');
               }
               for (var c = !1, u = 0; u < i.length; ++u) {
                 var h = i[u],
                   a = t.i.indexOf(h),
                   f = d.safeProp(h.name);
                 h.map
-                  ? (c || ((c = !0), n("var ks2")),
+                  ? (c || ((c = !0), n('var ks2')),
                     n(
-                      "if(m%s&&(ks2=Object.keys(m%s)).length){",
+                      'if(m%s&&(ks2=Object.keys(m%s)).length){',
                       f,
                       f
                     )(
-                      "d%s={}",
+                      'd%s={}',
                       f
-                    )("for(var j=0;j<ks2.length;++j){"),
-                    v(n, h, a, f + "[ks2[j]]")("}"))
+                    )('for(var j=0;j<ks2.length;++j){'),
+                    v(n, h, a, f + '[ks2[j]]')('}'))
                   : h.repeated
-                  ? (n("if(m%s&&m%s.length){", f, f)("d%s=[]", f)(
-                      "for(var j=0;j<m%s.length;++j){",
+                  ? (n('if(m%s&&m%s.length){', f, f)('d%s=[]', f)(
+                      'for(var j=0;j<m%s.length;++j){',
                       f
                     ),
-                    v(n, h, a, f + "[j]")("}"))
-                  : (n("if(m%s!=null&&m.hasOwnProperty(%j)){", f, h.name),
+                    v(n, h, a, f + '[j]')('}'))
+                  : (n('if(m%s!=null&&m.hasOwnProperty(%j)){', f, h.name),
                     v(n, h, a, f),
                     h.partOf &&
-                      n("if(o.oneofs)")(
-                        "d%s=%j",
+                      n('if(o.oneofs)')(
+                        'd%s=%j',
                         d.safeProp(h.partOf.name),
                         h.name
                       )),
-                  n("}");
+                  n('}');
               }
-              return n("return d");
+              return n('return d');
             });
         },
         { 14: 14, 33: 33 },
@@ -925,94 +925,94 @@ let protobuf;
         function (t, i, n) {
           i.exports = function (t) {
             var i = f.codegen(
-              ["r", "l"],
-              t.name + "$decode"
-            )("if(!(r instanceof Reader))")("r=Reader.create(r)")(
-              "var c=l===undefined?r.len:r.pos+l,m=new this.ctor" +
+              ['r', 'l'],
+              t.name + '$decode'
+            )('if(!(r instanceof Reader))')('r=Reader.create(r)')(
+              'var c=l===undefined?r.len:r.pos+l,m=new this.ctor' +
                 (t.fieldsArray.filter(function (t) {
                   return t.map;
                 }).length
-                  ? ",k,value"
-                  : "")
-            )("while(r.pos<c){")("var t=r.uint32()");
-            t.group && i("if((t&7)===4)")("break");
-            i("switch(t>>>3){");
+                  ? ',k,value'
+                  : '')
+            )('while(r.pos<c){')('var t=r.uint32()');
+            t.group && i('if((t&7)===4)')('break');
+            i('switch(t>>>3){');
             for (var n = 0; n < t.fieldsArray.length; ++n) {
               var r = t.i[n].resolve(),
-                e = r.resolvedType instanceof o ? "int32" : r.type,
-                s = "m" + f.safeProp(r.name);
-              i("case %i: {", r.id),
+                e = r.resolvedType instanceof o ? 'int32' : r.type,
+                s = 'm' + f.safeProp(r.name);
+              i('case %i: {', r.id),
                 r.map
-                  ? (i("if(%s===util.emptyObject)", s)("%s={}", s)(
-                      "var c2 = r.uint32()+r.pos"
+                  ? (i('if(%s===util.emptyObject)', s)('%s={}', s)(
+                      'var c2 = r.uint32()+r.pos'
                     ),
                     h.defaults[r.keyType] !== g
-                      ? i("k=%j", h.defaults[r.keyType])
-                      : i("k=null"),
+                      ? i('k=%j', h.defaults[r.keyType])
+                      : i('k=null'),
                     h.defaults[e] !== g
-                      ? i("value=%j", h.defaults[e])
-                      : i("value=null"),
-                    i("while(r.pos<c2){")("var tag2=r.uint32()")(
-                      "switch(tag2>>>3){"
+                      ? i('value=%j', h.defaults[e])
+                      : i('value=null'),
+                    i('while(r.pos<c2){')('var tag2=r.uint32()')(
+                      'switch(tag2>>>3){'
                     )(
-                      "case 1: k=r.%s(); break",
+                      'case 1: k=r.%s(); break',
                       r.keyType
-                    )("case 2:"),
+                    )('case 2:'),
                     h.basic[e] === g
-                      ? i("value=types[%i].decode(r,r.uint32())", n)
-                      : i("value=r.%s()", e),
-                    i("break")("default:")("r.skipType(tag2&7)")("break")("}")(
-                      "}"
+                      ? i('value=types[%i].decode(r,r.uint32())', n)
+                      : i('value=r.%s()', e),
+                    i('break')('default:')('r.skipType(tag2&7)')('break')('}')(
+                      '}'
                     ),
                     h.long[r.keyType] !== g
                       ? i(
                           '%s[typeof k==="object"?util.longToHash(k):k]=value',
                           s
                         )
-                      : i("%s[k]=value", s))
+                      : i('%s[k]=value', s))
                   : r.repeated
-                  ? (i("if(!(%s&&%s.length))", s, s)("%s=[]", s),
+                  ? (i('if(!(%s&&%s.length))', s, s)('%s=[]', s),
                     h.packed[e] !== g &&
-                      i("if((t&7)===2){")("var c2=r.uint32()+r.pos")(
-                        "while(r.pos<c2)"
+                      i('if((t&7)===2){')('var c2=r.uint32()+r.pos')(
+                        'while(r.pos<c2)'
                       )(
-                        "%s.push(r.%s())",
+                        '%s.push(r.%s())',
                         s,
                         e
-                      )("}else"),
+                      )('}else'),
                     h.basic[e] === g
                       ? i(
                           r.resolvedType.group
-                            ? "%s.push(types[%i].decode(r))"
-                            : "%s.push(types[%i].decode(r,r.uint32()))",
+                            ? '%s.push(types[%i].decode(r))'
+                            : '%s.push(types[%i].decode(r,r.uint32()))',
                           s,
                           n
                         )
-                      : i("%s.push(r.%s())", s, e))
+                      : i('%s.push(r.%s())', s, e))
                   : h.basic[e] === g
                   ? i(
                       r.resolvedType.group
-                        ? "%s=types[%i].decode(r)"
-                        : "%s=types[%i].decode(r,r.uint32())",
+                        ? '%s=types[%i].decode(r)'
+                        : '%s=types[%i].decode(r,r.uint32())',
                       s,
                       n
                     )
-                  : i("%s=r.%s()", s, e),
-                i("break")("}");
+                  : i('%s=r.%s()', s, e),
+                i('break')('}');
             }
             for (
-              i("default:")("r.skipType(t&7)")("break")("}")("}"), n = 0;
+              i('default:')('r.skipType(t&7)')('break')('}')('}'), n = 0;
               n < t.i.length;
               ++n
             ) {
               var u = t.i[n];
               u.required &&
-                i("if(!m.hasOwnProperty(%j))", u.name)(
-                  "throw util.ProtocolError(%j,{instance:m})",
+                i('if(!m.hasOwnProperty(%j))', u.name)(
+                  'throw util.ProtocolError(%j,{instance:m})',
                   "missing required '" + u.name + "'"
                 );
             }
-            return i("return m");
+            return i('return m');
           };
           var o = t(14),
             h = t(32),
@@ -1025,8 +1025,8 @@ let protobuf;
           i.exports = function (t) {
             for (
               var i,
-                n = a.codegen(["m", "w"], t.name + "$encode")("if(!w)")(
-                  "w=Writer.create()"
+                n = a.codegen(['m', 'w'], t.name + '$encode')('if(!w)')(
+                  'w=Writer.create()'
                 ),
                 r = t.fieldsArray.slice().sort(a.compareFieldsById),
                 e = 0;
@@ -1035,65 +1035,65 @@ let protobuf;
             ) {
               var s = r[e].resolve(),
                 u = t.i.indexOf(s),
-                o = s.resolvedType instanceof f ? "int32" : s.type,
+                o = s.resolvedType instanceof f ? 'int32' : s.type,
                 h = c.basic[o];
-              (i = "m" + a.safeProp(s.name)),
+              (i = 'm' + a.safeProp(s.name)),
                 s.map
                   ? (n(
-                      "if(%s!=null&&Object.hasOwnProperty.call(m,%j)){",
+                      'if(%s!=null&&Object.hasOwnProperty.call(m,%j)){',
                       i,
                       s.name
-                    )("for(var ks=Object.keys(%s),i=0;i<ks.length;++i){", i)(
-                      "w.uint32(%i).fork().uint32(%i).%s(ks[i])",
+                    )('for(var ks=Object.keys(%s),i=0;i<ks.length;++i){', i)(
+                      'w.uint32(%i).fork().uint32(%i).%s(ks[i])',
                       ((s.id << 3) | 2) >>> 0,
                       8 | c.mapKey[s.keyType],
                       s.keyType
                     ),
                     h === g
                       ? n(
-                          "types[%i].encode(%s[ks[i]],w.uint32(18).fork()).ldelim().ldelim()",
+                          'types[%i].encode(%s[ks[i]],w.uint32(18).fork()).ldelim().ldelim()',
                           u,
                           i
                         )
-                      : n(".uint32(%i).%s(%s[ks[i]]).ldelim()", 16 | h, o, i),
-                    n("}")("}"))
+                      : n('.uint32(%i).%s(%s[ks[i]]).ldelim()', 16 | h, o, i),
+                    n('}')('}'))
                   : s.repeated
-                  ? (n("if(%s!=null&&%s.length){", i, i),
+                  ? (n('if(%s!=null&&%s.length){', i, i),
                     s.packed && c.packed[o] !== g
-                      ? n("w.uint32(%i).fork()", ((s.id << 3) | 2) >>> 0)(
-                          "for(var i=0;i<%s.length;++i)",
+                      ? n('w.uint32(%i).fork()', ((s.id << 3) | 2) >>> 0)(
+                          'for(var i=0;i<%s.length;++i)',
                           i
                         )(
-                          "w.%s(%s[i])",
+                          'w.%s(%s[i])',
                           o,
                           i
-                        )("w.ldelim()")
-                      : (n("for(var i=0;i<%s.length;++i)", i),
+                        )('w.ldelim()')
+                      : (n('for(var i=0;i<%s.length;++i)', i),
                         h === g
-                          ? l(n, s, u, i + "[i]")
+                          ? l(n, s, u, i + '[i]')
                           : n(
-                              "w.uint32(%i).%s(%s[i])",
+                              'w.uint32(%i).%s(%s[i])',
                               ((s.id << 3) | h) >>> 0,
                               o,
                               i
                             )),
-                    n("}"))
+                    n('}'))
                   : (s.optional &&
                       n(
-                        "if(%s!=null&&Object.hasOwnProperty.call(m,%j))",
+                        'if(%s!=null&&Object.hasOwnProperty.call(m,%j))',
                         i,
                         s.name
                       ),
                     h === g
                       ? l(n, s, u, i)
                       : n(
-                          "w.uint32(%i).%s(%s)",
+                          'w.uint32(%i).%s(%s)',
                           ((s.id << 3) | h) >>> 0,
                           o,
                           i
                         ));
             }
-            return n("return w");
+            return n('return w');
           };
           var f = t(14),
             c = t(32),
@@ -1101,14 +1101,14 @@ let protobuf;
           function l(t, i, n, r) {
             i.resolvedType.group
               ? t(
-                  "types[%i].encode(%s,w.uint32(%i)).uint32(%i)",
+                  'types[%i].encode(%s,w.uint32(%i)).uint32(%i)',
                   n,
                   r,
                   ((i.id << 3) | 3) >>> 0,
                   ((i.id << 3) | 4) >>> 0
                 )
               : t(
-                  "types[%i].encode(%s,w.uint32(%i).fork()).ldelim()",
+                  'types[%i].encode(%s,w.uint32(%i).fork()).ldelim()',
                   n,
                   r,
                   ((i.id << 3) | 2) >>> 0
@@ -1123,12 +1123,12 @@ let protobuf;
           var h = t(22),
             r =
               ((((s.prototype = Object.create(h.prototype)).constructor =
-                s).className = "Enum"),
+                s).className = 'Enum'),
               t(21)),
             e = t(33);
           function s(t, i, n, r, e, s) {
-            if ((h.call(this, t, n), i && "object" != typeof i))
-              throw TypeError("values must be an object");
+            if ((h.call(this, t, n), i && 'object' != typeof i))
+              throw TypeError('values must be an object');
             if (
               ((this.valuesById = {}),
               (this.values = Object.create(this.valuesById)),
@@ -1139,7 +1139,7 @@ let protobuf;
               i)
             )
               for (var u = Object.keys(i), o = 0; o < u.length; ++o)
-                "number" == typeof i[u[o]] &&
+                'number' == typeof i[u[o]] &&
                   (this.valuesById[(this.values[u[o]] = i[u[o]])] = u[o]);
           }
           (s.fromJSON = function (t, i) {
@@ -1149,32 +1149,32 @@ let protobuf;
             (s.prototype.toJSON = function (t) {
               t = !!t && !!t.keepComments;
               return e.toObject([
-                "options",
+                'options',
                 this.options,
-                "valuesOptions",
+                'valuesOptions',
                 this.valuesOptions,
-                "values",
+                'values',
                 this.values,
-                "reserved",
+                'reserved',
                 this.reserved && this.reserved.length ? this.reserved : g,
-                "comment",
+                'comment',
                 t ? this.comment : g,
-                "comments",
+                'comments',
                 t ? this.comments : g,
               ]);
             }),
             (s.prototype.add = function (t, i, n, r) {
-              if (!e.isString(t)) throw TypeError("name must be a string");
-              if (!e.isInteger(i)) throw TypeError("id must be an integer");
+              if (!e.isString(t)) throw TypeError('name must be a string');
+              if (!e.isInteger(i)) throw TypeError('id must be an integer');
               if (this.values[t] !== g)
                 throw Error("duplicate name '" + t + "' in " + this);
               if (this.isReservedId(i))
-                throw Error("id " + i + " is reserved in " + this);
+                throw Error('id ' + i + ' is reserved in ' + this);
               if (this.isReservedName(t))
                 throw Error("name '" + t + "' is reserved in " + this);
               if (this.valuesById[i] !== g) {
                 if (!this.options || !this.options.allow_alias)
-                  throw Error("duplicate id " + i + " in " + this);
+                  throw Error('duplicate id ' + i + ' in ' + this);
                 this.values[t] = i;
               } else this.valuesById[(this.values[t] = i)] = t;
               return (
@@ -1186,7 +1186,7 @@ let protobuf;
               );
             }),
             (s.prototype.remove = function (t) {
-              if (!e.isString(t)) throw TypeError("name must be a string");
+              if (!e.isString(t)) throw TypeError('name must be a string');
               var i = this.values[t];
               if (null == i)
                 throw Error("name '" + t + "' does not exist in " + this);
@@ -1214,7 +1214,7 @@ let protobuf;
             o = t(22),
             e =
               ((((u.prototype = Object.create(o.prototype)).constructor =
-                u).className = "Field"),
+                u).className = 'Field'),
               t(14)),
             h = t(32),
             f = t(33),
@@ -1227,29 +1227,29 @@ let protobuf;
               o.call(this, t, s),
               !f.isInteger(i) || i < 0)
             )
-              throw TypeError("id must be a non-negative integer");
-            if (!f.isString(n)) throw TypeError("type must be a string");
+              throw TypeError('id must be a non-negative integer');
+            if (!f.isString(n)) throw TypeError('type must be a string');
             if (r !== g && !c.test((r = r.toString().toLowerCase())))
-              throw TypeError("rule must be a string rule");
+              throw TypeError('rule must be a string rule');
             if (e !== g && !f.isString(e))
-              throw TypeError("extend must be a string");
+              throw TypeError('extend must be a string');
             (this.rule =
-              (r = "proto3_optional" === r ? "optional" : r) && "optional" !== r
+              (r = 'proto3_optional' === r ? 'optional' : r) && 'optional' !== r
                 ? r
                 : g),
               (this.type = n),
               (this.id = i),
               (this.extend = e || g),
-              (this.required = "required" === r),
+              (this.required = 'required' === r),
               (this.optional = !this.required),
-              (this.repeated = "repeated" === r),
+              (this.repeated = 'repeated' === r),
               (this.map = !1),
               (this.message = null),
               (this.partOf = null),
               (this.typeDefault = null),
               (this.defaultValue = null),
               (this.long = !!f.Long && h.long[n] !== g),
-              (this.bytes = "bytes" === n),
+              (this.bytes = 'bytes' === n),
               (this.resolvedType = null),
               (this.extensionField = null),
               (this.declaringField = null),
@@ -1267,34 +1267,34 @@ let protobuf;
               i.comment
             );
           }),
-            Object.defineProperty(u.prototype, "packed", {
+            Object.defineProperty(u.prototype, 'packed', {
               get: function () {
                 return (
-                  null === this.n && (this.n = !1 !== this.getOption("packed")),
+                  null === this.n && (this.n = !1 !== this.getOption('packed')),
                   this.n
                 );
               },
             }),
             (u.prototype.setOption = function (t, i, n) {
               return (
-                "packed" === t && (this.n = null),
+                'packed' === t && (this.n = null),
                 o.prototype.setOption.call(this, t, i, n)
               );
             }),
             (u.prototype.toJSON = function (t) {
               t = !!t && !!t.keepComments;
               return f.toObject([
-                "rule",
-                ("optional" !== this.rule && this.rule) || g,
-                "type",
+                'rule',
+                ('optional' !== this.rule && this.rule) || g,
+                'type',
                 this.type,
-                "id",
+                'id',
                 this.id,
-                "extend",
+                'extend',
                 this.extend,
-                "options",
+                'options',
                 this.options,
-                "comment",
+                'comment',
                 t ? this.comment : g,
               ]);
             }),
@@ -1319,7 +1319,7 @@ let protobuf;
                     null != this.options.default &&
                     ((this.typeDefault = this.options.default),
                     this.resolvedType instanceof e &&
-                      "string" == typeof this.typeDefault &&
+                      'string' == typeof this.typeDefault &&
                       (this.typeDefault =
                         this.resolvedType.values[this.typeDefault])),
                   this.options &&
@@ -1332,11 +1332,11 @@ let protobuf;
                   this.long
                     ? ((this.typeDefault = f.Long.fromNumber(
                         this.typeDefault,
-                        "u" == (this.type[0] || "")
+                        'u' == (this.type[0] || '')
                       )),
                       Object.freeze && Object.freeze(this.typeDefault))
                     : this.bytes &&
-                      "string" == typeof this.typeDefault &&
+                      'string' == typeof this.typeDefault &&
                       (f.base64.test(this.typeDefault)
                         ? f.base64.decode(
                             this.typeDefault,
@@ -1362,9 +1362,9 @@ let protobuf;
             }),
             (u.d = function (n, r, e, s) {
               return (
-                "function" == typeof r
+                'function' == typeof r
                   ? (r = f.decorateType(r).name)
-                  : r && "object" == typeof r && (r = f.decorateEnum(r).name),
+                  : r && 'object' == typeof r && (r = f.decorateEnum(r).name),
                 function (t, i) {
                   f.decorateType(t.constructor).add(
                     new u(i, n, r, e, { default: s })
@@ -1381,10 +1381,10 @@ let protobuf;
       16: [
         function (t, i, n) {
           var r = (i.exports = t(17));
-          (r.build = "light"),
+          (r.build = 'light'),
             (r.load = function (t, i, n) {
               return (i =
-                "function" == typeof i
+                'function' == typeof i
                   ? ((n = i), new r.Root())
                   : i || new r.Root()).load(t, n);
             }),
@@ -1442,7 +1442,7 @@ let protobuf;
           function e() {
             r.util.r(), r.Writer.r(r.BufferWriter), r.Reader.r(r.BufferReader);
           }
-          (r.build = "minimal"),
+          (r.build = 'minimal'),
             (r.Writer = t(38)),
             (r.BufferWriter = t(39)),
             (r.Reader = t(24)),
@@ -1461,12 +1461,12 @@ let protobuf;
           var u = t(15),
             r =
               ((((s.prototype = Object.create(u.prototype)).constructor =
-                s).className = "MapField"),
+                s).className = 'MapField'),
               t(32)),
             o = t(33);
           function s(t, i, n, r, e, s) {
             if ((u.call(this, t, i, r, g, g, e, s), !o.isString(n)))
-              throw TypeError("keyType must be a string");
+              throw TypeError('keyType must be a string');
             (this.keyType = n), (this.resolvedKeyType = null), (this.map = !0);
           }
           (s.fromJSON = function (t, i) {
@@ -1475,31 +1475,31 @@ let protobuf;
             (s.prototype.toJSON = function (t) {
               t = !!t && !!t.keepComments;
               return o.toObject([
-                "keyType",
+                'keyType',
                 this.keyType,
-                "type",
+                'type',
                 this.type,
-                "id",
+                'id',
                 this.id,
-                "extend",
+                'extend',
                 this.extend,
-                "options",
+                'options',
                 this.options,
-                "comment",
+                'comment',
                 t ? this.comment : g,
               ]);
             }),
             (s.prototype.resolve = function () {
               if (this.resolved) return this;
               if (r.mapKey[this.keyType] === g)
-                throw Error("invalid key type: " + this.keyType);
+                throw Error('invalid key type: ' + this.keyType);
               return u.prototype.resolve.call(this);
             }),
             (s.d = function (n, r, e) {
               return (
-                "function" == typeof e
+                'function' == typeof e
                   ? (e = o.decorateType(e).name)
-                  : e && "object" == typeof e && (e = o.decorateEnum(e).name),
+                  : e && 'object' == typeof e && (e = o.decorateEnum(e).name),
                 function (t, i) {
                   o.decorateType(t.constructor).add(new s(i, n, r, e));
                 }
@@ -1553,7 +1553,7 @@ let protobuf;
           var f = t(22),
             c =
               ((((r.prototype = Object.create(f.prototype)).constructor =
-                r).className = "Method"),
+                r).className = 'Method'),
               t(33));
           function r(t, i, n, r, e, s, u, o, h) {
             if (
@@ -1562,12 +1562,12 @@ let protobuf;
                 : c.isObject(s) && ((u = s), (s = g)),
               i !== g && !c.isString(i))
             )
-              throw TypeError("type must be a string");
-            if (!c.isString(n)) throw TypeError("requestType must be a string");
+              throw TypeError('type must be a string');
+            if (!c.isString(n)) throw TypeError('requestType must be a string');
             if (!c.isString(r))
-              throw TypeError("responseType must be a string");
+              throw TypeError('responseType must be a string');
             f.call(this, t, u),
-              (this.type = i || "rpc"),
+              (this.type = i || 'rpc'),
               (this.requestType = n),
               (this.requestStream = !!e || g),
               (this.responseType = r),
@@ -1593,21 +1593,21 @@ let protobuf;
             (r.prototype.toJSON = function (t) {
               t = !!t && !!t.keepComments;
               return c.toObject([
-                "type",
-                ("rpc" !== this.type && this.type) || g,
-                "requestType",
+                'type',
+                ('rpc' !== this.type && this.type) || g,
+                'requestType',
                 this.requestType,
-                "requestStream",
+                'requestStream',
                 this.requestStream,
-                "responseType",
+                'responseType',
                 this.responseType,
-                "responseStream",
+                'responseStream',
                 this.responseStream,
-                "options",
+                'options',
                 this.options,
-                "comment",
+                'comment',
                 t ? this.comment : g,
-                "parsedOptions",
+                'parsedOptions',
                 this.parsedOptions,
               ]);
             }),
@@ -1634,7 +1634,7 @@ let protobuf;
             r = t(22),
             o =
               ((((a.prototype = Object.create(r.prototype)).constructor =
-                a).className = "Namespace"),
+                a).className = 'Namespace'),
               t(15)),
             h = t(33),
             f = t(23);
@@ -1657,7 +1657,7 @@ let protobuf;
             (a.isReservedId = function (t, i) {
               if (t)
                 for (var n = 0; n < t.length; ++n)
-                  if ("string" != typeof t[n] && t[n][0] <= i && t[n][1] > i)
+                  if ('string' != typeof t[n] && t[n][0] <= i && t[n][1] > i)
                     return !0;
               return !1;
             }),
@@ -1666,16 +1666,16 @@ let protobuf;
                 for (var n = 0; n < t.length; ++n) if (t[n] === i) return !0;
               return !1;
             }),
-            Object.defineProperty(a.prototype, "nestedArray", {
+            Object.defineProperty(a.prototype, 'nestedArray', {
               get: function () {
                 return this.e || (this.e = h.toArray(this.nested));
               },
             }),
             (a.prototype.toJSON = function (t) {
               return h.toObject([
-                "options",
+                'options',
                 this.options,
-                "nested",
+                'nested',
                 c(this.nestedArray, t),
               ]);
             }),
@@ -1703,7 +1703,7 @@ let protobuf;
             (a.prototype.getEnum = function (t) {
               if (this.nested && this.nested[t] instanceof u)
                 return this.nested[t].values;
-              throw Error("no such enum: " + t);
+              throw Error('no such enum: ' + t);
             }),
             (a.prototype.add = function (t) {
               if (
@@ -1716,7 +1716,7 @@ let protobuf;
                   t instanceof a
                 )
               )
-                throw TypeError("object must be a valid nested object");
+                throw TypeError('object must be a valid nested object');
               if (this.nested) {
                 var i = this.get(t.name);
                 if (i) {
@@ -1737,9 +1737,9 @@ let protobuf;
             }),
             (a.prototype.remove = function (t) {
               if (!(t instanceof r))
-                throw TypeError("object must be a ReflectionObject");
+                throw TypeError('object must be a ReflectionObject');
               if (t.parent !== this)
-                throw Error(t + " is not a member of " + this);
+                throw Error(t + ' is not a member of ' + this);
               return (
                 delete this.nested[t.name],
                 Object.keys(this.nested).length || (this.nested = g),
@@ -1748,15 +1748,15 @@ let protobuf;
               );
             }),
             (a.prototype.define = function (t, i) {
-              if (h.isString(t)) t = t.split(".");
-              else if (!Array.isArray(t)) throw TypeError("illegal path");
-              if (t && t.length && "" === t[0])
-                throw Error("path must be relative");
+              if (h.isString(t)) t = t.split('.');
+              else if (!Array.isArray(t)) throw TypeError('illegal path');
+              if (t && t.length && '' === t[0])
+                throw Error('path must be relative');
               for (var n = this; 0 < t.length; ) {
                 var r = t.shift();
                 if (n.nested && n.nested[r]) {
                   if (!((n = n.nested[r]) instanceof a))
-                    throw Error("path conflicts with non-namespace objects");
+                    throw Error('path conflicts with non-namespace objects');
                 } else n.add((n = new a(r)));
               }
               return i && n.addJSON(i), n;
@@ -1768,15 +1768,15 @@ let protobuf;
             }),
             (a.prototype.lookup = function (t, i, n) {
               if (
-                ("boolean" == typeof i
+                ('boolean' == typeof i
                   ? ((n = i), (i = g))
                   : i && !Array.isArray(i) && (i = [i]),
                 h.isString(t) && t.length)
               ) {
-                if ("." === t) return this.root;
-                t = t.split(".");
+                if ('.' === t) return this.root;
+                t = t.split('.');
               } else if (!t.length) return this;
-              if ("" === t[0]) return this.root.lookup(t.slice(1), i);
+              if ('' === t[0]) return this.root.lookup(t.slice(1), i);
               var r = this.get(t[0]);
               if (r) {
                 if (1 === t.length) {
@@ -1797,7 +1797,7 @@ let protobuf;
             (a.prototype.lookupType = function (t) {
               var i = this.lookup(t, [e]);
               if (i) return i;
-              throw Error("no such type: " + t);
+              throw Error('no such type: ' + t);
             }),
             (a.prototype.lookupEnum = function (t) {
               var i = this.lookup(t, [u]);
@@ -1822,13 +1822,13 @@ let protobuf;
       ],
       22: [
         function (t, i, n) {
-          (i.exports = e).className = "ReflectionObject";
+          (i.exports = e).className = 'ReflectionObject';
           var r,
             u = t(33);
           function e(t, i) {
-            if (!u.isString(t)) throw TypeError("name must be a string");
+            if (!u.isString(t)) throw TypeError('name must be a string');
             if (i && !u.isObject(i))
-              throw TypeError("options must be an object");
+              throw TypeError('options must be an object');
             (this.options = i),
               (this.parsedOptions = null),
               (this.name = t),
@@ -1848,7 +1848,7 @@ let protobuf;
               get: function () {
                 for (var t = [this.name], i = this.parent; i; )
                   t.unshift(i.name), (i = i.parent);
-                return t.join(".");
+                return t.join('.');
               },
             },
           }),
@@ -1910,7 +1910,7 @@ let protobuf;
             (e.prototype.toString = function () {
               var t = this.constructor.className,
                 i = this.fullName;
-              return i.length ? t + " " + i : t;
+              return i.length ? t + ' ' + i : t;
             }),
             (e.r = function (t) {
               r = t;
@@ -1924,7 +1924,7 @@ let protobuf;
           var e = t(22),
             r =
               ((((u.prototype = Object.create(e.prototype)).constructor =
-                u).className = "OneOf"),
+                u).className = 'OneOf'),
               t(15)),
             s = t(33);
           function u(t, i, n, r) {
@@ -1933,7 +1933,7 @@ let protobuf;
               e.call(this, t, n),
               i !== g && !Array.isArray(i))
             )
-              throw TypeError("fieldNames must be an Array");
+              throw TypeError('fieldNames must be an Array');
             (this.oneof = i || []), (this.fieldsArray = []), (this.comment = r);
           }
           function o(t) {
@@ -1947,11 +1947,11 @@ let protobuf;
             (u.prototype.toJSON = function (t) {
               t = !!t && !!t.keepComments;
               return s.toObject([
-                "options",
+                'options',
                 this.options,
-                "oneof",
+                'oneof',
                 this.oneof,
-                "comment",
+                'comment',
                 t ? this.comment : g,
               ]);
             }),
@@ -1964,12 +1964,12 @@ let protobuf;
                   o((t.partOf = this)),
                   this
                 );
-              throw TypeError("field must be a Field");
+              throw TypeError('field must be a Field');
             }),
             (u.prototype.remove = function (t) {
-              if (!(t instanceof r)) throw TypeError("field must be a Field");
+              if (!(t instanceof r)) throw TypeError('field must be a Field');
               var i = this.fieldsArray.indexOf(t);
-              if (i < 0) throw Error(t + " is not a member of " + this);
+              if (i < 0) throw Error(t + ' is not a member of ' + this);
               return (
                 this.fieldsArray.splice(i, 1),
                 -1 < (i = this.oneof.indexOf(t.name)) &&
@@ -2018,7 +2018,7 @@ let protobuf;
             u = e.utf8;
           function o(t, i) {
             return RangeError(
-              "index out of range: " + t.pos + " + " + (i || 1) + " > " + t.len
+              'index out of range: ' + t.pos + ' + ' + (i || 1) + ' > ' + t.len
             );
           }
           function h(t) {
@@ -2035,15 +2035,15 @@ let protobuf;
           }
           var c,
             a =
-              "undefined" != typeof Uint8Array
+              'undefined' != typeof Uint8Array
                 ? function (t) {
                     if (t instanceof Uint8Array || Array.isArray(t))
                       return new h(t);
-                    throw Error("illegal buffer");
+                    throw Error('illegal buffer');
                   }
                 : function (t) {
                     if (Array.isArray(t)) return new h(t);
-                    throw Error("illegal buffer");
+                    throw Error('illegal buffer');
                   };
           function l() {
             var t = new s(0, 0),
@@ -2095,7 +2095,7 @@ let protobuf;
                 )
                   return t;
               }
-            throw Error("invalid varint encoding");
+            throw Error('invalid varint encoding');
           }
           function d(t, i) {
             return (
@@ -2182,7 +2182,7 @@ let protobuf;
               return u.read(t, 0, t.length);
             }),
             (h.prototype.skip = function (t) {
-              if ("number" == typeof t) {
+              if ('number' == typeof t) {
                 if (this.pos + t > this.len) throw o(this, t);
                 this.pos += t;
               } else
@@ -2210,14 +2210,14 @@ let protobuf;
                   break;
                 default:
                   throw Error(
-                    "invalid wire type " + t + " at offset " + this.pos
+                    'invalid wire type ' + t + ' at offset ' + this.pos
                   );
               }
               return this;
             }),
             (h.r = function (t) {
               (r = t), (h.create = f()), r.r();
-              var i = e.Long ? "toLong" : "toNumber";
+              var i = e.Long ? 'toLong' : 'toNumber';
               e.merge(h.prototype, {
                 int64: function () {
                   return l.call(this)[i](!1);
@@ -2260,7 +2260,7 @@ let protobuf;
                     (this.pos = Math.min(this.pos + t, this.len))
                   )
                 : this.buf.toString(
-                    "utf-8",
+                    'utf-8',
                     this.pos,
                     (this.pos = Math.min(this.pos + t, this.len))
                   );
@@ -2278,13 +2278,13 @@ let protobuf;
             e = t(21),
             s =
               ((((h.prototype = Object.create(e.prototype)).constructor =
-                h).className = "Root"),
+                h).className = 'Root'),
               t(15)),
             u = t(14),
             o = t(23),
             b = t(33);
           function h(t) {
-            e.call(this, "", t), (this.deferred = []), (this.files = []);
+            e.call(this, '', t), (this.deferred = []), (this.files = []);
           }
           function p() {}
           (h.fromJSON = function (t, i) {
@@ -2297,7 +2297,7 @@ let protobuf;
             (h.prototype.resolvePath = b.path.resolve),
             (h.prototype.fetch = b.fetch),
             (h.prototype.load = function t(i, s, e) {
-              "function" == typeof s && ((e = s), (s = g));
+              'function' == typeof s && ((e = s), (s = g));
               var u = this;
               if (!e) return b.asPromise(t, u, i, s);
               var o = e === p;
@@ -2309,7 +2309,7 @@ let protobuf;
                 }
               }
               function f(t) {
-                var i = t.lastIndexOf("google/protobuf/");
+                var i = t.lastIndexOf('google/protobuf/');
                 if (-1 < i) {
                   t = t.substring(i);
                   if (t in v) return t;
@@ -2320,7 +2320,7 @@ let protobuf;
                 try {
                   if (
                     (b.isString(i) &&
-                      "{" == (i[0] || "") &&
+                      '{' == (i[0] || '') &&
                       (i = JSON.parse(i)),
                     b.isString(i))
                   ) {
@@ -2356,7 +2356,7 @@ let protobuf;
                   else if (o) {
                     var t;
                     try {
-                      t = b.fs.readFileSync(n).toString("utf8");
+                      t = b.fs.readFileSync(n).toString('utf8');
                     } catch (t) {
                       return void (r || h(t));
                     }
@@ -2370,24 +2370,24 @@ let protobuf;
               var l = 0;
               b.isString(i) && (i = [i]);
               for (var n, r = 0; r < i.length; ++r)
-                (n = u.resolvePath("", i[r])) && a(n);
+                (n = u.resolvePath('', i[r])) && a(n);
               return o ? u : (l || h(null, u), g);
             }),
             (h.prototype.loadSync = function (t, i) {
               if (b.isNode) return this.load(t, i, p);
-              throw Error("not supported");
+              throw Error('not supported');
             }),
             (h.prototype.resolveAll = function () {
               if (this.deferred.length)
                 throw Error(
-                  "unresolvable extensions: " +
+                  'unresolvable extensions: ' +
                     this.deferred
                       .map(function (t) {
                         return (
                           "'extend " + t.extend + "' in " + t.parent.fullName
                         );
                       })
-                      .join(", ")
+                      .join(', ')
                 );
               return e.prototype.resolveAll.call(this);
             });
@@ -2464,8 +2464,8 @@ let protobuf;
           i.exports = r;
           var o = t(35);
           function r(t, i, n) {
-            if ("function" != typeof t)
-              throw TypeError("rpcImpl must be a function");
+            if ('function' != typeof t)
+              throw TypeError('rpcImpl must be a function');
             o.EventEmitter.call(this),
               (this.rpcImpl = t),
               (this.requestDelimited = !!i),
@@ -2474,40 +2474,40 @@ let protobuf;
           (((r.prototype = Object.create(
             o.EventEmitter.prototype
           )).constructor = r).prototype.rpcCall = function t(n, i, r, e, s) {
-            if (!e) throw TypeError("request must be specified");
+            if (!e) throw TypeError('request must be specified');
             var u = this;
             if (!s) return o.asPromise(t, u, n, i, r, e);
             if (!u.rpcImpl)
               return (
                 setTimeout(function () {
-                  s(Error("already ended"));
+                  s(Error('already ended'));
                 }, 0),
                 g
               );
             try {
               return u.rpcImpl(
                 n,
-                i[u.requestDelimited ? "encodeDelimited" : "encode"](
+                i[u.requestDelimited ? 'encodeDelimited' : 'encode'](
                   e
                 ).finish(),
                 function (t, i) {
-                  if (t) return u.emit("error", t, n), s(t);
+                  if (t) return u.emit('error', t, n), s(t);
                   if (null === i) return u.end(!0), g;
                   if (!(i instanceof r))
                     try {
                       i =
-                        r[u.responseDelimited ? "decodeDelimited" : "decode"](
+                        r[u.responseDelimited ? 'decodeDelimited' : 'decode'](
                           i
                         );
                     } catch (t) {
-                      return u.emit("error", t, n), s(t);
+                      return u.emit('error', t, n), s(t);
                     }
-                  return u.emit("data", i, n), s(null, i);
+                  return u.emit('data', i, n), s(null, i);
                 }
               );
             } catch (t) {
               return (
-                u.emit("error", t, n),
+                u.emit('error', t, n),
                 setTimeout(function () {
                   s(t);
                 }, 0),
@@ -2520,7 +2520,7 @@ let protobuf;
                 this.rpcImpl &&
                   (t || this.rpcImpl(null, null, null),
                   (this.rpcImpl = null),
-                  this.emit("end").off()),
+                  this.emit('end').off()),
                 this
               );
             });
@@ -2533,7 +2533,7 @@ let protobuf;
           var r = t(21),
             s =
               ((((u.prototype = Object.create(r.prototype)).constructor =
-                u).className = "Service"),
+                u).className = 'Service'),
               t(20)),
             o = t(33),
             h = t(28);
@@ -2554,17 +2554,17 @@ let protobuf;
               var i = r.prototype.toJSON.call(this, t),
                 n = !!t && !!t.keepComments;
               return o.toObject([
-                "options",
+                'options',
                 (i && i.options) || g,
-                "methods",
+                'methods',
                 r.arrayToJSON(this.methodsArray, t) || {},
-                "nested",
+                'nested',
                 (i && i.nested) || g,
-                "comment",
+                'comment',
                 n ? this.comment : g,
               ]);
             }),
-            Object.defineProperty(u.prototype, "methodsArray", {
+            Object.defineProperty(u.prototype, 'methodsArray', {
               get: function () {
                 return this.f || (this.f = o.toArray(this.methods));
               },
@@ -2587,7 +2587,7 @@ let protobuf;
             (u.prototype.remove = function (t) {
               if (t instanceof s) {
                 if (this.methods[t.name] !== t)
-                  throw Error(t + " is not a member of " + this);
+                  throw Error(t + ' is not a member of ' + this);
                 return delete this.methods[t.name], (t.parent = null), e(this);
               }
               return r.prototype.remove.call(this, t);
@@ -2600,11 +2600,11 @@ let protobuf;
               ) {
                 var u = o
                   .lcFirst((r = this.f[s]).resolve().name)
-                  .replace(/[^$\w_]/g, "");
+                  .replace(/[^$\w_]/g, '');
                 e[u] = o.codegen(
-                  ["r", "c"],
-                  o.isReserved(u) ? u + "_" : u
-                )("return this.rpcCall(m,q,s,r,c)")({
+                  ['r', 'c'],
+                  o.isReserved(u) ? u + '_' : u
+                )('return this.rpcCall(m,q,s,r,c)')({
                   m: r,
                   q: r.resolvedRequestType.ctor,
                   s: r.resolvedResponseType.ctor,
@@ -2621,7 +2621,7 @@ let protobuf;
           var u = t(21),
             o =
               ((((w.prototype = Object.create(u.prototype)).constructor =
-                w).className = "Type"),
+                w).className = 'Type'),
               t(14)),
             h = t(23),
             f = t(15),
@@ -2670,7 +2670,7 @@ let protobuf;
                     var n = this.fields[t[i]],
                       r = n.id;
                     if (this.c[r])
-                      throw Error("duplicate id " + r + " in " + this);
+                      throw Error('duplicate id ' + r + ' in ' + this);
                     this.c[r] = n;
                   }
                 }
@@ -2717,16 +2717,16 @@ let protobuf;
           }),
             (w.generateConstructor = function (t) {
               for (
-                var i, n = d.codegen(["p"], t.name), r = 0;
+                var i, n = d.codegen(['p'], t.name), r = 0;
                 r < t.fieldsArray.length;
                 ++r
               )
                 (i = t.i[r]).map
-                  ? n("this%s={}", d.safeProp(i.name))
-                  : i.repeated && n("this%s=[]", d.safeProp(i.name));
+                  ? n('this%s={}', d.safeProp(i.name))
+                  : i.repeated && n('this%s=[]', d.safeProp(i.name));
               return n(
-                "if(p)for(var ks=Object.keys(p),i=0;i<ks.length;++i)if(p[ks[i]]!=null)"
-              )("this[ks[i]]=p[ks[i]]");
+                'if(p)for(var ks=Object.keys(p),i=0;i<ks.length;++i)if(p[ks[i]]!=null)'
+              )('this[ks[i]]=p[ks[i]]');
             }),
             (w.fromJSON = function (t, i) {
               for (
@@ -2778,26 +2778,26 @@ let protobuf;
               var i = u.prototype.toJSON.call(this, t),
                 n = !!t && !!t.keepComments;
               return d.toObject([
-                "options",
+                'options',
                 (i && i.options) || g,
-                "oneofs",
+                'oneofs',
                 u.arrayToJSON(this.oneofsArray, t),
-                "fields",
+                'fields',
                 u.arrayToJSON(
                   this.fieldsArray.filter(function (t) {
                     return !t.declaringField;
                   }),
                   t
                 ) || {},
-                "extensions",
+                'extensions',
                 this.extensions && this.extensions.length ? this.extensions : g,
-                "reserved",
+                'reserved',
                 this.reserved && this.reserved.length ? this.reserved : g,
-                "group",
+                'group',
                 this.group || g,
-                "nested",
+                'nested',
                 (i && i.nested) || g,
-                "comment",
+                'comment',
                 n ? this.comment : g,
               ]);
             }),
@@ -2821,9 +2821,9 @@ let protobuf;
                 throw Error("duplicate name '" + t.name + "' in " + this);
               if (t instanceof f && t.extend === g) {
                 if ((this.c || this.fieldsById)[t.id])
-                  throw Error("duplicate id " + t.id + " in " + this);
+                  throw Error('duplicate id ' + t.id + ' in ' + this);
                 if (this.isReservedId(t.id))
-                  throw Error("id " + t.id + " is reserved in " + this);
+                  throw Error('id ' + t.id + ' is reserved in ' + this);
                 if (this.isReservedName(t.name))
                   throw Error("name '" + t.name + "' is reserved in " + this);
                 return (
@@ -2848,7 +2848,7 @@ let protobuf;
                     t.onRemove(this),
                     r(this)
                   );
-                throw Error(t + " is not a member of " + this);
+                throw Error(t + ' is not a member of ' + this);
               }
               if (t instanceof h) {
                 if (this.oneofs && this.oneofs[t.name] === t)
@@ -2858,7 +2858,7 @@ let protobuf;
                     t.onRemove(this),
                     r(this)
                   );
-                throw Error(t + " is not a member of " + this);
+                throw Error(t + ' is not a member of ' + this);
               }
               return u.prototype.remove.call(this, t);
             }),
@@ -2945,21 +2945,21 @@ let protobuf;
         function (t, i, n) {
           var t = t(33),
             e = [
-              "double",
-              "float",
-              "int32",
-              "uint32",
-              "sint32",
-              "fixed32",
-              "sfixed32",
-              "int64",
-              "uint64",
-              "sint64",
-              "fixed64",
-              "sfixed64",
-              "bool",
-              "string",
-              "bytes",
+              'double',
+              'float',
+              'int32',
+              'uint32',
+              'sint32',
+              'fixed32',
+              'sfixed32',
+              'int64',
+              'uint64',
+              'sint64',
+              'fixed64',
+              'sfixed64',
+              'bool',
+              'string',
+              'bytes',
             ];
           function r(t, i) {
             var n = 0,
@@ -2982,7 +2982,7 @@ let protobuf;
               0,
               0,
               !1,
-              "",
+              '',
               t.emptyArray,
               null,
             ])),
@@ -3002,7 +3002,7 @@ let protobuf;
               ((s.codegen = n(3)),
               (s.fetch = n(5)),
               (s.path = n(8)),
-              (s.fs = s.inquire("fs")),
+              (s.fs = s.inquire('fs')),
               (s.toArray = function (t) {
                 if (t) {
                   for (
@@ -3033,11 +3033,11 @@ let protobuf;
               }),
               (s.safeProp = function (t) {
                 return !/^[$\w_]+$/.test(t) || s.isReserved(t)
-                  ? '["' + t.replace(o, "\\\\").replace(h, '\\"') + '"]'
-                  : "." + t;
+                  ? '["' + t.replace(o, '\\\\').replace(h, '\\"') + '"]'
+                  : '.' + t;
               }),
               (s.ucFirst = function (t) {
-                return (t[0] || "").toUpperCase() + t.substring(1);
+                return (t[0] || '').toUpperCase() + t.substring(1);
               }),
               /_([a-z])/g),
             c =
@@ -3063,11 +3063,11 @@ let protobuf;
                   : ((i = new (r = r || n(31))(i || t.name)),
                     s.decorateRoot.add(i),
                     (i.ctor = t),
-                    Object.defineProperty(t, "$type", {
+                    Object.defineProperty(t, '$type', {
                       value: i,
                       enumerable: !1,
                     }),
-                    Object.defineProperty(t.prototype, "$type", {
+                    Object.defineProperty(t.prototype, '$type', {
                       value: i,
                       enumerable: !1,
                     }),
@@ -3078,30 +3078,30 @@ let protobuf;
             var i;
             return (
               t.$type ||
-              ((i = new (e = e || n(14))("Enum" + c++, t)),
+              ((i = new (e = e || n(14))('Enum' + c++, t)),
               s.decorateRoot.add(i),
-              Object.defineProperty(t, "$type", { value: i, enumerable: !1 }),
+              Object.defineProperty(t, '$type', { value: i, enumerable: !1 }),
               i)
             );
           }),
             (s.setProperty = function (t, i, n) {
-              if ("object" != typeof t)
-                throw TypeError("dst must be an object");
+              if ('object' != typeof t)
+                throw TypeError('dst must be an object');
               if (i)
                 return (function t(i, n, r) {
                   var e = n.shift();
                   return (
-                    "__proto__" !== e &&
+                    '__proto__' !== e &&
                       (0 < n.length
                         ? (i[e] = t(i[e] || {}, n, r))
                         : ((n = i[e]) && (r = [].concat(n).concat(r)),
                           (i[e] = r))),
                     i
                   );
-                })(t, (i = i.split(".")), n);
-              throw TypeError("path must be specified");
+                })(t, (i = i.split('.')), n);
+              throw TypeError('path must be specified');
             }),
-            Object.defineProperty(s, "decorateRoot", {
+            Object.defineProperty(s, 'decorateRoot', {
               get: function () {
                 return u.decorated || (u.decorated = new (n(26))());
               },
@@ -3128,7 +3128,7 @@ let protobuf;
               (s.length = function () {
                 return 1;
               }),
-              (e.zeroHash = "\0\0\0\0\0\0\0\0"),
+              (e.zeroHash = '\0\0\0\0\0\0\0\0'),
               (e.fromNumber = function (t) {
                 var i, n;
                 return 0 === t
@@ -3143,7 +3143,7 @@ let protobuf;
                     new e(n, t));
               }),
               (e.from = function (t) {
-                if ("number" == typeof t) return e.fromNumber(t);
+                if ('number' == typeof t) return e.fromNumber(t);
                 if (r.isString(t)) {
                   if (!r.Long) return e.fromNumber(parseInt(t, 10));
                   t = r.Long.fromString(t);
@@ -3165,7 +3165,7 @@ let protobuf;
               }),
               String.prototype.charCodeAt);
           (e.fromHash = function (t) {
-            return "\0\0\0\0\0\0\0\0" === t
+            return '\0\0\0\0\0\0\0\0' === t
               ? s
               : new e(
                   (u.call(t, 0) |
@@ -3246,15 +3246,15 @@ let protobuf;
           function s(t) {
             function n(t, i) {
               if (!(this instanceof n)) return new n(t, i);
-              Object.defineProperty(this, "message", {
+              Object.defineProperty(this, 'message', {
                 get: function () {
                   return t;
                 },
               }),
                 Error.captureStackTrace
                   ? Error.captureStackTrace(this, n)
-                  : Object.defineProperty(this, "stack", {
-                      value: Error().stack || "",
+                  : Object.defineProperty(this, 'stack', {
+                      value: Error().stack || '',
                     }),
                 i && e(this, i);
             }
@@ -3276,7 +3276,7 @@ let protobuf;
                 },
                 toString: {
                   value() {
-                    return this.name + ": " + this.message;
+                    return this.name + ': ' + this.message;
                   },
                   writable: !0,
                   enumerable: !1,
@@ -3295,7 +3295,7 @@ let protobuf;
             (r.pool = t(9)),
             (r.LongBits = t(34)),
             (r.isNode = !!(
-              "undefined" != typeof global &&
+              'undefined' != typeof global &&
               global &&
               global.process &&
               global.process.versions &&
@@ -3303,8 +3303,8 @@ let protobuf;
             )),
             (r.global =
               (r.isNode && global) ||
-              ("undefined" != typeof window && window) ||
-              ("undefined" != typeof self && self) ||
+              ('undefined' != typeof window && window) ||
+              ('undefined' != typeof self && self) ||
               this),
             (r.emptyArray = Object.freeze ? Object.freeze([]) : []),
             (r.emptyObject = Object.freeze ? Object.freeze({}) : {}),
@@ -3312,14 +3312,14 @@ let protobuf;
               Number.isInteger ||
               function (t) {
                 return (
-                  "number" == typeof t && isFinite(t) && Math.floor(t) === t
+                  'number' == typeof t && isFinite(t) && Math.floor(t) === t
                 );
               }),
             (r.isString = function (t) {
-              return "string" == typeof t || t instanceof String;
+              return 'string' == typeof t || t instanceof String;
             }),
             (r.isObject = function (t) {
-              return t && "object" == typeof t;
+              return t && 'object' == typeof t;
             }),
             (r.isset = r.isSet =
               function (t, i) {
@@ -3327,13 +3327,13 @@ let protobuf;
                 return (
                   null != n &&
                   t.hasOwnProperty(i) &&
-                  ("object" != typeof n ||
+                  ('object' != typeof n ||
                     0 < (Array.isArray(n) ? n : Object.keys(n)).length)
                 );
               }),
             (r.Buffer = (function () {
               try {
-                var t = r.inquire("buffer").Buffer;
+                var t = r.inquire('buffer').Buffer;
                 return t.prototype.utf8Write ? t : null;
               } catch (t) {
                 return null;
@@ -3342,21 +3342,21 @@ let protobuf;
             (r.v = null),
             (r.b = null),
             (r.newBuffer = function (t) {
-              return "number" == typeof t
+              return 'number' == typeof t
                 ? r.Buffer
                   ? r.b(t)
                   : new r.Array(t)
                 : r.Buffer
                 ? r.v(t)
-                : "undefined" == typeof Uint8Array
+                : 'undefined' == typeof Uint8Array
                 ? t
                 : new Uint8Array(t);
             }),
-            (r.Array = "undefined" != typeof Uint8Array ? Uint8Array : Array),
+            (r.Array = 'undefined' != typeof Uint8Array ? Uint8Array : Array),
             (r.Long =
               (r.global.dcodeIO && r.global.dcodeIO.Long) ||
               r.global.Long ||
-              r.inquire("long")),
+              r.inquire('long')),
             (r.key2Re = /^true|false|0|1$/),
             (r.key32Re = /^-?(?:0|[1-9][0-9]*)$/),
             (r.key64Re = /^(?:[\\x00-\\xff]{8}|-?(?:0|[1-9][0-9]*))$/),
@@ -3369,10 +3369,10 @@ let protobuf;
             }),
             (r.merge = e),
             (r.lcFirst = function (t) {
-              return (t[0] || "").toLowerCase() + t.substring(1);
+              return (t[0] || '').toLowerCase() + t.substring(1);
             }),
             (r.newError = s),
-            (r.ProtocolError = s("ProtocolError")),
+            (r.ProtocolError = s('ProtocolError')),
             (r.oneOfGetter = function (t) {
               for (var n = {}, i = 0; i < t.length; ++i) n[t[i]] = 1;
               return function () {
@@ -3415,148 +3415,148 @@ let protobuf;
         function (t, i, n) {
           i.exports = function (t) {
             var i = h.codegen(
-                ["m"],
-                t.name + "$verify"
+                ['m'],
+                t.name + '$verify'
               )('if(typeof m!=="object"||m===null)')(
-                "return%j",
-                "object expected"
+                'return%j',
+                'object expected'
               ),
               n = t.oneofsArray,
               r = {};
-            n.length && i("var p={}");
+            n.length && i('var p={}');
             for (var e = 0; e < t.fieldsArray.length; ++e) {
               var s,
                 u = t.i[e].resolve(),
-                o = "m" + h.safeProp(u.name);
-              u.optional && i("if(%s!=null&&m.hasOwnProperty(%j)){", o, u.name),
+                o = 'm' + h.safeProp(u.name);
+              u.optional && i('if(%s!=null&&m.hasOwnProperty(%j)){', o, u.name),
                 u.map
-                  ? (i("if(!util.isObject(%s))", o)("return%j", f(u, "object"))(
-                      "var k=Object.keys(%s)",
+                  ? (i('if(!util.isObject(%s))', o)('return%j', f(u, 'object'))(
+                      'var k=Object.keys(%s)',
                       o
-                    )("for(var i=0;i<k.length;++i){"),
+                    )('for(var i=0;i<k.length;++i){'),
                     (function (t, i, n) {
                       switch (i.keyType) {
-                        case "int32":
-                        case "uint32":
-                        case "sint32":
-                        case "fixed32":
-                        case "sfixed32":
-                          t("if(!util.key32Re.test(%s))", n)(
-                            "return%j",
-                            f(i, "integer key")
+                        case 'int32':
+                        case 'uint32':
+                        case 'sint32':
+                        case 'fixed32':
+                        case 'sfixed32':
+                          t('if(!util.key32Re.test(%s))', n)(
+                            'return%j',
+                            f(i, 'integer key')
                           );
                           break;
-                        case "int64":
-                        case "uint64":
-                        case "sint64":
-                        case "fixed64":
-                        case "sfixed64":
-                          t("if(!util.key64Re.test(%s))", n)(
-                            "return%j",
-                            f(i, "integer|Long key")
+                        case 'int64':
+                        case 'uint64':
+                        case 'sint64':
+                        case 'fixed64':
+                        case 'sfixed64':
+                          t('if(!util.key64Re.test(%s))', n)(
+                            'return%j',
+                            f(i, 'integer|Long key')
                           );
                           break;
-                        case "bool":
-                          t("if(!util.key2Re.test(%s))", n)(
-                            "return%j",
-                            f(i, "boolean key")
+                        case 'bool':
+                          t('if(!util.key2Re.test(%s))', n)(
+                            'return%j',
+                            f(i, 'boolean key')
                           );
                       }
-                    })(i, u, "k[i]"),
-                    c(i, u, e, o + "[k[i]]")("}"))
+                    })(i, u, 'k[i]'),
+                    c(i, u, e, o + '[k[i]]')('}'))
                   : u.repeated
-                  ? (i("if(!Array.isArray(%s))", o)("return%j", f(u, "array"))(
-                      "for(var i=0;i<%s.length;++i){",
+                  ? (i('if(!Array.isArray(%s))', o)('return%j', f(u, 'array'))(
+                      'for(var i=0;i<%s.length;++i){',
                       o
                     ),
-                    c(i, u, e, o + "[i]")("}"))
+                    c(i, u, e, o + '[i]')('}'))
                   : (u.partOf &&
                       ((s = h.safeProp(u.partOf.name)),
                       1 === r[u.partOf.name] &&
-                        i("if(p%s===1)", s)(
-                          "return%j",
-                          u.partOf.name + ": multiple values"
+                        i('if(p%s===1)', s)(
+                          'return%j',
+                          u.partOf.name + ': multiple values'
                         ),
                       (r[u.partOf.name] = 1),
-                      i("p%s=1", s)),
+                      i('p%s=1', s)),
                     c(i, u, e, o)),
-                u.optional && i("}");
+                u.optional && i('}');
             }
-            return i("return null");
+            return i('return null');
           };
           var u = t(14),
             h = t(33);
           function f(t, i) {
             return (
               t.name +
-              ": " +
+              ': ' +
               i +
-              (t.repeated && "array" !== i
-                ? "[]"
-                : t.map && "object" !== i
-                ? "{k:" + t.keyType + "}"
-                : "") +
-              " expected"
+              (t.repeated && 'array' !== i
+                ? '[]'
+                : t.map && 'object' !== i
+                ? '{k:' + t.keyType + '}'
+                : '') +
+              ' expected'
             );
           }
           function c(t, i, n, r) {
             if (i.resolvedType)
               if (i.resolvedType instanceof u) {
-                t("switch(%s){", r)("default:")("return%j", f(i, "enum value"));
+                t('switch(%s){', r)('default:')('return%j', f(i, 'enum value'));
                 for (
                   var e = Object.keys(i.resolvedType.values), s = 0;
                   s < e.length;
                   ++s
                 )
-                  t("case %i:", i.resolvedType.values[e[s]]);
-                t("break")("}");
+                  t('case %i:', i.resolvedType.values[e[s]]);
+                t('break')('}');
               } else
-                t("{")("var e=types[%i].verify(%s);", n, r)("if(e)")(
-                  "return%j+e",
-                  i.name + "."
-                )("}");
+                t('{')('var e=types[%i].verify(%s);', n, r)('if(e)')(
+                  'return%j+e',
+                  i.name + '.'
+                )('}');
             else
               switch (i.type) {
-                case "int32":
-                case "uint32":
-                case "sint32":
-                case "fixed32":
-                case "sfixed32":
-                  t("if(!util.isInteger(%s))", r)("return%j", f(i, "integer"));
+                case 'int32':
+                case 'uint32':
+                case 'sint32':
+                case 'fixed32':
+                case 'sfixed32':
+                  t('if(!util.isInteger(%s))', r)('return%j', f(i, 'integer'));
                   break;
-                case "int64":
-                case "uint64":
-                case "sint64":
-                case "fixed64":
-                case "sfixed64":
+                case 'int64':
+                case 'uint64':
+                case 'sint64':
+                case 'fixed64':
+                case 'sfixed64':
                   t(
-                    "if(!util.isInteger(%s)&&!(%s&&util.isInteger(%s.low)&&util.isInteger(%s.high)))",
+                    'if(!util.isInteger(%s)&&!(%s&&util.isInteger(%s.low)&&util.isInteger(%s.high)))',
                     r,
                     r,
                     r,
                     r
-                  )("return%j", f(i, "integer|Long"));
+                  )('return%j', f(i, 'integer|Long'));
                   break;
-                case "float":
-                case "double":
-                  t('if(typeof %s!=="number")', r)("return%j", f(i, "number"));
+                case 'float':
+                case 'double':
+                  t('if(typeof %s!=="number")', r)('return%j', f(i, 'number'));
                   break;
-                case "bool":
+                case 'bool':
                   t('if(typeof %s!=="boolean")', r)(
-                    "return%j",
-                    f(i, "boolean")
+                    'return%j',
+                    f(i, 'boolean')
                   );
                   break;
-                case "string":
-                  t("if(!util.isString(%s))", r)("return%j", f(i, "string"));
+                case 'string':
+                  t('if(!util.isString(%s))', r)('return%j', f(i, 'string'));
                   break;
-                case "bytes":
+                case 'bytes':
                   t(
                     'if(!(%s&&typeof %s.length==="number"||util.isString(%s)))',
                     r,
                     r,
                     r
-                  )("return%j", f(i, "buffer"));
+                  )('return%j', f(i, 'buffer'));
               }
             return t;
           }
@@ -3566,18 +3566,18 @@ let protobuf;
       37: [
         function (t, i, n) {
           var u = t(19);
-          n[".google.protobuf.Any"] = {
+          n['.google.protobuf.Any'] = {
             fromObject: function (t) {
-              if (t && t["@type"]) {
+              if (t && t['@type']) {
                 var i,
-                  n = t["@type"].substring(1 + t["@type"].lastIndexOf("/")),
+                  n = t['@type'].substring(1 + t['@type'].lastIndexOf('/')),
                   n = this.lookup(n);
                 if (n)
                   return (
                     ~(i =
-                      "." == (t["@type"][0] || "")
-                        ? t["@type"].slice(1)
-                        : t["@type"]).indexOf("/") || (i = "/" + i),
+                      '.' == (t['@type'][0] || '')
+                        ? t['@type'].slice(1)
+                        : t['@type']).indexOf('/') || (i = '/' + i),
                     this.create({
                       type_url: i,
                       value: n.encode(n.fromObject(t)).finish(),
@@ -3589,27 +3589,27 @@ let protobuf;
             toObject: function (t, i) {
               var n,
                 r,
-                e = "",
-                s = "";
+                e = '',
+                s = '';
               return (
                 i &&
                   i.json &&
                   t.type_url &&
                   t.value &&
-                  ((s = t.type_url.substring(1 + t.type_url.lastIndexOf("/"))),
+                  ((s = t.type_url.substring(1 + t.type_url.lastIndexOf('/'))),
                   (e = t.type_url.substring(
                     0,
-                    1 + t.type_url.lastIndexOf("/")
+                    1 + t.type_url.lastIndexOf('/')
                   )),
                   (n = this.lookup(s)) && (t = n.decode(t.value))),
                 !(t instanceof this.ctor) && t instanceof u
                   ? ((n = t.$type.toObject(t, i)),
                     (r =
-                      "." === t.$type.fullName[0]
+                      '.' === t.$type.fullName[0]
                         ? t.$type.fullName.slice(1)
                         : t.$type.fullName),
-                    (n["@type"] = s =
-                      (e = "" === e ? "type.googleapis.com/" : e) + r),
+                    (n['@type'] = s =
+                      (e = '' === e ? 'type.googleapis.com/' : e) + r),
                     n)
                   : this.toObject(t, i)
               );
@@ -3837,7 +3837,7 @@ let protobuf;
               (s.writeBytesBuffer =
                 e.Buffer &&
                 e.Buffer.prototype instanceof Uint8Array &&
-                "set" === e.Buffer.prototype.set.name
+                'set' === e.Buffer.prototype.set.name
                   ? function (t, i, n) {
                       i.set(t, n);
                     }
@@ -3847,7 +3847,7 @@ let protobuf;
                     });
           }),
             (s.prototype.bytes = function (t) {
-              var i = (t = e.isString(t) ? e.v(t, "base64") : t).length >>> 0;
+              var i = (t = e.isString(t) ? e.v(t, 'base64') : t).length >>> 0;
               return (
                 this.uint32(i), i && this.p(s.writeBytesBuffer, i, t), this
               );
@@ -3868,17 +3868,17 @@ let protobuf;
 // https://github.com/emn178/js-md5 做了修改
 let md5 = null;
 (function () {
-  "use strict";
-  var ERROR = "input is invalid type";
-  var WINDOW = typeof window === "object";
+  'use strict';
+  var ERROR = 'input is invalid type';
+  var WINDOW = typeof window === 'object';
   var root = WINDOW ? window : {};
   if (root.JS_MD5_NO_WINDOW) {
     WINDOW = false;
   }
-  var WEB_WORKER = !WINDOW && typeof self === "object";
+  var WEB_WORKER = !WINDOW && typeof self === 'object';
   var NODE_JS =
     !root.JS_MD5_NO_NODE_JS &&
-    typeof process === "object" &&
+    typeof process === 'object' &&
     process.versions &&
     process.versions.node;
   if (NODE_JS) {
@@ -3887,24 +3887,24 @@ let md5 = null;
     root = self;
   }
   var COMMON_JS =
-    !root.JS_MD5_NO_COMMON_JS && typeof module === "object" && module.exports;
-  var AMD = typeof define === "function" && define.amd;
+    !root.JS_MD5_NO_COMMON_JS && typeof module === 'object' && module.exports;
+  var AMD = typeof define === 'function' && define.amd;
   var ARRAY_BUFFER =
-    !root.JS_MD5_NO_ARRAY_BUFFER && typeof ArrayBuffer !== "undefined";
-  var HEX_CHARS = "0123456789abcdef".split("");
+    !root.JS_MD5_NO_ARRAY_BUFFER && typeof ArrayBuffer !== 'undefined';
+  var HEX_CHARS = '0123456789abcdef'.split('');
   var EXTRA = [128, 32768, 8388608, -2147483648];
   var SHIFT = [0, 8, 16, 24];
   var OUTPUT_TYPES = [
-    "hex",
-    "array",
-    "digest",
-    "buffer",
-    "arrayBuffer",
-    "base64",
+    'hex',
+    'array',
+    'digest',
+    'buffer',
+    'arrayBuffer',
+    'base64',
   ];
   var BASE64_ENCODE_CHAR =
-    "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/".split(
-      ""
+    'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/'.split(
+      ''
     );
   var blocks = [],
     buffer8;
@@ -3915,7 +3915,7 @@ let md5 = null;
   }
   if (root.JS_MD5_NO_NODE_JS || !Array.isArray) {
     Array.isArray = function (obj) {
-      return Object.prototype.toString.call(obj) === "[object Array]";
+      return Object.prototype.toString.call(obj) === '[object Array]';
     };
   }
   if (
@@ -3924,7 +3924,7 @@ let md5 = null;
   ) {
     ArrayBuffer.isView = function (obj) {
       return (
-        typeof obj === "object" &&
+        typeof obj === 'object' &&
         obj.buffer &&
         obj.buffer.constructor === ArrayBuffer
       );
@@ -3936,7 +3936,7 @@ let md5 = null;
     };
   };
   var createMethod = function () {
-    var method = createOutputMethod("hex");
+    var method = createOutputMethod('hex');
     if (NODE_JS) {
       method = nodeWrap(method);
     }
@@ -3956,8 +3956,8 @@ let md5 = null;
     var crypto = eval("require('crypto')");
     var Buffer = eval("require('buffer').Buffer");
     var nodeMethod = function (message) {
-      if (typeof message === "string") {
-        return crypto.createHash("md5").update(message, "utf8").digest("hex");
+      if (typeof message === 'string') {
+        return crypto.createHash('md5').update(message, 'utf8').digest('hex');
       } else {
         if (message === null || message === undefined) {
           throw ERROR;
@@ -3971,9 +3971,9 @@ let md5 = null;
         message.constructor === Buffer
       ) {
         return crypto
-          .createHash("md5")
+          .createHash('md5')
           .update(new Buffer(message))
-          .digest("hex");
+          .digest('hex');
       } else {
         return method(message);
       }
@@ -4028,8 +4028,8 @@ let md5 = null;
     }
     var notString,
       type = typeof message;
-    if (type !== "string") {
-      if (type === "object") {
+    if (type !== 'string') {
+      if (type === 'object') {
         if (message === null) {
           throw ERROR;
         } else if (ARRAY_BUFFER && message.constructor === ArrayBuffer) {
@@ -4438,7 +4438,7 @@ let md5 = null;
     var v1,
       v2,
       v3,
-      base64Str = "",
+      base64Str = '',
       bytes = this.array();
     for (var i = 0; i < 15; ) {
       v1 = bytes[i++];
@@ -4452,7 +4452,7 @@ let md5 = null;
     }
     v1 = bytes[i];
     base64Str +=
-      BASE64_ENCODE_CHAR[v1 >>> 2] + BASE64_ENCODE_CHAR[(v1 << 4) & 63] + "==";
+      BASE64_ENCODE_CHAR[v1 >>> 2] + BASE64_ENCODE_CHAR[(v1 << 4) & 63] + '==';
     return base64Str;
   };
   var exports = createMethod();
@@ -4469,60 +4469,60 @@ let md5 = null;
   }
 })();
 const baiduMapJson = {
-  options: { java_package: "com.smile.baidumap.model" },
+  options: { java_package: 'com.smile.baidumap.model' },
   nested: {
     RepHead: {
       fields: {
-        md5: { type: "string", id: 1 },
-        range: { type: "string", id: 2 },
-        messageHead: { rule: "repeated", type: "MessageHead", id: 3 },
+        md5: { type: 'string', id: 1 },
+        range: { type: 'string', id: 2 },
+        messageHead: { rule: 'repeated', type: 'MessageHead', id: 3 },
       },
     },
     MessageHead: {
       fields: {
-        offset: { type: "int32", id: 1 },
-        length: { type: "int32", id: 2 },
-        name: { type: "string", id: 3 },
+        offset: { type: 'int32', id: 1 },
+        length: { type: 'int32', id: 2 },
+        name: { type: 'string', id: 3 },
       },
     },
     Result: {
       fields: {
-        type: { type: "int32", id: 1 },
-        error: { type: "int32", id: 2 },
+        type: { type: 'int32', id: 1 },
+        error: { type: 'int32', id: 2 },
       },
     },
     Ads: {
       fields: {
-        option: { type: "Option", id: 1 },
-        content: { rule: "repeated", type: "Content", id: 2 },
+        option: { type: 'Option', id: 1 },
+        content: { rule: 'repeated', type: 'Content', id: 2 },
       },
     },
     Option: {
       fields: {
-        lasttime: { type: "int32", id: 1 },
-        checkcode: { type: "string", id: 2 },
-        errmsg: { type: "string", id: 3 },
+        lasttime: { type: 'int32', id: 1 },
+        checkcode: { type: 'string', id: 2 },
+        errmsg: { type: 'string', id: 3 },
       },
     },
     Content: {
       fields: {
-        type: { type: "string", id: 1 },
-        data: { type: "string", id: 2 },
-        intval: { type: "int32", id: 3 },
-        start: { type: "int32", id: 4 },
-        end: { type: "int32", id: 5 },
-        id: { type: "int32", id: 6 },
-        updatetime: { type: "int32", id: 7 },
-        order: { type: "int32", id: 8 },
-        ctrlMode: { type: "string", id: 9 },
-        dayTimes: { type: "int32", id: 10 },
+        type: { type: 'string', id: 1 },
+        data: { type: 'string', id: 2 },
+        intval: { type: 'int32', id: 3 },
+        start: { type: 'int32', id: 4 },
+        end: { type: 'int32', id: 5 },
+        id: { type: 'int32', id: 6 },
+        updatetime: { type: 'int32', id: 7 },
+        order: { type: 'int32', id: 8 },
+        ctrlMode: { type: 'string', id: 9 },
+        dayTimes: { type: 'int32', id: 10 },
       },
     },
   },
 };
 const baiduMapRoot = protobuf.Root.fromJSON(baiduMapJson);
 
-const isQuanX = typeof $task != "undefined";
+const isQuanX = typeof $task != 'undefined';
 const binaryBody = isQuanX
   ? new Uint8Array($response.bodyBytes)
   : $response.body;
@@ -4536,7 +4536,7 @@ const prefixLength = new DataView(
 
 // 解析RepHead
 const repHeadData = binaryBody.slice(beginOffset, beginOffset + prefixLength);
-const repHeadType = baiduMapRoot.lookupType("RepHead");
+const repHeadType = baiduMapRoot.lookupType('RepHead');
 const repHeadMessage = repHeadType.decode(repHeadData);
 const originMd5 = repHeadMessage.md5;
 //console.log(`解析出的原始repHead长度:${repHeadType.encode(repHeadMessage).finish().length}`);
@@ -4559,7 +4559,7 @@ for (let i = 0; i < repHeadMessage.messageHead.length; i++) {
     currentOffset + targetDataLength
   );
 
-  if (name === "Result") {
+  if (name === 'Result') {
     // Result我们无需修改
     const resultType = baiduMapRoot.lookupType(name);
     const resultMessage = resultType.decode(targetData);
@@ -4567,17 +4567,17 @@ for (let i = 0; i < repHeadMessage.messageHead.length; i++) {
     console.log(`解析出的md5和原始md5相同?:${parseMd5 === originMd5}`);
     newResult = resultType.encode(resultMessage).finish();
     //console.log(`解析出的Result:${JSON.stringify(resultMessage)}`);
-  } else if (name === "Ads") {
+  } else if (name === 'Ads') {
     // 对Ads进行修改
     const adsType = baiduMapRoot.lookupType(name);
     let adsMessage = adsType.decode(targetData);
     for (let j = 0; j < adsMessage.content.length; j++) {
       let item = adsMessage.content[j];
       if (
-        (item.type.indexOf("_banner") !== -1 ||
-          item.type.indexOf("splash_screen1040") !== -1) &&
-        item.hasOwnProperty("start") &&
-        item.hasOwnProperty("end")
+        (item.type.indexOf('_banner') !== -1 ||
+          item.type.indexOf('splash_screen1040') !== -1) &&
+        item.hasOwnProperty('start') &&
+        item.hasOwnProperty('end')
       ) {
         adsMessage.content[j].start = 1648746061;
         adsMessage.content[j].end = 1648832461;
