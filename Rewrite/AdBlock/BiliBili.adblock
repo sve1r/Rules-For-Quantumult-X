@@ -81,11 +81,6 @@ hostname = -broadcast.chat.bilibili.com, -*cdn*.biliapi.net, -*tracker*.biliapi.
 # ～ BiliBili_哔哩哔哩_屏蔽DefaultWord@ddgksf2013
 ^https?:\/\/(app\.bilibili\.com|grpc\.biliapi\.net)\/bilibili\.app\.interface\.v1\.Search\/Default url reject
 # ～ BiliBili_哔哩哔哩_搜索去广告@BiliUniverse
-^https?:\/\/(grpc\.biliapi\.net|app\.bilibili\.com)\/bilibili\.polymer\.app\.search\.v1\.Search\/SearchAll$ url script-response-body https://cdn.jsdelivr.net/gh/sve1r/Rules-For-Quantumult-X@develop/Scripts/AdBlock/Bilibili/BiliBili.response.min.js
-# ～ BiliBili_哔哩哔哩_交互点赞投票弹幕@Maasea
-;^https?:\/\/(app\.bilibili\.com|grpc\.biliapi\.net)\/bilibili\.community\.service\.dm\.v1\.DM\/DmView url script-response-body https://cdn.jsdelivr.net/gh/sve1r/Rules-For-Quantumult-X@develop/Scripts/AdBlock/Bilibili/BiliBili.helper.beta.min.js
-# ～ BiliBili_哔哩哔哩_青少年弹窗@Maasea
-;^https:\/\/(grpc\.biliapi\.net|app\.bilibili\.com)\/bilibili\.app\.interface\.v1\.Teenagers\/ModeStatus url script-response-body https://cdn.jsdelivr.net/gh/sve1r/Rules-For-Quantumult-X@develop/Scripts/AdBlock/Bilibili/BiliBili.helper.beta.min.js
 ^https?:\/\/(grpc\.biliapi\.net|app\.bilibili\.com)\/bilibili\.polymer\.app\.search\.v1\.Search\/SearchAll$ url script-response-body https://cdn.jsdelivr.net/gh/BiliUniverse/ADBlock@main/js/BiliBili.ADBlock.response.js
 # ～ BiliBili_哔哩哔哩_交互点赞投票弹幕@BiliUniverse
 ^https?:\/\/(app\.bilibili\.com|grpc\.biliapi\.net)\/bilibili\.community\.service\.dm\.v1\.DM\/DmView url script-response-body https://cdn.jsdelivr.net/gh/BiliUniverse/ADBlock@beta/js/BiliBili.ADBlock.response.beta.js
