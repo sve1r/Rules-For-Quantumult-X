@@ -12,4 +12,4 @@
 
 
 hostname=spclient.wg.spotify.com
-^https:\/\/spclient\.wg\.spotify\.com\/(bootstrap\/v1\/bootstrap|user-customization-service\/v1\/customize)$ url script-response-body https://cdn.jsdelivr.net/gh/sve1r/Rules-For-Quantumult-X@develop/Scripts/Unlock/Spotify-proto.js
+^https:\/\/spclient\.wg\.spotify\.com\/(bootstrap\/v1\/bootstrap|user-customization-service\/v1\/customize)$ url script-response-body https://cdn.jsdelivr.net/gh/sve1r/Rules-For-Quantumult-X@main/Scripts/Unlock/Spotify-proto.js

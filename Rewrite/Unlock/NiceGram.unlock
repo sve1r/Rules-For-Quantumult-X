@@ -1,0 +1,6 @@
+
+hostname=restore-access.indream.app
+
+https?:\/\/restore-access\.indream\.app\/restoreAccess\?id=\d{5,10} url echo-response text/json echo-response https://cdn.jsdelivr.net/gh/sve1r/Rules-For-Quantumult-X@main/Scripts/Unlock/NiceGram.json
+
+

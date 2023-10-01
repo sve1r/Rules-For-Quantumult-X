@@ -1,4 +1,5 @@
-const version = 'V2.0.116';
+
+const version = 'V2.0.120';
 
 
 const mainConfig = {
@@ -82,7 +83,9 @@ const mainConfig = {
         "a=get_coopen_ads": "removeIntlOpenAds",
         "php?a=search_topic": "removeSearchTopic",
         "v1/ad/realtime": "removeRealtimeAd",
-        "v1/ad/preload": "removeAdPreload"
+        "v1/ad/preload": "removeAdPreload",
+        "php?a=open_app": "removeAdBanner",
+        "groups/allgroups": "removeGroup"
     };
 
 function getModifyMethod(e) {
@@ -94,6 +97,14 @@ function getModifyMethod(e) {
 
 function removeRealtimeAd(e) {
     return delete e.ads, e.code = 4016, e
+}
+
+function removeGroup(e) {
+    return e.pageDatas && (e.pageDatas = Object.values(e.pageDatas).filter(e => "homeExtend" != e.pageDataType)), e
+}
+
+function removeAdBanner(e) {
+    return e.data.close_ad_setting && delete e.data.close_ad_setting, e.data.detail_banner_ad && (e.data.detail_banner_ad = []), e
 }
 
 function removeAdPreload(e) {

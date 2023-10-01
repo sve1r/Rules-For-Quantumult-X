@@ -19,37 +19,37 @@
 hostname = edith.xiaohongshu.com, www.xiaohongshu.com, pages.xiaohongshu.com, referee.xiaohongshu.com
 
 # > 小红书_视频播放页商品推广@ddgksf2013
-^https?:\/\/edith\.xiaohongshu\.com\/api\/sns\/v\d\/note\/widgets url script-response-body https://cdn.jsdelivr.net/gh/sve1r/Rules-For-Quantumult-X@develop/Scripts/AdBlock/LittleRedBook/LittleRedBook.min.js
+^https?:\/\/edith\.xiaohongshu\.com\/api\/sns\/v\d\/note\/widgets url script-response-body https://cdn.jsdelivr.net/gh/sve1r/Rules-For-Quantumult-X@main/Scripts/AdBlock/LittleRedBook/LittleRedBook.min.js
 
 # > 小红书_短视频流去水印+强制开启保存功能@ddgksf2013
-^https?:\/\/edith\.xiaohongshu\.com\/api\/sns\/v\d\/note\/redtube\? url script-response-body https://cdn.jsdelivr.net/gh/sve1r/Rules-For-Quantumult-X@develop/Scripts/AdBlock/LittleRedBook/LittleRedBook.min.js
+^https?:\/\/edith\.xiaohongshu\.com\/api\/sns\/v\d\/note\/redtube\? url script-response-body https://cdn.jsdelivr.net/gh/sve1r/Rules-For-Quantumult-X@main/Scripts/AdBlock/LittleRedBook/LittleRedBook.min.js
 
 # > 小红书_信息流视频去水印+强制开启保存功能@ddgksf2013
-^https?:\/\/edith\.xiaohongshu\.com\/api\/sns\/v\d\/note\/videofeed\? url script-response-body https://cdn.jsdelivr.net/gh/sve1r/Rules-For-Quantumult-X@develop/Scripts/AdBlock/LittleRedBook/LittleRedBook.min.js
+^https?:\/\/edith\.xiaohongshu\.com\/api\/sns\/v\d\/note\/videofeed\? url script-response-body https://cdn.jsdelivr.net/gh/sve1r/Rules-For-Quantumult-X@main/Scripts/AdBlock/LittleRedBook/LittleRedBook.min.js
 
 # > 小红书_信息流图片去水印@ddgksf2013
-^https?:\/\/edith\.xiaohongshu\.com\/api\/sns\/v\d\/note\/feed\? url script-response-body https://cdn.jsdelivr.net/gh/sve1r/Rules-For-Quantumult-X@develop/Scripts/AdBlock/LittleRedBook/LittleRedBook.min.js
+^https?:\/\/edith\.xiaohongshu\.com\/api\/sns\/v\d\/note\/feed\? url script-response-body https://cdn.jsdelivr.net/gh/sve1r/Rules-For-Quantumult-X@main/Scripts/AdBlock/LittleRedBook/LittleRedBook.min.js
 
 # > 小红书_开屏广告@ddgksf2013
-^https?:\/\/edith\.xiaohongshu\.com\/api\/sns\/v\d\/system_service\/splash_config url script-response-body https://cdn.jsdelivr.net/gh/sve1r/Rules-For-Quantumult-X@develop/Scripts/AdBlock/LittleRedBook/LittleRedBook.min.js
+^https?:\/\/edith\.xiaohongshu\.com\/api\/sns\/v\d\/system_service\/splash_config url script-response-body https://cdn.jsdelivr.net/gh/sve1r/Rules-For-Quantumult-X@main/Scripts/AdBlock/LittleRedBook/LittleRedBook.min.js
 
 # > 小红书_首页瀑布流@ddgksf2013
-^https?:\/\/edith\.xiaohongshu\.com\/api\/sns\/v\d\/homefeed\? url script-response-body https://cdn.jsdelivr.net/gh/sve1r/Rules-For-Quantumult-X@develop/Scripts/AdBlock/LittleRedBook/LittleRedBook.min.js
+^https?:\/\/edith\.xiaohongshu\.com\/api\/sns\/v\d\/homefeed\? url script-response-body https://cdn.jsdelivr.net/gh/sve1r/Rules-For-Quantumult-X@main/Scripts/AdBlock/LittleRedBook/LittleRedBook.min.js
 
 # > 小红书_启动处理@ddgksf2013
-^https?:\/\/edith\.xiaohongshu\.com\/api\/sns\/v\d\/system_service\/config\? url script-response-body https://cdn.jsdelivr.net/gh/sve1r/Rules-For-Quantumult-X@develop/Scripts/AdBlock/LittleRedBook/LittleRedBook.min.js
+^https?:\/\/edith\.xiaohongshu\.com\/api\/sns\/v\d\/system_service\/config\? url script-response-body https://cdn.jsdelivr.net/gh/sve1r/Rules-For-Quantumult-X@main/Scripts/AdBlock/LittleRedBook/LittleRedBook.min.js
 
 # > 小红书_热搜发现@ddgksf2013
-^https?:\/\/edith\.xiaohongshu\.com\/api\/sns\/v\d\/search\/hot_list url script-response-body https://cdn.jsdelivr.net/gh/sve1r/Rules-For-Quantumult-X@develop/Scripts/AdBlock/LittleRedBook/LittleRedBook.min.js
+^https?:\/\/edith\.xiaohongshu\.com\/api\/sns\/v\d\/search\/hot_list url script-response-body https://cdn.jsdelivr.net/gh/sve1r/Rules-For-Quantumult-X@main/Scripts/AdBlock/LittleRedBook/LittleRedBook.min.js
 
 # > 小红书_默认填词@ddgksf2013
-^https?:\/\/edith\.xiaohongshu\.com\/api\/sns\/v\d\/search\/hint url script-response-body https://cdn.jsdelivr.net/gh/sve1r/Rules-For-Quantumult-X@develop/Scripts/AdBlock/LittleRedBook/LittleRedBook.min.js
+^https?:\/\/edith\.xiaohongshu\.com\/api\/sns\/v\d\/search\/hint url script-response-body https://cdn.jsdelivr.net/gh/sve1r/Rules-For-Quantumult-X@main/Scripts/AdBlock/LittleRedBook/LittleRedBook.min.js
 
 # > 小红书_去除购物@ddgksf2013
-^https?:\/\/edith\.xiaohongshu\.com\/api\/sns\/v\d\/homefeed\/categories url script-response-body https://cdn.jsdelivr.net/gh/sve1r/Rules-For-Quantumult-X@develop/Scripts/AdBlock/LittleRedBook/LittleRedBook.min.js
+^https?:\/\/edith\.xiaohongshu\.com\/api\/sns\/v\d\/homefeed\/categories url script-response-body https://cdn.jsdelivr.net/gh/sve1r/Rules-For-Quantumult-X@main/Scripts/AdBlock/LittleRedBook/LittleRedBook.min.js
 
 # > 小红书_猜你想搜@ddgksf2013
-^https?:\/\/edith\.xiaohongshu\.com\/api\/sns\/v\d\/search\/trending url script-response-body https://cdn.jsdelivr.net/gh/sve1r/Rules-For-Quantumult-X@develop/Scripts/AdBlock/LittleRedBook/LittleRedBook.min.js
+^https?:\/\/edith\.xiaohongshu\.com\/api\/sns\/v\d\/search\/trending url script-response-body https://cdn.jsdelivr.net/gh/sve1r/Rules-For-Quantumult-X@main/Scripts/AdBlock/LittleRedBook/LittleRedBook.min.js
 
 # > 小红书_通用广告请求@ddgksf2013
 ^https?:\/\/www\.xiaohongshu\.com\/api\/sns\/v\d\/(tag\/)?ads url reject-dict
