@@ -1,8 +1,7 @@
 const version = "V1.0.16";
 
 var respBody = JSON.parse($response.body);
--1 !=
-$request.url.indexOf("mtop.cainiao.nbpresentation.protocol.homepage.get.cn")
+-1 != $request.url.indexOf("mtop.cainiao.nbpresentation.protocol.homepage.get.cn")
   ? respBody.data?.result?.dataList?.length > 0 &&
     (respBody.data.result.dataList = respBody.data.result.dataList.filter(
       (d) => "big_banner_area_v870" != d.type
