@@ -4,7 +4,6 @@ user-agent,PPStream*,iQiyi
 user-agent,QIYI*,iQiyi
 user-agent,QYPlayer*,iQiyi
 user-agent,iQiyi*,iQiyi
-user-agent,iQiyi*,iQiyi
 
 # >> 主站
 host-suffix,iQiyi.com,iQiyi

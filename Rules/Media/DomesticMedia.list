@@ -70,17 +70,17 @@ host-suffix,bili23.cn,Domestic Media
 host-suffix,bili33.cn,Domestic Media
 host-suffix,biliapi.com,Domestic Media
 host-suffix,biliapi.net,Domestic Media
-host-suffix,Domestic Media.cc,Domestic Media
-host-suffix,Domestic Media.cn,Domestic Media
-host-suffix,Domestic Media.co,Domestic Media
-host-suffix,Domestic Media.com,Domestic Media
-host-suffix,Domestic Media.net,Domestic Media
-host-suffix,Domestic Media.tv,Domestic Media
-host-suffix,Domestic Mediagame.cn,Domestic Media
-host-suffix,Domestic Mediagame.co,Domestic Media
-host-suffix,Domestic Mediagame.net,Domestic Media
-host-suffix,Domestic Mediapay.cn,Domestic Media
-host-suffix,Domestic Mediapay.com,Domestic Media
+host-suffix,bilibili.cc,Domestic Media
+host-suffix,bilibili.cn,Domestic Media
+host-suffix,bilibili.co,Domestic Media
+host-suffix,bilibili.com,Domestic Media
+host-suffix,bilibili.net,Domestic Media
+host-suffix,bilibili.tv,Domestic Media
+host-suffix,bilibiligame.cn,Domestic Media
+host-suffix,bilibiligame.co,Domestic Media
+host-suffix,bilibiligame.net,Domestic Media
+host-suffix,bilibilipay.cn,Domestic Media
+host-suffix,bilibilipay.com,Domestic Media
 host-suffix,bilicdn1.com,Domestic Media
 host-suffix,bilicdn2.com,Domestic Media
 host-suffix,bilicdn3.com,Domestic Media
@@ -116,7 +116,7 @@ host-suffix,upos-hz-mirrorakam.akamaized.net,Domestic Media
 host-suffix,uposdash-302-bilivideo.yfcdn.net,Domestic Media
 host-suffix,yo9.com,Domestic Media
 user-agent,*bili*,Domestic Media
-user-agent,Domestic Media*,Domestic Media
+user-agent,bilibili*,Domestic Media
 user-agent,bili*,Domestic Media
 user-agent,bili-inter*,Domestic Media
 ip-cidr,106.75.74.76/32,Domestic Media
@@ -135,19 +135,19 @@ host-suffix,71edge.com,Domestic Media
 host-suffix,71edge.net,Domestic Media
 host-suffix,aianno.cn,Domestic Media
 host-suffix,aianno.com,Domestic Media
-host-suffix,a,Domestic Mediacloud-mgmt.com,Domestic Media
-host-suffix,a,Domestic Mediacloud.com,Domestic Media
-host-suffix,a,Domestic Mediacloud.net,Domestic Media
+host-suffix,aiQiyicloud-mgmt.com,Domestic Media
+host-suffix,aiQiyicloud.com,Domestic Media
+host-suffix,aiQiyicloud.net,Domestic Media
 host-suffix,baiying.com,Domestic Media
 host-suffix,gitv.cn,Domestic Media
 host-suffix,gitv.tv,Domestic Media
 host-suffix,ibkstore.com,Domestic Media
 host-suffix,iq.com,Domestic Media
-host-suffix,Domestic Media.com,Domestic Media
-host-suffix,Domestic Media.demo.uwp,Domestic Media
-host-suffix,Domestic Mediaedge.com,Domestic Media
-host-suffix,Domestic Mediaedge.net,Domestic Media
-host-suffix,Domestic Mediapic.com,Domestic Media
+host-suffix,iqiyi.com,Domestic Media
+host-suffix,iqiyi.demo.uwp,Domestic Media
+host-suffix,iqiyiedge.com,Domestic Media
+host-suffix,iqiyiedge.net,Domestic Media
+host-suffix,iqiyipic.com,Domestic Media
 host-suffix,jiangbing.cn,Domestic Media
 host-suffix,pps.tv,Domestic Media
 host-suffix,ppsimg.com,Domestic Media
@@ -167,7 +167,7 @@ host-KEYWORD,qiyi,Domestic Media
 user-agent,PPStream*,Domestic Media
 user-agent,QIYI*,Domestic Media
 user-agent,QYPlayer*,Domestic Media
-user-agent,Domestic Media*,Domestic Media
+user-agent,iQiyi*,Domestic Media
 user-agent,Domestic Media*,Domestic Media
 ip-cidr,101.224.0.0/13,Domestic Media
 ip-cidr,103.44.56.0/22,Domestic Media
@@ -281,20 +281,20 @@ host-suffix,yoqoo.com,Domestic Media
 host-suffix,yoqoo.net,Domestic Media
 host-suffix,yoqoo.net.cn,Domestic Media
 host-suffix,yoqoo.tv,Domestic Media
-host-suffix,Domestic Media.com,Domestic Media
-host-suffix,Domestic Media.com.cn,Domestic Media
-host-suffix,Domestic Media.org,Domestic Media
+host-suffix,youku.com,Domestic Media
+host-suffix,youku.com.cn,Domestic Media
+host-suffix,youku.org,Domestic Media
 host-suffix,youqoo.net,Domestic Media
 user-agent,%E4%BC%98%E9%85%B7*,Domestic Media
-user-agent,Domestic Media*,Domestic Media
+user-agent,youku*,Domestic Media
 ip-cidr,106.11.0.0/16,Domestic Media
 
 # > 芒果TV
-user-agent,Domestic Media*,Domestic Media
+user-agent,MGTV*,Domestic Media
 host-suffix,hifuntv.com,Domestic Media
 host-suffix,hitv.com,Domestic Media
 host-suffix,hunaniptv.com,Domestic Media
-host-suffix,Domestic Media.com,Domestic Media
+host-suffix,MgTV.com,Domestic Media
 host-suffix,imgo.tv,Domestic Media
-host-suffix,Domestic Media.com,Domestic Media
+host-suffix,mgtv.com,Domestic Media
 host-suffix,tazai.com,Domestic Media
