@@ -1,6 +1,11 @@
-host-suffix,amemv.com,Douyin
-host-suffix,ixigua.com,Douyin
-host-suffix,ixiguavideo.com,Douyin
-host-suffix,pstatp.com,Douyin
-host-suffix,snssdk.com,Douyin
-host-suffix,toutiao.com,Douyin
+host-suffix,amemv.com,DouYin
+host-suffix,douyincdn.com,DouYin
+host-suffix,douyinpic.com,DouYin
+host-suffix,douyinstatic.com,DouYin
+host-suffix,douyinvod.com,DouYin
+host-suffix,idouyinvod.com,DouYin
+host-suffix,ixigua.com,DouYin
+host-suffix,ixiguavideo.com,DouYin
+host-suffix,pstatp.com,DouYin
+host-suffix,snssdk.com,DouYin
+host-suffix,toutiao.com,DouYin
