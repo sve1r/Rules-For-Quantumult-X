@@ -1,4 +1,11 @@
 # > Netease Music
+# >> 主站
+host-suffix,music.126.com,NeteaseMusic
+host-suffix,music.126.net,NeteaseMusic
+host-suffix,music.163.com,NeteaseMusic
+host-suffix,music.163.net,NeteaseMusic
+
+# >> Other
 host,apm.music.163.com,NeteaseMusic
 host,apm3.music.163.com,NeteaseMusic
 host,interface.music.163.com,NeteaseMusic
@@ -7,8 +14,9 @@ host-suffix,163yun.com,NeteaseMusic
 host-suffix,api.iplay.163.com,NeteaseMusic
 host-suffix,hz.netease.com,NeteaseMusic
 host-suffix,mam.netease.com,NeteaseMusic
-host-suffix,music.126.com,NeteaseMusic
-host-suffix,music.163.com,NeteaseMusic
+host-suffix,yun-app.net,NeteaseMusic
+
+# >> IP-CIDR
 ip-cidr,101.71.154.241/32,NeteaseMusic
 ip-cidr,103.126.92.132/32,NeteaseMusic
 ip-cidr,103.126.92.133/32,NeteaseMusic

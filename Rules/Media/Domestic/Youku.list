@@ -1,0 +1,48 @@
+
+user-agent,%E4%BC%98%E9%85%B7*,Youku
+user-agent,Youku*,Youku
+
+# > 主站
+host-suffix,yodou.com,Youku
+host-suffix,yoku.net.cn,Youku
+host-suffix,yoqoo.com,Youku
+host-suffix,yoqoo.net,Youku
+host-suffix,yoqoo.net.cn,Youku
+host-suffix,yoqoo.tv,Youku
+host-suffix,youku.com,Youku
+host-suffix,youku.com.cn,Youku
+host-suffix,youku.org,Youku
+host-suffix,youqoo.net,Youku
+host-suffix,tudou.com,Youku
+host-suffix,soku.com,Youku
+host-suffix,ukoo.com.cn,Youku
+
+# > Youku CDN
+host-suffix,wwc.alicdn.com,Youku
+host-suffix,ykimg.com,Youku
+host-suffix,mmstat.com,Youku
+host-suffix,ns6mitkxo.cn,Youku
+host-suffix,sk2cdsnw.cn,Youku
+host-suffix,0co3geye.cn,Youku
+host-suffix,2isbbess.cn,Youku
+host-suffix,33lwhaoinc.cn,Youku
+host-suffix,52mtkvideo.cn,Youku
+host-suffix,9xsecndns.cn,Youku
+host-suffix,b82yxres.cn,Youku
+host-suffix,cibntv.net,Youku
+host-suffix,e8h2ty.tdum.alibaba.com,Youku
+
+# > 酷喵
+host-suffix,kumiao.com,Youku
+host-suffix,kumiao.tv,Youku
+host-suffix,kuxiaomiao.cn,Youku
+host-suffix,kuxiaomiao.com,Youku
+host-suffix,kuxiaomiao.com.cn,Youku
+host-suffix,kuxiaomiao.net,Youku
+
+# > Other
+ip-cidr,106.11.0.0/16,Youku
+host-suffix,gamenow.club,Youku
+host-suffix,sogoodtech1.cn,Youku
+host-suffix,wenyupages.com,Youku
+host-suffix,wingsmobiletek.cn,Youku

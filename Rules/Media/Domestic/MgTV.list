@@ -1,0 +1,9 @@
+# > 芒果TV
+user-agent,MGTV*,MgTV
+host-suffix,hifuntv.com,MgTV
+host-suffix,hitv.com,MgTV
+host-suffix,hunaniptv.com,MgTV
+host-suffix,MgTV.com,MgTV
+host-suffix,imgo.tv,MgTV
+host-suffix,mgtv.com,MgTV
+host-suffix,tazai.com,MgTV
