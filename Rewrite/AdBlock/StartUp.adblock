@@ -185,7 +185,7 @@ https?:\/\/res\.xiaojukeji\.com\/resapi\/activity\/get(Ruled|Preload|PasMultiNot
 # > feikechaguan
 ^https?:\/\/47\.100\.65\.202\/source\/plugin\/mobile\/mobile\.php\?module=advis url reject
 ^https?:\/\/47\.100\.65\.202\/api\/mobile\/index\.php\?version=\d&mobile=yes&module=basicdata&type=forumlist url response-body adv response-body ddgksf2013
-^https?:\/\/47\.100\.65\.202\/source\/plugin\/mobile\/mobile\.php\?module=threadpost&.+?&page=1 url script-response-body https://rules-for-qx.sveir.xyz/Scripts/AdBlock/FlyPiggy.js
+^https?:\/\/47\.100\.65\.202\/source\/plugin\/mobile\/mobile\.php\?module=threadpost&.+?&page=1 url script-response-body https://rules-for-qx.sveir.xyz/Scripts/AdBlock/Other/FlyPiggy.js
 # > fengyunxing
 ^https?:\/\/carapp\.gtmc\.com\.cn\/api\/appgtmc\/homePage\/HomePageAction\/queryHomePageImg\.json url reject
 
@@ -544,7 +544,7 @@ https://support.you.163.com/appversync/check.do url reject
 ; ^https?:\/\/yanxuan.nosdn.127.net\/(static-union\/)?.*\.gif url reject
 ^https?:\/\/yanxuan\.nosdn\.127\.net\/.*\.mp4 url reject
 # > WeChat110
-^https\:\/\/(weixin110\.qq|security.wechat)\.com\/cgi-bin\/mmspamsupport-bin\/newredirectconfirmcgi\? url script-response-body https://rules-for-qx.sveir.xyz/Scripts/Wechat/UnlockLink.min.js
+^https\:\/\/(weixin110\.qq|security.wechat)\.com\/cgi-bin\/mmspamsupport-bin\/newredirectconfirmcgi\? url script-response-body https://rules-for-qx.sveir.xyz/Scripts/AdBlock/Wechat/UnlockLink.min.js
 # > weixindaihuo
 ^https?:\/\/mp\.weixin\.qq\.com\/mp\/cps_product_info url reject
 # > WeChat
