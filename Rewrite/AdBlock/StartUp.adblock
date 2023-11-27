@@ -54,7 +54,7 @@ hostname = wallpaper.soutushenqi.com, carapp.gtmc.com.cn, 140.179.224.63, ap.don
 # > amdc
 ^http:\/\/amdc\.m\.taobao\.com url script-response-body https://rules-for-qx.sveir.xyz/Scripts/AdBlock/Other/Amdc.min.js
 # > ahfs
-^https?:\/\/.*ahhhhfs\.com\/($|[0-9a-zA-Z_/]+\/$) url script-response-body https://rules-for-qx.sveir.xyz/Scripts/AdBlock/Other/ahfs.js
+^https?:\/\/.*ahhhhfs\.com\/($|[0-9a-zA-Z_/]+\/$) url script-response-body https://rules-for-qx.sveir.xyz/Scripts/AdBlock/Other/Ahfs.js
 
 
 # ======= B ======= #
