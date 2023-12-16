@@ -1,4 +1,4 @@
-const version = 'V2.0.117';
+const version = 'V2.0.118';
 
 let body = $response.body;
 if (body) {
@@ -162,7 +162,7 @@ if (body) {
         let v = JSON.parse(body),
           $ = new Set([
             396, 397, 398, 399, 407, 410, 402, 404, 425, 426, 427, 428, 430,
-            432, 433, 434, 494, 495, 496, 497, 500, 501,
+            432, 433, 434, 494, 495, 496, 497, 500, 501, 2830,
           ]);
         v.data.sections_v2.forEach((t, i) => {
           let a = t.items.filter((t) => $.has(t.id));
