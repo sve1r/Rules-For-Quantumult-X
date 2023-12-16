@@ -1,22 +1,35 @@
-let persisVal = read("UnblockURLinWeChat");
-let useCache = persisVal.useCache === "true"; //是否在微信中用快照显示被封禁的链接
-let forceRedirect = persisVal.forceRedirect === "true"; //是否在微信中进行强制重定向，允许的情况下可能出现循环重定向
-let wechatExportKey = persisVal.wechatExportKey || ""; //微信的一个 key，暂未研究如何生成，测试中仅 macOS 微信打开链接跳转浏览器时会缺失，导致无法解析原始链接
-if (typeof $argument != "undefined") {
-    let arg = Object.fromEntries($argument.split("&").map((item) => item.split("=")));
-    useCache = arg.useCache === "true";
-    forceRedirect = arg.forceRedirect === "ture";
+let persisVal = read('UnblockURLinWeChat');
+let useCache = persisVal.useCache === 'true'; //是否在微信中用快照显示被封禁的链接
+let forceRedirect = persisVal.forceRedirect === 'true'; //是否在微信中进行强制重定向，允许的情况下可能出现循环重定向
+let wechatExportKey = persisVal.wechatExportKey || ''; //微信的一个 key，暂未研究如何生成，测试中仅 macOS 微信打开链接跳转浏览器时会缺失，导致无法解析原始链接
+if (typeof $argument != 'undefined') {
+  let arg = Object.fromEntries(
+    $argument.split('&').map((item) => item.split('='))
+  );
+  useCache = arg.useCache === 'true';
+  forceRedirect = arg.forceRedirect === 'ture';
 }
 const respBody = $response.body;
 //const cacheURL = "https://webcache.googleusercontent.com/search?q=cache:";
-const cacheURL = "https://web.archive.org/web/20991231999999/";
-const alipayScheme = "alipays://platformapi/startapp?appId=20000067&url=";
-const isQuanX = typeof $notify != "undefined";
-const isSurgeiOS = typeof $utils != "undefined" && $environment.system == "iOS";
-const isLooniOS = typeof $loon != "undefined" && /iPhone/.test($loon);
-const redirectStatus = isQuanX ? "HTTP/1.1 302 Temporary Redirect" : 302;
+const cacheURL = 'https://web.archive.org/web/20991231999999/';
+const alipayScheme = 'alipays://platformapi/startapp?appId=20000067&url=';
+
+const isQuanX = typeof $notify != 'undefined';
+const isSurgeiOS =
+  'undefined' !== typeof $environment &&
+  $environment['surge-version'] &&
+  $environment.system == 'iOS';
+const isLooniOS = typeof $loon != 'undefined' && /iPhone/.test($loon);
+const isStashiOS =
+  'undefined' !== typeof $environment &&
+  $environment['stash-version'] &&
+  $environment.system == 'iOS';
+const isShadowrocket = 'undefined' !== typeof $rocket;
+const isLanceX = 'undefined' != typeof $native;
+
+const redirectStatus = isQuanX ? 'HTTP/1.1 302 Temporary Redirect' : 302;
 const cgiDataReg = /var cgiData = ([\s\S]*);\s*<\/script>/;
-let cgiData = JSON.parse(cgiDataReg.exec(respBody)[1].replace(/\\/g, ""));
+let cgiData = JSON.parse(cgiDataReg.exec(respBody)[1].replace(/\\/g, ''));
 
 // HTML entities by https://github.com/mathiasbynens/he
 // prettier-ignore
@@ -26,120 +39,147 @@ let cgiData = JSON.parse(cgiDataReg.exec(respBody)[1].replace(/\\/g, ""));
 // prettier-ignore
 !function(t,n){var r,e;"object"==typeof exports&&"undefined"!=typeof module?module.exports=n():"function"==typeof define&&define.amd?define(n):(r=t.Base64,(e=n()).noConflict=function(){return t.Base64=r,e},t.Meteor&&(Base64=e),t.Base64=e)}("undefined"!=typeof self?self:"undefined"!=typeof window?window:"undefined"!=typeof global?global:this,(function(){"use strict";var t,n="3.7.2",r="function"==typeof atob,e="function"==typeof btoa,o="function"==typeof Buffer,u="function"==typeof TextDecoder?new TextDecoder:void 0,i="function"==typeof TextEncoder?new TextEncoder:void 0,f=Array.prototype.slice.call("ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/="),c=(t={},f.forEach((function(n,r){return t[n]=r})),t),a=/^(?:[A-Za-z\d+\/]{4})*?(?:[A-Za-z\d+\/]{2}(?:==)?|[A-Za-z\d+\/]{3}=?)?$/,d=String.fromCharCode.bind(String),s="function"==typeof Uint8Array.from?Uint8Array.from.bind(Uint8Array):function(t,n){return void 0===n&&(n=function(t){return t}),new Uint8Array(Array.prototype.slice.call(t,0).map(n))},l=function(t){return t.replace(/=/g,"").replace(/[+\/]/g,(function(t){return"+"==t?"-":"_"}))},h=function(t){return t.replace(/[^A-Za-z0-9\+\/]/g,"")},p=function(t){for(var n,r,e,o,u="",i=t.length%3,c=0;c<t.length;){if((r=t.charCodeAt(c++))>255||(e=t.charCodeAt(c++))>255||(o=t.charCodeAt(c++))>255)throw new TypeError("invalid character found");u+=f[(n=r<<16|e<<8|o)>>18&63]+f[n>>12&63]+f[n>>6&63]+f[63&n]}return i?u.slice(0,i-3)+"===".substring(i):u},y=e?function(t){return btoa(t)}:o?function(t){return Buffer.from(t,"binary").toString("base64")}:p,A=o?function(t){return Buffer.from(t).toString("base64")}:function(t){for(var n=[],r=0,e=t.length;r<e;r+=4096)n.push(d.apply(null,t.subarray(r,r+4096)));return y(n.join(""))},b=function(t,n){return void 0===n&&(n=!1),n?l(A(t)):A(t)},g=function(t){if(t.length<2)return(n=t.charCodeAt(0))<128?t:n<2048?d(192|n>>>6)+d(128|63&n):d(224|n>>>12&15)+d(128|n>>>6&63)+d(128|63&n);var n=65536+1024*(t.charCodeAt(0)-55296)+(t.charCodeAt(1)-56320);return d(240|n>>>18&7)+d(128|n>>>12&63)+d(128|n>>>6&63)+d(128|63&n)},B=/[\uD800-\uDBFF][\uDC00-\uDFFFF]|[^\x00-\x7F]/g,x=function(t){return t.replace(B,g)},C=o?function(t){return Buffer.from(t,"utf8").toString("base64")}:i?function(t){return A(i.encode(t))}:function(t){return y(x(t))},m=function(t,n){return void 0===n&&(n=!1),n?l(C(t)):C(t)},v=function(t){return m(t,!0)},U=/[\xC0-\xDF][\x80-\xBF]|[\xE0-\xEF][\x80-\xBF]{2}|[\xF0-\xF7][\x80-\xBF]{3}/g,F=function(t){switch(t.length){case 4:var n=((7&t.charCodeAt(0))<<18|(63&t.charCodeAt(1))<<12|(63&t.charCodeAt(2))<<6|63&t.charCodeAt(3))-65536;return d(55296+(n>>>10))+d(56320+(1023&n));case 3:return d((15&t.charCodeAt(0))<<12|(63&t.charCodeAt(1))<<6|63&t.charCodeAt(2));default:return d((31&t.charCodeAt(0))<<6|63&t.charCodeAt(1))}},w=function(t){return t.replace(U,F)},S=function(t){if(t=t.replace(/\s+/g,""),!a.test(t))throw new TypeError("malformed base64.");t+="==".slice(2-(3&t.length));for(var n,r,e,o="",u=0;u<t.length;)n=c[t.charAt(u++)]<<18|c[t.charAt(u++)]<<12|(r=c[t.charAt(u++)])<<6|(e=c[t.charAt(u++)]),o+=64===r?d(n>>16&255):64===e?d(n>>16&255,n>>8&255):d(n>>16&255,n>>8&255,255&n);return o},E=r?function(t){return atob(h(t))}:o?function(t){return Buffer.from(t,"base64").toString("binary")}:S,D=o?function(t){return s(Buffer.from(t,"base64"))}:function(t){return s(E(t),(function(t){return t.charCodeAt(0)}))},R=function(t){return D(T(t))},z=o?function(t){return Buffer.from(t,"base64").toString("utf8")}:u?function(t){return u.decode(D(t))}:function(t){return w(E(t))},T=function(t){return h(t.replace(/[-_]/g,(function(t){return"-"==t?"+":"/"})))},Z=function(t){return z(T(t))},j=function(t){return{value:t,enumerable:!1,writable:!0,configurable:!0}},I=function(){var t=function(t,n){return Object.defineProperty(String.prototype,t,j(n))};t("fromBase64",(function(){return Z(this)})),t("toBase64",(function(t){return m(this,t)})),t("toBase64URI",(function(){return m(this,!0)})),t("toBase64URL",(function(){return m(this,!0)})),t("toUint8Array",(function(){return R(this)}))},O=function(){var t=function(t,n){return Object.defineProperty(Uint8Array.prototype,t,j(n))};t("toBase64",(function(t){return b(this,t)})),t("toBase64URI",(function(){return b(this,!0)})),t("toBase64URL",(function(){return b(this,!0)}))},P={version:n,VERSION:"3.7.2",atob:E,atobPolyfill:S,btoa:y,btoaPolyfill:p,fromBase64:Z,toBase64:m,encode:m,encodeURI:v,encodeURL:v,utob:x,btou:w,decode:Z,isValid:function(t){if("string"!=typeof t)return!1;var n=t.replace(/\s+/g,"").replace(/={0,2}$/,"");return!/[^\s0-9a-zA-Z\+/]/.test(n)||!/[^\s0-9a-zA-Z\-_]/.test(n)},fromUint8Array:b,toUint8Array:R,extendString:I,extendUint8Array:O,extendBuiltins:function(){I(),O()},Base64:{}};return Object.keys(P).forEach((function(t){return P.Base64[t]=P[t]})),P}));
 
-if (cgiData.type === "gray" || cgiData.type === "newgray" || cgiData.type === "empty") {
-    let trueURL = he.decode(
-        `${cgiData.hasOwnProperty("url") ? cgiData.url : /http(.*)/.exec(cgiData.desc)[0]}`
+if (
+  cgiData.type === 'gray' ||
+  cgiData.type === 'newgray' ||
+  cgiData.type === 'empty'
+) {
+  let trueURL = he.decode(
+    `${
+      cgiData.hasOwnProperty('url')
+        ? cgiData.url
+        : /http(.*)/.exec(cgiData.desc)[0]
+    }`
+  );
+  trueURL = trueURL.indexOf('http') == 0 ? trueURL : 'http://' + trueURL;
+  if (/qr\.alipay/.test(trueURL)) {
+    notify(
+      '',
+      '点击跳转到支付宝打开',
+      trueURL,
+      alipayScheme + encodeURIComponent(trueURL)
     );
-    trueURL = trueURL.indexOf("http") == 0 ? trueURL : "http://" + trueURL;
-    if (/qr\.alipay/.test(trueURL)) {
-        notify("", "点击跳转到支付宝打开", trueURL, alipayScheme + encodeURIComponent(trueURL));
+    $done({});
+  } else {
+    if (trueURL.includes('https://spotify.link')) {
+      const pattern = /\$full_url=([^&]+)/;
+      trueURL = decodeURIComponent(trueURL).match(pattern)[1];
+    }
+    notify('', '点击跳转到浏览器打开', trueURL, trueURL);
+    if (forceRedirect) {
+      let redirect = {
+        status: redirectStatus,
+        headers: {
+          Location: trueURL,
+        },
+      };
+      if (isQuanX) redirect.body = respBody;
+      $done(redirect);
+    } else $done({});
+  }
+} else if (cgiData.type === 'block') {
+  !(async () => {
+    let url = cgiData.btns[0].url.replace('newreadtemplate', 'redirecthelpcgi');
+    if (!/exportkey=(.+)/.test(url)) {
+      if (wechatExportKey) {
+        url += wechatExportKey;
+      } else {
         $done({});
-    } else {
-        notify("", "点击跳转到浏览器打开", trueURL, trueURL);
-        if (forceRedirect) {
+      }
+    }
+    await get(url).then((resp) => {
+      let obj = JSON.parse(resp.body);
+      if (obj.hasOwnProperty('btns')) {
+        let trueURL = decodeURIComponent(
+          /url=(.*)/.exec(obj.btns[0].url)[1]
+        ).replace(/&block_?type(.*)/, '');
+        trueURL = trueURL.includes('.') ? trueURL : Base64.decode(trueURL);
+        trueURL = trueURL.indexOf('http') == 0 ? trueURL : 'http://' + trueURL;
+        if (!trueURL.includes('web.archive.org/web')) {
+          notify('', '点击跳转到浏览器打开', trueURL, trueURL);
+          if (useCache) {
+            let cacheLink = cacheURL + trueURL;
             let redirect = {
-                status: redirectStatus,
-                headers: {
-                    Location: trueURL,
-                },
+              status: redirectStatus,
+              headers: {
+                Location: cacheLink,
+              },
             };
             if (isQuanX) redirect.body = respBody;
             $done(redirect);
-        } else $done({});
-    }
-} else if (cgiData.type === "block") {
-    !(async () => {
-        let url = cgiData.btns[0].url.replace("newreadtemplate", "redirecthelpcgi");
-        if (!/exportkey=(.+)/.test(url)) {
-            if (wechatExportKey) {
-                url += wechatExportKey;
-            } else {
-                $done({});
-            }
-        }
-        await get(url).then((resp) => {
-            let obj = JSON.parse(resp.body);
-            if (obj.hasOwnProperty("btns")) {
-                let trueURL = decodeURIComponent(/url=(.*)/.exec(obj.btns[0].url)[1]).replace(
-                    /&block_?type(.*)/,
-                    ""
-                );
-                trueURL = trueURL.includes(".") ? trueURL : Base64.decode(trueURL);
-                trueURL = trueURL.indexOf("http") == 0 ? trueURL : "http://" + trueURL;
-                if (!trueURL.includes("web.archive.org/web")) {
-                    notify("", "点击跳转到浏览器打开", trueURL, trueURL);
-                    if (useCache) {
-                        let cacheLink = cacheURL + trueURL;
-                        let redirect = {
-                            status: redirectStatus,
-                            headers: {
-                                Location: cacheLink,
-                            },
-                        };
-                        if (isQuanX) redirect.body = respBody;
-                        $done(redirect);
-                    } else {
-                        $done({});
-                    }
-                } else {
-                    $done({});
-                }
-                resolve(trueURL);
-            }
+          } else {
             $done({});
-            resolve();
-        });
-    })();
+          }
+        } else {
+          $done({});
+        }
+        resolve(trueURL);
+      }
+      $done({});
+      resolve();
+    });
+  })();
 } else {
-    $done({});
+  $done({});
 }
 
-function notify(title = "", subtitle = "", content = "", open_url) {
-    if (isQuanX && /iOS/.test($environment.version)) {
-        let opts = {};
-        if (open_url) opts["open-url"] = open_url;
-        if (JSON.stringify(opts) == "{}") {
-            $notify(title, subtitle, content);
-        } else {
-            $notify(title, subtitle, content, opts);
-        }
-    } else if (isSurgeiOS) {
-        let opts = {};
-        if (open_url) opts["url"] = open_url;
-        if (JSON.stringify(opts) == "{}") {
-            $notification.post(title, subtitle, content);
-        } else {
-            $notification.post(title, subtitle, content, opts);
-        }
-    } else if (isLooniOS) {
-        let opts = {};
-        if (open_url) opts["openUrl"] = open_url;
-        if (JSON.stringify(opts) == "{}") {
-            $notification.post(title, subtitle, content);
-        } else {
-            $notification.post(title, subtitle, content, opts);
-        }
+function notify(title = '', subtitle = '', content = '', open_url) {
+  if (isQuanX && /iOS/.test($environment.version)) {
+    let opts = {};
+    if (open_url) opts['open-url'] = open_url;
+    if (JSON.stringify(opts) == '{}') {
+      $notify(title, subtitle, content);
+    } else {
+      $notify(title, subtitle, content, opts);
     }
+  } else if (isSurgeiOS || isStashiOS || isLanceX) {
+    let opts = {};
+    if (open_url) opts['url'] = open_url;
+    if (JSON.stringify(opts) == '{}') {
+      $notification.post(title, subtitle, content);
+    } else {
+      $notification.post(title, subtitle, content, opts);
+    }
+  } else if (isLooniOS) {
+    let opts = {};
+    if (open_url) opts['openUrl'] = open_url;
+    if (JSON.stringify(opts) == '{}') {
+      $notification.post(title, subtitle, content);
+    } else {
+      $notification.post(title, subtitle, content, opts);
+    }
+  } else if (isShadowrocket) {
+    if (open_url) {
+      $notification.post(title, subtitle, content, open_url);
+    } else {
+      $notification.post(title, subtitle, content);
+    }
+  }
 }
 
 function get(options) {
-    if (isQuanX) {
-        if (typeof options == "string") options = { url: options, method: "GET" };
-        return $task.fetch(options);
-    } else {
-        return new Promise((resolve, reject) => {
-            $httpClient.get(options, (err, response, body) => {
-                if (err) reject(err);
-                else resolve({ statusCode: response.status, headers: response.headers, body });
-            });
-        });
-    }
+  if (isQuanX) {
+    if (typeof options == 'string') options = { url: options, method: 'GET' };
+    return $task.fetch(options);
+  } else {
+    return new Promise((resolve, reject) => {
+      $httpClient.get(options, (err, response, body) => {
+        if (err) reject(err);
+        else
+          resolve({
+            statusCode: response.status,
+            headers: response.headers,
+            body,
+          });
+      });
+    });
+  }
 }
 
 function read(key) {
-    if (typeof $notify != "undefined") {
-        return JSON.parse($prefs.valueForKey(key) || "{}");
-    } else {
-        return JSON.parse($persistentStore.read(key) || "{}");
-    }
+  if (typeof $notify != 'undefined') {
+    return JSON.parse($prefs.valueForKey(key) || '{}');
+  } else {
+    return JSON.parse($persistentStore.read(key) || '{}');
+  }
 }

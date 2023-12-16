@@ -1,16 +1,35 @@
+# > Credit
+# @Choler & @DivineEngine & @app2smile
+
+# > Feature
+# - 删除 Youtube (Music) 广告
+# - 删除 Youtube 底部 上传 按钮 & Youtube Music 底部选段、升级按钮
+# + 增加 Youtube 画中画(PIP)
+# + 增加 Youtube 字幕翻译 (Thanks @VirgilClyne)
+# + 增加 Youtube (Music) 后台播放
+# + 增加 Youtube Music 歌词翻译
+
+# > Note
+# Youtube 画中画和后台播放分别在客户端内关闭
+#   - 设置 -> 通用 -> 画中画
+#   - 设置 -> 后台播放和下载 -> 后台播放
+# 该模块已足够全面，无需其他规则混用，防止重写规则被破坏
+# 不支持 Mock 的客户端可以用 reject-200/reject-img 替代
+
 hostname = -redirector*.googlevideo.com,*.googlevideo.com,www.youtube.com,s.youtube.com,youtubei.googleapis.com
 
 # ======= 视频广告请求 ======= #
 (^https?:\/\/[\w-]+\.googlevideo\.com\/(?!dclk_video_ads).+?)&ctier=L(&.+?),ctier,(.+) url 302 $1$2$3
 ^https?:\/\/[\w-]+\.googlevideo\.com\/(?!(dclk_video_ads|videoplayback\?)).+&oad url reject-200
-
+^https?:\/\/[\w-]+\.googlevideo\.com\/initplayback.+&oad url reject-200
 
 # ======= 视频PIP|后台播放|瀑布流|搜索页|播放页|短视频|贴片广告  ======= #
-^https:\/\/youtubei\.googleapis\.com\/youtubei\/v1\/(browse|next|player|reel\/reel_watch_sequence)\? url script-request-body https://raw.githubusercontent.com/Maasea/sgmodule/master/Script/Youtube/dist/youtube.request.beta.js
-^https:\/\/youtubei\.googleapis\.com\/youtubei\/v1\/(browse|next|player|search|reel\/reel_watch_sequence|guide|account\/get_setting)\? url script-response-body https://raw.githubusercontent.com/Maasea/sgmodule/master/Script/Youtube/dist/youtube.response.beta.js
+^https:\/\/youtubei\.googleapis\.com\/youtubei\/v1\/(browse|next|player|reel\/reel_watch_sequence)\? url script-request-body https://cdn.jsdelivr.net/gh/Maasea/sgmodule@master/Script/Youtube/dist/youtube.request.beta.js
+^https:\/\/youtubei\.googleapis\.com\/youtubei\/v1\/(browse|next|player|search|reel\/reel_watch_sequence|guide|account\/get_setting)\? url script-response-body https://cdn.jsdelivr.net/gh/Maasea/sgmodule@master/Script/Youtube/dist/youtube.response.beta.js
 
 
 # ======= 通用广告请求 ======= #
 ^https?:\/\/(www|s)\.youtube\.com\/api\/stats\/ads url reject-200
 ^https?:\/\/(www|s)\.youtube\.com\/(pagead|ptracking) url reject-200
 ^https?:\/\/s\.youtube\.com\/api\/stats\/qoe\?adcontext url reject-200
+^https?:\/\/youtubei\.googleapis\.com\/youtubei\/v\d\/player\/ad_break url reject
