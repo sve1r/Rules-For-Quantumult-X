@@ -21,7 +21,7 @@ hostname=m.nivod4.tv, *.freeok.*, *netflix*, *bdys*,*cupfox*,*cokemv*,*pornhub.c
 
 
 # > 08 FreeOk[网页优化]@ddgksf2013 - 网站地址：https://www.freeok.vip
-^https?:\/\/www\.freeok\.(vip|pro)(\/$|\/[0-9a-zA-Z=_/-]+\.html$) url script-response-body https://raw.githubusercontent.com/ddgksf2013/Scripts/master/adguard.js
+^https?:\/\/www\.freeok\.(vip|pro)(\/$|\/[0-9a-zA-Z=_/-]+\.html$) url script-response-body https://cdn.jsdelivr.net/gh/ddgksf2013/Scripts@master/adguard.js
 
 # > 07 哔嘀影视[网页优化]@ddgksf2013 - 网站地址：https://www.bdys01.com 
 ^https?:\/\/.*bdys.*com\/($|([a-z]+)\/(play\/)?\d+.*$) url script-response-body https://cdn.jsdelivr.net/gh/ddgksf2013/Scripts@master/bdys.js
@@ -47,7 +47,7 @@ hostname=m.nivod4.tv, *.freeok.*, *netflix*, *bdys*,*cupfox*,*cokemv*,*pornhub.c
 
 
 # =========== 不维护或网站已关服 =========== #
-# > 08 Cokemv[网页优化]@ddgksf2013 - 网站地址：https://cokemv.me 
+# > 08 Cokemv[网页优化]@ddgksf2013 - 网站地址：https://cokemv.me
 ^https?:/\/cokemv\.me\/($|vod.*$) url script-response-body https://cdn.jsdelivr.net/gh/ddgksf2013/Scripts@master/cokemv.js
 # > 07 555影视[网页优化]@ddgksf2013 - 网站地址：https://555yy6.com
 ^https?:\/\/.*5y.*\/($|[0-9a-zA-Z=_/-]+\.html$) url script-response-body https://cdn.jsdelivr.net/gh/ddgksf2013/Scripts@master/555.js
