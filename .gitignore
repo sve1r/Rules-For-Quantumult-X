@@ -7,3 +7,6 @@
 
 #Temporary Files
 *temp*.txt
+
+# macOS File System
+.DS_Store
