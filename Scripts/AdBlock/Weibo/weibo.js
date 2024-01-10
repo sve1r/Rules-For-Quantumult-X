@@ -1,5 +1,4 @@
-
-const version = 'V2.0.120';
+const version = 'V2.0.122';
 
 
 const mainConfig = {
@@ -84,8 +83,7 @@ const mainConfig = {
         "php?a=search_topic": "removeSearchTopic",
         "v1/ad/realtime": "removeRealtimeAd",
         "v1/ad/preload": "removeAdPreload",
-        "php?a=open_app": "removeAdBanner",
-        "groups/allgroups": "removeGroup"
+        "php?a=open_app": "removeAdBanner"
     };
 
 function getModifyMethod(e) {
@@ -97,10 +95,6 @@ function getModifyMethod(e) {
 
 function removeRealtimeAd(e) {
     return delete e.ads, e.code = 4016, e
-}
-
-function removeGroup(e) {
-    return e.pageDatas && (e.pageDatas = Object.values(e.pageDatas).filter(e => "homeExtend" != e.pageDataType)), e
 }
 
 function removeAdBanner(e) {
@@ -197,7 +191,7 @@ function removeSearchMain(e) {
 }
 
 function checkSearchWindow(e) {
-    return !!mainConfig.removeSearchWindow && "card" == e.category && (e.data?.itemid == "finder_window" || e.data?.itemid == "more_frame" || e.data?.card_type == 208 || e.data?.card_type == 217 || e.data?.card_type == 101 || e.data?.card_type == 19 || e.data?.mblog?.page_info?.actionlog?.source?.includes("ad"))
+    return !!mainConfig.removeSearchWindow && "card" == e.category && (e.data?.itemid == "finder_window" || e.data?.itemid == "more_frame" || e.data?.card_type == 208 || e.data?.card_type == 247 || e.data?.card_type == 217 || e.data?.card_type == 101 || e.data?.card_type == 19 || e.data?.mblog?.page_info?.actionlog?.source?.includes("ad"))
 }
 
 function removeSearch(e) {
