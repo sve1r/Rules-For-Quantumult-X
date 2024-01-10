@@ -1,4 +1,6 @@
 
+#使用说明：  用于视频、瀑布流、搜索、播放页、短视频及贴片广告、视频自动PIP、后台播放、自动翻译，不适用允许 UDP 转发的节点及 Premium
+#使用说明：  如果视频广告仍然存在，请在QuantumultX配置文件的[general]下添加 udp_drop_list=443
 
 hostname = -redirector*.googlevideo.com,*.googlevideo.com,www.youtube.com,s.youtube.com,youtubei.googleapis.com
 
