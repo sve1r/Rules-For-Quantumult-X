@@ -1,0 +1,12 @@
+##############################
+# Grow 解锁
+# LastUpdateDate: 2024-01-14 19:01:02
+##############################
+
+hostname=api.revenuecat.com
+
+^https?:\/\/api\.revenuecat\.com\/v\d\/subscribers\/(\$RCAnonymousID\%)?(\w)+$ url script-response-body https://rules-for-qx.sveir.xyz/Scripts/Unlock/Grow.min.js
+^https?:\/\/api\.revenuecat\.com\/v\d\/receipts$ url script-response-body https://rules-for-qx.sveir.xyz/Scripts/Unlock/Grow.min.js
+
+
+
