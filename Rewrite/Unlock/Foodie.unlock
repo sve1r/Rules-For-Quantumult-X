@@ -1,0 +1,8 @@
+##############################
+# Foodie 解锁
+# LastUpdateDate: 2024-01-14 19:30:22
+##############################
+
+hostname = purchase-foodiecn-api.yiruikecorp.com
+
+^https:\/\/purchase-foodiecn-api\.yiruikecorp\.com\/v1\/purchase\/subscription\/subscriber\/status url script-response-body https://rules-for-qx.sveir.xyz/Scripts/Unlock/Foodie.min.js

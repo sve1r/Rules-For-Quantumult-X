@@ -1,0 +1,8 @@
+##############################
+# 薄荷健康 解锁
+# LastUpdateDate: 2024-01-14 19:27:28
+##############################
+
+hostname = api.boohee.com
+
+^https?:\/\/api\.boohee\.com\/app-interface\/.+\/user\/user_info url script-response-body https://rules-for-qx.sveir.xyz/Scripts/Unlock/Boohee.min.js
