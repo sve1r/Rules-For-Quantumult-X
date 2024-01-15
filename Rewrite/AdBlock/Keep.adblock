@@ -40,12 +40,14 @@ hostname=api.gotokeep.com, kad.gotokeep.com
 # > 屏蔽更新
 ^https?:\/\/api\.gotokeep\.com\/anno\/v\d\/upgrade\/check url reject
 # > 我的页面去推广
-^https?:\/\/api\.gotokeep\.com\/athena\/v\d\/people\/my$ url script-response-body https://github.com/ddgksf2013/Scripts/raw/master/keepStyle.js
+^https?:\/\/api\.gotokeep\.com\/athena\/v\d\/people\/my$ url script-response-body https://rules-for-qx.sveir.xyz/Scripts/AdBlock/Other/Keep.min.js
 # > 应用底部栏净化
-^https?:\/\/api\.gotokeep\.com\/config\/v\d\/basic url script-response-body https://github.com/ddgksf2013/Scripts/raw/master/keepStyle.js
+^https?:\/\/api\.gotokeep\.com\/config\/v\d\/basic url script-response-body https://rules-for-qx.sveir.xyz/Scripts/AdBlock/Other/Keep.min.js
 # > 发现页处理
-https://api.gotokeep.com/homepage/v\d/tab url script-response-body https://github.com/ddgksf2013/Scripts/raw/master/keepStyle.js
+https://api.gotokeep.com/homepage/v\d/tab url script-response-body https://rules-for-qx.sveir.xyz/Scripts/AdBlock/Other/Keep.min.js
 # > 课程预览页广告
-https://api.gotokeep.com/nuocha/course/v2/\w+/preview url script-response-body https://github.com/ddgksf2013/Scripts/raw/master/keepStyle.js
+https://api.gotokeep.com/nuocha/course/v2/\w+/preview url script-response-body https://rules-for-qx.sveir.xyz/Scripts/AdBlock/Other/Keep.min.js
 # > 我的运动页面去除下方推荐
-https://api.gotokeep.com/sportpage/sport/v3/mysport url script-response-body https://github.com/ddgksf2013/Scripts/raw/master/keepStyle.js
+https://api.gotokeep.com/sportpage/sport/v3/mysport url script-response-body https://rules-for-qx.sveir.xyz/Scripts/AdBlock/Other/Keep.min.js
+# > 订阅解锁
+^https:\/\/api\.gotokeep\.com url script-response-body https://rules-for-qx.sveir.xyz/Scripts/Unlock/Keep.min.js
