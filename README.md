@@ -48,8 +48,9 @@
 - [3️⃣ 关于去广告](#3️⃣关于去广告)
 - [4️⃣ 规则目录](#4️⃣规则目录)
 - [5️⃣ 如何参与本项目](#5️⃣如何参与本项目)
-- [6️⃣ 来源与鸣谢](#6️⃣来源与鸣谢)
-- [7️⃣ 许可与说明](#7️⃣许可与说明)
+- [6️⃣ 项目状态](#6️⃣项目状态)
+- [7️⃣ 来源与鸣谢](#7️⃣来源与鸣谢)
+- [8️⃣ 许可与说明](#8️⃣许可与说明)
 -----
 
 # **🛠️ 仓库内容分支变更提醒**
@@ -271,9 +272,10 @@ Repository
 4. 将规则推送 (`git push origin feature/AmazingFeature`)
 5. 提交合并申请 (Click `New Pull Request`)
 
+# **6️⃣项目状态**
+![Repo Status](https://repobeats.axiom.co/api/embed/1b46c1ec5df49b8bccd2de83611294a76cdf9da9.svg "Repobeats analytics image")
 
-
-# **6️⃣来源与鸣谢**
+# **7️⃣来源与鸣谢**
 - [@NobyDa](https://github.com/NobyDa/Scipts)
 - [@anti-AD V4](https://github.com/privacy-protection-tools/anti-AD)
 - [@ConnersHua](https://github.com/ConnersHua)
@@ -291,7 +293,7 @@ Repository
 - [@ddgksf2013](https://github.com/ddgksf2013)
 - [@cherish](https://github.com/cherish)
 
-# **7️⃣许可与说明**
+# **8️⃣许可与说明**
 
 - 本项目的所有文件，README 等资源基于一个 [MIT License](LICENSE) 发布，你可以拷贝、再发行本项目的内容, 但是你将必须：
   - 使用**完全相同**的条款和格式发布。
