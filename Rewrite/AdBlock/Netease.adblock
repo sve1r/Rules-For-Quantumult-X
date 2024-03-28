@@ -6,10 +6,10 @@
 // @TgChannel         https://t.me/ddgksf2021
 // @Contribute        https://t.me/ddgksf2013_bot
 // @Feedback          📮 ddgksf2013@163.com 📮
-// @UpdateTime        2023-05-20
+// @UpdateTime        2024-03-24
 // @Suitable          自行观看“# > ”注释内容
 // @Attention         如需引用请注明出处，谢谢合作！
-// @Version           V1.0.26
+// @Version           V1.0.27
 // @RewriteURL        https://github.com/ddgksf2013/Rewrite/raw/master/AdBlock/Netease.conf
 // ==/UserScript==
 
@@ -21,8 +21,11 @@
 // 4、进入【设置】，然后点击【账号页管理】，进入后可关闭趣测、云村有票、商城、Beat专区等等Tab
 
 
-hostname = interface*.music.163.com 
+hostname = interface*.music.163.com
 
+
+# > 网易云_新开屏广告
+^http:\/\/ipv4\.music\.163\.com\/e?api\/ad\/loading\/current url reject-200
 # > 网易云_评论弹窗
 ^https?:\/\/interface(\d)?\.music\.163\.com\/w?e?api\/music\/partner\/picked\/user\/top url reject-dict
 # > 网易云_位置请求
