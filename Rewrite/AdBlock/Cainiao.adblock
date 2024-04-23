@@ -6,20 +6,22 @@
 // @TgChannel         https://t.me/ddgksf2021
 // @Contribute        https://t.me/ddgksf2013_bot
 // @Feedback          📮 ddgksf2013@163.com 📮
-// @UpdateTime        2023-04-25
+// @UpdateTime        2024-03-20
 // @Suitable          自行观看“# > ”注释内容
 // @Attention         使用前请卸载菜鸟APP，挂载脚本然后使用
 // @Attention         如需引用请注明出处，谢谢合作！
-// @Version           V1.0.7
+// @Version           V1.0.10
 // @ScriptURL         https://github.com/ddgksf2013/Rewrite/raw/master/AdBlock/Cainiao.conf
 // ==/UserScript==
 
 
-hostname=cn-acs.m.cainiao.com, guide-acs.m.taobao.com
+hostname=cn-acs.m.cainiao.com, guide-acs.m.taobao.com,acs4miniapp-inner.m.taobao.com
 
 
 # > 菜鸟裹裹_amdc处理[Anti已将Amdc分流删除,故更换屏蔽策略]@ddgksf2013
 ^http:\/\/amdc\.m\.taobao\.com url script-response-body https://rules-for-qx.sveir.xyz/Scripts/AdBlock/Other/Amdc.min.js
+# > 菜鸟裹裹_首页中部的问邻居推广@ddgksf2013
+^https?:\/\/cn-acs\.m\.cainiao\.com\/gw\/mtop\.cainiao\.nbpresentation\.homepage\.merge\.get\.cn url script-response-body https://rules-for-qx.sveir.xyz/Scripts/AdBlock/Other/Cainiao.js
 # > 菜鸟裹裹_首页中部的惊喜福利推广@ddgksf2013
 ^https?:\/\/cn-acs\.m\.cainiao\.com\/gw\/mtop\.cainiao\.nbpresentation\.protocol\.homepage\.get\.cn url script-response-body https://rules-for-qx.sveir.xyz/Scripts/AdBlock/Other/Cainiao.js
 # > 菜鸟裹裹_搜索框下方今日好物推荐@ddgksf2013
@@ -30,7 +32,9 @@ hostname=cn-acs.m.cainiao.com, guide-acs.m.taobao.com
 ^https?:\/\/cn-acs\.m\.cainiao\.com\/gw\/mtop\.cainiao\.guoguo\.nbnetflow\.ads\.(show|mshow)\.cn\/ url reject-200
 # > 菜鸟裹裹_支付宝小程序_通用广告请求@ddgksf2013
 ^https?:\/\/guide-acs\.m\.taobao\.com\/gw\/mtop\.cainiao\.guoguo\.nbnetflow\.ads\.show url reject-200
-# > 菜鸟裹裹_支付宝小程序_底部商品推广@ddgksf2013
+# > 菜鸟裹裹_支付宝小程序_底部商品推广新@ddgksf2013
+^https?:\/\/acs4miniapp-inner\.m\.taobao\.com\/gw\/mtop\.alimama\.abyss\.unionpage\.get url reject-200
+# > 菜鸟裹裹_支付宝小程序_底部商品推广旧@ddgksf2013
 ^https?:\/\/guide-acs\.m\.taobao\.com\/gw\/mtop\.cainiao\.adx\.flyad\.getad url reject-200
 # > 菜鸟裹裹_支付宝小程序_匿名选择@ddgksf2013
 ^https?:\/\/guide-acs\.m\.taobao\.com\/gw\/mtop\.cainiao\.nbmensa\.research\.researchservice\.consultmerge url reject-200

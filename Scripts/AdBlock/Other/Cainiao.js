@@ -1,15 +1,2 @@
-const version = "V1.0.16";
-
-var respBody = JSON.parse($response.body);
--1 != $request.url.indexOf("mtop.cainiao.nbpresentation.protocol.homepage.get.cn")
-  ? respBody.data?.result?.dataList?.length > 0 &&
-    (respBody.data.result.dataList = respBody.data.result.dataList.filter(
-      (d) => "big_banner_area_v870" != d.type
-    ))
-  : -1 != $request.url.indexOf("mtop.cainiao.guoguo.nbnetflow.ads.index.cn")
-  ? respBody.data?.result && (respBody.data.result = [])
-  : -1 != $request.url.indexOf("mtop.cainiao.adkeyword") &&
-    respBody.data?.result?.adHotKeywords &&
-    (respBody.data.result.adHotKeywords = []);
-var body = JSON.stringify(respBody);
-$done({ body });
+const version="V1.0.19";
+var respBody=JSON.parse($response.body);if(-1!=$request.url.indexOf("mtop.cainiao.nbpresentation.protocol.homepage.get.cn"))respBody.data?.result?.dataList?.length>0&&(respBody.data.result.dataList=respBody.data.result.dataList.filter(e=>!("big_banner_area_v870"==e.type||"todo_list_v860"==e.type)));else if(-1!=$request.url.indexOf("mtop.cainiao.nbpresentation.homepage.merge.get.cn"))for(let i=0;i<4;i++){let e=`mtop.cainiao.nbpresentation.protocol.homepage.get.cn@${i}`;respBody.data?.[e]?.data?.result?.dataList?.length>0&&(respBody.data[e].data.result.dataList=respBody.data[e].data.result.dataList.filter(e=>!("big_banner_area_v870"==e.type||"todo_list_v860"==e.type)))}else -1!=$request.url.indexOf("mtop.cainiao.guoguo.nbnetflow.ads.mshow")?(respBody.data["1308"]&&delete respBody.data["1308"],respBody.data["1275"]&&delete respBody.data["1275"],respBody.data["205"]&&delete respBody.data["205"]):-1!=$request.url.indexOf("mtop.cainiao.guoguo.nbnetflow.ads.index.cn")?respBody.data?.result&&(respBody.data.result=[{}]):-1!=$request.url.indexOf("mtop.cainiao.adkeyword")&&respBody.data?.result?.adHotKeywords&&(respBody.data.result.adHotKeywords=[]);var body=JSON.stringify(respBody);$done({body});
