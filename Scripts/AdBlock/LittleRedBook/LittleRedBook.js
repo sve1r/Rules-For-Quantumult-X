@@ -1,11 +1,11 @@
-const version = 'V1.0.11';
+const version = 'V1.0.12';
 
 let body = $response.body;
 if (body) {
     switch (!0) {
         case/api\/sns\/v\d\/note\/widgets/.test($request.url):
             try {
-                let e = JSON.parse(body), t = ["goods_card_v2", "note_next_step"];
+                let e = JSON.parse(body), t = ["1goods_card_v2", "note_next_step"];
                 for (let a of t) e.data?.[a] && delete e.data[a];
                 body = JSON.stringify(e)
             } catch (s) {

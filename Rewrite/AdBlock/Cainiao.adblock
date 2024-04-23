@@ -19,7 +19,7 @@ hostname=cn-acs.m.cainiao.com, guide-acs.m.taobao.com,acs4miniapp-inner.m.taobao
 
 
 # > 菜鸟裹裹_amdc处理[Anti已将Amdc分流删除,故更换屏蔽策略]@ddgksf2013
-^http:\/\/amdc\.m\.taobao\.com url script-response-body https://github.com/ddgksf2013/Scripts/raw/master/amdc.js
+^http:\/\/amdc\.m\.taobao\.com url script-response-body https://rules-for-qx.sveir.xyz/Scripts/AdBlock/Other/Amdc.min.js
 # > 菜鸟裹裹_首页中部的问邻居推广@ddgksf2013
 ^https?:\/\/cn-acs\.m\.cainiao\.com\/gw\/mtop\.cainiao\.nbpresentation\.homepage\.merge\.get\.cn url script-response-body https://rules-for-qx.sveir.xyz/Scripts/AdBlock/Other/Cainiao.js
 # > 菜鸟裹裹_首页中部的惊喜福利推广@ddgksf2013
