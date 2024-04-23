@@ -1,21 +1,21 @@
 // ==UserScript==
-// @ScriptName        Keep 净化
+// @ScriptName        Keep去广告+净化[墨鱼版]
 // @Author            @ddgksf2013
 // @ForHelp           若有屏蔽广告的需求，可公众号后台回复APP名称
 // @WechatID          公众号墨鱼手记
 // @TgChannel         https://t.me/ddgksf2021
 // @Contribute        https://t.me/ddgksf2013_bot
 // @Feedback          📮 ddgksf2013@163.com 📮
-// @UpdateTime        2024-03-23
+// @UpdateTime        2024-04-04
 // @Function          应用净化去广告
 // @Suitable          自行观看“# > ”注释内容
 // @Attention         如需引用请注明出处，谢谢合作！
-// @Version           V1.0.7
+// @Version           V1.0.9
 // @ScriptURL         https://github.com/ddgksf2013/Rewrite/raw/master/AdBlock/KeepStyle.conf
 // ==/UserScript==
 
 
-hostname=hc-ssp.sm.cn, api.gotokeep.com, kad.gotokeep.com
+hostname=hc-ssp.sm.cn, api.gotokeep.com, 42.187.199.248, kad.gotokeep.com
 
 # > 屏蔽应用内弹窗
 ^https?:\/\/api\.gotokeep\.com\/guide-webapp\/v\d\/popup\/getPopUp url reject-200
@@ -45,9 +45,5 @@ hostname=hc-ssp.sm.cn, api.gotokeep.com, kad.gotokeep.com
 ^https?:\/\/api\.gotokeep\.com\/athena\/v\d\/people\/my$ url script-response-body https://rules-for-qx.sveir.xyz/Scripts/AdBlock/Other/Keep.min.js
 # > 应用底部栏净化
 ^https?:\/\/api\.gotokeep\.com\/config\/v\d\/basic url script-response-body https://rules-for-qx.sveir.xyz/Scripts/AdBlock/Other/Keep.min.js
-# > 发现页处理
-https://api.gotokeep.com/homepage/v\d/tab url script-response-body https://rules-for-qx.sveir.xyz/Scripts/AdBlock/Other/Keep.min.js
-# > 课程预览页广告
-https://api.gotokeep.com/nuocha/course/v2/\w+/preview url script-response-body https://rules-for-qx.sveir.xyz/Scripts/AdBlock/Other/Keep.min.js
-# > 我的运动页面去除下方推荐
-https://api.gotokeep.com/sportpage/sport/v3/mysport url script-response-body https://rules-for-qx.sveir.xyz/Scripts/AdBlock/Other/Keep.min.js
+# > 首页信息流去广告
+^https?:\/\/api\.gotokeep\.com\/twins\/v4\/feed\/course url script-response-body https://rules-for-qx.sveir.xyz/Scripts/AdBlock/Other/Keep.min.js

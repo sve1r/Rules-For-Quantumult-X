@@ -7,7 +7,7 @@
 // @Contribute        https://t.me/ddgksf2013_bot
 // @Feedback          📮 ddgksf2013@163.com 📮
 // @Attention         如需引用请注明出处，谢谢合作！
-// @UpdateTime        2024-01-07
+// @UpdateTime        2024-02-19
 // @Function          自用影视网站去广告配置（不定期更新）
 // @Suitable          自行观看"# > "注释内容
 // @Explain           推荐使用手机版Chrome或Alook浏览器(仅供墨鱼本人及小部分QX用户使用)
@@ -23,14 +23,11 @@ hostname=www.zxzjhd.com, m.nivod4.tv, *.freeok.*, *netflix*, *bdys*,*cupfox*,*co
 # > 08 在线之家[网页优化]@ddgksf2013 - 网站地址：https://www.zxzjhd.com/
 ^https?:\/\/www\.zxzjhd\.com\/($|[0-9a-zA-Z=_/-]+\.html$) url script-response-body https://cdn.jsdelivr.net/gh/ddgksf2013/Scripts@master/adguard.js
 
-# > 08 FreeOk[网页优化]@ddgksf2013 - 网站地址：https://www.freeok.vip
+# > 07 FreeOk[网页优化]@ddgksf2013 - 网站地址：https://www.freeok.vip
 ^https?:\/\/www\.freeok\.(vip|pro)(\/$|\/[0-9a-zA-Z=_/-]+\.html$) url script-response-body https://cdn.jsdelivr.net/gh/ddgksf2013/Scripts@master/adguard.js
 
-# > 07 哔嘀影视[网页优化]@ddgksf2013 - 网站地址：https://www.bdys01.com
+# > 06 哔嘀影视[网页优化]@ddgksf2013 - 网站地址：https://www.bdys01.com 
 ^https?:\/\/.*bdys.*com\/($|([a-z]+)\/(play\/)?\d+.*$) url script-response-body https://cdn.jsdelivr.net/gh/ddgksf2013/Scripts@master/bdys.js
-
-# > 06 茶杯狐[网页优化]@ddgksf2013 - 网站地址：https://cupfox.app
-^https?:/\/.*cupfox\.*\/($|[\u4E00-\u9FFFa-zA-Z0-9%=_/-]+$) url script-response-body https://cdn.jsdelivr.net/gh/ddgksf2013/Scripts@master/cupbox.js
 
 # > 05 PornHub[网页优化]@ddgksf2013 - 网站地址：https://cn.pornhub.com
 ^https?:\/\/(cn|www)\.pornhub\.com\/_xa\/ads url reject-dict
@@ -50,7 +47,9 @@ hostname=www.zxzjhd.com, m.nivod4.tv, *.freeok.*, *netflix*, *bdys*,*cupfox*,*co
 
 
 # =========== 不维护的或网站已关服 =========== #
-# > 08 Cokemv[网页优化]@ddgksf2013 - 网站地址：https://cokemv.me
+# > 09 茶杯狐[网页优化]@ddgksf2013 - 网站地址：https://cupfox.app
+^https?:/\/.*cupfox\.*\/($|[\u4E00-\u9FFFa-zA-Z0-9%=_/-]+$) url script-response-body https://cdn.jsdelivr.net/gh/ddgksf2013/Scripts@master/cupbox.js
+# > 08 Cokemv[网页优化]@ddgksf2013 - 网站地址：https://cokemv.me 
 ^https?:/\/cokemv\.me\/($|vod.*$) url script-response-body https://cdn.jsdelivr.net/gh/ddgksf2013/Scripts@master/cokemv.js
 # > 07 555影视[网页优化]@ddgksf2013 - 网站地址：https://555yy6.com
 ^https?:\/\/.*5y.*\/($|[0-9a-zA-Z=_/-]+\.html$) url script-response-body https://cdn.jsdelivr.net/gh/ddgksf2013/Scripts@master/555.js
