@@ -8,7 +8,7 @@
 // @Contribute        https://t.me/ddgksf2013_bot
 // @MainFunction      去开屏、瀑布流、启动服务广告及一些隐私、广告、青少年请求，去水印及功能增强
 // @Feedback          📮 ddgksf2013@163.com 📮
-// @UpdateTime        2024-03-24
+// @UpdateTime        2024-06-01
 // @Function          去广告配置（自用，不定期更新）
 // @Suitable          自行观看“# > ”注释内容
 // @Attention         如需引用请注明出处，谢谢合作！
@@ -18,6 +18,8 @@
 
 hostname = edith.xiaohongshu.com, www.xiaohongshu.com, pages.xiaohongshu.com, referee.xiaohongshu.com
 
+# > 小红书_搜索结果推荐广告@ddgksf2013
+^https?:\/\/edith\.xiaohongshu\.com\/api\/sns\/v\d+\/search\/notes\? url script-response-body https://rules-for-qx.sveir.xyz/Scripts/AdBlock/LittleRedBook/LittleRedBook.min.js
 # > 小红书_视频播放页商品推广@ddgksf2013
 ^https?:\/\/edith\.xiaohongshu\.com\/api\/sns\/v\d\/note\/widgets url script-response-body https://rules-for-qx.sveir.xyz/Scripts/AdBlock/LittleRedBook/LittleRedBook.min.js
 # > 小红书_短视频流去水印+强制开启保存功能@ddgksf2013

@@ -1,4 +1,4 @@
-const version = 'V1.0.12';
+const version = 'V1.0.13';
 
 let body = $response.body;
 if (body) {
@@ -127,14 +127,22 @@ if (body) {
                 console.log("homefeed: " + R)
             }
             break;
+        case/api\/sns\/v\d+\/search\/notes\?/.test($request.url):
+            try {
+                let W = JSON.parse(body);
+                W.data.items = W.data.items.filter(e => !e.ads), body = JSON.stringify(W)
+            } catch (j) {
+                console.log("search/notes: " + j)
+            }
+            break;
         case/api\/sns\/v\d\/system_service\/config\?/.test($request.url):
             try {
-                let W = JSON.parse(body),
-                    j = ["store", "splash", "loading_img", "app_theme", "cmt_words", "highlight_tab"];
-                for (let z of j) W.data?.[z] && delete W.data[z];
-                body = JSON.stringify(W)
-            } catch (A) {
-                console.log("system_service: " + A)
+                let z = JSON.parse(body),
+                    A = ["store", "splash", "loading_img", "app_theme", "cmt_words", "highlight_tab"];
+                for (let B of A) z.data?.[B] && delete z.data[B];
+                body = JSON.stringify(z)
+            } catch (D) {
+                console.log("system_service: " + D)
             }
             break;
         default:
