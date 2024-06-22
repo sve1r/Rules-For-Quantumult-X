@@ -2,11 +2,11 @@
 // @ScriptName        百度地图净化[墨鱼版]
 // @Author            @ddgksf2013
 // @ForHelp           若有屏蔽广告的需求，可公众号后台回复APP名称
-// @WechatID          公众号墨鱼手记
+// @WechatID          公众号@墨鱼手记
 // @TgChannel         https://t.me/ddgksf2021
 // @Contribute        https://t.me/ddgksf2013_bot
 // @Feedback          📮 ddgksf2013@163.com 📮
-// @UpdateTime        2023-12-15
+// @UpdateTime        2024-05-19
 // @Suitable          自行观看“# > ”注释内容
 // @Attention         使用前请卸载百度地图，挂载脚本然后使用
 // @Attention         如需引用请注明出处，谢谢合作！
@@ -18,7 +18,7 @@
 hostname=180.76.76.200, newclient.map.baidu.com, httpdns.baidubce.com, ugc.map.baidu.com
 
 # > 百度地图_首页底部推荐@ddgksf2013
-^https?:\/\/ugc\.map\.baidu\.com\/govui\/rich_content url reject-200
+^https?:\/\/.*map\.baidu\.com\/.*govui\/rich_content url reject-200
 # > 百度地图_搜索框下足记Tips@ddgksf2013
 ;^https?:\/\/newclient\.map\.baidu\.com\/client\/phpui.*qt=rgc url reject-200
 # > 百度地图_搜索推广@ddgksf2013
