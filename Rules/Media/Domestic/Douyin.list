@@ -1,10 +1,12 @@
 # > 抖音部分
 host-suffix,amemv.com,DouYin
+host-suffix,bytegecko.com,DouYin
 host-suffix,douyin.com,Douyin
 host-suffix,douyincdn.com,DouYin
 host-suffix,douyinpic.com,DouYin
 host-suffix,douyinstatic.com,DouYin
 host-suffix,douyinvod.com,DouYin
+host-suffix,ecombdapi.com,DouYin
 host-suffix,idouyinvod.com,DouYin
 host-suffix,ixigua.com,DouYin
 host-suffix,ixiguavideo.com,DouYin
