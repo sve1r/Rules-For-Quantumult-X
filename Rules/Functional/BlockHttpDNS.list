@@ -1,15 +1,4 @@
-# NAME: BlockHTTPDNS
-# AUTHOR: blackmatrix7
-# REPO: https://github.com/blackmatrix7/ios_rule_script
-# UPDATED: 2024-07-03 16:19:12
-# HOST: 21
-# HOST-SUFFIX: 1
-# IP-CIDR: 35
-# IP6-CIDR: 4
-# REJECT: 18
-# MITM: 16
-# TOTAL: 95
-
+# > BlockHTTPDNS
 
 host,dns.jd.com,BlockHTTPDNS
 host,dns.weibo.cn,BlockHTTPDNS
@@ -18,8 +7,6 @@ host,dns.weixin.qq.com.cn,BlockHTTPDNS
 host,httpdns-api.aliyuncs.com,BlockHTTPDNS
 host,httpdns-sc.aliyuncs.com,BlockHTTPDNS
 host,httpdns.alicdn.com,BlockHTTPDNS
-host,httpdns.baidu.com,BlockHTTPDNS
-host,httpdns.baidubce.com,BlockHTTPDNS
 host,httpdns.bilivideo.com,BlockHTTPDNS
 host,httpdns.c.cdnhwc2.com,BlockHTTPDNS
 host,httpdns.meituan.com,BlockHTTPDNS
@@ -28,11 +15,12 @@ host,httpdns.n.netease.com,BlockHTTPDNS
 host,httpdns.push.oppomobile.com,BlockHTTPDNS
 host,httpdns.volcengineapi.com,BlockHTTPDNS
 host,httpdns.yunxindns.com,BlockHTTPDNS
-host,httpdnsvip.meituan.com,BlockHTTPDNS
-host,httpsdns.baidu.com,BlockHTTPDNS
+host,kuaishou.httpdns.pro,BlockHTTPDNS
 host,lofter.httpdns.c.163.com,BlockHTTPDNS
 host,music.httpdns.c.163.com,BlockHTTPDNS
-host-suffix,httpdns.pro,BlockHTTPDNS
+host-suffix,httpdns.baidu.com,BlockHTTPDNS
+host-suffix,httpdns.baidubce.com,BlockHTTPDNS
+host-suffix,httpsdns.baidu.com,BlockHTTPDNS
 ip-cidr,101.124.19.122/32,BlockHTTPDNS
 ip-cidr,101.91.140.124/32,BlockHTTPDNS
 ip-cidr,101.91.140.224/32,BlockHTTPDNS
@@ -46,8 +34,7 @@ ip-cidr,116.63.10.135/32,BlockHTTPDNS
 ip-cidr,116.63.10.31/32,BlockHTTPDNS
 ip-cidr,117.144.238.29/32,BlockHTTPDNS
 ip-cidr,117.185.228.108/32,BlockHTTPDNS
-ip-cidr,119.29.29.98/32,BlockHTTPDNS
-ip-cidr,119.29.29.99/32,BlockHTTPDNS
+ip-cidr,119.29.29.98/31,BlockHTTPDNS
 ip-cidr,120.46.169.234/32,BlockHTTPDNS
 ip-cidr,121.36.72.124/32,BlockHTTPDNS
 ip-cidr,122.9.13.79/32,BlockHTTPDNS

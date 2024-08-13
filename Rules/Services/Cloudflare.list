@@ -1,5 +1,60 @@
 # > Cloudflare
+# >> Main Domain
 host-suffix,cloudflare.com,Cloudflare
+host-suffix,cloudflare.net,Cloudflare
+host-suffix,cloudflare.tv,Cloudflare
+host-suffix,cloudflare-quic.com,Cloudflare
+host-suffix,cloudflareaccess.com,Cloudflare
+host-suffix,cloudflareapps.com,Cloudflare
+host-suffix,cloudflarebolt.com,Cloudflare
+host-suffix,cloudflareclient.com,Cloudflare
+host-suffix,cloudflareinsights.com,Cloudflare
+host-suffix,cloudflareok.com,Cloudflare
+host-suffix,cloudflarepreview.com,Cloudflare
+host-suffix,cloudflareresolve.com,Cloudflare
+host-suffix,cloudflaressl.com,Cloudflare
+host-suffix,cloudflarestatus.com,Cloudflare
+host-suffix,cloudflarestorage.com,Cloudflare
+host-suffix,cloudflarestream.com,Cloudflare
+host-suffix,cloudflaretest.com,Cloudflare
+host-suffix,pacloudflare.com,Cloudflare
+host-suffix,trycloudflare.com,Cloudflare
+host-suffix,videodelivery.net,Cloudflare
+
+# >> DNS & WARP
+host-suffix,warp.plus,Cloudflare
+host-suffix,cloudflarewarp.com,Cloudflare
+host-suffix,cloudflare-dns.com,Cloudflare
+host-suffix,one.one.one,Cloudflare
+host-suffix,every1dns.net,Cloudflare
+
+# >> Pages
+host-suffix,pages.dev,Cloudflare
+
+# >> Workers
+host-suffix,workers.dev,Cloudflare
+
+# >> IPFS
+host-suffix,cf-ipfs.com,Cloudflare
+host-suffix,cloudflare-ipfs.com,Cloudflare
+
+# >> CN Part
+host-suffix,cf-ns.com,Cloudflare-CN
+host-suffix,cf-ns.net,Cloudflare-CN
+host-suffix,cf-ns.site,Cloudflare-CN
+host-suffix,cf-ns.tech,Cloudflare-CN
+host-suffix,cftest5.cn,Cloudflare-CN
+host-suffix,cftest6.cn,Cloudflare-CN
+host-suffix,cftest7.com,Cloudflare-CN
+host-suffix,cftest8.com,Cloudflare-CN
+host-suffix,cloudflare-cn.com,Cloudflare-CN
+host-suffix,cloudflarecn.net,Cloudflare-CN
+host-suffix,cloudflareinsights-cn.com,Cloudflare-CN
+host-suffix,cloudflareprod.com,Cloudflare-CN
+host-suffix,cloudflarestaging.com,Cloudflare-CN
+host-suffix,cloudflarestoragegw.com,Cloudflare-CN
+
+# >> Cloudflare IP-CIDR
 ip-cidr,103.21.244.0/22,Cloudflare
 ip-cidr,103.22.200.0/22,Cloudflare
 ip-cidr,103.31.4.0/22,Cloudflare

@@ -1,8 +1,10 @@
 # > Bilibili
 
 # >> USER-AGENT
+user-agent,*bili*,BiliBili
 user-agent,bili*,BiliBili
 user-agent,Bilibili*,BiliBili
+user-agent,bili-inter*,BiliBili
 
 # >> 主站
 host-suffix,bilibili.cc,BiliBili

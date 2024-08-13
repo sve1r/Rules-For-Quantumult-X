@@ -3,6 +3,8 @@
 user-agent,PPStream*,iQiyi
 user-agent,QIYI*,iQiyi
 user-agent,QYPlayer*,iQiyi
+user-agent,iQIYI*,iQiyi
+user-agent,iQiYi*,iQiyi
 user-agent,iQiyi*,iQiyi
 
 # >> 主站
@@ -16,18 +18,19 @@ host-suffix,71edge.com,iQiyi
 host-suffix,71edge.net,iQiyi
 host-suffix,aianno.cn,iQiyi
 host-suffix,aianno.com,iQiyi
-host-suffix,aiQiyicloud-mgmt.com,iQiyi
-host-suffix,aiQiyicloud.com,iQiyi
-host-suffix,aiQiyicloud.net,iQiyi
+host-suffix,aiqiyicloud-mgmt.com,iQiyi
+host-suffix,aiqiyicloud.com,iQiyi
+host-suffix,aiqiyicloud.net,iQiyi
 host-suffix,baiying.com,iQiyi
 host-suffix,gitv.cn,iQiyi
 host-suffix,gitv.tv,iQiyi
 host-suffix,ibkstore.com,iQiyi
 host-suffix,iq.com,iQiyi
-host-suffix,iQiyi.demo.uwp,iQiyi
-host-suffix,iQiyiedge.com,iQiyi
-host-suffix,iQiyiedge.net,iQiyi
-host-suffix,iQiyipic.com,iQiyi
+host-suffix,iqiyi.com,iQiyi
+host-suffix,iqiyi.demo.uwp,iQiyi
+host-suffix,iqiyiedge.com,iQiyi
+host-suffix,iqiyiedge.net,iQiyi
+host-suffix,iqiyipic.com,iQiyi
 host-suffix,jiangbing.cn,iQiyi
 host-suffix,pps.tv,iQiyi
 host-suffix,ppsimg.com,iQiyi
