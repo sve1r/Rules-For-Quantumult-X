@@ -1,6 +1,36 @@
 # Amazon Prime Video
+
+# >> User Agents
 user-agent,InstantVideo.US*,AmazonPrime
 user-agent,Prime%20Video*,AmazonPrime
+
+# >> Main
+host,fls-na.amazon.com,AmazonPrime
+host,ktpx.amazon.com,AmazonPrime
+host-keyword,avoddashs,AmazonPrime
+host-suffix,audible.com,AmazonPrime
+host-suffix,amazonprimevideo.cn,AmazonPrime
+host-suffix,amazonprimevideo.com.cn,AmazonPrime
+host-suffix,amazonprimevideos.com,AmazonPrime
+host-suffix,amazonvideo.cc,AmazonPrime
+host-suffix,amazonvideo.com,AmazonPrime
+host-suffix,amazonvideodirect.com,AmazonPrime
+host-suffix,atv-ps.amazon.com,AmazonPrime
+host-suffix,prime-video.com,AmazonPrime
+host-suffix,primeday.cn,AmazonPrime
+host-suffix,primeday.com.cn,AmazonPrime
+host-suffix,primeday.info,AmazonPrime
+host-wildcard,primevideo.*,AmazonPrime
+
+# >> Content Delivery Network
+host-suffix,aiv-cdn.net,AmazonPrime
+host-suffix,aiv-delivery.net,AmazonPrime
+host-suffix,amazonaws.com,AmazonPrime
+host-suffix,amazonvideo.com,AmazonPrime
+host-suffix,media-amazon.com,AmazonPrime
+host-suffix,pv-cdn.net,AmazonPrime
+
+# >> Content below may unavailable
 host,avodmp4s3ww-a.akamaihd.net,AmazonPrime
 host,d1v5ir2lpwr8os.cloudfront.net,AmazonPrime
 host,d1xfray82862hr.cloudfront.net,AmazonPrime
@@ -9,27 +39,4 @@ host,d25xi40x97liuc.cloudfront.net,AmazonPrime
 host,d27xxe7juh1us6.cloudfront.net,AmazonPrime
 host,d3196yreox78o9.cloudfront.net,AmazonPrime
 host,dmqdd6hw24ucf.cloudfront.net,AmazonPrime
-host,ktpx.amazon.com,AmazonPrime
-host,atv-ps.amazon.com,AmazonPrime
-host,fls-na.amazon.com,AmazonPrime
-host-keyword,avoddashs,AmazonPrime
-host-suffix,pv-cdn.net,AmazonPrime
-host-suffix,aiv-cdn.net,AmazonPrime
-host-suffix,aiv-delivery.net,AmazonPrime
-host-suffix,amazonaws.com,AmazonPrime
-host-suffix,amazonvideo.com,AmazonPrime
-host-suffix,llnwd.net,AmazonPrime
-host-suffix,media-amazon.com,AmazonPrime
-host-suffix,primevideo.com,AmazonPrime
-host-suffix,amazonprimevideo.cn,AmazonPrime
-host-suffix,amazonprimevideo.com.cn,AmazonPrime
-host-suffix,amazonprimevideos.com,AmazonPrime
-host-suffix,amazonvideo.cc,AmazonPrime
-host-suffix,atv-ps.amazon.com,AmazonPrime
 host-suffix,avodmp4s3ww-a.akamaihd.net,AmazonPrime
-host-suffix,fls-na.amazon.com,AmazonPrime
-host-suffix,prime-video.com,AmazonPrime
-host-suffix,primevideo.cc,AmazonPrime
-host-suffix,primevideo.info,AmazonPrime
-host-suffix,primevideo.org,AmazonPrime
-host-suffix,primevideo.tv,AmazonPrime

@@ -11,7 +11,12 @@ host-suffix,me.com,Apple
 host-wildcard,ipod.*,Apple
 host-wildcard,imac.*,Apple
 host-wildcard,iphone.*,Apple
+host-wildcard,ipad.*,Apple
+host-wildcard,ipadair.*,Apple
+host-wildcard,ipadmini.*,Apple
 host-wildcard,macbook.*,Apple
+host-wildcard,macbookair.*,Apple
+host-wildcard,macbookpro.*,Apple
 
 # > Apple CIDR
 ip-cidr,17.0.0.0/8,Apple
@@ -45,6 +50,8 @@ host-keyword,icloud,Apple
 host-keyword,icoudo,Apple
 host-keyword,icoudos,Apple
 host-suffix,applemx-icloud.com,Apple
+host-suffix,appleicloud.cn,Apple
+host-suffix,apple-icloud.cn,Apple
 host-suffix,icloud-content.com,Apple
 host-suffix,icloud-content.com.cn,Apple
 host-suffix,icloud-isupport.com,Apple
@@ -70,8 +77,8 @@ host-wildcard,*-content.icloud.com.cn,Apple
 host-suffix,ls.apple.com,Apple
 # >> Push Service
 host,init-p01md.apple.com,Apple
-host,init-p01st.push.apple.com,Apple
-host,init-s01st.push.apple.com,Apple
+host-wildcard,init*.push.apple.com,Apple
+host-wildcard,init*.push-apple.com.akadns.net,Apple
 host-suffix,courier-push-apple.com.akadns.net,Apple
 host-suffix,push.apple.com,Apple
 
