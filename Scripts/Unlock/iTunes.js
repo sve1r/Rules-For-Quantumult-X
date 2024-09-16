@@ -7,12 +7,14 @@
  > TgChannel         https://t.me/ddgksf2021
  > Contribute        https://t.me/ddgksf2013_bot
  > Feedback          📮 ddgksf2013@163.com 📮
- > UpdateTime        2024-02-19
+ > UpdateTime        2024-02-20
  > Suitable          自行观看“# > ”注释内容，解锁是暂时的，购买也不是永久的[订阅、跑路]
  > Attention         如需引用请注明出处，谢谢合作！
  > Attention         使用此脚本，会导致AppleStore无法切换账户，解决方法[关闭QX切换账户，或关闭MITM，或删除脚本，或去设置媒体与购买项目处切换ID]
  > ScriptURL         https://gist.githubusercontent.com/ddgksf2013/9e0f6c7341beea09a31aa309d9d7f502/raw/buyitunes.js
+
  ***********************************/
+
 
 
 var ddgksf2013 = JSON.parse($response.body);
@@ -41,8 +43,12 @@ var productidmap = {
     'icar.ren.smk': ['smk', 'smoke19870727', 0],
     'com.meditation.heartratehrv': ['meditation', 'lifetimeusa', 1],
     'livintis.com.wallpapermonster': ['wallpaper', 'wallpaperworld.subscription.yearly.12.notrial', 0],
+    'com.tianlang.gifmaker': ['gifmaker', 'com.tianlang.gifmaker.forever', 1],
     'me.imgbase.videoday': ['videoday', 'me.imgbase.videoday.profeaturesYearly', 0],
-    'com.icandiapps.nightsky': ['nightsky', 'com.icandiapps.ns4.annual', 0]
+    'com.icandiapps.nightsky': ['nightsky', 'com.icandiapps.ns4.annual', 0],
+    'com.lixkit.diary': ['diary', 'com.lixkit.diary.permanent_68', 0],
+    'com.touchbits.subscriptions': ['dyt', 'com.touchbits.subscriptions.iap.pro.yearly', 0],
+    'dev.sanjin.WasteCat': ['cat', 'dev.sanjin.WasteCat.PermanentVip', 1]
 }
 
 // ========= 固定部分 ========= //
@@ -71,7 +77,4 @@ var mapid = ddgksf2013.receipt.bundle_id, mapping = productidmap[mapid] || produ
     auto_renew_product_id: mapping[1],
     auto_renew_status: "1"
 };
-mapping[2] ? (delete inapp.expires_date, delete inapp.expires_date_ms, delete inapp.expires_date_pst)
-    : (ddgksf2013.latest_receipt_info = [inapp], ddgksf2013.latest_receipt = "https://t.me/ddgksf2021", ddgksf2013.pending_renewal_info = [renew]),
-    ddgksf2013.receipt.in_app = [inapp],
-    $done({body: JSON.stringify(ddgksf2013)});
+mapping[2] ? (delete inapp.expires_date, delete inapp.expires_date_ms, delete inapp.expires_date_pst) : (ddgksf2013.latest_receipt_info = [inapp], ddgksf2013.latest_receipt = "https://t.me/ddgksf2021", ddgksf2013.pending_renewal_info = [renew]), ddgksf2013.receipt.in_app = [inapp], console.log('操作成功🎉🎉🎉\nCuttlefishの自留地: https://t.me/ddgksf2021'), $done({body: JSON.stringify(ddgksf2013)});

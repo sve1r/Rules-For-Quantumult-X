@@ -39,20 +39,20 @@ host-suffix,cf-ipfs.com,Cloudflare
 host-suffix,cloudflare-ipfs.com,Cloudflare
 
 # >> CN Part
-host-suffix,cf-ns.com,Cloudflare-CN
-host-suffix,cf-ns.net,Cloudflare-CN
-host-suffix,cf-ns.site,Cloudflare-CN
-host-suffix,cf-ns.tech,Cloudflare-CN
-host-suffix,cftest5.cn,Cloudflare-CN
-host-suffix,cftest6.cn,Cloudflare-CN
-host-suffix,cftest7.com,Cloudflare-CN
-host-suffix,cftest8.com,Cloudflare-CN
-host-suffix,cloudflare-cn.com,Cloudflare-CN
-host-suffix,cloudflarecn.net,Cloudflare-CN
-host-suffix,cloudflareinsights-cn.com,Cloudflare-CN
-host-suffix,cloudflareprod.com,Cloudflare-CN
-host-suffix,cloudflarestaging.com,Cloudflare-CN
-host-suffix,cloudflarestoragegw.com,Cloudflare-CN
+host-suffix,cf-ns.com,Cloudflare Domestic
+host-suffix,cf-ns.net,Cloudflare Domestic
+host-suffix,cf-ns.site,Cloudflare Domestic
+host-suffix,cf-ns.tech,Cloudflare Domestic
+host-suffix,cftest5.cn,Cloudflare Domestic
+host-suffix,cftest6.cn,Cloudflare Domestic
+host-suffix,cftest7.com,Cloudflare Domestic
+host-suffix,cftest8.com,Cloudflare Domestic
+host-suffix,cloudflare-cn.com,Cloudflare Domestic
+host-suffix,cloudflarecn.net,Cloudflare Domestic
+host-suffix,cloudflareinsights-cn.com,Cloudflare Domestic
+host-suffix,cloudflareprod.com,Cloudflare Domestic
+host-suffix,cloudflarestaging.com,Cloudflare Domestic
+host-suffix,cloudflarestoragegw.com,Cloudflare Domestic
 
 # >> Cloudflare IP-CIDR
 ip-cidr,103.21.244.0/22,Cloudflare

@@ -1,6 +1,23 @@
+/***********************************
 
-hostname=restore-access.indream.app
+> 应用名称：Nicegram
+> 软件版本：1.5.6
+> 脚本作者：ddgksf2013
+> 微信账号：墨鱼手记
+> 更新时间：2024-02-24
+> 通知频道：https://t.me/ddgksf2021
+> 贡献投稿：https://t.me/ddgksf2013_bot
+> 问题反馈：ddgksf2013@163.com
+> 特别提醒：如需转载请注明出处，谢谢合作！
+> 解锁步骤：https://t.me/ddgksf2021/5439
+> 特别说明：⚠️⚠️⚠️
+          本脚本仅供学习交流使用，禁止转载售卖
+          ⚠️⚠️⚠️
+***********************************/
 
-https?:\/\/restore-access\.indream\.app\/restoreAccess\?id=\d{5,10} url echo-response text/json echo-response https://cdn.jsdelivr.net/gh/sve1r/Rules-For-Quantumult-X@main/Scripts/Unlock/NiceGram.json
 
 
+hostname=nicegram.cloud
+
+# > Nicegram☆解锁会员权限（2024-02-24）@ddgksf2013
+^https?:\/\/nicegram\.cloud\/api\/v\d\/(ai-assistant\/purchase-list|user\/info|telegram\/auth) url script-response-body https://rules-for-qx.sveir.xyz/Scripts/Unlock/Nicegram.min.js
