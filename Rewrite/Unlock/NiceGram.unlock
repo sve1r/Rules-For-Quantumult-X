@@ -1,20 +1,9 @@
-/***********************************
-
-> 应用名称：Nicegram
-> 软件版本：1.5.6
-> 脚本作者：ddgksf2013
-> 微信账号：墨鱼手记
-> 更新时间：2024-02-24
-> 通知频道：https://t.me/ddgksf2021
-> 贡献投稿：https://t.me/ddgksf2013_bot
-> 问题反馈：ddgksf2013@163.com
-> 特别提醒：如需转载请注明出处，谢谢合作！
-> 解锁步骤：https://t.me/ddgksf2021/5439
-> 特别说明：⚠️⚠️⚠️
-          本脚本仅供学习交流使用，禁止转载售卖
-          ⚠️⚠️⚠️
-***********************************/
-
+// ==UserScript==
+// @ScriptName        NiceGram 解锁
+// @UpdateTime        2024-09-16 17:31
+// @Suitable          自行观看“# > ”注释内容
+// @Attention         如需引用请注明出处，谢谢合作！
+// ==/UserScript==
 
 
 hostname=nicegram.cloud
