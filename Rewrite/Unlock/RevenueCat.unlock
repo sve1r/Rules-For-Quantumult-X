@@ -1,0 +1,29 @@
+/***********************************
+
+> ScriptName        𝐑𝐞𝐯𝐞𝐧𝐮𝐞𝐂𝐚𝐭多合一脚本[墨鱼版]
+> Author            @ddgksf2013
+> ForHelp           若有屏蔽广告的需求，可公众号后台回复APP名称
+> WechatID          墨鱼手记
+> TgChannel         https://t.me/ddgksf2021
+> Contribute        https://t.me/ddgksf2013_bot
+> Feedback          📮 𝐝𝐝𝐠𝐤𝐬𝐟𝟐𝟎𝟏𝟑@𝟏𝟔𝟑.𝐜𝐨𝐦 📮
+> UpdateTime        2024-07-06
+> Suitable          自行观看“# > ”注释内容，解锁是暂时的，购买也不是永久的[订阅、跑路]
+> Attention         📣个别失效的APP请相关需求者自行降级、或寻找替代品、或购买支持
+> Attention         如需引用请注明出处，谢谢合作！
+> ScriptURL         https://gist.githubusercontent.com/ddgksf2013/dbb1695cd96743eef18f3fac5c6fe227/raw/revenuecat.js
+
+
+# ========解锁列表======== #
+https://appraven.net/collection/77299969
+
+***********************************/
+
+
+hostname=api.revenuecat.com
+
+# ～ RevenueCat@ddgksf2013
+^https:\/\/api\.revenuecat\.com\/.+\/(receipts$|subscribers\/[^/]+$) url script-response-body https://rules-for-qx.sveir.xyz/Scripts/Unlock/RevenueCat.min.js
+^https:\/\/api\.revenuecat\.com\/.+\/(receipts|subscribers) url script-request-header https://rules-for-qx.sveir.xyz/Scripts/Unlock/RevenueCat.RmHeaders.js
+
+

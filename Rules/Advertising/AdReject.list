@@ -2635,6 +2635,7 @@ host-suffix,digdug.divxnetworks.com,REJECT
 host-suffix,dimg1.sz.net.cn,REJECT
 host-suffix,dingon.com.cn,REJECT
 host-suffix,dip.pyangzi.com,REJECT
+host-suffix,dig.bdurl.net,REJECT
 host-suffix,dip.szhyzkj.com,REJECT
 host-suffix,dip.wl963.com,REJECT
 host-suffix,dip.zgydjr.com,REJECT
@@ -3798,9 +3799,11 @@ host-suffix,i.ma.social-touch.com,REJECT
 host-suffix,i.mmcdn.cn,REJECT
 host-suffix,i.ssix.io,REJECT
 host-suffix,i.syasn.com,REJECT
+host-suffix,i.snssdk.com,REJECT
 host-suffix,i.tansuotv.com,REJECT
 host-suffix,i.w55c.net,REJECT
 host-suffix,i.zhuoyaju.com,REJECT
+host-suffix,i-lq.snssdk.com,REJECT
 host-suffix,i1236.net,REJECT
 host-suffix,i2.akjunshi.com,REJECT
 host-suffix,i3818.com,REJECT

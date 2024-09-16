@@ -1,0 +1,26 @@
+// ==UserScript==
+// @ScriptName        解锁NewBing搜索[墨鱼版]
+// @Author            @ddgksf2013, @NobyDa
+// @ForHelp           若有屏蔽广告的需求，可公众号后台回复APP名称
+// @WechatID          墨鱼手记
+// @TgChannel         https://t.me/ddgksf2021
+// @Contribute        https://t.me/ddgksf2013_bot
+// @Feedback          📮 ddgksf2013@163.com 📮
+// @UpdateTime        2024-07-02
+// @Function          适用手机端Safari、Alook、Chrome
+// @Attention         如需引用请注明出处，谢谢合作！
+// @Version           V1.0.4
+// @ScriptURL         https://github.com/ddgksf2013/Rewrite/raw/master/Html/NewBing.conf
+// ==/UserScript==
+
+
+
+//20240702 由于用户使用本重写导致bing搜索被屏蔽，故注释本重写
+
+
+
+
+
+hostname = www.bing.com
+
+^https?:\/\/www\.bing\.com\/(search|new|web) url request-header (\r\n)(User-Agent:.+)(\r\n) request-header $1$2$3

@@ -1,15 +1,17 @@
 ########################################
-#应用名称：  Spotify
+#应用名称：  SpotifyVip
 #脚本作者：  app2smile
-#更新时间：  2022-02-15
-#使用说明：  1、部分解锁premium 需iOS15 ,音质不能设置为超高；
-#使用说明：  2、搜索界面 歌单/歌曲可以随意切换完全播放；
-#使用说明：  3、音乐库已点赞歌曲随意切换完全播放；
+#更新时间：  2024-05-18
+#使用说明：  解锁部分premium,音质不能设置为超高
+#使用步骤：  ✅登录后再打开脚本,重启app等待脚本生效
+#脚本功能：  1.去除播放广告；2.歌手/专辑列表正常展示；3.去除随机播放
 #通知频道：  https://t.me/ddgksf2021
-#脚本地址：  https://gitlab.com/ddgksf2013/Cuttlefish/-/raw/master/Rewrite/UnlockVip/Spotify.conf
 #作者库地：  https://github.com/app2smile/rules
+#脚本地址：  https://github.com/ddgksf2013/Rewrite/raw/master/UnlockVip/Spotify.conf
 ########################################
 
 
-hostname=spclient.wg.spotify.com
-^https:\/\/spclient\.wg\.spotify\.com\/(bootstrap\/v1\/bootstrap|user-customization-service\/v1\/customize)$ url script-response-body https://cdn.jsdelivr.net/gh/sve1r/Rules-For-Quantumult-X@main/Scripts/Unlock/Spotify-proto.js
+hostname = spclient.wg.spotify.com
+
+^https?:\/\/spclient\.wg\.spotify\.com\/(bootstrap\/v1\/bootstrap|user-customization-service\/v1\/customize)$ url script-response-body https://rules-for-qx.sveir.xyz/Scripts/Unlock/Spotify.min.js
+^https?:\/\/spclient\.wg\.spotify\.com\/(artistview\/v1\/artist|album-entity-view\/v2\/album)\/ url script-request-header https://rules-for-qx.sveir.xyz/Scripts/Unlock/Spotify.min.js

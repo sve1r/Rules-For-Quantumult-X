@@ -2,7 +2,7 @@
  > 应用名称：墨鱼自用微博&微博国际版净化脚本
  > 脚本作者：@ddgksf2013, @Zmqcherish
  > 微信账号：墨鱼手记
- > 更新时间：2024-07-14
+ > 更新时间：2024-08-22
  > 通知频道：https://t.me/ddgksf2021
  > 贡献投稿：https://t.me/ddgksf2013_bot
  > 原作者库：https://github.com/zmqcherish
@@ -13,7 +13,7 @@
  ***********************************************/
 
 
-const version = 'V2.0.127';
+const version = 'V2.0.130';
 
 
 const mainConfig = {
@@ -96,8 +96,8 @@ const mainConfig = {
         user_center: "modifiedUserCenter",
         "a=get_coopen_ads": "removeIntlOpenAds",
         "php?a=search_topic": "removeSearchTopic",
-        "v1/ad/realtime": "removeRealtimeAd",
-        "v1/ad/preload": "removeAdPreload",
+        "ad/realtime": "removeRealtimeAd",
+        "ad/preload": "removeAdPreload",
         "php?a=open_app": "removeAdBanner"
     };
 
@@ -127,7 +127,7 @@ function removeIntlOpenAds(e) {
 }
 
 function removeSearchTopic(e) {
-    return e.data && 0 !== e.data.length && (e.data = Object.values(e.data).filter(e => "searchtop" != e.type)), e
+    return e.data && 0 !== e.data.search_topic?.cards.length && (e.data.search_topic.cards = Object.values(e.data.search_topic.cards).filter(e => "searchtop" != e.type), e.data.trending_topic && delete e.data.trending_topic), e
 }
 
 function modifiedUserCenter(e) {
