@@ -1,0 +1,67 @@
+##############################################
+# > 如需引用请注明出处，谢谢合作！
+# > https://t.me/ddgksf2021
+# > Only for own use, created by ddgksf2013
+# > 更新时间：2024-03-18
+# > APP解锁状态说明如下
+# > 已验证✅ 待验证🟨 已失效🟥
+# > https://github.com/ddgksf2013/dev/raw/master/ForOwnUse.conf
+##############################################
+
+hostname = , *appraven.net, *.oracle.bendingspoonsapps.com, *.yangjibao.com, explorer.tratao.com, server.zbisq.com, mobile.flightradar24.com, api4.bybutter.com, wallpaper.soutushenqi.com, api.tipsoon.com, *xiaozujian, lchttpapi.xczim.com, app.yiyan.art, gateway.caixin.com, notability.com, spclient.wg.spotify.com, ticktick.com, ap*.intsig.net, ipadcms.caixin.com, *.aoscdn.com, *.xiuxiu.meitu.com, claritywallpaper.com, api.meiease.cn, nicegram.cloud
+
+#>>>>>>>>>>>>>>>>生活类VIP
+# ✅ Spotify
+^https:\/\/spclient\.wg\.spotify\.com\/(bootstrap\/v1\/bootstrap|user-customization-service\/v1\/customize)$ url script-response-body https://raw.githubusercontent.com/app2smile/rules/master/js/spotify-proto.js
+^https:\/\/spclient\.wg\.spotify\.com\/(artistview\/v1\/artist|album-entity-view\/v2\/album)\/ url script-request-header https://raw.githubusercontent.com/app2smile/rules/master/js/spotify-json.js
+# ✅ 一言(need登录)
+^https:\/\/app\.yiyan\.art\/yiyan\/ url script-response-body https://github.com/ddgksf2013/dev/raw/main/YiYanProCrack.js
+# ✅ 西窗烛(need登录)
+https://lchttpapi.xczim.com/* url script-response-body https://github.com/ddgksf2013/dev/raw/main/XiChuangZhuProCrack.js
+# ✅ 简讯
+^https?:\/\/api\.tipsoon\.com\/api\/v1\/user\/info url script-response-body https://github.com/ddgksf2013/dev/raw/main/JianXunProCrack.js
+# ✅ Flightradar24
+^https?:\/\/mobile\.flightradar24\.com\/mobile\/(user-session|\w{9}) url script-echo-response https://github.com/ddgksf2013/dev/raw/main/flightradar24.js
+
+
+
+#>>>>>>>>>>>>>>>>新闻类VIP
+# ✅ 财新周刊
+http://ipadcms.caixin.com/tmp/articles url script-response-body https://github.com/ddgksf2013/dev/raw/main/CaiXinZhouKanProCrack.js
+
+
+
+#>>>>>>>>>>>>>>>>图影类VIP
+# ✅ Fimo(need登录)
+^https?:\/\/server\.zbisq\.com\/fimo-user url script-response-body https://github.com/ddgksf2013/MoYu/raw/master/FimoProCrack.js
+# ✅ 傲软抠图(need登录)
+^https?:\/\/.*aoscdn\.com\/base\/vip\/v\d\/vips url script-response-body https://github.com/ddgksf2013/MoYu/raw/master/ApowersoftProCrack.js
+# ✅ 美图秀秀
+^https?:\/\/(h5|api)\.xiuxiu\.meitu\.com\/v\d\/(h\d\/vip|vip|user)\/ url script-response-body https://github.com/ddgksf2013/dev/raw/main/MeiTuXiuXiuProCrack.js
+# ✅ 克拉壁纸
+^https:\/\/claritywallpaper\.com\/clarity\/api\/(userInfo|special\/queryByCatalogAll|picture\/search|catalog\/listAll|top\/list|picture\/date\?date) url script-response-body https://github.com/ddgksf2013/dev/raw/main/ClarityProCrack.js
+# ✅ Picsart
+^https?:\/\/api\.meiease\.cn\/shop\/subscription\/validate url script-response-body https://github.com/ddgksf2013/dev/raw/main/PicsartProCrack.js
+# ✅ 搜图神器
+http:\/\/wallpaper\.soutushenqi\.com\/api\/v1\/account\/token url response-body vipType": 0 response-body vipType": 1024
+# ✅ 黄油相机
+^https?:\/\/api4\.bybutter\.com\/v4\/(users\/me$|shop\/me\/privileges$) url script-response-body https://github.com/ddgksf2013/dev/raw/main/BybutterProCrack.js
+# ✅ Focos
+^https?:\/\/.*oracle\.bendingspoonsapps\.com\/v\d\/(users\/setup|purchases\/verify\/apple) url script-response-body https://github.com/ddgksf2013/MoYu/raw/master/FocosProCrack.js
+
+
+#>>>>>>>>>>>>>>>>工具类VIP
+# ✅ 养基宝
+^https?:\/\/.*yangjibao\.com\/(wxapi\/)?account url script-response-body https://github.com/ddgksf2013/MoYu/raw/master/YangJiBaoProCrack.js
+# ✅ 极简汇率
+^https?:\/\/explorer\.tratao\.com\/api\/client\/xtool\/vip url script-response-body https://github.com/ddgksf2013/MoYu/raw/master/JiJianHuiLvProCrack.js
+# ✅ TopWidgets
+^https?:\/\/.*xiaozujian\.com\/api\/app\/config\/userConfig url script-response-body https://github.com/ddgksf2013/dev/raw/main/TopwidgetsProCrack.js
+# 🟥 WPS(国区)
+#^https:\/\/(vas|account)\.wps\.cn\/(query\/api\/v\d\/list_purchase_info|api\/users\/\d+\/overview) url script-response-body https://raw.githubusercontent.com/510004015/Quantumult_X/Remote/Premium/WPSOffice.js
+# ✅ Appraven(美化)
+^https?:\/\/.*appraven\.net\/appraven\/graphql url script-response-body https://gist.githubusercontent.com/ddgksf2013/562f8fd6a40be92d7c8b358aa25eab3f/raw/appraven.vip.js
+# ✅ Nicegram
+^https?:\/\/nicegram\.cloud\/api\/v\d\/(ai-assistant\/purchase-list|user\/info|telegram\/auth) url script-response-body https://github.com/ddgksf2013/MoYu/raw/master/NicegramProCrack.js
+# ✅ 扫描全能王
+^https:\/\/(api|api-cs)\.intsig\.net\/purchase\/cs\/query_property\? url script-response-body https://github.com/ddgksf2013/dev/raw/main/CamscannerProCrack.js
