@@ -7,37 +7,38 @@
 // @TgChannel         https://t.me/ddgksf2021
 // @Contribute        https://t.me/ddgksf2013_bot
 // @Feedback          📮 ddgksf2013@163.com 📮
-// @UpdateTime        2024-09-01
+// @UpdateTime        2024-09-27
 // @Suitable          自行观看“# > ”注释内容
 // @Attention         如需引用请注明出处，谢谢合作！
-// @Version           V1.0.7
+// @Version           V1.0.8
 // @ScriptURL         https://github.com/ddgksf2013/Rewrite/raw/master/AdBlock/CaiYunAds.conf
 // ==/UserScript==
 
+#若有彩云天气会员需求，请自行抓包旧版[ ≤ 7.20.2 ]使用，并添加MITM [ biz.cyapi.cn ]
 
-hostname = wrapper.cyapi.cn, api.caiyunapp.com, starplucker.cyapi.cn, ad.cyapi.cn, biz.cyapi.cn
+hostname = wrapper.cyapi.cn, api.caiyunapp.com, starplucker.cyapi.cn, ad.cyapi.cn
 
-# > 伪装VIP解锁48小时降水[需登录][新验证接口]@ddgksf2013
-^https?:\/\/biz\.cyapi\.cn\/api\/v\d\/user_detail url script-response-body https://rules-for-qx.sveir.xyz/Scripts/AdBlock/Other/Colorful.min.js
-# > 伪装VIP解锁48小时降水[需登录]@ddgksf2013
-^https?:\/\/biz\.cyapi\.cn\/v\d\/user url script-response-body https://rules-for-qx.sveir.xyz/Scripts/AdBlock/Other/Colorful.min.js
+# > 伪装VIP解锁48小时降水[需登录][新验证接口][需旧版≤ 7.20.2]@ddgksf2013
+^https?:\/\/biz\.cyapi\.cn\/api\/v\d\/user_detail url script-response-body https://r.sveir.xyz/Scripts/AdBlock/Other/Colorful.min.js
+# > 伪装VIP解锁48小时降水[需登录][需旧版≤ 7.20.2]@ddgksf2013
+^https?:\/\/biz\.cyapi\.cn\/v\d\/user url script-response-body https://r.sveir.xyz/Scripts/AdBlock/Other/Colorful.min.js
 # > 图层推广@ddgksf2013
-^https?:\/\/wrapper\.cyapi\.cn\/v\d\/activity url script-response-body https://rules-for-qx.sveir.xyz/Scripts/AdBlock/Other/Colorful.min.js
+^https?:\/\/wrapper\.cyapi\.cn\/v\d\/activity url script-response-body https://r.sveir.xyz/Scripts/AdBlock/Other/Colorful.min.js
 # > 活动推广@ddgksf2013
-^https?:\/\/api\.caiyunapp\.com\/v\d\/activity url script-response-body https://rules-for-qx.sveir.xyz/Scripts/AdBlock/Other/Colorful.min.js
+^https?:\/\/api\.caiyunapp\.com\/v\d\/activity url script-response-body https://r.sveir.xyz/Scripts/AdBlock/Other/Colorful.min.js
 # > 首页顶部推广@ddgksf2013
-^https?:\/\/starplucker\.cyapi\.cn\/v\d/operation/homefeatures url script-response-body https://rules-for-qx.sveir.xyz/Scripts/AdBlock/Other/Colorful.min.js
+^https?:\/\/starplucker\.cyapi\.cn\/v\d/operation/homefeatures url script-response-body https://r.sveir.xyz/Scripts/AdBlock/Other/Colorful.min.js
 # > SVIP提醒推广@ddgksf2013
-^https?:\/\/starplucker\.cyapi\.cn\/v\d/notification/message_center url script-response-body https://rules-for-qx.sveir.xyz/Scripts/AdBlock/Other/Colorful.min.js
+^https?:\/\/starplucker\.cyapi\.cn\/v\d/notification/message_center url script-response-body https://r.sveir.xyz/Scripts/AdBlock/Other/Colorful.min.js
 # > 雨季特惠提醒@ddgksf2013
-^https?:\/\/starplucker\.cyapi\.cn\/v\d/config/cypage url script-response-body https://rules-for-qx.sveir.xyz/Scripts/AdBlock/Other/Colorful.min.js
+^https?:\/\/starplucker\.cyapi\.cn\/v\d/config/cypage url script-response-body https://r.sveir.xyz/Scripts/AdBlock/Other/Colorful.min.js
 # > 发现页信息流推荐@ddgksf2013
-^https?:\/\/starplucker\.cyapi\.cn\/v\d/operation/feeds url script-response-body https://rules-for-qx.sveir.xyz/Scripts/AdBlock/Other/Colorful.min.js
+^https?:\/\/starplucker\.cyapi\.cn\/v\d/operation/feeds url script-response-body https://r.sveir.xyz/Scripts/AdBlock/Other/Colorful.min.js
 # > 发现页banners@ddgksf2013
-^https?:\/\/starplucker\.cyapi\.cn\/v\d/operation/banners url script-response-body https://rules-for-qx.sveir.xyz/Scripts/AdBlock/Other/Colorful.min.js
+^https?:\/\/starplucker\.cyapi\.cn\/v\d/operation/banners url script-response-body https://r.sveir.xyz/Scripts/AdBlock/Other/Colorful.min.js
 # > 发现页中间部分@ddgksf2013
-^https?:\/\/starplucker\.cyapi\.cn\/v\d/operation/features url script-response-body https://rules-for-qx.sveir.xyz/Scripts/AdBlock/Other/Colorful.min.js
+^https?:\/\/starplucker\.cyapi\.cn\/v\d/operation/features url script-response-body https://r.sveir.xyz/Scripts/AdBlock/Other/Colorful.min.js
 # > 发现页活动@ddgksf2013
-^https?:\/\/starplucker\.cyapi\.cn\/v\d/campaigns url script-response-body https://rules-for-qx.sveir.xyz/Scripts/AdBlock/Other/Colorful.min.js
+^https?:\/\/starplucker\.cyapi\.cn\/v\d/campaigns url script-response-body https://r.sveir.xyz/Scripts/AdBlock/Other/Colorful.min.js
 # > 通用广告请求@ddgksf2013
 ^https?:\/\/ad\.cyapi\.cn\/v\d url reject-200

@@ -53,10 +53,10 @@
 - [8️⃣ 许可与说明](#8️⃣许可与说明)
 -----
 
-# **🛠️ 仓库内容分支变更提醒**
-由于仓库内容过于久远，历史数据归档较为困难。
-已经对仓库分支结构进行切换并清理。
-如果你在使用过程中出现文件不存在等问题，请及时更新至对应内容。
+# **🛠️ 自有 CDN 域名变更提醒**
+由于域名繁杂、输入较麻烦等问题，从 **2024年10月15日** 起，原有仓库 CDN 域名 **rules-for-qx.sveir.xyz** 将变更为 **r.sveir.xyz**
+
+原域名将保留解析至 **2024年11月11日**，请及时更新自己配置文件。
 
 # **🉑 简要说明**
 
@@ -78,11 +78,15 @@
 
 ### `🌐 公共 DNS 推荐`
 
-    - https://doh.pub/dns-query
     - 119.29.29.29 [腾讯DnsPod+]
-    - 182.254.116.116
+    - 1.12.12.12
+    - 120.53.53.53
+    - https://doh.pub/dns-query
+    - tls://dot.pub
     - 223.5.5.5 [阿里云公共DNS]
     - 223.6.6.6
+    - https://dns.alidns.com/dns-query
+    - tls://dns.alidns.com
 
 # **1️⃣使用指南**
 >详细的带图指南请参考 @Shawn 提供的 [Quantumult X 不完全指南](https://www.notion.so/Quantumult-X-1d32ddc6e61c4892ad2ec5ea47f00917#bb2dce7c01114955bbdbbd222f2a5fcf)
@@ -104,36 +108,36 @@
 ```
 3.使用 **镜像加速域名** 替换 RAW链接,以避免更新配置时出错的相关问题
 
-```
+
+```markdown
 使用 我无私奉献的 CDN 链接
 
-  e.g: https://rules-for-qx.sveir.xyz/文件夹/文件名.list
+  e.g: https://r.sveir.xyz/文件夹/文件名.list
   
   例如文件: https://github.com/sve1r/Rules-For-Quantumult-X/blob/develop/Rules/Services/SNS/Weibo.list
   
   替换后链接为
   
-  https://rules-for-qx.sveir.xyz/Rules/Services/SNS/Weibo.list
+  https://r.sveir.xyz/Rules/Services/SNS/Weibo.list
 ```
 或
-```
+```markdown
 使用 JsDeliver CDN 链接
 
   e.g: https://cdn.jsdelivr.net/gh/sve1r/Rules-For-Quantumult-X@分支名/文件夹/文件名.list
   
-  例如文件: https://github.com/sve1r/Rules-For-Quantumult-X/blob/develop/Rules/Services/SNS/Weibo.list
+  例如文件: https://github.com/sve1r/Rules-For-Quantumult-X/blob/main/Rules/Services/SNS/Weibo.list
   
   替换后链接为
   
-  https://cdn.jsdelivr.net/gh/sve1r/Rules-For-Quantumult-X@develop/Rules/Services/SNS/Weibo.list
-  
+  https://cdn.jsdelivr.net/gh/sve1r/Rules-For-Quantumult-X@main/Rules/Services/SNS/Weibo.list
 ```
 
 
 ### 3.推荐排序
 
 > 推荐使用的规则排序如下
-```
+```markdown
 1. Advertising.list - 广告、行为分析、隐私追踪（macOS 不建议开启）
 2. Hijacking.list - 劫持（运营商、臭名昭著的诈骗网站或恶意应用）
 3. ForeignMedia.list - 国际流媒体

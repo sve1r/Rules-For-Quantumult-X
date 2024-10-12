@@ -1,4 +1,4 @@
 hostname = mb3admin.com
 
 # Emby解锁播放权限
-^https:\/\/mb3admin\.com\/admin\/service(\/registration\/validateDevice|\/appstore\/register|\/registration\/validate|\/registration\/getStatus|\/supporter\/retrievekey) url script-echo-response https://cdn.jsdelivr.net/gh/sve1r/Rules-For-Quantumult-X@main/Scripts/Unlock/Emby.js
+^https:\/\/mb3admin\.com\/admin\/service(\/registration\/validateDevice|\/appstore\/register|\/registration\/validate|\/registration\/getStatus|\/supporter\/retrievekey) url script-echo-response https://r.sveir.xyz/Scripts/Unlock/Emby.js

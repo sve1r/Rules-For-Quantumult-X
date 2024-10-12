@@ -5,4 +5,4 @@
 
 hostname = notability.com
 
-^https://notability.com/subscriptions url script-response-body https://rules-for-qx.sveir.xyz/Scripts/Unlock/Notability.min.js
+^https://notability.com/subscriptions url script-response-body https://r.sveir.xyz/Scripts/Unlock/Notability.min.js

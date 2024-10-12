@@ -9,4 +9,4 @@
 hostname=nicegram.cloud
 
 # > Nicegram☆解锁会员权限（2024-02-24）@ddgksf2013
-^https?:\/\/nicegram\.cloud\/api\/v\d\/(ai-assistant\/purchase-list|user\/info|telegram\/auth) url script-response-body https://rules-for-qx.sveir.xyz/Scripts/Unlock/Nicegram.min.js
+^https?:\/\/nicegram\.cloud\/api\/v\d\/(ai-assistant\/purchase-list|user\/info|telegram\/auth) url script-response-body https://r.sveir.xyz/Scripts/Unlock/Nicegram.min.js

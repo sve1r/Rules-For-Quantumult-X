@@ -8,5 +8,5 @@
 
 hostname = www.google.com*
 
-^https:\/\/www\.google\.com(?:\.[a-z]+|)\/(?:search\?(?:|.+?&)q=|$) url script-response-body https://rules-for-qx.sveir.xyz/Rewrite/Services/Google/GoogleRecaptcha.min.js
+^https:\/\/www\.google\.com(?:\.[a-z]+|)\/(?:search\?(?:|.+?&)q=|$) url script-response-body https://r.sveir.xyz/Rewrite/Services/Google/GoogleRecaptcha.min.js
 

@@ -1,4 +1,4 @@
 hostname = mobile.flightradar24.com
 
 # ✅ Flightradar24
-^https?:\/\/mobile\.flightradar24\.com\/mobile\/(user-session|\w{9}) url script-echo-response https://rules-for-qx.sveir.xyz/Scripts/Unlock/FlightRadar24.min.js
+^https?:\/\/mobile\.flightradar24\.com\/mobile\/(user-session|\w{9}) url script-echo-response https://r.sveir.xyz/Scripts/Unlock/FlightRadar24.min.js

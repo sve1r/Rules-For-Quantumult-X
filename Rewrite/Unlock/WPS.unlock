@@ -2,11 +2,11 @@
 hostname = *.docer.wps.cn, vipapi.wps.cn, account.wps.cn, account.wps.com.cn, vas.wps.cn
 
 # ✅ WPS(国区)
-^https:\/\/(vas|account)\.wps\.cn\/(query\/api\/v\d\/list_purchase_info|api\/users\/\d+\/overview) url script-response-body https://rules-for-qx.sveir.xyz/Scripts/Unlock/WPS.min.js
+^https:\/\/(vas|account)\.wps\.cn\/(query\/api\/v\d\/list_purchase_info|api\/users\/\d+\/overview) url script-response-body https://r.sveir.xyz/Scripts/Unlock/WPS.min.js
 
 # 旧版本使用
-;^https?:\/\/.*?account\.wps\.(com|cn)(:\d+)?\/api\/users\/\w+\/overview$ url script-response-body https://rules-for-qx.sveir.xyz/Scripts/Unlock/WPS.local.js
+;^https?:\/\/.*?account\.wps\.(com|cn)(:\d+)?\/api\/users\/\w+\/overview$ url script-response-body https://r.sveir.xyz/Scripts/Unlock/WPS.local.js
 
 # Docer 稻壳会员解锁
-^https?:\/\/account\.wps\.cn\/api\/v3\/mine\/vips url script-response-body https://rules-for-qx.sveir.xyz/Scripts/Unlock/WPS.docer.js
-^https?:\/\/.+\.(docer.)?wps.cn\/(user\/v1\/vip|android\/mb\/buy|download\/v1\/ios|partner\/invoke\/usable|(api|rank)\/v1(\/mobile\/mb)?\/detail) url script-request-header https://rules-for-qx.sveir.xyz/Scripts/Unlock/WPS.docer-power.js
+^https?:\/\/account\.wps\.cn\/api\/v3\/mine\/vips url script-response-body https://r.sveir.xyz/Scripts/Unlock/WPS.docer.js
+^https?:\/\/.+\.(docer.)?wps.cn\/(user\/v1\/vip|android\/mb\/buy|download\/v1\/ios|partner\/invoke\/usable|(api|rank)\/v1(\/mobile\/mb)?\/detail) url script-request-header https://r.sveir.xyz/Scripts/Unlock/WPS.docer-power.js

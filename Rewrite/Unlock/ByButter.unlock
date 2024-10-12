@@ -1,4 +1,4 @@
 hostname = api4.bybutter.com, *.bybutter.com
 
 # ✅ 黄油相机
-^https?:\/\/api4\.bybutter\.com\/v4\/(users\/me$|shop\/me\/privileges$) url script-response-body https://rules-for-qx.sveir.xyz/Scripts/Unlock/ByButter.min.js
+^https?:\/\/api4\.bybutter\.com\/v4\/(users\/me$|shop\/me\/privileges$) url script-response-body https://r.sveir.xyz/Scripts/Unlock/ByButter.min.js

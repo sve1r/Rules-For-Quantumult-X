@@ -5,5 +5,5 @@
 
 hostname = tiebac.baidu.com
 
-^http(s:\/\/tiebac|:\/\/c\.tieba)\.baidu\.com\/(c\/f\/(frs\/(page|threadlist|generalTabList)|pb\/page|excellent\/personalized)$|tiebaads\/commonbatch|c\/s\/sync$) url script-response-body https://cdn.jsdelivr.net/gh/sve1r/Rules-For-Quantumult-X@main/Scripts/AdBlock/Other/Tieba.min.js
-^http(s:\/\/tiebac|:\/\/c\.tieba)\.baidu\.com\/c\/f\/(frs\/(page|threadlist|generalTabList)|pb\/page|excellent\/personalized)\?cmd url script-response-body https://cdn.jsdelivr.net/gh/sve1r/Rules-For-Quantumult-X@main/Scripts/AdBlock/Other/Tieba-2.min.js
+^http(s:\/\/tiebac|:\/\/c\.tieba)\.baidu\.com\/(c\/f\/(frs\/(page|threadlist|generalTabList)|pb\/page|excellent\/personalized)$|tiebaads\/commonbatch|c\/s\/sync$) url script-response-body https://r.sveir.xyz/Scripts/AdBlock/Other/Tieba.min.js
+^http(s:\/\/tiebac|:\/\/c\.tieba)\.baidu\.com\/c\/f\/(frs\/(page|threadlist|generalTabList)|pb\/page|excellent\/personalized)\?cmd url script-response-body https://r.sveir.xyz/Scripts/AdBlock/Other/Tieba-2.min.js

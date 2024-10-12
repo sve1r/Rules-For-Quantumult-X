@@ -5,8 +5,8 @@
 
 hostname=api.revenuecat.com
 
-^https?:\/\/api\.revenuecat\.com\/v\d\/subscribers\/(\$RCAnonymousID\%)?(\w)+$ url script-response-body https://rules-for-qx.sveir.xyz/Scripts/Unlock/Grow.min.js
-^https?:\/\/api\.revenuecat\.com\/v\d\/receipts$ url script-response-body https://rules-for-qx.sveir.xyz/Scripts/Unlock/Grow.min.js
+^https?:\/\/api\.revenuecat\.com\/v\d\/subscribers\/(\$RCAnonymousID\%)?(\w)+$ url script-response-body https://r.sveir.xyz/Scripts/Unlock/Grow.min.js
+^https?:\/\/api\.revenuecat\.com\/v\d\/receipts$ url script-response-body https://r.sveir.xyz/Scripts/Unlock/Grow.min.js
 
 
 

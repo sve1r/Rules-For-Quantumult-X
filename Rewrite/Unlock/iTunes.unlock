@@ -8,4 +8,4 @@
 hostname = buy.itunes.apple.com
 
 # ～ BuyiTunes@ddgksf2013
-^https?:\/\/buy\.itunes\.apple\.com\/verifyReceipt$ url script-response-body https://rules-for-qx.sveir.xyz/Scripts/Unlock/iTunes.min.js
+^https?:\/\/buy\.itunes\.apple\.com\/verifyReceipt$ url script-response-body https://r.sveir.xyz/Scripts/Unlock/iTunes.min.js

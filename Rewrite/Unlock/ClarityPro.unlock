@@ -2,4 +2,4 @@ hostname = claritywallpaper.com
 
 
 # ✅ 克拉壁纸
-^https:\/\/claritywallpaper\.com\/clarity\/api\/(userInfo|special\/queryByCatalogAll|picture\/search|catalog\/listAll|top\/list|picture\/date\?date) url script-response-body https://rules-for-qx.sveir.xyz/Scripts/Unlock/ClarityPro.min.js
+^https:\/\/claritywallpaper\.com\/clarity\/api\/(userInfo|special\/queryByCatalogAll|picture\/search|catalog\/listAll|top\/list|picture\/date\?date) url script-response-body https://r.sveir.xyz/Scripts/Unlock/ClarityPro.min.js

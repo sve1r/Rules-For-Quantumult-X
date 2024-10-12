@@ -42,8 +42,8 @@ hostname=hc-ssp.sm.cn, api.gotokeep.com, 42.187.199.248, kad.gotokeep.com
 # > 屏蔽更新
 ^https?:\/\/api\.gotokeep\.com\/anno\/v\d\/upgrade\/check url reject-200
 # > 我的页面去推广
-^https?:\/\/api\.gotokeep\.com\/athena\/v\d\/people\/my$ url script-response-body https://rules-for-qx.sveir.xyz/Scripts/AdBlock/Other/Keep.min.js
+^https?:\/\/api\.gotokeep\.com\/athena\/v\d\/people\/my$ url script-response-body https://r.sveir.xyz/Scripts/AdBlock/Other/Keep.min.js
 # > 应用底部栏净化
-^https?:\/\/api\.gotokeep\.com\/config\/v\d\/basic url script-response-body https://rules-for-qx.sveir.xyz/Scripts/AdBlock/Other/Keep.min.js
+^https?:\/\/api\.gotokeep\.com\/config\/v\d\/basic url script-response-body https://r.sveir.xyz/Scripts/AdBlock/Other/Keep.min.js
 # > 首页信息流去广告
-^https?:\/\/api\.gotokeep\.com\/twins\/v4\/feed\/course url script-response-body https://rules-for-qx.sveir.xyz/Scripts/AdBlock/Other/Keep.min.js
+^https?:\/\/api\.gotokeep\.com\/twins\/v4\/feed\/course url script-response-body https://r.sveir.xyz/Scripts/AdBlock/Other/Keep.min.js

@@ -5,4 +5,4 @@
 
 hostname = api.revenuecat.com
 
-^https?:\/\/api\.revenuecat\.com\/v1\/(receipts|subscribers\/\$RCAnonymousID%3A\w{32})$ url script-response-body https://rules-for-qx.sveir.xyz/Scripts/Unlock/MoneyThings.min.js
+^https?:\/\/api\.revenuecat\.com\/v1\/(receipts|subscribers\/\$RCAnonymousID%3A\w{32})$ url script-response-body https://r.sveir.xyz/Scripts/Unlock/MoneyThings.min.js

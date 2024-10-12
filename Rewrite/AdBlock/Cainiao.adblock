@@ -19,15 +19,15 @@ hostname=cn-acs.m.cainiao.com, guide-acs.m.taobao.com,acs4miniapp-inner.m.taobao
 
 
 # > 菜鸟裹裹_amdc处理[Anti已将Amdc分流删除,故更换屏蔽策略]@ddgksf2013
-^http:\/\/amdc\.m\.taobao\.com url script-response-body https://rules-for-qx.sveir.xyz/Scripts/AdBlock/Other/Amdc.min.js
+^http:\/\/amdc\.m\.taobao\.com url script-response-body https://r.sveir.xyz/Scripts/AdBlock/Other/Amdc.min.js
 # > 菜鸟裹裹_首页中部的问邻居推广@ddgksf2013
-^https?:\/\/cn-acs\.m\.cainiao\.com\/gw\/mtop\.cainiao\.nbpresentation\.homepage\.merge\.get\.cn url script-response-body https://rules-for-qx.sveir.xyz/Scripts/AdBlock/Other/Cainiao.js
+^https?:\/\/cn-acs\.m\.cainiao\.com\/gw\/mtop\.cainiao\.nbpresentation\.homepage\.merge\.get\.cn url script-response-body https://r.sveir.xyz/Scripts/AdBlock/Other/Cainiao.js
 # > 菜鸟裹裹_首页中部的惊喜福利推广@ddgksf2013
-^https?:\/\/cn-acs\.m\.cainiao\.com\/gw\/mtop\.cainiao\.nbpresentation\.protocol\.homepage\.get\.cn url script-response-body https://rules-for-qx.sveir.xyz/Scripts/AdBlock/Other/Cainiao.js
+^https?:\/\/cn-acs\.m\.cainiao\.com\/gw\/mtop\.cainiao\.nbpresentation\.protocol\.homepage\.get\.cn url script-response-body https://r.sveir.xyz/Scripts/AdBlock/Other/Cainiao.js
 # > 菜鸟裹裹_搜索框下方今日好物推荐@ddgksf2013
-^https?:\/\/cn-acs\.m\.cainiao\.com\/gw\/mtop\.cainiao\.adkeyword url script-response-body https://rules-for-qx.sveir.xyz/Scripts/AdBlock/Other/Cainiao.js
+^https?:\/\/cn-acs\.m\.cainiao\.com\/gw\/mtop\.cainiao\.adkeyword url script-response-body https://r.sveir.xyz/Scripts/AdBlock/Other/Cainiao.js
 # > 菜鸟裹裹_首页底部商品推广@ddgksf2013
-^https?:\/\/cn-acs\.m\.cainiao\.com\/gw\/mtop\.cainiao\.guoguo\.nbnetflow\.ads\.index\.cn url script-response-body https://rules-for-qx.sveir.xyz/Scripts/AdBlock/Other/Cainiao.js
+^https?:\/\/cn-acs\.m\.cainiao\.com\/gw\/mtop\.cainiao\.guoguo\.nbnetflow\.ads\.index\.cn url script-response-body https://r.sveir.xyz/Scripts/AdBlock/Other/Cainiao.js
 # > 菜鸟裹裹_通用广告请求@ddgksf2013
 ^https?:\/\/cn-acs\.m\.cainiao\.com\/gw\/mtop\.cainiao\.guoguo\.nbnetflow\.ads\.(show|mshow)\.cn\/ url reject-200
 # > 菜鸟裹裹_支付宝小程序_通用广告请求@ddgksf2013
@@ -39,4 +39,4 @@ hostname=cn-acs.m.cainiao.com, guide-acs.m.taobao.com,acs4miniapp-inner.m.taobao
 # > 菜鸟裹裹_支付宝小程序_匿名选择@ddgksf2013
 ^https?:\/\/guide-acs\.m\.taobao\.com\/gw\/mtop\.cainiao\.nbmensa\.research\.researchservice\.consultmerge url reject-200
 # > 菜鸟裹裹_支付宝小程序_中部的寄件推广[导致的空白占位后续处理]@ddgksf2013
-^https?:\/\/guide-acs\.m\.taobao\.com\/gw\/mtop\.cainiao\.guoguo\.nbnetflow\.ads\.mshow url script-response-body https://rules-for-qx.sveir.xyz/Scripts/AdBlock/Other/Cainiao.js
+^https?:\/\/guide-acs\.m\.taobao\.com\/gw\/mtop\.cainiao\.guoguo\.nbnetflow\.ads\.mshow url script-response-body https://r.sveir.xyz/Scripts/AdBlock/Other/Cainiao.js

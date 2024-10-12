@@ -5,4 +5,4 @@
 
 hostname = api.boohee.com
 
-^https?:\/\/api\.boohee\.com\/app-interface\/.+\/user\/user_info url script-response-body https://rules-for-qx.sveir.xyz/Scripts/Unlock/Boohee.min.js
+^https?:\/\/api\.boohee\.com\/app-interface\/.+\/user\/user_info url script-response-body https://r.sveir.xyz/Scripts/Unlock/Boohee.min.js
