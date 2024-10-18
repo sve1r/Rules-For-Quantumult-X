@@ -342,7 +342,7 @@ function removeComments(e) {
     let i = [];
     for (let a of o) {
         let r = a.adType || "";
-        -1 == t.indexOf(r) && 6 != a.type && i.push(a)
+        -1 == t.indexOf(r) && i.push(a)
     }
     log("remove 评论区相关和推荐内容"), e.datas = i, e.tip_msg && delete e.tip_msg
 }
