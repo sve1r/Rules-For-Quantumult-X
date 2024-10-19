@@ -63,7 +63,6 @@ hostname = *.58cdn.com.cn,*.beacon.qq.com,*.chelaileapp.cn,*.gdt.qq.com,*.kakamo
 ^https:\/\/htwkop\.xiaojukeji\.com\/gateway\?api=hm\.fa\.combineHomepageInfo url reject-dict
 ^https:\/\/htwkop\.xiaojukeji\.com\/gateway\?api=hm\.fa\.mallRecommend url reject-dict
 ^https:\/\/hwimg\.beingfine\.cn\/card url reject-dict
-;^https:\/\/images\.qmai\.cn\/s214925\/2023 url reject-dict
 ^https:\/\/lawsonapi\.yorentown\.com\/area\/sh-lawson\/app\/v1\/mina\/systemSetting url reject-dict
 ^https:\/\/learnywhere\.cn\/api\/activity\/23\/423dsj\/inapp\/bb\/promote url reject-dict
 ^https:\/\/m\.ctrip\.com\/restapi\/soa2\/12673\/queryWeChatHotEvent url reject-dict
@@ -95,7 +94,6 @@ hostname = *.58cdn.com.cn,*.beacon.qq.com,*.chelaileapp.cn,*.gdt.qq.com,*.kakamo
 ^https:\/\/triangle\.wearemanner\.com\/mp-api\/v1\/ads url reject-dict
 ^https:\/\/vip7\.fzwdyy\.cn:8083\/api\/(getAdvertInfo|getGOOGAdvert) url reject-200
 ^https:\/\/vod-movie\.maoyan\.com\/vod\/video\/onlineMovies\.json url reject-dict
-;^https:\/\/webapi\.qmai\.cn\/web\/catering\/advertising\/ad url reject-200
 ^https:\/\/webchatapp\.fcbox\.com\/fcboxactivityweb\/api\/v2\/clientPage url reject-dict
 ^https:\/\/wechat-api\.i-xiaoma\.com\.cn\/app\/v1\/bus\/wechat\/content url reject-dict
 ^https:\/\/www\.deppon\.com\/gwapi\/memberService\/eco\/member\/grade\/commonInterface url reject-dict
