@@ -1,17 +1,17 @@
 // ==UserScript==
 // @ScriptName        微博&微博国际版净化[墨鱼版]
-// @Author            @ddgksf2013, @zmqcherish
-// @ForHelp           若有屏蔽广告的需求，可公众号后台回复APP名称
+// @Author            @ddgksf2013
 // @WechatID          墨鱼手记
 // @TgChannel         https://t.me/ddgksf2021
 // @Contribute        https://t.me/ddgksf2013_bot
 // @Feedback          📮 ddgksf2013@163.com 📮
-// @UpdateTime        2024-10-03
+// @UpdateTime        2024-10-30
 // @Attention         微博、微博国际版净化，现已二合一，使用中若有问题请发邮件！
 // @Attention         使用时请注意关闭QuantumultX的[兼容性增强]开关，否则无法去除微博广告
 // @Suitable          自行观看“# > ”注释内容
+// @Contributors      @zmqcherish
 // @Attention         如需引用请注明出处，谢谢合作！
-// @Version           V2.0.101
+// @Version           V2.0.103
 // @ScriptURL         https://github.com/ddgksf2013/Rewrite/raw/master/AdBlock/Weibo.conf
 // ==/UserScript==
 
