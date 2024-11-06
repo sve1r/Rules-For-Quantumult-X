@@ -1,0 +1,40 @@
+# > TomatoNovel 番茄小说
+
+# >> Wildcard Domains
+host-wildcard,*novelapp.ixigua.com,reject
+host-wildcard,*default.ixigua.com,reject
+host-wildcard,abtest*-misc-lf.zijieapi.com,reject
+host-wildcard,ads*-normal-*.zijieapi.com,reject
+host-wildcard,api-access.pangolin-sdk-toutiao*.com,reject
+host-wildcard,lf*-ad-union-sdk.pglstatp-toutiao.com,reject
+host-wildcard,log*-applog-*.fqnovel.com,reject
+host-wildcard,p*-ad-sign.byteimg.com,reject
+host-wildcard,p*-novel.byteimg.com,reject
+host-wildcard,polaris*-normal-lf.zijieapi.com,reject
+host-wildcard,rtlog*-applog-*.fqnovel.com,reject
+host-wildcard,tnc*-alisc*.zijieapi.com,reject
+
+# >> Domain And Suffix
+host-suffix,api-access.pangolin-sdk-toutiao.com,reject
+
+# >> HOST
+host,activity-ag.awemeughun.com,reject
+host,activity-zhendingtech.com,reject
+host,adim.pinduoduo.com,reject
+host,dig.bdurl.net,reject
+host,i.snssdk.com,reject
+host,i-lq.snssdk.com,reject
+host,is.snssdk.com,reject
+host,mcs.snssdk.com,reject
+host,msync-im1-vip6-std.easemob.com,reject
+host,security-lq.snssdk.com,reject
+host,sf3-ttcdn-tos.pstatp.com,reject
+host,toutiao-frontier.snssdk.com,reject
+
+# >> IP-CIDR
+ip-cidr,49.71.37.101/32,reject
+ip-cidr,117.71.105.23/32,reject
+ip-cidr,218.94.207.205/32,reject
+ip-cidr,117.92.229.188/32,reject
+ip-cidr,101.36.166.16/32,reject
+ip-cidr,180.96.2.114/32,reject
