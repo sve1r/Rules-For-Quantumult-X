@@ -5,7 +5,7 @@
 // @Attention         如需引用请注明出处，谢谢合作！
 // ==/UserScript==
 
-hostname = *.pangolin-sdk-toutiao.com,*.pangolin-sdk-toutiao*.com,*.pangolin-sdk-toutiao.*,*.pstatp.com,*.pstatp.com.*,*.pglstatp-toutiao.com.*,*.pglstatp-toutiao.com,gurd.snssdk.com,gurd.snssdk.com.*,*default.ixigua.com,adim.pinduoduo.com,v6-novelapp.fqnovelvod.com
+hostname = *.pangolin-sdk-toutiao.com,*.pangolin-sdk-toutiao*.com,*.pangolin-sdk-toutiao.*,*.pstatp.com,*.pstatp.com.*,*.pglstatp-toutiao.com.*,*.pglstatp-toutiao.com,gurd.snssdk.com,gurd.snssdk.com.*,*default.ixigua.com,adim.pinduoduo.com,mktm.jd.com,*.fqnovelpic.com,*.fqnovelvod.com
 
 # 番茄小说去章末广告
 ^https?:\/\/.+\.pangolin-sdk-toutiao\.com\/api\/ad\/union\/sdk\/(get_ads|stats|settings)\/ url reject
@@ -25,6 +25,7 @@ hostname = *.pangolin-sdk-toutiao.com,*.pangolin-sdk-toutiao*.com,*.pangolin-sdk
 # .+web\.business\.image url reject
 
 ^https?:\/\/.+\.(pglstatp-toutiao|pstatp)\.com\/(ad-app-package|ad)\/.+ url reject
+^https?:\/\/mktm\.jd\.com\/.+\/toutiao\?.+ url reject
 ^https?:\/\/adim\.pinduoduo\.com\/.+\/toutiao\?.+ url reject
 ^https?:\/\/.+novelapp\.fqnovelvod\.com\/.+\/video\/.+ url reject
 # ^http:\/\/.+\.douyincdn\.com\/stage\/.+\.flv url reject
