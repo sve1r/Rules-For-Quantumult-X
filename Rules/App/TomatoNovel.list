@@ -8,11 +8,12 @@ host-wildcard,ads*-normal-*.zijieapi.com,reject
 host-wildcard,api-access.pangolin-sdk-toutiao*.com,reject
 host-wildcard,lf*-ad-union-sdk.pglstatp-toutiao.com,reject
 host-wildcard,log*-applog-*.fqnovel.com,reject
+host-wildcard,mon*-misc-lf.fqnovel.com,reject
 host-wildcard,p*-ad-sign.byteimg.com,reject
 host-wildcard,p*-novel.byteimg.com,reject
 host-wildcard,polaris*-normal-lf.zijieapi.com,reject
 host-wildcard,rtlog*-applog-*.fqnovel.com,reject
-host-wildcard,tnc*-alisc*.zijieapi.com,reject
+host-wildcard,tnc*-ali*.zijieapi.com,reject
 
 # >> Domain And Suffix
 host-suffix,api-access.pangolin-sdk-toutiao.com,reject
