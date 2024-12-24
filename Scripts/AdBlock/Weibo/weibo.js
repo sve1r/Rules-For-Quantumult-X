@@ -2,7 +2,7 @@
  > 应用名称：墨鱼自用微博&微博国际版净化脚本
  > 脚本作者：@ddgksf2013
  > 微信账号：墨鱼手记
- > 更新时间：2024-10-30
+ > 更新时间：2024-12-22
  > 通知频道：https://t.me/ddgksf2021
  > 贡献投稿：https://t.me/ddgksf2013_bot
  > 问题反馈：ddgksf2013@163.com
@@ -12,7 +12,7 @@
  ***********************************************/
 
 
-const version = 'V2.0.133';
+const version = 'V2.0.135';
 
 
 const mainConfig = {
@@ -211,7 +211,7 @@ function checkSearchWindow(e) {
 function removeSearch(e) {
     if (!e.items) return e;
     let t = [];
-    for (let o of e.items) "feed" == o.category ? isAd(o.data) || (o.data?.page_info?.video_limit && delete o.data.page_info.video_limit, t.push(o)) : "group" == o.category ? (o.items = o.items.filter(e => e.data?.card_type == void 0 || e.data?.card_type === 17 || e.data?.card_type === 10), o.items.length > 0 && t.push(o)) : checkSearchWindow(o) || t.push(o);
+    for (let o of e.items) "feed" == o.category ? isAd(o.data) || (o.data?.page_info?.video_limit && delete o.data.page_info.video_limit, t.push(o)) : "group" == o.category ? o.header?.type !== "guess" && (o.items = o.items.filter(e => e.data?.card_type == void 0 || e.data?.card_type === 17 || e.data?.card_type === 10), o.items.length > 0 && t.push(o)) : checkSearchWindow(o) || t.push(o);
     return e.items = t, e.loadedInfo && (e.loadedInfo.searchBarContent = [], e.loadedInfo.headerBack && (e.loadedInfo.headerBack.channelStyleMap = {})), log("remove_search success"), e
 }
 
