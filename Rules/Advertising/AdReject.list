@@ -1,13 +1,6 @@
-ip-cidr, 123.207.209.39/32, reject
-ip-cidr, 123.207.209.60/32, reject
-ip-cidr, 139.199.240.12/32, reject
-ip-cidr, 162.14.157.2/32, reject
-ip-cidr, 162.14.157.24/32, reject
-ip-cidr, 139.199.240.15/32, reject
-host-suffix,api-access.pangolin-sdk-toutiao-b.com,reject
-host-suffix,apoll.m.taobao.com,reject
-host-suffix,comet.yahoo.com,reject
-host-suffix,gemini.yahoo.com,reject
+# Ads in Video apps
+
+# > iqiyi & pps
 host-suffix,a.ckm.iqiyi.com,reject
 host-suffix,ad.m.iqiyi.com,reject
 host-suffix,afp.iqiyi.com,reject
@@ -22,7 +15,10 @@ host-suffix,cupid.iqiyi.com,reject
 host-suffix,emoticon.sns.iqiyi.com,reject
 host-suffix,game.pps.tv,reject
 host-suffix,gamecenter.iqiyi.com,reject
+host-suffix,ifacelog.iqiyi.com,reject
 host-suffix,mbdlog.iqiyi.com,reject
+host-suffix,msg.71.am,reject
+host-suffix,msg.qy.net,reject
 host-suffix,msg.iqiyi.com,reject
 host-suffix,msg.video.qiyi.com,reject
 host-suffix,msg2.video.qiyi.com,reject
@@ -34,16 +30,23 @@ host-suffix,notice.iqiyi.com,reject
 host-suffix,noxagile.duapp.com,reject
 host-suffix,paopao.iqiyi.com,reject
 host-suffix,policy.video.iqiyi.com,reject
-host-suffix,qosp.msg.71.am,reject
 host-suffix,static.g.iqiyi.com,reject
 host-suffix,static.g.ppstream.com,reject
 host-suffix,store.iqiyi.com,reject
+host-suffix,t7z.cupid.iqiyi.com,reject
 host-suffix,tracker.sns.iqiyi.com,reject
 host-suffix,yuedu.iqiyi.com,reject
+IP-CIDR,101.227.97.240/32,reject
+IP-CIDR,101.227.200.11/32,reject
+IP-CIDR,101.227.200.28/32,reject
+IP-CIDR,124.192.153.42/32,reject
+
+# > Youku & Tudou
 host-suffix,actives.youku.com,reject
 host-suffix,ad.api.3g.tudou.com,reject
 host-suffix,ad.api.3g.youku.com,reject
 host-suffix,ad.api.mobile.youku.com,reject
+host-suffix,ad.mobile.youku.com,reject
 host-suffix,a-dxk.play.api.3g.youku.com,reject
 host-suffix,b.smartvideo.youku.com,reject
 host-suffix,c.yes.youku.com,reject
@@ -57,6 +60,7 @@ host-suffix,hudong.pl.youku.com,reject
 host-suffix,huodong.pl.youku.com,reject
 host-suffix,huodong.vip.youku.com,reject
 host-suffix,hz.youku.com,reject
+host-suffix,iyes.youku.com,reject
 host-suffix,l.ykimg.com,reject
 host-suffix,lstat.youku.com,reject
 host-suffix,m.yes.youku.com,reject
@@ -82,12 +86,30 @@ host-suffix,val.api.youku.com,reject
 host-suffix,wan.youku.com,reject
 host-suffix,ykatr.youku.com,reject
 host-suffix,ykrec.youku.com,reject
+IP-CIDR,117.177.248.17/32,reject
+IP-CIDR,117.177.248.41/32,reject
+IP-CIDR,223.87.176.139/32,reject
+IP-CIDR,223.87.176.176/32,reject
+IP-CIDR,223.87.177.180/32,reject
+IP-CIDR,223.87.177.182/32,reject
+IP-CIDR,223.87.177.184/32,reject
+IP-CIDR,223.87.177.43/32,reject
+IP-CIDR,223.87.177.47/32,reject
+IP-CIDR,223.87.177.80/32,reject
+IP-CIDR,223.87.182.101/32,reject
+IP-CIDR,223.87.182.102/32,reject
+IP-CIDR,223.87.182.11/32,reject
+IP-CIDR,223.87.182.52/32,reject
+
+# > MGTV
 host-suffix,ads-api.videojj.com,reject
 host-suffix,cdn.cmop.mgtv.com,reject
 host-suffix,click.hunantv.com,reject
 host-suffix,cmop.mgtv.com,reject
 host-suffix,cytron.videojj.com,reject
 host-suffix,cytroncdn.videojj.com,reject
+host-suffix,da.hunantv.com,reject
+host-suffix,da.mgtv.com,reject
 host-suffix,imgaliyun.da.mgtv.com,reject
 host-suffix,imgaliyun.res.mgtv.com,reject
 host-suffix,m2.da.mgtv.com,reject
@@ -107,31 +129,38 @@ host-suffix,res.hunantv.com,reject
 host-suffix,store.videojj.com,reject
 host-suffix,v2.da.mgtv.com,reject
 host-suffix,va.videojj.com,reject
-host-suffix,videojj.com,reject
 host-suffix,web.da.mgtv.com,reject
 host-suffix,x.da.hunantv.com,reject
 host-suffix,x.da.mgtv.com,reject
 host-suffix,x1.da.hunantv.com,reject
 host-suffix,y.da.hunantv.com,reject
 host-suffix,y.da.mgtv.com,reject
+
+# > Letv
 host-suffix,1.letvlive.com,reject
 host-suffix,2.letvlive.com,reject
 host-suffix,ads1.lfengmobile.com,reject
 host-suffix,api.game.letvstore.com,reject
 host-suffix,api.push.le.com,reject
+host-suffix,ark.letv.com,reject
 host-suffix,cdn.zampdsp.com,reject
 host-suffix,cm.fancyapi.com,reject
 host-suffix,cn.api.push.le.com,reject
 host-suffix,dc.letv.com,reject
 host-suffix,fz.letv.com,reject
+host-suffix,g3.letv.com,reject
 host-suffix,minisite.letv.com,reject
 host-suffix,msg.m.letv.com,reject
+host-suffix,n.mark.letv.com,reject
 host-suffix,pro.hoye.letv.com,reject
 host-suffix,pro.letv.com,reject
 host-suffix,s.zampdsp.com,reject
 host-suffix,stat.letv.com,reject
 host-suffix,static.app.m.letv.com,reject
+host-suffix,webp2p.letv.com,reject
 host-suffix,zamplus.com,reject
+
+# > Youtube
 host-suffix,azabu-u.ac.jp,reject
 host-suffix,couchcoaster.jp,reject
 host-suffix,delivery.dmkt-sp.jp,reject
@@ -139,27 +168,39 @@ host-suffix,ehg-youtube.hitbox.com,reject
 host-suffix,m-78.jp,reject
 host-suffix,nichibenren.or.jp,reject
 host-suffix,nicorette.co.kr,reject
+
+# > Sohu
 host-suffix,adnet.sohu.com,reject
-host-suffix,data.vod.itc.cn,reject
+host-suffix,aty.sohu.com,reject
 host-suffix,epro.sogou.com,reject
 host-suffix,go.sohu.com,reject
 host-suffix,golden1.sogou.com,reject
+host-suffix,imp.optaim.com,reject
 host-suffix,inte.sogou.com,reject
 host-suffix,inte.sogoucdn.com,reject
 host-suffix,lu.sogoucdn.com,reject
 host-suffix,theta.sogoucdn.com,reject
 host-suffix,uranus.sogou.com,reject
+
+# > PPTV
 host-suffix,afp.pplive.com,reject
 host-suffix,app.aplus.pptv.com,reject
 host-suffix,as.aplus.pptv.com,reject
+host-suffix,asimgs.pplive.cn,reject
+host-suffix,de.as.pptv.com,reject
 host-suffix,jp.as.pptv.com,reject
 host-suffix,pp2.pptv.com,reject
 host-suffix,stat.pptv.com,reject
 host-suffix,static.g.pptv.com,reject
+
+# > Site
+host-suffix,deliver.ifeng.com,reject
 host-suffix,hxjs.tool.hexun.com,reject
 host-suffix,hxsame.hexun.com,reject
 host-suffix,itv.hexun.com,reject
 host-suffix,utrack.hexun.com,reject
+
+# > Vod
 host-suffix,ad.cmvideo.cn,reject
 host-suffix,atm.cp31.ott.cibntv.net,reject
 host-suffix,aty.cp45.ott.cibntv.net,reject
@@ -167,7 +208,8 @@ host-suffix,cpm.cm.kankan.com,reject
 host-suffix,float.kankan.com,reject
 host-suffix,houyi.baofeng.net,reject
 host-suffix,iadctest.qwapi.com,reject
-host-suffix,logger.baofeng.com,reject
+
+# > Other
 host-suffix,ad.video.51togic.com,reject
 host-suffix,biz5.kankan.com,reject
 host-suffix,c.algovid.com,reject
@@ -207,6 +249,7 @@ host-suffix,traffic.uusee.com,reject
 host-suffix,union.6.cn,reject
 host-suffix,wa.gtimg.com,reject
 host-suffix,bfshan.cn,reject
+
 host-suffix,0.r.msn.com,reject
 host-suffix,000dn.com,reject
 host-suffix,001union.com,reject
@@ -301,10 +344,12 @@ host-suffix,170yy.com,reject
 host-suffix,175bar.com,reject
 host-suffix,176um.com,reject
 host-suffix,178gg.com,reject
+host-suffix,17gouwuba.com,reject
 host-suffix,17leyi.com,reject
 host-suffix,17un.co,reject
 host-suffix,17un.com,reject
 host-suffix,17zhaole.com,reject
+host-suffix,189zj.cn,reject
 host-suffix,18av.mm-cg.co,reject
 host-suffix,18dusun.com,reject
 host-suffix,18tzx.com,reject
@@ -358,6 +403,7 @@ host-suffix,256ppp.com,reject
 host-suffix,268mob.cn,reject
 host-suffix,272829.cc,reject
 host-suffix,272xb.com,reject
+host-suffix,285680.com,reject
 host-suffix,28acglz.com,reject
 host-suffix,2a.com.cn,reject
 host-suffix,2cnt.net,reject
@@ -373,7 +419,6 @@ host-suffix,312036.com,reject
 host-suffix,3180555.com,reject
 host-suffix,32414.com,reject
 host-suffix,32666099.com,reject
-host-suffix,33.autohome.com.cn,reject
 host-suffix,33.pcpop.com,reject
 host-suffix,33544444.com,reject
 host-suffix,336.com,reject
@@ -395,6 +440,7 @@ host-suffix,365bibi.com,reject
 host-suffix,365safego.com,reject
 host-suffix,366safego.com,reject
 host-suffix,36pn.com,reject
+host-suffix,3721zh.com,reject
 host-suffix,376zf.com,reject
 host-suffix,37cs.com,reject
 host-suffix,37mnm.com,reject
@@ -422,20 +468,24 @@ host-suffix,3qmh.com,reject
 host-suffix,3rd.t.sohu.com,reject
 host-suffix,3wz6z.bchuangpi.cn,reject
 host-suffix,3ygww.com,reject
+host-suffix,4009997658.com,reject
 host-suffix,404.safedog.cn,reject
 host-suffix,4207008.com,reject
 host-suffix,4242jj.com,reject
 host-suffix,4242lll.com,reject
 host-suffix,4242uuu.com,reject
+host-suffix,4336wang.cn,reject
 host-suffix,456juhd.com,reject
 host-suffix,46sg.com,reject
 host-suffix,49wanwan.com,reject
 host-suffix,4ggww.com,reject
+host-suffix,4paradigm.com,reject
 host-suffix,4wad.com,reject
 host-suffix,4xhyr.shuimujinggong.com,reject
 host-suffix,504pk.com,reject
 host-suffix,5066.net,reject
 host-suffix,50bang.org,reject
+host-suffix,51.la,reject
 host-suffix,5125129.com,reject
 host-suffix,513hch.com,reject
 host-suffix,517m.cn,reject
@@ -443,11 +493,13 @@ host-suffix,518.sdinfo.net,reject
 host-suffix,5188yy.com,reject
 host-suffix,519397.com,reject
 host-suffix,51ads.com,reject
+host-suffix,51chumoping.com,reject
 host-suffix,51dql.com,reject
 host-suffix,51gxqm.com,reject
 host-suffix,51jumintong.com,reject
 host-suffix,51la.net,reject
 host-suffix,51link.com,reject
+host-suffix,51mld.cn,reject
 host-suffix,51network.com,reject
 host-suffix,51vipedu.com,reject
 host-suffix,51weidashi.com,reject
@@ -465,6 +517,7 @@ host-suffix,52lubo.cn,reject
 host-suffix,5345ll.com,reject
 host-suffix,537901.com,reject
 host-suffix,55.la,reject
+host-suffix,5534edee5a.com,reject
 host-suffix,555p555p.com,reject
 host-suffix,559gp.com,reject
 host-suffix,55lu.com,reject
@@ -477,6 +530,8 @@ host-suffix,5814889.com,reject
 host-suffix,5857.com,reject
 host-suffix,588yw.com,reject
 host-suffix,58lm.vip,reject
+host-suffix,58mingri.cn,reject
+host-suffix,58mingtian.cn,reject
 host-suffix,592man.com,reject
 host-suffix,5dg.me,reject
 host-suffix,5dian.org,reject
@@ -509,6 +564,7 @@ host-suffix,6a4cc.luvbq.com,reject
 host-suffix,6a4cc.luvbr.com,reject
 host-suffix,6a4cc.luytr.com,reject
 host-suffix,6boou.voluumtrk.com,reject
+host-suffix,6d63d3.com,reject
 host-suffix,6dad.com,reject
 host-suffix,6dvip.com,reject
 host-suffix,6huu.com,reject
@@ -541,6 +597,7 @@ host-suffix,7891655.cn,reject
 host-suffix,7car.com.cn,reject
 host-suffix,7clink.com,reject
 host-suffix,7dah8.com,reject
+host-suffix,7gg.cc,reject
 host-suffix,7jiajiao.com,reject
 host-suffix,7mad.7m.cn,reject
 host-suffix,7pk.com,reject
@@ -595,6 +652,7 @@ host-suffix,915.com,reject
 host-suffix,91ad.bestvogue.com,reject
 host-suffix,91adv.com,reject
 host-suffix,91hui.com,reject
+host-suffix,91veg.com,reject
 host-suffix,91xry.com,reject
 host-suffix,91ysa.com,reject
 host-suffix,91zgm.com,reject
@@ -617,6 +675,7 @@ host-suffix,9ads.net,reject
 host-suffix,9dtiny.cn,reject
 host-suffix,9kff.com,reject
 host-suffix,9pkw.com,reject
+host-suffix,9s6q.cn,reject
 host-suffix,9tn.cc,reject
 host-suffix,9wushuo.com,reject
 host-suffix,a.198banjia.com,reject
@@ -743,6 +802,7 @@ host-suffix,ab.goodsblock.mgid.com,reject
 host-suffix,ab.hysdknb.com,reject
 host-suffix,ab.meishiba.com.cn,reject
 host-suffix,ab.sc115.com,reject
+host-suffix,abbyychina.com,reject
 host-suffix,abc.dooccn.com,reject
 host-suffix,abc.douguo.com,reject
 host-suffix,abc.eastlady.cn,reject
@@ -756,7 +816,6 @@ host-suffix,abcj.dooccn.com,reject
 host-suffix,ab-gb.mgid.com,reject
 host-suffix,abtest.mistat.xiaomi.com,reject
 host-suffix,ac.atpanel.com,reject
-host-suffix,ac.mmstat.com,reject
 host-suffix,ac2.msn.com,reject
 host-suffix,ac3.msn.com,reject
 host-suffix,acasys88.cn,reject
@@ -767,7 +826,6 @@ host-suffix,acm.dzwww.com,reject
 host-suffix,acs86.com,reject
 host-suffix,acsystem.wasu.cn,reject
 host-suffix,act2.mediafour.com,reject
-host-suffix,action.logger.baofeng.com,reject
 host-suffix,activate.adobe.com,reject
 host-suffix,activate.wip3.adobe.com,reject
 host-suffix,activate-sea.adobe.com,reject
@@ -776,7 +834,6 @@ host-suffix,activation.cyberlink.com,reject
 host-suffix,activation.easeus.com,reject
 host-suffix,active.baofeng.com,reject
 host-suffix,activeqq.3g.qq.com,reject
-host-suffix,activity.app.autohome.com.cn,reject
 host-suffix,activity.serving-sys.com,reject
 host-suffix,activity.tuifish.com,reject
 host-suffix,activity.yuyiya.com,reject
@@ -786,6 +843,7 @@ host-suffix,acuityplatform.com,reject
 host-suffix,acwgf.com,reject
 host-suffix,acxiom-online.com,reject
 host-suffix,ad.1111cpc.com,reject
+host-suffix,ad.12306.cn,reject
 host-suffix,ad.17173.com,reject
 host-suffix,ad.1kxun.com,reject
 host-suffix,ad.3.cn,reject
@@ -798,6 +856,7 @@ host-suffix,ad.about.co.kr,reject
 host-suffix,ad.accessmediaproductions.com,reject
 host-suffix,ad.adhouyi.cn,reject
 host-suffix,ad.aidalan.com,reject
+host-suffix,ad.api.moji.com,reject
 host-suffix,ad.auditude.com,reject
 host-suffix,ad.bayescom.com,reject
 host-suffix,ad.beihai365.com,reject
@@ -844,6 +903,7 @@ host-suffix,ad.hiiir.com,reject
 host-suffix,ad.holaq.com,reject
 host-suffix,ad.hot-mob.com,reject
 host-suffix,ad.house365.com,reject
+host-suffix,ad.huajiao.com,reject
 host-suffix,ad.ibookstar.com,reject
 host-suffix,ad.icasthq.com,reject
 host-suffix,ad.idgtn.net,reject
@@ -852,6 +912,7 @@ host-suffix,ad.ipadview.com,reject
 host-suffix,ad.jamba.net,reject
 host-suffix,ad.jamster.co.uk,reject
 host-suffix,ad.jamster.com,reject
+host-suffix,ad.jiemian.com,reject
 host-suffix,ad.jsnbrynb.com,reject
 host-suffix,ad.jxnews.com.cn,reject
 host-suffix,ad.kissanime.io,reject
@@ -886,6 +947,7 @@ host-suffix,ad.pixnet.net,reject
 host-suffix,ad.player.baidu.com,reject
 host-suffix,ad.propellerads.com,reject
 host-suffix,ad.proxy.sh,reject
+host-suffix,ad.qingting.fm,reject
 host-suffix,ad.qq.com,reject
 host-suffix,ad.r.worldssl.net,reject
 host-suffix,ad.rambler.ru,reject
@@ -921,10 +983,13 @@ host-suffix,ad.wang502.com,reject
 host-suffix,ad.winningpartner.com,reject
 host-suffix,ad.winrar.com.cn,reject
 host-suffix,ad.wretch.cc,reject
+host-suffix,ad.xiaomi.com,reject
+host-suffix,ad.ximalaya.com,reject
 host-suffix,ad.xmovies8.ru,reject
 host-suffix,ad.xxguan.cn,reject
 host-suffix,ad.yeshitv.com,reject
 host-suffix,ad.yieldlab.net,reject
+host-suffix,ad.yixin.im,reject
 host-suffix,ad.ylunion.com,reject
 host-suffix,ad.zanox.com,reject
 host-suffix,ad.zdworks.com,reject
@@ -954,6 +1019,7 @@ host-suffix,ad5.bigmir.net,reject
 host-suffix,ad6.bigmir.net,reject
 host-suffix,ad7.bigmir.net,reject
 host-suffix,ad7.com,reject
+host-suffix,ad7.on.cc,reject
 host-suffix,ad7.tagphi.net,reject
 host-suffix,ad8.adfarm1.adition.com,reject
 host-suffix,ad9377.com,reject
@@ -964,6 +1030,7 @@ host-suffix,ad-android.51wnl.com,reject
 host-suffix,adap.tv,reject
 host-suffix,adapi.lenovogame.com,reject
 host-suffix,adasad.myweb.hinet.net,reject
+host-suffix,adash.m.taobao.com,reject
 host-suffix,adbana.com,reject
 host-suffix,ad-beta.flipboard.com,reject
 host-suffix,adbot.tw,reject
@@ -983,6 +1050,8 @@ host-suffix,adclient.uimserv.net,reject
 host-suffix,adclock.zdworks.com,reject
 host-suffix,adcloud.jp,reject
 host-suffix,ad-cloud.jp,reject
+host-suffix,ad-cn.jovcloud.com,reject
+host-suffix,adcolony.com,reject
 host-suffix,adcome.cn,reject
 host-suffix,adcore.lenovomm.com,reject
 host-suffix,adcount.yoka.com,reject
@@ -1036,21 +1105,25 @@ host-suffix,adinf.cp11.ott.cibntv.net,reject
 host-suffix,adinf.voole.com,reject
 host-suffix,adinfo.aol.com,reject
 host-suffix,adinfo.ra1.xlmc.sec.miui.com,reject
+host-suffix,adinfuse.com,reject
 host-suffix,adingo.jp.eimg.jp,reject
 host-suffix,adirects.com,reject
 host-suffix,adjb.5nd.com,reject
+host-suffix,adjust.io,reject
 host-suffix,adk.funshion.com,reject
 host-suffix,adk2.co,reject
 host-suffix,adk2x.com,reject
 host-suffix,adkmob.com,reject
 host-suffix,adkongjian.com,reject
 host-suffix,adlabs-sync.rutarget.ru,reject
+host-suffix,adlaunch.moji.com,reject
 host-suffix,adlefee.com,reject
 host-suffix,adlink.shopsafe.co.nz,reject
 host-suffix,adlive.cn,reject
 host-suffix,adlocus.com,reject
 host-suffix,ad-locus.com,reject
 host-suffix,adlog.flurry.com,reject
+host-suffix,adm.10jqka.com.cn,reject
 host-suffix,adm.265g.com,reject
 host-suffix,adm.72zx.com,reject
 host-suffix,adm.86wan.com,reject
@@ -1070,6 +1143,7 @@ host-suffix,adm1.autoimg.cn,reject
 host-suffix,adm2.autoimg.cn,reject
 host-suffix,adm3.autoimg.cn,reject
 host-suffix,admaji.com,reject
+host-suffix,admarket.21cn.com,reject
 host-suffix,admarket.mobi,reject
 host-suffix,admd.yam.com,reject
 host-suffix,admedia.com,reject
@@ -1085,6 +1159,7 @@ host-suffix,admx.baixing.com,reject
 host-suffix,adn.ebay.com,reject
 host-suffix,adn.insight.ucweb.com,reject
 host-suffix,adnetpub.yaolan.com,reject
+host-suffix,adnew.wifi8.com,reject
 host-suffix,adnxs.com,reject
 host-suffix,adobe-dns.adobe.com,reject
 host-suffix,adobe-dns-2.adobe.com,reject
@@ -1126,6 +1201,8 @@ host-suffix,ads2.msn.com,reject
 host-suffix,ads2.opensubtitles.org,reject
 host-suffix,ads8.com,reject
 host-suffix,ads80.com,reject
+host-suffix,adsame.com,reject
+host-suffix,adsapi.manhuaren.com,reject
 host-suffix,adsatt.abcnews.starwave.com,reject
 host-suffix,adsatt.disney.starwave.com,reject
 host-suffix,adsatt.espn.go.com,reject
@@ -1140,11 +1217,14 @@ host-suffix,adsclick.yx.js.cn,reject
 host-suffix,adsco.re,reject
 host-suffix,adscript.gmarket.co.kr,reject
 host-suffix,adsdk.9imobi.com,reject
+host-suffix,adsdk.dmzj.com,reject
 host-suffix,adse.test.ximalaya.com,reject
+host-suffix,adse.ximalaya.com,reject
 host-suffix,adsence.sogou.com,reject
 host-suffix,adsense.html5.qq.com,reject
 host-suffix,adserve2.tom.com,reject
 host-suffix,adsfactor.net,reject
+host-suffix,adsfile.bssdlbig.kugou.com,reject
 host-suffix,adsfile.qq.com,reject
 host-suffix,adsfs.oppomobile.com,reject
 host-suffix,adsgroup.qq.com,reject
@@ -1152,7 +1232,9 @@ host-suffix,adshare.freedocast.com,reject
 host-suffix,adshmct.qq.com,reject
 host-suffix,adshmmsg.qq.com,reject
 host-suffix,adshost2.com,reject
+host-suffix,adshow.58.com,reject
 host-suffix,adshow.it168.com,reject
+host-suffix,adshows.21cn.com,reject
 host-suffix,adsin.zhangyoubao.com,reject
 host-suffix,adsinstant.com,reject
 host-suffix,adslvfile.qq.com,reject
@@ -1160,6 +1242,7 @@ host-suffix,adslvseed.qq.com,reject
 host-suffix,adsmart.yicha.cn,reject
 host-suffix,adsolution.imtt.qq.com,reject
 host-suffix,adsor.openrunner.com,reject
+host-suffix,adsp.xunlei.com,reject
 host-suffix,ad-specs.guoshipartners.com,reject
 host-suffix,adsqqclick.qq.com,reject
 host-suffix,adsremote.scrippsnetworks.com,reject
@@ -1170,8 +1253,10 @@ host-suffix,adstat.cp11.ott.cibntv.net,reject
 host-suffix,adstextview.qq.com,reject
 host-suffix,adstil.indiatimes.com,reject
 host-suffix,ad-stir.com,reject
+host-suffix,adsmind.gdtimg.com,reject
 host-suffix,adstream.123.sogoucdn.com,reject
 host-suffix,ads-twitter.com,reject
+host-suffix,ads-v-darwin.hulustream.com,reject
 host-suffix,adsunflower.com,reject
 host-suffix,adsunion.com,reject
 host-suffix,ad-survey.com,reject
@@ -1181,12 +1266,15 @@ host-suffix,adsymptotic.com,reject
 host-suffix,adsyndication.msn.com,reject
 host-suffix,adsys.chinacloudapp.cn,reject
 host-suffix,adsys.sinovision.net,reject
-host-suffix,adsystem.wasu.tv,reject
 host-suffix,adtaily.com,reject
+host-suffix,ad-tech.nbcuni.com,reject
 host-suffix,adtechjp.com,reject
 host-suffix,adtechus.com,reject
 host-suffix,adtest.theonion.com,reject
+host-suffix,adthor.com,reject
+host-suffix,adtrack.ucweb.com,reject
 host-suffix,adtrk.me,reject
+host-suffix,adui.tg.meitu.com,reject
 host-suffix,adultfriendfinder.com,reject
 host-suffix,adups.com,reject
 host-suffix,aduu.cn,reject
@@ -1196,6 +1284,7 @@ host-suffix,adv.fjtv.net,reject
 host-suffix,adv.jxnews.com.cn,reject
 host-suffix,adv.madserving.com,reject
 host-suffix,adv.s8bbs.com,reject
+host-suffix,adv.sec.miui.com,reject
 host-suffix,adv2.downsave.com,reject
 host-suffix,advapi.ahtv.cn,reject
 host-suffix,adver.qq.com,reject
@@ -1205,6 +1294,7 @@ host-suffix,advombat.ru,reject
 host-suffix,adwasu.wasu.tv,reject
 host-suffix,adweb.test.ximalaya.com,reject
 host-suffix,adweb.ximalaya.com,reject
+host-suffix,adwhirl.com,reject
 host-suffix,adwo.com,reject
 host-suffix,adx.adxglobal.com,reject
 host-suffix,adx.chip.de,reject
@@ -1215,6 +1305,7 @@ host-suffix,adx.xiaodutv.com,reject
 host-suffix,adx3.iq39.com,reject
 host-suffix,adxmi.com,reject
 host-suffix,adxpansion.com,reject
+host-suffix,adxserver.ad.cmvideo.cn,reject
 host-suffix,adytx.com,reject
 host-suffix,adyun.com,reject
 host-suffix,adz.zwee.ly,reject
@@ -1225,7 +1316,7 @@ host-suffix,ae-gb.mgid.com,reject
 host-suffix,aercxy.com,reject
 host-suffix,aerserv.com,reject
 host-suffix,aes01.com,reject
-host-suffix,aeventlog.beacon.qq.com,reject
+host-suffix,afd.baidu.com,reject
 host-suffix,afd.l.google.com,reject
 host-suffix,aff.eteachergroup.com,reject
 host-suffix,aff.lmgtfy.com,reject
@@ -1251,7 +1342,6 @@ host-suffix,afpimages.eastday,reject
 host-suffix,afpimages.eastday.com,reject
 host-suffix,afpmm.alicdn.com,reject
 host-suffix,afptrack.csbew.com,reject
-host-suffix,afs.googlesyndication.com,reject
 host-suffix,ag.nukefans.net,reject
 host-suffix,agenda.complex.com,reject
 host-suffix,ag-gb.marketgid.com,reject
@@ -1270,6 +1360,7 @@ host-suffix,ai.taobao.com,reject
 host-suffix,ai.xinju.cc,reject
 host-suffix,ai.yimg.jp,reject
 host-suffix,aibangzs.com,reject
+host-suffix,aiclk.com,reject
 host-suffix,aicydb.com,reject
 host-suffix,aid.chinayk.com,reject
 host-suffix,aider-res.meizu.com,reject
@@ -1295,11 +1386,13 @@ host-suffix,ajuhd.com,reject
 host-suffix,ak.sascdn.com,reject
 host-suffix,ak47.cooguo.com,reject
 host-suffix,akrwi.cn,reject
+host-suffix,akuai.top,reject
 host-suffix,akxsrsdbursfpx.bid,reject
 host-suffix,alertserver.ushaqi.com,reject
 host-suffix,alipay.dajiadou6.com,reject
 host-suffix,aliqqjd.cn,reject
 host-suffix,alisinak.com,reject
+host-suffix,alissl.ucdl.pp.uc.cn,reject
 host-suffix,alistatic.cn,reject
 host-suffix,alitianxia168.com,reject
 host-suffix,alitui.weibo.com,reject
@@ -1310,6 +1403,7 @@ host-suffix,all.orfr.adgtw.orangeads.fr,reject
 host-suffix,all.rising.com.cn,reject
 host-suffix,allnews.uodoo.com,reject
 host-suffix,allxin.com,reject
+host-suffix,als.baidu.com,reject
 host-suffix,alvares.esportsheaven.com,reject
 host-suffix,am.6park.com,reject
 host-suffix,am.g.ireader.com,reject
@@ -1317,6 +1411,8 @@ host-suffix,am.szhome.com,reject
 host-suffix,am.zdnet.com.cn,reject
 host-suffix,am15.net,reject
 host-suffix,amazingmagics.com,reject
+host-suffix,amazon-adsystem.com,reject
+host-suffix,amdc.m.taobao.com,reject
 host-suffix,amfi.gou.sogou.com,reject
 host-suffix,amiok.org,reject
 host-suffix,amps.yoyi.com.cn,reject
@@ -1378,7 +1474,7 @@ host-suffix,api.iapps.ifeng.com,reject
 host-suffix,api.iimedia.cn,reject
 host-suffix,api.ijunhai.com,reject
 host-suffix,api.itaoxiaoshuo.com,reject
-host-suffix,api.jr.mi.com,reject
+host-suffix,api.joybj.com,reject
 host-suffix,api.ketedata.com,reject
 host-suffix,api.koudaikj.com,reject
 host-suffix,api.leadbolt.net,reject
@@ -1386,6 +1482,7 @@ host-suffix,api.mobgi.com,reject
 host-suffix,api.mobula.sdk.duapps.com,reject
 host-suffix,api.moogos.com,reject
 host-suffix,api.mp.uc.cn,reject
+host-suffix,api.newad.ifeng.com,reject
 host-suffix,api.newbelden.com,reject
 host-suffix,api.open.uc.cn,reject
 host-suffix,api.pingstart.com,reject
@@ -1395,7 +1492,6 @@ host-suffix,api.push.daoyoudao.com,reject
 host-suffix,api.ra2.xlmc.sec.miui.com,reject
 host-suffix,api.rees46.com,reject
 host-suffix,api.rideraid.net,reject
-host-suffix,api.sec.miui.com,reject
 host-suffix,api.share.mob.com,reject
 host-suffix,api.shuzilm.cn,reject
 host-suffix,api.similarweb.com,reject
@@ -1407,6 +1503,7 @@ host-suffix,api.uniplayad.com,reject
 host-suffix,api.userstyles.org,reject
 host-suffix,api.viglink.com,reject
 host-suffix,api.waptest.taobao.com,reject
+host-suffix,api.whizzone.com,reject
 host-suffix,api.xk.miui.com,reject
 host-suffix,api.y.igexin.com,reject
 host-suffix,api.youxiaoad.com,reject
@@ -1416,15 +1513,16 @@ host-suffix,api-flow.flyme.cn,reject
 host-suffix,api-game.meizu.com,reject
 host-suffix,apihk.growingio.com,reject
 host-suffix,api-push.meizu.com,reject
+host-suffix,api-shoulei-ssl.xunlei.com,reject
 host-suffix,apisoft.df0535.com,reject
 host-suffix,apk.idate520.com,reject
 host-suffix,apk.supfast.net,reject
 host-suffix,apkdo.com,reject
 host-suffix,apkinfo.voole.com,reject
 host-suffix,apklog.cp11.ott.cibntv.net,reject
-host-suffix,apm.suning.cn,reject
 host-suffix,apnmedia.ask.com,reject
 host-suffix,apns.ios.ijinshan.com,reject
+host-suffix,apoll.m.taobao.com,reject
 host-suffix,apollo.caixin.com,reject
 host-suffix,app.3987.com,reject
 host-suffix,app.9yyg.cn,reject
@@ -1449,6 +1547,7 @@ host-suffix,app.xizi.com,reject
 host-suffix,app.xyjqy.com,reject
 host-suffix,app01.nodes.gslb.mi-idc.com,reject
 host-suffix,app02.nodes.gslb.mi-idc.com,reject
+host-suffix,appads.com,reject
 host-suffix,appboy.com,reject
 host-suffix,appc.baidu.com,reject
 host-suffix,appcdn.wapx.cn,reject
@@ -1463,6 +1562,9 @@ host-suffix,appgift.sinaapp.com,reject
 host-suffix,appjiagu.com,reject
 host-suffix,applifier.com,reject
 host-suffix,applog.uc.cn,reject
+host-suffix,applogios.uc.cn,reject
+host-suffix,applovin.com,reject
+host-suffix,applvn.com,reject
 host-suffix,app-monitor.ele.me,reject
 host-suffix,appnext.com,reject
 host-suffix,appodealx.com,reject
@@ -1473,6 +1575,7 @@ host-suffix,apps.supfast.net,reject
 host-suffix,apps2.outfit7.com,reject
 host-suffix,appsdk.tanv.com,reject
 host-suffix,appservices.comcsoft.com,reject
+host-suffix,appsflyer.com,reject
 host-suffix,appspromote.wostore.cn,reject
 host-suffix,appsrv1.madserving.com,reject
 host-suffix,appsrv4.madserving.com,reject
@@ -1517,7 +1620,6 @@ host-suffix,assets.2343sdxs.com,reject
 host-suffix,assets.258pcf.com,reject
 host-suffix,assets.258ydh.com,reject
 host-suffix,assets.easou.com,reject
-host-suffix,astrategy.beacon.qq.com,reject
 host-suffix,asv.nuggad.net,reject
 host-suffix,aswgbzsw.xingtangshuo.com,reject
 host-suffix,aswl.d3kdh34.pw,reject
@@ -1538,6 +1640,7 @@ host-suffix,atm.punchbox.org,reject
 host-suffix,atm.sina.com,reject
 host-suffix,atm.yoyi.com.cn,reject
 host-suffix,atomicblast.lol,reject
+host-suffix,atplay.cn,reject
 host-suffix,att.stargame.com,reject
 host-suffix,attach.s8bbs.com,reject
 host-suffix,au.youmi.net,reject
@@ -1564,7 +1667,6 @@ host-suffix,b.ads1.msn.com,reject
 host-suffix,b.aowugame.com,reject
 host-suffix,b.babylon.com,reject
 host-suffix,b.baiy.net,reject
-host-suffix,b.bdstatic.com,reject
 host-suffix,b.bst.126.net,reject
 host-suffix,b.clkservice.youdao.com,reject
 host-suffix,b.code.tanwanyx.com,reject
@@ -1613,6 +1715,7 @@ host-suffix,baidu.jz5u.net,reject
 host-suffix,baiduace.com,reject
 host-suffix,baidujs.cnys.com,reject
 host-suffix,baidulao.com,reject
+host-suffix,baidustatic.com,reject
 host-suffix,baidut.github.io,reject
 host-suffix,baidutv.baidu.com,reject
 host-suffix,baidu-union-js.xiachufang.com,reject
@@ -1622,9 +1725,11 @@ host-suffix,baiduzhidahao.cc,reject
 host-suffix,baifen.music.baidu.com,reject
 host-suffix,baifendian.com,reject
 host-suffix,baigm.com,reject
+host-suffix,baiwanchuangyi.com,reject
 host-suffix,bam.nr-data.net,reject
 host-suffix,banlv.baidu.com,reject
 host-suffix,banmamedia.com,reject
+host-suffix,bannedbook.org,reject
 host-suffix,banner.101xp.com,reject
 host-suffix,banner.3ddownloads.com,reject
 host-suffix,banner.automotiveworld.com,reject
@@ -1644,12 +1749,14 @@ host-suffix,banners.playocio.com,reject
 host-suffix,bannershotlink.perfectgonzo.com,reject
 host-suffix,baoyatu.cc,reject
 host-suffix,bar.baidu.com,reject
+host-suffix,bartender.cc,reject
 host-suffix,base.filedot.xyz,reject
 host-suffix,bat.bing.com,reject
 host-suffix,bax.xiawu.com,reject
 host-suffix,baxf.m.shuhuangge.org,reject
 host-suffix,bay.xiawu.com,reject
 host-suffix,baycode.cn,reject
+host-suffix,bayimob.com,reject
 host-suffix,bazinga.mse.sogou.com,reject
 host-suffix,bb.tuku.cc,reject
 host-suffix,bb1429.com,reject
@@ -1659,7 +1766,6 @@ host-suffix,bbdm.051661.com,reject
 host-suffix,bbsimages.zkxf119.com,reject
 host-suffix,bc.geocities.yahoo.co.jp,reject
 host-suffix,bccyyc.com,reject
-host-suffix,bce.baidu.com,reject
 host-suffix,bcjjg.bugsevent.com,reject
 host-suffix,bcjxf.bugsevent.com,reject
 host-suffix,bd.ershenghuo.com,reject
@@ -1732,20 +1838,26 @@ host-suffix,beap-bc.yahoo.com,reject
 host-suffix,bebelait.com,reject
 host-suffix,becode.qiushibaike.com,reject
 host-suffix,beeho.site,reject
+host-suffix,beerto.cn,reject
 host-suffix,beha.ksmobile.com,reject
 host-suffix,behe.com,reject
+host-suffix,beilamusi.com,reject
 host-suffix,beintoo.com,reject
+host-suffix,benshiw.net,reject
 host-suffix,bepolite.eu,reject
 host-suffix,bes-progfree.com,reject
 host-suffix,bet36500050.com,reject
 host-suffix,beta.vpon.com,reject
 host-suffix,betsonsport.ru,reject
+host-suffix,betterzip.net,reject
 host-suffix,bewaycare.com,reject
+host-suffix,beyondcompare.cc,reject
 host-suffix,bfdcdn.com,reject
 host-suffix,bglog.bitauto.com,reject
 host-suffix,bgrndi.com,reject
 host-suffix,bh.contextweb.com,reject
 host-suffix,bhjac.azvub.cn,reject
+host-suffix,bianxianmao.com,reject
 host-suffix,biddingos.com,reject
 host-suffix,biddingx.com,reject
 host-suffix,bidvertiser.com,reject
@@ -1753,6 +1865,7 @@ host-suffix,bigbos.top,reject
 host-suffix,bigboy.eurogamer.net,reject
 host-suffix,billionfocus.com,reject
 host-suffix,binaryage-leechgate.herokuapp.com,reject
+host-suffix,bingdianhuanyuan.cn,reject
 host-suffix,bingyinq.com,reject
 host-suffix,biq.keefung-zs.com,reject
 host-suffix,bite.theta.sogoucdn.com,reject
@@ -1780,7 +1893,6 @@ host-suffix,blb.winasdaq.com,reject
 host-suffix,bllbaby.cn,reject
 host-suffix,blogad01.myweb.hinet.net,reject
 host-suffix,blogad02.myweb.hinet.net,reject
-host-suffix,bloggerads.net,reject
 host-suffix,bluekai.com,reject
 host-suffix,bluhostedbanners.blucigs.com,reject
 host-suffix,bmg.wnbfw.com,reject
@@ -1810,7 +1922,7 @@ host-suffix,breeze.olclient.baofeng.com,reject
 host-suffix,breezily168.com,reject
 host-suffix,brizads.com,reject
 host-suffix,bro.flyme.cn,reject
-host-suffix,browser.gwdang.com,reject
+host-suffix,bryonypie.com,reject
 host-suffix,bs.5442.com,reject
 host-suffix,bs.serving-sys.com,reject
 host-suffix,bs14.9669.cn,reject
@@ -1829,6 +1941,7 @@ host-suffix,btlaunch.baidu.com,reject
 host-suffix,btn.onlylady.com,reject
 host-suffix,btn.pchome.net,reject
 host-suffix,btr.domywife.com,reject
+host-suffix,btrace.qq.com,reject
 host-suffix,bttrack.com,reject
 host-suffix,btyou.com,reject
 host-suffix,bu01.zybang.com,reject
@@ -1860,7 +1973,6 @@ host-suffix,c.45io.com,reject
 host-suffix,c.51y5.net,reject
 host-suffix,c.adbxb.cn,reject
 host-suffix,c.anmeilai.net,reject
-host-suffix,c.autohome.com.cn,reject
 host-suffix,c.baidu.com,reject
 host-suffix,c.betrad.com,reject
 host-suffix,c.bigmir.net,reject
@@ -1875,7 +1987,6 @@ host-suffix,c.dokrmob.com,reject
 host-suffix,c.dzytjqcc.com,reject
 host-suffix,c.effectivemeasure.net,reject
 host-suffix,c.f1zd.com,reject
-host-suffix,c.gdt.qq.com,reject
 host-suffix,c.gj.qq.com,reject
 host-suffix,c.guangtui1999.com,reject
 host-suffix,c.gzsanxiaomingshi.cn,reject
@@ -1972,6 +2083,7 @@ host-suffix,cachenotice.cp11.ott.cibntv.net,reject
 host-suffix,cachesit.com,reject
 host-suffix,cache-ssl.celtra.com,reject
 host-suffix,cad.chosun.com,reject
+host-suffix,c-adash.m.taobao.com,reject
 host-suffix,cadvv.heraldm.com,reject
 host-suffix,cadvv.koreaherald.com,reject
 host-suffix,caiyifz.com,reject
@@ -1980,7 +2092,6 @@ host-suffix,caliyuna.cn,reject
 host-suffix,calopenupdate.comm.miui.com,reject
 host-suffix,cams.pornrabbit.com,reject
 host-suffix,cangnews.com,reject
-host-suffix,canvas.gdt.qq.com,reject
 host-suffix,canvas.thenextweb.com,reject
 host-suffix,caob5.info,reject
 host-suffix,caolvch.com,reject
@@ -1998,6 +2109,7 @@ host-suffix,cast.ra.icast.cn,reject
 host-suffix,cast-bid27-j.adtdp.com,reject
 host-suffix,castplatform.com,reject
 host-suffix,catalog.video.msn.com,reject
+host-suffix,catch.gift,reject
 host-suffix,cayanfang.com,reject
 host-suffix,cb.baidu.com,reject
 host-suffix,cb.h5.coffeedak.cn,reject
@@ -2017,7 +2129,6 @@ host-suffix,cc.yac8.com,reject
 host-suffix,cca.mob.com,reject
 host-suffix,ccb.uncle-ad.com,reject
 host-suffix,ccbaihehq.com,reject
-host-suffix,ccclub.cmbchina.com,reject
 host-suffix,cccrir.com,reject
 host-suffix,ccr.yxdown.com,reject
 host-suffix,cctyly.com,reject
@@ -2057,6 +2168,7 @@ host-suffix,cdn.mdotm.com,reject
 host-suffix,cdn.media.innity.net,reject
 host-suffix,cdn.millennialmedia.com,reject
 host-suffix,cdn.mingmingtehui.com,reject
+host-suffix,cdn.moji.com,reject
 host-suffix,cdn.moji002.com,reject
 host-suffix,cdn.moogos.com,reject
 host-suffix,cdn.ndapp.com,reject
@@ -2078,7 +2190,6 @@ host-suffix,cdn0.mobmore.com,reject
 host-suffix,cdn1.lbesec.com,reject
 host-suffix,cdn1.res.nx5.com,reject
 host-suffix,cdn1.res.uzham.com,reject
-host-suffix,cdn1.smartadserver.com,reject
 host-suffix,cdn1.srv.revdepo.com,reject
 host-suffix,cdn2.moji002.com,reject
 host-suffix,cdnads.com,reject
@@ -2117,6 +2228,7 @@ host-suffix,chartbeat.com,reject
 host-suffix,chartboost.com,reject
 host-suffix,chebse.com,reject
 host-suffix,chemdraw.com,reject
+host-suffix,chemdraw.com.cn,reject
 host-suffix,chengadx.com,reject
 host-suffix,chenggao.cn,reject
 host-suffix,chengzhao95511.com,reject
@@ -2125,6 +2237,7 @@ host-suffix,chicken18.com,reject
 host-suffix,chidir.com,reject
 host-suffix,chinacsky.com,reject
 host-suffix,chinaheh.com,reject
+host-suffix,chinaliftoff.io,reject
 host-suffix,chinauma.net,reject
 host-suffix,chinaweichu.net,reject
 host-suffix,chjxzk.1555110.cn,reject
@@ -2132,15 +2245,17 @@ host-suffix,chmae.com,reject
 host-suffix,chnhty.com,reject
 host-suffix,chuantu.biz,reject
 host-suffix,chushoushijian.cn,reject
-host-suffix,c-hzgt2.getui.com,reject
 host-suffix,ci.csefaazc.net,reject
 host-suffix,ciajingman.com,reject
 host-suffix,cilidaquan.pw,reject
 host-suffix,cindy17club.com,reject
 host-suffix,cip6.czpush.com,reject
+host-suffix,cishantao.com,reject
 host-suffix,ciyitan.com,reject
 host-suffix,cj.qidian.com,reject
 host-suffix,cjhq.baidu.com,reject
+host-suffix,cjmakeding.com,reject
+host-suffix,cjmkt.com,reject
 host-suffix,cjmooter.xcache.kinxcdn.com,reject
 host-suffix,cjroq.bealge.sogou.com,reject
 host-suffix,ck.houyi.baofeng.net,reject
@@ -2188,15 +2303,15 @@ host-suffix,clkservice.union.youdao.com,reject
 host-suffix,clkservice.youdao.com,reject
 host-suffix,clkservice2.dict.youdao.com,reject
 host-suffix,cloud.codenow.cn,reject
+host-suffix,cloud.rovio.com,reject
 host-suffix,cloud.zyiis.net,reject
 host-suffix,cloudad.asia,reject
 host-suffix,cloudcdn.yousee.com,reject
+host-suffix,cloudmobi.net,reject
 host-suffix,cm.adgrx.com,reject
 host-suffix,cm.baidu.com,reject
-host-suffix,cm.bilibili.com,reject
 host-suffix,cm.ctnsnet.com,reject
 host-suffix,cm.eyereturn.com,reject
-host-suffix,cm.jd.com,reject
 host-suffix,cm.mct01.com,reject
 host-suffix,cm.netseer.com,reject
 host-suffix,cm.p4p.cn.yahoo.com,reject
@@ -2213,8 +2328,6 @@ host-suffix,cms.quantserve.com,reject
 host-suffix,cmsapi.wifi8.com,reject
 host-suffix,cmshow.gtimg.cn,reject
 host-suffix,cmslayue.com,reject
-host-suffix,cmx.autohome.com.cn,reject
-host-suffix,cnzz.cn,reject
 host-suffix,cn.pub.vpon.com,reject
 host-suffix,cn.tatami-solutions.com,reject
 host-suffix,cnbole.net,reject
@@ -2222,7 +2335,6 @@ host-suffix,cncy8.com,reject
 host-suffix,cndjs-1251973891.coshk.myqcloud.com,reject
 host-suffix,cnetdirectintl.com,reject
 host-suffix,cnetwidget.creativemark.co.uk,reject
-host-suffix,c-nfa.jd.com,reject
 host-suffix,cnfanglei.com,reject
 host-suffix,cnhbxx.com,reject
 host-suffix,cnkok.com,reject
@@ -2236,6 +2348,8 @@ host-suffix,cnsjx.net,reject
 host-suffix,cnxad.com,reject
 host-suffix,cnxad.net,reject
 host-suffix,cnzhqs.com,reject
+host-suffix,cnzz.cn,reject
+host-suffix,cnzz.com,reject
 host-suffix,co.dtech.baofeng.com,reject
 host-suffix,cocounion.com,reject
 host-suffix,cod.southmoney.com,reject
@@ -2255,6 +2369,7 @@ host-suffix,code1fa.m.shushu8.com,reject
 host-suffix,code222.com,reject
 host-suffix,code668.com,reject
 host-suffix,codenow.cn,reject
+host-suffix,codesoftchina.com,reject
 host-suffix,coinblind.com,reject
 host-suffix,coinerra.com,reject
 host-suffix,coin-have.com,reject
@@ -2273,6 +2388,7 @@ host-suffix,combine.urbanairship.com,reject
 host-suffix,com-eonsun-owl.oss-cn-hangzhou.aliyuncs.com,reject
 host-suffix,com-eonsun-owl-user.oss-cn-hangzhou.aliyuncs.com,reject
 host-suffix,comesgo.com,reject
+host-suffix,comet.yahoo.com,reject
 host-suffix,conf.funshion.com,reject
 host-suffix,conf.vidown.cn,reject
 host-suffix,conf.xiniuz.com,reject
@@ -2303,6 +2419,7 @@ host-suffix,coop.pop.baofeng.com,reject
 host-suffix,cootek-dialer-download.oss-cn-hangzhou.aliyuncs.com,reject
 host-suffix,cootek-file.cdn.cootekservice.com,reject
 host-suffix,cop.my,reject
+host-suffix,coreldrawchina.com,reject
 host-suffix,coremetrics.com,reject
 host-suffix,corner.houyi.baofeng.net,reject
 host-suffix,coro.benbaisteel.com,reject
@@ -2344,13 +2461,13 @@ host-suffix,cpmchina.co,reject
 host-suffix,cpms.cc,reject
 host-suffix,cpro.9xu.com,reject
 host-suffix,cpro.baidu.cn,reject
+host-suffix,cpro.baidu.com,reject
 host-suffix,cpro.fangtoo.com,reject
 host-suffix,cpro.zhidao.baidu.com,reject
 host-suffix,cpro.zol.com.cn,reject
 host-suffix,cpro1.edushi.com,reject
 host-suffix,cpro2.baidu.com,reject
 host-suffix,cps.360buy.com,reject
-host-suffix,cpu.baidu.com,reject
 host-suffix,cpu-admin.baidu.com,reject
 host-suffix,cpv.channelray,reject
 host-suffix,cpv.czpush.com,reject
@@ -2362,6 +2479,7 @@ host-suffix,cpx24.com,reject
 host-suffix,cqfangduan.com,reject
 host-suffix,cqftonline.com,reject
 host-suffix,cqhnm.com,reject
+host-suffix,cqhot.club,reject
 host-suffix,cqsta.com,reject
 host-suffix,cqyhd.com,reject
 host-suffix,cr.m.liebao.cn,reject
@@ -2392,6 +2510,7 @@ host-suffix,crl.microsoft.com,reject
 host-suffix,crm-eve.b2b.alibaba-inc.com,reject
 host-suffix,cr-nielsen.com,reject
 host-suffix,crosschannel.com,reject
+host-suffix,crossoverchina.com,reject
 host-suffix,cr-p16.ladsp.com,reject
 host-suffix,crs.baidu.com,reject
 host-suffix,crwdcntrl.net,reject
@@ -2403,11 +2522,13 @@ host-suffix,csi.gstatic.com,reject
 host-suffix,csqiulong.com,reject
 host-suffix,cstoa.com,reject
 host-suffix,csxjys.com,reject
+host-suffix,cszlks.com,reject
 host-suffix,ct.210189.com,reject
 host-suffix,ct.niu.xunlei.com,reject
 host-suffix,cti.w55c.net,reject
+host-suffix,ctrmi.com,reject
 host-suffix,ctsywy.com,reject
-host-wildcard,*.ctobsnssdk.com,reject
+host-suffix,cudaojia.com,reject
 host-suffix,cupid.jebe.renren.com,reject
 host-suffix,current.sina.com.cn,reject
 host-suffix,customad.cnn.com,reject
@@ -2441,13 +2562,11 @@ host-suffix,d.39.net,reject
 host-suffix,d.admx.baixing.com,reject
 host-suffix,d.agkn.com,reject
 host-suffix,d.annarbor.com,reject
-host-suffix,d.applovin.com,reject
 host-suffix,d.beigedi.com,reject
 host-suffix,d.businessinsider.com,reject
 host-suffix,d.clkservice.youdao.com,reject
 host-suffix,d.danangmo.cn,reject
 host-suffix,d.elong.cn,reject
-host-suffix,d.gdt.qq.com,reject
 host-suffix,d.gossipcenter.com,reject
 host-suffix,d.kugou.com,reject
 host-suffix,d.ligatus.com,reject
@@ -2507,6 +2626,7 @@ host-suffix,dadjia.com,reject
 host-suffix,dads.new.digg.com,reject
 host-suffix,dafahao.com,reject
 host-suffix,dafahao.org,reject
+host-suffix,dafapromo.com,reject
 host-suffix,dahanedu.com,reject
 host-suffix,dai.shuzilm.cn,reject
 host-suffix,dailydeals.amarillo.com,reject
@@ -2527,7 +2647,9 @@ host-suffix,daima.mubite.cn,reject
 host-suffix,daima.youbian.com,reject
 host-suffix,daima123.cc,reject
 host-suffix,dairuqi.com,reject
+host-suffix,daitdai.com,reject
 host-suffix,dajean.com,reject
+host-suffix,dajiyuan.com,reject
 host-suffix,dajiyuan.org,reject
 host-suffix,dalianhengtai.com,reject
 host-suffix,dandan11.top,reject
@@ -2609,7 +2731,6 @@ host-suffix,deliver.kuwo.cn,reject
 host-suffix,delivery.maihehd.com,reject
 host-suffix,delivery.playallvideos.com,reject
 host-suffix,delivery.porn.com,reject
-host-suffix,delivery.thebloggernetwork.com,reject
 host-suffix,delivery.wasu.cn,reject
 host-suffix,delivery-pc.wasu.cn,reject
 host-suffix,demo.jointreport-switch.com,reject
@@ -2622,6 +2743,7 @@ host-suffix,df3n43m.com,reject
 host-suffix,df77.com,reject
 host-suffix,dfad.dfdaily.com,reject
 host-suffix,dfc1.benbaisteel.com,reject
+host-suffix,dfp.suning.com,reject
 host-suffix,dfx.shhuixiangwuliu.com,reject
 host-suffix,dfx.vnnv777.cn,reject
 host-suffix,dgfggy.com,reject
@@ -2641,7 +2763,6 @@ host-suffix,digdug.divxnetworks.com,reject
 host-suffix,dimg1.sz.net.cn,reject
 host-suffix,dingon.com.cn,reject
 host-suffix,dip.pyangzi.com,reject
-host-suffix,dig.bdurl.net,reject
 host-suffix,dip.szhyzkj.com,reject
 host-suffix,dip.wl963.com,reject
 host-suffix,dip.zgydjr.com,reject
@@ -2739,6 +2860,7 @@ host-suffix,dol.deliver.ifeng.com,reject
 host-suffix,dolphin.deliver.ifeng.com,reject
 host-suffix,dolphin.ftimg.net,reject
 host-suffix,dolphin4.ftimg.net,reject
+host-suffix,doubleclick.net,reject
 host-suffix,domed.shenbimall.com,reject
 host-suffix,do-not-tracker.org,reject
 host-suffix,dontblockme.modaco.com,reject
@@ -2747,9 +2869,6 @@ host-suffix,dot.eporner.com,reject
 host-suffix,dot2.eporner.com,reject
 host-suffix,dotmore.com.tw,reject
 host-suffix,dou777.com,reject
-host-suffix,doubleclick.com,reject
-host-suffix,doubleclick.ctfile.com,reject
-host-suffix,doubleclick.tv002.com,reject
 host-suffix,doubleplay-conf-yql.media.yahoo.com,reject
 host-suffix,doubleverify.com,reject
 host-suffix,doudao.cn,reject
@@ -2773,7 +2892,6 @@ host-suffix,download.350.com,reject
 host-suffix,download.bav.baidu.com,reject
 host-suffix,download.coolguang.com,reject
 host-suffix,download.fuyuncc.com,reject
-host-suffix,download.mackeeper.com,reject
 host-suffix,download.mediaget.com,reject
 host-suffix,download.qianka.com,reject
 host-suffix,download.sd.baidu.com,reject
@@ -2784,7 +2902,6 @@ host-suffix,downloada.dewmobile.net,reject
 host-suffix,downloadb.dewmobile.net,reject
 host-suffix,downmobile.kugou.com,reject
 host-suffix,dp.559.cc,reject
-host-suffix,dp3.qq.com,reject
 host-suffix,dpm.demdex.net,reject
 host-suffix,dps.499.cn,reject
 host-suffix,dps.shouji56.com,reject
@@ -2812,6 +2929,7 @@ host-suffix,drxrc.com,reject
 host-suffix,ds.jlbksy.com,reject
 host-suffix,ds.serving-sys.com,reject
 host-suffix,dsadas.hydp188.com,reject
+host-suffix,dsaeerf.com,reject
 host-suffix,dshrx.com,reject
 host-suffix,dsjsee.dqgpb.com,reject
 host-suffix,ds-ll.serving-sys.com,reject
@@ -2827,7 +2945,6 @@ host-suffix,ds-pc.admsger.com,reject
 host-suffix,dsp-click.youdao.com,reject
 host-suffix,dsp-impr.youdao.com,reject
 host-suffix,dsp-impr2.youdao.com,reject
-host-suffix,dspmnt.autohome.com.cn,reject
 host-suffix,dspmy.ge95.com,reject
 host-suffix,dspserver.ad.cmvideo.cn,reject
 host-suffix,ds-pv.iqu-operation.com,reject
@@ -2836,18 +2953,18 @@ host-suffix,dt.adsafeprotected.com,reject
 host-suffix,d-track.send.microad-cn.com,reject
 host-suffix,dtrk.slimcdn.com,reject
 host-suffix,dts.akamai.startappexchange.com,reject
-host-suffix,du.jd.com,reject
 host-suffix,duanat.com,reject
 host-suffix,duapp.com,reject
 host-suffix,duapps.com,reject
 host-suffix,dugbvb.com,reject
+host-suffix,dugesheying.com,reject
 host-suffix,duiwai.baidu.com,reject
 host-suffix,dumedia.ru,reject
 host-suffix,duoyidd.com,reject
-host-suffix,duration.logger.baofeng.com,reject
 host-suffix,dushimj.com,reject
 host-suffix,duusuu.com,reject
 host-suffix,duyihu.net,reject
+host-suffix,dv8c1t.cn,reject
 host-suffix,dvb.pandora.xiaomi.com,reject
 host-suffix,dvr8.com,reject
 host-suffix,dvs.china.com,reject
@@ -3107,9 +3224,11 @@ host-suffix,e706.net,reject
 host-suffix,e708.net,reject
 host-suffix,e719.net,reject
 host-suffix,e9377f.com,reject
+host-suffix,ea778a21c7.com,reject
 host-suffix,eacash.streamplay.to,reject
 host-suffix,eap.big5.enorth.com.cn,reject
 host-suffix,eap.enorth.com.cn,reject
+host-suffix,easyrecoverychina.com,reject
 host-suffix,ebook.res.meizu.com,reject
 host-suffix,ebp.renren.com,reject
 host-suffix,ec.kejet.net,reject
@@ -3129,6 +3248,7 @@ host-suffix,edge.quantserve.com,reject
 host-suffix,edge.sharethis.com,reject
 host-suffix,edge.yunjiasu.com,reject
 host-suffix,edigitalsurvey.com,reject
+host-suffix,ediuschina.com,reject
 host-suffix,edncui.net,reject
 host-suffix,eduancm.com,reject
 host-suffix,eduzzjy.com,reject
@@ -3159,8 +3279,11 @@ host-suffix,ent1.12584.cn,reject
 host-suffix,entry.baidu.com,reject
 host-suffix,e-p4p.163.com,reject
 host-suffix,epernn.cn,reject
+host-suffix,epochtimes.org,reject
+host-suffix,epochweekly.com,reject
 host-suffix,epowernetworktrackerimages.s3.amazonaws.com,reject
 host-suffix,er.dlhygj.com,reject
+host-suffix,erdoscs.com,reject
 host-suffix,erebor.douban.com,reject
 host-suffix,ereg.adobe.com,reject
 host-suffix,ereg.wip3.adobe.com,reject
@@ -3172,6 +3295,7 @@ host-suffix,esptj.com,reject
 host-suffix,esrpxyahzna.bid,reject
 host-suffix,eteun.cn,reject
 host-suffix,ethod.gzgmjcx.com,reject
+host-suffix,etl.xlmc.sandai.net,reject
 host-suffix,etl.xlmc.sec.miui.com,reject
 host-suffix,eu-gmtdmp.gd1.mookie1.com,reject
 host-suffix,eum-appdynamics.com,reject
@@ -3180,8 +3304,6 @@ host-suffix,euwidget.imshopping.com,reject
 host-suffix,eva.ucas.com,reject
 host-suffix,evefashion.cn,reject
 host-suffix,event.ksosoft.com,reject
-host-suffix,event.mackeeper.com,reject
-host-suffix,eventlog.beacon.qq.com,reject
 host-suffix,eventlog.hd.baofeng.com,reject
 host-suffix,events.kalooga.com,reject
 host-suffix,events.pingan.com,reject
@@ -3245,7 +3367,7 @@ host-suffix,fancyapi.com,reject
 host-suffix,fanqianbb.com,reject
 host-suffix,fans.bestvogue.com,reject
 host-suffix,fansi365.com,reject
-host-suffix,fanxing.kugou.com,reject
+host-suffix,fan-yong.com,reject
 host-suffix,farm-cn.plista.com,reject
 host-suffix,fastable.com,reject
 host-suffix,fastapi.net,reject
@@ -3280,6 +3402,7 @@ host-suffix,feeds.videosz.com,reject
 host-suffix,fei232.bhzje7ua9.com,reject
 host-suffix,feidalu.com,reject
 host-suffix,feifish66.com,reject
+host-suffix,feih.com.cn,reject
 host-suffix,feitianma.com,reject
 host-suffix,feixin2.com,reject
 host-suffix,fembsflungod.com,reject
@@ -3300,6 +3423,7 @@ host-suffix,fge9vbrzwt.bid,reject
 host-suffix,fghm.ga25.com,reject
 host-suffix,fghmc.ga25.com,reject
 host-suffix,fghmimg.ga25.com,reject
+host-suffix,fgmtv.org,reject
 host-suffix,file.bmob.cn,reject
 host-suffix,files2.sogou.com,reject
 host-suffix,fimserve.ign.com,reject
@@ -3310,11 +3434,15 @@ host-suffix,finead.cn,reject
 host-suffix,fips.uimserv.net,reject
 host-suffix,firefang.cn,reject
 host-suffix,fjkst.com,reject
+host-suffix,fjlqqc.com,reject
 host-suffix,fjmeyer.com,reject
+host-suffix,fkku194.com,reject
 host-suffix,flash.2144.com,reject
 host-suffix,flashtalking.com,reject
 host-suffix,flowcodeapp.com,reject
+host-suffix,flstudiochina.com,reject
 host-suffix,flurry.cachefly.net,reject
+host-suffix,flurry.com,reject
 host-suffix,flux.faloo.com,reject
 host-suffix,flv.dotmore.com.tw,reject
 host-suffix,flv.ytshuirun.com,reject
@@ -3324,6 +3452,7 @@ host-suffix,fmgoal.com,reject
 host-suffix,fnkjj.com,reject
 host-suffix,focuscat.com,reject
 host-suffix,focusprolight.com,reject
+host-suffix,formysql.com,reject
 host-suffix,fota4.adups.cn,reject
 host-suffix,fotao9.com,reject
 host-suffix,founseezb.cn,reject
@@ -3342,6 +3471,7 @@ host-suffix,fraudmetrix.cn,reject
 host-suffix,frdhq.cn,reject
 host-suffix,free.aol.com,reject
 host-suffix,freecodecs.us.intellitxt.com,reject
+host-suffix,freedrive.cn,reject
 host-suffix,freexxxvideoclip.aebn.net,reject
 host-suffix,fs.uc.nearme.com.cn,reject
 host-suffix,fsjsp.com,reject
@@ -3358,6 +3488,7 @@ host-suffix,fujianryt.com,reject
 host-suffix,fun.ynet.com,reject
 host-suffix,funshion.net.cn,reject
 host-suffix,fus.lenovomm.com,reject
+host-suffix,fusion.qq.com,reject
 host-suffix,fv99.com,reject
 host-suffix,fw.adsafeprotected.com,reject
 host-suffix,fw.vpon.com,reject
@@ -3389,6 +3520,7 @@ host-suffix,g.f5gh.com,reject
 host-suffix,g.gridsum.com,reject
 host-suffix,g.haluoha.com,reject
 host-suffix,g.hsw.cn,reject
+host-suffix,g.koowo.com,reject
 host-suffix,g.mnw.cn,reject
 host-suffix,g.ousns.net,reject
 host-suffix,g.rs.yoyi.com.cn,reject
@@ -3406,7 +3538,6 @@ host-suffix,g.zx-jsp.com,reject
 host-suffix,g1.0573ren.com,reject
 host-suffix,g1.08160.cn,reject
 host-suffix,g1.163.com,reject
-host-suffix,g1.tagtic.cn,reject
 host-suffix,g1.taijuba.com,reject
 host-suffix,g1c5.com,reject
 host-suffix,g1f5.com,reject
@@ -3414,7 +3545,6 @@ host-suffix,g2.ousns.net,reject
 host-suffix,g3.iqilu.com,reject
 host-suffix,g4.iqilu.com,reject
 host-suffix,g9s.sgzs999.com,reject
-host-suffix,gaandroid.talkingdata.net,reject
 host-suffix,gad.kugou.com,reject
 host-suffix,gadwhy.com,reject
 host-suffix,gafxa.code.mytanwan.com,reject
@@ -3442,6 +3572,7 @@ host-suffix,gateways.s3.amazonaws.com,reject
 host-suffix,gb.corp.163.com,reject
 host-suffix,gc.keefung-zs.com,reject
 host-suffix,gcapi.sy.kugou.com,reject
+host-suffix,gclick.cn,reject
 host-suffix,gcs1.cn,reject
 host-suffix,gd.cnhange.cn,reject
 host-suffix,gd.jqgc.com,reject
@@ -3454,6 +3585,7 @@ host-suffix,gdyn.cnn.com,reject
 host-suffix,ge95.com,reject
 host-suffix,geili.co,reject
 host-suffix,geiyujieda.com,reject
+host-suffix,gemini.yahoo.com,reject
 host-suffix,gen.alicdn.com,reject
 host-suffix,gentags.com,reject
 host-suffix,geo.cliphunter.com,reject
@@ -3518,6 +3650,7 @@ host-suffix,ggle.lywf.me,reject
 host-suffix,ggmm777.com,reject
 host-suffix,ggmmqq.com,reject
 host-suffix,ggr.yxdown.com,reject
+host-suffix,ggs.myzaker.com,reject
 host-suffix,ggw.gusuwang.com,reject
 host-suffix,ggw.watertu.com,reject
 host-suffix,ggxt.net,reject
@@ -3534,7 +3667,6 @@ host-suffix,gload.adhood.com,reject
 host-suffix,global.msads.net,reject
 host-suffix,global.ymtracking.com,reject
 host-suffix,gm682.com,reject
-host-suffix,gma.alicdn.com,reject
 host-suffix,gma1.com,reject
 host-suffix,gmota.g188.net,reject
 host-suffix,gmtdmp.mookie1.com,reject
@@ -3542,14 +3674,16 @@ host-suffix,go.gogolm.xyz,reject
 host-suffix,go.gotourl.xyz,reject
 host-suffix,go.gotourls.bid,reject
 host-suffix,go.hangzhou.com.cn,reject
-host-suffix,go.mmstat.com,reject
 host-suffix,go.onclasrv.com,reject
 host-suffix,go.util.zlibs.com,reject
 host-suffix,godloveme.cn,reject
 host-suffix,gog9.qzdfc.com,reject
 host-suffix,go-mpulse.net,reject
 host-suffix,good.ta80.com,reject
+host-suffix,googleadsserving.cn,reject
+host-suffix,googleads.g.doubleclick.net,reject
 host-suffix,googlecommerce.com,reject
+host-suffix,googlesyndication.com,reject
 host-suffix,goolpter.com,reject
 host-suffix,gopig.io,reject
 host-suffix,gorgon.youdao.com,reject
@@ -3557,6 +3691,8 @@ host-suffix,gosquared.com,reject
 host-suffix,goto.sogou.com,reject
 host-suffix,goto.www.iciba.com,reject
 host-suffix,gotourl.xyz,reject
+host-suffix,goufanli100.com,reject
+host-suffix,gouwubang.com,reject
 host-suffix,gouzhibao.cn,reject
 host-suffix,govgift.com,reject
 host-suffix,govids.net,reject
@@ -3571,6 +3707,7 @@ host-suffix,gridsum.com,reject
 host-suffix,gridsumdissector.cn,reject
 host-suffix,gridsumdissector.com,reject
 host-suffix,groupa.onlylady.com,reject
+host-suffix,growingio.com,reject
 host-suffix,gs307.com,reject
 host-suffix,gso0.com,reject
 host-suffix,gstat.bitauto.com,reject
@@ -3589,6 +3726,7 @@ host-suffix,guess.h.qhimg.com,reject
 host-suffix,guestworld.tripod.lycos.com,reject
 host-suffix,gugulonger.cn,reject
 host-suffix,guidashu.com,reject
+host-suffix,guitarpro.cc,reject
 host-suffix,gum.criteo.com,reject
 host-suffix,guohead.com,reject
 host-suffix,guomob.com,reject
@@ -3597,7 +3735,6 @@ host-suffix,gw5.push.mcp.weibo.cn,reject
 host-suffix,gw6.push.mcp.weibo.cn,reject
 host-suffix,gw630.com,reject
 host-suffix,gx38.cn,reject
-host-suffix,gxb.mmstat.com,reject
 host-suffix,gxdhgb.com,reject
 host-suffix,gxe.husky.sogou.com,reject
 host-suffix,gyca9f.dahuangcheng.cn,reject
@@ -3614,7 +3751,6 @@ host-suffix,h.holder.com.ua,reject
 host-suffix,h.irs01.com,reject
 host-suffix,h.laojiayoufang.com,reject
 host-suffix,h.msn.com,reject
-host-suffix,h.pcd.autohome.com.cn,reject
 host-suffix,h.sora.yoyi.com.cn,reject
 host-suffix,h01.hotrank.com.tw,reject
 host-suffix,h1.18sd.cn,reject
@@ -3624,6 +3760,7 @@ host-suffix,h5.jiumaster.com,reject
 host-suffix,h5.pk1179.com,reject
 host-suffix,h5.super-dreamers.com,reject
 host-suffix,h5.taihao.cc,reject
+host-suffix,h5-api.feiersmart.com,reject
 host-suffix,h8.bec.com,reject
 host-suffix,h9377c.com,reject
 host-suffix,haitaoad.nosdn.127.net,reject
@@ -3644,6 +3781,7 @@ host-suffix,hao934.com,reject
 host-suffix,haoghost.com,reject
 host-suffix,haohaowan8.com,reject
 host-suffix,haolew.com,reject
+host-suffix,haoshengtoys.com,reject
 host-suffix,haostat.qihoo.com,reject
 host-suffix,hapic1.jhkxwl.com,reject
 host-suffix,hascosafety.com,reject
@@ -3723,7 +3861,6 @@ host-suffix,hmyangshengji.com,reject
 host-suffix,hnasd.com,reject
 host-suffix,hnctsm.com,reject
 host-suffix,hndiyikj.com,reject
-host-suffix,hnol.net,reject
 host-suffix,hnxxjn.com,reject
 host-suffix,hnyny.com,reject
 host-suffix,hoisin.coocaatv.com,reject
@@ -3736,7 +3873,6 @@ host-suffix,hot-mob.com,reject
 host-suffix,hotrank.com.tw,reject
 host-suffix,houdaolj.com,reject
 host-suffix,houtai.2345.com,reject
-host-suffix,houyi.logger.baofeng.com,reject
 host-suffix,hpd.baidu.com,reject
 host-suffix,hpqxznpb.bid,reject
 host-suffix,hqgjcm.com,reject
@@ -3761,8 +3897,11 @@ host-suffix,hubojd.com,reject
 host-suffix,huichuan.sm.cn,reject
 host-suffix,huimee.net,reject
 host-suffix,huishenghuiying.com,reject
+host-suffix,huishenghuiying.com.cn,reject
 host-suffix,humanding.com,reject
 host-suffix,hunpingou.com,reject
+host-suffix,huodonghezi.com,reject
+host-suffix,huoying666.com,reject
 host-suffix,hv.code.tanwanyx.com,reject
 host-suffix,hw6.com,reject
 host-suffix,hwt.player888.cn,reject
@@ -3775,12 +3914,12 @@ host-suffix,hxyx360.com,reject
 host-suffix,hyfh.benbaisteel.com,reject
 host-suffix,hyfyuan.com,reject
 host-suffix,hyperpromote.com,reject
+host-suffix,hypersnap.net,reject
 host-suffix,hys4.com,reject
 host-suffix,hystq.com,reject
 host-suffix,hytgj.com,reject
 host-suffix,hyz86.com,reject
 host-suffix,hz.miercn.com,reject
-host-suffix,hz.mmstat.com,reject
 host-suffix,hz.shouyoutv.com,reject
 host-suffix,hzaibi.com,reject
 host-suffix,hzdmacore.kejet.net,reject
@@ -3805,11 +3944,9 @@ host-suffix,i.ma.social-touch.com,reject
 host-suffix,i.mmcdn.cn,reject
 host-suffix,i.ssix.io,reject
 host-suffix,i.syasn.com,reject
-host-suffix,i.snssdk.com,reject
 host-suffix,i.tansuotv.com,reject
 host-suffix,i.w55c.net,reject
 host-suffix,i.zhuoyaju.com,reject
-host-suffix,i-lq.snssdk.com,reject
 host-suffix,i1236.net,reject
 host-suffix,i2.akjunshi.com,reject
 host-suffix,i3818.com,reject
@@ -3819,17 +3956,21 @@ host-suffix,ia.ctags.cn,reject
 host-suffix,iad.g.163.com,reject
 host-suffix,iadc.qwapi.com,reject
 host-suffix,iadmatvideo.nosdn.127.net,reject
+host-suffix,iadmusicmat.music.126.net,reject
 host-suffix,iads.xinmin.cn,reject
+host-suffix,iadsdk.apple.com,reject
 host-suffix,ib.adnxs.co,reject
 host-suffix,ibafnw.cn,reject
 host-suffix,ibanners.empoweredcomms.com.au,reject
 host-suffix,ic.wps.cn,reject
 host-suffix,icast.cn,reject
 host-suffix,icdxc.com,reject
+host-suffix,ichaosheng.com,reject
 host-suffix,icn.southmoney.com,reject
 host-suffix,ico.58pic.com,reject
 host-suffix,icon.cnmo.com,reject
 host-suffix,icons.mydrivers.com,reject
+host-suffix,iconworkshop.cn,reject
 host-suffix,id.jiathis.com,reject
 host-suffix,id528.com,reject
 host-suffix,ida.cnool.net,reject
@@ -3846,10 +3987,10 @@ host-suffix,ie8eamus.com,reject
 host-suffix,iebar.baidu.com,reject
 host-suffix,ieonline.microsoft.com,reject
 host-suffix,if1512.com,reject
+host-suffix,ifengad.3g.ifeng.com,reject
 host-suffix,iflyad.bj.openstorage.cn,reject
 host-suffix,iframe.travel.yahoo.com,reject
 host-suffix,ig.nukefans.net,reject
-host-suffix,igexin.com,reject
 host-suffix,igj5y.yongchanghengyuan.com,reject
 host-suffix,ih.adscale.de,reject
 host-suffix,ihualun.com,reject
@@ -3906,7 +4047,6 @@ host-suffix,img.ad.zhangyue.com,reject
 host-suffix,img.adbox.sina.com.cn,reject
 host-suffix,img.adnyg.com,reject
 host-suffix,img.amp.ad.sina.com.cn,reject
-host-suffix,img.applovin.com,reject
 host-suffix,img.cmm.xmfish.com,reject
 host-suffix,img.cxxyft.com,reject
 host-suffix,img.dawenxue.org,reject
@@ -3975,6 +4115,8 @@ host-suffix,img80.net,reject
 host-suffix,img-ad.oupeng.com,reject
 host-suffix,imgad.thepaper.cn,reject
 host-suffix,imgad0.3conline.com,reject
+host-suffix,imgad0.pconline.com.cn,reject
+host-suffix,imgadpai.thepaper.cn,reject
 host-suffix,imgapp.yeyou.com,reject
 host-suffix,imgc.cymzc.com,reject
 host-suffix,imgcdn.wapx.cn,reject
@@ -3985,7 +4127,7 @@ host-suffix,imgg.marketgid.com,reject
 host-suffix,imgg.mgid.com,reject
 host-suffix,imgp.cymzc.com,reject
 host-suffix,imgsreview.dftoutiao.com,reject
-host-suffix,img-x.jd.com,reject
+host-suffix,imindmap.cc,reject
 host-suffix,immob.cn,reject
 host-suffix,imneinei.com,reject
 host-suffix,i-mobile.co.jp,reject
@@ -3998,6 +4140,8 @@ host-suffix,imp.xgo.com.cn,reject
 host-suffix,imp.zdnet.com.cn,reject
 host-suffix,imp.zol.com.cn,reject
 host-suffix,impression.gridsumdissector.com,reject
+host-suffix,impservice.dictapp.youdao.com,reject
+host-suffix,impservice.youdao.com,reject
 host-suffix,impservice2.youdao.com,reject
 host-suffix,impservicetest.dictapp.youdao.com,reject
 host-suffix,impservice-test.dictapp.youdao.com,reject
@@ -4025,6 +4169,8 @@ host-suffix,info.sec.miui.com,reject
 host-suffix,info.stockstar.com,reject
 host-suffix,info.yitsoftware.com,reject
 host-suffix,infocenter.meizu.com,reject
+host-suffix,info4.video.qq.com,reject
+host-suffix,info6.video.qq.com,reject
 host-suffix,ingameads.gameloft.com,reject
 host-suffix,ini.litingxin.cn,reject
 host-suffix,ini.update.360safe.com,reject
@@ -4052,6 +4198,8 @@ host-suffix,interaction.bayimob.com,reject
 host-suffix,interactive.huanqiu.com,reject
 host-suffix,interest.mix.sina.com.cn,reject
 host-suffix,ioc.mmakd.top,reject
+host-suffix,ios.bugly.qq.com,reject
+host-suffix,ios.video.mpush.qq.com,reject
 host-suffix,ios-dc.51y5.net,reject
 host-suffix,ios-informationplatform.wps.cn,reject
 host-suffix,iosipa.b0.upaiyun.com,reject
@@ -4070,8 +4218,10 @@ host-suffix,ir.mail.163.com,reject
 host-suffix,ir.mail.yeah.net,reject
 host-suffix,iroby.com,reject
 host-suffix,irpmt.mail.163.com,reject
+host-suffix,irs01.com,reject
 host-suffix,irs01.net,reject
 host-suffix,irs09.com,reject
+host-suffix,ishop789.com,reject
 host-suffix,ishowbg.com,reject
 host-suffix,istreamsche.com,reject
 host-suffix,itaoxiaoshuo.com,reject
@@ -4146,6 +4296,7 @@ host-suffix,jdb.jiudingcapital.cn,reject
 host-suffix,jdb.jiudingcapital.com,reject
 host-suffix,jddaw.com,reject
 host-suffix,jdg.bjygfd.com,reject
+host-suffix,jdkic.com,reject
 host-suffix,jdlcg.cn,reject
 host-suffix,jdlhg.com,reject
 host-suffix,jdw.zjuwjdc.com,reject
@@ -4179,13 +4330,13 @@ host-suffix,jias.haotxt.com,reject
 host-suffix,jiathis.com,reject
 host-suffix,jiawen88.com,reject
 host-suffix,jiayi1.oss-cn-shanghai.aliyuncs.com,reject
-host-suffix,jic.talkingdata.com,reject
 host-suffix,jiedaibao.com,reject
 host-suffix,jiehantai.com,reject
 host-suffix,jiehunmishu.com,reject
 host-suffix,jifeidandar.com,reject
 host-suffix,jifen.2345.com,reject
 host-suffix,jihehuaban.com,reject
+host-suffix,jihehuaban.com.cn,reject
 host-suffix,jimdo.com,reject
 host-suffix,jimeilm.com,reject
 host-suffix,jindu179.com,reject
@@ -4197,6 +4348,7 @@ host-suffix,jinshagt222.com,reject
 host-suffix,jira.vpon.com,reject
 host-suffix,jisucn.com,reject
 host-suffix,jiu.njdkgm.com,reject
+host-suffix,jiubuhua.com,reject
 host-suffix,jiuku.cc,reject
 host-suffix,jiyou2014.com,reject
 host-suffix,jizzads.com,reject
@@ -4232,7 +4384,6 @@ host-suffix,jqmt.qq.com,reject
 host-suffix,jqz9.com,reject
 host-suffix,jrdkc.com,reject
 host-suffix,jrhaigou.com,reject
-host-suffix,jrlt.beacon.qq.com,reject
 host-suffix,jrpt.jrptweb.org,reject
 host-suffix,js.05sun.com,reject
 host-suffix,js.133u.com,reject
@@ -4382,6 +4533,7 @@ host-suffix,jusha.com,reject
 host-suffix,jutou5.com,reject
 host-suffix,juzi.cn,reject
 host-suffix,juzilm.com,reject
+host-suffix,jwg365.cn,reject
 host-suffix,jwpltx.com,reject
 host-suffix,jwqj.net,reject
 host-suffix,jwz.3conline.com,reject
@@ -4399,7 +4551,6 @@ host-suffix,jystea.com,reject
 host-suffix,jyz.fjtzjy.com,reject
 host-suffix,jzkapp.com,reject
 host-suffix,jzm81.com,reject
-host-suffix,jzt.jd.com,reject
 host-suffix,k.85wa.cn,reject
 host-suffix,k.ctsywy.com,reject
 host-suffix,k1w5.me,reject
@@ -4422,15 +4573,18 @@ host-suffix,ketchapp.org,reject
 host-suffix,keydot.net,reject
 host-suffix,keyrun.cn,reject
 host-suffix,keyrun.com,reject
+host-suffix,keyshot.cc,reject
 host-suffix,keystone.mwbsys.com,reject
 host-suffix,keyyou.net,reject
 host-suffix,kfewaz.zh1155.com,reject
 host-suffix,kfhuihe.net,reject
 host-suffix,kfluoa.com,reject
 host-suffix,kgcjgsa8.net,reject
+host-suffix,kgmobilestat.kugou.com,reject
 host-suffix,kguke.com,reject
 host-suffix,kho3au7l4z.me,reject
 host-suffix,kicnse.com,reject
+host-suffix,kingdeecn.cn,reject
 host-suffix,kingwam.com,reject
 host-suffix,kio.quanliyouxi.cn,reject
 host-suffix,kiss.blockplus.cc,reject
@@ -4468,6 +4622,7 @@ host-suffix,kn.zzdahan.com,reject
 host-suffix,knet.cn,reject
 host-suffix,knnwdyou.com,reject
 host-suffix,kob.adxkj.com,reject
+host-suffix,kochava.com,reject
 host-suffix,kod4pc293.com,reject
 host-suffix,koowo.com,reject
 host-suffix,koukou7.com,reject
@@ -4489,8 +4644,11 @@ host-suffix,kuaigao.rrsdl.com,reject
 host-suffix,kuaikaiapp.com,reject
 host-suffix,kuaikan.netmon.360safe.com,reject
 host-suffix,kuaipai666.cn,reject
+host-suffix,kuaizip.com,reject
+host-suffix,kualianyingxiao.cn,reject
 host-suffix,kudifish.com,reject
 host-suffix,kuguopush.com,reject
+host-suffix,kumihua.com,reject
 host-suffix,kuwoyy.com,reject
 host-suffix,kuyic.m.gxwztv.com,reject
 host-suffix,kuzai.cooguo.com,reject
@@ -4506,10 +4664,6 @@ host-suffix,l.adiers.com,reject
 host-suffix,l.betrad.com,reject
 host-suffix,l.minisplat.cn,reject
 host-suffix,l.mnjkw.cn,reject
-host-suffix,lives.l.qq.com,reject
-host-suffix,livep.l.qq.com,reject
-host-suffix,news.l.qq.com,reject
-host-suffix,mi.gdt.qq.com,reject
 host-suffix,l.supfast.net,reject
 host-suffix,l.ujian.cc,reject
 host-suffix,l.yidianzixun.com,reject
@@ -4544,10 +4698,12 @@ host-suffix,le4le.com,reject
 host-suffix,leadbolt.net,reject
 host-suffix,leadboltads.net,reject
 host-suffix,leadboltapps.net,reject
+host-suffix,leadboltmobile.net,reject
 host-suffix,ledou.dl.uu.cc,reject
 host-suffix,leeyuoxs.com,reject
 host-suffix,legozu.com,reject
 host-suffix,lele999.com,reject
+host-suffix,lenzmx.com,reject
 host-suffix,lessplay.com,reject
 host-suffix,letv.irs01.com,reject
 host-suffix,leztc.com,reject
@@ -4577,6 +4733,7 @@ host-suffix,linkbide.com,reject
 host-suffix,linkeye.ximalaya.com,reject
 host-suffix,linkpage.cn,reject
 host-suffix,links.services.disqus.com,reject
+host-suffix,linktech.cn,reject
 host-suffix,linyao.dxsdb.com,reject
 host-suffix,lishuanghao.com,reject
 host-suffix,listenother.com,reject
@@ -4587,6 +4744,7 @@ host-suffix,livehapp.com,reject
 host-suffix,livep.l.ott.video.qq.com,reject
 host-suffix,lives.l.cp81.ott.cibntv.net,reject
 host-suffix,lives.l.ott.video.qq.com,reject
+host-suffix,lives.l.qq.com,reject
 host-suffix,liveupdate.mac.sandai.net,reject
 host-suffix,lixiangmo.com,reject
 host-suffix,ljrtb.cn,reject
@@ -4604,6 +4762,7 @@ host-suffix,lml.jfjsp.com,reject
 host-suffix,lmlicenses.wip4.adobe.com,reject
 host-suffix,lmwap.awtks.com,reject
 host-suffix,lndjj.com,reject
+host-suffix,lnk0.com,reject
 host-suffix,lnk8z.com,reject
 host-suffix,lnr2.com,reject
 host-suffix,load77.exelator.com,reject
@@ -4611,6 +4770,7 @@ host-suffix,loading.baofeng5.baofeng.net,reject
 host-suffix,loadm.exelator.com,reject
 host-suffix,loandatec.com,reject
 host-suffix,localnetwork.uop,reject
+host-suffix,localytics.com,reject
 host-suffix,location.ximalaya.com,reject
 host-suffix,locdrop.query.yahoo.com,reject
 host-suffix,log1.17173.com,reject
@@ -4618,9 +4778,8 @@ host-suffix,log1.molitv.cn,reject
 host-suffix,log2.air.yoyi.com.cn,reject
 host-suffix,log2.molitv.cn,reject
 host-suffix,log-dmp.suishenyun.cn,reject
-host-suffix,logger.qingting.fm,reject
-host-suffix,logger.treexml.baofeng.com,reject
 host-suffix,logonext.tv.kuyun.com,reject
+host-suffix,logoshejishi.com,reject
 host-suffix,logstat.caixin.com,reject
 host-suffix,logupdate.avlyun.sec.miui.com,reject
 host-suffix,lol.pnhfc.com,reject
@@ -4641,6 +4800,7 @@ host-suffix,lrswl.com,reject
 host-suffix,ls.webmd.com,reject
 host-suffix,lsxmg.com,reject
 host-suffix,ltcprtc.com,reject
+host-suffix,ltheanine.cn,reject
 host-suffix,lthxz.cn,reject
 host-suffix,lu.sogou.com,reject
 host-suffix,lubosheng.cn,reject
@@ -4998,7 +5158,6 @@ host-suffix,m.xpjis.com,reject
 host-suffix,m.xxkio.com,reject
 host-suffix,m.yalayi.com,reject
 host-suffix,m.yangjingbang.net,reject
-host-suffix,m.yap.yahoo.com,reject
 host-suffix,m.yicang8.com,reject
 host-suffix,m.yingchengtou.com,reject
 host-suffix,m.ynnke.com,reject
@@ -5037,10 +5196,11 @@ host-suffix,ma.baidu.com,reject
 host-suffix,ma1.meishij.net,reject
 host-suffix,ma2.meishij.net,reject
 host-suffix,maccms.tan5858.com,reject
-host-suffix,mackeeperapp.mackeeper.com,reject
+host-suffix,mackeeper.com,reject
 host-suffix,macplatform.wondershare.com,reject
 host-suffix,mad.kuuad.com,reject
 host-suffix,mad.m.maxthon.cn,reject
+host-suffix,m-adash.m.taobao.com,reject
 host-suffix,madhouse.cn,reject
 host-suffix,madmini.com,reject
 host-suffix,mads.amazon.com,reject
@@ -5053,7 +5213,14 @@ host-suffix,maibahe300cc.com,reject
 host-suffix,main.exdynsrv.com,reject
 host-suffix,main.exoclick.com,reject
 host-suffix,mainbx.com,reject
+host-suffix,maipinshangmao.com,reject
+host-suffix,mairuan.cn,reject
+host-suffix,mairuan.com,reject
+host-suffix,mairuan.com.cn,reject
+host-suffix,mairuan.net,reject
+host-suffix,mairuanwang.com,reject
 host-suffix,maisoncherry.com,reject
+host-suffix,makeding.com,reject
 host-suffix,malacca.inveno.com,reject
 host-suffix,manage.wdfans.cn,reject
 host-suffix,maomaotang.com,reject
@@ -5083,17 +5250,18 @@ host-suffix,matching.targeterra.com,reject
 host-suffix,material.istreamsche.com,reject
 host-suffix,material.mtty.xin,reject
 host-suffix,mathtag.com,reject
+host-suffix,mathtype.cn,reject
 host-suffix,maw.wnbfw.com,reject
 host-suffix,maxwebsearch.com,reject
 host-suffix,maysunmedia.com,reject
 host-suffix,mb.hockeybuzz.com,reject
+host-suffix,mb.yidianzixun.com,reject
 host-suffix,mb.zam.com,reject
 host-suffix,mbai.cn,reject
 host-suffix,mbd.weathercn.com,reject
 host-suffix,mbrowser.news.haosou.com,reject
 host-suffix,mbrowser.news.so.com,reject
 host-suffix,mbs.weathercn.com,reject
-host-suffix,mc.hujiang.com,reject
 host-suffix,mc.yandex.ru,reject
 host-suffix,mclick.simba.taobao.com,reject
 host-suffix,mcore.vcgame.cn,reject
@@ -5104,6 +5272,7 @@ host-suffix,md0z4dh.com,reject
 host-suffix,mdc.meitustat.com,reject
 host-suffix,mdotm.com,reject
 host-suffix,mdpjnppsbjv.bid,reject
+host-suffix,mdrecv.app.cntvwb.cn,reject
 host-suffix,me.afp.chinanews.com,reject
 host-suffix,mealsandsteals.sandiego6.com,reject
 host-suffix,me-cdn.effectivemeasure.net,reject
@@ -5154,6 +5323,7 @@ host-suffix,mhjk.1391.com,reject
 host-suffix,mhuodong.elong.com,reject
 host-suffix,miam4.cn,reject
 host-suffix,miaobeichina.com,reject
+host-suffix,miaozhen.com,reject
 host-suffix,mibook-10006092.cos.myqcloud.com,reject
 host-suffix,microad-cn.com,reject
 host-suffix,mid.houyi.baofeng.net,reject
@@ -5172,7 +5342,10 @@ host-suffix,millennialmedia.com,reject
 host-suffix,millwardbrownacsr.com,reject
 host-suffix,mimg.126.net,reject
 host-suffix,mimg.7791.com.cn,reject
+host-suffix,mindmanager.cc,reject
+host-suffix,mindmapper.cc,reject
 host-suffix,minesage.com,reject
+host-suffix,minfo.wps.cn,reject
 host-suffix,mingxianshanghang.cn,reject
 host-suffix,mingysh.com,reject
 host-suffix,mini.cpc.sogou.com,reject
@@ -5183,6 +5356,7 @@ host-suffix,mini2015.qq.com,reject
 host-suffix,minidcsc.kugou.com,reject
 host-suffix,minipage.2345.com,reject
 host-suffix,minisite.vidown.cn,reject
+host-suffix,minisplat.cn,reject
 host-suffix,miniye.xjts.cn,reject
 host-suffix,mip.yuelvxing.com,reject
 host-suffix,mipcache.bdstatic.com,reject
@@ -5193,8 +5367,10 @@ host-suffix,miui.hftaili.com,reject
 host-suffix,mivideo.g.mi.com,reject
 host-suffix,mj70.cn,reject
 host-suffix,mjs.csyymp4.com,reject
+host-suffix,mkitgfs.com,reject
 host-suffix,mlb.did.ijinshan.com,reject
 host-suffix,mlgrrqymdsyk.com,reject
+host-suffix,mlnbike.com,reject
 host-suffix,mlog.aipai.com,reject
 host-suffix,mlog.hiido.com,reject
 host-suffix,mlog.m1905.cn,reject
@@ -5220,12 +5396,15 @@ host-suffix,moatads.com,reject
 host-suffix,mob.huimee.net,reject
 host-suffix,mobad.ijinshan.com,reject
 host-suffix,mobadme.jp,reject
+host-suffix,mobclix.com,reject
 host-suffix,mobfox.com,reject
 host-suffix,mobgi.com,reject
+host-suffix,mobilead.kuwo.cn,reject
 host-suffix,mobileads.google.com,reject
 host-suffix,mobileads.msn.com,reject
 host-suffix,mobileapptracking.com,reject
 host-suffix,mobiledissector.com,reject
+host-suffix,mobilelog.kugou.com,reject
 host-suffix,mobile-pubt.ele.me,reject
 host-suffix,mobile-service.segment.com,reject
 host-suffix,mobilityware.com,reject
@@ -5243,6 +5422,7 @@ host-suffix,moogos.com,reject
 host-suffix,mookie1.com,reject
 host-suffix,moons.66bhy.com,reject
 host-suffix,moonwish.com.cn,reject
+host-suffix,mopub.com,reject
 host-suffix,moquanad.com,reject
 host-suffix,moren-1252794300.file.myqcloud.com,reject
 host-suffix,mosa86.com,reject
@@ -5266,7 +5446,6 @@ host-suffix,mqq.zgdmsj.cn,reject
 host-suffix,mqqad.cs0309.html5.qq.com,reject
 host-suffix,mqqad.html5.qq.com,reject
 host-suffix,mqqadr.reader.qq.com,reject
-host-suffix,mr.da.netease.com,reject
 host-suffix,mrelko.com,reject
 host-suffix,mrksys.com,reject
 host-suffix,ms.awqsaged.cn,reject
@@ -5297,6 +5476,7 @@ host-suffix,msypr.com,reject
 host-suffix,mti.35kds.com,reject
 host-suffix,mtj.baidu.com,reject
 host-suffix,mtl.ttsqgs.com,reject
+host-suffix,mtrace.qq.com,reject
 host-suffix,mtty-cdn.mtty.xin,reject
 host-suffix,mtxsk.com,reject
 host-suffix,mubite.cn,reject
@@ -5314,6 +5494,7 @@ host-suffix,my.mobfox.com,reject
 host-suffix,my1fc.m.b5200.net,reject
 host-suffix,my1fimg.m.b5200.net,reject
 host-suffix,myad.toocle.com,reject
+host-suffix,mycleanmymac.com,reject
 host-suffix,mydas.mobi,reject
 host-suffix,mydisplay.ctfile.com,reject
 host-suffix,myjsym.zichenit.com,reject
@@ -5345,7 +5526,6 @@ host-suffix,navi.gd.chinamobile.com,reject
 host-suffix,nbhxgjz.com,reject
 host-suffix,nbjjd.com,reject
 host-suffix,nbzq.net,reject
-host-suffix,nc.gdt.qq.com,reject
 host-suffix,nc004x.corp.youdao.com,reject
 host-suffix,nc045x.corp.youdao.com,reject
 host-suffix,ncachear.com,reject
@@ -5372,7 +5552,7 @@ host-suffix,networkbench.com,reject
 host-suffix,new.ltheanine.cn,reject
 host-suffix,new.yokaunion.com,reject
 host-suffix,new.zhqiu.com,reject
-host-suffix,newloc.map.n.shifen.com,reject
+host-suffix,newapi.com,reject
 host-suffix,newrelic.com,reject
 host-suffix,news.51y5.net,reject
 host-suffix,news.58.com,reject
@@ -5390,6 +5570,7 @@ host-suffix,newspage.xilu.com,reject
 host-suffix,newspush.sinajs.cn,reject
 host-suffix,newswifiapi.dfshurufa.com,reject
 host-suffix,newton-api.ele.me,reject
+host-suffix,nex.163.com,reject
 host-suffix,nexage.com,reject
 host-suffix,nexstep.zdworks.com,reject
 host-suffix,nextcps.com,reject
@@ -5397,6 +5578,7 @@ host-suffix,nextlnk9.com,reject
 host-suffix,nexus.ensighten.com,reject
 host-suffix,nfh.cnshef.com,reject
 host-suffix,ngads.go.com,reject
+host-suffix,nicelabel.cc,reject
 host-suffix,ninebox.cn,reject
 host-suffix,ninemsn.imrworldwide.com,reject
 host-suffix,niurenw.com,reject
@@ -5437,6 +5619,8 @@ host-suffix,nsy.hnzyfs.com,reject
 host-suffix,nt.phpwind.com,reject
 host-suffix,ntalker.com,reject
 host-suffix,nterbx.com,reject
+host-suffix,ntfsformac.cc,reject
+host-suffix,ntfsformac.cn,reject
 host-suffix,nthyn.com,reject
 host-suffix,ntx.quanliyouxi.cn,reject
 host-suffix,nv.souid.com,reject
@@ -5455,6 +5639,7 @@ host-suffix,o.08jm.cn,reject
 host-suffix,o.if.qidian.com,reject
 host-suffix,o.minisplat.cn,reject
 host-suffix,o091i.com,reject
+host-suffix,o2o.api.xiaomi.com,reject
 host-suffix,o2omobi.com,reject
 host-suffix,o7xs6runw.bkt.clouddn.com,reject
 host-suffix,oa129.com,reject
@@ -5474,7 +5659,6 @@ host-suffix,oascentral.sina.com.hk,reject
 host-suffix,oask.xulizui6.com,reject
 host-suffix,obeyter.com,reject
 host-suffix,ocbv0.baiyangzs.com,reject
-host-suffix,ocsp.godaddy.com,reject
 host-suffix,odc.starwave.com,reject
 host-suffix,odin.goo.mx,reject
 host-suffix,officeme.cn,reject
@@ -5531,6 +5715,7 @@ host-suffix,osc.uranus.sogou.com,reject
 host-suffix,osfota.cdn.aliyun.com,reject
 host-suffix,oss-asq-static.11222.cn,reject
 host-suffix,otf.msn.com,reject
+host-suffix,oth.eve.mdt.qq.com,reject
 host-suffix,oth.str.mdt.qq.com,reject
 host-suffix,oth.update.mdt.qq.com,reject
 host-suffix,otheve.play.aiseet.atianqi.com,reject
@@ -5538,6 +5723,7 @@ host-suffix,othstr.play.aiseet.atianqi.com,reject
 host-suffix,ou188.com,reject
 host-suffix,output.nend.net,reject
 host-suffix,overture.com,reject
+host-suffix,overturechina.com,reject
 host-suffix,ow.biqugego.com,reject
 host-suffix,ow.s1.shuhuangge.org,reject
 host-suffix,ow.s2.shuhuangge.org,reject
@@ -5584,7 +5770,6 @@ host-suffix,p215223.clksite.com,reject
 host-suffix,p215223.inclk.com,reject
 host-suffix,p215223.mycdn2.co,reject
 host-suffix,p2pmid.baofeng.com,reject
-host-suffix,p3p.mmstat.com,reject
 host-suffix,p3p.sogou.com,reject
 host-suffix,p3p.yahoo.com,reject
 host-suffix,p3tt.com,reject
@@ -5599,7 +5784,6 @@ host-suffix,page.acm.dzwww.com,reject
 host-suffix,page.xywy.com,reject
 host-suffix,pagead.google.com,reject
 host-suffix,pagead.l.google.com,reject
-host-suffix,pagead2.googlesyndication.com,reject
 host-suffix,pagead-tpc.l.google.com,reject
 host-suffix,pagechoice.com,reject
 host-suffix,pagechoice.net,reject
@@ -5611,13 +5795,6 @@ host-suffix,palmnews.sina.cn,reject
 host-suffix,panda.kdnet.net,reject
 host-suffix,pangu.cc,reject
 host-suffix,panoramio.com,reject
-host-suffix,pangolin.snssdk.com,reject
-host-suffix,pangolin-sdk-toutiao.com,reject
-host-suffix,pangolin-sdk-toutiao1.com,reject
-host-suffix,pangolin-sdk-toutiao2.com,reject
-host-suffix,pangolin-sdk-toutiao3.com,reject
-host-suffix,pangolin-sdk-toutiao4.com,reject
-host-suffix,pangolin-sdk-toutiao5.com,reject
 host-suffix,papajia55.com,reject
 host-suffix,parking.zunmi.cn,reject
 host-suffix,parser.houyi.baofeng.net,reject
@@ -5637,6 +5814,7 @@ host-suffix,party-nngvitbizn.now.sh,reject
 host-suffix,pasco.cc,reject
 host-suffix,pass1.soogif.com,reject
 host-suffix,pass2.soogif.com,reject
+host-suffix,passwordrecovery.cn,reject
 host-suffix,passwz.com,reject
 host-suffix,pat.farvd.com,reject
 host-suffix,patriot.cs.pp.cn,reject
@@ -5658,18 +5836,15 @@ host-suffix,pc.quansj.cn,reject
 host-suffix,pc.videoclick.baidu.com,reject
 host-suffix,pcauto.irs01.com,reject
 host-suffix,pcbrowser.dd.qq.com,reject
-host-suffix,pcd.autohome.com.cn,reject
 host-suffix,pcfg.wps.cn,reject
 host-suffix,pclog.dftoutiao.com,reject
 host-suffix,pclog.suishenyun.net,reject
-host-suffix,pcmx.autohome.com.cn,reject
 host-suffix,pcmzn.com,reject
 host-suffix,pcsoftwords.dftoutiao.com,reject
 host-suffix,pcxzo.pluto.sogou.com,reject
 host-suffix,pd7-imp.revsci.net,reject
-host-suffix,pdc.micloud.xiaomi.net,reject
+host-suffix,pdfexpert.cc,reject
 host-suffix,pdl.gionee.com,reject
-host-suffix,pdn.applovin.com,reject
 host-suffix,pdsjycm.com,reject
 host-suffix,pear.dleke.com,reject
 host-suffix,pedailyu.com,reject
@@ -5681,6 +5856,7 @@ host-suffix,pf.pchome.net,reject
 host-suffix,pf-2.pchome.net,reject
 host-suffix,pfp.sina.com.cn,reject
 host-suffix,pfpip.sina.com,reject
+host-suffix,pgdt.gtimg.cn,reject
 host-suffix,pgdt.ugdtimg.com,reject
 host-suffix,photo.dhford.cn,reject
 host-suffix,photo.lyghjzs.cn,reject
@@ -5735,8 +5911,10 @@ host-suffix,ping.pinyin.sogou.com,reject
 host-suffix,ping.weiduofan.com,reject
 host-suffix,pingbi.diudou.com,reject
 host-suffix,pingdom.net,reject
+host-suffix,pingma.qq.com,reject
 host-suffix,pingshetrip.com,reject
 host-suffix,pintour.com,reject
+host-suffix,pinzhitmall.com,reject
 host-suffix,pix.impdesk.com,reject
 host-suffix,pix.tagcdn.com,reject
 host-suffix,pix04.revsci.net,reject
@@ -5795,6 +5973,7 @@ host-suffix,pop.code.poyang.cn,reject
 host-suffix,pop.sjk.ijinshan.com,reject
 host-suffix,popads.net,reject
 host-suffix,popme.163.com,reject
+host-suffix,poppyta.com,reject
 host-suffix,popup.jointreport-switch.com,reject
 host-suffix,popup.msn.com,reject
 host-suffix,popupad.cn,reject
@@ -5810,7 +5989,6 @@ host-suffix,ppoi.org,reject
 host-suffix,ppurifier.game.xiaomi.com,reject
 host-suffix,ppx.hgo7r.cn,reject
 host-suffix,pr.atwola.com,reject
-host-suffix,pr.da.netease.com,reject
 host-suffix,pr.ybp.yahoo.com,reject
 host-suffix,pr00001.com,reject
 host-suffix,practivate.adobe.com,reject
@@ -5833,6 +6011,7 @@ host-suffix,promos.fling.com,reject
 host-suffix,promote.biz.weibo.cn,reject
 host-suffix,promote.caixin.com,reject
 host-suffix,promote.pair.com,reject
+host-suffix,promotion.aliyun.com,reject
 host-suffix,promotion.gomlab.com,reject
 host-suffix,promotions.iasbet.com,reject
 host-suffix,propellerads.com,reject
@@ -5853,12 +6032,12 @@ host-suffix,pub.funshion.com,reject
 host-suffix,pub.mop.com,reject
 host-suffix,pub1.cope.es,reject
 host-suffix,pubbirdf.com,reject
-host-suffix,public.app.autohome.com.cn,reject
 host-suffix,public6.com,reject
 host-suffix,publicidad.net,reject
 host-suffix,publicidad.tv,reject
 host-suffix,publish.ad.youth.cn,reject
 host-suffix,pubmatic.com,reject
+host-suffix,pubnative.net,reject
 host-suffix,pubnub.com,reject
 host-suffix,pubs.hiddennetwork.com,reject
 host-suffix,puds.test.uae.uc.cn,reject
@@ -5871,7 +6050,6 @@ host-suffix,pupu.xnhh120.com,reject
 host-suffix,push.126.net,reject
 host-suffix,push.5z5zw.com,reject
 host-suffix,push.air-matters.com,reject
-host-suffix,push.app.autohome.com.cn,reject
 host-suffix,push.com2us.net,reject
 host-suffix,push.feng.com,reject
 host-suffix,push.mobile.kugou.com,reject
@@ -5885,7 +6063,6 @@ host-suffix,push.zhanzhang.baidu.com,reject
 host-suffix,push-android.myzaker.com,reject
 host-suffix,pushapi.lenovomm.com,reject
 host-suffix,push-dc.51y5.net,reject
-host-suffix,pv.alert.autohome.com.cn,reject
 host-suffix,pv.anzhi.com,reject
 host-suffix,pv.cheshi.com,reject
 host-suffix,pv.enet.com.cn,reject
@@ -5904,7 +6081,6 @@ host-suffix,pvmsite.zol.com.cn,reject
 host-suffix,pvsite.zol.com.cn,reject
 host-suffix,pvstat.html5.qq.com,reject
 host-suffix,pvtest.zol.com.cn,reject
-host-suffix,pvx.autohome.com.cn,reject
 host-suffix,pwj.biqugezw.com,reject
 host-suffix,px.adhigh.net,reject
 host-suffix,px.media-serving.com,reject
@@ -5919,12 +6095,12 @@ host-suffix,py.wikigifth.com,reject
 host-suffix,py2.qlogo.cn,reject
 host-suffix,pyerc.com,reject
 host-suffix,pyzkk.com,reject
-host-suffix,q.i.gdt.qq.com,reject
 host-suffix,q.ox11.com,reject
 host-suffix,q.s.cr-nielsen.com,reject
 host-suffix,q1scv.vov0.com,reject
 host-suffix,q6rwa.eschangchi.com,reject
 host-suffix,qbyy010.com,reject
+host-suffix,qchannel01.cn,reject
 host-suffix,qchannel02.cn,reject
 host-suffix,qchannel03.cn,reject
 host-suffix,qchannel04.cn,reject
@@ -5943,7 +6119,9 @@ host-suffix,qhl.bealge.sogou.com,reject
 host-suffix,qiailm.com,reject
 host-suffix,qianclick.baidu.com,reject
 host-suffix,qiaopiguniang.com,reject
+host-suffix,qichexin.com,reject
 host-suffix,qihaoqu.com,reject
+host-suffix,qinchugudao.com,reject
 host-suffix,qingqu.la,reject
 host-suffix,qiqipower.com,reject
 host-suffix,qiqivv.com,reject
@@ -5979,6 +6157,7 @@ host-suffix,qt.biqugezw.com,reject
 host-suffix,qt002x.corp.youdao.com,reject
 host-suffix,qtmojo.cn,reject
 host-suffix,qtmojo.com,reject
+host-suffix,quanliyouxi.cn,reject
 host-suffix,quansj.cn,reject
 host-suffix,quantcount.com,reject
 host-suffix,quantserve.com,reject
@@ -5988,6 +6167,7 @@ host-suffix,questionmarket.com,reject
 host-suffix,qujishu.com,reject
 host-suffix,qumi.com,reject
 host-suffix,qupinhj.com,reject
+host-suffix,qutaobi.com,reject
 host-suffix,quw18.com,reject
 host-suffix,quyaoya.com,reject
 host-suffix,qweqwe.mctvhp.cn,reject
@@ -6030,6 +6210,7 @@ host-suffix,rank.hit.china.com,reject
 host-suffix,rannabio.com,reject
 host-suffix,ratings.lycos.com,reject
 host-suffix,raw.okwan.cn,reject
+host-suffix,rayjump.com,reject
 host-suffix,rbp.emea.mxptint.net,reject
 host-suffix,rbp.mxptint.net,reject
 host-suffix,rbs.haiyunx.com,reject
@@ -6049,11 +6230,9 @@ host-suffix,rcv.moogos.com,reject
 host-suffix,rcv.union-wifi.com,reject
 host-suffix,rcyy3.kaopuwangjz.com,reject
 host-suffix,rd.ane.yahoo.co.jp,reject
-host-suffix,rd.da.netease.com,reject
 host-suffix,rd.e.sogou.com,reject
 host-suffix,rdiqt.cn,reject
 host-suffix,rdtuijian.com,reject
-host-suffix,rdx.autohome.com.cn,reject
 host-suffix,re.m.taobao.com,reject
 host-suffix,re.taobao.com,reject
 host-suffix,re.taotaosou.com,reject
@@ -6086,7 +6265,6 @@ host-suffix,res.cocounion.com,reject
 host-suffix,res.dxpmedia.com,reject
 host-suffix,res.icast.cn,reject
 host-suffix,res.ipingke.com,reject
-host-suffix,res.mmstat.com,reject
 host-suffix,res.qhupdate.com,reject
 host-suffix,res3.feedsportal.com,reject
 host-suffix,rescn.u3.ucweb.com,reject
@@ -6105,6 +6283,7 @@ host-suffix,rfir2.50w.me,reject
 host-suffix,rh.code.jjyx.com,reject
 host-suffix,rh.greenbetterkids.com,reject
 host-suffix,rhgyg.com,reject
+host-suffix,rich.kuwo.cn,reject
 host-suffix,richmedia.yimg.com,reject
 host-suffix,riqu2015.com,reject
 host-suffix,river.zhidao.baidu.com,reject
@@ -6114,7 +6293,6 @@ host-suffix,rjs.niuxgame77.com,reject
 host-suffix,rk.rongchengxxw.com,reject
 host-suffix,rlcdn.com,reject
 host-suffix,rlogs.youdao.com,reject
-host-suffix,rm.gdt.qq.com,reject
 host-suffix,rm.ra.icast.cn,reject
 host-suffix,rm.sina.com.cn,reject
 host-suffix,rmads.eu.msn.com,reject
@@ -6130,7 +6308,7 @@ host-suffix,rotabanner.kulichki.net,reject
 host-suffix,rotate.ymtracking.com,reject
 host-suffix,rotator.tradetracker.net,reject
 host-suffix,router.bittorrent.com,reject
-host-suffix,router.gwdang.com,reject
+host-suffix,rovio-news-app.angrybirdsgame.com,reject
 host-suffix,rp.crasheye.cn,reject
 host-suffix,rp.gwallet.com,reject
 host-suffix,rpaulfrank.com,reject
@@ -6146,7 +6324,6 @@ host-suffix,rs.sinajs.cn,reject
 host-suffix,rs1.rensheng5.com,reject
 host-suffix,rsas.szzek.com,reject
 host-suffix,rsccs.com,reject
-host-suffix,rt.applovin.com,reject
 host-suffix,rt.funshion.net,reject
 host-suffix,rt.gsspat.jp,reject
 host-suffix,rtas.videocc.net,reject
@@ -6162,6 +6339,7 @@ host-suffix,rtmonitor.kugou.com,reject
 host-suffix,rto.steelhousemedia.com,reject
 host-suffix,ruan88.com,reject
 host-suffix,rubicon-match.dotomi.com,reject
+host-suffix,rubiconproject.com,reject
 host-suffix,rudy.adsnative.com,reject
 host-suffix,ru-gmtdmp.mookie1.com,reject
 host-suffix,rum-collector.pingdom.net,reject
@@ -6174,6 +6352,7 @@ host-suffix,rvb.quanliyouxi.cn,reject
 host-suffix,rwjfs.com,reject
 host-suffix,rwq.youle55.com,reject
 host-suffix,rxwan.com,reject
+host-suffix,ry51w.cn,reject
 host-suffix,s.0.0.0.0.cn,reject
 host-suffix,s.051352.com,reject
 host-suffix,s.0594529.com,reject
@@ -6338,6 +6517,7 @@ host-suffix,sclick.6rooms.com,reject
 host-suffix,sclick.baidu.com,reject
 host-suffix,sclizhong.com,reject
 host-suffix,sclog.moviebox.baofeng.com,reject
+host-suffix,scorecardresearch.com,reject
 host-suffix,scribe.twitter.com,reject
 host-suffix,scrippsnetworks.com,reject
 host-suffix,script.crazyegg.com,reject
@@ -6349,6 +6529,7 @@ host-suffix,scw0.com,reject
 host-suffix,sd.0.0.0.0.cn,reject
 host-suffix,sd.kk3g.net,reject
 host-suffix,sdac.lenovomm.com,reject
+host-suffix,sdapprecv.app.cntvwb.cn,reject
 host-suffix,sdb.amazonaws.com,reject
 host-suffix,sdhzstone.net,reject
 host-suffix,sdk.appadhoc.com,reject
@@ -6382,6 +6563,7 @@ host-suffix,searchignited.com,reject
 host-suffix,searchswapper.com,reject
 host-suffix,seavideo-ak.espn.go.com,reject
 host-suffix,sebar.thand.info,reject
+host-suffix,sec.resource.xiaomi.net,reject
 host-suffix,secpay.wostore.cn,reject
 host-suffix,secretmedia.s3.amazonaws.com,reject
 host-suffix,secure.dsp.com,reject
@@ -6420,12 +6602,13 @@ host-suffix,setting.rayjump.com,reject
 host-suffix,setting.snswin.qq.com,reject
 host-suffix,settings.crashlytics.com,reject
 host-suffix,sezvc.com,reject
+host-suffix,sf3-fe-tos.pglstatp-toutiao.com,reject
 host-suffix,sfloushi.com,reject
+host-suffix,sg536.cn,reject
 host-suffix,sgbfjs.info,reject
 host-suffix,sg-cdn.effectivemeasure.net,reject
 host-suffix,sgg.southcn.com,reject
 host-suffix,sgvip.chinahdcm.com,reject
-host-suffix,sgameicon.ecology.smoba.qq.com,reject
 host-suffix,sh.qihoo.com,reject
 host-suffix,sh.shuqw.com,reject
 host-suffix,sha50.com,reject
@@ -6435,6 +6618,7 @@ host-suffix,shama5.com,reject
 host-suffix,shanghaironghua.com,reject
 host-suffix,shanglinli.com,reject
 host-suffix,shangz99991.com,reject
+host-suffix,shankejingling.com,reject
 host-suffix,share.gzdsw.com,reject
 host-suffix,shared.youdao.com,reject
 host-suffix,sharedaddomain.com,reject
@@ -6443,7 +6627,9 @@ host-suffix,shbywsd.cn,reject
 host-suffix,shenghuo.xiaomi.com,reject
 host-suffix,shenleyuni.com,reject
 host-suffix,shenyian.net,reject
+host-suffix,shenyun.com,reject
 host-suffix,shenyun.org,reject
+host-suffix,shenyunperformingarts.org,reject
 host-suffix,shglegle.com,reject
 host-suffix,shibeiou.com,reject
 host-suffix,shiftrro.com,reject
@@ -6469,10 +6655,21 @@ host-suffix,shuiguo.com,reject
 host-suffix,shuqw.com,reject
 host-suffix,shushijiameng123.com,reject
 host-suffix,shuttle.bayescom.com,reject
+host-suffix,shuzilm.cn,reject
 host-suffix,shxinjie.cn,reject
 host-suffix,shzyjbr.wtdtjs.rocks,reject
 host-suffix,si9377.com,reject
 host-suffix,sicentlife.com,reject
+host-suffix,sifubo.cn,reject
+host-suffix,sifuce.cn,reject
+host-suffix,sifuda.cn,reject
+host-suffix,sifufu.cn,reject
+host-suffix,sifuge.cn,reject
+host-suffix,sifugu.cn,reject
+host-suffix,sifuhe.cn,reject
+host-suffix,sifuhu.cn,reject
+host-suffix,sifuji.cn,reject
+host-suffix,sifuka.cn,reject
 host-suffix,sigbusa.com,reject
 host-suffix,sigo99.com,reject
 host-suffix,simba.m.taobao.com,reject
@@ -6508,6 +6705,7 @@ host-suffix,sm1.todgo.com,reject
 host-suffix,sm2.todgo.com,reject
 host-suffix,smartmad.com,reject
 host-suffix,smblock.s3.amazonaws.com,reject
+host-suffix,smgru.net,reject
 host-suffix,smucdn.com,reject
 host-suffix,smxay.com,reject
 host-suffix,smxsg.com,reject
@@ -6597,6 +6795,7 @@ host-suffix,ssh.szxiuchang.com,reject
 host-suffix,ssh.yezijizhang.com,reject
 host-suffix,ssjpx.com,reject
 host-suffix,ssjy168.com,reject
+host-suffix,ssl.google-analytics.com,reject
 host-suffix,ssl.hyhzy.cn,reject
 host-suffix,ssl.ymapp.com,reject
 host-suffix,ssl-cdn.media.innity.net,reject
@@ -6670,8 +6869,6 @@ host-suffix,stn88.com,reject
 host-suffix,stocksbsc.com,reject
 host-suffix,storeconfig.mistat.xiaomi.com,reject
 host-suffix,storewidget.pcauthority.com.au,reject
-host-suffix,storm.logger.baofeng.com,reject
-host-suffix,strategy.beacon.qq.com,reject
 host-suffix,stream.heavenmedia.net,reject
 host-suffix,stream.shuzilm.cn,reject
 host-suffix,streaming.rtbiddingplatform.com,reject
@@ -6774,7 +6971,6 @@ host-suffix,t.cyuew.com,reject
 host-suffix,t.d.yoyi.tv,reject
 host-suffix,t.dangdang.com,reject
 host-suffix,t.dmtrck.com,reject
-host-suffix,t.gdt.qq.com,reject
 host-suffix,t.go.sohu.com,reject
 host-suffix,t.growingio.com,reject
 host-suffix,t.iz55.com,reject
@@ -6807,23 +7003,23 @@ host-suffix,tactics.bainv.net,reject
 host-suffix,tad.suning.com,reject
 host-suffix,tag.cdnmaster.cn,reject
 host-suffix,tag.digitaltarget.ru,reject
-host-suffix,tag.yoc-adserver.com,reject
 host-suffix,tags.growingio.com,reject
 host-suffix,tags2.adshell.net,reject
 host-suffix,tags4.revdepo.com,reject
+host-suffix,tajs.qq.com,reject
 host-suffix,tajxgs.com,reject
 host-suffix,talk.nz.igexin.com,reject
-host-suffix,talkingdata.com,reject
-host-suffix,talkingdata.net,reject
 host-suffix,tangoutianxia.com,reject
 host-suffix,tansuotv.com,reject
 host-suffix,tanwanyx.com,reject
+host-suffix,tanx.com,reject
 host-suffix,tanxlog.istreamsche.com,reject
 host-suffix,tanzanite.infomine.com,reject
 host-suffix,taobaly.cn,reject
 host-suffix,taobaoaliyun.cn,reject
 host-suffix,taobaobo5.com,reject
 host-suffix,taobayun.cn,reject
+host-suffix,taoggou.com,reject
 host-suffix,taohanpai.com,reject
 host-suffix,taomato.com,reject
 host-suffix,tap.rubiconproject.com,reject
@@ -6847,10 +7043,10 @@ host-suffix,tc600.com,reject
 host-suffix,tcad.wedolook.com,reject
 host-suffix,tcjy66.cc,reject
 host-suffix,tcss.qq.com,reject
+host-suffix,tcxshop.com,reject
 host-suffix,td.mpush.cn,reject
 host-suffix,td.xue63.com,reject
 host-suffix,tdayi.com,reject
-host-suffix,tdcv3.talkingdata.net,reject
 host-suffix,t-e.flyme.cn,reject
 host-suffix,teen.77rog.com,reject
 host-suffix,telstra.imrworldwide.com,reject
@@ -6893,7 +7089,6 @@ host-suffix,tianqi777.com,reject
 host-suffix,tianyanzs.com,reject
 host-suffix,ticcdn.com,reject
 host-suffix,timelog.moviebox.baofeng.com,reject
-host-suffix,tips.logger.baofeng.com,reject
 host-suffix,tiqcdn.com,reject
 host-suffix,titan.babytree.com,reject
 host-suffix,titan.guestworld.tripod.lycos.com,reject
@@ -6903,6 +7098,7 @@ host-suffix,tjf.lyhuayun.com,reject
 host-suffix,tjhuajiantang.com,reject
 host-suffix,tjlog.easou.com,reject
 host-suffix,tjlog.ps.easou.com,reject
+host-suffix,tjqonline.cn,reject
 host-suffix,tjs.sjs.sinajs.cn,reject
 host-suffix,tk.baidu.com,reject
 host-suffix,tk.optaim.com,reject
@@ -6923,12 +7119,12 @@ host-suffix,toourbb.com,reject
 host-suffix,top.h.qhimg.com,reject
 host-suffix,top.h.qhmsg.com,reject
 host-suffix,top267.com,reject
+host-suffix,topitme.com,reject
 host-suffix,total.xinmin.cn,reject
 host-suffix,touclick.com,reject
 host-suffix,toutiao.2haha.com,reject
 host-suffix,toutiao.jxnews.com.cn,reject
 host-suffix,tp.sgcn.com,reject
-host-suffix,tpc.googlesyndication.com,reject
 host-suffix,tpe163.com,reject
 host-suffix,tpush.html5.qq.com,reject
 host-suffix,tqd.ntpddq.com,reject
@@ -6939,11 +7135,12 @@ host-suffix,tradeadexchange.com,reject
 host-suffix,tradeccl.com,reject
 host-suffix,trafficfactory.biz,reject
 host-suffix,trafficjam.cn,reject
+host-suffix,trafficjunky.com,reject
+host-suffix,trafficjunky.net,reject
 host-suffix,trafficmp.com,reject
 host-suffix,tralog.ganji.com,reject
 host-suffix,tran.news.so.com,reject
 host-suffix,tredman.com,reject
-host-suffix,tree.logger.baofeng.com,reject
 host-suffix,trends.mobile.sina.cn,reject
 host-suffix,trial.alcohol-soft.com,reject
 host-suffix,trwba.com,reject
@@ -6971,12 +7168,17 @@ host-suffix,tuanxue360.net,reject
 host-suffix,tui.gtimg.com,reject
 host-suffix,tui1999.com,reject
 host-suffix,tui98.cn,reject
+host-suffix,tuia.cn,reject
+host-suffix,tuidang.epochtimes.org,reject
+host-suffix,tuidang.org,reject
 host-suffix,tuigoo.com,reject
 host-suffix,tuiguang.178.com,reject
 host-suffix,tuiguang.meitu.com,reject
 host-suffix,tuiguang.yicha.cn,reject
 host-suffix,tuijian.baidu.com,reject
+host-suffix,tuipenguin.com,reject
 host-suffix,tuisong.baidu.com,reject
+host-suffix,tuitiger.com,reject
 host-suffix,tuituigui19999.com,reject
 host-suffix,tujidao.com,reject
 host-suffix,tukeai.com,reject
@@ -6984,6 +7186,7 @@ host-suffix,tukexiu.com,reject
 host-suffix,tukj.net,reject
 host-suffix,tumblrprobes.cedexis.com,reject
 host-suffix,tumblrreports.cedexis.com,reject
+host-suffix,tunion-api.m.taobao.com,reject
 host-suffix,turn.com,reject
 host-suffix,tv.code.jjyx.com,reject
 host-suffix,tw.adon.vpon.com,reject
@@ -7017,7 +7220,6 @@ host-suffix,u.huoying666.com,reject
 host-suffix,u.jimdo.com,reject
 host-suffix,u.qijipc.com,reject
 host-suffix,u.raidmedia.com.cn,reject
-host-suffix,u.talkingdata.net,reject
 host-suffix,u.uc123.com,reject
 host-suffix,u.ucfly.com,reject
 host-suffix,u.xcy8.com,reject
@@ -7025,6 +7227,7 @@ host-suffix,u.yiiwoo.com,reject
 host-suffix,u.yizuya.com,reject
 host-suffix,u0.s.minisplat.cn,reject
 host-suffix,u034024.nr1234.com,reject
+host-suffix,u1.img.mobile.sina.cn,reject
 host-suffix,u1.s.minisplat.cn,reject
 host-suffix,u1.shuaiku.com,reject
 host-suffix,u2.s.minisplat.cn,reject
@@ -7072,18 +7275,12 @@ host-suffix,uk3oi.adgze.cn,reject
 host-suffix,ukeiae.com,reject
 host-suffix,ulic.baidu.com,reject
 host-suffix,ulink.cc,reject
-host-suffix,ulog.imap.baidu.com,reject
-host-suffix,ulog.umeng.co,reject
-host-suffix,errlog.umeng.com,reject
-host-suffix,ulogs.umeng.com,reject
-host-suffix,errlog.umengcloud.com,reject
-host-suffix,ulogs.umengcloud.com,reject
+host-suffix,ultraiso.net,reject
 host-suffix,um.simpli.fi,reject
 host-suffix,um0592.com,reject
 host-suffix,um2.eqads.com,reject
 host-suffix,um29.com,reject
 host-suffix,umid.orion.meizu.com,reject
-host-suffix,umiwi.com,reject
 host-suffix,umyai.com,reject
 host-suffix,un.52rkl.cn,reject
 host-suffix,un.soarfi.cn,reject
@@ -7142,15 +7339,14 @@ host-suffix,urbanairship.com,reject
 host-suffix,urchin.5173.com,reject
 host-suffix,urh.tylll.com,reject
 host-suffix,urhu.cn,reject
+host-suffix,uri6.com,reject
 host-suffix,url.222bz.com,reject
 host-suffix,url.tudown.com,reject
 host-suffix,urls.api.twitter.com,reject
-host-suffix,us.adserver.yahoo.com,reject
 host-suffix,us.bannyat.com,reject
 host-suffix,us.bs.serving-sys.com,reject
 host-suffix,user.tiankongzudui.com,reject
 host-suffix,usercollection.chinadaily.com.cn,reject
-host-suffix,uservoice.com,reject
 host-suffix,ushaqi.com,reject
 host-suffix,usingde.com,reject
 host-suffix,usr.mgid.com,reject
@@ -7173,7 +7369,6 @@ host-suffix,uyunad.com,reject
 host-suffix,uzpmrbek.com,reject
 host-suffix,v.dbncp.com,reject
 host-suffix,v.e7002.com,reject
-host-suffix,v.gdt.qq.com,reject
 host-suffix,v.irs01.com,reject
 host-suffix,v.oq68.com,reject
 host-suffix,v.rmbn.net,reject
@@ -7200,9 +7395,11 @@ host-suffix,vas.funshion.com,reject
 host-suffix,vatrack.hinet.net,reject
 host-suffix,vcfs6ip5h6.bid,reject
 host-suffix,vda.17173.com,reject
+host-suffix,vdapprecv.app.cntvwb.cn,reject
 host-suffix,vdazz.net,reject
 host-suffix,ve.tsdlp.com,reject
 host-suffix,vedeh.com,reject
+host-suffix,vegaschina.cn,reject
 host-suffix,vegent.cn,reject
 host-suffix,vendor1.fitschigogerl.com,reject
 host-suffix,ver.touclick.com,reject
@@ -7216,11 +7413,9 @@ host-suffix,vi1.souid.com,reject
 host-suffix,vi2.ku6img.net,reject
 host-suffix,vichc.com,reject
 host-suffix,victorjx.com,reject
-host-suffix,vid.applovin.com,reject
 host-suffix,video.cooguo.com,reject
 host-suffix,video.ureport.push.qq.com,reject
 host-suffix,video.wap.mpush.qq.com,reject
-host-suffix,video-ad-stats.googlesyndication.com,reject
 host-suffix,videondun.com,reject
 host-suffix,videopush.baidu.com,reject
 host-suffix,viglink.com,reject
@@ -7264,6 +7459,7 @@ host-suffix,vsnoon.com,reject
 host-suffix,vt.bjhdonline.com,reject
 host-suffix,vtale.org,reject
 host-suffix,vungle.cn,reject
+host-suffix,vungle.com,reject
 host-suffix,vupload.duowan.com,reject
 host-suffix,vvlog.moviebox.baofeng.com,reject
 host-suffix,vvv.ieduw.com,reject
@@ -7378,7 +7574,6 @@ host-suffix,weyyae.com,reject
 host-suffix,wgie.0z5jn.cn,reject
 host-suffix,wgnlz.com,reject
 host-suffix,wgnmp.com,reject
-host-suffix,wgo.mmstat.com,reject
 host-suffix,whafwl.com,reject
 host-suffix,whalecloud.com,reject
 host-suffix,whcrdz.com,reject
@@ -7403,7 +7598,6 @@ host-suffix,wifiapi02.51y5.net,reject
 host-suffix,wifijia.net,reject
 host-suffix,wifishow.ggsafe.com,reject
 host-suffix,wikigifth.com,reject
-host-suffix,win.gdt.qq.com,reject
 host-suffix,winads.cn,reject
 host-suffix,winasdaq.com,reject
 host-suffix,winbaicai.com,reject
@@ -7445,7 +7639,6 @@ host-suffix,wpwdf.com,reject
 host-suffix,wqmobile.com,reject
 host-suffix,wqqsa.puzihua.com,reject
 host-suffix,wqsph.net,reject
-host-suffix,wr.da.netease.com,reject
 host-suffix,wrvdmh.cn,reject
 host-suffix,ws.ksmobile.net,reject
 host-suffix,ws.progrss.yahoo.com,reject
@@ -7466,7 +7659,6 @@ host-suffix,wth.lenovomm.com,reject
 host-suffix,wtpn.twenga.co.uk,reject
 host-suffix,wtpn.twenga.de,reject
 host-suffix,wtrace.cmgame.com,reject
-host-suffix,wtradv.market.xiaomi.com,reject
 host-suffix,wu65.com,reject
 host-suffix,wudang05.com,reject
 host-suffix,wuliao.epro.sogou.com,reject
@@ -7484,7 +7676,6 @@ host-suffix,ww12.onetad.com,reject
 host-suffix,ww13.onetad.com,reject
 host-suffix,ww202.keyyou.net,reject
 host-suffix,ww202.onetad.com,reject
-host-suffix,ww251.smartadserver.com,reject
 host-suffix,ww34.onetad.com,reject
 host-suffix,ww346.onetad.com,reject
 host-suffix,ww360.onetad.com,reject
@@ -7492,12 +7683,10 @@ host-suffix,ww363.onetad.com,reject
 host-suffix,ww366.onetad.com,reject
 host-suffix,ww78.onetad.com,reject
 host-suffix,ww8.onetad.com,reject
-host-suffix,ww881.smartadserver.com,reject
 host-suffix,ww9.onetad.com,reject
 host-suffix,wwis-dubc1-vip60.adobe.com,reject
 host-suffix,wwv.onetad.com,reject
 host-suffix,www2.xinmin.cn,reject
-host-suffix,www6.smartadserver.com,reject
 host-suffix,www-777563.com,reject
 host-suffix,www8.xitek.com,reject
 host-suffix,www9.effectivemeasure.net,reject
@@ -7511,11 +7700,13 @@ host-suffix,wwww.649649.com,reject
 host-suffix,wx.houyi.baofeng.net,reject
 host-suffix,wx.paigu.com,reject
 host-suffix,wx.xwjqr.com,reject
+host-suffix,wx16999.com,reject
 host-suffix,wxaw.tiantongmaoyi.com,reject
 host-suffix,wxb.wxbdfm.com,reject
 host-suffix,wxmmh.net,reject
 host-suffix,wxsnsdy.tc.qq.com,reject
 host-suffix,wxsnsdy.video.qq.com,reject
+host-suffix,wxsnsdythumb.wxs.qq.com,reject
 host-suffix,wxtz.houmags.com,reject
 host-suffix,wxwm1.ikuailian.com,reject
 host-suffix,wxwm2.ikuailian.com,reject
@@ -7590,6 +7781,7 @@ host-suffix,xiacaidd.com,reject
 host-suffix,xianliao.me,reject
 host-suffix,xiaobiaoucai.cn,reject
 host-suffix,xiaohei.com,reject
+host-suffix,xiaohuau.xyz,reject
 host-suffix,xiaohui2.cn,reject
 host-suffix,xiaomiir.yaokantv.com,reject
 host-suffix,XiaoQiang,reject
@@ -7617,6 +7809,7 @@ host-suffix,xingjuhe.com,reject
 host-suffix,xiniuz.com,reject
 host-suffix,xinju.cc,reject
 host-suffix,xinray.com,reject
+host-suffix,xinsheng.net,reject
 host-suffix,xiongdong.com,reject
 host-suffix,xiuxiu.android.dl.meitu.com,reject
 host-suffix,xiuxiu.mobile.meitudata.com,reject
@@ -7633,8 +7826,8 @@ host-suffix,xlylqx.com,reject
 host-suffix,xm9178.com,reject
 host-suffix,xmcmn.com,reject
 host-suffix,xmcxz.com,reject
+host-suffix,xmindchina.net,reject
 host-suffix,xmnmeu.cn,reject
-host-suffix,xmpush.xiaomi.com,reject
 host-suffix,xmrts.com,reject
 host-suffix,xmshqh.com,reject
 host-suffix,xmsqz.com,reject
@@ -7659,6 +7852,7 @@ host-suffix,xs.1drj.com,reject
 host-suffix,xs.he9630.com,reject
 host-suffix,xs.houyi.baofeng.net,reject
 host-suffix,xs.swagger1.com,reject
+host-suffix,xshellcn.com,reject
 host-suffix,xstar.cc,reject
 host-suffix,xszqapp.com,reject
 host-suffix,xtcdbb.cn,reject
@@ -7752,6 +7946,7 @@ host-suffix,yidulive.net,reject
 host-suffix,yieldmanager.com,reject
 host-suffix,yigao.com,reject
 host-suffix,yigyx.com,reject
+host-suffix,yihuifu.cn,reject
 host-suffix,yiiwoo.com,reject
 host-suffix,yijia2009.com,reject
 host-suffix,yijifen.com,reject
@@ -7759,13 +7954,17 @@ host-suffix,yiluup.com,reject
 host-suffix,yin1.zgpingshu.com,reject
 host-suffix,yingxiao.baidu.com,reject
 host-suffix,yinhaijuan.com,reject
+host-suffix,yinmong.com,reject
 host-suffix,yinooo.com,reject
 host-suffix,yinyuehu.cn,reject
+host-suffix,yiqifa.com,reject
 host-suffix,yiranxian.cn,reject
+host-suffix,yitaopt.com,reject
 host-suffix,yiwk.com,reject
 host-suffix,yiwuds.com,reject
 host-suffix,yixui.com,reject
 host-suffix,yizhenya.com,reject
+host-suffix,yjqiqi.com,reject
 host-suffix,yk0712.com,reject
 host-suffix,ykbei.com,reject
 host-suffix,ykjmy.com,reject
@@ -7813,16 +8012,18 @@ host-suffix,ysej.code.weddingeeos.com,reject
 host-suffix,ysjwj.com,reject
 host-suffix,ysm.hauchi.com.tw,reject
 host-suffix,ysm.yahoo.com,reject
-host-suffix,yt.mmstat.com,reject
+host-suffix,yt-adp.nosdn.127.net,reject
 host-suffix,ytapi1.nagezan.net,reject
 host-suffix,ytdksb.com,reject
 host-suffix,ytguowang.com,reject
 host-suffix,ytmx.2r3485.cn,reject
 host-suffix,yts.ytsyyey.com,reject
 host-suffix,ytsyyey.com,reject
+host-suffix,yuanchengxiezuo.com,reject
 host-suffix,yuanming.net,reject
 host-suffix,yueyelive.com,reject
 host-suffix,yug8.com,reject
+host-suffix,yukhj.com,reject
 host-suffix,yule8.net,reject
 host-suffix,yulzs.com,reject
 host-suffix,yumcs.xiaohuau.xyz,reject
@@ -7872,6 +8073,7 @@ host-suffix,zampdsp.com,reject
 host-suffix,zantainet.com,reject
 host-suffix,zapads.zapak.com,reject
 host-suffix,zb.nxing.cn,reject
+host-suffix,zbrushcn.com,reject
 host-suffix,zbz.m.qxs.la,reject
 host-suffix,zcdsp.com,reject
 host-suffix,zcrtd.com,reject
@@ -7891,14 +8093,16 @@ host-suffix,zgyemy.com,reject
 host-suffix,zhanzhang.net,reject
 host-suffix,zhao258.com,reject
 host-suffix,zhaoshang8.com,reject
+host-suffix,zhaozecheng.cn,reject
 host-suffix,zh-cn.shenyun.com,reject
 host-suffix,zh-cn.shenyun.org,reject
 host-suffix,zheng.cs12d.com,reject
+host-suffix,zhengjian.org,reject
+host-suffix,zhenxinet.com,reject
 host-suffix,zhichi08.com,reject
 host-suffix,zhidian3g.cn,reject
 host-suffix,zhifenjie.com,reject
 host-suffix,zhihei.com,reject
-host-suffix,zhihu.xmcimg.com,reject
 host-suffix,zhiong.net,reject
 host-suffix,zhiyuanteam.com,reject
 host-suffix,zhiziyun.com,reject
@@ -7908,10 +8112,12 @@ host-suffix,zhtjdl.com,reject
 host-suffix,zhuanfakong.com,reject
 host-suffix,zhuba8.com,reject
 host-suffix,zhudiaosz.com,reject
+host-suffix,zhuichaguoji.org,reject
 host-suffix,zhushou.2345.com,reject
 host-suffix,zhuuv.maoyumao.net,reject
 host-suffix,zhwnlapi.etouch.cn,reject
 host-suffix,zhybzp.cn,reject
+host-suffix,zhzzx.com,reject
 host-suffix,zisunion.com,reject
 host-suffix,zizcy.com,reject
 host-suffix,zjbdt.com,reject
@@ -7944,10 +8150,8 @@ host-suffix,ztxbd.com,reject
 host-suffix,zuche321.com,reject
 host-suffix,zuiceshi.net,reject
 host-suffix,zuimeitianqi.inveno.com,reject
+host-suffix,zunmi.cn,reject
 host-suffix,zws.avvo.com,reject
-host-suffix,img.adnyg.com.w.kunlungr.com,reject
-host-suffix,log.tagtic.cn,reject
-host-suffix,ulogs.umeng.com,reject
 host-suffix,zx.baosmx.com,reject
 host-suffix,zxcs.ggwan.com,reject
 host-suffix,zxcs.linghit.com,reject
@@ -7966,6 +8170,7 @@ host-suffix,zz.bdstatic.com,reject
 host-suffix,zz123.com,reject
 host-suffix,zzbaowen.com,reject
 host-suffix,zzcw.office-mall.net,reject
+host-suffix,zzd6.com,reject
 host-suffix,zzjs2.firefang.cn,reject
 host-suffix,zzpush.58.com,reject
 host-suffix,zzrcz.com,reject
@@ -7975,9 +8180,101 @@ host-suffix,zzy1.mipujia.com,reject
 host-suffix,zzy1.quyaoya.com,reject
 host-suffix,zzz7.52896368.com,reject
 host-suffix,zzzzz4.52896368.com,reject
-host-suffix,analytics.query.yahoo.com,reject
-host-suffix,ap.dongqiudi.com,reject
-host-suffix,adx.open-adx.com,reject
-host-suffix,adservice.sigmob.cn,reject
-host-suffix,unidesk.alicdn.com,reject
-host-suffix,mcupdate.gstarcad.com,reject
+
+# > Baidu
+host-suffix,baidustatic.com,reject
+HOST,duclick.baidu.com,reject
+HOST,hm.baidu.com,reject
+HOST,hmma.baidu.com,reject
+HOST,mobads.baidu.com,reject
+HOST,mobads-logs.baidu.com,reject
+HOST,nsclick.baidu.com,reject
+HOST,wn.pos.baidu.com,reject
+HOST,ps.map.baidu.com,reject
+HOST,offnavi.map.baidu.com,reject
+HOST,newvector.map.baidu.com,reject
+HOST,ulog.imap.baidu.com,reject
+HOST,newloc.map.n.shifen.com,reject
+
+# > Bilibili
+HOST,miniapp.bilibili.com,reject
+HOST,thirdparty.biliapi.com,reject
+
+# > ele
+HOST,log.star.ele.me,reject
+
+# > Netease
+HOST,ad.bn.netease.com,reject
+HOST,ad.yixin.im,reject
+HOST,iadmat.nosdn.127.net,reject
+HOST,iadmusicmat.music.126.net,reject
+HOST,iadmusicmatvideo.music.126.net,reject
+HOST,impservice.dictapp.youdao.com,reject
+HOST,impservice.youdao.com,reject
+HOST,log.yex.youdao.com,reject
+HOST,log-yex.youdao.com,reject
+HOST,mr.da.netease.com,reject
+HOST,n.3g.163.com,reject
+HOST,nex.163.com,reject
+HOST,pr.da.netease.com,reject
+HOST,rd.da.netease.com,reject
+HOST,wr.da.netease.com,reject
+HOST,yt-adp.nosdn.127.net,reject
+
+# > Zhihu
+HOST,appcloud2.in.zhihu.com,reject
+HOST,mqtt.zhihu.com,reject
+HOST,sugar.zhihu.com,reject
+HOST,zhihu-analytics.zhihu.com,reject
+HOST,zhihu-web-analytics.zhihu.com,reject
+HOST,118.89.204.198,reject
+host-suffix,xdrig.com,reject
+host-suffix,zhihu.xmcimg.com,reject
+IP-CIDR,39.107.15.115/32,reject
+IP-CIDR,47.89.59.182/32,reject
+IP-CIDR,103.49.209.27/32,reject
+IP-CIDR,118.89.204.198/32,reject
+IP-CIDR,123.56.152.96/32,reject
+IP6-CIDR,2402:4e00:1200:ed00:0:9089:6dac:96b6/128,reject
+USER-AGENT,AVOS*,reject
+
+# > China Net
+IP-CIDR,61.160.200.223/32,reject
+IP-CIDR,61.160.200.242/32,reject
+IP-CIDR,61.160.200.252/32,reject
+IP-CIDR,61.174.50.214/32,reject
+IP-CIDR,111.175.220.163/32,reject
+IP-CIDR,111.175.220.164/32,reject
+IP-CIDR,124.232.160.178/32,reject
+IP-CIDR,175.6.223.15/32,reject
+IP-CIDR,183.59.53.237/32,reject
+IP-CIDR,218.93.127.37/32,reject
+IP-CIDR,221.228.17.152/32,reject
+IP-CIDR,221.231.6.79/32,reject
+IP-CIDR,222.186.61.91/32,reject
+IP-CIDR,222.186.61.95/32,reject
+IP-CIDR,222.186.61.96/32,reject
+IP-CIDR,222.186.61.97/32,reject
+
+# > China Unicom
+IP-CIDR,106.75.231.48/32,reject
+IP-CIDR,119.4.249.166/32,reject
+IP-CIDR,220.196.52.141/32,reject
+IP-CIDR,221.6.4.148/32,reject
+
+# > China Mobile
+IP-CIDR,114.247.28.96/32,reject
+IP-CIDR,221.179.131.72/32,reject
+IP-CIDR,221.179.140.145/32,reject
+
+# > Dr.Peng
+IP-CIDR,10.72.25.0/24,reject
+IP-CIDR,115.182.16.79/32,reject
+IP-CIDR,118.144.88.126/32,reject
+IP-CIDR,118.144.88.215/32,reject
+IP-CIDR,120.76.189.132/32,reject
+IP-CIDR,124.14.21.147/32,reject
+IP-CIDR,124.14.21.151/32,reject
+IP-CIDR,180.166.52.24/32,reject
+IP-CIDR,220.115.251.25/32,reject
+IP-CIDR,222.73.156.235/32,reject
