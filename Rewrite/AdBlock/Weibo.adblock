@@ -5,20 +5,22 @@
 // @TgChannel         https://t.me/ddgksf2021
 // @Contribute        https://t.me/ddgksf2013_bot
 // @Feedback          📮 ddgksf2013@163.com 📮
-// @UpdateTime        2024-12-22
+// @UpdateTime        2024-01-26
 // @Attention         微博、微博国际版净化，现已二合一，使用中若有问题请发邮件！
 // @Attention         使用时请注意关闭QuantumultX的[兼容性增强]开关，否则无法去除微博广告
 // @Suitable          自行观看“# > ”注释内容
 // @Contributors      @zmqcherish
 // @Attention         如需引用请注明出处，谢谢合作！
-// @Version           V2.0.104
+// @Version           V2.0.105
 // @ScriptURL         https://github.com/ddgksf2013/Rewrite/raw/master/AdBlock/Weibo.conf
 // ==/UserScript==
 
 hostname = api.weibo.*, *.api.weibo.*, mapi.weibo.*, *.uve.weibo.com, new.vip.weibo.cn, boot.biz.weibo.com
 
+# > 微博_首页顶部直播推荐Tab@ddgksf2013
+^https?:\/\/api\.weibo\.cn\/.*\/media_homelist url reject-200
 # > 微博_搜索页默认填充词@ddgksf2013
-^https?:\/\/api\.weibo\.cn\/!\/was\/finder\/searchbarchange url reject-200
+^https?:\/\/api\.weibo\.cn\/.*finder\/searchbarchange url reject-200
 # > 微博_AD_Preload@ddgksf2013
 ^https?:\/\/api\.weibo\.cn\/\d\/ad\/preload url reject-dict
 # > 微博_首页顶部homeExtend@ddgksf2013
