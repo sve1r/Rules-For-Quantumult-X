@@ -138,6 +138,10 @@ host-suffix,sogoucdn.com,direct
 # >> 搜狗
 host-suffix,sogo.com,direct
 
+# >> 小红书
+host-suffix,xiaohongshu.com,direct
+host-suffix,xhscdn.com,direct
+
 # >> 知乎
 host-suffix,zhihu.com,direct
 host-suffix,zhimg.com,direct
@@ -157,6 +161,7 @@ host-suffix,aixifan.com,direct
 host-suffix,battle.net,direct
 host-suffix,bdatu.com,direct
 host-suffix,beitaichufang.com,direct
+host-suffix,bosszhipin.com,direct
 host-suffix,cailianpress.com,direct
 host-suffix,camera360.com,direct
 host-suffix,chinaso.com,direct
@@ -204,6 +209,8 @@ host-suffix,huya.com,direct
 host-suffix,haibian.com,direct
 host-suffix,hao123.com,direct
 host-suffix,haosou.com,direct
+host-suffix,heytea.com,direct
+host-suffix,heytea-co.com,direct
 host-suffix,infinitynewtab.com,direct
 host-suffix,ithome.com,direct
 host-suffix,ifeng.com,direct
@@ -217,11 +224,14 @@ host-suffix,kaspersky.com.cn,direct
 host-suffix,keepcdn.com,direct
 host-suffix,kkmh.com,direct
 host-suffix,kuaidi100.com,direct
-host-suffix,luojilab.com,direct
 host-suffix,lecloud.com,direct
 host-suffix,letv.com,direct
 host-suffix,letvcloud.com,direct
 host-suffix,lizhi.io,direct
+host-suffix,luckincoffee.com,direct
+host-suffix,luckincoffeecdn.com,direct
+host-suffix,luckincdn.com,direct
+host-suffix,luojilab.com,direct
 host-suffix,mobike.com,direct
 host-suffix,mubu.com,direct
 host-suffix,myzaker.com,direct
@@ -286,9 +296,11 @@ host-suffix,yixia.com,direct
 host-suffix,youdao.com,direct
 host-suffix,yangkeduo.com,direct
 host-suffix,zealer.com,direct
+host-suffix,zhipin.com,direct
 host-suffix,zgslb.net,direct
 
 # >> 兜底规则
+geoip,cn,direct
 host-suffix,cn,direct
 
 # >> 常见国内cdn
