@@ -1,0 +1,12 @@
+# 测速类工具
+host-suffix,fast.com,SpeedTest
+host-suffix,ipip.net,SpeedTest
+host-suffix,ip.sb,SpeedTest
+host-suffix,ipv6-test.com,SpeedTest
+host-suffix,netspeedtestmaster.com,SpeedTest
+host-suffix,speed.cloudflare.com,SpeedTest
+host-suffix,speedtest.net,SpeedTest
+host-suffix,speedtest.macpaw.com,SpeedTest
+host-suffix,test-ipv4.com,SpeedTest
+host-suffix,test-ipv6.com,SpeedTest
+host-suffix,whatismyip.com,SpeedTest
