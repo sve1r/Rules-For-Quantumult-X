@@ -5,18 +5,22 @@
 // @TgChannel         https://t.me/ddgksf2021
 // @Contribute        https://t.me/ddgksf2013_bot
 // @Feedback          📮 ddgksf2013@163.com 📮
-// @UpdateTime        2024-01-26
+// @UpdateTime        2025-02-12
 // @Attention         微博、微博国际版净化，现已二合一，使用中若有问题请发邮件！
 // @Attention         使用时请注意关闭QuantumultX的[兼容性增强]开关，否则无法去除微博广告
 // @Suitable          自行观看“# > ”注释内容
 // @Contributors      @zmqcherish
 // @Attention         如需引用请注明出处，谢谢合作！
-// @Version           V2.0.105
+// @Version           V2.0.107
 // @ScriptURL         https://github.com/ddgksf2013/Rewrite/raw/master/AdBlock/Weibo.conf
 // ==/UserScript==
 
+
 hostname = api.weibo.*, *.api.weibo.*, mapi.weibo.*, *.uve.weibo.com, new.vip.weibo.cn, boot.biz.weibo.com
 
+# ======= 微博国内版 ======= #
+# > 微博_启动感兴趣弹窗@ddgksf2013
+^https?:\/\/api\.weibo\.cn\/.*account\/recommend_interesttags url reject-dict
 # > 微博_首页顶部直播推荐Tab@ddgksf2013
 ^https?:\/\/api\.weibo\.cn\/.*\/media_homelist url reject-200
 # > 微博_搜索页默认填充词@ddgksf2013
@@ -25,10 +29,6 @@ hostname = api.weibo.*, *.api.weibo.*, mapi.weibo.*, *.uve.weibo.com, new.vip.we
 ^https?:\/\/api\.weibo\.cn\/\d\/ad\/preload url reject-dict
 # > 微博_首页顶部homeExtend@ddgksf2013
 ^https?:\/\/api\.weibo\.cn\/\d\/groups\/allgroups\/v\d url script-response-body https://r.sveir.xyz/Scripts/AdBlock/Weibo/weibo.min.js
-# > 微博国际版_帖子下方广告banner@ddgksf2013
-^https?:\/\/weibointl\.api\.weibo\.cn\/portal\.php\?a=open_app url script-response-body https://r.sveir.xyz/Scripts/AdBlock/Weibo/weibo.min.js
-# > 微博国际版_趋势页热门影片@ddgksf2013
-^https?:\/\/api\.weibo\.cn\/\d\/cardlist\?v_f=.*Weibo_intl url reject-dict
 # > 微博_用户推荐弹窗@ddgksf2013
 ^https?:\/\/api\.weibo\.cn\/\d\/profile\/recommend_popuser url reject-dict
 # > 微博_开屏广告预加载处理@ddgksf2013
@@ -40,7 +40,7 @@ hostname = api.weibo.*, *.api.weibo.*, mapi.weibo.*, *.uve.weibo.com, new.vip.we
 # > 微博_视频信息处理@ddgksf2013
 ^https?:\/\/api\.weibo\.cn\/\d\/video\/tiny_stream_mid_detail url script-response-body https://r.sveir.xyz/Scripts/AdBlock/Weibo/weibo.min.js
 # > 微博_去除底部超话栏表层浮icon及tips@ddgksf2013
-^https?:\/\/api\.weibo\.cn\/\d\/!\/huati\/discovery_home_bottom_getdotinfo url reject-dict
+^https?:\/\/api\.weibo\.cn\/.*discovery_home_bottom_getdotinfo url reject-dict
 # > 微博_屏蔽首页左上角每日的弹窗tips@ddgksf2013
 ^https?:\/\/m?api\.weibo\.c(n|om)\/\d/push/daily url reject-dict
 # > 微博_屏蔽发现页面搜索框热词@ddgksf2013
@@ -65,6 +65,13 @@ hostname = api.weibo.*, *.api.weibo.*, mapi.weibo.*, *.uve.weibo.com, new.vip.we
 ^https?:\/\/m?api\.weibo\.c(n|om)\/\d\/search/(finder|container_timeline|container_discover) url script-response-body https://r.sveir.xyz/Scripts/AdBlock/Weibo/weibo.min.js
 ^https?:\/\/m?api\.weibo\.c(n|om)\/\d\/(checkin/show|\!/live/media_homelist|comments/build_comments|container/get_item) url script-response-body https://r.sveir.xyz/Scripts/AdBlock/Weibo/weibo.min.js
 ^https?:\/\/m?api\.weibo\.c(n|om)\/\d\/cardlist url script-response-body https://r.sveir.xyz/Scripts/AdBlock/Weibo/weibo.min.js
+
+
+# ======= 微博国际版 ======= #
+# > 微博国际版_帖子下方广告banner@ddgksf2013
+^https?:\/\/weibointl\.api\.weibo\.cn\/portal\.php\?a=open_app url script-response-body https://r.sveir.xyz/Scripts/AdBlock/Weibo/weibo.min.js
+# > 微博国际版_趋势页热门影片@ddgksf2013
+^https?:\/\/api\.weibo\.cn\/\d\/cardlist\?v_f=.*Weibo_intl url reject-dict
 # > 微博国际版_屏蔽hotsearch@ddgksf2013
 ^https?:\/\/weibointl\.api\.weibo\.c(n|om)\/portal\.php\?a=hot_search_users url reject-dict
 # > 微博国际版_屏蔽热推荐@ddgksf2013
@@ -73,7 +80,7 @@ hostname = api.weibo.*, *.api.weibo.*, mapi.weibo.*, *.uve.weibo.com, new.vip.we
 ^https?:\/\/weibointl\.api\.weibo\.c(n|om)\/portal\.php.*a=get_searching_info url script-response-body https://r.sveir.xyz/Scripts/AdBlock/Weibo/weibo_search_info.json
 # > 微博国际版_屏蔽search_topic@shiro
 ^https?:\/\/weibointl\.api\.weibo\.c(n|om)\/portal\.php.*feed&a=search_topic url script-response-body https://r.sveir.xyz/Scripts/AdBlock/Weibo/weibo_search_topic.json
-# > 微博国际版_屏蔽开屏广告@ddgksf2013
+# > 微博国际版_屏蔽开屏广告@ddgksf2013 
 ^https?:\/\/weibointl\.api\.weibo\.c(n|om)\/portal\.php.*get_coopen_ads url script-response-body https://r.sveir.xyz/Scripts/AdBlock/Weibo/weibo.min.js
 # > 微博国际版_屏蔽sdkad@ddgksf2013
 ^https?://(sdk|wb)app\.uve\.weibo\.com(/interface/sdk/sdkad.php|/wbapplua/wbpullad.lua) url script-response-body https://r.sveir.xyz/Scripts/AdBlock/Weibo/weibo.min.js
