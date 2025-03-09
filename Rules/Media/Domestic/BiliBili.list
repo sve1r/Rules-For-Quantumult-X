@@ -91,3 +91,7 @@ ip-cidr,134.175.207.130/32,BiliBili
 ip-cidr,150.116.92.250/32,BiliBili
 ip-cidr,164.52.76.18/32,BiliBili
 ip-cidr,203.107.1.0/24,BiliBili
+
+# >> B站 PCDN 屏蔽
+host-suffix, v1d.szbdyd.com, reject
+host-suffix, mcdn.bilivideo.cn, reject
