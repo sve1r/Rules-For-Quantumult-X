@@ -2,7 +2,7 @@
  > 应用名称：墨鱼自用B站去广告脚本
  > 脚本作者：@ddgksf2013
  > 微信账号：墨鱼手记
- > 更新时间：2024-05-06
+ > 更新时间：2024-05-10
  > 通知频道：https://t.me/ddgksf2021
  > 贡献投稿：https://t.me/ddgksf2013_bot
  > 问题反馈：ddgksf2013@163.com
@@ -12,7 +12,7 @@
 
 
 
-const version = 'V2.0.119';
+const version = 'V2.0.120';
 
 let body = $response.body;
 if (body) {
@@ -118,7 +118,7 @@ if (body) {
         case/^https?:\/\/app\.bilibili\.com\/x\/v2\/account\/mine/.test($request.url):
             try {
                 let v = JSON.parse(body),
-                    $ = new Set([396, 397, 398, 399, 407, 410, 402, 404, 425, 426, 427, 428, 430, 432, 433, 434, 494, 495, 496, 497, 500, 501, 2830, 3072]);
+                    $ = new Set([396, 397, 398, 399, 407, 410, 402, 404, 425, 426, 427, 428, 430, 432, 433, 434, 494, 495, 496, 497, 500, 501, 2830, 3072, 3084]);
                 v.data.sections_v2.forEach((t, i) => {
                     let a = t.items.filter(t => $.has(t.id));
                     v.data.sections_v2[i].items = a, v.data.sections_v2[i].button = {}, delete v.data.sections_v2[i].be_up_title, delete v.data.sections_v2[i].tip_icon, delete v.data.sections_v2[i].tip_title, ("创作中心" == v.data.sections_v2[i].title || "創作中心" == v.data.sections_v2[i].title) && (delete v.data.sections_v2[i].title, delete v.data.sections_v2[i].type)
