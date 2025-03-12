@@ -1,0 +1,18 @@
+#!name=Goodbility
+#!desc=解锁GoodNotes&Notability内购会员
+#!author=𝐝𝐝𝐠𝐤𝐬𝐟𝟐𝟎𝟏𝟑
+#!tgchannel=https://t.me/ddgksf2021
+#!moduleUrl=https://github.com/ddgksf2013/Modules/raw/main/Goodbility.Vip.sgmodule
+#!howtouse=小火箭、Surge用户直接添加模块，QuantumultX用户添加重写时打开解析器
+
+
+hostname= isi.csan.*, notability.com
+
+# > Goodbility@ddgksf2013
+^https:\/\/isi\.csan.[a-z.]+\/.+\/(receipts$|subscribers\/[^/]+$) url script-response-body https://r.sveir.xyz/Scripts/Unlock/Goodbility.min.js
+^https:\/\/isi\.csan.[a-z.]+\/.+\/(receipts|subscribers) url script-request-header https://r.sveir.xyz/Scripts/Unlock/MoveRevenueCat.min.js
+^https?:\/\/notability\.com\/global url script-response-body https://r.sveir.xyz/Scripts/Unlock/Goodbility.min.js
+
+
+
+
