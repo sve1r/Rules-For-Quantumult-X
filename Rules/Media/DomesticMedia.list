@@ -1,59 +1,19 @@
 # > All Domestic Media
 
 # >> BiliBili
-host,0gr4uqmtt8y41hcjsgrzdrc31.ourdvsss.com,Domestic Media
-host,0gr4uqmtt8y41hcjsgrzdrc3s.ourdvsss.com,Domestic Media
-host,0gr4uqmtt8y41hcjsgrzdrc3z.ourdvsss.com,Domestic Media
-host,0gr4uqmtt8y41hcjsgrzdrctt.ourdvsss.com,Domestic Media
-host,0gr4uqmtt8y41hcjsgrzdrctu.ourdvsss.com,Domestic Media
-host,0gr4uqmtt8y41hcjz8yzdnc31.ourdvsss.com,Domestic Media
-host,0gr4uqmtt8y41hcjz8yzdnc3t.ourdvsss.com,Domestic Media
-host,0gr4uqmtt8y41hcjzgazdrpba.ourdvsss.com,Domestic Media
-host,0gr4uqmtt8y41hcjzgazdrpbz.ourdvsss.com,Domestic Media
-host,0gr4uqmtt8y41hcjzgazdrpjt.ourdvsss.com,Domestic Media
-host,0gr5dgmttgha1hcj38yzdncb3.ourdvsss.com,Domestic Media
-host,112-81-125-43.dhost.00cdn.com,Domestic Media
-host,113-219-145-1.ksyungslb.com,Domestic Media
-host,114-236-92-129.ksyungslb.com,Domestic Media
-host,180-101-74-1.ksyungslb.com,Domestic Media
-host,1geadrmttge3nhcjwgazdope.ourdvsss.com,Domestic Media
-host,1geadrmttge3nhcjwgwzdqqe.ourdvsss.com,Domestic Media
-host,1gr3uomttgr31hcjo8yzdnco.ourdvsss.com,Domestic Media
-host,1gr3uomttgr31hcjo8yzdnpy.ourdvsss.com,Domestic Media
-host,1gr3uomttgr31hcjtgezdkcy.ourdvsss.com,Domestic Media
-host,1gr4uqmtt8y41hcjigazdqca.ourdvsss.com,Domestic Media
-host,1gr4uqmtt8y41hcjigazdqce.ourdvsss.com,Domestic Media
-host,1gr4uqmtt8y41hcjigazdqco.ourdvsss.com,Domestic Media
-host,1gr4uqmtt8y41hcjigazdqpo.ourdvsss.com,Domestic Media
-host,1gr4uqmtt8y41hcjzgwzdkqe.ourdvsss.com,Domestic Media
-host,1gr5dgmttgha1hcj38yzdcca.ourdvsss.com,Domestic Media
-host,1gr5dgmttgha1hcj38yzdcco.ourdvsss.com,Domestic Media
-host,1gr5dgmttgha1hcj38yzdkca.ourdvsss.com,Domestic Media
-host,1gr5dgmttgha1hcj38yzdkco.ourdvsss.com,Domestic Media
-host,1gr5dgmttgha1hcj38yzdkpe.ourdvsss.com,Domestic Media
-host,1gr5dgmttgha1hcj38yzdkpy.ourdvsss.com,Domestic Media
-host,1gr5dgmttgha1hcj38yzdkqy.ourdvsss.com,Domestic Media
-host,1gr5dgmttgha1hcj3gczdcpa.ourdvsss.com,Domestic Media
-host,1gr5dgmttgha1hcj3gczdcpe.ourdvsss.com,Domestic Media
-host,1gr5dgmttgha1hcj3gczdcpo.ourdvsss.com,Domestic Media
-host,1gr5dgmttgha1hcj3gczdcqy.ourdvsss.com,Domestic Media
-host,1gr5dgmttgha1hcttgrzdnpo.ourdvsss.com,Domestic Media
-host,1graukmttga4nhcjtgozdgce.ourdvsss.com,Domestic Media
-host,218-91-225-1.ksyungslb.com,Domestic Media
-host,219-155-150-1.ksyungslb.com,Domestic Media
-host,222-188-6-1.ksyungslb.com,Domestic Media
-host,36-104-134-1.ksyungslb.com,Domestic Media
-host,36-25-252-1.ksyungslb.com,Domestic Media
-host,3ge3drmttga5nhcbqge3ur.ourdvsss.com,Domestic Media
-host,3geauymtsgrzdnqbofa5do.ourdvsss.com,Domestic Media
-host,3geauymtsgrzdnqbofa5dy.ourdvsss.com,Domestic Media
-host,3geauymtsgrzdrcbzfahue.ourdvsss.com,Domestic Media
-host,3geauymtsgrzdrcbzfahuk.ourdvsss.com,Domestic Media
-host,4go41hcjtgazdoctqge4o.ourdvsss.com,Domestic Media
-host,p-bstarstatic.akamaized.net,Domestic Media
-host,p.bstarstatic.com,Domestic Media
-host,upos-bstar-mirrorakam.akamaized.net,Domestic Media
-host,upos-bstar1-mirrorakam.akamaized.net,Domestic Media
+user-agent,*bili*,Domestic Media
+user-agent,bili*,Domestic Media
+user-agent,Domestic Media*,Domestic Media
+user-agent,bili-inter*,Domestic Media
+host-suffix,Domestic Media.cc,Domestic Media
+host-suffix,Domestic Media.cn,Domestic Media
+host-suffix,Domestic Media.co,Domestic Media
+host-suffix,Domestic Media.com,Domestic Media
+host-suffix,Domestic Media.net,Domestic Media
+host-suffix,Domestic Media.tv,Domestic Media
+host-suffix,biliapi.com,Domestic Media
+host-suffix,biliapi.net,Domestic Media
+host-suffix,biliintl.com,Domestic Media
 host-suffix,acg.tv,Domestic Media
 host-suffix,acgvideo.com,Domestic Media
 host-suffix,animetamashi.cn,Domestic Media
@@ -68,65 +28,60 @@ host-suffix,bili22.cn,Domestic Media
 host-suffix,bili2233.cn,Domestic Media
 host-suffix,bili23.cn,Domestic Media
 host-suffix,bili33.cn,Domestic Media
-host-suffix,biliapi.com,Domestic Media
-host-suffix,biliapi.net,Domestic Media
-host-suffix,bilibili.cc,Domestic Media
-host-suffix,bilibili.cn,Domestic Media
-host-suffix,bilibili.co,Domestic Media
-host-suffix,bilibili.com,Domestic Media
-host-suffix,bilibili.net,Domestic Media
-host-suffix,bilibili.tv,Domestic Media
-host-suffix,bilibiligame.cn,Domestic Media
-host-suffix,bilibiligame.co,Domestic Media
-host-suffix,bilibiligame.net,Domestic Media
-host-suffix,bilibilipay.cn,Domestic Media
-host-suffix,bilibilipay.com,Domestic Media
 host-suffix,bilicdn1.com,Domestic Media
 host-suffix,bilicdn2.com,Domestic Media
 host-suffix,bilicdn3.com,Domestic Media
 host-suffix,bilicdn4.com,Domestic Media
 host-suffix,bilicdn5.com,Domestic Media
-host-suffix,bilicomics.com,Domestic Media
-host-suffix,biligame.cn,Domestic Media
-host-suffix,biligame.co,Domestic Media
-host-suffix,biligame.com,Domestic Media
-host-suffix,biligame.net,Domestic Media
-host-suffix,biligo.com,Domestic Media
 host-suffix,biliimg.com,Domestic Media
-host-suffix,biliintl.com,Domestic Media
-host-suffix,biliplus.com,Domestic Media
-host-suffix,bilivideo.cn,Domestic Media
-host-suffix,bilivideo.com,Domestic Media
-host-suffix,bilivideo.net,Domestic Media
-host-suffix,corari.com,Domestic Media
-host-suffix,dreamcast.hk,Domestic Media
-host-suffix,dyhgames.com,Domestic Media
 host-suffix,hdslb.com,Domestic Media
 host-suffix,hdslb.com.w.kunlunhuf.com,Domestic Media
 host-suffix,hdslb.com.w.kunlunpi.com,Domestic Media
 host-suffix,hdslb.net,Domestic Media
 host-suffix,hdslb.org,Domestic Media
-host-suffix,im9.com,Domestic Media
 host-suffix,maoercdn.com,Domestic Media
 host-suffix,mcbbs.net,Domestic Media
 host-suffix,mincdn.com,Domestic Media
-host-suffix,sharejoytech.com,Domestic Media
 host-suffix,smtcdns.net,Domestic Media
+host-suffix,p-bstarstatic.akamaized.net,Domestic Media
+host-suffix,p.bstarstatic.com,Domestic Media
+host-suffix,upos-bstar-mirrorakam.akamaized.net,Domestic Media
+host-suffix,upos-bstar1-mirrorakam.akamaized.net,Domestic Media
 host-suffix,upos-hz-mirrorakam.akamaized.net,Domestic Media
-host-suffix,uposdash-302-bilivideo.yfcdn.net,Domestic Media
+host-suffix,biligame.com,Domestic Media
+host-suffix,biligame.net,Domestic Media
+host-suffix,biligame.cn,Domestic Media
+host-suffix,biligame.co,Domestic Media
+host-suffix,Domestic Mediagame.cn,Domestic Media
+host-suffix,Domestic Mediagame.co,Domestic Media
+host-suffix,Domestic Mediagame.net,Domestic Media
+host-suffix,biligo.com,Domestic Media
+host-suffix,bilicomics.com,Domestic Media
+host-suffix,Domestic Mediapay.cn,Domestic Media
+host-suffix,Domestic Mediapay.com,Domestic Media
+host-suffix,corari.com,Domestic Media
+host-suffix,dreamcast.hk,Domestic Media
+host-suffix,dyhgames.com,Domestic Media
+host-suffix,im9.com,Domestic Media
+host-suffix,sharejoytech.com,Domestic Media
 host-suffix,yo9.com,Domestic Media
-user-agent,*bili*,Domestic Media
-user-agent,bilibili*,Domestic Media
-user-agent,bili*,Domestic Media
-user-agent,bili-inter*,Domestic Media
+ip-cidr,45.43.32.234/32,Domestic Media
 ip-cidr,106.75.74.76/32,Domestic Media
 ip-cidr,111.206.25.147/32,Domestic Media
 ip-cidr,119.3.238.64/32,Domestic Media
+ip-cidr,119.29.29.29/32,Domestic Media
 ip-cidr,120.92.108.182/32,Domestic Media
 ip-cidr,120.92.113.99/32,Domestic Media
 ip-cidr,120.92.153.217/32,Domestic Media
+ip-cidr,128.1.62.200/32,Domestic Media
+ip-cidr,128.1.62.201/32,Domestic Media
 ip-cidr,134.175.207.130/32,Domestic Media
+ip-cidr,150.116.92.250/32,Domestic Media
+ip-cidr,164.52.76.18/32,Domestic Media
 ip-cidr,203.107.1.0/24,Domestic Media
+# >> B站 PCDN 屏蔽
+host-suffix, v1d.szbdyd.com, reject
+host-suffix, mcdn.bilivideo.cn, reject
 
 # >> iQiyi
 host-suffix,71.am,Domestic Media
