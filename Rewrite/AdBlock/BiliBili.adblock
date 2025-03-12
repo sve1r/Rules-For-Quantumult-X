@@ -85,15 +85,15 @@ hostname = -broadcast.chat.bilibili.com, -cm.bilibili.com, -*cdn*.biliapi.net, -
 # 原脚本来自 https://raw.githubusercontent.com/kokoryh/Sparkle/master/dist/bilibili.protobuf.js
 ^https?:\/\/(app\.bilibili\.com|grpc\.biliapi\.net)\/bilibili\.app\.interface\.v1\.Search\/Default url reject
 # ～ BiliBili_哔哩哔哩_搜索去广告@BiliUniverse,kokoryh
-^https?:\/\/(grpc\.biliapi\.net|app\.bilibili\.com)\/bilibili\.polymer\.app\.search\.v1\.Search\/SearchAll$ url script-response-body https://r.sveir.xyz/Scripts/AdBlock/BiliBili/bilibili.protobuf.js
+^https?:\/\/(grpc\.biliapi\.net|app\.bilibili\.com)\/bilibili\.polymer\.app\.search\.v1\.Search\/SearchAll$ url script-response-body https://r.sveir.xyz/Scripts/AdBlock/BiliBili/BiliBili.protobuf.js
 # ～ BiliBili_哔哩哔哩_交互点赞投票弹幕及会员弹幕@BiliUniverse,kokoryh
-^https?:\/\/(app\.bilibili\.com|grpc\.biliapi\.net)\/bilibili\.community\.service\.dm\.v1\.DM\/(DmView|DmSegMobile) url script-response-body https://r.sveir.xyz/Scripts/AdBlock/BiliBili/bilibili.protobuf.js
+^https?:\/\/(app\.bilibili\.com|grpc\.biliapi\.net)\/bilibili\.community\.service\.dm\.v1\.DM\/(DmView|DmSegMobile) url script-response-body https://r.sveir.xyz/Scripts/AdBlock/BiliBili/BiliBili.protobuf.js
 # ～ BiliBili_哔哩哔哩_青少年弹窗@BiliUniverse,kokoryh
-^https:\/\/(grpc\.biliapi\.net|app\.bilibili\.com)\/bilibili\.app\.interface\.v1\.Teenagers\/ModeStatus url script-response-body https://r.sveir.xyz/Scripts/AdBlock/BiliBili/bilibili.protobuf.js
+^https:\/\/(grpc\.biliapi\.net|app\.bilibili\.com)\/bilibili\.app\.interface\.v1\.Teenagers\/ModeStatus url script-response-body https://r.sveir.xyz/Scripts/AdBlock/BiliBili/BiliBili.protobuf.js
 # ～ BiliBili_哔哩哔哩_UP主推荐广告[适配ipad端]@BiliUniverse,kokoryh
-^https?:\/\/(app\.bilibili\.com|grpc\.biliapi\.net)\/bilibili\.app\.(view|viewunite)\.v1\.View\/(View|TFInfo)$ url script-response-body https://r.sveir.xyz/Scripts/AdBlock/BiliBili/bilibili.protobuf.js
+^https?:\/\/(app\.bilibili\.com|grpc\.biliapi\.net)\/bilibili\.app\.(view|viewunite)\.v1\.View\/(View|TFInfo)$ url script-response-body https://r.sveir.xyz/Scripts/AdBlock/BiliBili/BiliBili.protobuf.js
 # ～ BiliBili_哔哩哔哩_动态综合页及视频页去广告@BiliUniverse,kokoryh
-^https?:\/\/(app\.bilibili\.com|grpc\.biliapi\.net)\/bilibili\.app\.dynamic\.v2\.Dynamic\/Dyn(All|Video)$ url script-response-body https://r.sveir.xyz/Scripts/AdBlock/BiliBili/bilibili.protobuf.js
+^https?:\/\/(app\.bilibili\.com|grpc\.biliapi\.net)\/bilibili\.app\.dynamic\.v2\.Dynamic\/Dyn(All|Video)$ url script-response-body https://r.sveir.xyz/Scripts/AdBlock/BiliBili/BiliBili.protobuf.js
 
 
 # ======= BiliNotAdded ======= #
