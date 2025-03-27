@@ -2,354 +2,344 @@
  > 应用名称：墨鱼自用小红书去广告脚本
  > 脚本作者：@ddgksf2013
  > 微信账号：墨鱼手记
- > 更新时间：2025-02-07
+ > 更新时间：2025-03-14
  > 通知频道：https://t.me/ddgksf2021
  > 贡献投稿：https://t.me/ddgksf2013_bot
  > 问题反馈：ddgksf2013@163.com
  > 特别提醒：如需转载请注明出处，谢谢合作！
  ***********************************************/
 
-
-const version = 'V1.0.24';
+const version = 'V1.0.26';
 const $ = new Env("小红书");
-var _0xodR = 'jsjiami.com.v7';
+var _0xodG = 'jsjiami.com.v7';
+const _0x5a5378 = _0xaee0;
 
-function _0x36e3() {
-    const _0x188d5c = (function () {
-        return [_0xodR, 'kRHLjdsRjeiHaemTiB.WchCoILmCK.Kv7xfWTSHK==', '5PkP57Ek56656kY0', 'WQhdS1CF', 'lbClWP9yimoAksxcPWW', '5Pon57wj56YM6kYp', 'o8omW7PcW5BcKIhdRG', 'sCkjrt0eg8kWbCoWWOSKjJRdHdbd', 'W7noW6TQASodDJ7dOuRcOCo+ehuNW6rH', 'WOKZW6nRmGBcHCkOW6O', 'WOq/W7zT', 'W6VdRSotWP1uq8oZW7tdJSocWRlcIa', 'wr4yWOqtW49CaSoHAIi', 'FMpdS8k6', 'WQZdHhNdSG', 'WOpcNgqekCkRWQvPcbWkW5RcVw0', 'W47cTWxcSZ4pnSkCW6OfF2q', 'WOBcR2DG', 'WPq/W6bQmJZcLmoGWQy', 'WPRcM28zpCk1', 'uHjD', 'WOLyt8kOW4ucBSojh8ovjt/dIa', 'WOhcUCohWR18WOVcMwvBpCk0amoy', 'r8kDwaecf8kZcSoBWOSUds/dGJPuWQ4', 'WOvvW4vB', 'WO1ur8kSW544y8o4hSovfs3cICkgaCk/hq', 'W5DMhW', 'WPmCgrhdGsfd', 'owxcK8k3ba', 'W5lcM3CRWRO', 'ECoGW4xcKa/dM8opWOq7W5f6CKNcNt0', 'nrWzBwv1rmk9W6HaW7lcPxyffW', 'rHODWOyzW6nQcG', 'W4PBktFdTwHrW5hdGZtcT1m', 'WRddUea0tWDcW48', 'W4T7gSokW4iC', 'WQz/Amo+W5BcLmoRwSoSzq', 'WODkWRy', 'ue0YW53cQa', 'phBcJq', 'W6Omkq', 'WQ/cQ8ksW4CjeSoDW5BdUq', 'WOq3W7fGpJlcLq', 'nufcpq', 'WP17WONdOSoMecxdPsqt', 'y8koFvvd', 'W5ZdRLzJW6RdIbO', 'uKKSW4/cUCoPWP8LqK9mgmk/W7/dSCo2qq', 'WPdcJb4yW5FcIuD/W7G', 'xmkiwtCEfCk2dCow', 'WP3cOJCTW6pcGJj5W7KRECo5xW', 'W7VdP8kuhYjEpNbtW5aq', 'j8oBW5K', 'WOhcUCohWR18WOVcG3Tyn8kp', 'WOhcQcK8', 'bwRdLINdUmo/WOymW50', 'WPP2WPVdPa', 'WO7cIhODa2uDjHCkFIupW5DQWQ9h', 'gWtdOCk5W5a', 'W5/dJ8ks', 'WPtcP3DKWRSJWQKeWPCKwW', 'W7akkSoeW7D+WO7cMCkhW5i8W6HhaG', 'y8kTqurkCmoLkSkXWRBcQMuiWOG', 'Aevdy2T8vmkQWPy', 'EmkHquHeCmoWlSkIWRFcL2CeWO1KgSow', 'WO3cJNOm', 'W4ibWOuxCmkKvCoMWPddScS', 'WOdcLWeCW5ZcGfOJWQe', 'xSkPxSkb', 'W4pdGCkhCSkY', 'W7BcIeSqWO/dK13cQqFcLZdcVq', 'WP3cRcKxW7FcGJT8WQm9DCojsmkPW5qUFW', 'gbxdV8kRW4y9', 'WPbKW6erDmojWPTWfuu', 'oNdcK8kTd3ubWRNdNG', 'WP7cSKOeFM/dNmoHyfzyWRldHmotfq', 'ou7dKI/dLq', 'i8oDW5K1W7PjWPS+WRlcN8o6W653'].concat((function () {
-            return ['WO7cOxq', 'WO/cMMaopmkVWQmPnbyjWOdcUtpdVWe', 'W4ddLmkhzmk2W4e', 'W77dPCks', 'rHODWOyzW6nWhSoTFdi', 'WOjeW4rgj8kjESopWOm', 'WOrjn8kyhLqyECkfDtJcS8otxW', 'wCoGW5hcVrldGa', 'wvFcO8oZWOvGWQVdNmoWFW', 'W48mCMC', 'WOPYWPZdSq', 'W6tdO8krhsHNmNTrWOvVheC', 'tCoWW4/cSrtdNColWRWnW5bXAxdcKsfB', 'jSoeW6PcW4BcKHVdQmouW7K', 'CSoYW4X0W5dcQcW', 'WOtcPmorWRf9WRpcMw1e', 'WP56WOVdPmo2psNdUa', 'W7uxpmoiW7zgWOpcKmkj', 'WOFcMrGq', 'W7ZdPCkbhrHrpW', 'kryhFa', 's8kDxZ8', 'WRNdUum', 'W4dcMSob', 'vCkHtG', 'W7RdQ8kgjZvDn3rdWO9unrlcLH3dNSko', 'WQddIMddTSk/hmkzzGRdMW', 'WO9ewmkL', 'WR7cSKiNzwxdK8oOBL1sWRNdVmoPaSozlG', 'WONdR1/dS35lg8kD', 'i0q7WROhmcS', 'yxmKWOWG', 'WOeCdHJdHXvcW6K9v2fFp8k9', 'zgFdTmkNWOpcQCoRWQ0QpfG3', 'WOW3W7rPccNcMmk1W7iV', 'WPjZW6WFFa', 'W73dNaK', 'WRJcSL0Y', 'zMNdPW', 'WOlcOSop', 'zxCLWOS', 'W4hdOCkAW60LWPdcIfjhpmkz', 'W7JdMXyu', 'W4nfwK3cKxWtW6ieA2nZla', 'oKtcJSoDW7C', 'WPnCWQK', 'lHyvEMb4dSk3WQLhW7ZcSZHg', 'WPnEta', 'WR/cO1WVF2FdNSorCa', 'xCkztZWFhCk0nmoAWP0VibFdMZXuWRG2ECktW5JdKW', 'WPlcGMizkgWqcGq', 'p8oaW6Pc', 'WQxdHh7dP8k8c8kJD0lcLW', 'WPD3W7SPB8ocWQHKe0XPoCo9WPddKLuv', 'WOfmWQG3xSksihpcNW', 'qWOkWPCtW5fChCoTAYdcGCkirSouka', 'j8okW74', 'WOBcUsGHW6VcGd57WQ4', 'lwxcLCkL', 'WOrGWOldUCoIiIxcPsetW47dOmoxyW', 'WPvfpCkya1mjECk+jNu', 'WQekqmomW5C', 'tCkHtSkhWQpdJZ/cS3u', 'W5dcHSojW5SPW4JdTJm', 'WOxcHNGif8k2WQqOhXW', 'r8oQW4y', 'W7RdIWKDW7NcLL7cNmkRWRzHW7JdKCkgfCkyW6O', 'W4SbW6TOamodFvhcL8k+WRPTW6u', 'WRJdHh/dOmk8', 'DNCIWPSKisu', 'W4rtma3dNxDcW5BdMW', 'z3SYWPOQcI3dGt7cIYT0wa', 'WRNdV1iozb5hW4xcVCoLsCk1sZtcQCkLWRrc', 'bWRdSSkUW5W7W7ZcS8kVi8oh', 'WRJcVSkuW48u', 'W7jcW7LsFCovrtpdVfZcSq', 'W7jDa8oWW60', 'WP8CbaNdTZ1jW7qUsG'].concat((function () {
-                return ['WPtdNYbj', 'W7ZdQ8kbetfDbgnyWOntdW', 'BmoApW', 'W7/dR8kyhrHioNzCWOTxdW', 'kmokW6LpW7ZcJc3dS8on', 'WO18WPJdQCoCiYxdPsK', 'B1rE', 'WPdcTConWR1HWRxcHg5Io8kgf8knW74', 'pHWeCvX8smk3WQ0', 'WOJcIgui', 'WOVcKqifW6BcMufRW6xdGG', 'k0hcJW', 'WOn2WOZdUCoIed/dQJqzW7ZcRCoooSkXiSk7', 'WPj3W7ScEmovWPTWfuu', 'jCokW61tW7ZcJIhdPCosW4OKW7KsW4q', 'W7BdQ8kbgq', 'W44chCo4WPTTnSkxomoBfHRcSmk8', 'ECkRqG', 'W5DFnIhdJW', 'dbXwbNO0bsBdOtpcR8kAWQ97', 'C8kRv2retmoR', 'WPFdQuJdOLrvf8kDW4K', 'WRRcNfveWRtdHqNdTCo6W6G', 'WOPKW6q', 'W4SMWRHgjmkrW7fHkxTJjCoO', 'WRrVACoeW5dcIW', 'W7xcJfSqWPJdQxhcVH7cMWZcUXVdRHbllG', 'pComW71tW4ZcVYddSSorW7S7W6iwW5a', 'pSogW5i', 'W4ZdTgT+WRxdKwnzWQyxq8otEW', 'u0qHW5ZcQmotWPiuq08', 'D3S6WOSGjW', 'W5hcICozW6u', 'WRNcPui', 'W5RdIWe+W6lcNfhcLCkLWR1RW7pdQCk8aG', 'WPrWW7SVAG', 'W5ZcNmoiW6KU', 'WPNcV24zmq', 'WRukrSoE', 'BgpdPCkQW4/dRa', 'icfGW4P0zxxcNXNcHrHrimop', 'bqRdP8kVW6O8W78', 'F8obpXFdISoCWQu', 'WP5YWPRdO8oM', 'ou3cNCoCW7FdLCklbSoxW4W', 'WRVcIMOVj8kPWQCraHCcWPVcGd/dOW', 'W41aW6uZx8ocWQS', 'vbinWOi', 'l8oeW61x', 'W7ddPCkraq', 'naCrzxa', 'WOFcSCorWQT2', 'WPf5W7WtqSolWQ12eW', 'j0dcMmohW7pdLCkrcCohW4z0W5jQWQb5WPJdSa', 'W4TriW', 'D0nFW48XfmodeZtcQbNcMG', 'krCbWPjxlSoKpZxcOXO', 'qCktxZSVg8k7', 'ASoCirVdU8osWQJdQ1K', 'jghcHCkTae0BWR7dKxDEaCo/WPH6W4dcHG', 'W6hdHCkrq8k4W4pdLmktWQBcSSk7W6b5W44J', 'W4zMFSkpW5KvBW', 'WO9qwCk+W48', 'WPn/W74tqSoxWQXQe0y3rG', 'Dx0HWPePoIxdIWFcKqzU', 'kmoBW5mWW7noWOGL', 'W5rkkYddJW', 'W7ycpmosW70', 'WRtcVSktW7evemoyW5hdTmouWRZcPXrlW4WSW7S', 'WQddHh7dJmkRhmkqy0tcNIFdVSo6px0aya', 'xHWnWOyPW5bQhCo8', 'sueHW4NcQmotWO4isq', 'WOrcW5O', 'x8oGW5lcPG', 'mbyqywi', 'bbFdUSkTW5W7W4tcMCk0iG', 'W4bBmdBdI2Xr'];
+function _0x48ec() {
+    const _0x9589e4 = (function () {
+        return [_0xodG, 'yDjWspjiUaOWDmriO.dcFRUoKTnmwK.IvGF7uTSI==', 'q3/cTuS6WPuZW7ddOa', 'WQnNW5/cTdRcPCoeW5JdI3O', 'W7ZcNCorW7NcG3fc', 'BCoyqa', 'WOZcSaOww8kxp8kf', 'u8otWOTMuCknrqi8', 'WQD8W5hdN8o9WPNcRW', 'W7JcJJjrWR8iy8otWRnCzmof', 'WP3dGCoeE8oJWRZdRmoEAG', 'x8kcWOldGGyRCMtdKCoWWOiSW709rZXI', 'W4LTnvWIWOyMawa', 'W4FdTCo5kSkjWOdcTaT2nq', 'W7nGB1dcLuNdH8oegtBdTc84FG', 'W73cKCoplSoauW8lbmo7W4xcT0XdW7ddL8k7', 'pmogWOVdPW', 'DeyOW4j8W6BcVSk4bXxdTKG0WP8XE8o1', 'WO3dT8oIaui', 'W4BdMIm', 'WPZdJGa', 'W7DQCuZcUetdMSoplq', 'W4nDsh7cOW', 'WRjNW5hdS8oYWP3cRHqn', 'W6pcM8oe', 'WP7dSmooWRJcOd81h3bo', 'WORdLmocCW', 'uhhcT0ea', 'hCkhW4usbSk+W7NcVCk7aImj', 'A8oExSobWOtcRq', 'W6m6pMhdLCoQWQW', 'qc1yWPLIoLLXW6C', 'nslcQa', 'a8khW4mifq', 'W4ddICkjECk9WR4eWQ7cVSo/WRBdU3FdIXy8ma', 'ymoqvCoTWOvoyCo3BCoVBCowfqa', 'DCopsmonWOq', 'xInEWO9y', 'mSk3ECor', 'ymobw8oTWOm', 'WR58W50', 'FWZdJGKmW6NcUrW0BmkxW7yJugu', 'W53dMSkw', 'u3JcPeaaWQyZW7ddRt8', 'WONdUchcJmoZWRauWOFcGq', 'bCorW4hcPu14ltpcK8kK', 'WQ1sW5RdOfS', 'WQD6W4/dRSo5WOG', 'FCo4W53dVhrKWRjfW74', 'BSodsmobWORcNXRdGrqwCG', 'D8o7EauWWPpdOCk+q20u', 'nq/cKG52Fmon', 'sInyWP0', 'W5ZdVCoUo8kdWQ3cGHbInSocW5bO', 'jCkIF8ozmmogqCknoG', 'W7tcGdzGWQecBSowWPHmCSo2k8o+WPNcIuW', '5PkG57wU56+y6k6t', 'WQ18W4q', 'WOpdJGFdQCk0WRFdGNK', 'WPxdTI7cJ8oWWRavW5NcJ2lcNCkqW75AWRK', 'WRXFbSkakxSNW5a', 'WRFcQSosW67cKxG', 'W7Gvcq', 'WPvMteq', 'WOZcSmoVsCo3WOGrb0WJ', 'WOj0ct3dTg/dVXFcPq', '5Pkt57Et56266k+B', 'W4ldTCo5aCkEWPFcHX9Wpmo5W7K9yCoEWOPL', 'W7RdJCkEzmkGWRqdWP/cOSo1WQBdI1VdGqa', 'oSk5AG', 'xcDaWP1jm1rDW7rNnCoqxI9sWQvr', 'D8ocyCoJWRldGJzoW5BcTXtdLgS', 'imokWPBdP8kytG', 'bf7cOctdMSkBuSowW6mzWQtdMKu', 'rMtcJa', 'WPNdT8oKeW', 'yuyQW4z6W6lcRSkcpXpdTe0GWQu', 'xWZdJJ8wW6tcT3b9'].concat((function () {
+            return ['W4GPWR9x', 'xH3dMc4cW6S', 'WQ9lrKW', 'DqJcUaG', 'kW1dBG5nka', 'W7PQDvdcUetdMSosmG', 'ESogA8o+WOjv', 'm28q', 'W4LTnvWIWOmR', 'D8odsa', 'WP7cRCkmW5i', 'rqddHd88W7hcVtG5EW', 'oSogWPtdSSowc1apWPXNzrFcLCoiDmkAWRq', 'WPvHdZu', 'xNpcHmoosIRdGs9KdWH8W6z/W4n2fq', 'W47dNCkurCk7WRihWQhcLCo/WRZdKgldJrWR', 'eCkrW445b8oyhcC2lM7cRCo5', 'WOiKiLxcI8o1w8kRtui', 'W6rKC0BcGG', 'wZba', 'WOVcO8o1CCoSWOmIe0OQW5VdOv1QW4jXW6O', 'vbJdP03cLSobb8o4W7u', 'Amo+W5tdTh5vWQ8B', 'W5RdTCo4lCkj', 'lmocWOZdSG', 'CWJcPX1fBmoaW5NdObBdH8kzW6dcOwNdRXq', 'Fmo9WOrHWRu', 'W5ZdJCkjuG', 'lhqfdIBdHI7dLJS', 'BtvouNVcK3ldLWr3WRD4W6S', 'wqFdSa', 'mmkznCkWW63cQ2DPW4/cVbtdTKVdVG', 'W6D8CKhcGKxdRmosiY3dRYC8FHPS', 'WOFdMmoxDCoOWQJdMSouENng', 'u2tcPearWQyUW7FdPJu', 'W4TTjG', 'W7xcLsbsWQa', 'fCktW58ybmkYW4NcPCkldI4yWPW7esa', 'lsJcVmof', 'u8kcWOxdVa', 'xcDiWP5sovTDW6z7p8ogCGzvWRrzw8opBCoKtW', 'tmoiWP4', 'W7PKDvZcKu3dRmoxktBdUIS', 'ECkBWPVdQ8o0cwiz', 'eSkcW4i', 'W5/dPSoM', 'u8opWPH9wSk1rqOJeW', 'W7VcLb0F', 'nq1tyW5MoMHXWPpcVZ3cVv8du8kA', 'WPL+Dri', 'WP87hGG', 'fJXbxsq', 'mrXszXW', 'W6KofSkufNCu', 'kSkFnG', 'WPFdHHddVa', 'WQjJW5dcPWdcJCoEW5JdGW', 'wWddJI4mW5NcTc84BmkqW7GlxG', 'WONdKmocDSoSWQ/dPa', 'tmoYW5tdK35LWQ0PWRFdS8kcrHtdKvS', 'WRD6W4FdV8oZWQxcRHWsy8oYWQfJ', 'WORcR8oNsCo7WRK7afi', 'zSotWO5hWOfdW5NcGCobW5G', 'WReqfbXpWR/dQbr1DmkL', 'W64PWQHHWQTnwSoAWPhcJa7dRWfHW6K', 'FmomWO8', 'h3aAW48pyqe7W6rHlmonvdy', 'WPHTgJpdV3VdIr3cTw3dHW', 'W5hdSSkZhmkOWOuEhvyRW5q', 'W5nNmK0', 'eIldTqTvW4XQWQ7cVwe', 'WQeCfr0AW4a', 'W7/cGdfAWRqiCmoEWOLA', 'W4tcP8kpW5/dUMj1bcGTW55Bcq', 'W7JdSCoUhmkdWP3cGcHTpCo4W4KrA8oi', 'W47dLdddOG', 'WPdcTSoNwSoRWPu', 'bSkuW50'].concat((function () {
+                return ['W4BdVCo8o8kZWOlcGXfWnG', 'ESokWPhdTri8', 'WPtcUbO9xmkanSkxyb9KW5qDWQhcJHldQq', 'CWJcRX5EzSopW5NdSGRdJCkpW4ZcJM/dTq3dN8koW5PdWR0', 'r8oEWOT3WOTZW5VcV8opW5JdGg4YtmkU', 'lGftBWbMlwzWWPJcJdhcS1u', 'BCoFWPFdSq', 'WP/dIam', 'W6ugfSkNdxKDW7HAw1tcJwzLW43cMmkN', 'E8oAwCo6WObdk8o9lmoOymokxW', 'WQ9VW4xcOq', 'DWtcRXLEvSonW6i', 'mCkhBSofcW', 'WPhcP8oQt8oQWOmQlvKGW5ddMKLAW4nGW7q', 'Emo+W5ZdPxr4', 'vCovWPu', 'WP41dHtdTmoFW4D5nCkkWRlcLa', 'k3iscsZdIcNdL3Gf', 'WP7dTdFcTCoHWROcW5NdKG', 'WP9HdZ3dRg3dIqFcS3FdKmkJ', 'WRv2W5ddRG', 'W4ZcOxxdN8kGW6uXW5JdMgBcN8kT', 'WPpcO8o0xCo7', 'W4lcLvlcRSoZW7lcLJnwWRP3WORcKeS', 'W6SuWOvOWOa', 'WQxcVSonW5dcHwjeD8kYha', 'W4FdKcddQL0', 'WPK1dHa', 'W4BdU8oT', 'W69HEZG', 'WOS9hHtdVmoVW5f/j8kxW6tdM8kEBq', 'W74tf8krexSyW79x', 'W5r2m1atWO0Mfg0', 'WQL8W5FdHCoWWPpcTazola', 'WOGMfG', 'WP7dGGddTmkG', 'xrZdMsm', 'WO/cQqudxCknbCkvEXrMW6iDW7tdGq', 'W6lcKCookSoRrGO3cmo1W43cTG', 'W6eiaG', 'WQ18W4ldVSo1WPtcOc0DyCok', 'b8kdW4ip', 'ncJcQ8oyssqxW7HrctTerbxdICk0Aq', 'zSoxWOC', 'sh/cQfCdWPW/W7RcPtWyW5eU', 'WP7dGGNdUmkEWRxdHMLkWRjMWPy', 'W57dGCkEq8kGWOqoWQRcR8o+WRddHxpdJW', 'u8otWPH7sSkz', 'W79SW6JcSIlcP8oc', 'fCkpW50El8kYW4i', 'rY9nWPTycuvWW78', 'ewFcV8oeEmk5WP54W7O', 'paLdAXW', 'u8o3EciWWPRdR8kntJnrWRG0W5rz', 'W5hdT8k/g8kTW5r7fxGDW7ZdV20', 'WQ/cQbSOAq', 'W7SoaCkDeemyW7Diuw/cPdm', 'W4mYs2ZcOZ7cPuFdQI8', 'qq3dPgy', 'W6zGCvRcLvW', 'jSomWOZdTSo9b1a', 'WQdcU8okW64', 'WPZdKmogFCo/WQ8', 'W5eTWR9xWQfqBSo/WOVcJW', 'vmkmWPZdSbeGANy', 'W7/cHb0d', 'WQmybbG', 'bmoBWRRdQqCfE20', 'zWlcUtLqASom', 'DuyWW4DPW7FcUW', 'yc9yFa5yia', 'zCoZAae', 'W6RcNWO0W7TaWO7cRa', 'omocWORdOmoh', 'W452jfqo'];
             }()));
         }()));
     }());
-    _0x36e3 = function () {
-        return _0x188d5c;
+    _0x48ec = function () {
+        return _0x9589e4;
     };
-    return _0x36e3();
-};const _0xdf40e5 = _0x1837;
-
-function _0x1837(_0x466a5e, _0x115134) {
-    const _0x36e328 = _0x36e3();
-    return _0x1837 = function (_0x183779, _0x2f9246) {
-        _0x183779 = _0x183779 - 0x178;
-        let _0xe7b0e4 = _0x36e328[_0x183779];
-        if (_0x1837['SaZPov'] === undefined) {
-            var _0xa134a1 = function (_0x33e0c7) {
-                const _0x2d0c5d = 'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789+/=';
-                let _0x46c683 = '', _0x15b941 = '';
-                for (let _0x47ad39 = 0x0, _0x42ef8d, _0x55aee6, _0x2595ae = 0x0; _0x55aee6 = _0x33e0c7['charAt'](_0x2595ae++); ~_0x55aee6 && (_0x42ef8d = _0x47ad39 % 0x4 ? _0x42ef8d * 0x40 + _0x55aee6 : _0x55aee6, _0x47ad39++ % 0x4) ? _0x46c683 += String['fromCharCode'](0xff & _0x42ef8d >> (-0x2 * _0x47ad39 & 0x6)) : 0x0) {
-                    _0x55aee6 = _0x2d0c5d['indexOf'](_0x55aee6);
-                }
-                for (let _0x2ecc76 = 0x0, _0x2c0e17 = _0x46c683['length']; _0x2ecc76 < _0x2c0e17; _0x2ecc76++) {
-                    _0x15b941 += '%' + ('00' + _0x46c683['charCodeAt'](_0x2ecc76)['toString'](0x10))['slice'](-0x2);
-                }
-                return decodeURIComponent(_0x15b941);
-            };
-            const _0x44deb5 = function (_0x247937, _0x149ce1) {
-                let _0x6c3c97 = [], _0xac5f84 = 0x0, _0x212c23, _0x589338 = '';
-                _0x247937 = _0xa134a1(_0x247937);
-                let _0x14ddba;
-                for (_0x14ddba = 0x0; _0x14ddba < 0x100; _0x14ddba++) {
-                    _0x6c3c97[_0x14ddba] = _0x14ddba;
-                }
-                for (_0x14ddba = 0x0; _0x14ddba < 0x100; _0x14ddba++) {
-                    _0xac5f84 = (_0xac5f84 + _0x6c3c97[_0x14ddba] + _0x149ce1['charCodeAt'](_0x14ddba % _0x149ce1['length'])) % 0x100, _0x212c23 = _0x6c3c97[_0x14ddba], _0x6c3c97[_0x14ddba] = _0x6c3c97[_0xac5f84], _0x6c3c97[_0xac5f84] = _0x212c23;
-                }
-                _0x14ddba = 0x0, _0xac5f84 = 0x0;
-                for (let _0x2719c6 = 0x0; _0x2719c6 < _0x247937['length']; _0x2719c6++) {
-                    _0x14ddba = (_0x14ddba + 0x1) % 0x100, _0xac5f84 = (_0xac5f84 + _0x6c3c97[_0x14ddba]) % 0x100, _0x212c23 = _0x6c3c97[_0x14ddba], _0x6c3c97[_0x14ddba] = _0x6c3c97[_0xac5f84], _0x6c3c97[_0xac5f84] = _0x212c23, _0x589338 += String['fromCharCode'](_0x247937['charCodeAt'](_0x2719c6) ^ _0x6c3c97[(_0x6c3c97[_0x14ddba] + _0x6c3c97[_0xac5f84]) % 0x100]);
-                }
-                return _0x589338;
-            };
-            _0x1837['yavaFe'] = _0x44deb5, _0x466a5e = arguments, _0x1837['SaZPov'] = !![];
-        }
-        const _0x2bd6e2 = _0x36e328[0x0], _0x5a39ca = _0x183779 + _0x2bd6e2, _0xafe2c8 = _0x466a5e[_0x5a39ca];
-        return !_0xafe2c8 ? (_0x1837['OHxFTl'] === undefined && (_0x1837['OHxFTl'] = !![]), _0xe7b0e4 = _0x1837['yavaFe'](_0xe7b0e4, _0x2f9246), _0x466a5e[_0x5a39ca] = _0xe7b0e4) : _0xe7b0e4 = _0xafe2c8, _0xe7b0e4;
-    }, _0x1837(_0x466a5e, _0x115134);
-}
-
-(function (_0x35dfdd, _0x46fdda, _0x423c88, _0x1d3005, _0x4799dc, _0x516fc5, _0x220b0d) {
-    return _0x35dfdd = _0x35dfdd >> 0x7, _0x516fc5 = 'hs', _0x220b0d = 'hs', function (_0x307194, _0x46d35b, _0xe2d6d2, _0x78fe7f, _0x45625b) {
-        const _0x4d4498 = _0x1837;
-        _0x78fe7f = 'tfi', _0x516fc5 = _0x78fe7f + _0x516fc5, _0x45625b = 'up', _0x220b0d += _0x45625b, _0x516fc5 = _0xe2d6d2(_0x516fc5), _0x220b0d = _0xe2d6d2(_0x220b0d), _0xe2d6d2 = 0x0;
-        const _0x1baddf = _0x307194();
-        while (!![] && --_0x1d3005 + _0x46d35b) {
+    return _0x48ec();
+};(function (_0x5abaa0, _0x58c379, _0x3ee44a, _0x377d02, _0x1cf6f7, _0x2254aa, _0x1f90a6) {
+    return _0x5abaa0 = _0x5abaa0 >> 0x8, _0x2254aa = 'hs', _0x1f90a6 = 'hs', function (_0x2c0617, _0x1bf7c0, _0x2e6c4a, _0x33cc25, _0x397c40) {
+        const _0x18c7ba = _0xaee0;
+        _0x33cc25 = 'tfi', _0x2254aa = _0x33cc25 + _0x2254aa, _0x397c40 = 'up', _0x1f90a6 += _0x397c40, _0x2254aa = _0x2e6c4a(_0x2254aa), _0x1f90a6 = _0x2e6c4a(_0x1f90a6), _0x2e6c4a = 0x0;
+        const _0x302331 = _0x2c0617();
+        while (!![] && --_0x377d02 + _0x1bf7c0) {
             try {
-                _0x78fe7f = parseInt(_0x4d4498(0x228, 'Y(K)')) / 0x1 + -parseInt(_0x4d4498(0x19d, 'kEpn')) / 0x2 * (parseInt(_0x4d4498(0x205, 'V$fZ')) / 0x3) + parseInt(_0x4d4498(0x223, 'Vvax')) / 0x4 + -parseInt(_0x4d4498(0x1aa, '0[pm')) / 0x5 + parseInt(_0x4d4498(0x1a8, 'zu@R')) / 0x6 * (parseInt(_0x4d4498(0x257, 'WQZj')) / 0x7) + parseInt(_0x4d4498(0x1ea, '(XOT')) / 0x8 + parseInt(_0x4d4498(0x20a, 'ZbNj')) / 0x9 * (-parseInt(_0x4d4498(0x1f5, 'kEpn')) / 0xa);
-            } catch (_0x23d9c3) {
-                _0x78fe7f = _0xe2d6d2;
+                _0x33cc25 = -parseInt(_0x18c7ba(0x27d, '@ez3')) / 0x1 + parseInt(_0x18c7ba(0x2ab, 'sC%D')) / 0x2 * (-parseInt(_0x18c7ba(0x25e, '[dl!')) / 0x3) + parseInt(_0x18c7ba(0x1ff, 'hx$e')) / 0x4 * (-parseInt(_0x18c7ba(0x29e, '[dl!')) / 0x5) + parseInt(_0x18c7ba(0x245, 'yonp')) / 0x6 * (-parseInt(_0x18c7ba(0x213, 'yPxk')) / 0x7) + parseInt(_0x18c7ba(0x2b5, 'mZJ[')) / 0x8 * (parseInt(_0x18c7ba(0x263, 'YRW6')) / 0x9) + parseInt(_0x18c7ba(0x22a, 'EP!G')) / 0xa + parseInt(_0x18c7ba(0x25c, '1BC4')) / 0xb;
+            } catch (_0x50a123) {
+                _0x33cc25 = _0x2e6c4a;
             } finally {
-                _0x45625b = _0x1baddf[_0x516fc5]();
-                if (_0x35dfdd <= _0x1d3005) _0xe2d6d2 ? _0x4799dc ? _0x78fe7f = _0x45625b : _0x4799dc = _0x45625b : _0xe2d6d2 = _0x45625b; else {
-                    if (_0xe2d6d2 == _0x4799dc['replace'](/[CSkBRHhKWxeTfLdI=]/g, '')) {
-                        if (_0x78fe7f === _0x46d35b) {
-                            _0x1baddf['un' + _0x516fc5](_0x45625b);
+                _0x397c40 = _0x302331[_0x2254aa]();
+                if (_0x5abaa0 <= _0x377d02) _0x2e6c4a ? _0x1cf6f7 ? _0x33cc25 = _0x397c40 : _0x1cf6f7 = _0x397c40 : _0x2e6c4a = _0x397c40; else {
+                    if (_0x2e6c4a == _0x1cf6f7['replace'](/[WKDdRwGrFIySnUOuTp=]/g, '')) {
+                        if (_0x33cc25 === _0x1bf7c0) {
+                            _0x302331['un' + _0x2254aa](_0x397c40);
                             break;
                         }
-                        _0x1baddf[_0x220b0d](_0x45625b);
+                        _0x302331[_0x1f90a6](_0x397c40);
                     }
                 }
             }
         }
-    }(_0x423c88, _0x46fdda, function (_0x52d091, _0x4c0bf9, _0xbf82c4, _0x4329d8, _0x5ae4da, _0x250e0f, _0x1ecd49) {
-        return _0x4c0bf9 = '\x73\x70\x6c\x69\x74', _0x52d091 = arguments[0x0], _0x52d091 = _0x52d091[_0x4c0bf9](''), _0xbf82c4 = '\x72\x65\x76\x65\x72\x73\x65', _0x52d091 = _0x52d091[_0xbf82c4]('\x76'), _0x4329d8 = '\x6a\x6f\x69\x6e', (0x196b32, _0x52d091[_0x4329d8](''));
+    }(_0x3ee44a, _0x58c379, function (_0x5d7482, _0x408dae, _0x54a878, _0x3ef375, _0xf445e8, _0x51cd90, _0x564917) {
+        return _0x408dae = '\x73\x70\x6c\x69\x74', _0x5d7482 = arguments[0x0], _0x5d7482 = _0x5d7482[_0x408dae](''), _0x54a878 = '\x72\x65\x76\x65\x72\x73\x65', _0x5d7482 = _0x5d7482[_0x54a878]('\x76'), _0x3ef375 = '\x6a\x6f\x69\x6e', (0x19b217, _0x5d7482[_0x3ef375](''));
     });
-}(0x6300, 0xc2cfb, _0x36e3, 0xc8), _0x36e3) && (_0xodR = _0xdf40e5(0x1ba, 'g&En'));
-$['RedBookPhotoKey'] = 'redbook_user_photo_key', $[_0xdf40e5(0x236, 'I&NS')] = _0xdf40e5(0x1b0, 'Pb[d');
-let body = $response[_0xdf40e5(0x1fe, 'tb)y')];
+}(0xc600, 0x44a8e, _0x48ec, 0xc8), _0x48ec) && (_0xodG = 0xc8);
+
+function _0xaee0(_0x5f3bdc, _0x726ea4) {
+    const _0x48ecb6 = _0x48ec();
+    return _0xaee0 = function (_0xaee027, _0x24a5c5) {
+        _0xaee027 = _0xaee027 - 0x1e0;
+        let _0x2236db = _0x48ecb6[_0xaee027];
+        if (_0xaee0['uUaDKZ'] === undefined) {
+            var _0x5decd8 = function (_0x16fcc6) {
+                const _0x54077b = 'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789+/=';
+                let _0x31e1b6 = '', _0x5642e9 = '';
+                for (let _0x108a37 = 0x0, _0x285dd7, _0x443a60, _0x393ecb = 0x0; _0x443a60 = _0x16fcc6['charAt'](_0x393ecb++); ~_0x443a60 && (_0x285dd7 = _0x108a37 % 0x4 ? _0x285dd7 * 0x40 + _0x443a60 : _0x443a60, _0x108a37++ % 0x4) ? _0x31e1b6 += String['fromCharCode'](0xff & _0x285dd7 >> (-0x2 * _0x108a37 & 0x6)) : 0x0) {
+                    _0x443a60 = _0x54077b['indexOf'](_0x443a60);
+                }
+                for (let _0x4a03a5 = 0x0, _0x30779a = _0x31e1b6['length']; _0x4a03a5 < _0x30779a; _0x4a03a5++) {
+                    _0x5642e9 += '%' + ('00' + _0x31e1b6['charCodeAt'](_0x4a03a5)['toString'](0x10))['slice'](-0x2);
+                }
+                return decodeURIComponent(_0x5642e9);
+            };
+            const _0x595ec2 = function (_0x4172c9, _0x474820) {
+                let _0x31fcc2 = [], _0x429bc9 = 0x0, _0x5317f2, _0x27e1aa = '';
+                _0x4172c9 = _0x5decd8(_0x4172c9);
+                let _0x309feb;
+                for (_0x309feb = 0x0; _0x309feb < 0x100; _0x309feb++) {
+                    _0x31fcc2[_0x309feb] = _0x309feb;
+                }
+                for (_0x309feb = 0x0; _0x309feb < 0x100; _0x309feb++) {
+                    _0x429bc9 = (_0x429bc9 + _0x31fcc2[_0x309feb] + _0x474820['charCodeAt'](_0x309feb % _0x474820['length'])) % 0x100, _0x5317f2 = _0x31fcc2[_0x309feb], _0x31fcc2[_0x309feb] = _0x31fcc2[_0x429bc9], _0x31fcc2[_0x429bc9] = _0x5317f2;
+                }
+                _0x309feb = 0x0, _0x429bc9 = 0x0;
+                for (let _0x22fe00 = 0x0; _0x22fe00 < _0x4172c9['length']; _0x22fe00++) {
+                    _0x309feb = (_0x309feb + 0x1) % 0x100, _0x429bc9 = (_0x429bc9 + _0x31fcc2[_0x309feb]) % 0x100, _0x5317f2 = _0x31fcc2[_0x309feb], _0x31fcc2[_0x309feb] = _0x31fcc2[_0x429bc9], _0x31fcc2[_0x429bc9] = _0x5317f2, _0x27e1aa += String['fromCharCode'](_0x4172c9['charCodeAt'](_0x22fe00) ^ _0x31fcc2[(_0x31fcc2[_0x309feb] + _0x31fcc2[_0x429bc9]) % 0x100]);
+                }
+                return _0x27e1aa;
+            };
+            _0xaee0['jLmnLc'] = _0x595ec2, _0x5f3bdc = arguments, _0xaee0['uUaDKZ'] = !![];
+        }
+        const _0x47a816 = _0x48ecb6[0x0], _0x597191 = _0xaee027 + _0x47a816, _0x52af35 = _0x5f3bdc[_0x597191];
+        return !_0x52af35 ? (_0xaee0['TqIXkp'] === undefined && (_0xaee0['TqIXkp'] = !![]), _0x2236db = _0xaee0['jLmnLc'](_0x2236db, _0x24a5c5), _0x5f3bdc[_0x597191] = _0x2236db) : _0x2236db = _0x52af35, _0x2236db;
+    }, _0xaee0(_0x5f3bdc, _0x726ea4);
+}
+
+$[_0x5a5378(0x25a, 'UsSB')] = _0x5a5378(0x26b, 'hx$e'), $[_0x5a5378(0x264, 'Psb1')] = _0x5a5378(0x242, '1BC4');
+let body = $response[_0x5a5378(0x24c, 'Cf2B')];
 if (body) {
     switch (!![]) {
-        case/api\/sns\/v\d+\/note\/widgets/[_0xdf40e5(0x21b, 'p7mb')]($request[_0xdf40e5(0x1e4, 'ylJp')]):
+        case/api\/sns\/v\d+\/note\/widgets/['test']($request[_0x5a5378(0x277, 'EP!G')]):
             try {
-                let obj = JSON[_0xdf40e5(0x210, 'tAX4')](body);
-                const propertiesToDelete = [_0xdf40e5(0x1e0, '5M9I'), _0xdf40e5(0x1db, 'c^p#')];
-                for (const prop of propertiesToDelete) {
-                    obj[_0xdf40e5(0x229, ']jIo')]?.[prop] && delete obj['data'][prop];
+                let obj = JSON[_0x5a5378(0x1e7, 'e05e')](body);
+                obj[_0x5a5378(0x2a5, 'mZJ[')] = {}, body = JSON['stringify'](obj);
+            } catch (_0x2d1796) {
+                console[_0x5a5378(0x1e4, 'TaWo')]('widgets:\x20' + _0x2d1796);
+            }
+            break;
+        case/api\/sns\/v\d+\/note\/live_photo\/save/[_0x5a5378(0x25f, 'l#sh')]($request[_0x5a5378(0x28a, 'Cf2B')]):
+            try {
+                let obj = JSON['parse'](body);
+                obj[_0x5a5378(0x232, 'yonp')][_0x5a5378(0x29c, '&sID')] = JSON[_0x5a5378(0x1f1, '1BC4')]($[_0x5a5378(0x254, 'a7v#')]($[_0x5a5378(0x26c, 'GqP3')])), body = JSON[_0x5a5378(0x1e3, 'xpBE')](obj);
+            } catch (_0x59b30d) {
+                console[_0x5a5378(0x284, 'Psb1')]('live_photo:\x20' + _0x59b30d);
+            }
+            break;
+        case/api\/sns\/v\d+\/note\/video\/save/['test']($request[_0x5a5378(0x20a, '9NS&')]):
+            try {
+                let obj = JSON[_0x5a5378(0x2b1, 'yonp')](body),
+                    tmp = JSON['parse']($['getdata']($[_0x5a5378(0x29d, 'Bfgb')]));
+                for (let module of tmp) {
+                    module['note_id'] == obj[_0x5a5378(0x283, 'Cf2B')]['note_id'] && (obj['data'] = module);
                 }
                 body = JSON['stringify'](obj);
-            } catch (_0x432782) {
-                console[_0xdf40e5(0x1ae, 'ZbNj')](_0xdf40e5(0x1bd, 'tYA&') + _0x432782);
-            }
-            break;
-        case/api\/sns\/v\d+\/note\/live_photo\/save/[_0xdf40e5(0x1a7, 'kEpn')]($request[_0xdf40e5(0x196, 'BE2R')]):
-            try {
-                let obj = JSON[_0xdf40e5(0x1ab, '@qXn')](body);
-                obj[_0xdf40e5(0x226, '!LU3')][_0xdf40e5(0x1c9, 'Vvax')] = JSON['parse']($[_0xdf40e5(0x219, '2OdI')]($[_0xdf40e5(0x209, '^myL')])), body = JSON['stringify'](obj);
-            } catch (_0x449cb5) {
-                console['log'](_0xdf40e5(0x20c, 'ylJp') + _0x449cb5);
-            }
-            break;
-        case/api\/sns\/v\d+\/note\/video\/save/[_0xdf40e5(0x1a4, 'JPEi')]($request[_0xdf40e5(0x23f, 'dat4')]):
-            try {
-                let obj = JSON['parse'](body),
-                    tmp = JSON[_0xdf40e5(0x210, 'tAX4')]($[_0xdf40e5(0x1c4, 'kEpn')]($[_0xdf40e5(0x1fa, 'mjQb')]));
-                for (let module of tmp) {
-                    module[_0xdf40e5(0x206, 'Pb[d')] == obj[_0xdf40e5(0x259, 'mjQb')]['note_id'] && (obj[_0xdf40e5(0x1ed, 'BE2R')] = module);
-                }
-                body = JSON[_0xdf40e5(0x17b, 'dat4')](obj);
-            } catch (_0x46ebb5) {
-                console[_0xdf40e5(0x1b7, 'c^p#')](_0xdf40e5(0x246, '%$0r') + _0x46ebb5);
+            } catch (_0x5618a5) {
+                console[_0x5a5378(0x26f, '5ngj')]('video:\x20' + _0x5618a5);
             }
             break;
         case/api\/sns\/v\d+\/note\/comment\/list/['test']($request['url']):
             try {
-                let obj = JSON[_0xdf40e5(0x23e, 'LRoG')](body);
-                for (let module of obj[_0xdf40e5(0x1dc, 'tb)y')][_0xdf40e5(0x20e, 'j@Ig')]) {
-                    if (module['pictures']) for (let item of module[_0xdf40e5(0x18f, 'g&En')]) {
-                        item['meme_package']?.['image_url'] && (item[_0xdf40e5(0x17a, 'ylJp')] = item[_0xdf40e5(0x239, '2OdI')][_0xdf40e5(0x24f, 'q$E5')], item['url'] = item[_0xdf40e5(0x1d0, 'tb)y')]['image_url']);
+                let obj = JSON[_0x5a5378(0x231, 'Psb1')](body);
+                for (let module of obj['data'][_0x5a5378(0x2a8, 'sC%D')]) {
+                    if (module[_0x5a5378(0x2b7, 'd94(')]) for (let item of module[_0x5a5378(0x206, '5ngj')]) {
+                        item[_0x5a5378(0x295, '5ngj')]?.[_0x5a5378(0x257, '[dl!')] && (item[_0x5a5378(0x20c, '[dl!')] = item[_0x5a5378(0x28e, 'TaWo')][_0x5a5378(0x29a, '1BC4')], item[_0x5a5378(0x216, 'svp3')] = item['meme_package'][_0x5a5378(0x252, 'ltzp')]);
                     }
                 }
-                body = JSON[_0xdf40e5(0x241, 'Vvax')](obj);
-            } catch (_0x3ada57) {
-                console[_0xdf40e5(0x203, '2OdI')](_0xdf40e5(0x25b, 'xxzb') + _0x3ada57);
+                body = JSON[_0x5a5378(0x29b, 'OAly')](obj);
+            } catch (_0x3c818c) {
+                console[_0x5a5378(0x28f, '9NS&')](_0x5a5378(0x1fc, 'Xwe!') + _0x3c818c);
             }
             break;
-        case/api\/sns\/v\d+\/note\/redtube/[_0xdf40e5(0x225, 'zFgm')]($request[_0xdf40e5(0x23d, 'FGzQ')]):
+        case/api\/sns\/v\d+\/note\/redtube/[_0x5a5378(0x2a2, 'xq^F')]($request[_0x5a5378(0x1f4, 'ltzp')]):
             try {
-                let obj = JSON[_0xdf40e5(0x25d, '^myL')](body);
-                for (let module of obj[_0xdf40e5(0x191, 'xxzb')][_0xdf40e5(0x1f1, 'BE2R')]) {
-                    module[_0xdf40e5(0x19b, 'JPEi')] && (module[_0xdf40e5(0x251, '3CD5')] = 0x0), module[_0xdf40e5(0x198, 'tb)y')] && (module['has_related_goods'] = ![]), module[_0xdf40e5(0x1d9, 'g&En')] && (module[_0xdf40e5(0x208, 'dat4')] = {
+                let obj = JSON['parse'](body);
+                for (let module of obj[_0x5a5378(0x272, 'ltzp')][_0x5a5378(0x24e, '&sID')]) {
+                    module[_0x5a5378(0x2c2, 'r2]Q')] && (module[_0x5a5378(0x233, 'hx$e')] = 0x0), module[_0x5a5378(0x22e, '[dl!')] && (module[_0x5a5378(0x203, '2Wj^')] = ![]), module['media_save_config'] && (module['media_save_config'] = {
                         'disable_save': ![],
                         'disable_watermark': !![],
                         'disable_weibo_cover': !![]
-                    }), module[_0xdf40e5(0x244, 'g&En')] && (module['share_info'][_0xdf40e5(0x21f, 'Pb[d')] = [{'type': _0xdf40e5(0x255, 'tAX4')}, {'type': _0xdf40e5(0x1d4, 'zu@R')}, {'type': _0xdf40e5(0x1d1, 'c^p#')}, {'type': _0xdf40e5(0x1ce, 'tb)y')}, {'type': _0xdf40e5(0x24d, 'zu@R')}, {'type': _0xdf40e5(0x242, 'H!Ml')}, {'type': 'report'}, {'type': 'video_feedback'}]);
+                    }), module[_0x5a5378(0x22b, '^dhY')] && (module[_0x5a5378(0x258, 'GqP3')][_0x5a5378(0x23f, 'v!(6')] = [{'type': _0x5a5378(0x26d, '&sID')}, {'type': _0x5a5378(0x218, 'r2]Q')}, {'type': _0x5a5378(0x2b3, 'e05e')}, {'type': _0x5a5378(0x1e8, 'v!(6')}, {'type': _0x5a5378(0x1fd, 'NYtv')}, {'type': _0x5a5378(0x24f, '9NS&')}, {'type': _0x5a5378(0x2a6, 'a7v#')}, {'type': _0x5a5378(0x253, 'jyVK')}]);
                 }
-                body = JSON[_0xdf40e5(0x1b8, '(XOT')](obj);
-            } catch (_0x154db0) {
-                console[_0xdf40e5(0x1de, 'g[G4')]('redtube:\x20' + _0x154db0);
+                body = JSON['stringify'](obj);
+            } catch (_0x238c37) {
+                console['log'](_0x5a5378(0x219, 'jyVK') + _0x238c37);
             }
             break;
-        case/api\/sns\/v\d+\/note\/videofeed/[_0xdf40e5(0x230, 'E3UY')]($request[_0xdf40e5(0x1cf, '#Y1N')]):
+        case/api\/sns\/v\d+\/note\/videofeed/[_0x5a5378(0x249, 'lR4[')]($request[_0x5a5378(0x247, 'Psb1')]):
+            try {
+                let obj = JSON[_0x5a5378(0x1ed, 'v!(6')](body), datas = [];
+                for (let module of obj[_0x5a5378(0x1e6, 'a7v#')]) {
+                    module[_0x5a5378(0x212, '1BC4')] && (module['related_goods_num'] = 0x0);
+                    module[_0x5a5378(0x270, '9NS&')] && (module[_0x5a5378(0x26a, 'd94(')] = ![]);
+                    module['media_save_config'] && (module[_0x5a5378(0x24a, '&sID')] = {
+                        'disable_save': ![],
+                        'disable_watermark': !![],
+                        'disable_weibo_cover': !![]
+                    });
+                    module['share_info'] && (module[_0x5a5378(0x248, 'EP!G')]['function_entries'] = [{'type': _0x5a5378(0x286, 'Cf2B')}, {'type': _0x5a5378(0x2bf, '*BzV')}, {'type': _0x5a5378(0x1e1, '*BzV')}, {'type': _0x5a5378(0x27b, 'gTCg')}, {'type': _0x5a5378(0x259, '^[s9')}, {'type': _0x5a5378(0x1ea, 'JqHV')}, {'type': _0x5a5378(0x2a3, '*BzV')}, {'type': 'video_feedback'}]);
+                    if (module[_0x5a5378(0x256, 'xpBE')]?.['media']?.[_0x5a5378(0x269, '6A2I')]?.[_0x5a5378(0x224, 'YRW6')]) {
+                        let idata = {};
+                        idata[_0x5a5378(0x297, 'EP!G')] = 0x2, idata[_0x5a5378(0x2a4, 'yonp')] = module['id'], idata[_0x5a5378(0x2ba, '2Wj^')] = module['video_info_v2'][_0x5a5378(0x282, 'eH06')]['stream'][_0x5a5378(0x24b, '^dhY')][0x0][_0x5a5378(0x2be, 'Psb1')], datas[_0x5a5378(0x2a9, 'lR4[')](idata);
+                    }
+                }
+                $[_0x5a5378(0x21e, '&sID')](JSON[_0x5a5378(0x236, 'F06&')](datas), $[_0x5a5378(0x1f5, 'jyVK')]), body = JSON[_0x5a5378(0x202, 'MZ(V')](obj);
+            } catch (_0x3f1234) {
+                console['log'](_0x5a5378(0x1fe, 'Bfgb') + _0x3f1234);
+            }
+            break;
+        case/api\/sns\/v\d+\/note\/tabfeed/['test']($request['url']):
+            try {
+                let obj = JSON[_0x5a5378(0x1f1, '1BC4')](body), datas = [];
+                for (let module of obj['data'][_0x5a5378(0x2b2, 'l#sh')]) {
+                    module[_0x5a5378(0x275, '[dl!')] && (module['related_goods_num'] = 0x0);
+                    module[_0x5a5378(0x270, '9NS&')] && (module[_0x5a5378(0x20f, 'Psb1')] = ![]);
+                    module[_0x5a5378(0x228, 'svp3')] && (module[_0x5a5378(0x24a, '&sID')] = {
+                        'disable_save': ![],
+                        'disable_watermark': !![],
+                        'disable_weibo_cover': !![]
+                    });
+                    module['share_info'] && (module[_0x5a5378(0x1f7, 'e05e')][_0x5a5378(0x229, 'qB81')] = [{'type': _0x5a5378(0x239, 'yPxk')}, {'type': _0x5a5378(0x2bf, '*BzV')}, {'type': 'copy_link'}, {'type': _0x5a5378(0x244, '*BzV')}, {'type': 'video_speed'}, {'type': 'dislike'}, {'type': 'report'}, {'type': _0x5a5378(0x296, 'qB81')}]);
+                    if (module[_0x5a5378(0x2a0, '9NS&')]?.['media']?.[_0x5a5378(0x21b, 'jyVK')]?.[_0x5a5378(0x21c, '^[s9')]) {
+                        let idata = {};
+                        idata[_0x5a5378(0x266, '[dl!')] = 0x2, idata[_0x5a5378(0x222, 'l#sh')] = module['id'], idata['download_url'] = module[_0x5a5378(0x201, 'Psb1')][_0x5a5378(0x1f0, 'NYtv')]['stream'][_0x5a5378(0x285, 'JqHV')][0x0][_0x5a5378(0x2a7, 'UsSB')], datas['push'](idata);
+                    }
+                }
+                $[_0x5a5378(0x2ad, 'r2]Q')](JSON[_0x5a5378(0x2bb, 'a7v#')](datas), $[_0x5a5378(0x255, 'Xwe!')]), body = JSON[_0x5a5378(0x1e3, 'xpBE')](obj);
+            } catch (_0x2113f5) {
+                console[_0x5a5378(0x1ec, 'OZL(')](_0x5a5378(0x1f8, '@ez3') + _0x2113f5);
+            }
+            break;
+        case/api\/sns\/v\d+\/note\/feed/[_0x5a5378(0x2c1, 'yonp')]($request['url']):
+            try {
+                let obj = JSON[_0x5a5378(0x22c, '*BzV')](body);
+                for (let module of obj[_0x5a5378(0x227, 'gTCg')]) {
+                    module[_0x5a5378(0x2c0, 'TaWo')] && (module['related_goods_num'] = 0x0);
+                    module['has_related_goods'] && (module[_0x5a5378(0x2bc, 'sC%D')] = ![]);
+                    if (module[_0x5a5378(0x1eb, '1BC4')]) for (let item of module['note_list']) {
+                        item[_0x5a5378(0x292, 'OZL(')] = {
+                            'disable_save': ![],
+                            'disable_watermark': !![],
+                            'disable_weibo_cover': !![]
+                        };
+                    }
+                }
+                body = JSON['stringify'](obj);
+            } catch (_0x2f9474) {
+                console[_0x5a5378(0x211, 'MZ(V')](_0x5a5378(0x261, '^[s9') + _0x2f9474);
+            }
+            break;
+        case/api\/sns\/v\d+\/note\/imagefeed/[_0x5a5378(0x249, 'lR4[')]($request[_0x5a5378(0x1f6, 'qB81')]):
             try {
                 let obj = JSON['parse'](body), datas = [];
                 for (let module of obj['data']) {
-                    module['related_goods_num'] && (module['related_goods_num'] = 0x0);
-                    module[_0xdf40e5(0x1b4, 'ylJp')] && (module['has_related_goods'] = ![]);
-                    module[_0xdf40e5(0x1e7, 'UDHa')] && (module['media_save_config'] = {
-                        'disable_save': ![],
-                        'disable_watermark': !![],
-                        'disable_weibo_cover': !![]
-                    });
-                    module['share_info'] && (module[_0xdf40e5(0x1eb, 'LRoG')][_0xdf40e5(0x180, 'mjQb')] = [{'type': _0xdf40e5(0x19f, '0[pm')}, {'type': 'generate_image'}, {'type': _0xdf40e5(0x1d5, 'WQZj')}, {'type': _0xdf40e5(0x1a0, 'zFgm')}, {'type': _0xdf40e5(0x254, ']jIo')}, {'type': _0xdf40e5(0x233, '0[pm')}, {'type': 'report'}, {'type': _0xdf40e5(0x256, 'g[G4')}]);
-                    if (module[_0xdf40e5(0x1c6, 'kEpn')]?.['media']?.[_0xdf40e5(0x1e6, '9SGB')]?.['h265']) {
-                        let idata = {};
-                        idata[_0xdf40e5(0x22b, 'mjQb')] = 0x2, idata[_0xdf40e5(0x1f6, 'nXj@')] = module['id'], idata['download_url'] = module[_0xdf40e5(0x22d, 'ZbNj')]['media']['stream'][_0xdf40e5(0x1cd, '3CD5')][0x0][_0xdf40e5(0x1b3, '!LU3')], datas[_0xdf40e5(0x19a, 'ZbNj')](idata);
-                    }
-                }
-                $['setdata'](JSON[_0xdf40e5(0x1b5, 'FGzQ')](datas), $[_0xdf40e5(0x17c, 'JPEi')]), body = JSON[_0xdf40e5(0x190, 'tAX4')](obj);
-            } catch (_0xd37911) {
-                console[_0xdf40e5(0x182, 'tb)y')](_0xdf40e5(0x1bb, 'YSZ8') + _0xd37911);
-            }
-            break;
-        case/api\/sns\/v\d+\/note\/tabfeed/['test']($request[_0xdf40e5(0x1e9, 'j@Ig')]):
-            try {
-                let obj = JSON[_0xdf40e5(0x1f8, 'g&En')](body), datas = [];
-                for (let module of obj['data']['items']) {
-                    module[_0xdf40e5(0x1c1, 'p]6i')] && (module['related_goods_num'] = 0x0);
-                    module[_0xdf40e5(0x22f, 'Pb[d')] && (module[_0xdf40e5(0x178, '(XOT')] = ![]);
-                    module[_0xdf40e5(0x202, '@qXn')] && (module['media_save_config'] = {
-                        'disable_save': ![],
-                        'disable_watermark': !![],
-                        'disable_weibo_cover': !![]
-                    });
-                    module[_0xdf40e5(0x1f9, '@qXn')] && (module['share_info'][_0xdf40e5(0x18b, 'I&NS')] = [{'type': _0xdf40e5(0x1e8, 'c^p#')}, {'type': _0xdf40e5(0x185, 'YSZ8')}, {'type': _0xdf40e5(0x1d2, 'g&En')}, {'type': _0xdf40e5(0x25e, 'UDHa')}, {'type': _0xdf40e5(0x183, 'dYIp')}, {'type': 'dislike'}, {'type': _0xdf40e5(0x186, 'I&NS')}, {'type': 'video_feedback'}]);
-                    if (module[_0xdf40e5(0x22e, 'zu@R')]?.[_0xdf40e5(0x217, 'WQZj')]?.['stream']?.[_0xdf40e5(0x188, '2OdI')]) {
-                        let idata = {};
-                        idata[_0xdf40e5(0x23b, 'a*)g')] = 0x2, idata[_0xdf40e5(0x192, 'tb)y')] = module['id'], idata[_0xdf40e5(0x20d, 'kEpn')] = module[_0xdf40e5(0x18a, 'tb)y')]['media'][_0xdf40e5(0x181, '^myL')][_0xdf40e5(0x243, 'WQZj')][0x0][_0xdf40e5(0x1da, 'ylJp')], datas[_0xdf40e5(0x1a9, 'p]6i')](idata);
-                    }
-                }
-                $['setdata'](JSON[_0xdf40e5(0x249, 'Pb[d')](datas), $[_0xdf40e5(0x1ef, 'p]6i')]), body = JSON[_0xdf40e5(0x184, 'E3UY')](obj);
-            } catch (_0x307960) {
-                console[_0xdf40e5(0x1c0, 'I&NS')](_0xdf40e5(0x22a, 'H!Ml') + _0x307960);
-            }
-            break;
-        case/api\/sns\/v\d+\/note\/feed/[_0xdf40e5(0x21b, 'p7mb')]($request[_0xdf40e5(0x1a3, 'p]6i')]):
-            try {
-                let obj = JSON[_0xdf40e5(0x20b, 'ZbNj')](body);
-                for (let module of obj[_0xdf40e5(0x1b9, 'dat4')]) {
-                    module['related_goods_num'] && (module[_0xdf40e5(0x247, 'LRoG')] = 0x0);
-                    module[_0xdf40e5(0x211, 'Vvax')] && (module[_0xdf40e5(0x220, 'Y4[S')] = ![]);
-                    if (module[_0xdf40e5(0x1e2, 'Y(K)')]) for (let item of module[_0xdf40e5(0x201, 'ylJp')]) {
-                        item['media_save_config'] = {
+                    module['related_goods_num'] && (module[_0x5a5378(0x226, 'yonp')] = 0x0);
+                    module[_0x5a5378(0x1ee, 'qB81')] && (module['has_related_goods'] = ![]);
+                    if (module[_0x5a5378(0x21f, '*BzV')]) for (let item of module[_0x5a5378(0x2bd, 'l#sh')]) {
+                        item[_0x5a5378(0x228, 'svp3')] = {
                             'disable_save': ![],
                             'disable_watermark': !![],
                             'disable_weibo_cover': !![]
                         };
-                    }
-                }
-                body = JSON[_0xdf40e5(0x1af, 'JPEi')](obj);
-            } catch (_0x168b75) {
-                console[_0xdf40e5(0x1a5, 'zFgm')](_0xdf40e5(0x1f4, 'zFgm') + _0x168b75);
-            }
-            break;
-        case/api\/sns\/v\d+\/note\/imagefeed/[_0xdf40e5(0x24e, '(XOT')]($request[_0xdf40e5(0x1d3, 'V$fZ')]):
-            try {
-                let obj = JSON[_0xdf40e5(0x1c3, '!LU3')](body), datas = [];
-                for (let module of obj[_0xdf40e5(0x1fd, 'c^p#')]) {
-                    module[_0xdf40e5(0x231, 'ZbNj')] && (module['related_goods_num'] = 0x0);
-                    module[_0xdf40e5(0x212, '!LU3')] && (module['has_related_goods'] = ![]);
-                    if (module[_0xdf40e5(0x213, 'dYIp')]) for (let item of module[_0xdf40e5(0x1b1, '3CD5')]) {
-                        item[_0xdf40e5(0x258, 'g[G4')] = {
-                            'disable_save': ![],
-                            'disable_watermark': !![],
-                            'disable_weibo_cover': !![]
-                        };
-                        if (item[_0xdf40e5(0x1ca, 'Y4[S')]) for (let it of item[_0xdf40e5(0x224, 'dYIp')]) {
-                            if (it['live_photo']) {
+                        if (item[_0x5a5378(0x25d, 'gTCg')]) for (let it of item[_0x5a5378(0x23b, 'a7v#')]) {
+                            if (it[_0x5a5378(0x268, 'Psb1')]) {
                                 let idata = {};
-                                idata['video_id'] = it[_0xdf40e5(0x1a1, 'H!Ml')]['media'][_0xdf40e5(0x238, 'dYIp')], idata[_0xdf40e5(0x1f7, '#Y1N')] = it[_0xdf40e5(0x1c7, 'p7mb')], idata[_0xdf40e5(0x1a6, 'zu@R')] = it[_0xdf40e5(0x1bf, 'mjQb')][_0xdf40e5(0x1a2, 'ylJp')]['stream']['h265'][0x0][_0xdf40e5(0x18c, 'c^p#')], datas['push'](idata);
+                                idata[_0x5a5378(0x230, 'Xwe!')] = it['live_photo'][_0x5a5378(0x28b, '5ngj')][_0x5a5378(0x273, 'hx$e')], idata[_0x5a5378(0x299, 'v!(6')] = it['live_photo_file_id'], idata[_0x5a5378(0x267, 'v!(6')] = it['live_photo']['media'][_0x5a5378(0x1e9, 'NYtv')][_0x5a5378(0x20b, 'Cf2B')][0x0]['master_url'], datas[_0x5a5378(0x28c, 'jyVK')](idata);
                             }
                         }
                     }
                 }
-                $['setdata'](JSON['stringify'](datas), $['RedBookPhotoKey']), body = JSON['stringify'](obj);
-            } catch (_0x23839e) {
-                console[_0xdf40e5(0x24c, 'j@Ig')](_0xdf40e5(0x24b, 'tb)y') + _0x23839e);
+                $['setdata'](JSON['stringify'](datas), $[_0x5a5378(0x210, 'qB81')]), body = JSON[_0x5a5378(0x287, '9NS&')](obj);
+            } catch (_0x128f4f) {
+                console['log']('imagefeed:\x20' + _0x128f4f);
             }
             break;
-        case/api\/sns\/v\d+\/homefeed\/categories\?/[_0xdf40e5(0x250, 'g&En')]($request[_0xdf40e5(0x1a3, 'p]6i')]):
+        case/api\/sns\/v\d+\/homefeed\/categories\?/[_0x5a5378(0x21d, 'hx$e')]($request[_0x5a5378(0x22d, '1BC4')]):
             try {
-                let obj = JSON[_0xdf40e5(0x1df, '2OdI')](body);
-                obj['data']['categories'] = obj['data']['categories']['filter'](_0x2df624 => !(_0x2df624[_0xdf40e5(0x22c, '5M9I')] == _0xdf40e5(0x24a, '(XOT') || _0x2df624[_0xdf40e5(0x232, 'a*)g')] == _0xdf40e5(0x237, 'WQZj') || _0x2df624[_0xdf40e5(0x197, 'tYA&')] == 'homefeed.live')), body = JSON[_0xdf40e5(0x248, 'xxzb')](obj);
-            } catch (_0x36ceac) {
-                console[_0xdf40e5(0x195, 'p7mb')]('categories:\x20' + _0x36ceac);
+                let obj = JSON['parse'](body);
+                obj[_0x5a5378(0x217, 'G!n[')][_0x5a5378(0x262, '2Wj^')] = obj[_0x5a5378(0x2af, 'Bfgb')]['categories']['filter'](_0x4dccf0 => !(_0x4dccf0[_0x5a5378(0x293, '6A2I')] == _0x5a5378(0x271, 'ALVD') || _0x4dccf0[_0x5a5378(0x1e0, '5ngj')] == _0x5a5378(0x207, '@ez3') || _0x4dccf0[_0x5a5378(0x223, 'NYtv')] == _0x5a5378(0x294, 'e05e'))), body = JSON['stringify'](obj);
+            } catch (_0x3bb4bb) {
+                console[_0x5a5378(0x23d, 'l#sh')](_0x5a5378(0x278, 'Cf2B') + _0x3bb4bb);
             }
             break;
-        case/api\/sns\/v\d+\/search\/hint/[_0xdf40e5(0x193, 'WQZj')]($request['url']):
+        case/api\/sns\/v\d+\/search\/hint/[_0x5a5378(0x21a, 'UsSB')]($request[_0x5a5378(0x25b, '6A2I')]):
             try {
-                let obj = JSON[_0xdf40e5(0x252, 'nXj@')](body);
-                obj[_0xdf40e5(0x194, 'Pb[d')]?.[_0xdf40e5(0x1d7, 'xxzb')] && (obj['data'][_0xdf40e5(0x1cc, '0[pm')] = [{
-                    'title': _0xdf40e5(0x21d, '[)RT'),
+                let obj = JSON['parse'](body);
+                obj[_0x5a5378(0x265, 'eH06')]?.[_0x5a5378(0x225, 'jyVK')] && (obj[_0x5a5378(0x200, '1BC4')][_0x5a5378(0x2b4, 'ltzp')] = [{
+                    'title': _0x5a5378(0x20e, 'lR4['),
                     'type': 'firstEnterOther#itemCfRecWord#搜索笔记#1',
-                    'search_word': _0xdf40e5(0x21a, 'BE2R')
-                }]), body = JSON[_0xdf40e5(0x18e, 'zu@R')](obj);
-            } catch (_0x431476) {
-                console[_0xdf40e5(0x240, 'tAX4')]('hint:\x20' + _0x431476);
+                    'search_word': _0x5a5378(0x204, 'UsSB')
+                }]), body = JSON['stringify'](obj);
+            } catch (_0x527943) {
+                console[_0x5a5378(0x243, 'EP!G')](_0x5a5378(0x214, 'yonp') + _0x527943);
             }
             break;
-        case/api\/sns\/v\d+\/search\/hot_list/[_0xdf40e5(0x216, 'I&NS')]($request['url']):
+        case/api\/sns\/v\d+\/search\/hot_list/['test']($request['url']):
             try {
-                let obj = JSON[_0xdf40e5(0x200, 'zu@R')](body);
-                obj['data'] = {
+                let obj = JSON[_0x5a5378(0x22c, '*BzV')](body);
+                obj[_0x5a5378(0x227, 'gTCg')] = {
                     'scene': '',
                     'title': '',
                     'items': [],
                     'host': '',
                     'background_color': {},
                     'word_request_id': ''
-                }, body = JSON[_0xdf40e5(0x207, '#Y1N')](obj);
-            } catch (_0x2561ee) {
-                console[_0xdf40e5(0x1ae, 'ZbNj')]('hot_list:\x20' + _0x2561ee);
+                }, body = JSON['stringify'](obj);
+            } catch (_0x5efecb) {
+                console[_0x5a5378(0x238, 'xq^F')](_0x5a5378(0x1e5, 'YRW6') + _0x5efecb);
             }
             break;
-        case/api\/sns\/v\d+\/search\/trending/[_0xdf40e5(0x1a4, 'JPEi')]($request[_0xdf40e5(0x1ee, 'JPEi')]):
+        case/api\/sns\/v\d+\/search\/trending/['test']($request['url']):
             try {
-                let obj = JSON[_0xdf40e5(0x1bc, '[)RT')](body);
-                obj[_0xdf40e5(0x25c, 'tYA&')] = {
+                let obj = JSON['parse'](body);
+                obj[_0x5a5378(0x251, '5ngj')] = {
                     'title': '',
                     'queries': [],
                     'type': '',
                     'word_request_id': ''
-                }, body = JSON['stringify'](obj);
-            } catch (_0x255c0e) {
-                console[_0xdf40e5(0x253, '^myL')]('trending:\x20' + _0x255c0e);
+                }, body = JSON[_0x5a5378(0x20d, 'gTCg')](obj);
+            } catch (_0x1f8359) {
+                console[_0x5a5378(0x205, 'xpBE')](_0x5a5378(0x279, 'F06&') + _0x1f8359);
             }
             break;
-        case/api\/sns\/v\d+\/system_service\/splash_config/[_0xdf40e5(0x1a7, 'kEpn')]($request['url']):
-            try {
-                let obj = JSON[_0xdf40e5(0x234, 'dat4')](body);
-                obj[_0xdf40e5(0x189, 'g&En')][_0xdf40e5(0x23c, '9SGB')][_0xdf40e5(0x1e1, 'g[G4')](_0x25f110 => {
-                    const _0x3a4db4 = _0xdf40e5, _0x154c6a = {
-                        'JrHRC': _0x3a4db4(0x1e3, 'p]6i'),
-                        'UIeaH': _0x3a4db4(0x21e, 'c^p#'),
-                        'vJXtf': _0x3a4db4(0x187, 'nXj@'),
-                        'kfsYw': function (_0x49d541, _0x11126b) {
-                            return _0x49d541 === _0x11126b;
-                        },
-                        'eRxeF': _0x3a4db4(0x1cb, 'a*)g')
-                    };
-                    _0x25f110['start_time'] = _0x154c6a['JrHRC'], _0x25f110[_0x3a4db4(0x23a, 'p7mb')] = _0x154c6a[_0x3a4db4(0x245, 'g[G4')];
-                    if (_0x25f110[_0x3a4db4(0x1ac, 'FGzQ')]) {
-                        if (_0x154c6a[_0x3a4db4(0x1f0, 'ylJp')](_0x154c6a[_0x3a4db4(0x1f2, '3CD5')], 'JRxNZ')) _0x25f110[_0x3a4db4(0x1d8, '@qXn')]['forEach'](_0x511475 => {
-                            const _0xc2b576 = _0x3a4db4;
-                            _0x511475['start_time'] = _0x154c6a[_0xc2b576(0x235, 'UDHa')], _0x511475[_0xc2b576(0x1be, 'BE2R')] = '2209050061';
-                        }); else {
-                            if (_0x54e67c[_0x3a4db4(0x19c, 'Y(K)')]) for (let _0x11bc58 of _0x610a8b[_0x154c6a[_0x3a4db4(0x17d, 'q$E5')]]) {
-                                _0x11bc58[_0x3a4db4(0x204, 'V$fZ')]?.[_0x3a4db4(0x214, 'LRoG')] && (_0x11bc58[_0x3a4db4(0x218, 'nXj@')] = _0x11bc58['meme_package'][_0x3a4db4(0x221, 'H!Ml')], _0x11bc58[_0x3a4db4(0x196, 'BE2R')] = _0x11bc58['meme_package']['image_url']);
-                            }
-                        }
-                    }
-                }), body = JSON['stringify'](obj);
-            } catch (_0x439801) {
-                console[_0xdf40e5(0x17f, ']jIo')]('splash_config:\x20' + _0x439801);
-            }
-            break;
-        case/api\/sns\/v\d+\/homefeed\?/[_0xdf40e5(0x250, 'g&En')]($request[_0xdf40e5(0x1cf, '#Y1N')]):
-            try {
-                let obj = JSON[_0xdf40e5(0x234, 'dat4')](body);
-                obj[_0xdf40e5(0x189, 'g&En')] = obj['data']['filter'](_0x4f3721 => !_0x4f3721['is_ads']), body = JSON['stringify'](obj);
-            } catch (_0x54a5a7) {
-                console['log'](_0xdf40e5(0x199, '!LU3') + _0x54a5a7);
-            }
-            break;
-        case/api\/sns\/v\d+\/search\/notes\?/[_0xdf40e5(0x1b2, 'c^p#')]($request[_0xdf40e5(0x215, 'E3UY')]):
-            try {
-                let obj = JSON[_0xdf40e5(0x19e, 'kEpn')](body);
-                obj[_0xdf40e5(0x222, 'H!Ml')][_0xdf40e5(0x1ff, 'WQZj')] = obj[_0xdf40e5(0x1f3, '[)RT')]['items'][_0xdf40e5(0x1ec, 'kEpn')](_0x372dd1 => !_0x372dd1['ads']), body = JSON[_0xdf40e5(0x248, 'xxzb')](obj);
-            } catch (_0x1d1ebe) {
-                console[_0xdf40e5(0x1b7, 'c^p#')](_0xdf40e5(0x1ad, 'WQZj') + _0x1d1ebe);
-            }
-            break;
-        case/api\/sns\/v\d+\/system_service\/config\?/[_0xdf40e5(0x1d6, '3CD5')]($request['url']):
+        case/api\/sns\/v\d+\/system_service\/splash_config/[_0x5a5378(0x291, 'v!(6')]($request['url']):
             try {
                 let obj = JSON['parse'](body);
-                const propertiesToDelete = [_0xdf40e5(0x20f, '2OdI'), _0xdf40e5(0x179, 'nXj@'), _0xdf40e5(0x1c8, 'nXj@'), 'app_theme', _0xdf40e5(0x1c5, '2OdI'), _0xdf40e5(0x17e, 'j@Ig')];
+                obj['data'][_0x5a5378(0x281, 'mZJ[')][_0x5a5378(0x2b9, 'xpBE')](_0xc0b12e => {
+                    const _0x37e5e8 = _0x5a5378, _0x585f13 = {
+                        'iFkTQ': function (_0x25d17e, _0x1dcffb) {
+                            return _0x25d17e + _0x1dcffb;
+                        },
+                        'gQcuU': function (_0x5d9ac9, _0x2e4bb7) {
+                            return _0x5d9ac9 !== _0x2e4bb7;
+                        },
+                        'XIgJQ': _0x37e5e8(0x24d, '&sID'),
+                        'wQhRl': _0x37e5e8(0x1f9, 'sC%D'),
+                        'WXIKD': _0x37e5e8(0x260, 'e05e')
+                    };
+                    _0xc0b12e['start_time'] = _0x37e5e8(0x2a1, 'gTCg'), _0xc0b12e['end_time'] = _0x585f13[_0x37e5e8(0x280, 'UsSB')], _0xc0b12e[_0x37e5e8(0x246, 'v!(6')] && _0xc0b12e['ads'][_0x37e5e8(0x2ac, 'hx$e')](_0x496aae => {
+                        const _0x1b84f3 = _0x37e5e8;
+                        _0x585f13[_0x1b84f3(0x274, 'MZ(V')](_0x585f13['XIgJQ'], _0x1b84f3(0x29f, 'd94(')) ? (_0x496aae[_0x1b84f3(0x23c, 'e05e')] = _0x585f13[_0x1b84f3(0x1fa, '[p!w')], _0x496aae[_0x1b84f3(0x2b0, 'lR4[')] = _0x585f13[_0x1b84f3(0x1e2, '*BzV')]) : _0x4e5be7[_0x1b84f3(0x250, 'yPxk')](_0x585f13[_0x1b84f3(0x234, 'GqP3')](_0x1b84f3(0x289, 'xpBE'), _0x334ce3));
+                    });
+                }), body = JSON[_0x5a5378(0x2b8, 'EP!G')](obj);
+            } catch (_0x58306e) {
+                console[_0x5a5378(0x221, 'F06&')](_0x5a5378(0x28d, 'd94(') + _0x58306e);
+            }
+            break;
+        case/api\/sns\/v\d+\/homefeed\?/[_0x5a5378(0x240, 'OZL(')]($request['url']):
+            try {
+                let obj = JSON[_0x5a5378(0x27e, '[dl!')](body);
+                obj[_0x5a5378(0x26e, '6A2I')] = obj['data'][_0x5a5378(0x276, 'Xwe!')](_0x930b88 => !_0x930b88[_0x5a5378(0x220, 'ALVD')]), body = JSON[_0x5a5378(0x288, 'l#sh')](obj);
+            } catch (_0x1d7717) {
+                console[_0x5a5378(0x1e4, 'TaWo')]('homefeed:\x20' + _0x1d7717);
+            }
+            break;
+        case/api\/sns\/v\d+\/search\/notes\?/[_0x5a5378(0x27c, 'xpBE')]($request[_0x5a5378(0x20a, '9NS&')]):
+            try {
+                let obj = JSON[_0x5a5378(0x2c3, 'G!n[')](body);
+                obj['data'][_0x5a5378(0x23e, '2Wj^')] = obj[_0x5a5378(0x241, 'sC%D')]['items'][_0x5a5378(0x1fb, 'xpBE')](_0x59f3e6 => !_0x59f3e6['ads']), body = JSON['stringify'](obj);
+            } catch (_0x2a3c01) {
+                console[_0x5a5378(0x2c4, 'eH06')](_0x5a5378(0x1ef, 'ALVD') + _0x2a3c01);
+            }
+            break;
+        case/api\/sns\/v\d+\/system_service\/config\?/[_0x5a5378(0x235, 'qB81')]($request[_0x5a5378(0x2b6, 'NYtv')]):
+            try {
+                let obj = JSON['parse'](body);
+                const propertiesToDelete = [_0x5a5378(0x1f3, 'ALVD'), _0x5a5378(0x209, 'mZJ['), _0x5a5378(0x290, 'xpBE'), _0x5a5378(0x22f, 'xq^F'), _0x5a5378(0x27a, '@ez3'), 'highlight_tab'];
                 for (const prop of propertiesToDelete) {
-                    obj[_0xdf40e5(0x1fd, 'c^p#')]?.[prop] && delete obj[_0xdf40e5(0x1fc, 'dYIp')][prop];
+                    obj[_0x5a5378(0x2aa, '^[s9')]?.[prop] && delete obj[_0x5a5378(0x1f2, 'MZ(V')][prop];
                 }
-                body = JSON['stringify'](obj);
-            } catch (_0x1e0659) {
-                console['log'](_0xdf40e5(0x1b6, 'dYIp') + _0x1e0659);
+                body = JSON[_0x5a5378(0x1e3, 'xpBE')](obj);
+            } catch (_0x575554) {
+                console[_0x5a5378(0x238, 'xq^F')](_0x5a5378(0x23a, '*BzV') + _0x575554);
             }
             break;
         default:

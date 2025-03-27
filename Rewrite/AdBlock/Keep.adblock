@@ -1,17 +1,15 @@
 // ==UserScript==
-// @ScriptName        Keep去广告+净化[墨鱼版]
+// @ScriptName        Keep应用净化[墨鱼版]
 // @Author            @ddgksf2013
-// @ForHelp           若有屏蔽广告的需求，可公众号后台回复APP名称
-// @WechatID          公众号墨鱼手记
 // @TgChannel         https://t.me/ddgksf2021
 // @Contribute        https://t.me/ddgksf2013_bot
 // @Feedback          📮 ddgksf2013@163.com 📮
-// @UpdateTime        2024-04-04
-// @Function          应用净化去广告
+// @UpdateTime        2025-03-26
+// @Function          应用界面简化、去除广告
 // @Suitable          自行观看“# > ”注释内容
 // @Attention         如需引用请注明出处，谢谢合作！
-// @Version           V1.0.9
-// @ScriptURL         https://github.com/ddgksf2013/Rewrite/raw/master/AdBlock/KeepStyle.conf
+// @Version           V1.0.10
+// @ScriptURL         https://github.com/ddgksf2013/Rewrite/raw/master/AdBlock/KeepAds.conf
 // ==/UserScript==
 
 
@@ -31,6 +29,7 @@ hostname=hc-ssp.sm.cn, api.gotokeep.com, 42.187.199.248, kad.gotokeep.com
 ^https?:\/\/api\.gotokeep\.com\/search\/v\d\/default\/keyword\/list url reject-200
 # > 屏蔽热词
 ^https?:\/\/api\.gotokeep\.com\/search\/v\d\/hotword\/list url reject-200
+^https?:\/\/api\.gotokeep\.com\/search\/v\d\/hotHashtag\/list url reject-200
 # > 屏蔽hotCourse
 ^https?:\/\/api\.gotokeep\.com\/search\/v\d\/hotCourse\/list url reject-200
 # > 屏蔽adwebapp
