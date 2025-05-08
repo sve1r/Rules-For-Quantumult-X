@@ -7,16 +7,18 @@
 // @Contribute        https://t.me/ddgksf2013_bot
 // @MainFunction      去开屏、瀑布流、启动服务广告及一些隐私、广告、青少年请求，去水印及功能增强
 // @Feedback          📮 ddgksf2013@163.com 📮
-// @UpdateTime        2025-01-13
+// @UpdateTime        2025-04-13
 // @Attention         请在QuantumultX配置文件的[general]下添加 udp_drop_list=443
 // @Suitable          自行观看“# > ”注释内容
 // @Attention         如需引用请注明出处，谢谢合作！
-// @ScriptURL         https://github.com/ddgksf2013/Rewrite/raw/master/AdBlock/XiaoHongShu.conf
+// @ScriptURL         https://raw.githubusercontent.com/ddgksf2013/Rewrite/refs/heads/master/AdBlock/XiaoHongShuAds.conf
 // ==/UserScript==
 
 
 hostname = *.xiaohongshu.com
 
+# > 小红书_搜索广告推荐@ddgksf2013
+^https?:\/\/[a-z]+\.xiaohongshu\.com\/api\/sns\/v\d+\/search\/notes\/recommend_info\? url reject-200
 # > 小红书_热门视频流@ddgksf2013
 ^https?:\/\/[a-z]+\.xiaohongshu\.com\/api\/sns\/v\d+\/note\/tabfeed url script-response-body https://r.sveir.xyz/Scripts/AdBlock/RedNote/RedNote.min.js
 # > 小红书_视频保存[new]@ddgksf2013

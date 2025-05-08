@@ -2,7 +2,7 @@
  > 应用名称：菜鸟净化[原菜鸟裹裹]
  > 脚本作者：@ddgksf2013
  > 微信账号：墨鱼手记
- > 更新时间：2024-10-15
+ > 更新时间：2025-04-07
  > 通知频道：https://t.me/ddgksf2021
  > 贡献投稿：https://t.me/ddgksf2013_bot
  > 问题反馈：ddgksf2013@163.com
@@ -11,13 +11,15 @@
 
 
 
-const version = 'V1.0.20';
+
+
+const version = 'V1.0.21';
 
 
 var ddgksf2013 = JSON.parse($response.body);
-if (-1 != $request.url.indexOf("mtop.cainiao.nbpresentation.protocol.homepage.get.cn")) ddgksf2013.data?.result?.dataList?.length > 0 && (ddgksf2013.data.result.dataList = ddgksf2013.data.result.dataList.filter(a => !("big_banner_area_v870" == a.type || "todo_list_v860" == a.type))); else if (-1 != $request.url.indexOf("mtop.cainiao.app.mine.main.cn")) {
-    let a = ["banner", "activity", "asset"];
-    for (let d of a) ddgksf2013.data?.[d] && delete ddgksf2013.data[d]
+if (-1 != $request.url.indexOf("mtop.cainiao.nbpresentation.protocol.homepage.get.cn")) ddgksf2013.data?.result?.dataList?.length > 0 && (ddgksf2013.data.result.dataList = ddgksf2013.data.result.dataList.filter(a => !("big_banner_area_v870" == a.type || "todo_list_v860" == a.type))); else if (-1 != $request.url.indexOf("mtop.cainiao.app.e2e.engine")) {
+    let a = ["banner", "activity", "asset", "vip", "wallet"];
+    for (let d of a) ddgksf2013.data?.data?.[d] && delete ddgksf2013.data.data[d]
 } else if (-1 != $request.url.indexOf("mtop.cainiao.nbpresentation.homepage.merge.get.cn")) for (let i = 0; i < 4; i++) {
     let t = `mtop.cainiao.nbpresentation.protocol.homepage.get.cn@${i}`;
     ddgksf2013.data?.[t]?.data?.result?.dataList?.length > 0 && (ddgksf2013.data[t].data.result.dataList = ddgksf2013.data[t].data.result.dataList.filter(a => !("big_banner_area_v870" == a.type || "todo_list_v860" == a.type)))
