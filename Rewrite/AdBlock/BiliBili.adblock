@@ -16,7 +16,7 @@
 // @Attention         如需引用请注明出处，谢谢合作！
 // @Function          去广告配置（自用，不定期更新）
 // @Suitable          自行观看“# > ”注释内容
-// @ScriptURL         https://github.com/ddgksf2013/Rewrite/raw/master/AdBlock/BilibiliAds.conf
+// @ScriptURL         https://raw.githubusercontent.com/ddgksf2013/Rewrite/refs/heads/master/AdBlock/BilibiliAds.conf
 // ==/UserScript==
 
 hostname = -broadcast.chat.bilibili.com, -cm.bilibili.com, -*cdn*.biliapi.net, -*tracker*.biliapi.net, app.bilibili.com, api.live.bilibili.com, *.bilibili.com, *.bili*.*, *.bilibili.*, grpc.biliapi.net,*biliapi.net
@@ -86,12 +86,11 @@ hostname = -broadcast.chat.bilibili.com, -cm.bilibili.com, -*cdn*.biliapi.net, -
 
 # ======= BiliProto 处理 ======= #
 # > BiliBili_哔哩哔哩_protobuf处理@kokoryh
-^https:\/\/(?:grpc\.biliapi\.net|app\.bilibili\.com)\/bilibili\.(?:app\.(?:interface\.v1\.(?:Teenagers\/ModeStatus|Search\/DefaultWords)|show\.v1\.Popular\/Index|dynamic\.v2\.Dynamic\/DynAll|view(?:unite)?\.v1\.View\/(?:View|ViewProgress|TFInfo|RelatesFeed)|playurl\.v1\.PlayURL\/PlayView|playerunite\.v1\.Player\/PlayViewUnite)|polymer\.app\.search\.v1\.Search\/SearchAll|community\.service\.dm\.v1\.DM\/DmView|main\.community\.reply\.v1\.Reply\/MainList|pgc\.gateway\.player\.v2\.PlayURL\/PlayView) url script-response-body https://r.sveir.xyz/Scripts/AdBlock/BiliBili/bilibili.protobuf.js
-
+^https:\/\/(?:grpc\.biliapi\.net|app\.bilibili\.com)\/bilibili\.(?:app\.(?:interface\.v1\.(?:Teenagers\/ModeStatus|Search\/DefaultWords)|show\.v1\.Popular\/Index|dynamic\.v2\.Dynamic\/DynAll|view(?:unite)?\.v1\.View\/(?:View|ViewProgress|TFInfo|RelatesFeed)|playurl\.v1\.PlayURL\/PlayView|playerunite\.v1\.Player\/PlayViewUnite)|polymer\.app\.search\.v1\.Search\/SearchAll|community\.service\.dm\.v1\.DM\/DmView|main\.community\.reply\.v1\.Reply\/MainList|pgc\.gateway\.player\.v2\.PlayURL\/PlayView) url script-response-body https://raw.githubusercontent.com/kokoryh/Sparkle/master/dist/bilibili.protobuf.js
 
 
 # ======= BiliNotAdded ======= #
 # > BiliBili_哔哩哔哩_繁体CC字幕转中文简体[自行启用hostname=aisubtitle.hdslb.com,i0.hdslb.com]@ddgksf2013
-;^https?:\/\/.*\.hdslb\.com\/bfs\/subtitle\/.+\.json url script-response-body https://github.com/ddgksf2013/Scripts/raw/master/bilibili_cc.js
+;^https?:\/\/.*\.hdslb\.com\/bfs\/subtitle\/.+\.json url script-response-body https://r.sveir.xyz/Scripts/AdBlock/BiliBili/BiliBili.min.js
 # > BiliBili_哔哩哔哩_去除统一设置的皮肤[注释留存]@ddgksf2013
 ;^https?:\/\/app\.bilibili\.com\/x\/resource\/show\/skin\? url script-response-body https://r.sveir.xyz/Scripts/AdBlock/BiliBili/BiliBili.min.js
