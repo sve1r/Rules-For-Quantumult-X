@@ -12,11 +12,15 @@
 // @Contributors      @zmqcherish
 // @Attention         如需引用请注明出处，谢谢合作！
 // @Version           V2.0.107
-// @ScriptURL         https://github.com/ddgksf2013/Rewrite/raw/master/AdBlock/Weibo.conf
+// @ScriptURL         https://raw.githubusercontent.com/ddgksf2013/Rewrite/refs/heads/master/AdBlock/Weibo.conf
 // ==/UserScript==
 
 
 hostname = api.weibo.*, *.api.weibo.*, mapi.weibo.*, *.uve.weibo.com, new.vip.weibo.cn, boot.biz.weibo.com
+
+
+# > 微博_请手动添加以下分流至本地@ddgksf2013
+; host, sdkapp.uve.weibo.com, direct
 
 # ======= 微博国内版 ======= #
 # > 微博_启动感兴趣弹窗@ddgksf2013
@@ -80,7 +84,7 @@ hostname = api.weibo.*, *.api.weibo.*, mapi.weibo.*, *.uve.weibo.com, new.vip.we
 ^https?:\/\/weibointl\.api\.weibo\.c(n|om)\/portal\.php.*a=get_searching_info url script-response-body https://r.sveir.xyz/Scripts/AdBlock/Weibo/weibo_search_info.json
 # > 微博国际版_屏蔽search_topic@shiro
 ^https?:\/\/weibointl\.api\.weibo\.c(n|om)\/portal\.php.*feed&a=search_topic url script-response-body https://r.sveir.xyz/Scripts/AdBlock/Weibo/weibo_search_topic.json
-# > 微博国际版_屏蔽开屏广告@ddgksf2013 
+# > 微博国际版_屏蔽开屏广告@ddgksf2013
 ^https?:\/\/weibointl\.api\.weibo\.c(n|om)\/portal\.php.*get_coopen_ads url script-response-body https://r.sveir.xyz/Scripts/AdBlock/Weibo/weibo.min.js
 # > 微博国际版_屏蔽sdkad@ddgksf2013
 ^https?://(sdk|wb)app\.uve\.weibo\.com(/interface/sdk/sdkad.php|/wbapplua/wbpullad.lua) url script-response-body https://r.sveir.xyz/Scripts/AdBlock/Weibo/weibo.min.js

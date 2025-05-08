@@ -359,13 +359,16 @@ function removeMediaHomelist(a) {
 }
 
 function removeComments(a) {
-    let b = ["\u5E7F\u544A", "\u5EE3\u544A", "\u76F8\u5173\u5185\u5BB9", "\u63A8\u8350", "\u70ED\u63A8", "\u63A8\u85A6"],
+    let b = ["\u5E7F\u544A", "\u5EE3\u544A", "\u76F8\u5173\u5185\u5BB9", "\u63A8\u8350", "\u70ED\u63A8", "\u63A8\u85A6", "\u8D8A\u8BFB"],
         c = a.datas || [];
     if (0 !== c.length) {
         let d = [];
         for (const a of c) {
             let c = a.adType || "";
-            -1 == b.indexOf(c) && 6 != a.type && d.push(a)
+
+            if (-1 == b.indexOf(c) && (6 != a.type || 2 != a.type)) {
+                d.push(a);
+            }
         }
         log("remove \u8BC4\u8BBA\u533A\u76F8\u5173\u548C\u63A8\u8350\u5185\u5BB9"), a.datas = d, a.tip_msg && delete a.tip_msg
     }
