@@ -9,9 +9,7 @@ hostname = -redirector*.googlevideo.com,*.googlevideo.com,www.youtube.com,s.yout
 ^https?:\/\/[\w-]+\.googlevideo\.com\/(?!(dclk_video_ads|videoplayback\?)).+&oad url reject-200
 
 # ======= 视频PIP|后台播放|瀑布流|搜索页|播放页|短视频|贴片广告  ======= #
-^https?:\/\/youtubei\.googleapis\.com\/youtubei\/v1\/(browse|next|player|reel\/reel_watch_sequence) url script-request-body https://r.sveir.xyz/Scripts/AdBlock/Other/Youtube.min.js
-^https?:\/\/youtubei\.googleapis\.com\/youtubei\/v1\/(browse|next|player|search|reel\/reel_watch_sequence|guide|account\/get_setting) url script-response-body https://r.sveir.xyz/Scripts/AdBlock/Other/Youtube.min.js
-^https?:\/\/youtubei\.googleapis\.com\/youtubei\/v\d\/player\/ad_break url reject
+^https?:\/\/youtubei\.googleapis\.com\/youtubei\/v1\/(browse|next|player|search|reel\/reel_watch_sequence|guide|account\/get_setting|get_watch) url script-response-body https://r.sveir.xyz/Scripts/AdBlock/Other/Youtube.min.js
 
 # ======= 通用广告请求 ======= #
 ^https?:\/\/(www|s)\.youtube\.com\/api\/stats\/ads url reject-200
