@@ -359,7 +359,7 @@ function removeMediaHomelist(a) {
 }
 
 function removeComments(a) {
-    let b = ["\u5E7F\u544A", "\u5EE3\u544A", "\u76F8\u5173\u5185\u5BB9", "\u63A8\u8350", "\u70ED\u63A8", "\u63A8\u85A6", "\u8C08\u8BFB"],
+    let b = ["\u5E7F\u544A", "\u5EE3\u544A", "\u76F8\u5173\u5185\u5BB9", "\u63A8\u8350", "\u70ED\u63A8", "\u63A8\u85A6", "\u8350\u8BFB", "\u85A6\u8B80"],
         c = a.datas || [];
     if (0 !== c.length) {
         let d = [];
