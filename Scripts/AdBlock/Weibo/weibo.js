@@ -12,7 +12,7 @@
  ***********************************************/
 
 
-const version = 'V2.0.136';
+const version = 'V2.0.136-svdv-1';
 
 
 const mainConfig = {
@@ -89,6 +89,7 @@ const mainConfig = {
         "/square&pageDataType/": "squareHandler",
         "/statuses/container_timeline_topic": "removeMain",
         "/statuses/container_timeline": "removeMainTab",
+        "/statuses/container_detail_comment": "removeComments",
         "wbapplua/wbpullad.lua": "removeLuaScreenAds",
         "interface/sdk/sdkad.php": "removePhpScreenAds",
         "a=trends": "removeTopics",
