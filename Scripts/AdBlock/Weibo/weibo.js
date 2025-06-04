@@ -12,7 +12,7 @@
  ***********************************************/
 
 
-const version = 'V2.0.136-svdv-1';
+const version = 'V2.0.136-svdv-3';
 
 
 const mainConfig = {
@@ -89,7 +89,7 @@ const mainConfig = {
         "/square&pageDataType/": "squareHandler",
         "/statuses/container_timeline_topic": "removeMain",
         "/statuses/container_timeline": "removeMainTab",
-        "/statuses/container_detail_comment": "removeComments",
+        "/2/statuses/container_detail_comment": "removeCommentsNew",
         "wbapplua/wbpullad.lua": "removeLuaScreenAds",
         "interface/sdk/sdkad.php": "removePhpScreenAds",
         "a=trends": "removeTopics",
@@ -360,6 +360,19 @@ function removeMediaHomelist(a) {
 }
 
 function removeComments(a) {
+    let b = ["\u5E7F\u544A", "\u5EE3\u544A", "\u76F8\u5173\u5185\u5BB9", "\u63A8\u8350", "\u70ED\u63A8", "\u63A8\u85A6", "\u8350\u8BFB", "\u85A6\u8B80"],
+        c = a.datas || [];
+    if (0 !== c.length) {
+        let d = [];
+        for (const a of c) {
+            let c = a.adType || "";
+            -1 == b.indexOf(c) && 6 != a.type && d.push(a)
+        }
+        log("remove \u8BC4\u8BBA\u533A\u76F8\u5173\u548C\u63A8\u8350\u5185\u5BB9"), a.datas = d, a.tip_msg && delete a.tip_msg
+    }
+}
+
+function removeCommentsNew(a) {
     let b = ["\u5E7F\u544A", "\u5EE3\u544A", "\u76F8\u5173\u5185\u5BB9", "\u63A8\u8350", "\u70ED\u63A8", "\u63A8\u85A6", "\u8350\u8BFB", "\u85A6\u8B80"],
         c = a.datas || [];
     if (0 !== c.length) {
