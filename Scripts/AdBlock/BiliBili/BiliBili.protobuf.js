@@ -1,4 +1,4 @@
-// Build: 2025/6/2 11:27:03
+// Build: 2025/6/7 23:58:36
 (() => {
     console.time = function (a) {
         this._times = this._times || {}, this._times[a] = Date.now()
@@ -4946,7 +4946,7 @@
 
     function ir(a, {airborneDm: e}) {
         let t = Qt.fromBinary(a);
-        t.videoGuide = j, e && e !== "#" && t.chronos && (t.chronos.md5 = "629dac59b7d4382519c3dc4ebec44e19", t.chronos.file = "https://raw.githubusercontent.com/kokoryh/Sparkle/refs/heads/master/data/5d9da0661dccf3df1b1e78299e3bc669eee5a241.zip", delete t.chronos.sign), W(Qt, t)
+        t.videoGuide = j, e && e !== "#" && t.chronos && (t.chronos.md5 = "f0baed5939c353e14d77eee17b9f266c", t.chronos.file = "https://raw.githubusercontent.com/kokoryh/Sparkle/refs/heads/master/data/chronos.zip", delete t.chronos.sign), W(Qt, t)
     }
 
     var zr = [Y.GAME, Y.CM_TYPE, Y.LIVE, Y.AI_RECOMMEND, Y.COURSE],
