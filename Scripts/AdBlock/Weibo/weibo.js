@@ -12,12 +12,12 @@
  ***********************************************/
 
 
-const version = 'V2.0.136-svdv-4';
+const version = 'V2.0.136-svdv-0609-12';
 
 
 const mainConfig = {
-        isDebug: !1,
-        author: "ddgksf2013",
+        isDebug: !0,
+        author: "sve1r",
         removeHomeVip: !0,
         removeHomeCreatorTask: !0,
         removeRelate: !0,
@@ -79,6 +79,9 @@ const mainConfig = {
         "groups/timeline",
         "statuses/friends_timeline"
     ],
+    modifyNewContainerUrls = [
+        "/2/statuses/container_detail_comment"
+    ],
     otherUrls = {
         "a=get_coopen_ads": "removeIntlOpenAds",
         "a=trends": "removeTopics",
@@ -92,8 +95,8 @@ const mainConfig = {
         "wbapplua/wbpullad.lua": "removeLuaScreenAds",
         "/2/messageflow": "removeMsgAd",
         "/2/page?": "removePage",
-        "/2/statuses/container_detail": "removeCommentsNew",
-        "/2/statuses/container_detail_comment": "removeCommentsNew",
+        "/2/statuses/container_detail": "removeContainerDetailCards",
+        "/2/statuses/container_detail_comment": "removeContainerDetailComments",
         "/2/statuses/video_mixtimeline": "nextVideoHandler",
         "/checkin/show": "removeCheckin",
         "/comments/build_comments": "removeComments",
@@ -115,11 +118,26 @@ const mainConfig = {
         "/!/client/light_skin": "tabSkinHandler",
     };
 
-function getModifyMethod(a) {
-    for (const b of modifyCardsUrls) if (-1 < a.indexOf(b)) return "removeCards";
-    for (const b of modifyStatusesUrls) if (-1 < a.indexOf(b)) return "removeTimeLine";
-    for (const [b, c] of Object.entries(otherUrls)) if (-1 < a.indexOf(b)) return c;
-    return null
+function getModifyMethod(url) {
+    log('Url:' + url.split("?")[0]);
+    let method = null;
+    if (modifyNewContainerUrls.some(path => url.includes(path))) {
+        method = "removeContainerDetailComments";
+    }
+    if (modifyCardsUrls.some(path => url.includes(path))) {
+        method = "removeCards";
+    }
+    if (modifyStatusesUrls.some(path => url.includes(path))) {
+        method = "removeTimeLine";
+    }
+    for (const [key, handler] of Object.entries(otherUrls)) {
+        if (url.includes(key)) {
+            method = handler;
+            break;
+        }
+    }
+    log('Method:' + method);
+    return method;
 }
 
 function removeRealtimeAd(a) {
@@ -250,6 +268,7 @@ function removeCards(a) {
     if (a.hotwords && (a.hotwords = []), a.cards) {
         let c = [];
         for (let d of a.cards) {
+
             if ("232082type=1" == a.cardlistInfo?.containerid && (17 == d.card_type || 58 == d.card_type || 11 == d.card_type)) {
                 var b = d.card_type + 1;
                 d = {card_type: b}
@@ -271,6 +290,35 @@ function removeCards(a) {
     }
     a.items && (log("data.items"), removeSearch(a))
 }
+
+function removeContainerDetailCards(a) {
+    //todo "is_ad_card": 1, 删除卡片广告
+    if (a.hotwords && (a.hotwords = []), a.cards) {
+        let c = [];
+        for (let d of a.cards) {
+            //todo "is_ad_card": 1,
+            if ("232082type=1" == a.cardlistInfo?.containerid && (17 == d.card_type || 58 == d.card_type || 11 == d.card_type)) {
+                var b = d.card_type + 1;
+                d = {card_type: b}
+            }
+            let e = d.card_group;
+            if (e && 0 < e.length) {
+                let a = [];
+                for (const b of e) {
+                    let c = b.card_type;
+                    118 == c || isAd(b.mblog) || -1 != JSON.stringify(b).indexOf("res_from:ads") || a.push(b)
+                }
+                d.card_group = a, c.push(d)
+            } else {
+                let a = d.card_type;
+                if (-1 < [9, 165].indexOf(a)) isAd(d.mblog) || c.push(d); else if (-1 < [1007, 180].indexOf(a)) continue; else c.push(d)
+            }
+        }
+        a.cards = c
+    }
+    a.items && (log("data.items"), removeSearch(a))
+}
+
 
 function lvZhouHandler(a) {
     if (mainConfig.removeLvZhou && a) {
@@ -374,28 +422,38 @@ function removeMediaHomelist(a) {
 }
 
 function removeComments(a) {
-    let b = ["\u5E7F\u544A", "\u5EE3\u544A", "\u76F8\u5173\u5185\u5BB9", "\u63A8\u8350", "\u70ED\u63A8", "\u63A8\u85A6", "\u8350\u8BFB", "\u85A6\u8B80"],
+    let b = ["\u5e7f\u544a", "\u5ee3\u544a", "\u76f8\u5173\u5185\u5bb9", "\u63a8\u8350", "\u70ed\u63a8", "\u63a8\u85a6", "\u8350\u8bfb", "\u85a6\u8bfb"],
         c = a.datas || [];
     if (0 !== c.length) {
         let d = [];
         for (const a of c) {
             let c = a.adType || "";
-            -1 == b.indexOf(c) && 6 != a.type && d.push(a)
+            -1 == b.indexOf(c) && 6 != a.type && !isAd(a) && d.push(a)
         }
         log("remove \u8BC4\u8BBA\u533A\u76F8\u5173\u548C\u63A8\u8350\u5185\u5BB9"), a.datas = d, a.tip_msg && delete a.tip_msg
     }
 }
 
-function removeCommentsNew(a) {
-    let b = ["\u5E7F\u544A", "\u5EE3\u544A", "\u76F8\u5173\u5185\u5BB9", "\u63A8\u8350", "\u70ED\u63A8", "\u63A8\u85A6", "\u8350\u8BFB", "\u85A6\u8B80"],
-        c = a.datas || [];
+function removeContainerDetailComments(a) {
+    log('开始处理V2评论');
+    let b = ["\u5e7f\u544a", "\u5ee3\u544a", "\u76f8\u5173\u5185\u5bb9", "\u63a8\u8350", "\u70ed\u63a8", "\u63a8\u85a6", "\u8350\u8bfb", "\u85a6\u8bfb"];
+    let c = a.items || [];
+    log('原始共' + c.length + '条评论');
     if (0 !== c.length) {
         let d = [];
-        for (const a of c) {
-            let c = a.adType || "";
-            -1 == b.indexOf(c) && 6 != a.type && d.push(a)
+        for (const [i, g] of c.entries()) {
+            // 如果type是 trend 则跳过
+            if (g.type === 'trend' || g.commentAdType === 1) {
+                log('已去除一条广告');
+                continue;
+            }
+            let adType = g.data.adType || "";
+            if (b.indexOf(adType) === -1 && g.type !== 6 && !isAd(g.data)) {
+                d.push(g);
+            }
         }
-        log("remove \u8BC4\u8BBA\u533A\u76F8\u5173\u548C\u63A8\u8350\u5185\u5BB9"), a.datas = d, a.tip_msg && delete a.tip_msg
+        log('清理后共' + d.length + '条评论');
+        log("V2: remove \u8BC4\u8BBA\u533A\u76F8\u5173\u548C\u63A8\u8350\u5185\u5BB9"), a.items = d, a.tip_msg && delete a.tip_msg
     }
 }
 
@@ -463,11 +521,11 @@ function log(a) {
     mainConfig.isDebug && console.log(a)
 }
 
-var body = $response.body, url = $request.url;
+let body = $response.body,
+    url = $request.url;
 let method = getModifyMethod(url);
 if (method) {
-    log(method);
-    var func = eval(method);
+    let func = eval(method);
     let data = JSON.parse(body.match(/\{.*\}/)[0]);
     new func(data), body = JSON.stringify(data), "removePhpScreenAds" == method && (body = JSON.stringify(data) + "OK")
 }
