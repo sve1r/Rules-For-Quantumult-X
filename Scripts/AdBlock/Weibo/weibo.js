@@ -12,7 +12,7 @@
  ***********************************************/
 
 
-const version = 'V2.0.136';
+const version = 'V2.0.136-svdv-4';
 
 
 const mainConfig = {
@@ -39,7 +39,8 @@ const mainConfig = {
         profileSkin2: null,
         tabIconVersion: 0,
         tabIconPath: ""
-    }, itemMenusConfig = {
+    },
+    itemMenusConfig = {
         creator_task: !1,
         mblog_menus_custom: !1,
         mblog_menus_video_later: !0,
@@ -64,40 +65,54 @@ const mainConfig = {
         mblog_menus_report: !0,
         mblog_menus_apeal: !0,
         mblog_menus_home: !0
-    }, modifyCardsUrls = ["/cardlist", "video/community_tab", "searchall"],
-    modifyStatusesUrls = ["statuses/friends/timeline", "statuses_unread_hot_timeline", "statuses/unread_friends_timeline", "statuses/unread_hot_timeline", "groups/timeline", "statuses/friends_timeline"],
+    },
+    modifyCardsUrls = [
+        "/cardlist",
+        "video/community_tab",
+        "searchall"
+    ],
+    modifyStatusesUrls = [
+        "statuses/friends/timeline",
+        "statuses_unread_hot_timeline",
+        "statuses/unread_friends_timeline",
+        "statuses/unread_hot_timeline",
+        "groups/timeline",
+        "statuses/friends_timeline"
+    ],
     otherUrls = {
-        "/profile/me": "removeHome",
-        "/statuses/extend": "itemExtendHandler",
-        "/video/remind_info": "removeVideoRemind",
-        "/checkin/show": "removeCheckin",
-        "/live/media_homelist": "removeMediaHomelist",
-        "/comments/build_comments": "removeComments",
-        "/container/get_item": "containerHandler",
-        "/profile/container_timeline": "userHandler",
-        "/video/tiny_stream_video_list": "nextVideoHandler",
-        "/2/statuses/video_mixtimeline": "nextVideoHandler",
+        "a=get_coopen_ads": "removeIntlOpenAds",
+        "a=trends": "removeTopics",
+        "ad/preload": "removeAdPreload",
+        "ad/realtime": "removeRealtimeAd",
+        "interface/sdk/sdkad.php": "removePhpScreenAds",
+        "php?a=open_app": "removeAdBanner",
+        "php?a=search_topic": "removeSearchTopic",
+        "user_center": "modifiedUserCenter",
         "video/tiny_stream_mid_detail": "nextVideoHandler",
-        "/!/client/light_skin": "tabSkinHandler",
-        "/littleskin/preview": "skinPreviewHandler",
-        "/search/finder": "removeSearchMain",
-        "/search/container_timeline": "removeSearch",
-        "/search/container_discover": "removeSearch",
+        "wbapplua/wbpullad.lua": "removeLuaScreenAds",
         "/2/messageflow": "removeMsgAd",
         "/2/page?": "removePage",
-        "/statuses/unread_topic_timeline": "topicHandler",
+        "/2/statuses/container_detail": "removeCommentsNew",
+        "/2/statuses/container_detail_comment": "removeCommentsNew",
+        "/2/statuses/video_mixtimeline": "nextVideoHandler",
+        "/checkin/show": "removeCheckin",
+        "/comments/build_comments": "removeComments",
+        "/container/get_item": "containerHandler",
+        "/live/media_homelist": "removeMediaHomelist",
+        "/littleskin/preview": "skinPreviewHandler",
+        "/profile/container_timeline": "userHandler",
+        "/profile/me": "removeHome",
+        "/search/container_discover": "removeSearch",
+        "/search/container_timeline": "removeSearch",
+        "/search/finder": "removeSearchMain",
         "/square&pageDataType/": "squareHandler",
-        "/statuses/container_timeline_topic": "removeMain",
         "/statuses/container_timeline": "removeMainTab",
-        "wbapplua/wbpullad.lua": "removeLuaScreenAds",
-        "interface/sdk/sdkad.php": "removePhpScreenAds",
-        "a=trends": "removeTopics",
-        user_center: "modifiedUserCenter",
-        "a=get_coopen_ads": "removeIntlOpenAds",
-        "php?a=search_topic": "removeSearchTopic",
-        "ad/realtime": "removeRealtimeAd",
-        "ad/preload": "removeAdPreload",
-        "php?a=open_app": "removeAdBanner"
+        "/statuses/container_timeline_topic": "removeMain",
+        "/statuses/extend": "itemExtendHandler",
+        "/statuses/unread_topic_timeline": "topicHandler",
+        "/video/remind_info": "removeVideoRemind",
+        "/video/tiny_stream_video_list": "nextVideoHandler",
+        "/!/client/light_skin": "tabSkinHandler",
     };
 
 function getModifyMethod(a) {
@@ -359,16 +374,26 @@ function removeMediaHomelist(a) {
 }
 
 function removeComments(a) {
-    let b = ["\u5E7F\u544A", "\u5EE3\u544A", "\u76F8\u5173\u5185\u5BB9", "\u63A8\u8350", "\u70ED\u63A8", "\u63A8\u85A6", "\u8D8A\u8BFB"],
+    let b = ["\u5E7F\u544A", "\u5EE3\u544A", "\u76F8\u5173\u5185\u5BB9", "\u63A8\u8350", "\u70ED\u63A8", "\u63A8\u85A6", "\u8350\u8BFB", "\u85A6\u8B80"],
         c = a.datas || [];
     if (0 !== c.length) {
         let d = [];
         for (const a of c) {
             let c = a.adType || "";
+            -1 == b.indexOf(c) && 6 != a.type && d.push(a)
+        }
+        log("remove \u8BC4\u8BBA\u533A\u76F8\u5173\u548C\u63A8\u8350\u5185\u5BB9"), a.datas = d, a.tip_msg && delete a.tip_msg
+    }
+}
 
-            if (-1 == b.indexOf(c) && (6 != a.type || 2 != a.type)) {
-                d.push(a);
-            }
+function removeCommentsNew(a) {
+    let b = ["\u5E7F\u544A", "\u5EE3\u544A", "\u76F8\u5173\u5185\u5BB9", "\u63A8\u8350", "\u70ED\u63A8", "\u63A8\u85A6", "\u8350\u8BFB", "\u85A6\u8B80"],
+        c = a.datas || [];
+    if (0 !== c.length) {
+        let d = [];
+        for (const a of c) {
+            let c = a.adType || "";
+            -1 == b.indexOf(c) && 6 != a.type && d.push(a)
         }
         log("remove \u8BC4\u8BBA\u533A\u76F8\u5173\u548C\u63A8\u8350\u5185\u5BB9"), a.datas = d, a.tip_msg && delete a.tip_msg
     }
