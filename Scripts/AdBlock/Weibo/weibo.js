@@ -1,18 +1,4 @@
-/***********************************************
- > 应用名称：墨鱼自用微博&微博国际版净化脚本
- > 脚本作者：@ddgksf2013
- > 微信账号：墨鱼手记
- > 更新时间：2025-06-15
- > 通知频道：https://t.me/ddgksf2021
- > 贡献投稿：https://t.me/ddgksf2013_bot
- > 问题反馈：ddgksf2013@163.com
- > 特别提醒：如需转载请注明出处，谢谢合作！
- > 脚本声明：本脚本是在[https://github.com/zmqcherish]原创基础上优化自用
- > 脚本声明：若有侵犯原作者权利，请邮箱联系删除
- ***********************************************/
-
-
-const version = 'V2.0.136-svdv-0724-1';
+const version = 'V2.0.136-svdv-0724-2';
 
 
 const mainConfig = {
@@ -433,7 +419,7 @@ function removeContainerDetailComments(a) {
                 log('ℹ️ 已去除一条 trend 广告');
                 continue;
             }
-            let adType = g.data.adType || "";
+            let adType = g.data?.adType ?? "";
             if (b.indexOf(adType) === -1 && g.type !== 6 && !isAd(g.data)) {
                 d.push(g);
             }
@@ -515,12 +501,11 @@ log(`ℹ️ Url: ${formatUrl}`);
 let method = getModifyMethod(url);
 log(`ℹ️ Method: ${method}`);
 if (method) {
-    log(`🔛 开始执行方法: ${formatUrl}`);
+    log(`🔛 开始执行方法: ${method}`);
     let func = eval(method);
-    log(`🔚️ 方法执行完毕: ${formatUrl}`);
+    log(`🔚️ 方法执行完毕: ${method}`);
     let data = JSON.parse(body.match(/\{.*\}/)[0]);
     new func(data), body = JSON.stringify(data), "removePhpScreenAds" === method && (body = JSON.stringify(data) + "OK")
 }
-log(`${formatUrl} ====> 处理完毕`);
 log(`🚩 执行结束`);
 $done({body});
