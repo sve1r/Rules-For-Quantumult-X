@@ -2,7 +2,7 @@
  > 应用名称：墨鱼自用微博&微博国际版净化脚本
  > 脚本作者：@ddgksf2013
  > 微信账号：墨鱼手记
- > 更新时间：2024-01-26
+ > 更新时间：2025-06-15
  > 通知频道：https://t.me/ddgksf2021
  > 贡献投稿：https://t.me/ddgksf2013_bot
  > 问题反馈：ddgksf2013@163.com
@@ -12,12 +12,12 @@
  ***********************************************/
 
 
-const version = 'V2.0.136-svdv-4';
+const version = 'V2.0.136-svdv-0724-1';
 
 
 const mainConfig = {
-        isDebug: !1,
-        author: "ddgksf2013",
+        isDebug: !0,
+        author: "sve1r",
         removeHomeVip: !0,
         removeHomeCreatorTask: !0,
         removeRelate: !0,
@@ -92,8 +92,8 @@ const mainConfig = {
         "wbapplua/wbpullad.lua": "removeLuaScreenAds",
         "/2/messageflow": "removeMsgAd",
         "/2/page?": "removePage",
-        "/2/statuses/container_detail": "removeCommentsNew",
-        "/2/statuses/container_detail_comment": "removeCommentsNew",
+        "/2/statuses/container_detail_comment": "removeContainerDetailComments",
+        "/2/statuses/container_detail": "removeContainerDetailCards",
         "/2/statuses/video_mixtimeline": "nextVideoHandler",
         "/checkin/show": "removeCheckin",
         "/comments/build_comments": "removeComments",
@@ -116,9 +116,12 @@ const mainConfig = {
     };
 
 function getModifyMethod(a) {
-    for (const b of modifyCardsUrls) if (-1 < a.indexOf(b)) return "removeCards";
-    for (const b of modifyStatusesUrls) if (-1 < a.indexOf(b)) return "removeTimeLine";
-    for (const [b, c] of Object.entries(otherUrls)) if (-1 < a.indexOf(b)) return c;
+    for (const [b, c] of Object.entries(otherUrls))
+        if (-1 < a.indexOf(b)) return c;
+    for (const b of modifyCardsUrls)
+        if (-1 < a.indexOf(b)) return "removeCards";
+    for (const b of modifyStatusesUrls)
+        if (-1 < a.indexOf(b)) return "removeTimeLine";
     return null
 }
 
@@ -133,7 +136,8 @@ function removeAdBanner(a) {
 function removeAdPreload(a) {
     if (!a.ads) return a;
     a.last_ad_show_interval = 86400;
-    for (let b of a.ads) b.start_time = 2681574400, b.end_time = 2681660799, b.display_duration = 0, b.daily_display_cnt = 0, b.total_display_cnt = 0;
+    for (let b of a.ads)
+        b.start_time = 2681574400, b.end_time = 2681660799, b.display_duration = 0, b.daily_display_cnt = 0, b.total_display_cnt = 0;
     return a
 }
 
@@ -250,6 +254,7 @@ function removeCards(a) {
     if (a.hotwords && (a.hotwords = []), a.cards) {
         let c = [];
         for (let d of a.cards) {
+
             if ("232082type=1" == a.cardlistInfo?.containerid && (17 == d.card_type || 58 == d.card_type || 11 == d.card_type)) {
                 var b = d.card_type + 1;
                 d = {card_type: b}
@@ -271,6 +276,35 @@ function removeCards(a) {
     }
     a.items && (log("data.items"), removeSearch(a))
 }
+
+function removeContainerDetailCards(a) {
+    //todo "is_ad_card": 1, 删除卡片广告
+    if (a.hotwords && (a.hotwords = []), a.cards) {
+        let c = [];
+        for (let d of a.cards) {
+            //todo "is_ad_card": 1,
+            if ("232082type=1" == a.cardlistInfo?.containerid && (17 == d.card_type || 58 == d.card_type || 11 == d.card_type)) {
+                var b = d.card_type + 1;
+                d = {card_type: b}
+            }
+            let e = d.card_group;
+            if (e && 0 < e.length) {
+                let a = [];
+                for (const b of e) {
+                    let c = b.card_type;
+                    118 == c || isAd(b.mblog) || -1 != JSON.stringify(b).indexOf("res_from:ads") || a.push(b)
+                }
+                d.card_group = a, c.push(d)
+            } else {
+                let a = d.card_type;
+                if (-1 < [9, 165].indexOf(a)) isAd(d.mblog) || c.push(d); else if (-1 < [1007, 180].indexOf(a)) continue; else c.push(d)
+            }
+        }
+        a.cards = c
+    }
+    a.items && (log("data.items"), removeSearch(a))
+}
+
 
 function lvZhouHandler(a) {
     if (mainConfig.removeLvZhou && a) {
@@ -374,28 +408,38 @@ function removeMediaHomelist(a) {
 }
 
 function removeComments(a) {
-    let b = ["\u5E7F\u544A", "\u5EE3\u544A", "\u76F8\u5173\u5185\u5BB9", "\u63A8\u8350", "\u70ED\u63A8", "\u63A8\u85A6", "\u8350\u8BFB", "\u85A6\u8B80"],
+    let b = ["\u5e7f\u544a", "\u5ee3\u544a", "\u76f8\u5173\u5185\u5bb9", "\u63a8\u8350", "\u70ed\u63a8", "\u63a8\u85a6", "\u8350\u8bfb", "\u85a6\u8bfb"],
         c = a.datas || [];
     if (0 !== c.length) {
         let d = [];
         for (const a of c) {
             let c = a.adType || "";
-            -1 == b.indexOf(c) && 6 != a.type && d.push(a)
+            -1 == b.indexOf(c) && 6 != a.type && !isAd(a) && d.push(a)
         }
         log("remove \u8BC4\u8BBA\u533A\u76F8\u5173\u548C\u63A8\u8350\u5185\u5BB9"), a.datas = d, a.tip_msg && delete a.tip_msg
     }
 }
 
-function removeCommentsNew(a) {
-    let b = ["\u5E7F\u544A", "\u5EE3\u544A", "\u76F8\u5173\u5185\u5BB9", "\u63A8\u8350", "\u70ED\u63A8", "\u63A8\u85A6", "\u8350\u8BFB", "\u85A6\u8B80"],
-        c = a.datas || [];
+function removeContainerDetailComments(a) {
+    log('开始处理V2评论');
+    let b = ["\u5e7f\u544a", "\u5ee3\u544a", "\u76f8\u5173\u5185\u5bb9", "\u63a8\u8350", "\u70ed\u63a8", "\u63a8\u85a6", "\u8350\u8bfb", "\u85a6\u8bfb"];
+    let c = a.items || [];
+    log('ℹ️ 已获取到：' + c.length + '条评论');
     if (0 !== c.length) {
         let d = [];
-        for (const a of c) {
-            let c = a.adType || "";
-            -1 == b.indexOf(c) && 6 != a.type && d.push(a)
+        for (const [i, g] of c.entries()) {
+            // 如果type是 trend 则跳过
+            if (g.type === 'trend' || g.commentAdType === 1) {
+                log('ℹ️ 已去除一条 trend 广告');
+                continue;
+            }
+            let adType = g.data.adType || "";
+            if (b.indexOf(adType) === -1 && g.type !== 6 && !isAd(g.data)) {
+                d.push(g);
+            }
         }
-        log("remove \u8BC4\u8BBA\u533A\u76F8\u5173\u548C\u63A8\u8350\u5185\u5BB9"), a.datas = d, a.tip_msg && delete a.tip_msg
+        log('ℹ️ 清理后共：' + d.length + '条评论');
+        log("✅ \u8BC4\u8BBA\u533A\u76F8\u5173\u548C\u63A8\u8350\u5185\u5BB9"), a.items = d, a.tip_msg && delete a.tip_msg
     }
 }
 
@@ -460,15 +504,23 @@ function removePhpScreenAds(a) {
 }
 
 function log(a) {
-    mainConfig.isDebug && console.log(a)
+    mainConfig.isDebug && console.log("\n"+a)
 }
 
-var body = $response.body, url = $request.url;
+let body = $response.body,
+    url = $request.url,
+    formatUrl = url.split("?")[0];
+log(`🧣 Weibo Script 开始处理`);
+log(`ℹ️ Url: ${formatUrl}`);
 let method = getModifyMethod(url);
+log(`ℹ️ Method: ${method}`);
 if (method) {
-    log(method);
-    var func = eval(method);
+    log(`🔛 开始执行方法: ${formatUrl}`);
+    let func = eval(method);
+    log(`🔚️ 方法执行完毕: ${formatUrl}`);
     let data = JSON.parse(body.match(/\{.*\}/)[0]);
-    new func(data), body = JSON.stringify(data), "removePhpScreenAds" == method && (body = JSON.stringify(data) + "OK")
+    new func(data), body = JSON.stringify(data), "removePhpScreenAds" === method && (body = JSON.stringify(data) + "OK")
 }
+log(`${formatUrl} ====> 处理完毕`);
+log(`🚩 执行结束`);
 $done({body});
