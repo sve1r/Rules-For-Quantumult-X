@@ -2,7 +2,7 @@
  > 应用名称：墨鱼自用微博&微博国际版净化脚本
  > 脚本作者：@ddgksf2013
  > 微信账号：墨鱼手记
- > 更新时间：2024-01-26
+ > 更新时间：2025-08-11
  > 通知频道：https://t.me/ddgksf2021
  > 贡献投稿：https://t.me/ddgksf2013_bot
  > 问题反馈：ddgksf2013@163.com
@@ -527,14 +527,41 @@ let body = $response.body,
     formatUrl = url.split("?")[0];
 log(`🧣 Weibo Script 开始处理`);
 log(`ℹ️ Url: ${formatUrl}`);
-let method = getModifyMethod(url);
-log(`ℹ️ Method: ${method}`);
-if (method) {
+
+
+try {
+    let method = getModifyMethod(url);
+    if (!method) {
+        log(`⚠️ 未找到匹配的处理方法，跳过处理`);
+        throw new Error(`⚠️ 未找到匹配的处理方法，跳过处理`);
+    }
+
+    log(`ℹ️ Method: ${method}`);
     log(`🔛 开始执行方法: ${method}`);
+
     let func = eval(method);
-    log(`🔚️ 方法执行完毕: ${method}`);
-    let data = JSON.parse(body.match(/\{.*\}/)[0]);
-    new func(data), body = JSON.stringify(data), "removePhpScreenAds" === method && (body = JSON.stringify(data) + "OK")
+    if (typeof func !== 'function') {
+        throw new Error(`方法 ${method} 不是有效的函数`);
+    }
+
+    // 安全解析 JSON 数据
+    let matchedData = body.match(/\{.*\}/);
+    if (!matchedData) {
+        throw new Error("响应体中没有匹配到 JSON 数据");
+    }
+
+    let data = JSON.parse(matchedData[0]);
+    new func(data); // 执行处理方法
+
+    // 处理特殊方法（removePhpScreenAds）
+    body = ("removePhpScreenAds" === method)
+        ? JSON.stringify(data) + "OK"
+        : JSON.stringify(data);
+
+} catch (e) {
+    log(`❌ 脚本处理出错`);
+    log(`🔴 错误详情: ${e.message}`);
 }
+
 log(`🚩 执行结束`);
 $done({body});
