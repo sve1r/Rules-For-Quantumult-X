@@ -40,11 +40,13 @@ host-suffix,vas-lf-x.snssdk.com,reject
 host-wildcard,*novelapp.ixigua.com,reject
 host-wildcard,*default.ixigua.com,reject
 host-wildcard,lf*-cdn-tos-ncdn.bytegecko.com,reject
+host-wildcard,lf-normal-gr-sourcecdn.bytegecko.com,reject
 host,adim.pinduoduo.com,reject
 host,activity-ag.awemeughun.com,reject
 host,activity-zhendingtech.com,reject
 host,dig.bdurl.net,reject
 host,mktm.jd.com,reject
+host,apm-m.pinduoduo.com,reject
 host,msync-im1-vip6-std.easemob.com,reject
 host,security-lq.snssdk.com,reject
 host,sf3-ttcdn-tos.pstatp.com,reject

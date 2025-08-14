@@ -12,7 +12,7 @@
  ***********************************************/
 
 
-const version = 'V2.0.136-svdv-0609-12';
+const version = 'V2.0.138-svdv-0814-1';
 
 
 const mainConfig = {
@@ -95,8 +95,8 @@ const mainConfig = {
         "wbapplua/wbpullad.lua": "removeLuaScreenAds",
         "/2/messageflow": "removeMsgAd",
         "/2/page?": "removePage",
-        "/2/statuses/container_detail": "removeContainerDetailCards",
         "/2/statuses/container_detail_comment": "removeContainerDetailComments",
+        "/2/statuses/container_detail": "removeContainerDetailCards",
         "/2/statuses/video_mixtimeline": "nextVideoHandler",
         "/checkin/show": "removeCheckin",
         "/comments/build_comments": "removeComments",
@@ -151,7 +151,8 @@ function removeAdBanner(a) {
 function removeAdPreload(a) {
     if (!a.ads) return a;
     a.last_ad_show_interval = 86400;
-    for (let b of a.ads) b.start_time = 2681574400, b.end_time = 2681660799, b.display_duration = 0, b.daily_display_cnt = 0, b.total_display_cnt = 0;
+    for (let b of a.ads)
+        b.start_time = 2681574400, b.end_time = 2681660799, b.display_duration = 0, b.daily_display_cnt = 0, b.total_display_cnt = 0;
     return a
 }
 
@@ -438,22 +439,22 @@ function removeContainerDetailComments(a) {
     log('开始处理V2评论');
     let b = ["\u5e7f\u544a", "\u5ee3\u544a", "\u76f8\u5173\u5185\u5bb9", "\u63a8\u8350", "\u70ed\u63a8", "\u63a8\u85a6", "\u8350\u8bfb", "\u85a6\u8bfb"];
     let c = a.items || [];
-    log('原始共' + c.length + '条评论');
+    log('ℹ️ 已获取到：' + c.length + '条评论');
     if (0 !== c.length) {
         let d = [];
         for (const [i, g] of c.entries()) {
             // 如果type是 trend 则跳过
             if (g.type === 'trend' || g.commentAdType === 1) {
-                log('已去除一条广告');
+                log('ℹ️ 已去除一条 trend 广告');
                 continue;
             }
-            let adType = g.data.adType || "";
+            let adType = g.data?.adType ?? "";
             if (b.indexOf(adType) === -1 && g.type !== 6 && !isAd(g.data)) {
                 d.push(g);
             }
         }
-        log('清理后共' + d.length + '条评论');
-        log("V2: remove \u8BC4\u8BBA\u533A\u76F8\u5173\u548C\u63A8\u8350\u5185\u5BB9"), a.items = d, a.tip_msg && delete a.tip_msg
+        log('ℹ️ 清理后共：' + d.length + '条评论');
+        log("✅ \u8BC4\u8BBA\u533A\u76F8\u5173\u548C\u63A8\u8350\u5185\u5BB9"), a.items = d, a.tip_msg && delete a.tip_msg
     }
 }
 
@@ -518,15 +519,22 @@ function removePhpScreenAds(a) {
 }
 
 function log(a) {
-    mainConfig.isDebug && console.log(a)
+    mainConfig.isDebug && console.log("\n"+a)
 }
 
 let body = $response.body,
-    url = $request.url;
+    url = $request.url,
+    formatUrl = url.split("?")[0];
+log(`🧣 Weibo Script 开始处理`);
+log(`ℹ️ Url: ${formatUrl}`);
 let method = getModifyMethod(url);
+log(`ℹ️ Method: ${method}`);
 if (method) {
+    log(`🔛 开始执行方法: ${method}`);
     let func = eval(method);
+    log(`🔚️ 方法执行完毕: ${method}`);
     let data = JSON.parse(body.match(/\{.*\}/)[0]);
-    new func(data), body = JSON.stringify(data), "removePhpScreenAds" == method && (body = JSON.stringify(data) + "OK")
+    new func(data), body = JSON.stringify(data), "removePhpScreenAds" === method && (body = JSON.stringify(data) + "OK")
 }
+log(`🚩 执行结束`);
 $done({body});
