@@ -7,7 +7,7 @@ host-wildcard,lf*-reading.fqnovel.com,reject
 host-wildcard,mon*-misc-lf.fqnovel.com,reject
 host-wildcard,rtlog*-applog-*.fqnovel.com,reject
 host-wildcard,lf*-reading.fqnovelpic.com,reject
-host-wildcard,p*-reading-sign.fqnovelpic.com,reject
+;host-wildcard,p*-reading-sign.fqnovelpic.com,reject  //广告与封面混用域名，无法屏蔽
 host-wildcard,v*-novelapp.fqnovelvod.com,reject
 
 # >> Toutiao & Douyin ADs
@@ -16,7 +16,7 @@ host-suffix,api-access.pangolin-sdk-toutiao.com,reject
 host-wildcard,api-access.pangolin-sdk-toutiao*.com,reject
 host-wildcard,lf*-ad-union-sdk.pglstatp-toutiao.com,reject
 host-wildcard,p*-ad-sign.byteimg.com,reject
-# host-wildcard,p*-novel.byteimg.com,reject // 可疑域名，待验证
+;host-wildcard,p*-novel.byteimg.com,reject // 可疑域名，待验证
 host-wildcard,p*-webcast-sign.douyinpic.com,reject
 host-wildcard,pull-*.douyincdn.com,reject
 

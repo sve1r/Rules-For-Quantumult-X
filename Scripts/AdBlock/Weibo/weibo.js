@@ -2,7 +2,7 @@
  > 应用名称：墨鱼自用微博&微博国际版净化脚本
  > 脚本作者：@ddgksf2013
  > 微信账号：墨鱼手记
- > 更新时间：2025-08-11
+ > 更新时间：2025-08-15
  > 通知频道：https://t.me/ddgksf2021
  > 贡献投稿：https://t.me/ddgksf2013_bot
  > 问题反馈：ddgksf2013@163.com
@@ -12,7 +12,7 @@
  ***********************************************/
 
 
-const version = 'V2.0.138-svdv-0815-1';
+const version = 'V2.0.138-svdv-0815-2';
 
 
 const mainConfig = {
@@ -80,7 +80,8 @@ const mainConfig = {
         "statuses/friends_timeline"
     ],
     modifyNewContainerUrls = [
-        "/2/statuses/container_detail_comment"
+        "/2/statuses/container_detail_comment",
+        "/2/statuses/container_detail_mix",
     ],
     otherUrls = {
         "a=get_coopen_ads": "removeIntlOpenAds",
@@ -95,7 +96,6 @@ const mainConfig = {
         "wbapplua/wbpullad.lua": "removeLuaScreenAds",
         "/2/messageflow": "removeMsgAd",
         "/2/page?": "removePage",
-        "/2/statuses/container_detail_comment": "",
         "/2/statuses/container_detail": "removeContainerDetailCards",
         "/2/statuses/video_mixtimeline": "nextVideoHandler",
         "/checkin/show": "removeCheckin",
@@ -122,7 +122,7 @@ function getModifyMethod(url) {
     log('Url:' + url.split("?")[0]);
     let method = null;
     if (modifyNewContainerUrls.some(path => url.includes(path))) {
-        method = "";
+        method = "removeContainerDetailComments";
     }
     if (modifyCardsUrls.some(path => url.includes(path))) {
         method = "removeCards";
@@ -506,9 +506,19 @@ function skinPreviewHandler(a) {
 }
 
 function removeLuaScreenAds(a) {
-    if (!a.cached_ad) return a;
-    for (let b of a.cached_ad.ads) b.start_date = 1893254400, b.show_count = 0, b.duration = 0, b.end_date = 1893340799;
-    return a
+    if (!a.cached_ad || !a.cached_ad.ads) {
+        log(`⚠️ LUA 中未包含广告`);
+        return a;
+    }
+    log(`ℹ️ 原有 ${a.cached_ad.ads} 个广告`);
+    let c = [];
+    // for (let b of a.cached_ad.ads) {
+    //     b.start_date = 1893254400, b.show_count = 0, b.duration = 0, b.end_date = 1893340799;
+    //     c.push(b);
+    // }
+    a.cached_ad.ads = c;
+    log(`✅ 调整了 ${c.length} 个广告`);
+    return a;
 }
 
 function removePhpScreenAds(a) {
@@ -519,7 +529,7 @@ function removePhpScreenAds(a) {
 }
 
 function log(a) {
-    mainConfig.isDebug && console.log("\n"+a)
+    mainConfig.isDebug && console.log("\n" + a)
 }
 
 let body = $response.body,
