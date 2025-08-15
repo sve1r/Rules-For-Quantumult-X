@@ -1,4 +1,18 @@
-const version = 'V2.0.136-svdv-0724-2';
+/***********************************************
+ > 应用名称：墨鱼自用微博&微博国际版净化脚本
+ > 脚本作者：@ddgksf2013
+ > 微信账号：墨鱼手记
+ > 更新时间：2025-08-11
+ > 通知频道：https://t.me/ddgksf2021
+ > 贡献投稿：https://t.me/ddgksf2013_bot
+ > 问题反馈：ddgksf2013@163.com
+ > 特别提醒：如需转载请注明出处，谢谢合作！
+ > 脚本声明：本脚本是在[https://github.com/zmqcherish]原创基础上优化自用
+ > 脚本声明：若有侵犯原作者权利，请邮箱联系删除
+ ***********************************************/
+
+
+const version = 'V2.0.138-svdv-0815-1';
 
 
 const mainConfig = {
@@ -65,6 +79,9 @@ const mainConfig = {
         "groups/timeline",
         "statuses/friends_timeline"
     ],
+    modifyNewContainerUrls = [
+        "/2/statuses/container_detail_comment"
+    ],
     otherUrls = {
         "a=get_coopen_ads": "removeIntlOpenAds",
         "a=trends": "removeTopics",
@@ -78,7 +95,7 @@ const mainConfig = {
         "wbapplua/wbpullad.lua": "removeLuaScreenAds",
         "/2/messageflow": "removeMsgAd",
         "/2/page?": "removePage",
-        "/2/statuses/container_detail_comment": "removeContainerDetailComments",
+        "/2/statuses/container_detail_comment": "",
         "/2/statuses/container_detail": "removeContainerDetailCards",
         "/2/statuses/video_mixtimeline": "nextVideoHandler",
         "/checkin/show": "removeCheckin",
@@ -101,14 +118,26 @@ const mainConfig = {
         "/!/client/light_skin": "tabSkinHandler",
     };
 
-function getModifyMethod(a) {
-    for (const [b, c] of Object.entries(otherUrls))
-        if (-1 < a.indexOf(b)) return c;
-    for (const b of modifyCardsUrls)
-        if (-1 < a.indexOf(b)) return "removeCards";
-    for (const b of modifyStatusesUrls)
-        if (-1 < a.indexOf(b)) return "removeTimeLine";
-    return null
+function getModifyMethod(url) {
+    log('Url:' + url.split("?")[0]);
+    let method = null;
+    if (modifyNewContainerUrls.some(path => url.includes(path))) {
+        method = "";
+    }
+    if (modifyCardsUrls.some(path => url.includes(path))) {
+        method = "removeCards";
+    }
+    if (modifyStatusesUrls.some(path => url.includes(path))) {
+        method = "removeTimeLine";
+    }
+    for (const [key, handler] of Object.entries(otherUrls)) {
+        if (url.includes(key)) {
+            method = handler;
+            break;
+        }
+    }
+    log('Method:' + method);
+    return method;
 }
 
 function removeRealtimeAd(a) {
@@ -498,14 +527,41 @@ let body = $response.body,
     formatUrl = url.split("?")[0];
 log(`🧣 Weibo Script 开始处理`);
 log(`ℹ️ Url: ${formatUrl}`);
-let method = getModifyMethod(url);
-log(`ℹ️ Method: ${method}`);
-if (method) {
+
+
+try {
+    let method = getModifyMethod(url);
+    if (!method) {
+        log(`⚠️ 未找到匹配的处理方法，跳过处理`);
+        throw new Error(`⚠️ 未找到匹配的处理方法，跳过处理`);
+    }
+
+    log(`ℹ️ Method: ${method}`);
     log(`🔛 开始执行方法: ${method}`);
+
     let func = eval(method);
-    log(`🔚️ 方法执行完毕: ${method}`);
-    let data = JSON.parse(body.match(/\{.*\}/)[0]);
-    new func(data), body = JSON.stringify(data), "removePhpScreenAds" === method && (body = JSON.stringify(data) + "OK")
+    if (typeof func !== 'function') {
+        throw new Error(`方法 ${method} 不是有效的函数`);
+    }
+
+    // 安全解析 JSON 数据
+    let matchedData = body.match(/\{.*\}/);
+    if (!matchedData) {
+        throw new Error("响应体中没有匹配到 JSON 数据");
+    }
+
+    let data = JSON.parse(matchedData[0]);
+    new func(data); // 执行处理方法
+
+    // 处理特殊方法（removePhpScreenAds）
+    body = ("removePhpScreenAds" === method)
+        ? JSON.stringify(data) + "OK"
+        : JSON.stringify(data);
+
+} catch (e) {
+    log(`❌ 脚本处理出错`);
+    log(`🔴 错误详情: ${e.message}`);
 }
+
 log(`🚩 执行结束`);
 $done({body});

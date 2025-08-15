@@ -5,13 +5,13 @@
 // @TgChannel         https://t.me/ddgksf2021
 // @Contribute        https://t.me/ddgksf2013_bot
 // @Feedback          📮 ddgksf2013@163.com 📮
-// @UpdateTime        2025-06-09
+// @UpdateTime        2025-08-08
 // @Attention         微博、微博国际版净化，现已二合一，使用中若有问题请发邮件！
 // @Attention         使用时请注意关闭QuantumultX的[兼容性增强]开关，否则无法去除微博广告
 // @Suitable          自行观看“# > ”注释内容
 // @Contributors      @zmqcherish
 // @Attention         如需引用请注明出处，谢谢合作！
-// @Version           V2.0.107-svdv-0702-1
+// @Version           V2.0.109-svdv-081401
 // @ScriptURL         https://raw.githubusercontent.com/ddgksf2013/Rewrite/refs/heads/master/AdBlock/Weibo.conf
 // ==/UserScript==
 
@@ -23,6 +23,12 @@ hostname = api.weibo.*, *.api.weibo.*, mapi.weibo.*, *.uve.weibo.com, new.vip.we
 ; host, sdkapp.uve.weibo.com, direct
 
 # ======= 微博国内版 ======= #
+# > 微博_首页信息流可能感兴趣推广@ddgksf2013
+^https?:\/\/api\.weibo\.cn\/\d\/statuses\/container_positive url reject-200
+# > 微博_首页顶部弹窗@ddgksf2013
+^https?:\/\/api\.weibo\.cn\/\d\/push\/info url reject-200
+# > 微博_删除侧栏视频流@ddgksf2013
+^https?:\/\/api\.weibo\.cn\/\d\/ug\/checkin\/stream url jsonjq-response-body '.items |= map(select(.category != "card"))'
 # > 微博_启动感兴趣弹窗@ddgksf2013
 ^https?:\/\/api\.weibo\.cn\/.*account\/recommend_interesttags url reject-dict
 # > 微博_首页顶部直播推荐Tab@ddgksf2013

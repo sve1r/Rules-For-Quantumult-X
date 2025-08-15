@@ -16,7 +16,7 @@ host-suffix,api-access.pangolin-sdk-toutiao.com,reject
 host-wildcard,api-access.pangolin-sdk-toutiao*.com,reject
 host-wildcard,lf*-ad-union-sdk.pglstatp-toutiao.com,reject
 host-wildcard,p*-ad-sign.byteimg.com,reject
-host-wildcard,p*-novel.byteimg.com,reject
+# host-wildcard,p*-novel.byteimg.com,reject // 可疑域名，待验证
 host-wildcard,p*-webcast-sign.douyinpic.com,reject
 host-wildcard,pull-*.douyincdn.com,reject
 
@@ -26,8 +26,10 @@ host-wildcard,ads*-normal-*.zijieapi.com,reject
 host-wildcard,bsync*-normal-lf.zijieapi.com,reject
 host-wildcard,mssdk*-normal-lf.zijieapi.com,reject
 host-wildcard,polaris*-normal-lf.zijieapi.com,reject
+host-wildcard,tnc*-aliec*.zijieapi.com,reject
+host-wildcard,tnc*-alisc*.zijieapi.com,reject
+host-suffix,imapi5-oth-If.zijieapi.com,reject
 host-suffix,rtapplog.zijieapi.com,reject
-host-wildcard,tnc*-ali*.zijieapi.com,reject
 
 # >> SNS SDK
 host-suffix,i.snssdk.com,reject
@@ -35,21 +37,26 @@ host-suffix,i-lq.snssdk.com,reject
 host-suffix,is.snssdk.com,reject
 host-suffix,mcs.snssdk.com,reject
 host-suffix,vas-lf-x.snssdk.com,reject
+host-wildcard,tnc*-bjlgy.snssdk.com,reject
 
 # >> Other Domains
 host-wildcard,*novelapp.ixigua.com,reject
 host-wildcard,*default.ixigua.com,reject
 host-wildcard,lf*-cdn-tos-ncdn.bytegecko.com,reject
-host-wildcard,lf-normal-gr-sourcecdn.bytegecko.com,reject
-host,adim.pinduoduo.com,reject
 host,activity-ag.awemeughun.com,reject
 host,activity-zhendingtech.com,reject
 host,dig.bdurl.net,reject
-host,mktm.jd.com,reject
-host,apm-m.pinduoduo.com,reject
 host,msync-im1-vip6-std.easemob.com,reject
 host,security-lq.snssdk.com,reject
 host,sf3-ttcdn-tos.pstatp.com,reject
+host-suffix,lf-normal-gr-sourcecdn.bytegecko.com,reject
+
+# >> Other AD SDK
+host,mktm.jd.com,reject
+host,adim.pinduoduo.com,reject
+host,apm-m.pinduoduo.com,reject
+host,shark-tracer.netease.com,reject
+
 
 # >> IP-CIDR
 ip-cidr,49.71.37.101/32,reject
