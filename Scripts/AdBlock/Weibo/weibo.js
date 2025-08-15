@@ -12,7 +12,7 @@
  ***********************************************/
 
 
-const version = 'V2.0.138-svdv-0814-1';
+const version = 'V2.0.138-svdv-0815-1';
 
 
 const mainConfig = {
@@ -95,7 +95,7 @@ const mainConfig = {
         "wbapplua/wbpullad.lua": "removeLuaScreenAds",
         "/2/messageflow": "removeMsgAd",
         "/2/page?": "removePage",
-        "/2/statuses/container_detail_comment": "removeContainerDetailComments",
+        "/2/statuses/container_detail_comment": "",
         "/2/statuses/container_detail": "removeContainerDetailCards",
         "/2/statuses/video_mixtimeline": "nextVideoHandler",
         "/checkin/show": "removeCheckin",
@@ -122,7 +122,7 @@ function getModifyMethod(url) {
     log('Url:' + url.split("?")[0]);
     let method = null;
     if (modifyNewContainerUrls.some(path => url.includes(path))) {
-        method = "removeContainerDetailComments";
+        method = "";
     }
     if (modifyCardsUrls.some(path => url.includes(path))) {
         method = "removeCards";

@@ -8,7 +8,7 @@ host,boot.biz.weibo.com,reject
 host,adstrategy.biz.weibo.com, reject
 
 # > Weibo International @ddgksf2013
-host-suffix, api.touch-moblie.com, reject
+host-suffix, api.touch-mobile.com, reject
 
 # > Weibo Api
 host-suffix,api.weibo.cn,Weibo
