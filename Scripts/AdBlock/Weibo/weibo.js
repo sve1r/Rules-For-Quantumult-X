@@ -12,118 +12,165 @@
  ***********************************************/
 
 
-const version = 'V2.0.138-svdv-0815-2';
+const version = 'V2.0.139-svdv-090401';
 
 
 const mainConfig = {
-        isDebug: !0,
-        author: "sve1r",
-        removeHomeVip: !0,
-        removeHomeCreatorTask: !0,
-        removeRelate: !0,
-        removeGood: !0,
-        removeFollow: !0,
-        modifyMenus: !0,
-        removeRelateItem: !1,
-        removeRecommendItem: !0,
-        removeRewardItem: !0,
-        removeLiveMedia: !0,
-        removeNextVideo: !1,
-        removePinedTrending: !0,
-        removeInterestFriendInTopic: !1,
-        removeInterestTopic: !1,
-        removeInterestUser: !0,
-        removeLvZhou: !0,
-        removeSearchWindow: !0,
-        profileSkin1: null,
-        profileSkin2: null,
-        tabIconVersion: 0,
-        tabIconPath: ""
-    },
-    itemMenusConfig = {
-        creator_task: !1,
-        mblog_menus_custom: !1,
-        mblog_menus_video_later: !0,
-        mblog_menus_comment_manager: !0,
-        mblog_menus_avatar_widget: !1,
-        mblog_menus_card_bg: !1,
-        mblog_menus_long_picture: !0,
-        mblog_menus_delete: !0,
-        mblog_menus_edit: !0,
-        mblog_menus_edit_history: !0,
-        mblog_menus_edit_video: !0,
-        mblog_menus_sticking: !0,
-        mblog_menus_open_reward: !0,
-        mblog_menus_novelty: !1,
-        mblog_menus_favorite: !0,
-        mblog_menus_promote: !0,
-        mblog_menus_modify_visible: !0,
-        mblog_menus_copy_url: !0,
-        mblog_menus_follow: !0,
-        mblog_menus_video_feedback: !0,
-        mblog_menus_shield: !0,
-        mblog_menus_report: !0,
-        mblog_menus_apeal: !0,
-        mblog_menus_home: !0
-    },
-    modifyCardsUrls = [
-        "/cardlist",
-        "video/community_tab",
-        "searchall"
-    ],
-    modifyStatusesUrls = [
-        "statuses/friends/timeline",
-        "statuses_unread_hot_timeline",
-        "statuses/unread_friends_timeline",
-        "statuses/unread_hot_timeline",
-        "groups/timeline",
-        "statuses/friends_timeline"
-    ],
-    modifyNewContainerUrls = [
-        "/2/statuses/container_detail_comment",
-        "/2/statuses/container_detail_mix",
-    ],
-    otherUrls = {
-        "a=get_coopen_ads": "removeIntlOpenAds",
-        "a=trends": "removeTopics",
-        "ad/preload": "removeAdPreload",
-        "ad/realtime": "removeRealtimeAd",
-        "interface/sdk/sdkad.php": "removePhpScreenAds",
-        "php?a=open_app": "removeAdBanner",
-        "php?a=search_topic": "removeSearchTopic",
-        "user_center": "modifiedUserCenter",
-        "video/tiny_stream_mid_detail": "nextVideoHandler",
-        "wbapplua/wbpullad.lua": "removeLuaScreenAds",
-        "/2/messageflow": "removeMsgAd",
-        "/2/page?": "removePage",
-        "/2/statuses/container_detail": "removeContainerDetailCards",
-        "/2/statuses/video_mixtimeline": "nextVideoHandler",
-        "/checkin/show": "removeCheckin",
-        "/comments/build_comments": "removeComments",
-        "/container/get_item": "containerHandler",
-        "/live/media_homelist": "removeMediaHomelist",
-        "/littleskin/preview": "skinPreviewHandler",
-        "/profile/container_timeline": "userHandler",
-        "/profile/me": "removeHome",
-        "/search/container_discover": "removeSearch",
-        "/search/container_timeline": "removeSearch",
-        "/search/finder": "removeSearchMain",
-        "/square&pageDataType/": "squareHandler",
-        "/statuses/container_timeline": "removeMainTab",
-        "/statuses/container_timeline_topic": "removeMain",
-        "/statuses/extend": "itemExtendHandler",
-        "/statuses/unread_topic_timeline": "topicHandler",
-        "/video/remind_info": "removeVideoRemind",
-        "/video/tiny_stream_video_list": "nextVideoHandler",
-        "/!/client/light_skin": "tabSkinHandler",
-    };
+    isDebug: !0,
+    author: "sve1r",
+    removeHomeVip: !0,
+    removeHomeCreatorTask: !0,
+    removeRelate: !0,
+    removeGood: !0,
+    removeFollow: !0,
+    modifyMenus: !0,
+    removeRelateItem: !1,
+    removeRecommendItem: !0,
+    removeRewardItem: !0,
+    removeLiveMedia: !0,
+    removeNextVideo: !1,
+    removePinedTrending: !0,
+    removeInterestFriendInTopic: !1,
+    removeInterestTopic: !1,
+    removeInterestUser: !0,
+    removeLvZhou: !0,
+    removeSearchWindow: !0,
+    profileSkin1: null,
+    profileSkin2: null,
+    tabIconVersion: 0,
+    tabIconPath: ""
+};
+const itemMenusConfig = {
+    creator_task: !1,
+    mblog_menus_custom: !1,
+    mblog_menus_video_later: !0,
+    mblog_menus_comment_manager: !0,
+    mblog_menus_avatar_widget: !1,
+    mblog_menus_card_bg: !1,
+    mblog_menus_long_picture: !0,
+    mblog_menus_delete: !0,
+    mblog_menus_edit: !0,
+    mblog_menus_edit_history: !0,
+    mblog_menus_edit_video: !0,
+    mblog_menus_sticking: !0,
+    mblog_menus_open_reward: !0,
+    mblog_menus_novelty: !1,
+    mblog_menus_favorite: !0,
+    mblog_menus_promote: !0,
+    mblog_menus_modify_visible: !0,
+    mblog_menus_copy_url: !0,
+    mblog_menus_follow: !0,
+    mblog_menus_video_feedback: !0,
+    mblog_menus_shield: !0,
+    mblog_menus_report: !0,
+    mblog_menus_apeal: !0,
+    mblog_menus_home: !0
+};
+const modifyCardsUrls = [
+    "/cardlist",
+    "video/community_tab",
+    "searchall"
+];
+const modifyStatusesUrls = [
+    "statuses/friends/timeline",
+    "statuses_unread_hot_timeline",
+    "statuses/unread_friends_timeline",
+    "statuses/unread_hot_timeline",
+    "groups/timeline",
+    "statuses/friends_timeline"
+];
+const otherUrls = {
+    "a=get_coopen_ads": "removeIntlOpenAds",
+    "a=trends": "removeTopics",
+    "ad/preload": "removeAdPreload",
+    "ad/realtime": "removeRealtimeAd",
+    "interface/sdk/sdkad.php": "removePhpScreenAds",
+    "php?a=open_app": "removeAdBanner",
+    "php?a=search_topic": "removeSearchTopic",
+    "user_center": "modifiedUserCenter",
+    "video/tiny_stream_mid_detail": "nextVideoHandler",
+    "wbapplua/wbpullad.lua": "removeLuaScreenAds",
+    "/2/messageflow": "removeMsgAd",
+    "/2/page?": "removePage",
+    "/2/statuses/container_detail_comment": "removeContainerDetailComments",
+    "/2/statuses/container_detail_mix": "removeContainerDetailComments",
+    "/2/statuses/container_detail": "removeContainerDetailCards",
+    "/2/statuses/video_mixtimeline": "nextVideoHandler",
+    "/2/groups/allgroups/v2": "removeGroupsTab",
+    "/checkin/show": "removeCheckin",
+    "/comments/build_comments": "removeComments",
+    "/container/get_item": "containerHandler",
+    "/live/media_homelist": "removeMediaHomelist",
+    "/littleskin/preview": "skinPreviewHandler",
+    "/profile/container_timeline": "userHandler",
+    "/profile/me": "removeHome",
+    "/search/container_discover": "removeSearch",
+    "/search/container_timeline": "removeSearch",
+    "/search/finder": "removeSearchMain",
+    "/square&pageDataType/": "squareHandler",
+    "/statuses/container_timeline": "removeMainTab",
+    "/statuses/container_timeline_topic": "removeMain",
+    "/statuses/extend": "itemExtendHandler",
+    "/statuses/unread_topic_timeline": "topicHandler",
+    "/video/remind_info": "removeVideoRemind",
+    "/video/tiny_stream_video_list": "nextVideoHandler",
+    "/!/client/light_skin": "tabSkinHandler",
+};
 
-function getModifyMethod(url) {
-    log('Url:' + url.split("?")[0]);
-    let method = null;
-    if (modifyNewContainerUrls.some(path => url.includes(path))) {
-        method = "removeContainerDetailComments";
+/*********************************脚本入口*********************************/
+let body = $response.body;
+let url = $request.url;
+let formatUrl = url.split("?")[0];
+log(`🧣 Weibo Script 开始处理`);
+log(`ℹ️ Url: ${formatUrl}`);
+
+try {
+    let method = getModifyMethod(url);
+    if (!method) {
+        log(`⚠️ 未找到匹配的处理方法，跳过处理`);
+        throw new Error(`⚠️ 未找到匹配的处理方法，跳过处理`);
     }
+
+    log(`ℹ️ Method: ${method}`);
+    log(`🏁 开始执行方法: ${method}`);
+
+    let func = eval(method);
+    if (typeof func !== 'function') {
+        throw new Error(`方法 ${method} 不是有效的函数`);
+    }
+
+    // 安全解析 JSON 数据
+    let matchedData = body.match(/\{.*\}/);
+    if (!matchedData) {
+        throw new Error("响应体中没有匹配到 JSON 数据");
+    }
+
+    let data = JSON.parse(matchedData[0]);
+    new func(data); // 执行处理方法
+
+    log(`🏁 方法执行结束: ${method}`);
+    // 处理特殊方法（removePhpScreenAds）
+    body = ("removePhpScreenAds" === method)
+        ? JSON.stringify(data) + "OK"
+        : JSON.stringify(data);
+
+} catch (e) {
+    log(`❌ 脚本处理出错`);
+    log(`🔴 错误详情: ${e.message}`);
+}
+
+log(`🚩 执行结束`);
+$done({body});
+
+/*********************************脚本结束*********************************/
+
+/**
+ * 获取修改内容方法
+ * @param url 链接
+ * @returns {null}
+ */
+function getModifyMethod(url) {
+    let method = "";
     if (modifyCardsUrls.some(path => url.includes(path))) {
         method = "removeCards";
     }
@@ -136,7 +183,6 @@ function getModifyMethod(url) {
             break;
         }
     }
-    log('Method:' + method);
     return method;
 }
 
@@ -149,11 +195,16 @@ function removeAdBanner(a) {
 }
 
 function removeAdPreload(a) {
-    if (!a.ads) return a;
-    a.last_ad_show_interval = 86400;
-    for (let b of a.ads)
-        b.start_time = 2681574400, b.end_time = 2681660799, b.display_duration = 0, b.daily_display_cnt = 0, b.total_display_cnt = 0;
-    return a
+    if (!a.ads) {
+        log(`⚠️ 未包含预加载广告`);
+        return a;
+    }
+    // a.last_ad_show_interval = 86400;
+    // for (let b of a.ads)
+    //     b.start_time = 2681574400, b.end_time = 2681660799, b.display_duration = 0, b.daily_display_cnt = 0, b.total_display_cnt = 0;
+    a.ads = [];
+    log(`✅ 已清除所有预加载广告`);
+    return a;
 }
 
 function removeIntlOpenAds(a) {
@@ -400,7 +451,7 @@ function updateProfileSkin(a, b) {
         }
         log("updateProfileSkin success")
     } catch (a) {
-        console.log("updateProfileSkin fail")
+        log("updateProfileSkin fail")
     }
 }
 
@@ -474,7 +525,7 @@ function userHandler(a) {
         }
         a && (c.data?.common_struct && delete c.data.common_struct, b.push(c))
     }
-    return a.items = b, log("removeMain sub success"), a
+    return a.items = b, log("✅ 已清除用户页签内容"), a
 }
 
 function nextVideoHandler(a) {
@@ -485,7 +536,7 @@ function nextVideoHandler(a) {
         for (const b of a) c.video_info?.[b] && delete c.video_info[b];
         b.push(c)
     }
-    return a.statuses = b, log("removeMainTab Success"), a
+    return a.statuses = b, log("✅ 已清除主页签内容"), a
 }
 
 function tabSkinHandler(a) {
@@ -506,19 +557,23 @@ function skinPreviewHandler(a) {
 }
 
 function removeLuaScreenAds(a) {
-    if (!a.cached_ad || !a.cached_ad.ads) {
-        log(`⚠️ LUA 中未包含广告`);
+    try {
+        if (!a.cached_ad || !a.cached_ad.ads) {
+            log(`⚠️ LUA 中未包含广告`);
+            return a;
+        }
+        log(`ℹ️ 原有 ${a.cached_ad.ads.length} 个广告`);
+        // for (let b of a.cached_ad.ads) {
+        //     b.start_date = 1893254400, b.show_count = 0, b.duration = 0, b.end_date = 1893340799;
+        //     c.push(b);
+        // }
+        a.cached_ad.ads = [];
+        //log(`✅ 调整后 ${c.length} 个广告`);
+        log(`✅ 已清除所有 LUA 广告`);
         return a;
+    } catch (e) {
+        log(`❌ 删除 LUA 广告失败：${e.message}`);
     }
-    log(`ℹ️ 原有 ${a.cached_ad.ads} 个广告`);
-    let c = [];
-    // for (let b of a.cached_ad.ads) {
-    //     b.start_date = 1893254400, b.show_count = 0, b.duration = 0, b.end_date = 1893340799;
-    //     c.push(b);
-    // }
-    a.cached_ad.ads = c;
-    log(`✅ 调整了 ${c.length} 个广告`);
-    return a;
 }
 
 function removePhpScreenAds(a) {
@@ -528,50 +583,26 @@ function removePhpScreenAds(a) {
     return a
 }
 
+function removeGroupsTab(a) {
+    try {
+        for (let i = a.pageDatas.length - 1; i >= 0; i--) {
+            const item = a.pageDatas[i];
+            if (item.pageDataType === "homeExtend") {
+                items.splice(i, 1);
+            }
+        }
+        // 删除恶心人的“全部微博”
+        if (a.pageDatas[0].categories) {
+            delete a.pageDatas[0].categories[0].pageDatas[0];
+        } else {
+            delete a.pageDatas[1].categories[0].pageDatas[0];
+        }
+    } catch (e) {
+        log(`❌ 清除顶部分组冗余内容失败：${e.message}`);
+    }
+    log("✅ 已清除顶部分组冗余内容")
+}
+
 function log(a) {
     mainConfig.isDebug && console.log("\n" + a)
 }
-
-let body = $response.body,
-    url = $request.url,
-    formatUrl = url.split("?")[0];
-log(`🧣 Weibo Script 开始处理`);
-log(`ℹ️ Url: ${formatUrl}`);
-
-
-try {
-    let method = getModifyMethod(url);
-    if (!method) {
-        log(`⚠️ 未找到匹配的处理方法，跳过处理`);
-        throw new Error(`⚠️ 未找到匹配的处理方法，跳过处理`);
-    }
-
-    log(`ℹ️ Method: ${method}`);
-    log(`🔛 开始执行方法: ${method}`);
-
-    let func = eval(method);
-    if (typeof func !== 'function') {
-        throw new Error(`方法 ${method} 不是有效的函数`);
-    }
-
-    // 安全解析 JSON 数据
-    let matchedData = body.match(/\{.*\}/);
-    if (!matchedData) {
-        throw new Error("响应体中没有匹配到 JSON 数据");
-    }
-
-    let data = JSON.parse(matchedData[0]);
-    new func(data); // 执行处理方法
-
-    // 处理特殊方法（removePhpScreenAds）
-    body = ("removePhpScreenAds" === method)
-        ? JSON.stringify(data) + "OK"
-        : JSON.stringify(data);
-
-} catch (e) {
-    log(`❌ 脚本处理出错`);
-    log(`🔴 错误详情: ${e.message}`);
-}
-
-log(`🚩 执行结束`);
-$done({body});

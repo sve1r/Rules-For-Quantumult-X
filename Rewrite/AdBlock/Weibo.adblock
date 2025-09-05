@@ -5,22 +5,23 @@
 // @TgChannel         https://t.me/ddgksf2021
 // @Contribute        https://t.me/ddgksf2013_bot
 // @Feedback          📮 ddgksf2013@163.com 📮
-// @UpdateTime        2025-08-08
+// @UpdateTime        2025-08-15
 // @Attention         微博、微博国际版净化，现已二合一，使用中若有问题请发邮件！
 // @Attention         使用时请注意关闭QuantumultX的[兼容性增强]开关，否则无法去除微博广告
 // @Suitable          自行观看“# > ”注释内容
 // @Contributors      @zmqcherish
 // @Attention         如需引用请注明出处，谢谢合作！
-// @Version           V2.0.109-svdv-081401
-// @ScriptURL         https://raw.githubusercontent.com/ddgksf2013/Rewrite/refs/heads/master/AdBlock/Weibo.conf
+// @Version           V2.0.112-sdvd-090401
+// @ScriptURL         https://raw.githubusercontent.com/ddgksf2013/Rewrite/refs/heads/master/AdBlock/WeiboAds.conf
 // ==/UserScript==
 
 
 hostname = api.weibo.*, *.api.weibo.*, mapi.weibo.*, *.uve.weibo.com, new.vip.weibo.cn, boot.biz.weibo.com
 
 
-# > 微博_请手动添加以下分流至本地@ddgksf2013
-; host, sdkapp.uve.weibo.com, direct
+# > 微博_分流@ddgksf2013
+host, sdkapp.uve.weibo.com, direct
+host, adstrategy.biz.weibo.com, reject
 
 # ======= 微博国内版 ======= #
 # > 微博_首页信息流可能感兴趣推广@ddgksf2013
@@ -67,7 +68,7 @@ hostname = api.weibo.*, *.api.weibo.*, mapi.weibo.*, *.uve.weibo.com, new.vip.we
 # > 微博_非会员设置tab皮肤@zmqcherish
 ^https://new.vip.weibo.cn/littleskin/preview url script-response-body https://r.sveir.xyz/Scripts/AdBlock/Weibo/weibo.min.js
 # > 微博_去广告以及去除各部分推广模块@zmqcherish,@ddgksf2013
-^https?:\/\/m?api\.weibo\.c(n|om)\/\d\/(searchall|page\?|messageflow) url script-response-body https://r.sveir.xyz/Scripts/AdBlock/Weibo/weibo.min.js
+^https?:\/\/m?api\.weibo\.c(n|om)\/\d\/(searchall|page\?|0flowpage) url script-response-body https://r.sveir.xyz/Scripts/AdBlock/Weibo/weibo.min.js
 ^https?:\/\/m?api\.weibo\.c(n|om)\/\d\/statuses/(unread_)?friends(/|_)timeline url script-response-body https://r.sveir.xyz/Scripts/AdBlock/Weibo/weibo.min.js
 ^https?:\/\/m?api\.weibo\.c(n|om)\/\d\/groups/timeline url script-response-body https://r.sveir.xyz/Scripts/AdBlock/Weibo/weibo.min.js
 ^https?:\/\/m?api\.weibo\.c(n|om)\/\d\/statuses/container_detail_comment url script-response-body https://r.sveir.xyz/Scripts/AdBlock/Weibo/weibo.min.js
@@ -80,6 +81,8 @@ hostname = api.weibo.*, *.api.weibo.*, mapi.weibo.*, *.uve.weibo.com, new.vip.we
 
 
 # ======= 微博国际版 ======= #
+# > 微博国际版_开屏拦截@ddgksf2013
+host-suffix, api.touch-moblie.com, reject
 # > 微博国际版_帖子下方广告banner@ddgksf2013
 ^https?:\/\/weibointl\.api\.weibo\.cn\/portal\.php\?a=open_app url script-response-body https://r.sveir.xyz/Scripts/AdBlock/Weibo/weibo.min.js
 # > 微博国际版_趋势页热门影片@ddgksf2013
