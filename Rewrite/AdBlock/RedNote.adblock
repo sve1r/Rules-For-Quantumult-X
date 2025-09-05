@@ -5,9 +5,10 @@
 // @WechatID          墨鱼手记
 // @TgChannel         https://t.me/ddgksf2021
 // @Contribute        https://t.me/ddgksf2013_bot
-// @MainFunction      去开屏、瀑布流、启动服务广告及一些隐私、广告、青少年请求，去水印及功能增强
+// @MainFunction      去除开屏、瀑布流及启动服务广告，屏蔽隐私与青少年请求，去除帖子图片水印、Live 图片水印及短视频水印，功能增强与体验优化
+// @Attention         评论区图片水印未处理，无需邮件反馈
 // @Feedback          📮 ddgksf2013@163.com 📮
-// @UpdateTime        2025-04-13
+// @UpdateTime        2025-08-17
 // @Attention         请在QuantumultX配置文件的[general]下添加 udp_drop_list=443
 // @Suitable          自行观看“# > ”注释内容
 // @Attention         如需引用请注明出处，谢谢合作！

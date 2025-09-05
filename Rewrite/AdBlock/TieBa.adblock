@@ -1,9 +1,35 @@
-# 贴吧去广告-qx(>=iOS15)
-# qx加载本重写前,须同时加载对应的贴吧分流,否则不能完全去广告
-# 仓库地址 https://github.com/app2smile/rules
-# 开屏广告;推荐和吧内帖子列表的直播及广告;详情页直播/关联商品/广告;看图模式广告;首页和帖子详情页右下角悬浮广告;部分吧内的置顶/最新中间的广告/head图片广告/head直播
+// ==UserScript==
+// @ScriptName        百度贴吧净化[墨鱼版]
+// @Author            @app2smile, @ddgksf2013
+// @Attention         QX(Build ≥ 848, Version > 1.5.2)
+// @WechatID          墨鱼手记
+// @TgChannel         https://t.me/ddgksf2021
+// @Contribute        https://t.me/ddgksf2013_bot
+// @Feedback          📮 ddgksf2013@163.com 📮
+// @UpdateTime        2025-05-13
+// @Suitable          自行观看“# > ”注释内容
+// @Attention         如需引用请注明出处，谢谢合作！
+// @Version           V1.0.03
+// @RewriteURL        https://raw.githubusercontent.com/ddgksf2013/Rewrite/refs/heads/master/AdBlock/TieBaAds.conf
+// ==/UserScript==
 
-hostname = tiebac.baidu.com
 
-^http(s:\/\/tiebac|:\/\/c\.tieba)\.baidu\.com\/(c\/f\/(frs\/(page|threadlist|generalTabList)|pb\/page|excellent\/personalized)$|tiebaads\/commonbatch|c\/s\/sync$) url script-response-body https://r.sveir.xyz/Scripts/AdBlock/Other/Tieba.min.js
-^http(s:\/\/tiebac|:\/\/c\.tieba)\.baidu\.com\/c\/f\/(frs\/(page|threadlist|generalTabList)|pb\/page|excellent\/personalized)\?cmd url script-response-body https://r.sveir.xyz/Scripts/AdBlock/Other/Tieba-2.min.js
+
+hostname = tieba.baidu.com, tiebac.baidu.com
+
+IP-CIDR,180.76.76.200/32,reject
+
+# > 首页搜索|进吧搜索@ddgksf2013
+^https?:\/\/tieba(c)?\.baidu\.com\/c\/f\/search\/discover url jsonjq-response-body '.data.discover_list = []'
+# > 侧边抽屉栏@ddgksf2013
+^https?:\/\/tieba(c)?\.baidu\.com\/c\/f\/sidebar\/home url jsonjq-response-body 'del(.game_center, .tools, .vip_banner, .task_list)'
+# > 我的页面@ddgksf2013
+^https?:\/\/tieba(c)?\.baidu\.com\/c\/u\/user\/profile url jsonjq-response-body 'del(.duxiaoman, .namoaixud, .namoaixud_entry, .recom_naws_list, .duxiaoman_entry, .vip_banner) | .zone_info |= map(select(.type == "common_func" or .type == "auxiliary_func"))'
+# > 进吧Form@ddgksf2013
+^https?:\/\/tieba(c)?\.baidu\.com\/c\/f\/forum\/forumGuide url jsonjq-response-body '.hot_search = []'
+# > 搜索推荐@@ddgksf2013
+^https?:\/\/tieba(c)?\.baidu\.com\/mo\/q\/search\/startPage url jsonjq-response-body 'del(.data)'
+# > 页面中部广告@ddgksf2013
+^https?:\/\/tieba(c)?\.baidu\.com\/c\/f\/ad\/getFeedAd url reject-200
+# > 贴吧proto处理@app2smile
+^http(s:\/\/tiebac|:\/\/c\.tieba)\.baidu\.com\/c\/f\/(frs\/(page|threadlist|generalTabList)|pb\/page|excellent\/personalized)\?cmd url script-response-body https://r.sveir.xyz/Scripts/AdBlock/Other/Tieba.min.js
