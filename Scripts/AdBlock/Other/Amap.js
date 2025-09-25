@@ -1,39 +1,156 @@
-/***********************************************
- > 应用名称：墨鱼自用高德地图去广告脚本
- > 脚本作者：@ddgksf2013
- > 微信账号：墨鱼手记
- > 更新时间：2022-09-15
- > 通知频道：https://t.me/ddgksf2021
- > 贡献投稿：https://t.me/ddgksf2013_bot
- > 问题反馈：ddgksf2013@163.com
- > 特别提醒：如需转载请注明出处，谢谢合作！
- ***********************************************/
+const version = 'V1.0.34';
 
+var _0xodl = 'jsjiami.com.v7';
+const _0x3ffcae = _0x3649;
 
+function _0x3649(_0x24f110, _0x4e2daa) {
+    const _0x25d84c = _0x25d8();
+    return _0x3649 = function (_0x3649a9, _0x43e324) {
+        _0x3649a9 = _0x3649a9 - 0xd2;
+        let _0x412376 = _0x25d84c[_0x3649a9];
+        if (_0x3649['altIAT'] === undefined) {
+            var _0x13d1cc = function (_0x260f68) {
+                const _0x449dcb = 'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789+/=';
+                let _0x3f2c85 = '', _0xc36f35 = '';
+                for (let _0x28b769 = 0x0, _0x21056, _0x5ad763, _0xe95a68 = 0x0; _0x5ad763 = _0x260f68['charAt'](_0xe95a68++); ~_0x5ad763 && (_0x21056 = _0x28b769 % 0x4 ? _0x21056 * 0x40 + _0x5ad763 : _0x5ad763, _0x28b769++ % 0x4) ? _0x3f2c85 += String['fromCharCode'](0xff & _0x21056 >> (-0x2 * _0x28b769 & 0x6)) : 0x0) {
+                    _0x5ad763 = _0x449dcb['indexOf'](_0x5ad763);
+                }
+                for (let _0x3fa364 = 0x0, _0x3f71c0 = _0x3f2c85['length']; _0x3fa364 < _0x3f71c0; _0x3fa364++) {
+                    _0xc36f35 += '%' + ('00' + _0x3f2c85['charCodeAt'](_0x3fa364)['toString'](0x10))['slice'](-0x2);
+                }
+                return decodeURIComponent(_0xc36f35);
+            };
+            const _0x436f95 = function (_0x465111, _0x2ff3ab) {
+                let _0x350982 = [], _0x36de8d = 0x0, _0xb8426a, _0x2726fa = '';
+                _0x465111 = _0x13d1cc(_0x465111);
+                let _0x4f8c99;
+                for (_0x4f8c99 = 0x0; _0x4f8c99 < 0x100; _0x4f8c99++) {
+                    _0x350982[_0x4f8c99] = _0x4f8c99;
+                }
+                for (_0x4f8c99 = 0x0; _0x4f8c99 < 0x100; _0x4f8c99++) {
+                    _0x36de8d = (_0x36de8d + _0x350982[_0x4f8c99] + _0x2ff3ab['charCodeAt'](_0x4f8c99 % _0x2ff3ab['length'])) % 0x100, _0xb8426a = _0x350982[_0x4f8c99], _0x350982[_0x4f8c99] = _0x350982[_0x36de8d], _0x350982[_0x36de8d] = _0xb8426a;
+                }
+                _0x4f8c99 = 0x0, _0x36de8d = 0x0;
+                for (let _0x59d783 = 0x0; _0x59d783 < _0x465111['length']; _0x59d783++) {
+                    _0x4f8c99 = (_0x4f8c99 + 0x1) % 0x100, _0x36de8d = (_0x36de8d + _0x350982[_0x4f8c99]) % 0x100, _0xb8426a = _0x350982[_0x4f8c99], _0x350982[_0x4f8c99] = _0x350982[_0x36de8d], _0x350982[_0x36de8d] = _0xb8426a, _0x2726fa += String['fromCharCode'](_0x465111['charCodeAt'](_0x59d783) ^ _0x350982[(_0x350982[_0x4f8c99] + _0x350982[_0x36de8d]) % 0x100]);
+                }
+                return _0x2726fa;
+            };
+            _0x3649['vTYimW'] = _0x436f95, _0x24f110 = arguments, _0x3649['altIAT'] = !![];
+        }
+        const _0x369300 = _0x25d84c[0x0], _0x2cbc8c = _0x3649a9 + _0x369300, _0x50441f = _0x24f110[_0x2cbc8c];
+        return !_0x50441f ? (_0x3649['aKdpmD'] === undefined && (_0x3649['aKdpmD'] = !![]), _0x412376 = _0x3649['vTYimW'](_0x412376, _0x43e324), _0x24f110[_0x2cbc8c] = _0x412376) : _0x412376 = _0x50441f, _0x412376;
+    }, _0x3649(_0x24f110, _0x4e2daa);
+}
 
-
-
-const version = 'V1.0.31';
-
-
-var obj = JSON.parse($response.body);
-if (-1 != $request.url.indexOf("valueadded/alimama/splash_screen")) {
-    if (obj.data && obj.data.ad) for (let a of obj.data.ad) a.set.setting.display_time = 0, a.creative[0].start_time = 2240150400, a.creative[0].end_time = 2240150400;
-    $done({body: JSON.stringify(obj)})
-} else if (-1 != $request.url.indexOf("faas/amap-navigation/main-page")) obj.data?.cardList && (obj.data.cardList = Object.values(obj.data.cardList).filter(a => "LoginCard" == a.dataType || "FrequentLocation" == a.dataType)), obj.data?.pull3?.msgs && (obj.data.pull3.msgs = []), obj.data?.business_position && (obj.data.business_position = []), obj.data?.mapBizList && (obj.data.mapBizList = []), $done({body: JSON.stringify(obj)}); else if (-1 != $request.url.indexOf("profile/index/node")) delete obj.data.tipData, obj.data?.cardList && (obj.data.cardList = Object.values(obj.data.cardList).filter(a => "MyOrderCard" == a.dataType || "GdRecommendCard" == a.dataType)), $done({body: JSON.stringify(obj)}); else if (-1 != $request.url.indexOf("new_hotword")) obj.data?.header_hotword && (obj.data.header_hotword = []), $done({body: JSON.stringify(obj)}); else if (-1 != $request.url.indexOf("ws/promotion-web/resource")) {
-    let e = ["icon", "banner", "tips", "popup", "bubble", "other"];
-    for (let o of e) obj.data?.[o] && (obj.data[o] = []);
-    $done({body: JSON.stringify(obj)})
-} else if (-1 != $request.url.indexOf("ws/msgbox/pull")) obj.msgs && (obj.msgs = []), obj.pull3?.msgs && (obj.pull3.msgs = []), $done({body: JSON.stringify(obj)}); else if (-1 != $request.url.indexOf("ws/message/notice/list")) obj.data?.noticeList && (obj.data.noticeList = []), $done({body: JSON.stringify(obj)}); else if (-1 != $request.url.indexOf("ws/shield/frogserver/aocs")) {
-    for (let t of ["gd_notch_logo", "home_business_position_config", "his_input_tip", "operation_layer"]) obj.data?.[t] && (obj.data[t] = {
-        status: 1,
-        version: "",
-        value: ""
+function _0x25d8() {
+    const _0x245827 = (function () {
+        return [_0xodl, 'FCbQjsYjKiyaRBmKiNdB.Jcopmbb.unv7KNhIDGE==', 'FsXgWPHXWQHyeSo/W5rgESkZ', 'WQj1s8k4W5FcM8kDE8o9', 'WRHVxCk0W4hcS8ks', 'lmkyWRNdVW', 'WQy5W7pcP0hcNmoGB8ku', 'W407Cmkx', 'DX3cM1FdIftcJCk1wSoYymobWO0', 'WOWJEmkhxYBcQ8oq', 'rmk1W5S5', 'ECkTFqm5fay', 'khLIWRXUwb4', 'jSkermkZWOuCdmk0WQNcItucW4NcUSoT', 'iCozWPFcSSkFpg7cJhxcMfldHexdJa', 'ACkLEsymgrD4', 'WQ/dG8kWW7VcNJpcMSoWe8kRadpdKmkOWR9SaSoSWRDVW7ZdJmo0mIGLm8koq2DXaW', 'taxdUcu', 'eSk6B1m', 'WP/dRsi', 'mxH2WQXM', 'WR3dG8kOW68', 'W77cJ0FcRmkws8klumo+WOa', 'W5dcI0ff', 'WO3dICkfmYBcIvhdTuZdUK0', 'W53cUWNdGI8', 'WReSW7xcRW', 'xG5UvG', 'b8kjESkIWOmb', 'WOBdJmoNtxhcLeddOW', 'WOFdK0G', 'WORdOdlcImkn', 'WPxcK8oWl8oTWQVdLe0', 'WPFdMmoYW7urWRxdOs9g', 'WPfaW4a9W4jvyCk0WOPKp8kqjq', 'W5/cMCocACk7W6tdLmkI', 'W5bpbSoIWRNdNK/dNSkYCM8Qua', 'W7FcJ0pcJW', 'qColnNTRWOC7W4hdP8kUW7fgqcWes8oLWRq', 'FSkQWRG'].concat((function () {
+            return ['W5VcHmogDG', 'WR0IW6ZcQ3dcMCo8ESkeCxKVBmoeWQlcLCo8FemBW6ddG2m+W7XzWPfMW4i', 'WRFdKrhcImkHjdrBW4q', 'iKRdMqq', 'fCoszmkR', 'W4KBWPv5WPCeiG', 'du/cISkufmoWWOa', 'W7tcJmoe', 'jbFdONFdUq', 'W7ldUbCwkCoDBa', 'vSoldmoSa8oDWPO', 'WOBdMCoIW74tWRC', 'WRldHa/cLmkQma', 'cSoUrqyjWO7cKG', 'WOJdQJ3cLWtdM8kgW6ZdNmkDCgq8txvqW78', 'wHNdUZ96WR3dGSkeW5WsW57dHCoCW6G3W6Kl', 'WRCIW6xcTW', 'WPtdRIuAd8oVW6ncAW', 'WPjcW4y/W49vyCksWQTKjCkEdq', 'fmoLt8kpW5WKW4a', 'E8kTWRGAWQ4', 'emoVtay', 'bCkbySk3', 'W7rLWQzNWRSNtmoy', 'W6SXr2bWoW', 'x13cVSkeW7KsnJu', 'WRySW7pcQMpcKSo6Fq', 'As1TWOj3WRjC', 'W5bbgCoRWPRdK1xdNG', 'g8kOFee', 'WODJxCov', 'W4pcHCon', 'vmoudCoRdSomWObGW6pdLHxdI3BdRSkd', 'WQj1wmkJW43cO8kaDmoPW64', 'hSkkWRC', 'k17cOY/cTwJdUfjtcgi', 'Ca/dOuNdQ3xdP21jkgK', 'bCkbySk3WRikeCk8', 'cSksxSkRwCkaW5PNW6tdHJddPNO', 'xCopiwbKWPq7W4JdSa'].concat((function () {
+                return ['WQNdL8kWW6ldIa', 'v8owiCoLW5jhuCkuWOxcTr4vW5O', 'f8oCySkpW5NdN3O', 'W7pcOGVdRa', 'WP7dQYBcUay', 'Br7dPh/dRx3dUNXF', 'mSoQW6XgWQrfew7dKSkgW4RdM1G', 'WO7cV8oqv8kfW4NdNa', 'Db/cN1pcHYFdRSkQrmoN', 'WP1UxSk4W5FcV8kvB8oG', 'wmowdCo4g8orWP9Q', 'WORdJmkfmYxcRupdJ3VdUua', 'ACkLEsy', 'vq3dUbr9WQldVCkEW7aw', 'WOhdGJ/cJJeaW4/cNSobACkvfriH', 'cCkqwSkVfSoZWRL4W7RdKW', 'WPXUnCohpCkbW7BcPcD9tehdUa', 'kqldPhZdRSoF', 'W6eWvNvNgSoe', 'W5BcLSouB2VcKe4', 'W7hcJmohW58RWQinaCkpqaPBWQ9IiHtdTdi', 'W7BcJCkhW4OQWQCnqSkcaqHmWRGQpX7dOIhdRCoAtgOoWO3cMq', 'W5mhW558WOKopmkWWPzFbCkKuNO2pCoJWR5lWQZcTMVdKCkhW7S', 'oCk4pJTQhfzHWQa', 'W4ytChm', 'W6hcJ3JcU8kB', 'CmkoW47dPSodDWNcHv/cJv3dR1u', 'aCkOnf9/r8odW75UW6/dJ8o+W7m1', 'W5dcLSoaDSoHW6hdNmkWBSkAW7NcJSkGWP4CnColWOVdMXf9W7bLe8koWOhcTCk3hCo5', 'pqldPMFdRSoE', 'xa3dVdC', 'l0xdIqdcHIpdMa', 'eSkfD8kKWOuBtSk3WQNcHImJW5hcUSoSW6efWP8WCXfh', 'WPTbvW', 'WO1ssweXtSodW6W', 'W7BcKLxcJmkOac1RW4C', 'WQddHbFcGa', 'umomuW0gWRpcHW'];
+            }()));
+        }()));
+    }());
+    _0x25d8 = function () {
+        return _0x245827;
+    };
+    return _0x25d8();
+};(function (_0x44171d, _0x234d1b, _0x4183ed, _0x15b12a, _0x5ccecd, _0x3053d9, _0x2ca479) {
+    return _0x44171d = _0x44171d >> 0x8, _0x3053d9 = 'hs', _0x2ca479 = 'hs', function (_0x2a258b, _0x26b781, _0x1f22b5, _0x58a939, _0x2541f4) {
+        const _0x54d3b9 = _0x3649;
+        _0x58a939 = 'tfi', _0x3053d9 = _0x58a939 + _0x3053d9, _0x2541f4 = 'up', _0x2ca479 += _0x2541f4, _0x3053d9 = _0x1f22b5(_0x3053d9), _0x2ca479 = _0x1f22b5(_0x2ca479), _0x1f22b5 = 0x0;
+        const _0x4dbcf2 = _0x2a258b();
+        while (!![] && --_0x15b12a + _0x26b781) {
+            try {
+                _0x58a939 = parseInt(_0x54d3b9(0xfe, 'm!Rf')) / 0x1 * (-parseInt(_0x54d3b9(0x139, 'w)kg')) / 0x2) + parseInt(_0x54d3b9(0xe2, ')[f%')) / 0x3 * (-parseInt(_0x54d3b9(0x12c, 'tU9(')) / 0x4) + parseInt(_0x54d3b9(0x141, 'SvWq')) / 0x5 + parseInt(_0x54d3b9(0xe0, '!ghO')) / 0x6 * (-parseInt(_0x54d3b9(0xf9, 'm!Rf')) / 0x7) + parseInt(_0x54d3b9(0x138, 'XxYi')) / 0x8 * (-parseInt(_0x54d3b9(0x137, '!B[n')) / 0x9) + parseInt(_0x54d3b9(0x132, 'v(hz')) / 0xa + parseInt(_0x54d3b9(0xe9, 'w)kg')) / 0xb;
+            } catch (_0x1cc447) {
+                _0x58a939 = _0x1f22b5;
+            } finally {
+                _0x2541f4 = _0x4dbcf2[_0x3053d9]();
+                if (_0x44171d <= _0x15b12a) _0x1f22b5 ? _0x5ccecd ? _0x58a939 = _0x2541f4 : _0x5ccecd = _0x2541f4 : _0x1f22b5 = _0x2541f4; else {
+                    if (_0x1f22b5 == _0x5ccecd['replace'](/[NFdDYRhuGnEyICbpBJKQ=]/g, '')) {
+                        if (_0x58a939 === _0x26b781) {
+                            _0x4dbcf2['un' + _0x3053d9](_0x2541f4);
+                            break;
+                        }
+                        _0x4dbcf2[_0x2ca479](_0x2541f4);
+                    }
+                }
+            }
+        }
+    }(_0x4183ed, _0x234d1b, function (_0x521f84, _0x13b835, _0x229059, _0xc384c8, _0x2673a2, _0x2e49fe, _0x1f4b10) {
+        return _0x13b835 = '\x73\x70\x6c\x69\x74', _0x521f84 = arguments[0x0], _0x521f84 = _0x521f84[_0x13b835](''), _0x229059 = '\x72\x65\x76\x65\x72\x73\x65', _0x521f84 = _0x521f84[_0x229059]('\x76'), _0xc384c8 = '\x6a\x6f\x69\x6e', (0x1b924c, _0x521f84[_0xc384c8](''));
     });
-    $done({body: JSON.stringify(obj)})
-} else if (-1 != $request.url.indexOf("search/nearbyrec_smart")) {
-    let i = ["coupon", "scene", "activity", "commodity_rec", "operation_activity"];
-    obj.data && (i.forEach(a => {
-        delete obj.data[a]
-    }), obj.data.modules && (obj.data.modules = obj.data.modules.filter(a => !i.includes(a)))), $done({body: JSON.stringify(obj)})
-} else $done({});
+}(0xcd00, 0x92812, _0x25d8, 0xcf), _0x25d8) && (_0xodl = 0xcf);
+var obj = JSON['parse']($response[_0x3ffcae(0x119, 'B!tf')]);
+if ($request[_0x3ffcae(0x128, 'XxYi')][_0x3ffcae(0x143, 'Hz$Z')](_0x3ffcae(0xf1, '*1G3')) != -0x1) {
+    if (obj[_0x3ffcae(0x13d, '%fpi')] && obj[_0x3ffcae(0xfc, 'U3kZ')]['ad']) for (let item of obj['data']['ad']) {
+        item['set'][_0x3ffcae(0x124, 'XOIq')]['display_time'] = 0x0, item[_0x3ffcae(0x13b, 'RYWH')][0x0][_0x3ffcae(0x12a, 'FIWd')] = 0x8585fb80, item['creative'][0x0]['end_time'] = 0x8585fb80;
+    }
+    $done({'body': JSON[_0x3ffcae(0x11a, 'sh2f')](obj)});
+} else {
+    if ($request[_0x3ffcae(0xde, '4LTn')][_0x3ffcae(0x144, 'm!Rf')](_0x3ffcae(0xd9, 'XxYi')) != -0x1) {
+        const RLXMEJ = _0x3ffcae(0xd4, '%fpi')['split']('|');
+        let GpoWUw = 0x0;
+        while (!![]) {
+            switch (RLXMEJ[GpoWUw++]) {
+                case'0':
+                    $done({'body': JSON[_0x3ffcae(0x130, 'Ag1s')](obj)});
+                    continue;
+                case'1':
+                    obj[_0x3ffcae(0xe8, 'SvWq')]?.[_0x3ffcae(0xf7, 'oBqe')] && (obj[_0x3ffcae(0xdb, 'DzFV')][_0x3ffcae(0x13e, 'DzFV')] = []);
+                    continue;
+                case'2':
+                    obj['data']?.[_0x3ffcae(0x118, 'DzFV')] && (obj[_0x3ffcae(0x10d, 'qb[O')][_0x3ffcae(0x117, '[[ZK')] = []);
+                    continue;
+                case'3':
+                    obj[_0x3ffcae(0x10c, 'w)kg')]?.['pull3']?.['msgs'] && (obj[_0x3ffcae(0xe1, '!ghO')][_0x3ffcae(0x131, '*1G3')][_0x3ffcae(0x127, 'HsCt')] = []);
+                    continue;
+                case'4':
+                    obj[_0x3ffcae(0x13d, '%fpi')]?.[_0x3ffcae(0x125, 'm&TE')] && (obj['data']['cardList'] = Object[_0x3ffcae(0xda, '&d()')](obj['data'][_0x3ffcae(0xdf, '4LTn')])['filter'](_0xdf1370 => _0xdf1370['dataType'] == _0x3ffcae(0x13a, 'FIWd') || _0xdf1370[_0x3ffcae(0xf0, '%fpi')] == 'FrequentLocation'));
+                    continue;
+            }
+            break;
+        }
+    } else {
+        if ($request[_0x3ffcae(0x128, 'XxYi')][_0x3ffcae(0x116, ')[f%')](_0x3ffcae(0x145, 'RWNO')) != -0x1) delete obj[_0x3ffcae(0xeb, 'zKpb')][_0x3ffcae(0xec, '%fpi')], obj[_0x3ffcae(0xeb, 'zKpb')]?.[_0x3ffcae(0x122, 'VU$&')] && (obj[_0x3ffcae(0x11f, 'v(hz')]['cardList'] = Object[_0x3ffcae(0x115, '!ghO')](obj['data'][_0x3ffcae(0x123, 'B!tf')])[_0x3ffcae(0xfd, 'v(hz')](_0x464480 => _0x464480[_0x3ffcae(0x101, 'Y8gq')] == 'MyOrderCard' || _0x464480[_0x3ffcae(0x12e, 'v(hz')] == _0x3ffcae(0xee, 'v(hz'))), $done({'body': JSON[_0x3ffcae(0xe7, 'B!tf')](obj)}); else {
+            if ($request['url'][_0x3ffcae(0xe5, 'FIWd')](_0x3ffcae(0x12d, 'tU9(')) != -0x1) obj[_0x3ffcae(0xe8, 'SvWq')]?.[_0x3ffcae(0x13f, 'Jnh%')] && (obj[_0x3ffcae(0xf3, 'bI#V')][_0x3ffcae(0xef, 'OaJP')] = []), $done({'body': JSON['stringify'](obj)}); else {
+                if ($request[_0x3ffcae(0x108, '!B[n')]['indexOf'](_0x3ffcae(0xd3, '!qlq')) != -0x1) {
+                    const propertiesToDelete = [_0x3ffcae(0xd5, '[nt%'), _0x3ffcae(0x142, '&d()'), _0x3ffcae(0xf2, 'DzFV'), _0x3ffcae(0xf5, 'IN5%'), _0x3ffcae(0x114, '95yP'), _0x3ffcae(0x111, '&d()')];
+                    for (const prop of propertiesToDelete) {
+                        obj[_0x3ffcae(0xf8, '^R9L')]?.[prop] && (obj[_0x3ffcae(0x106, 'oBqe')][prop] = []);
+                    }
+                    $done({'body': JSON[_0x3ffcae(0x136, 'tU9(')](obj)});
+                } else {
+                    if ($request['url'][_0x3ffcae(0xdc, 'w)kg')](_0x3ffcae(0xd8, 'bI#V')) != -0x1) obj['msgs'] && (obj[_0x3ffcae(0x126, 'bI#V')] = []), obj['pull3']?.[_0x3ffcae(0x109, 'XxYi')] && (obj[_0x3ffcae(0x11d, '!B[n')][_0x3ffcae(0xe6, 'QhL9')] = []), $done({'body': JSON[_0x3ffcae(0x102, '95yP')](obj)}); else {
+                        if ($request[_0x3ffcae(0x110, 'RWNO')]['indexOf']('ws/message/notice/list') != -0x1) obj[_0x3ffcae(0xfb, 'B!tf')]?.['noticeList'] && (obj[_0x3ffcae(0xf6, '*1G3')]['noticeList'] = []), $done({'body': JSON[_0x3ffcae(0x10b, '!ghO')](obj)}); else {
+                            if ($request[_0x3ffcae(0xf4, '[[ZK')][_0x3ffcae(0x11c, 'NxmF')](_0x3ffcae(0xd2, 'RWNO')) != -0x1) {
+                                const keywords = [_0x3ffcae(0xe3, 'XOIq'), _0x3ffcae(0x10a, 'B!tf'), 'his_input_tip', _0x3ffcae(0x129, 'RYWH'), 'aiNative', 'ai_', _0x3ffcae(0x12b, 'QhL9')];
+                                Object['keys'](obj[_0x3ffcae(0x134, '^cS!')] || {})[_0x3ffcae(0x133, 'qb[O')](_0x1d1be3 => {
+                                    const _0x2c2e43 = _0x3ffcae, _0x397737 = {
+                                        'NEQiB': function (_0x30799d, _0x4ed5e2) {
+                                            return _0x30799d(_0x4ed5e2);
+                                        }, 'OBsNx': _0x2c2e43(0x135, '[[ZK'), 'JxvOl': _0x2c2e43(0xd6, 'oBqe')
+                                    };
+                                    keywords[_0x2c2e43(0x11e, ')[f%')](_0x16ba9d => _0x1d1be3[_0x2c2e43(0xea, 'zosQ')](_0x16ba9d)) && (_0x397737['OBsNx'] === _0x397737[_0x2c2e43(0xfa, '^cS!')] ? _0x397737[_0x2c2e43(0x100, '!ghO')](_0x3fd726, {}) : obj['data'][_0x1d1be3] = {
+                                        'status': 0x1,
+                                        'version': '',
+                                        'value': ''
+                                    });
+                                }), $done({'body': JSON[_0x3ffcae(0xe4, 'FIWd')](obj)});
+                            } else {
+                                if ($request[_0x3ffcae(0xff, ']Mz3')][_0x3ffcae(0xed, 'IN5%')](_0x3ffcae(0xdd, 'v(hz')) != -0x1) {
+                                    const propsToDelete = [_0x3ffcae(0x121, 'Hz$Z'), 'scene', _0x3ffcae(0x120, '(i*E'), _0x3ffcae(0x105, 'm&TE'), _0x3ffcae(0x107, 'Ag1s')];
+                                    obj['data'] && (propsToDelete[_0x3ffcae(0x112, 'VA(Z')](_0x5a952f => {
+                                        delete obj['data'][_0x5a952f];
+                                    }), obj['data'][_0x3ffcae(0x10f, 'Cwdp')] && (obj[_0x3ffcae(0xdb, 'DzFV')][_0x3ffcae(0x113, 'RYWH')] = obj['data'][_0x3ffcae(0x10e, '!qlq')]['filter'](_0x47dffd => !propsToDelete[_0x3ffcae(0x104, 'XxYi')](_0x47dffd)))), $done({'body': JSON['stringify'](obj)});
+                                } else $done({});
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+var version_ = 'jsjiami.com.v7';
