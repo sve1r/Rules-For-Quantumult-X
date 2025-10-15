@@ -5,11 +5,11 @@
 // @TgChannel         https://t.me/ddgksf2021
 // @Contribute        https://t.me/ddgksf2013_bot
 // @Feedback          📮 ddgksf2013@163.com 📮
-// @UpdateTime        2025-04-18
+// @UpdateTime        2025-10-07
 // @Suitable          自行观看“# > ”注释内容
 // @Attention         使用前请卸载菜鸟APP，挂载脚本然后使用
 // @Attention         如需引用请注明出处，谢谢合作！
-// @Version           V1.0.15
+// @Version           V1.0.16
 // @ScriptURL         https://raw.githubusercontent.com/ddgksf2013/Rewrite/refs/heads/master/AdBlock/CainiaoAds.conf
 // ==/UserScript==
 
@@ -29,8 +29,12 @@ hostname=*.cainiao.com, guide-acs.m.taobao.com, acs4miniapp-inner.m.taobao.com
 ^https?:\/\/[a-zA-Z0-9_.-]+\.cainiao\.com\/gw\/mtop\.cainiao\.adkeyword url script-response-body https://r.sveir.xyz/Scripts/AdBlock/Other/Cainiao.min.js
 # > 菜鸟裹裹_通用广告请求@ddgksf2013
 ^https?:\/\/[a-zA-Z0-9_.-]+\.cainiao\.com\/gw\/mtop\.cainiao\.guoguo\.nbnetflow\.ads\.(?!.*_home) url reject-200
+# > 菜鸟裹裹_通用广告请求@ddgksf2013
+^https?:\/\/[a-zA-Z0-9_.-]+\.cainiao\.com\/gw\/mtop\.cainiao\.guoguo\.nbnetflow\.ads\.mshow\.cn url reject-200
 # > 菜鸟裹裹_首页底部商品推广@ddgksf2013
 ^https?:\/\/[a-zA-Z0-9_.-]+\.cainiao\.com\/gw\/mtop\.cainiao\.nbcps\.presentation\.fetch\.cn url reject-200
+# > 菜鸟裹裹_底部角标推广@ddgksf2013
+^https?:\/\/[a-zA-Z0-9_.-]+\.cainiao\.com\/gw\/mtop\.cainiao\.app\.home\.v\d+\.bottom\.area url reject-200
 
 
 # > 菜鸟裹裹_支付宝小程序_通用广告请求@ddgksf2013

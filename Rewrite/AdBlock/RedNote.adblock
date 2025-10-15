@@ -8,7 +8,7 @@
 // @MainFunction      去除开屏、瀑布流及启动服务广告，屏蔽隐私与青少年请求，去除帖子图片水印、Live 图片水印及短视频水印，功能增强与体验优化
 // @Attention         评论区图片水印未处理，无需邮件反馈
 // @Feedback          📮 ddgksf2013@163.com 📮
-// @UpdateTime        2025-08-17
+// @UpdateTime        2025-10-11
 // @Attention         请在QuantumultX配置文件的[general]下添加 udp_drop_list=443
 // @Suitable          自行观看“# > ”注释内容
 // @Attention         如需引用请注明出处，谢谢合作！
@@ -25,7 +25,7 @@ hostname = *.xiaohongshu.com
 # > 小红书_视频保存[new]@ddgksf2013
 ^https?:\/\/[a-z]+\.xiaohongshu\.com\/api\/sns\/v\d+\/note\/video\/save url script-response-body https://r.sveir.xyz/Scripts/AdBlock/RedNote/RedNote.min.js
 # > 小红书_评论区图片处理@ddgksf2013
-^https?:\/\/[a-z]+\.xiaohongshu\.com\/api\/sns\/v\d+\/note\/comment\/list url script-response-body https://r.sveir.xyz/Scripts/AdBlock/RedNote/RedNote.min.js
+;^https?:\/\/[a-z]+\.xiaohongshu\.com\/api\/sns\/v\d+\/note\/comment\/list url script-response-body https://r.sveir.xyz/Scripts/AdBlock/RedNote/RedNote.min.js
 # > 小红书_Live图片去水印@ddgksf2013
 ^https?:\/\/[a-z]+\.xiaohongshu\.com\/api\/sns\/v\d+\/note\/live_photo\/save url script-response-body https://r.sveir.xyz/Scripts/AdBlock/RedNote/RedNote.min.js
 # > 小红书_通用广告请求@ddgksf2013
