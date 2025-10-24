@@ -1,14 +1,13 @@
 // ==UserScript==
-// @ScriptName        微博&微博国际版净化[墨鱼版]
+// @ScriptName        微博净化-新版
 // @Author            @sve1r
-// @UpdateTime        2025-09-16
+// @UpdateTime        2025-10-25
 // @Attention         微博、微博国际版净化，现已二合一，使用中若有问题请发邮件！
 // @Attention         使用时请注意关闭QuantumultX的[兼容性增强]开关，否则无法去除微博广告
 // @Suitable          自行观看“# > ”注释内容
 // @Contributors      @zmqcherish
 // @Attention         如需引用请注明出处，谢谢合作！
 // @Version           V3.0.0
-// @ScriptURL         https://raw.githubusercontent.com/ddgksf2013/Rewrite/refs/heads/master/AdBlock/WeiboAds.conf
 // ==/UserScript==
 
 

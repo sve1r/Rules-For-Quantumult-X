@@ -7,7 +7,7 @@
  ***********************************************/
 
 
-const version = 'V3.0.9';
+const version = 'V3.0.10';
 const author = 'sve1r';
 const debugMode = true;
 
