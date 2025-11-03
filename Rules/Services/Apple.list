@@ -107,7 +107,7 @@ host-suffix,apple-mapkit.com,Apple Domestic
 host-suffix,apple-livephotoskit.com,Apple
 
 # > Apple Resources Server
-host,testflight.apple.com,OutSide
+host,testflight.apple.com,Apple
 host-suffix,appldnld.apple.com,Apple Domestic
 host-suffix,secure-appldnld.apple.com,Apple
 host-suffix,itunesu.assets.itunes.com,OutSide
