@@ -1,0 +1,42 @@
+// ==UserScript==
+// @ScriptName        中国联通净化[墨鱼版]
+// @Author            @ddgksf2013
+// @Function          如果有需要的去除开屏广告的APP，可自行在共享表格中添加需求
+// @AddRequest        https://bit.ly/addRequestforAdBlock
+// @WechatID          墨鱼手记
+// @TgChannel         https://t.me/ddgksf2021
+// @Contribute        https://t.me/ddgksf2013_bot
+// @UpdateTime        2025-12-11
+// @Suitable          自行观看“# > ”注释内容
+// @Attention         使用前请卸载中国联通，挂载脚本然后使用
+// @Attention         如需引用请注明出处，谢谢合作！
+// @Version           V1.0.4
+// @ScriptURL         https://raw.githubusercontent.com/ddgksf2013/Rewrite/refs/heads/master/AdBlock/ChinaUnicomAds.conf
+// ==/UserScript==
+
+
+
+hostname = m.client.10010.com, img.client.10010.com
+
+host-suffix, ad.10010.com, reject
+
+# > 热搜词@ddgksf2013
+^https?:\/\/m\.client\.10010\.com\/search_service\/search\/searchScrollWord url jsonjq-response-body '.["113000004"]=[]'
+# > 首页底部ICON@ddgksf2013
+^https?:\/\/m\.client\.10010\.com\/clientIndex\/homefusion\/fuInter url jsonjq-response-body 'del(.["HomeFusion.backGroundQuery"], .["HomeFusion.bottomLabel"].bottomMallKey)'
+# > 广告推送@ddgksf2013
+^https?:\/\/m\.client\.10010\.com\/mobileserviceimportant\/customer\/querySmartServicekhd.htm url reject
+# > 新人专享@ddgksf2013
+^https?:\/\/m\.client\.10010\.com\/clientIndex\/api\/v1\/index\/queryIndexExclusiveOffers url reject
+# > 借钱@ddgksf2013
+^https?:\/\/m\.client\.10010\.com\/clientMyPage\/v\d\/api\/myWallet url jsonjq-response-body '.data={}'
+# > 积分@ddgksf2013
+^https?:\/\/m\.client\.10010\.com\/clientMyPage\/v\d\/api\/myPoints url jsonjq-response-body '.data={}'
+# > 彩铃@ddgksf2013
+^https?:\/\/m\.client\.10010\.com\/clientMyPage\/v\d\/api\/myColorfulRingtone url jsonjq-response-body '.data={}'
+# > 横幅@ddgksf2013
+^https?:\/\/m\.client\.10010\.com\/clientMyPage\/v\d\/api\/newUserInfo url jsonjq-response-body '.data={}'
+# > 本地图片推广@ddgksf2013
+^https?:\/\/m\.client\.10010\.com\/clientMyPage\/v\d\/api\/getDeviceInfo url jsonjq-response-body '.data={}'
+# > 首页瀑布流@ddgksf2013
+^https?:\/\/img\.client\.10010\.com\/homejingxuan12\/js\/(pubuliu|1homeView) url reject

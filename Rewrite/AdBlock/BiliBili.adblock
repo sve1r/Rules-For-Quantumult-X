@@ -18,6 +18,7 @@
 // ==/UserScript==
 
 hostname = -broadcast.chat.bilibili.com, -cm.bilibili.com, -*cdn*.biliapi.net, -*tracker*.biliapi.net, api.bilibili.com, api.biliapi.net, api.live.bilibili.com, api.vc.bilibili.com, app.bilibili.com, app.biliapi.net, grpc.biliapi.net, manga.bilibili.com, *.bilibili.com, *.bili*.*, *.bilibili.*, *biliapi.net
+hostname = -broadcast.chat.bilibili.com, -cm.bilibili.com, -*cdn*.biliapi.net, -*tracker*.biliapi.net, api.bilibili.com, api.biliapi.net, api.live.bilibili.com, api.vc.bilibili.com, app.bilibili.com, app.biliapi.net, grpc.biliapi.net, manga.bilibili.com, *.bilibili.com, *.bili*.*, *.bilibili.*, *biliapi.net
 
 
 # ======= BiliJson 播放页处理 ======= #
@@ -42,11 +43,21 @@ hostname = -broadcast.chat.bilibili.com, -cm.bilibili.com, -*cdn*.biliapi.net, -
 
 # ======= BiliJson 开屏及隐私 ======= #
 ^https?:\/\/app\.bili(bili\.com|api\.net)\/x\/v2\/(splash\/(brand\/list|event\/list2|list|show)|feed\/index(\/story)?|search\/square) url script-response-body https://r.sveir.xyz/Scripts/AdBlock/BiliBili/BiliBili.AdBlock.response.min.js
+^https?:\/\/app\.bili(bili\.com|api\.net)\/x\/v2\/(splash\/(brand\/list|event\/list2|list|show)|feed\/index(\/story)?|search\/square) url script-response-body https://r.sveir.xyz/Scripts/AdBlock/BiliBili/BiliBili.AdBlock.response.min.js
 
 # ======= BiliJson 高码率仅粉色旧版[V7.65] ======= #
 # > BiliBili_哔哩哔哩_1080P高码率+4K画质[番剧和影视除外]@ddgksf2013
 ^https?:\/\/app\.bilibili\.com\/x\/v2\/account\/myinfo\? url script-response-body https://r.sveir.xyz/Scripts/AdBlock/BiliBili/BiliBili.min.js
 
+# ======= Bili 搜索处理 ======= #
+# 去除搜索中的大家都在搜
+^https?:\/\/api\.vc\.bilibili\.com\/search_svr\/v\d\/Search\/recommend_words url reject-dict
+# 去除动态中的话题
+^https?:\/\/api\.vc\.bilibili\.com\/topic_svr\/v1\/topic_svr url reject-dict
+# 去除动态中的最常访问
+^https?:\/\/api\.vc\.bilibili\.com\/dynamic_svr\/v1\/dynamic_svr\/mix_uplist url reject-dict
+# 可能的一些推广(beta)
+^https?:\/\/api\.bili(bili\.com|api\.net)\/pgc\/season\/app\/related\/recommend\? url reject-dict
 # ======= Bili 搜索处理 ======= #
 # 去除搜索中的大家都在搜
 ^https?:\/\/api\.vc\.bilibili\.com\/search_svr\/v\d\/Search\/recommend_words url reject-dict
