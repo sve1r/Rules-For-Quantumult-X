@@ -6,24 +6,24 @@
 // @WechatID          墨鱼手记
 // @TgChannel         https://t.me/ddgksf2021
 // @Contribute        https://t.me/ddgksf2013_bot
-// @Feedback          📮 ddgksf2013@163.com 📮
-// @UpdateTime        2025-10-07
+// @UpdateTime        2025-12-06
 // @Suitable          自行观看“# > ”注释内容
 // @Attention         使用前请卸载高德地图，挂载脚本然后使用
 // @Attention         如需引用请注明出处，谢谢合作！
-// @Version           V1.0.26
+// @Version           V1.0.28
 // @ScriptURL         https://raw.githubusercontent.com/ddgksf2013/Rewrite/refs/heads/master/AdBlock/AmapAds.conf
 // ==/UserScript==
 
 
-hostname = m5.amap.com, m5-zb.amap.com, center.amap.com, amap-aos-info-nogw.amap.com
+hostname = m5.amap.com, m5-zb.amap.com, center.amap.com, amap-aos-info-nogw.amap.com, ai.amap.com
 
 host-suffix, optimus-ads.amap.com, direct
 
-host-suffix, optimus-ads.amap.com, direct
 
 # > 高德地图_开屏请求@ddgksf2013
 ^https?:\/\/.*\.amap\.com\/ws\/aos\/alimama\/splash_screen url reject-200
+# > 高德地图_首页底部信息流@ddgksf2013
+^https?:\/\/.*\.amap\.com\/v\d\/ai_rec\/ url reject-dict
 # > 高德地图_amdc处理@ddgksf2013
 ^http:\/\/amdc\.m\.taobao\.com url script-response-body https://r.sveir.xyz/Scripts/AdBlock/Other/Amdc.min.js
 # > 高德地图_底部tab栏角标@ddgksf2013
