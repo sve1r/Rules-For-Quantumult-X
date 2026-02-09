@@ -27,16 +27,21 @@ host-wildcard,bsync*-normal-lf.zijieapi.com,reject
 host-wildcard,mssdk*-normal-lf.zijieapi.com,reject
 host-wildcard,polaris*-normal-lf.zijieapi.com,reject
 host-wildcard,tnc*-aliec*.zijieapi.com,reject
+host-suffix,tnc*-aliec2.zijieapi.com,reject
 host-wildcard,tnc*-alisc*.zijieapi.com,reject
+host-suffix,tnc0-alisc1.zijieapi.com,reject
 host-suffix,imapi5-oth-If.zijieapi.com,reject
 host-suffix,rtapplog.zijieapi.com,reject
 
 # >> SNS SDK
+host-suffix,ecomuser.snssdk.com,reject
 host-suffix,i.snssdk.com,reject
 host-suffix,i-lq.snssdk.com,reject
 host-suffix,is.snssdk.com,reject
 host-suffix,mcs.snssdk.com,reject
+host-suffix,vas.snssdk.com,reject
 host-suffix,vas-lf-x.snssdk.com,reject
+host-suffix,tnc3-bjlgy.snssdk.com,reject
 host-wildcard,tnc*-bjlgy.snssdk.com,reject
 
 # >> Other Domains
@@ -53,9 +58,11 @@ host-suffix,lf-normal-gr-sourcecdn.bytegecko.com,reject
 
 # >> Other AD SDK
 host,mktm.jd.com,reject
+host,im-x.jd.com,reject
 host,adim.pinduoduo.com,reject
 host,apm-m.pinduoduo.com,reject
 host,shark-tracer.netease.com,reject
+host,wcp.taobao.com,reject
 
 
 # >> IP-CIDR

@@ -29,6 +29,9 @@ ip-cidr,144.178.48.0/20,Apple
 ip-cidr,192.35.50.0/24,Apple
 ip-cidr,198.183.17.0/24,Apple
 ip-cidr,205.180.175.0/24,Apple
+ip6-cidr,2403:300::/32,Apple
+ip6-cidr,2620:149::/32,Apple
+ip6-cidr,2a01:b740::/32,Apple
 
 # > Apple Stores
 host,apps.apple.com,Apple Domestic
@@ -53,6 +56,7 @@ host-keyword,icloud.com.akadns.net,Apple
 host-suffix,applemx-icloud.com,Apple
 host-suffix,appleicloud.cn,Apple
 host-suffix,apple-icloud.cn,Apple
+host-suffix,apzones.com,Apple
 host-suffix,icloud-content.com,Apple
 host-suffix,icloud-content.com.cn,Apple
 host-suffix,icloud-isupport.com,Apple
@@ -73,9 +77,13 @@ host-suffix,icloud.com.cn,Apple
 host-suffix,icloud.net.cn,Apple
 host-wildcard,*-content.icloud.com.cn,Apple
 
-# > Apple APIs
+# > Apple Services
+# >> DNS Service
+host-suffix,doh.dns.apple.com,Apple
+
 # >> Location Service
 host-suffix,ls.apple.com,Apple
+
 # >> Push Service
 host,init-p01md.apple.com,Apple
 host-wildcard,init*.push.apple.com,Apple
@@ -86,7 +94,7 @@ host-suffix,push.apple.com,Apple
 # >> Other Service
 HOST,amp-api.apps.apple.com,Apple Domestic
 host,api.smoot.apple.cn,OutSide
-host-suffix,safebrowsing.apple,OutSide
+host-suffix,safebrowsing.apple,Apple
 
 # > Apple Music
 host,hls.itunes.apple.com,Apple Music
@@ -107,7 +115,7 @@ host-suffix,apple-mapkit.com,Apple Domestic
 host-suffix,apple-livephotoskit.com,Apple
 
 # > Apple Resources Server
-host,testflight.apple.com,OutSide
+host,testflight.apple.com,Apple
 host-suffix,appldnld.apple.com,Apple Domestic
 host-suffix,secure-appldnld.apple.com,Apple
 host-suffix,itunesu.assets.itunes.com,OutSide
@@ -115,6 +123,7 @@ host-suffix,itunesu.assets.itunes.com,OutSide
 # > Apple CDNs
 host,updates-http.cdn-apple.com,Apple Domestic
 host-suffix,apple-support.akadns.net,Apple
+host-suffix,appldnld.apple.com.edgesuite.net,Apple
 host-suffix,apple.com.akadns.net,Apple
 host,adcdownload.apple.com.akadns.net,Apple Domestic
 host-suffix,apple.com.cdn20.com,Apple Domestic
