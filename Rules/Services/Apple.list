@@ -139,10 +139,6 @@ host-suffix,origin-apple.com.akadns.net,Apple
 host-suffix,push-apple.com.akadns.net,Apple 
 host-suffix,prod-support.apple-support.akadns.net,Apple
 
-# >> Apple Intelligence Extension
-host,apple-relay.apple.com,Apple
-host,gspe1-ssl.ls.apple.com,Apple
-
 #以下内容规则需要通过代理访问
 host,news-assets.apple.com,OutSide
 host,news-client.apple.com,OutSide
