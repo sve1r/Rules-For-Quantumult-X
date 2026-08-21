@@ -1,0 +1,31 @@
+# > >> HK Bank
+
+# HSBC
+HOST,mobile.eum-appdynamics.com,Bank
+HOST,tags.tiqcdn.com,Bank
+HOST,hsbc.edge.sdk.awswaf.com,Bank
+HOST,cdnbc.wup.hsbc.com.hk,Bank
+HOST,cdn.optimizely.com,Bank
+HOST,log-58144bf0.we-stats.com,Bank
+HOST-SUFFIX,tealiumiq.com,Bank
+HOST-SUFFIX,hsbc.com.hk,Bank
+HOST-SUFFIX,online-metrix.net,Bank
+HOST-SUFFIX,cloud1.vv1865.com,Bank
+HOST-SUFFIX,liveperson.net,Bank
+HOST-SUFFIX,lpsnmedia.net,Bank
+
+# 大象银行
+HOST-SUFFIX,elebank.com,Bank
+HOST-SUFFIX,appsflyersdk.com,Bank
+HOST-WILDCARD,api*.futunn.com,Bank
+
+# 众安银行
+HOST-SUFFIX,za.group,Bank
+HOST-SUFFIX,zainvest.group,Bank
+HOST-SUFFIX,crashlytics.com,Bank
+HOST-SUFFIX,zajourney.com,Bank
+HOST,app-measurement.com,Bank
+
+# Wise
+HOST,api.mixpanel.com,Bank
+HOST-SUFFIX,wise.com,Bank
