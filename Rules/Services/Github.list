@@ -47,5 +47,5 @@ host-suffix,default.exp-tas.com,Github
 host-suffix,webpubsub.azure.com,Github
 
 # 使用量报告下载（可选）
-host-suffix,b01.azurefd.net,Github
-host-suffix,blob.core.windows.net,Github
+# host-suffix,b01.azurefd.net,Github
+# host-suffix,blob.core.windows.net,Github
