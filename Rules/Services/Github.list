@@ -34,3 +34,18 @@ host-suffix,githubhackathon.com,Github
 host-suffix,myoctocat.com,Github
 host-suffix,opensource.guide,Github
 host-suffix,repo.new,Github
+
+# >> Github Copilot
+# 核心
+host-suffix,github.com,Github
+host-suffix,githubassets.com,Github
+host-suffix,githubusercontent.com,Github
+host-suffix,githubcopilot.com,Github
+host-suffix,default.exp-tas.com,Github
+
+# Copilot 云端会话 WebSocket
+host-suffix,webpubsub.azure.com,Github
+
+# 使用量报告下载（可选）
+host-suffix,b01.azurefd.net,Github
+host-suffix,blob.core.windows.net,Github
