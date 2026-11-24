@@ -18,7 +18,7 @@ HOST-SUFFIX,lpsnmedia.net,Bank
 # 大象银行
 HOST-SUFFIX,elebank.com,Bank
 HOST-SUFFIX,appsflyersdk.com,Bank
-HOST-SUFFIX,airstarbank.com
+HOST-SUFFIX,airstarbank.com,Bank
 # HOST-WILDCARD,api*.futunn.com,Bank
 
 # 众安银行
