@@ -1,27 +1,37 @@
-# > Twitter
-HOST-SUFFIX,ads-twitter.com,Twitter
-HOST-SUFFIX,cms-twdigitalassets.com,Twitter
-HOST-SUFFIX,periscope.tv,Twitter
-HOST-SUFFIX,pscp.tv,Twitter
-HOST-SUFFIX,t.co,Twitter
-HOST-SUFFIX,tellapart.com,Twitter
-HOST-SUFFIX,tweetdeck.com,Twitter
-HOST-SUFFIX,twimg.co,Twitter
-HOST-SUFFIX,twimg.com,Twitter
-HOST-SUFFIX,twimg.org,Twitter
-HOST-SUFFIX,twitpic.com,Twitter
-HOST-SUFFIX,twitter.biz,Twitter
-HOST-SUFFIX,twitter.com,Twitter
-HOST-SUFFIX,twitter.jp,Twitter
-HOST-SUFFIX,twittercommunity.com,Twitter
-HOST-SUFFIX,twitterflightschool.com,Twitter
-HOST-SUFFIX,twitterinc.com,Twitter
-HOST-SUFFIX,twitteroauth.com,Twitter
-HOST-SUFFIX,twitterstat.us,Twitter
-HOST-SUFFIX,twtrdns.net,Twitter
-HOST-SUFFIX,twttr.com,Twitter
-HOST-SUFFIX,twttr.net,Twitter
-HOST-SUFFIX,twvid.com,Twitter
-HOST-SUFFIX,vine.co,Twitter
-HOST-SUFFIX,x.com,Twitter
-HOST-KEYWORD,twitter,Twitter
+# ==========================================================
+# Quantumult X 分流规则：X (原 Twitter) 优化版
+# 更新：2026-11-24
+# ==========================================================
+
+# > X 主域名（含 api / pro / ads / ads-api / grok / help / developer / upload 等全部子域）
+host-suffix,x.com,Twitter
+
+# > 图片 / 视频 / 静态资源（改名后仍在使用 twimg，含 pbs / video / abs / ton 等子域）
+host-suffix,twimg.com,Twitter
+
+# > 短链接（推文中所有外链都经 t.co 跳转）
+host-suffix,t.co,Twitter
+
+# > 旧 twitter.com（大量旧链接、第三方登录、嵌入推文仍会跳转经过）
+host-suffix,twitter.com,Twitter
+
+# > 官方网站资源 / 内部服务
+host-suffix,cms-twdigitalassets.com,Twitter
+host-suffix,twtrdns.net,Twitter
+host-suffix,twttr.com,Twitter
+host-suffix,twttr.net,Twitter
+host-suffix,twvid.com,Twitter
+host-suffix,ads-twitter.com,Twitter
+host-suffix,twitteroauth.com,Twitter
+host-suffix,twitter.map.fastly.net,Twitter
+
+# > 社区 / 状态页
+host-suffix,twittercommunity.com,Twitter
+host-suffix,twitterstat.us,Twitter
+
+# > X 内使用 Grok（grok.x.com 已被 x.com 包含；以下为独立站点，按需启用）
+host-suffix,grok.com,Twitter
+host-suffix,x.ai,Twitter
+
+# > 兜底关键词（范围较宽，可能误伤无关网站，默认关闭）
+# host-keyword,twitter,Twitter
