@@ -1,7 +1,6 @@
 # ==========================================================
 # Quantumult X 分流规则：ChatGPT (OpenAI) + Claude (Anthropic) 优化版
 # 更新：2026-11-24
-# 策略组：OpenAI（与原规则保持一致，可直接替换）
 # ==========================================================
 
 # > OpenAI
@@ -9,7 +8,7 @@
 host-suffix,openai.com,OpenAI
 host-suffix,chatgpt.com,OpenAI
 host-suffix,chat.com,OpenAI
-# host-suffix,sora.com,OpenAI
+host-suffix,sora.com,OpenAI
 
 # >> OpenAI 静态资源 / 用户文件（host-suffix 同时匹配根域名，比 wildcard 更全更快）
 host-suffix,oaistatic.com,OpenAI
