@@ -1,36 +1,30 @@
+# ==========================================================
+# Quantumult X 分流规则：ChatGPT (OpenAI) + Claude (Anthropic) 优化版
+# 更新：2026-11-24
+# 策略组：OpenAI（与原规则保持一致，可直接替换）
+# ==========================================================
+
 # > OpenAI
-# >> ChatGPT
-host-suffix,chatgpt.com,OpenAI
-host-suffix,chat.openai.com,OpenAI
-
-# >> OpenAI Challenge & SSO
-host-suffix,auth0.openai.com,OpenAI
-host,challenges.cloudflare.com,OpenAI
-
-# >> OpenAI Related
-host-suffix,ai.com,OpenAI
+# >> ChatGPT / OpenAI 主域名（含 chat / auth0 / apps / api / cdn 等全部子域）
 host-suffix,openai.com,OpenAI
-host-suffix,apps.openai.com,OpenAI
-host-suffix,sentry.io,OpenAI
-host-suffix,intercom.io,OpenAI
-host-suffix,identrust.com,OpenAI
+host-suffix,chatgpt.com,OpenAI
+host-suffix,chat.com,OpenAI
+# host-suffix,sora.com,OpenAI
 
-# >> OpenAI Static Files
-host-wildcard,*.oaistatic.com,OpenAI
-host-wildcard,*.oaiusercontent.com,OpenAI
+# >> OpenAI 静态资源 / 用户文件（host-suffix 同时匹配根域名，比 wildcard 更全更快）
+host-suffix,oaistatic.com,OpenAI
+host-suffix,oaiusercontent.com,OpenAI
 
 # >> OpenAI CDN
-host-suffix,chat.openai.com.cdn.cloudflare.net,OpenAI
 host-suffix,openaiapi-site.azureedge.net,OpenAI
 
-# >> OpenAI Other
-# host-suffix,challenges.cloudflare.com,OpenAI
-# host-suffix,invoice.stripe.com,OpenAI
-# host-suffix,stripe.com,OpenAI
-# host-suffix,poe.com,OpenAI
+# >> ChatGPT 语音模式（LiveKit 实时音视频）
+host-suffix,chatgpt.livekit.cloud,OpenAI
+host-suffix,host.livekit.cloud,OpenAI
+host-suffix,turn.livekit.cloud,OpenAI
 
-# >> Claude
-# Claude核心域名
+# > Claude
+# >> Claude 核心域名（anthropic.com 已含 api / console / statsig 子域）
 host-suffix,claude.ai,OpenAI
 host-suffix,claude.com,OpenAI
 host-suffix,anthropic.com,OpenAI
@@ -39,15 +33,13 @@ host-suffix,claudeusercontent.com,OpenAI
 host-suffix,claudemcpclient.com,OpenAI
 host-suffix,claudeartifacts.com,OpenAI
 
-# Claude登录、验证、支付
-# host,challenges.cloudflare.com,OpenAI
-# host-suffix,workos.com,OpenAI
-# host-suffix,authkit.app,OpenAI
-# host-suffix,stripe.com,OpenAI
-# host-suffix,stripe.network,OpenAI
-# host-suffix,recaptcha.net,OpenAI
+# > 登录 / 人机验证 / 证书（两家共用，保证与主站同一出口 IP）
+host,challenges.cloudflare.com,OpenAI
+host-suffix,identrust.com,OpenAI
+host-suffix,workos.com,OpenAI
+host-suffix,authkit.app,OpenAI
 
-# Claude功能开关、统计、客服
+# > 功能开关 / 统计 / 客服 / 错误上报（两家共用）
 host-suffix,statsig.com,OpenAI
 host-suffix,statsigapi.net,OpenAI
 host-suffix,featuregates.org,OpenAI
@@ -59,3 +51,17 @@ host-suffix,segment.com,OpenAI
 host-suffix,segment.io,OpenAI
 host-suffix,sentry.io,OpenAI
 host-suffix,datadoghq.com,OpenAI
+host-suffix,browser-intake-datadoghq.com,OpenAI
+
+# > 支付（订阅页打不开时再启用；会影响其他使用 Stripe 的网站）
+# host-suffix,stripe.com,OpenAI
+# host-suffix,stripe.network,OpenAI
+
+# > 可选
+# host-suffix,recaptcha.net,OpenAI
+# host-suffix,ai.com,OpenAI
+# Claude Code 安装包下载（会带走所有 Google Cloud Storage 流量）
+# host,storage.googleapis.com,OpenAI
+# 兜底关键词（范围较宽，可能误伤无关网站）
+# host-keyword,openai,OpenAI
+# host-keyword,anthropic,OpenAI
