@@ -1,65 +1,94 @@
 # ==========================================================
-# Quantumult X 分流规则：ChatGPT (OpenAI) + Claude (Anthropic) 更新版
+# Quantumult X 分流规则：ChatGPT (OpenAI) + Claude (Anthropic) 
 # 更新：2026-11-24
 # ==========================================================
 
 # > OpenAI
-# >> ChatGPT / OpenAI 主域名（含 chat / auth0 / apps / api / cdn 等全部子域）
+# >> ChatGPT / OpenAI 主域名（官方白名单，含 chat / auth / auth0 / ios / android / desktop 等子域）
 host-suffix,openai.com,OpenAI
 host-suffix,chatgpt.com,OpenAI
+# OpenAI 持有，跳转到 ChatGPT
 host-suffix,chat.com,OpenAI
-host-suffix,sora.com,OpenAI
 
-# >> OpenAI 静态资源 / 用户文件（host-suffix 同时匹配根域名，比 wildcard 更全更快）
+# >> OpenAI 静态资源 / 用户文件（官方白名单）
 host-suffix,oaistatic.com,OpenAI
 host-suffix,oaiusercontent.com,OpenAI
+# OpenAI 自用的 Statsig 功能开关（官方白名单）
+host-suffix,oaistatsig.com,OpenAI
+host,cdn.openaimerge.com,OpenAI
 
-# >> OpenAI CDN
+# >> OpenAI CDN（platform.openai.com 页面资源）
 host-suffix,openaiapi-site.azureedge.net,OpenAI
 
-# >> ChatGPT 语音模式（LiveKit 实时音视频）
+# >> ChatGPT 语音模式（LiveKit，公开规则库收录）
 host-suffix,chatgpt.livekit.cloud,OpenAI
 host-suffix,host.livekit.cloud,OpenAI
 host-suffix,turn.livekit.cloud,OpenAI
 
+# >> 人机验证（公开规则库收录）
+host,openai-api.arkoselabs.com,OpenAI
+
 # > Claude
-# >> Claude 核心域名（anthropic.com 已含 api / console / statsig 子域）
+# >> Claude 核心域名（官方网络要求；claude.com 已含 platform / mcp 子域，claude.ai 已含 downloads 子域）
 host-suffix,claude.ai,OpenAI
 host-suffix,claude.com,OpenAI
 host-suffix,anthropic.com,OpenAI
+# Claude 官方短链接
 host-suffix,clau.de,OpenAI
+# Artifacts / MCP 连接器内容（公开规则库收录）
 host-suffix,claudeusercontent.com,OpenAI
 host-suffix,claudemcpclient.com,OpenAI
-host-suffix,claudeartifacts.com,OpenAI
+host-suffix,claudemcpcontent.com,OpenAI
+# Claude 网站统计
+host,cdn.usefathom.com,OpenAI
 
 # > 登录 / 人机验证 / 证书（两家共用，保证与主站同一出口 IP）
+# Cloudflare 人机验证（OpenAI 官方白名单）
 host,challenges.cloudflare.com,OpenAI
+# 证书校验（公开规则库收录）
 host-suffix,identrust.com,OpenAI
+# WorkOS 登录（OpenAI 官方白名单含 cdn / setup / forwarder 子域及以下两个图片域名）
 host-suffix,workos.com,OpenAI
-host-suffix,authkit.app,OpenAI
+host-suffix,workoscdn.com,OpenAI
+host,workos.imgix.net,OpenAI
 
 # > 功能开关 / 统计 / 客服 / 错误上报（两家共用）
+# Statsig（官方域名表；SDK 会在这些域名之间动态切换）
 host-suffix,statsig.com,OpenAI
 host-suffix,statsigapi.net,OpenAI
+host-suffix,statsigcdn.com,OpenAI
 host-suffix,featuregates.org,OpenAI
 host-suffix,featureassets.org,OpenAI
 host-suffix,prodregistryv2.org,OpenAI
+host-suffix,assetsconfigcdn.org,OpenAI
+host-suffix,beyondwickedmapping.org,OpenAI
+# Intercom 客服（OpenAI 官方白名单）
 host-suffix,intercom.io,OpenAI
 host-suffix,intercomcdn.com,OpenAI
-host-suffix,segment.com,OpenAI
+# Segment 统计
 host-suffix,segment.io,OpenAI
+host-suffix,segment.com,OpenAI
+# Sentry 错误上报（两家官方文档都列出）
 host-suffix,sentry.io,OpenAI
-host-suffix,datadoghq.com,OpenAI
+# Datadog 浏览器监控（OpenAI 用 rum.browser-intake-datadoghq.com，Claude 用 us5 区）
 host-suffix,browser-intake-datadoghq.com,OpenAI
+host-suffix,browser-intake-us5-datadoghq.com,OpenAI
 
 # > 支付（订阅页打不开时再启用；会影响其他使用 Stripe 的网站）
 # host-suffix,stripe.com,OpenAI
 # host-suffix,stripe.network,OpenAI
 
-# > 可选
+# > 可选（默认关闭）
+# Sora 已于 2026-04-26 停止服务
+# host-suffix,sora.com,OpenAI
+# 未在官方资料和公开规则库中查到
+# host-suffix,claudeartifacts.com,OpenAI
+# host-suffix,authkit.app,OpenAI
+# host-suffix,datadoghq.com,OpenAI
 # host-suffix,recaptcha.net,OpenAI
+# ai.com 已不属于 OpenAI（2026 年起是 Crypto.com 创始人的 AI 平台）
 # host-suffix,ai.com,OpenAI
-# Claude Code 安装包下载（会带走所有 Google Cloud Storage 流量）
+# Claude Code / Claude 桌面版安装与更新（会带走所有 Google Cloud Storage 流量）
 # host,storage.googleapis.com,OpenAI
 # 兜底关键词（范围较宽，可能误伤无关网站）
 # host-keyword,openai,OpenAI
