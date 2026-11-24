@@ -1,51 +1,53 @@
+# ==========================================================
+# Quantumult X 分流规则：GitHub + GitHub Copilot 优化版
+# 更新：2026-11-24
+# 策略组：Github（与原规则保持一致，可直接替换）
+# ==========================================================
+
 # > Github
-# >> Github Main
-host-keyword,github,Github
-host-suffix,github.blog,Github
+# >> Github Main（含 api / codeload / gist / raw / docs / vscode-auth 等全部子域）
 host-suffix,github.com,Github
+host-suffix,github.io,Github
+host-suffix,github.dev,Github
+host-suffix,github.blog,Github
 host-suffix,github.community,Github
 host-suffix,githubstatus.com,Github
-host-suffix,githubuniverse.com,Github
 
-# >> Github Assets
+# >> Github Assets（含 raw / objects / avatars / release-assets / copilot-proxy 等）
 host-suffix,githubusercontent.com,Github
 host-suffix,githubassets.com,Github
 
 # >> Github Features
-host-suffix,dependabot.com,Github
-host-suffix,atom.io,Github
 host-suffix,ghcr.io,Github
-host-suffix,git.io,Github
-host-suffix,github.io,Github
-host-suffix,github.dev,Github
 host-suffix,githubapp.com,Github
 host-suffix,githubpreview.dev,Github
-
-# >> Github CDN
-host-suffix,github-atom-io-herokuapp-com.freetls.fastly.net,Github
-host-suffix,github-avatars.oss-cn-hongkong.aliyuncs.com,Github
-host-suffix,github-cloud.s3.amazonaws.com,Github
-
-# >> Github Other
-host-suffix,thegithubshop.com,Github
-host-suffix,githubuniverse.com,Github
-host-suffix,githubnext.com,Github
-host-suffix,githubhackathon.com,Github
-host-suffix,myoctocat.com,Github
-host-suffix,opensource.guide,Github
+host-suffix,dependabot.com,Github
+host-suffix,git.io,Github
 host-suffix,repo.new,Github
 
-# >> Github Copilot
-# 核心
-host-suffix,github.com,Github
-host-suffix,githubassets.com,Github
-host-suffix,githubusercontent.com,Github
-host-suffix,githubcopilot.com,Github
-host-suffix,default.exp-tas.com,Github
+# >> Github CDN
+host-suffix,github-cloud.s3.amazonaws.com,Github
+host-suffix,github-avatars.oss-cn-hongkong.aliyuncs.com,Github
 
-# Copilot 云端会话 WebSocket
+# >> Github Other
+host-suffix,githubnext.com,Github
+host-suffix,githubuniverse.com,Github
+host-suffix,githubhackathon.com,Github
+host-suffix,thegithubshop.com,Github
+host-suffix,myoctocat.com,Github
+host-suffix,opensource.guide,Github
+
+# > Github Copilot
+# >> 核心 API（含 api / individual / business / enterprise / proxy 等子域）
+host-suffix,githubcopilot.com,Github
+# >> VS Code 实验/功能开关（Copilot Chat 依赖）
+host-suffix,default.exp-tas.com,Github
+# >> Copilot 云端会话 WebSocket（Copilot coding agent）
 host-suffix,webpubsub.azure.com,Github
 
-# 使用量报告下载（可选）
+# > 可选（默认关闭）
+# 使用量报告下载（blob.core.windows.net 会带走所有 Azure 存储流量）
 # host-suffix,b01.azurefd.net,Github
 # host-suffix,blob.core.windows.net,Github
+# 兜底关键词：会误伤 kkgithub、githubfast 等国内加速镜像（这类应直连）
+# host-keyword,github,Github
